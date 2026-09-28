@@ -97,6 +97,27 @@ python3 -m fiscalos.ablatie_lexical                  # L0 / L1 / L2, ablatie exa
 python3 -m fiscalos.raport_intrebari_v3
 ```
 
+## Pasul 5 — navigare structurală și calcul evaluat de cod (`intrebari/v4/`)
+
+Stratul semantic nu mai primește un context gata ales de căutare: navighează singur prin structura
+actelor (`cuprins` → `deschide` → copii → relații de derogare/modificare), cu cel mult 12 pași;
+căutarea lexicală e doar punct de intrare. Verificarea mecanică a citatelor și cifrelor e cea din v3.
+Modelul nu calculează: propune o formulă cu operanzi, fiecare cu sursa literală (atom sau întrebare),
+iar codul o evaluează (`navigare.evalueaza_calcule`).
+
+| Motor (scor INDICATIV, setul e expus) | CORECT | GREȘIT | NU POT | Cost |
+|---|---|---|---|---|
+| Navigare v4 | 18 | 17 | 15 | $7,86 |
+| Semantic v3 | 10 | 8 | 32 | $3,25 |
+| Lexical (referință) | 2 | 13 | 35 | $0 |
+
+Defectele găsite după comparație (C23–C29) sunt în `intrebari/v4/RAPORT.md`, secțiunea 0, nereparate.
+
+```sh
+venv/bin/python -m fiscalos.navigare [Q-ID ...]   # stratul de navigare (apeluri API, cost)
+python3 -m fiscalos.raport_intrebari_v4
+```
+
 ## Cum se rulează
 
 ```sh

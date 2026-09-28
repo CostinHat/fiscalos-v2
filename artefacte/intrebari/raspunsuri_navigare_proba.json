@@ -1,0 +1,832 @@
+{
+ "_ce": "Stratul semantic v4: navigare structurala + calcul evaluat de cod.",
+ "model": "claude-opus-5",
+ "max_pasi": 12,
+ "n": 3,
+ "raspunse": 2,
+ "respinse_de_verificare": 0,
+ "incomplete_detectate": 0,
+ "de_la_modelul_de_rezerva": [],
+ "pasi_medii": 9.33,
+ "tokeni": {
+  "intrare": 40,
+  "iesire": 13687,
+  "cache_scriere": 40964,
+  "cache_citire": 212814
+ },
+ "cost_usd": 0.7048,
+ "secunde_total": 233.93,
+ "raspunsuri": [
+  {
+   "id": "Q-TVA-08",
+   "tip": "CALCUL",
+   "intrebare": "O firmă cumpără în 2026 un autoturism (sub 3.500 kg, max. 9 locuri, nu intră în excepțiile legale) la 100.000 lei + TVA, folosit și în scop personal. Cât TVA poate deduce?",
+   "data_referinta": "2026-09-28",
+   "precizie_data": "an",
+   "strat": "navigare",
+   "declaratie": "La data de referință 28.09.2026, presupun o persoană impozabilă înregistrată în scopuri de TVA în România, cu drept integral de deducere, care achiziționează un vehicul rutier motorizat cu masa totală maximă autorizată sub 3.500 kg și maximum 9 scaune, neîncadrat în excepțiile de la art. 298 alin. (3) și care nu este utilizat exclusiv în scopul activității economice (este folosit și în scop personal), la un preț de 100.000 lei fără TVA, taxat cu cota standard.",
+   "propunerea_modelului": {
+    "stare": "RASPUNS",
+    "declaratie": "La data de referință 28.09.2026, presupun o persoană impozabilă înregistrată în scopuri de TVA în România, cu drept integral de deducere, care achiziționează un vehicul rutier motorizat cu masa totală maximă autorizată sub 3.500 kg și maximum 9 scaune, neîncadrat în excepțiile de la art. 298 alin. (3) și care nu este utilizat exclusiv în scopul activității economice (este folosit și în scop personal), la un preț de 100.000 lei fără TVA, taxat cu cota standard.",
+    "raspuns": "Dreptul de deducere este limitat la 50% din TVA aferentă achiziției: TVA facturată {tva_facturata} lei (cotă standard 21%), din care deductibilă {tva_deductibila} lei.",
+    "citate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art298/alin1",
+      "fragment": "Prin excepție de la prevederile art. 297 se limitează la 50% dreptul de deducere a taxei aferente cumpărării, achiziției intracomunitare, importului, închirierii sau leasingului de vehicule rutiere motorizate și a taxei aferente cheltuielilor legate de vehiculele aflate în proprietatea sau în folosința persoanei impozabile, în cazul în care vehiculele nu sunt utilizate exclusiv în scopul activității economice."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+      "fragment": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art298/alin2",
+      "fragment": "Restricția prevăzută la alin. (1) nu se aplică vehiculelor rutiere motorizate având o masă totală maximă autorizată care depășește 3.500 kg sau mai mult de 9 scaune, inclusiv scaunul șoferului."
+     }
+    ],
+    "lipsa": [],
+    "derogari_tratate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art298/alin2",
+      "cum": "Nu se aplică: vehiculul din speță are masa totală maximă autorizată sub 3.500 kg și maximum 9 scaune, deci rămâne în sfera limitării de la alin. (1)."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art298/alin3",
+      "cum": "Nu se aplică: întrebarea precizează expres că vehiculul nu intră în categoriile exceptate de lege."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art297",
+      "cum": "Art. 298 alin. (1) este excepție de la regula generală a sferei dreptului de deducere din art. 297; se aplică regula specială (limitarea la 50%)."
+     }
+    ],
+    "motiv": "Vehicul sub 3.500 kg, max. 9 scaune, neexceptat și utilizat și în scop personal: deducerea TVA aferentă achiziției este limitată la 50%, aplicată asupra TVA calculată cu cota standard de 21% la baza de 100.000 lei.",
+    "calcule": [
+     {
+      "nume": "tva_facturata",
+      "formula": "baza * cota",
+      "operanzi": [
+       {
+        "nume": "baza",
+        "valoare": "100.000",
+        "sursa": "intrebare",
+        "atom": "",
+        "fragment": "la 100.000 lei + TVA"
+       },
+       {
+        "nume": "cota",
+        "valoare": "21%",
+        "sursa": "atom",
+        "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+        "fragment": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+       }
+      ]
+     },
+     {
+      "nume": "tva_deductibila",
+      "formula": "tva_facturata * limita",
+      "operanzi": [
+       {
+        "nume": "limita",
+        "valoare": "50%",
+        "sursa": "atom",
+        "atom": "cod_fiscal_227_2015_consolidat#art298/alin1",
+        "fragment": "se limitează la 50% dreptul de deducere a taxei aferente cumpărării, achiziției intracomunitare, importului, închirierii sau leasingului de vehicule rutiere motorizate"
+       }
+      ]
+     }
+    ]
+   },
+   "apel": {
+    "model": "claude-opus-5",
+    "tururi": 4,
+    "pasi_navigare": 4,
+    "pasi": [
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "cod_fiscal_227_2015_consolidat",
+       "filtru": "limitări speciale ale dreptului de deducere"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "limitarea la 50% a dreptului de deducere TVA vehicule rutiere motorizate 3.500 kg 9 scaune"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art298/alin1"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "cota standard TVA 21% se aplică asupra bazei de impozitare"
+      }
+     }
+    ],
+    "tokeni": {
+     "intrare": 8,
+     "iesire": 2887,
+     "cache_scriere": 13280,
+     "cache_citire": 29743
+    },
+    "cost_usd": 0.17009,
+    "fallback": false,
+    "secunde": 54.89
+   },
+   "verificare": {
+    "trece": true,
+    "incalcari": []
+   },
+   "relatii_in_context": {},
+   "derogari_tratate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art298/alin2",
+     "cum": "Nu se aplică: vehiculul din speță are masa totală maximă autorizată sub 3.500 kg și maximum 9 scaune, deci rămâne în sfera limitării de la alin. (1)."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art298/alin3",
+     "cum": "Nu se aplică: întrebarea precizează expres că vehiculul nu intră în categoriile exceptate de lege."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art297",
+     "cum": "Art. 298 alin. (1) este excepție de la regula generală a sferei dreptului de deducere din art. 297; se aplică regula specială (limitarea la 50%)."
+    }
+   ],
+   "stare": "RASPUNS",
+   "raspuns": "Dreptul de deducere este limitat la 50% din TVA aferentă achiziției: TVA facturată 21.000 lei (cotă standard 21%), din care deductibilă 10.500 lei.  [calcul: tva_facturata = baza * cota = 21.000; tva_deductibila = tva_facturata * limita = 10.500]",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art298/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 298 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Prin excepție de la prevederile art. 297 se limitează la 50% dreptul de deducere a taxei aferente cumpărării, achiziției intracomunitare, importului, închirierii sau leasingului de vehicule rutiere motorizate și a taxei aferente cheltuielilor legate de vehiculele aflate în proprietatea sau în folosința persoanei impozabile, în cazul în care vehiculele nu sunt utilizate exclusiv în scopul activității economice.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%.",
+     "valabilitate": {
+      "valabil_din": "2025-08-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art298/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 298 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Restricția prevăzută la alin. (1) nu se aplică vehiculelor rutiere motorizate având o masă totală maximă autorizată care depășește 3.500 kg sau mai mult de 9 scaune, inclusiv scaunul șoferului.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+   "calcule": [
+    {
+     "nume": "tva_facturata",
+     "formula": "baza * cota",
+     "rezultat": "21.000",
+     "operanzi": [
+      {
+       "nume": "baza",
+       "valoare": "100.000",
+       "sursa": "intrebare",
+       "atom": "",
+       "fragment": "la 100.000 lei + TVA"
+      },
+      {
+       "nume": "cota",
+       "valoare": "21%",
+       "sursa": "atom",
+       "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+       "fragment": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+      }
+     ]
+    },
+    {
+     "nume": "tva_deductibila",
+     "formula": "tva_facturata * limita",
+     "rezultat": "10.500",
+     "operanzi": [
+      {
+       "nume": "limita",
+       "valoare": "50%",
+       "sursa": "atom",
+       "atom": "cod_fiscal_227_2015_consolidat#art298/alin1",
+       "fragment": "se limitează la 50% dreptul de deducere a taxei aferente cumpărării, achiziției intracomunitare, importului, închirierii sau leasingului de vehicule rutiere motorizate"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Q-PRF-01",
+   "tip": "PARAMETRU",
+   "intrebare": "Ce cotă de impozit pe veniturile microîntreprinderilor se aplică în 2026 unei microîntreprinderi care realizează venituri din consultanță, și cu ce cod de obligație se declară în D100?",
+   "data_referinta": "2026-09-28",
+   "precizie_data": "an",
+   "strat": "navigare",
+   "declaratie": "La data de referință 28.09.2026, pentru o persoană juridică română plătitoare de impozit pe veniturile microîntreprinderilor (titlul III Cod fiscal) care realizează venituri din consultanță, presupunând că rămâne în sistemul microîntreprinderilor în anul fiscal 2026.",
+   "propunerea_modelului": {
+    "stare": "NU_POT",
+    "declaratie": "La data de referință 28.09.2026, pentru o persoană juridică română plătitoare de impozit pe veniturile microîntreprinderilor (titlul III Cod fiscal) care realizează venituri din consultanță, presupunând că rămâne în sistemul microîntreprinderilor în anul fiscal 2026.",
+    "raspuns": "",
+    "citate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+      "fragment": "Cota de impozit pe veniturile microîntreprinderilor este de 1%."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art56/alin2",
+      "fragment": "Microîntreprinderile au obligația de a depune, până la termenul de plată a impozitului, declarația de impozit pe veniturile microîntreprinderilor."
+     }
+    ],
+    "lipsa": [
+     "poziția și codul obligației «Impozit pe veniturile microîntreprinderilor» din Nomenclatorul obligațiilor de plată la bugetul de stat (anexa nr. 3 la OPANAF 587/2016, astfel cum a fost modificat prin OPANAF 57/2026)",
+     "confirmarea existenței/inexistenței unei cote distincte pentru activitățile de consultanță în forma art. 51 aplicabilă în 2026"
+    ],
+    "derogari_tratate": [],
+    "motiv": "Textul art. 51 alin. (1) din Codul fiscal, în forma valabilă de la 1 ianuarie 2026 pe care am putut-o deschide, prevede o cotă unică, fără o regulă distinctă pentru veniturile din consultanță; nu am regăsit însă niciun atom care să conțină o cotă specială pentru consultanță, pentru a confirma că nu există. În plus, niciunul dintre atomii găsiți nu conține codul (poziția) obligației de plată sub care impozitul pe veniturile microîntreprinderilor se declară în formularul 100 — Nomenclatorul obligațiilor de plată la bugetul de stat nu a putut fi deschis. Fiind cerute două elemente, dintre care unul nu are temei în atomii disponibili, mă abțin.",
+    "calcule": []
+   },
+   "apel": {
+    "model": "claude-opus-5",
+    "tururi": 9,
+    "pasi_navigare": 12,
+    "pasi": [
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "cod_fiscal_227_2015_consolidat",
+       "filtru": "Cotele de impozitare"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "cota de impozitare microîntreprinderi consultanță 3%"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art51"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art51/alin1"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "microîntreprinderi cota 3% venituri din consultanță și management cod CAEN 6920"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "impozit pe veniturile microîntreprinderilor cod obligație declarația 100"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "Nomenclatorul obligațiilor de plată la bugetul de stat impozit pe veniturile microîntreprinderilor denumire creanță fiscală"
+      }
+     },
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "opanaf_57_2026_d100_d710",
+       "filtru": "nomenclator"
+      }
+     },
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "opanaf_57_2026_d100_d710",
+       "filtru": ""
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "anexa nomenclatorul obligațiilor de plată cod 1170 impozit pe veniturile microîntreprinderilor"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "opanaf_57_2026_d100_d710#artI"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "venituri din consultanță și management peste 20% din veniturile totale microîntreprindere condiție"
+      }
+     }
+    ],
+    "tokeni": {
+     "intrare": 18,
+     "iesire": 3891,
+     "cache_scriere": 12438,
+     "cache_citire": 99722
+    },
+    "cost_usd": 0.22496,
+    "fallback": false,
+    "secunde": 71.41
+   },
+   "verificare": {
+    "trece": true,
+    "incalcari": []
+   },
+   "relatii_in_context": {},
+   "derogari_tratate": [],
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 51 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%.",
+     "valabilitate": {
+      "valabil_din": "2026-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art56/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 56 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Microîntreprinderile au obligația de a depune, până la termenul de plată a impozitului, declarația de impozit pe veniturile microîntreprinderilor.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "modelul s-a abţinut: Textul art. 51 alin. (1) din Codul fiscal, în forma valabilă de la 1 ianuarie 2026 pe care am putut-o deschide, prevede o cotă unică, fără o regulă distinctă pentru veniturile din consultanță; nu am regăsit însă niciun atom care să conțină o cotă specială pentru consultanță, pentru a confirma că nu există. În plus, niciunul dintre atomii găsiți nu conține codul (poziția) obligației de plată sub care impozitul pe veniturile microîntreprinderilor se declară în formularul 100 — Nomenclatorul obligațiilor de plată la bugetul de stat nu a putut fi deschis. Fiind cerute două elemente, dintre care unul nu are temei în atomii disponibili, mă abțin."
+  },
+  {
+   "id": "Q-SAL-03",
+   "tip": "CALCUL",
+   "intrebare": "Salariat cu normă întreagă la funcția de bază, septembrie 2026, salariu brut 10.000 lei, fără persoane în întreținere, fără copii școlarizați, peste 26 de ani, fără alte deduceri. Calculați CAS, CASS, impozit, net și CAM.",
+   "data_referinta": "2026-09-30",
+   "precizie_data": "luna",
+   "strat": "navigare",
+   "declaratie": "La data de referință 30.09.2026, pentru un salariat cu contract individual de muncă cu normă întreagă, la funcția de bază, în condiții normale de muncă, cu salariu brut lunar de 10.000 lei, fără persoane în întreținere și fără alte deduceri, presupun că nu beneficiază de nicio scutire de impozit (art. 60 Cod fiscal) și că nu i se acordă deducere personală de bază, întrucât venitul brut lunar depășește plafonul de 2.000 de lei peste salariul de bază minim brut pe țară garantat în plată.",
+   "propunerea_modelului": {
+    "stare": "RASPUNS",
+    "declaratie": "La data de referință 30.09.2026, pentru un salariat cu contract individual de muncă cu normă întreagă, la funcția de bază, în condiții normale de muncă, cu salariu brut lunar de 10.000 lei, fără persoane în întreținere și fără alte deduceri, presupun că nu beneficiază de nicio scutire de impozit (art. 60 Cod fiscal) și că nu i se acordă deducere personală de bază, întrucât venitul brut lunar depășește plafonul de 2.000 de lei peste salariul de bază minim brut pe țară garantat în plată.",
+    "raspuns": "CAS (angajat) = {CAS} lei; CASS (angajat) = {CASS} lei; impozit pe venitul din salarii = {impozit} lei; salariu net = {net} lei; CAM (datorată de angajator) = {CAM} lei.",
+    "citate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art138",
+      "fragment": "Cotele de contribuții de asigurări sociale sunt următoarele: a) 25% datorată de către persoanele fizice care au calitatea de angajați sau pentru care există obligația plății contribuției de asigurări sociale, potrivit prezentei legi;"
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art156~2",
+      "fragment": "Cota de contribuție de asigurări sociale de sănătate este de 10% și se datorează de către persoanele fizice care au calitatea de angajați sau pentru care există obligația plății contribuției de asigurări sociale de sănătate, potrivit prezentei legi."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
+      "fragment": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei"
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art220^3/alin1",
+      "fragment": "Cota contribuției asiguratorii pentru muncă este de 2,25%."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
+      "fragment": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului."
+     }
+    ],
+    "lipsa": [],
+    "derogari_tratate": [
+     {
+      "atom": "oug_156_2024#artLXVI/alin1",
+      "cum": "Derogarea de la art. 78, 139 alin. (1), 140, 157 alin. (1) și 220^4 alin. (1) vizează sumele neimpozabile/neincluse în baza de calcul acordate salariaților cu venituri la nivelul salariului minim brut; nu se aplică unui salariu brut de 10.000 lei."
+     },
+     {
+      "atom": "oug_89_2025#artIII~2/alin1",
+      "cum": "Aceeași derogare privind facilitatea pentru veniturile la nivelul salariului de bază minim brut pe țară; nu se aplică salariatului cu brut de 10.000 lei."
+     },
+     {
+      "atom": "oug_115_2023_consolidat#artLXXIII/alin1",
+      "cum": "Derogare aplicabilă veniturilor din salarii la nivelul salariului minim brut garantat în plată; cazul de față (brut 10.000 lei) nu intră în sfera ei."
+     }
+    ],
+    "motiv": "CAS 25% și CASS 10% se aplică asupra câștigului brut din salarii; baza impozabilă = brut minus CAS și CASS, fără deducere personală (venit brut peste plafonul de 2.000 de lei peste salariul minim); impozitul este 10%; CAM 2,25% este în sarcina angajatorului.",
+    "calcule": [
+     {
+      "nume": "CAS",
+      "formula": "brut * cota_cas",
+      "operanzi": [
+       {
+        "nume": "brut",
+        "valoare": "10.000",
+        "sursa": "intrebare",
+        "atom": "",
+        "fragment": "salariu brut 10.000 lei"
+       },
+       {
+        "nume": "cota_cas",
+        "valoare": "25%",
+        "sursa": "atom",
+        "atom": "cod_fiscal_227_2015_consolidat#art138",
+        "fragment": "a) 25% datorată de către persoanele fizice care au calitatea de angajați sau pentru care există obligația plății contribuției de asigurări sociale, potrivit prezentei legi;"
+       }
+      ]
+     },
+     {
+      "nume": "CASS",
+      "formula": "brut * cota_cass",
+      "operanzi": [
+       {
+        "nume": "brut",
+        "valoare": "10.000",
+        "sursa": "intrebare",
+        "atom": "",
+        "fragment": "salariu brut 10.000 lei"
+       },
+       {
+        "nume": "cota_cass",
+        "valoare": "10%",
+        "sursa": "atom",
+        "atom": "cod_fiscal_227_2015_consolidat#art156~2",
+        "fragment": "Cota de contribuție de asigurări sociale de sănătate este de 10% și se datorează de către persoanele fizice care au calitatea de angajați"
+       }
+      ]
+     },
+     {
+      "nume": "baza_impozabila",
+      "formula": "brut - CAS - CASS",
+      "operanzi": [
+       {
+        "nume": "brut",
+        "valoare": "10.000",
+        "sursa": "intrebare",
+        "atom": "",
+        "fragment": "salariu brut 10.000 lei"
+       }
+      ]
+     },
+     {
+      "nume": "impozit",
+      "formula": "baza_impozabila * cota_impozit",
+      "operanzi": [
+       {
+        "nume": "cota_impozit",
+        "valoare": "10%",
+        "sursa": "atom",
+        "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
+        "fragment": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei"
+       }
+      ]
+     },
+     {
+      "nume": "net",
+      "formula": "brut - CAS - CASS - impozit",
+      "operanzi": [
+       {
+        "nume": "brut",
+        "valoare": "10.000",
+        "sursa": "intrebare",
+        "atom": "",
+        "fragment": "salariu brut 10.000 lei"
+       }
+      ]
+     },
+     {
+      "nume": "CAM",
+      "formula": "brut * cota_cam",
+      "operanzi": [
+       {
+        "nume": "brut",
+        "valoare": "10.000",
+        "sursa": "intrebare",
+        "atom": "",
+        "fragment": "salariu brut 10.000 lei"
+       },
+       {
+        "nume": "cota_cam",
+        "valoare": "2,25%",
+        "sursa": "atom",
+        "atom": "cod_fiscal_227_2015_consolidat#art220^3/alin1",
+        "fragment": "Cota contribuției asiguratorii pentru muncă este de 2,25%."
+       }
+      ]
+     }
+    ]
+   },
+   "apel": {
+    "model": "claude-opus-5",
+    "tururi": 7,
+    "pasi_navigare": 12,
+    "pasi": [
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "cota contributie asigurari sociale 25% angajat"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "cota contributie asiguratorie pentru munca 2,25%"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art138"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art156"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "Cota de contribuție de asigurări sociale de sănătate este de 10%"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "deducere personală salariul de bază minim brut 2.000 lei venit brut lunar"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art77/alin3"
+      }
+     },
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "cod_fiscal_227_2015_consolidat",
+       "filtru": "Cota de contribuție de asigurări sociale de sănătate"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art64"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "Cotele de contribuții de asigurări sociale de sănătate sunt următoarele 10%"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art156~2"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art157"
+      }
+     }
+    ],
+    "tokeni": {
+     "intrare": 14,
+     "iesire": 6909,
+     "cache_scriere": 15246,
+     "cache_citire": 83349
+    },
+    "cost_usd": 0.30976,
+    "fallback": false,
+    "secunde": 96.79
+   },
+   "verificare": {
+    "trece": true,
+    "incalcari": []
+   },
+   "relatii_in_context": {
+    "oug_115_2023_consolidat#artLXXIII/alin1": [
+     [
+      "derogare",
+      "cod_fiscal_227_2015_consolidat#art157"
+     ]
+    ],
+    "oug_156_2024#artLXVI/alin1": [
+     [
+      "derogare",
+      "cod_fiscal_227_2015_consolidat#art157"
+     ]
+    ],
+    "oug_89_2025#artIII~2/alin1": [
+     [
+      "derogare",
+      "cod_fiscal_227_2015_consolidat#art157"
+     ]
+    ]
+   },
+   "derogari_tratate": [
+    {
+     "atom": "oug_156_2024#artLXVI/alin1",
+     "cum": "Derogarea de la art. 78, 139 alin. (1), 140, 157 alin. (1) și 220^4 alin. (1) vizează sumele neimpozabile/neincluse în baza de calcul acordate salariaților cu venituri la nivelul salariului minim brut; nu se aplică unui salariu brut de 10.000 lei."
+    },
+    {
+     "atom": "oug_89_2025#artIII~2/alin1",
+     "cum": "Aceeași derogare privind facilitatea pentru veniturile la nivelul salariului de bază minim brut pe țară; nu se aplică salariatului cu brut de 10.000 lei."
+    },
+    {
+     "atom": "oug_115_2023_consolidat#artLXXIII/alin1",
+     "cum": "Derogare aplicabilă veniturilor din salarii la nivelul salariului minim brut garantat în plată; cazul de față (brut 10.000 lei) nu intră în sfera ei."
+    }
+   ],
+   "stare": "RASPUNS",
+   "raspuns": "CAS (angajat) = 2.500 lei; CASS (angajat) = 1.000 lei; impozit pe venitul din salarii = 650 lei; salariu net = 5.850 lei; CAM (datorată de angajator) = 225 lei.  [calcul: CAS = brut * cota_cas = 2.500; CASS = brut * cota_cass = 1.000; baza_impozabila = brut - CAS - CASS = 6.500; impozit = baza_impozabila * cota_impozit = 650; net = brut - CAS - CASS - impozit = 5.850; CAM = brut * cota_cam = 225]",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art138",
+     "temei": "Codul fiscal (Legea 227/2015) art. 138",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Cotele de contribuții de asigurări sociale sunt următoarele: a) 25% datorată de către persoanele fizice care au calitatea de angajați sau pentru care există obligația plății contribuției de asigurări sociale, potrivit prezentei legi;",
+     "valabilitate": {
+      "valabil_din": "2018-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art156~2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 156",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Cota de contribuție de asigurări sociale de sănătate este de 10% și se datorează de către persoanele fizice care au calitatea de angajați sau pentru care există obligația plății contribuției de asigurări sociale de sănătate, potrivit prezentei legi.",
+     "valabilitate": {
+      "valabil_din": "2021-12-18",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 64 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei",
+     "valabilitate": {
+      "valabil_din": "2018-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art220^3/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 220^3 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Cota contribuției asiguratorii pentru muncă este de 2,25%.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 77 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+   "calcule": [
+    {
+     "nume": "CAS",
+     "formula": "brut * cota_cas",
+     "rezultat": "2.500",
+     "operanzi": [
+      {
+       "nume": "brut",
+       "valoare": "10.000",
+       "sursa": "intrebare",
+       "atom": "",
+       "fragment": "salariu brut 10.000 lei"
+      },
+      {
+       "nume": "cota_cas",
+       "valoare": "25%",
+       "sursa": "atom",
+       "atom": "cod_fiscal_227_2015_consolidat#art138",
+       "fragment": "a) 25% datorată de către persoanele fizice care au calitatea de angajați sau pentru care există obligația plății contribuției de asigurări sociale, potrivit prezentei legi;"
+      }
+     ]
+    },
+    {
+     "nume": "CASS",
+     "formula": "brut * cota_cass",
+     "rezultat": "1.000",
+     "operanzi": [
+      {
+       "nume": "brut",
+       "valoare": "10.000",
+       "sursa": "intrebare",
+       "atom": "",
+       "fragment": "salariu brut 10.000 lei"
+      },
+      {
+       "nume": "cota_cass",
+       "valoare": "10%",
+       "sursa": "atom",
+       "atom": "cod_fiscal_227_2015_consolidat#art156~2",
+       "fragment": "Cota de contribuție de asigurări sociale de sănătate este de 10% și se datorează de către persoanele fizice care au calitatea de angajați"
+      }
+     ]
+    },
+    {
+     "nume": "baza_impozabila",
+     "formula": "brut - CAS - CASS",
+     "rezultat": "6.500",
+     "operanzi": [
+      {
+       "nume": "brut",
+       "valoare": "10.000",
+       "sursa": "intrebare",
+       "atom": "",
+       "fragment": "salariu brut 10.000 lei"
+      }
+     ]
+    },
+    {
+     "nume": "impozit",
+     "formula": "baza_impozabila * cota_impozit",
+     "rezultat": "650",
+     "operanzi": [
+      {
+       "nume": "cota_impozit",
+       "valoare": "10%",
+       "sursa": "atom",
+       "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
+       "fragment": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei"
+      }
+     ]
+    },
+    {
+     "nume": "net",
+     "formula": "brut - CAS - CASS - impozit",
+     "rezultat": "5.850",
+     "operanzi": [
+      {
+       "nume": "brut",
+       "valoare": "10.000",
+       "sursa": "intrebare",
+       "atom": "",
+       "fragment": "salariu brut 10.000 lei"
+      }
+     ]
+    },
+    {
+     "nume": "CAM",
+     "formula": "brut * cota_cam",
+     "rezultat": "225",
+     "operanzi": [
+      {
+       "nume": "brut",
+       "valoare": "10.000",
+       "sursa": "intrebare",
+       "atom": "",
+       "fragment": "salariu brut 10.000 lei"
+      },
+      {
+       "nume": "cota_cam",
+       "valoare": "2,25%",
+       "sursa": "atom",
+       "atom": "cod_fiscal_227_2015_consolidat#art220^3/alin1",
+       "fragment": "Cota contribuției asiguratorii pentru muncă este de 2,25%."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

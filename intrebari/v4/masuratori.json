@@ -1,0 +1,180 @@
+{
+ "abtineri_de_regasire_v3": [
+  "Q-TVA-04",
+  "Q-TVA-05",
+  "Q-TVA-06",
+  "Q-TVA-07",
+  "Q-TVA-08",
+  "Q-TVA-09",
+  "Q-TVA-10",
+  "Q-PRF-01",
+  "Q-PRF-04",
+  "Q-PRF-05",
+  "Q-PRF-06",
+  "Q-PRF-07",
+  "Q-PRF-10",
+  "Q-SAL-03",
+  "Q-SAL-04",
+  "Q-SAL-06",
+  "Q-SAL-07",
+  "Q-CPF-01",
+  "Q-CPF-02",
+  "Q-CPF-05",
+  "Q-CPF-06",
+  "Q-CPF-08",
+  "Q-CPF-10",
+  "Q-CTB-02",
+  "Q-CTB-04",
+  "Q-CTB-05",
+  "Q-CTB-07",
+  "Q-CTB-09",
+  "Q-CTB-10"
+ ],
+ "eliminate": [
+  "Q-TVA-05",
+  "Q-TVA-06",
+  "Q-TVA-07",
+  "Q-TVA-08",
+  "Q-PRF-04",
+  "Q-PRF-05",
+  "Q-PRF-06",
+  "Q-PRF-07",
+  "Q-PRF-10",
+  "Q-SAL-06",
+  "Q-SAL-07",
+  "Q-CPF-01",
+  "Q-CPF-05",
+  "Q-CPF-06",
+  "Q-CPF-10",
+  "Q-CTB-02",
+  "Q-CTB-04",
+  "Q-CTB-05",
+  "Q-CTB-07",
+  "Q-CTB-10"
+ ],
+ "ramase": [
+  "Q-TVA-04",
+  "Q-TVA-09",
+  "Q-TVA-10",
+  "Q-PRF-01",
+  "Q-SAL-03",
+  "Q-SAL-04",
+  "Q-CPF-02",
+  "Q-CPF-08",
+  "Q-CTB-09"
+ ],
+ "eliminate_pe_fond": {
+  "Q-TVA-05": "CORECT",
+  "Q-TVA-06": "GRESIT",
+  "Q-TVA-07": "GRESIT",
+  "Q-TVA-08": "GRESIT",
+  "Q-PRF-04": "GRESIT",
+  "Q-PRF-05": "GRESIT",
+  "Q-PRF-06": "CORECT",
+  "Q-PRF-07": "CORECT",
+  "Q-PRF-10": "GRESIT",
+  "Q-SAL-06": "GRESIT",
+  "Q-SAL-07": "CORECT",
+  "Q-CPF-01": "CORECT",
+  "Q-CPF-05": "CORECT",
+  "Q-CPF-06": "CORECT",
+  "Q-CPF-10": "CORECT",
+  "Q-CTB-02": "GRESIT",
+  "Q-CTB-04": "GRESIT",
+  "Q-CTB-05": "GRESIT",
+  "Q-CTB-07": "CORECT",
+  "Q-CTB-10": "CORECT"
+ },
+ "calcul": [
+  "Q-TVA-08",
+  "Q-TVA-09",
+  "Q-PRF-05",
+  "Q-PRF-06",
+  "Q-PRF-07",
+  "Q-SAL-03",
+  "Q-SAL-04",
+  "Q-CPF-02",
+  "Q-CPF-03",
+  "Q-CTB-03",
+  "Q-CTB-07",
+  "Q-CTB-09"
+ ],
+ "calcul_raspunse": [
+  "Q-TVA-08",
+  "Q-PRF-05",
+  "Q-PRF-06",
+  "Q-PRF-07",
+  "Q-CPF-03",
+  "Q-CTB-07"
+ ],
+ "calcul_cu_formula_evaluata": [
+  "Q-TVA-08",
+  "Q-PRF-05",
+  "Q-PRF-06",
+  "Q-PRF-07",
+  "Q-CPF-03",
+  "Q-CTB-07"
+ ],
+ "calcul_corecte_pe_fond": [
+  "Q-PRF-06",
+  "Q-PRF-07",
+  "Q-CTB-07"
+ ],
+ "erori_noi": [
+  "Q-TVA-06",
+  "Q-TVA-07",
+  "Q-TVA-08",
+  "Q-PRF-02",
+  "Q-PRF-03",
+  "Q-PRF-04",
+  "Q-PRF-05",
+  "Q-PRF-10",
+  "Q-SAL-06",
+  "Q-CTB-02",
+  "Q-CTB-04",
+  "Q-CTB-05",
+  "Q-CTB-08"
+ ],
+ "erori_disparute": [
+  "Q-TVA-03",
+  "Q-SAL-08",
+  "Q-CPF-09",
+  "Q-CTB-03"
+ ],
+ "raspunsuri_v3_retrase": [
+  "Q-TVA-03",
+  "Q-SAL-05",
+  "Q-CPF-07",
+  "Q-CTB-03"
+ ],
+ "respinse_de_verificarea_calculului": [
+  "Q-CTB-03"
+ ],
+ "la_limita_de_pasi": [
+  "Q-PRF-01",
+  "Q-PRF-05",
+  "Q-PRF-09",
+  "Q-SAL-03",
+  "Q-SAL-04",
+  "Q-CPF-03",
+  "Q-CPF-08",
+  "Q-CTB-02",
+  "Q-CTB-09"
+ ],
+ "citeaza_note_tranzitorii_v4": [],
+ "citeaza_articole_romane_CF_v3": [
+  [
+   "Q-TVA-03",
+   "cod_fiscal_227_2015_consolidat#artIII~2/alin6~2"
+  ],
+  [
+   "Q-TVA-03",
+   "cod_fiscal_227_2015_consolidat#artIII~2/alin6~2"
+  ]
+ ],
+ "unelte_folosite": {
+  "cauta": 102,
+  "cuprins": 68,
+  "deschide": 205
+ }
+}
