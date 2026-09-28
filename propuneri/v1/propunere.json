@@ -39,15 +39,145 @@
   "n_atomi": 46559
  },
  "corpus": {
-  "luat_la": "2026-09-28T13:20:51",
+  "luat_la": "2026-09-28T16:12:51",
   "manifest": "corpus_manifest.json",
   "mod": "DOAR CITIRE (CLAUDE.md §1)",
   "n_fisiere": 726,
   "octeti": 130006698,
   "sursa": "/home/costin/iconta_nou/anaf_surse"
  },
+ "dovada_inversa": {
+  "_ce": "OP7b dovada in cealalta direcţie: greșeli cunoscute injectate pe o COPIE a inventarului (niciodata in iConta), pentru a arata ca detectorul poate produce DIFERA.",
+  "mutaţii": [
+   {
+    "aștept": "DIFERA",
+    "de_ce": "cota reala din 2025 (OUG 156/2024), rămasa in cod dupa ce Legea 141/2025 a urcat-o la 16% de la 01.01.2026 - clasa 'cota veche rămasa in cod'",
+    "lege_conţine": "16",
+    "mutant": {
+     "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+     "atom": "legea_141_2025_consolidat#artII",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.10 vs 16) - la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+     "valoare_lege": "16",
+     "verbatim": "Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului "
+    },
+    "mutaţie": "dividende 10% in loc de 16%",
+    "original": {
+     "atom": "legea_141_2025_consolidat#artII",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "16%"
+    },
+    "parametru": "cote/impozit_dividend@2026-01-01",
+    "valoare_injectata": "0.10",
+    "valoare_reala_in_cod": "0.16"
+   },
+   {
+    "aștept": "DIFERA",
+    "de_ce": "cota de dinainte de 01.08.2025; exact greșeala pe care Legea 141/2025 a produs-o in orice sistem care n-a fost actualizat",
+    "lege_conţine": "21",
+    "mutant": {
+     "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+     "atom": "legea_141_2025_consolidat#art291/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.19 vs 21) - la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+     "valoare_lege": "21",
+     "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+    },
+    "mutaţie": "TVA standard 19% in loc de 21%",
+    "original": {
+     "atom": "legea_141_2025_consolidat#art291/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "21%"
+    },
+    "parametru": "cote/tva_standard@2025-08-01",
+    "valoare_injectata": "0.19",
+    "valoare_reala_in_cod": "0.21"
+   },
+   {
+    "aștept": "DIFERA",
+    "de_ce": "valoarea HG 1506/2024, aplicata unei perioade guvernate de HG 146/2026 (4.325) - clasa 'plafon vechi aplicat unei perioade noi'",
+    "lege_conţine": "4.325",
+    "mutant": {
+     "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
+     "atom": "hg_146_2026_salariu_minim#art1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (4050 vs ['4.325', '949']) - la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
+     "valoare_lege": [
+      "4.325",
+      "949"
+     ],
+     "verbatim": "Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei lunar, pentru un program normal de lucru în medie de 166,667 ore pe lună, reprezentând 25,949 lei/o"
+    },
+    "mutaţie": "salariu minim 4050 pe o data din semestrul 2 2026",
+    "original": {
+     "atom": "hg_146_2026_salariu_minim#art1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "4.325"
+    },
+    "parametru": "cote/salariu_minim@2026-07-01",
+    "valoare_injectata": "4050",
+    "valoare_reala_in_cod": "4325"
+   },
+   {
+    "aștept": "DIFERA",
+    "de_ce": "nu e o cota istorica, e o valoare pur greșita; testeaza daca detectorul cere potrivirea valorii sau se mulţumeşte cu subiectul",
+    "lege_conţine": "1",
+    "mutant": {
+     "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+     "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.05 vs 1) - la nivelul: ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+     "valoare_lege": "1",
+     "verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%."
+    },
+    "mutaţie": "cota micro 5% - valoare care nu exista in niciun act",
+    "original": {
+     "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "1%"
+    },
+    "parametru": "cote/impozit_micro@2023-01-01",
+    "valoare_injectata": "0.05",
+    "valoare_reala_in_cod": "0.01"
+   },
+   {
+    "aștept": "de_raportat",
+    "de_ce": "valoarea din cod e CORECTA (25%), dar temeiul declarat trimite la o hotarare de salariu minim. Intrebarea nu e 'ce valoare', ci 'proba duce unde spune?'",
+    "lege_conţine": null,
+    "mutant": {
+     "ancora": "ancora pe articolul din Temei (hg_146_2026_salariu_minim#art1)",
+     "atom": "hg_146_2026_salariu_minim#art1",
+     "citare_rezolvata": false,
+     "clasificare": "NEGASIT",
+     "motiv": "atomii gasiti prin temeiul declarat nu poarta nicio valoare de forma cerută (procent) - deci niciunul nu stabileste parametrul. Nu se caută in alte acte: cand iConta declara un temei, verdictul se ia din actul acela.",
+     "valoare_lege": null,
+     "verbatim": "Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei lunar, pentru un program normal de lucru în medie de 166,667 ore pe lună, reprezentând 25,949 lei/o"
+    },
+    "mutaţie": "citare spre actul greșit (CAS 25% cu temei HG 146/2026)",
+    "original": {
+     "atom": "cod_fiscal_227_2015_consolidat#art138",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "25%"
+    },
+    "parametru": "cote/cas@2018-01-01",
+    "valoare_injectata": "0.25",
+    "valoare_reala_in_cod": "0.25"
+   }
+  ],
+  "n_pica": 0,
+  "n_trec": 5
+ },
  "durate_masurate": {
-  "masurat_la": "2026-09-28T13:21:10",
+  "masurat_la": "2026-09-28T16:13:15",
   "pasi": [
    {
     "operatie": "OP2 instantaneu corpus + manifest SHA",
@@ -55,7 +185,7 @@
      "n_fisiere": 726,
      "octeti_total": 130006698
     },
-    "secunde": 0.54
+    "secunde": 0.49
    },
    {
     "operatie": "OP3 strat de text (txt/html/pdf)",
@@ -63,7 +193,7 @@
      "n_acte_cu_text": 269,
      "n_neextractibile": 4
     },
-    "secunde": 2.09
+    "secunde": 2.13
    },
    {
     "operatie": "OP4 atomizare structurala",
@@ -73,7 +203,7 @@
      "n_acte_pe_fragmente": 68,
      "n_atomi": 46559
     },
-    "secunde": 2.37
+    "secunde": 2.15
    },
    {
     "operatie": "OP5 inventar parametri iConta (citire)",
@@ -87,7 +217,7 @@
       "termen": 5
      }
     },
-    "secunde": 2.22
+    "secunde": 1.81
    },
    {
     "operatie": "OP6+OP7 potrivire si clasificare",
@@ -97,23 +227,31 @@
      "n_conturi_in_plan_din_corpus": 583,
      "n_parametri": 231,
      "sumar": {
-      "CONCORDA": 202,
-      "NEGASIT": 29
+      "CONCORDA": 200,
+      "NEGASIT": 31
      }
     },
-    "secunde": 11.76
+    "secunde": 9.59
+   },
+   {
+    "operatie": "OP7b banc de mutatii (dovada inversa)",
+    "rezumat": {
+     "n_pica": 0,
+     "n_trec": 5
+    },
+    "secunde": 3.88
    },
    {
     "operatie": "Probe pe corpus",
     "rezumat": {
      "cod_ieșire": 0
     },
-    "secunde": 0.3
+    "secunde": 4.19
    }
   ],
-  "total_secunde": 19.28
+  "total_secunde": 24.24
  },
- "generat_la": "2026-09-28T13:21:10",
+ "generat_la": "2026-09-28T16:13:15",
  "inventar": {
   "cu_temei_declarat": 42,
   "fara_temei_declarat": 189,
@@ -281,11 +419,11 @@
   {
    "act_modificator": null,
    "ancora": "ancora pe articolul din Temei (cf_art291_2016_forma_initiala#art291/alin3)",
-   "atom": "cf_art291_2016_forma_initiala#art291/alin3",
+   "atom": "cf_art291_2016_forma_initiala#art291/alin3/litc/pct3",
    "atom_abrogat": false,
-   "atom_linie": 15,
-   "atom_nivel": "alineat",
-   "atom_verbatim": "Cota redusa de 5% se aplica asupra bazei de impozitare pentru urmatoarele livrari de bunuri si prestari de servicii:",
+   "atom_linie": 21,
+   "atom_nivel": "punct",
+   "atom_verbatim": "…epaseste suprafata de 250 m2, inclusiv amprenta la sol a locuintei, in cazul caselor de locuit individuale. In cazul imobilelor care au mai mult de doua locuinte, cota indiviza a terenului aferent fiecarei locuinte nu poate depasi suprafata de 250 m2, inclusiv amprenta la sol aferenta fiecarei locuinte. Orice persoana necasatorita sau familie poate achizitiona o singura locuinta cu cota redusa de 5%, respectiv: (i) In cazul persoanelor necasatorite, sa nu fi detinut si sa nu detina nicio locuinta in proprietate pe care au achizitionat-o cu cota de 5%; (ii) In cazul familiilor, sotul sau sotia sa nu fi detinut si sa nu detina, fiecare sau impreuna, nicio locuinta in proprietate pe care a/au achizitionat-o cu cota de 5%;…",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -305,20 +443,20 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
-   "atom": "legea_141_2025_consolidat#art183/alin4",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+   "atom": "legea_141_2025_consolidat#artII",
    "atom_abrogat": false,
-   "atom_linie": 451,
-   "atom_nivel": "alineat",
-   "atom_verbatim": "Persoanele fizice care au calitatea de pensionari sunt exceptate de la plata contribuției sociale de sănătate pentru veniturile din pensii realizate începând cu data de 1 ianuarie 2028. ... 41. La articolul 224 alineatul (4), litera b) se modifică și va avea următorul cuprins: b) 16% pentru veniturile din dividende prevăzute la art. 223 alin. (1) lit. a); ... ... 42. La articolul 291, alineatele (1) și (2) se modifică și vor avea următorul cuprins: +",
+   "atom_linie": 159,
+   "atom_nivel": "articol",
+   "atom_verbatim": "Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul. ... 2. La articolul 46^1, alineatul (1) se modifică și va avea următorul cuprins: +",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "dividende"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
    "nume": "impozit_dividend",
    "parametru": "cote/impozit_dividend@2026-01-01",
    "temei_declarat_de_iconta": "Legea 141 2025",
@@ -330,20 +468,20 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (oug_156_2024)",
-   "atom": "oug_156_2024#artLXIV/pct15",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (14 cuvinte, fara cifre) in actul declarat",
+   "atom": "oug_156_2024#artLXIV/pct9",
    "atom_abrogat": false,
-   "atom_linie": 894,
+   "atom_linie": 867,
    "atom_nivel": "punct",
-   "atom_verbatim": "La articolul 224 alineatul (4), litera b) se modifică şi va avea următorul cuprins: \"b) 10% pentru veniturile din dividende prevăzute la art. 223 alin. (1) lit. a);\".",
+   "atom_verbatim": "La articolul 97, alineatul (7) se modifică şi va avea următorul cuprins: \"(7) Veniturile sub formă de dividende, inclusiv câştigul obţinut ca urmare a deţinerii de titluri de participare definite de legislaţia în materie la organisme de plasament colectiv, se impozitează cu o cotă de 10% din suma acestora, impozitul fiind final. Obligaţia calculării şi reţinerii impozitului pe veniturile sub formă de dividende revine persoanelor juridice, odată cu plata dividendelor/sumelor reprezentând câştigul obţinut ca urmare a deţinerii de titluri de participare de către acţionari/asociaţi/investitori. Termenul de virare a impozitului este până la data de 25 inclusiv a lunii următoare celei în care se face plata. În cazul dividendelor/câştigurilor obţinute ca urmare a deţinerii de titluri de participare, distribuite, dar care nu au fost plătite acţionarilor/asociaţilor/investitorilor până la sfârşitul anului în care s-a aprobat distribuirea acestora, impozitul pe dividende/câştig se plăteşte până la data de 25 ianuarie inclusiv a anului următor distribuirii. Impozitul datorat se virează integral la bugetul de stat.\"",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (oug_156_2024)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (14 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "dividende"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (oug_156_2024)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (14 cuvinte, fara cifre) in actul declarat",
    "nume": "impozit_dividend",
    "parametru": "cote/impozit_dividend@2025-01-01",
    "temei_declarat_de_iconta": "OUG 156 2024",
@@ -355,7 +493,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "og_16_2022_consolidat#artI/alin4",
    "atom_abrogat": false,
    "atom_linie": 71,
@@ -364,11 +502,11 @@
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "dividende"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "impozit_dividend",
    "parametru": "cote/impozit_dividend@2023-01-01",
    "temei_declarat_de_iconta": "OG 16 2022",
@@ -380,7 +518,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "oug_50_2015_consolidat#artI~2/pct17",
    "atom_abrogat": false,
    "atom_linie": 129,
@@ -389,11 +527,11 @@
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "dividende"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "impozit_dividend",
    "parametru": "cote/impozit_dividend@2016-01-01",
    "temei_declarat_de_iconta": "OUG 50 2015",
@@ -405,7 +543,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (oug_8_2026)",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "atom": "oug_8_2026#art20^1/alin5^1/litb",
    "atom_abrogat": false,
    "atom_linie": 692,
@@ -414,13 +552,13 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (oug_8_2026)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "tva la incasare",
     "cifra de afaceri",
     "plafon"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (oug_8_2026)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "nume": "plafon_tva_incasare",
    "parametru": "cote/plafon_tva_incasare@2027-01-01",
    "temei_declarat_de_iconta": "OUG 8 2026",
@@ -432,22 +570,22 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (oug_8_2026)",
-   "atom": "oug_8_2026#art9/alin1",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
+   "atom": "oug_8_2026#art20^1/alin5^1/litg^2",
    "atom_abrogat": false,
-   "atom_linie": 810,
-   "atom_nivel": "alineat",
-   "atom_verbatim": "Persoanele impozabile care aplică sistemul TVA la încasare și care depășesc în cursul lunii ianuarie 2026 plafonul de 4.500.000 lei, dar nu depășesc plafonul de 5.000.000 lei, nu vor fi radiate din Registrul persoanelor impozabile care aplică sistemul TVA la încasare.",
+   "atom_linie": 628,
+   "atom_nivel": "litera",
+   "atom_verbatim": "… (3) Prin excepție de la prevederile alin. (1) și alin. (2) lit. a), exigibilitatea taxei intervine la data încasării contravalorii integrale sau parțiale a livrării de bunuri ori a prestării de servicii, în cazul persoanelor impozabile care optează în acest sens, denumite în continuare persoane care aplică sistemul TVA la încasare. Plafonul pentru aplicarea sistemului TVA la încasare este de: a) 5.000.000 lei, în perioada 1 martie-31 decembrie 2026; ...…",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (oug_8_2026)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "tva la incasare",
     "cifra de afaceri",
     "plafon"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (oug_8_2026)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "nume": "plafon_tva_incasare",
    "parametru": "cote/plafon_tva_incasare@2026-03-01",
    "temei_declarat_de_iconta": "OUG 8 2026",
@@ -459,7 +597,7 @@
   },
   {
    "act_modificator": "Punctul 160. din Articolul I a fost abrogat de Litera a), Alineatul (1), Articolul XLVIII din ORDONANȚA DE URGENȚĂ nr. 130 din 17 decembrie 2021, publicată în MONITORUL OFICIAL nr. 1202 din 18 decembrie 2021",
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "legea_296_2020_consolidat#art231/alin1",
    "atom_abrogat": true,
    "atom_linie": 1341,
@@ -468,13 +606,13 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "tva la incasare",
     "cifra de afaceri",
     "plafon"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "plafon_tva_incasare",
    "parametru": "cote/plafon_tva_incasare@2021-01-01",
    "temei_declarat_de_iconta": "Legea 296 2020",
@@ -486,7 +624,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "oug_8_2026#art20^1/alin15",
    "atom_abrogat": false,
    "atom_linie": 505,
@@ -495,13 +633,13 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "mijloace fixe",
     "mijloc fix",
     "imobilizari corporale"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "plafon_mijloc_fix",
    "parametru": "cote/plafon_mijloc_fix@2026-01-01",
    "temei_declarat_de_iconta": "OUG 8 2026",
@@ -513,22 +651,22 @@
   },
   {
    "act_modificator": null,
-   "ancora": "valoarea, gasita in actul declarat (hg_276_2013)",
-   "atom": "hg_276_2013#art1~2/alin2",
+   "ancora": "indiciu de subiect, in actul declarat (hg_276_2013)",
+   "atom": "hg_276_2013#art1~2/alin1",
    "atom_abrogat": false,
-   "atom_linie": 46,
+   "atom_linie": 44,
    "atom_nivel": "alineat",
-   "atom_verbatim": "Valoarea rămasă neamortizată a mijloacelor fixe cu valoarea de intrare cuprinsă între 1.800 lei şi 2.500 lei, existente în patrimoniul operatorilor economici la data intrării în vigoare a prezentei hotărâri, se va recupera pe durata normală de funcţionare rămasă. ... +",
+   "atom_verbatim": "Începând cu data intrării în vigoare a prezentei hotărâri, valoarea minimă de intrare a mijloacelor fixe stabilită în condiţiile art. 3 alin. 2 lit. a) din Legea nr. 15/1994 privind amortizarea capitalului imobilizat în active corporale şi necorporale, republicată, cu modificările şi completările ulterioare, este de 2.500 lei. ...",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "valoarea, gasita in actul declarat (hg_276_2013)",
+   "cum_gasit": "indiciu de subiect, in actul declarat (hg_276_2013)",
    "indicii": [
     "mijloace fixe",
     "mijloc fix",
     "imobilizari corporale"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: valoarea, gasita in actul declarat (hg_276_2013)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (hg_276_2013)",
    "nume": "plafon_mijloc_fix",
    "parametru": "cote/plafon_mijloc_fix@2015-01-01",
    "temei_declarat_de_iconta": "HG 276 2013",
@@ -540,7 +678,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "ordin_1604_2025_intrastat_mo#frag3",
    "atom_abrogat": false,
    "atom_linie": 6,
@@ -549,12 +687,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "intrastat",
     "praguri valorice"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "plafon_intrastat",
    "parametru": "cote/plafon_intrastat@2026-01-01",
    "temei_declarat_de_iconta": "Ordin 1604 2025",
@@ -566,7 +704,7 @@
   },
   {
    "act_modificator": "Art. 4^1 a fost introdus de pct. 1 al art. IV din ORDONANȚA DE URGENȚĂ nr. 32 din 28 iunie 2016, publicată în MONITORUL OFICIAL nr. 488 din 30 iunie 2016.",
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "legea_70_2015_consolidat#art18",
    "atom_abrogat": false,
    "atom_linie": 352,
@@ -575,12 +713,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "numerar",
     "plafon zilnic"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "plafon_sold_casa",
    "parametru": "cote/plafon_sold_casa@2015-05-09",
    "temei_declarat_de_iconta": "Legea 70 2015",
@@ -592,7 +730,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "oug_115_2023_consolidat#artLXIV",
    "atom_abrogat": false,
    "atom_linie": 1686,
@@ -601,12 +739,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "avansuri spre decontare",
     "plafon zilnic"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "plafon_avans_decontare",
    "parametru": "cote/plafon_avans_decontare@2023-12-15",
    "temei_declarat_de_iconta": "OUG 115 2023",
@@ -718,13 +856,13 @@
    "valoare_lege": "10%"
   },
   {
-   "act_modificator": "Litera b) din Alineatul (2) , Articolul 78 , Capitolul III , Titlul IV a fost modificată de Punctul 23, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noiembrie 2017, publicată în MONITORUL OFICIAL nr. 885 din 10 noiembrie 2017",
+   "act_modificator": "Partea introductivă a literei a) din Alineatul (2) , Articolul 78 , Capitolul III , Titlul IV a fost modificată de Punctul 23, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noiembrie 2017, publicată în MONITORUL OFICIAL nr. 885 din 10 noiembrie 2017",
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art78)",
-   "atom": "cod_fiscal_227_2015_consolidat#art78/alin2/litb",
+   "atom": "cod_fiscal_227_2015_consolidat#art78/alin2",
    "atom_abrogat": false,
-   "atom_linie": 8797,
-   "atom_nivel": "litera",
-   "atom_verbatim": "pentru veniturile obținute în celelalte cazuri, prin aplicarea cotei de 10% asupra bazei de calcul determinate ca diferență între venitul brut și contribuțiile sociale obligatorii aferente unei luni, datorate potrivit legii în România sau în conformitate cu instrumentele juridice internaționale la care România este parte, precum și, după caz, a contribuției individuale la bugetul de stat datorate potrivit legii, pe fiecare loc de realizare a acestora. ...",
+   "atom_linie": 8723,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Impozitul lunar prevăzut la alin. (1) se determină astfel: a) la locul unde se află funcția de bază, prin aplicarea cotei de 10% asupra bazei de calcul determinată ca diferență între venitul net din salarii calculat prin deducerea din venitul brut a contribuțiilor sociale obligatorii aferente unei luni, datorate potrivit legii în România sau în conformitate cu instrumentele juridice internaționale la care România este parte, precum și, după caz, a contribuției individuale la bugetul de stat datorată potrivit legii, și următoarele: ... (i) deducerea personală acordată pentru luna respectivă; ... (ii) cotizația sindicală plătită în luna respectivă, potrivit legii; ... (iii) contribuțiile la fondurile de pensii facultative potrivit Legii nr. 204/2006, cu modificările și completările ulterioare, și cele reprezentând contribuții la scheme de pensii facultative, calificate astfel în conformitate cu legislația privind pensiile facultative de către Autoritatea de Supraveghere Financiară, administrate de către entități autorizate stabilite în state membre ale Uniunii Europene sau aparținând Spațiului Economic European, ori de către entități autorizate într-un stat aderent la codurile de lib…",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -738,7 +876,7 @@
    "temei_declarat_de_iconta": "CF",
    "unde_in_cod": "core/common.py:664 (registrul COTE)",
    "valabil_din_cod": "2018-01-01",
-   "valabil_din_corpus": "2018-01-01",
+   "valabil_din_corpus": "2026-03-01",
    "valoare_cod": "0.10",
    "valoare_lege": "10%"
   },
@@ -770,7 +908,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "hg_146_2026_salariu_minim#art1",
    "atom_abrogat": false,
    "atom_linie": 43,
@@ -779,12 +917,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "salariul de baza minim brut",
     "salariul minim"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "salariu_minim",
    "parametru": "cote/salariu_minim@2026-07-01",
    "temei_declarat_de_iconta": "HG 146 2026",
@@ -796,7 +934,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "hg_1506_2024_salariu_minim#art1",
    "atom_abrogat": false,
    "atom_linie": 43,
@@ -805,12 +943,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "salariul de baza minim brut",
     "salariul minim"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "salariu_minim",
    "parametru": "cote/salariu_minim@2025-01-01",
    "temei_declarat_de_iconta": "HG 1506 2024",
@@ -823,11 +961,11 @@
   {
    "act_modificator": null,
    "ancora": "ancora pe articolul din Temei (oug_89_2025#artIII)",
-   "atom": "oug_89_2025#artIII~2/alin5/litb",
+   "atom": "oug_89_2025#artIII~2/alin1",
    "atom_abrogat": false,
-   "atom_linie": 821,
-   "atom_nivel": "litera",
-   "atom_verbatim": "pentru veniturile aferente perioadei 1 iulie-31 decembrie 2026, cu suma de 200 lei lunar. ...",
+   "atom_linie": 789,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, pentru suma de 300 lei/lună din veniturile din salarii și asimilate salariilor aferente perioadei 1 ianuarie-30 iunie 2026, respectiv pentru suma de 200 lei/lună, din veniturile din salarii și asimilate salariilor aferente perioadei 1 iulie-31 decembrie 2026, nu se datorează impozit pe venit și contribuții sociale obligatorii dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin act normativ, în vigoare în luna căreia îi sunt aferente veniturile; ...",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -849,11 +987,11 @@
   {
    "act_modificator": null,
    "ancora": "ancora pe articolul din Temei (oug_156_2024#artLXVI)",
-   "atom": "oug_156_2024#artLXVI/alin4",
+   "atom": "oug_156_2024#artLXVI/alin1",
    "atom_abrogat": false,
-   "atom_linie": 945,
+   "atom_linie": 926,
    "atom_nivel": "alineat",
-   "atom_verbatim": "Suma de 300 lei prevăzută la alin. (1) se diminuează în funcţie de:",
+   "atom_verbatim": "Prin derogare de la prevederile art. 78, art. 139 alin. (1), art. 140, art. 157 alin. (1) şi ale art. 2204 alin. (1) din Legea nr. 227/2015, cu modificările şi completările ulterioare, începând cu data de 1 ianuarie 2025, în cazul salariaţilor care desfăşoară activitate în baza contractului individual de muncă, încadraţi cu normă întreagă, la locul unde se află funcţia de bază, nu se datorează impozit pe venit şi nu se cuprinde în baza lunară de calcul al contribuţiilor sociale obligatorii suma de 300 lei/lună, reprezentând venituri din salarii şi asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiţii:",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -874,7 +1012,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (oug_89_2025)",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
    "atom": "oug_89_2025#artIII~2/alin1/litb",
    "atom_abrogat": false,
    "atom_linie": 793,
@@ -883,12 +1021,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (oug_89_2025)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "venitul brut",
     "nu depaseste nivelul de"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (oug_89_2025)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
    "nume": "plafon_facilitate_salariu_minim",
    "parametru": "cote/plafon_facilitate_salariu_minim@2026-07-01",
    "temei_declarat_de_iconta": "OUG 89 2025",
@@ -900,7 +1038,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (oug_89_2025)",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
    "atom": "oug_89_2025#artIII~2/alin1/litb",
    "atom_abrogat": false,
    "atom_linie": 793,
@@ -909,12 +1047,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (oug_89_2025)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "venitul brut",
     "nu depaseste nivelul de"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (oug_89_2025)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
    "nume": "plafon_facilitate_salariu_minim",
    "parametru": "cote/plafon_facilitate_salariu_minim@2026-01-01",
    "temei_declarat_de_iconta": "OUG 89 2025",
@@ -952,7 +1090,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, gasit in actul declarat",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "legea_201_2025#art14",
    "atom_abrogat": false,
    "atom_linie": 46,
@@ -961,13 +1099,13 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, gasit in actul declarat",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "tichet de masa",
     "valoarea nominala"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit in actul declarat",
-   "nota": "valoarea NU s-a gasit la nivelul cel mai tare de proba (ancora pe articolul din Temei (legea_201_2025#artI)), ci la citatul declarat de iConta, gasit in actul declarat - citarea iConta duce la actul corect, dar nu exact la unitatea care stabileste valoarea",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
+   "nota": "valoarea NU s-a gasit la nivelul cel mai tare de proba (ancora pe articolul din Temei (legea_201_2025#artI)), ci la citatul declarat de iConta, gasit verbatim in actul declarat - citarea iConta duce la actul corect, dar nu exact la unitatea care stabileste valoarea",
    "nume": "tichet_masa_plafon",
    "parametru": "cote/tichet_masa_plafon@2025-11-01",
    "temei_declarat_de_iconta": "Legea 201 2025",
@@ -1005,7 +1143,7 @@
   },
   {
    "act_modificator": null,
-   "ancora": "indiciu de subiect, in actul declarat (anaf_limite_2025)",
+   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "atom": "anaf_limite_2025#frag24",
    "atom_abrogat": false,
    "atom_linie": 330,
@@ -1014,12 +1152,12 @@
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, in actul declarat (anaf_limite_2025)",
+   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "indicii": [
     "tichet de masa",
     "valoarea nominala"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (anaf_limite_2025)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (7 cuvinte, fara cifre) in actul declarat",
    "nume": "tichet_masa_plafon",
    "parametru": "cote/tichet_masa_plafon@2025-01-01",
    "temei_declarat_de_iconta": "Ordin 4679 2024",
@@ -4359,13 +4497,13 @@
    "valoare_lege": "891 Bilanț de deschidere"
   },
   {
-   "act_modificator": "Alineatul (1) , Articolul 51 , Titlul III a fost modificat de Punctul 4. , Articolul I din ORDONANȚA DE URGENȚĂ nr. 89 din 23 decembrie 2025, publicată în MONITORUL OFICIAL nr. 1203 din 24 decembrie 2025",
+   "act_modificator": "Partea introductivă a alineatului (1) din Articolul 64 , Capitolul I , Titlul IV a fost modificată de Punctul 15, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noiembrie 2017, publicată în MONITORUL OFICIAL nr. 885 din 10 noiembrie 2017",
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+   "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
    "atom_abrogat": false,
-   "atom_linie": 6355,
+   "atom_linie": 7091,
    "atom_nivel": "alineat",
-   "atom_verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%.",
+   "atom_verbatim": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei surse din fiecare categorie pentru determinarea impozitului pe veniturile din:",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -4380,44 +4518,43 @@
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/bacsis.py:13",
    "valabil_din_cod": null,
-   "valabil_din_corpus": "2026-01-01",
+   "valabil_din_corpus": "2018-01-01",
    "valoare_cod": "10",
-   "valoare_lege": "1%"
+   "valoare_lege": "10%"
   },
   {
-   "act_modificator": "Litera a) din Alineatul (4) , Articolul 76 , Capitolul III , Titlul IV a fost modificată de Punctul 35, Articolul I din ORDONANȚA nr. 16 din 15 iulie 2022, publicată în MONITORUL OFICIAL nr. 716 din 15 iulie 2022",
+   "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "cod_fiscal_227_2015_consolidat#art76/alin4~2",
+   "atom": "legea_165_2018_anaf#art14",
    "atom_abrogat": false,
-   "atom_linie": 8048,
-   "atom_nivel": "alineat",
-   "atom_verbatim": "…dacă aceste venituri sunt primite în baza unor legi speciale și/sau finanțate din buget, cu excepția indemnizațiilor de vacanță acordate potrivit legii. În cazul cadourilor în bani și/sau în natură, inclusiv tichetele cadou, oferite de angajatori, veniturile sunt neimpozabile, în măsura în care valoarea acestora pentru fiecare persoană în parte, cu fiecare ocazie din cele de mai jos, nu depășește 300 lei: (i) cadouri oferite angajaților, precum și cele oferite pentru copiii minori ai acestora, cu ocazia Paștelui, Crăciunului și a sărbătorilor similare ale altor culte religioase; ... (ii) cadouri oferite angajatelor cu ocazia zilei de 8 martie; ... (iii) cadouri oferite angajaților în beneficiul copiilor minori ai acestora cu ocazia zilei de 1 iunie. ... ...…",
+   "atom_linie": 218,
+   "atom_nivel": "articol",
+   "atom_verbatim": "Valoarea nominală a unui tichet de masă nu poate depăşi suma de 15,18 lei. Tichetele cadou",
    "citare_rezolvata": null,
    "clasa": "plafon",
-   "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "clasificare": "NEGASIT",
    "indicii": [
     "cadouri",
     "cadou"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15,18) decat cea din cod (300). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "PLAFON_CADOU",
    "parametru": "nesursat/beneficii_api.PLAFON_CADOU=300",
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/beneficii_api.py:22",
    "valabil_din_cod": null,
-   "valabil_din_corpus": "2023-01-01",
+   "valabil_din_corpus": null,
    "valoare_cod": "300",
-   "valoare_lege": "300"
+   "valoare_lege": null
   },
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "oug_115_2023_consolidat#art4^2/alin1",
+   "atom": "oug_115_2023_consolidat#art31/alin2^3",
    "atom_abrogat": false,
-   "atom_linie": 1711,
+   "atom_linie": 956,
    "atom_nivel": "alineat",
-   "atom_verbatim": "Sumele în numerar aflate în casieria persoanelor prevăzute la art. 1 alin. (1) nu pot depăși, la sfârșitul fiecărei zile, plafonul de 50.000 lei. În cazul magazinelor de tipul cash and carry, supermagazinelor și hipermagazinelor care sunt organizate și funcționează în baza legislației în vigoare, sumele în numerar aflate în casierie nu pot depăși, la sfârșitul fiecărei zile, plafonul de 500.000 lei. Sumele în numerar care depășesc plafonul se depun în conturile bancare ale acestor persoane în termen de două zile lucrătoare. ... 5. Articolul 7 se abrogă. ... 6. Articolul 8 se modifică și va avea următorul cuprins: +",
+   "atom_verbatim": "…ând cu trimestrul în care nu mai este îndeplinită oricare dintre aceste condiții. ... 39. La articolul 52, după alineatul (5) se introduce un nou alineat, alin. (5^1), cu următorul cuprins: (5^1) În cazul microîntreprinderii care, în cursul anului, se găsește în situația prevăzută la art. 47 alin. (1^1), suplimentar față de regulile prevăzute la alin. (5), limita fiscală privitoare la plafonul de 500.000 euro, prevăzută la alin. (1), se verifică luând în calcul veniturile acesteia cumulate cu veniturile întreprinderilor legate. ... 40. La articolul 52, alineatul (7) se modifică și va avea următorul cuprins: (7) În situația în care, în cursul anului fiscal, oricare dintre asociații/acționarii unei microîntreprinderi deține, în mod direct sau indirect, peste 25% din valoarea/numărul titlurilor de participare sau al drepturilor de vot și la alte microîntreprinderi, asociații/acționarii trebuie să stabilească microîntreprinderea/ microîntreprinderile care iese/ies de sub incidența prezentului titlu și care urmează să aplice prevederile titlului II începând cu trimestrul în care se înregistrează situația respectivă, astfel încât condiția de deținere a unei singure microîntreprinderi să …",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -4466,11 +4603,11 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "oug_115_2023_consolidat#artLXIV",
+   "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art4~2/alin1",
    "atom_abrogat": false,
-   "atom_linie": 1686,
-   "atom_nivel": "articol",
-   "atom_verbatim": "…rticolul 4, alineatele (1) și (4) se modifică și vor avea următorul cuprins: (1) Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)…",
+   "atom_linie": 2746,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi și primiri ori restituiri de împrumuturi sau alte finanțări, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană.",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -4658,11 +4795,11 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "anaf_mo_apr_2026#frag11",
+   "atom": "oug_24_2026_contributie_solidaritate#art9/alin6",
    "atom_abrogat": false,
-   "atom_linie": 313,
-   "atom_nivel": "fragment",
-   "atom_verbatim": "… produselor petroliere, pentru motorina standard 6 comercializată pe piaţa internă, nivelul accizei prevăzut la nr. crt. 12 din anexa nr. 1 de la titlul VIII \"Accize şi alte taxe speciale\" din Legea nr. 227/2015 privind Codul fiscal, cu modificările şi completările ulterioare, se reduce temporar de la 2.804,29 lei/1.000 litri la 2.504,29 lei/1.000 litri, respectiv de la 3.318,74 lei/tonă la 2.963,70 lei/tonă (reducerea accizei fiind de 30 bani/litrul de motorină). De la data intrării în vigoare a acestei ordonanţe de urgenţă, pe durata situaţiei de criză pe piaţa ţiţeiului şi/sau a produselor petroliere, declarată potrivit OUG nr. 19/2026, datorează o contribuţie de solidaritate următorii operatori economici: a) operatorii economici, titulari de acorduri petroliere, care extrag ţiţei din zăcăminte situate pe teritoriul României şi obţin venituri din comercializarea acestuia; b) operatorii economici, titulari de acorduri petroliere, care extrag ţiţei din zăcăminte situate pe teritoriul României şi care, direct sau prin persoanele afiliate, prelucrează acest ţiţei şi obţin venituri din comercializarea produselor energetice. Pentru companiile care vând ţiţeiul în stare neprelucrată, c…",
+   "atom_linie": 88,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Pentru aplicarea prevederilor alin. (5) , cota se stabilește în funcție de intervalul în care se încadrează prețul mediu lunar al țițeiului sortiment/clasă Brent, calculat conform alin. (2) . În cazul în care prețul mediu lunar al țițeiului sortimentul/clasa Brent nu depășește pragul de 70 USD/baril, contribuția de solidaritate nu se datorează pentru luna respectivă. (7) Cursul de schimb valutar utilizat pentru determinarea echivalentului în lei a cotației de 70 USD, prevăzută la alin. (4) lit. a) , este cel valabil în ultima zi a lunii pentru care se datorează contribuția de solidaritate. (8) În aplicarea prevederilor alin. (1) , teritoriul României reprezintă teritoriul delimitat de frontiera de stat a României, în conformitate cu prevederile capitolului II al Ordonanței de urgență a Guvernului nr. 105/2001 privind frontiera de stat a României, aprobată cu modificări prin Legea nr. 243/2002 , cu modificările și completările ulterioare. Nu intră sub incidența prevederilor prezentului capitol țițeiul extras din marea teritorială a României, astfel cum este definită de capitolul I din Legea nr. 17/1990 privind regimul juridic al apelor maritime interioare, al mării teritoriale, al z…",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -4720,8 +4857,7 @@
    "clasificare": "CONCORDA",
    "cum_gasit": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "indicii": [
-    "cifra de afaceri",
-    "50.000.000 euro"
+    "cifra de afaceri"
    ],
    "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "nume": "PRAG_IMCA_EUR",
@@ -4761,18 +4897,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "cf_2015_forma_initiala#art235",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "cf_2015_forma_initiala#art85/alin6",
    "atom_abrogat": false,
-   "atom_linie": 8070,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Contribuabili Orice persoană juridică străină, care are o reprezentanță autorizată să funcționeze în România, potrivit legii, are obligația de a plăti un impozit anual, conform prezentului capitol. +",
+   "atom_linie": 4489,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Impozitul anual datorat se calculează prin aplicarea cotei de 16% asupra normei anuale de venit, impozitul fiind final.",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "impozit anual"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (16) decat cea din cod (18000). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "IMPOZIT_ANUAL",
    "parametru": "nesursat/d108.IMPOZIT_ANUAL=18000",
    "temei_declarat_de_iconta": null,
@@ -4783,13 +4920,13 @@
    "valoare_lege": null
   },
   {
-   "act_modificator": null,
+   "act_modificator": "Pct. 38 din titlul IX din Codul fiscal a fost modificat de pct. 4 al lit. E a art. I din HOTĂRÂREA nr. 159 din 11 martie 2016, publicată în MONITORUL OFICIAL nr. 208 din 21 martie 2016.",
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "cf_2015_forma_initiala#art51/alin1",
+   "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin1~264/litb~3",
    "atom_abrogat": false,
-   "atom_linie": 3344,
-   "atom_nivel": "alineat",
-   "atom_verbatim": "Cota de impozitare pe veniturile microîntreprinderilor este 3%.",
+   "atom_linie": 19467,
+   "atom_nivel": "litera",
+   "atom_verbatim": "…i/mp = 93.800 lei; ... (ii) se identifică coeficientul de corecție din tabelul prevăzut la art. 457 alin. (6) din Codul fiscal, corespunzător zonei C și rangului III, respectiv 2,10, care se diminuează cu 0,1 conform art. 457 alin. (7) din Codul fiscal: 93.800 lei x 2 = 187.600 lei; ... (iii) vechimea clădirii este cuprinsă între 50 de ani și 100 de ani, astfel că valoarea impozabilă se reduce cu 30%, conform art. 457 alin. (8) lit. b) din Codul fiscal: 187.600 lei x 30% = 56.280 lei 187.600 lei - 56.280 lei = 131.320 lei; ... (iv) se determină impozitul pe clădiri anual: 131.320 lei x 0,1% = 131,32 lei; ... (v) având în vedere hotărârea consiliului local de instituire a unei cote adiționale de 15%, impozitul determinat la pct. iv se majorează cu acest procent sau pentru ușurarea calculului, impozitul pe clădiri se înmulțește cu 1,15 respectiv: 131,32 lei x 1,15 = 151,018 lei. ... ... ... Potrivit pct. 11 lit. n) din normele metodologice de aplicare a titlului IX , fracțiunea de 0,018 lei se neglijează, fiind sub 50 de bani, iar impozitul pe clădiri astfel determinat se rotunjește la 151 lei. ... + Secţiunea a 4-a Calculul impozitului pe clădirile nerezidențiale 38. Pentru stabilir…",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -4804,9 +4941,9 @@
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/d216.py:52",
    "valabil_din_cod": null,
-   "valabil_din_corpus": null,
+   "valabil_din_corpus": "2016-03-21",
    "valoare_cod": "0.3",
-   "valoare_lege": "3%"
+   "valoare_lege": "30%"
   },
   {
    "act_modificator": null,
@@ -4911,11 +5048,11 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "hg_1_2016_norme_cod_fiscal#artV~16/alin4~2/litb",
+   "atom": "oug_138_2024#artIX/alin1/litb",
    "atom_abrogat": false,
-   "atom_linie": 4341,
+   "atom_linie": 644,
    "atom_nivel": "litera",
-   "atom_verbatim": "în cotă de 2% pentru acordarea de burse private, conform legii; sau ...",
+   "atom_verbatim": "venitul net anual se stabilește prin aplicarea cotei de 20% asupra venitului brut;",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -4931,7 +5068,7 @@
    "valabil_din_cod": null,
    "valabil_din_corpus": null,
    "valoare_cod": "20",
-   "valoare_lege": "2%"
+   "valoare_lege": "20%"
   },
   {
    "act_modificator": null,
@@ -5040,20 +5177,18 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "legea_207_2015_consolidat#art52/alin17/lita",
+   "atom": "cf_2015_forma_initiala#art478/alin2",
    "atom_abrogat": false,
-   "atom_linie": 1079,
-   "atom_nivel": "litera",
-   "atom_verbatim": "de 20.000 euro, la cursul comunicat de Banca Națională a României în ziua efectuării plății, pentru contribuabilii mari. în cazul modificării acordului taxa este de 15.000 euro, la cursul comunicat de Banca Națională a României în ziua efectuării plății;",
+   "atom_linie": 18004,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Valoarea taxei pentru afișaj în scop de reclamă și publicitate se calculează anual prin înmulțirea numărului de metri pătrați sau a fracțiunii de metru pătrat a suprafeței afișajului pentru reclamă sau publicitate cu suma stabilită de consiliul local, astfel: a) în cazul unui afișaj situat în locul în care persoana derulează o activitate economică, suma este de până la 32 lei, inclusiv; ...",
    "citare_rezolvata": null,
    "clasa": "plafon",
-   "clasificare": "CONCORDA",
-   "cum_gasit": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "clasificare": "NEGASIT",
    "indicii": [
-    "15.000 euro",
     "activitati economice"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (32) decat cea din cod (15000). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "PLAFON_EUR",
    "parametru": "nesursat/ong.PLAFON_EUR=15000",
    "temei_declarat_de_iconta": null,
@@ -5061,7 +5196,7 @@
    "valabil_din_cod": null,
    "valabil_din_corpus": null,
    "valoare_cod": "15000",
-   "valoare_lege": "15.000"
+   "valoare_lege": null
   },
   {
    "act_modificator": null,
@@ -5083,18 +5218,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "cf_2015_forma_initiala#art77",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "og_16_2022_consolidat#art77/alin10",
    "atom_abrogat": false,
-   "atom_linie": 4285,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Deducere personală",
+   "atom_linie": 691,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală suplimentară se acordă astfel: a) 15% din salariul de bază minim brut pe țară garantat în plată pentru persoanele fizice cu vârsta de până la 26 de ani, care realizează venituri din salarii al căror nivel este de până la nivelul prevăzut la alin. (3); ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "deducere personala"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15) decat cea din cod (0.20). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "_PCT_DEDUCERE_BAZA",
    "parametru": "nesursat/salarizare._PCT_DEDUCERE_BAZA=0.20",
    "temei_declarat_de_iconta": null,
@@ -5106,18 +5242,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "cf_2015_forma_initiala#art77",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "og_16_2022_consolidat#art77/alin10",
    "atom_abrogat": false,
-   "atom_linie": 4285,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Deducere personală",
+   "atom_linie": 691,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală suplimentară se acordă astfel: a) 15% din salariul de bază minim brut pe țară garantat în plată pentru persoanele fizice cu vârsta de până la 26 de ani, care realizează venituri din salarii al căror nivel este de până la nivelul prevăzut la alin. (3); ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "deducere personala"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15) decat cea din cod (0.25). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "_PCT_DEDUCERE_BAZA",
    "parametru": "nesursat/salarizare._PCT_DEDUCERE_BAZA=0.25",
    "temei_declarat_de_iconta": null,
@@ -5129,18 +5266,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "cf_2015_forma_initiala#art77",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "og_16_2022_consolidat#art77/alin10",
    "atom_abrogat": false,
-   "atom_linie": 4285,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Deducere personală",
+   "atom_linie": 691,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală suplimentară se acordă astfel: a) 15% din salariul de bază minim brut pe țară garantat în plată pentru persoanele fizice cu vârsta de până la 26 de ani, care realizează venituri din salarii al căror nivel este de până la nivelul prevăzut la alin. (3); ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "deducere personala"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15) decat cea din cod (0.30). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "_PCT_DEDUCERE_BAZA",
    "parametru": "nesursat/salarizare._PCT_DEDUCERE_BAZA=0.30",
    "temei_declarat_de_iconta": null,
@@ -5152,18 +5290,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "cf_2015_forma_initiala#art77",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "og_16_2022_consolidat#art77/alin10",
    "atom_abrogat": false,
-   "atom_linie": 4285,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Deducere personală",
+   "atom_linie": 691,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală suplimentară se acordă astfel: a) 15% din salariul de bază minim brut pe țară garantat în plată pentru persoanele fizice cu vârsta de până la 26 de ani, care realizează venituri din salarii al căror nivel este de până la nivelul prevăzut la alin. (3); ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "deducere personala"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15) decat cea din cod (0.35). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "_PCT_DEDUCERE_BAZA",
    "parametru": "nesursat/salarizare._PCT_DEDUCERE_BAZA=0.35",
    "temei_declarat_de_iconta": null,
@@ -5175,18 +5314,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "cf_2015_forma_initiala#art77",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "og_16_2022_consolidat#art77/alin10",
    "atom_abrogat": false,
-   "atom_linie": 4285,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Deducere personală",
+   "atom_linie": 691,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală suplimentară se acordă astfel: a) 15% din salariul de bază minim brut pe țară garantat în plată pentru persoanele fizice cu vârsta de până la 26 de ani, care realizează venituri din salarii al căror nivel este de până la nivelul prevăzut la alin. (3); ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "deducere personala"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15) decat cea din cod (0.45). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "_PCT_DEDUCERE_BAZA",
    "parametru": "nesursat/salarizare._PCT_DEDUCERE_BAZA=0.45",
    "temei_declarat_de_iconta": null,
@@ -5198,18 +5338,19 @@
   },
   {
    "act_modificator": null,
-   "atom": "d112_struct_anaf#frag748",
+   "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
+   "atom": "og_16_2022_consolidat#art77/alin10",
    "atom_abrogat": false,
-   "atom_linie": 5777,
-   "atom_nivel": "fragment",
-   "atom_verbatim": "ATT - mod calcul eronat 114b E1_42 4.2.Deducere personală suplimentară N(15) DA E1_42=E1_421+E1_422",
+   "atom_linie": 691,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală suplimentară se acordă astfel: a) 15% din salariul de bază minim brut pe țară garantat în plată pentru persoanele fizice cu vârsta de până la 26 de ani, care realizează venituri din salarii al căror nivel este de până la nivelul prevăzut la alin. (3); ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEGASIT",
    "indicii": [
     "deducere personala suplimentara"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15) decat cea din cod (100). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "DEDUCERE_COPIL_SCOALA",
    "parametru": "nesursat/salarizare.DEDUCERE_COPIL_SCOALA=100",
    "temei_declarat_de_iconta": null,
@@ -5220,13 +5361,13 @@
    "valoare_lege": null
   },
   {
-   "act_modificator": "Litera a) , Articolul 260 , Capitolul IV , Titlul XI a fost modificată de Punctul 9. , Articolul I din LEGEA nr. 283 din 13 noiembrie 2024, publicată în MONITORUL OFICIAL nr. 1139 din 14 noiembrie 2024",
+   "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "legea_53_2003_codul_muncii#art281/alin3~12/lita",
+   "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
    "atom_abrogat": false,
-   "atom_linie": 2354,
-   "atom_nivel": "litera",
-   "atom_verbatim": "…or a prevederilor art. 34 alin. (5), cu amendă de la 300 lei la 1.000 lei; ... c) împiedicarea sau obligarea, prin amenințări ori prin violențe, a unui salariat sau a unui grup de salariați să participe la grevă ori să muncească în timpul grevei, cu amendă de la 1.500 lei la 3.000 lei; ... d) stipularea în contractul individual de muncă a unor clauze contrare dispozițiilor legale, cu amendă de la 2.000 lei la 5.000 lei; ... e) prin derogare de la prevederile art. 8 alin. (2) lit. a) din Ordonanța Guvernului nr. 2/2001 privind regimul juridic al contravențiilor, aprobată cu modificări și completări prin Legea nr. 180/2002, cu modificările și completările ulterioare, primirea la muncă a uneia sau a mai multor persoane fără încheierea unui contract individual de muncă, potrivit art. 16 alin. (1), se sancționează cu amendă de 40.000 lei pentru fiecare persoană astfel identificată, fără a depăși valoarea cumulată de 1.000.000 lei. ... e^1) primirea la muncă a uneia sau a mai multor persoane fără transmiterea elementelor contractului individual de muncă în registrul general de evidență a salariaților cel târziu în ziua anterioară începerii activității, cu amendă de 20.000 lei pentru fiec…",
+   "atom_linie": 8372,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară.",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -5241,7 +5382,7 @@
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/salarizare.py:29",
    "valabil_din_cod": null,
-   "valabil_din_corpus": "2026-04-27",
+   "valabil_din_corpus": null,
    "valoare_cod": "2000",
    "valoare_lege": "2.000"
   },
@@ -5300,13 +5441,13 @@
    "valoare_lege": null
   },
   {
-   "act_modificator": "Alin. (19) al pct. 109 din titlul VII din Codul fiscal a fost introdus de pct. 21 al lit. C a art. I din HOTĂRÂREA nr. 159 din 11 martie 2016, publicată în MONITORUL OFICIAL nr. 208 din 21 martie 2016.",
+   "act_modificator": "Alin. (7) al art. 331 a fost introdus de pct. 8 al art. unic din LEGEA nr. 358 din 31 decembrie 2015, publicată în MONITORUL OFICIAL nr. 988 din 31 decembrie 2015, care completează art. I din ORDONANȚA DE URGENȚĂ nr. 50 din 27 octombrie 2015, publicată în MONITORUL OFICIAL nr. 817 din 3 noiembrie 2015, cu pct. 36^3.",
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin19~8",
+   "atom": "cod_fiscal_227_2015_consolidat#art331/alin7",
    "atom_abrogat": false,
-   "atom_linie": 10162,
+   "atom_linie": 22493,
    "atom_nivel": "alineat",
-   "atom_verbatim": "În sensul art. 331 alin. (7) din Codul fiscal, în situația în care pe aceeași factură sunt înscrise atât bunuri prevăzute la art. 331 alin. (2) lit. i)-k) din Codul fiscal, cât și alte bunuri, taxarea inversă se aplică numai dacă valoarea bunurilor prevăzute la art. 331 alin. (2) lit. i)-k) din Codul fiscal, exclusiv TVA, este mai mare sau egală cu 22.500 lei. Exemplu: Societatea A, persoană impozabilă înregistrată în scopuri de TVA conform art. 316 din Codul fiscal, livrează în cursul lunii februarie 2016 telefoane mobile, console de jocuri, dispozitive cu circuite integrate, imprimante și camere video către societatea B, persoană impozabilă înregistrată în scopuri de TVA conform art. 316 din Codul fiscal. Societatea A emite o factură centralizatoare către B, conform prevederilor art. 319 alin. (17) din Codul fiscal, pentru toate livrările efectuate în cursul lunii februarie 2016. Valoarea livrărilor efectuate în luna februarie 2016 se prezintă astfel: – telefoane mobile - 7.900 lei ... – console de jocuri - 9.000 lei ... – dispozitive cu circuite integrate - 5.800 lei ... – imprimante - 5.000 lei ... – camere video - 8.200 lei. ... Având în vedere că valoarea telefoanelor mobile,…",
+   "atom_verbatim": "Pentru livrarea bunurilor prevăzute la alin. (2) lit. i)-k) se aplică taxarea inversă numai dacă valoarea bunurilor livrate, exclusiv TVA, înscrise într-o factură, este mai mare sau egală cu 22.500 lei. + Dispoziții tranzitorii +",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -5322,15 +5463,15 @@
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/taxare_inversa.py:15",
    "valabil_din_cod": null,
-   "valabil_din_corpus": "2016-03-21",
+   "valabil_din_corpus": "2016-01-03",
    "valoare_cod": "22500",
    "valoare_lege": "22.500"
   }
  ],
  "sumar": {
-  "CONCORDA": 202,
+  "CONCORDA": 200,
   "DIFERA": 0,
-  "NEGASIT": 29,
+  "NEGASIT": 31,
   "citari_declarate_de_iconta": 40,
   "citari_rezolvate_in_corpus": 40
  },

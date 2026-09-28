@@ -73,14 +73,20 @@ def forme_numar(valoare, fel):
         return set()
     forme = set()
     if fel == "procent":
-        p = d * 100 if d < 1 else d
-        p = p.normalize()
-        intreg = int(p)
-        zecimal = format(p, "f").rstrip("0").rstrip(".")
-        for baza in {str(intreg), zecimal, format(p, "f")}:
-            b = baza.replace(".", ",")
-            forme.add(b + "%")
-            forme.add(b + " %")
+        # FARA `.normalize()` si fara `rstrip("0")` pe intreg. `Decimal("10").normalize()` da
+        # `1E+1`, iar `format(...,"f").rstrip("0")` transforma "10" in "1" - deci cota de 10% primea
+        # printre formele ei si "1%", si un text care spune 1% o "confirma". Masurat pe inventarul
+        # real: `bacsis.COTA_IMPOZIT=10` ieșea CONCORDA pe CF art.51 alin.(1) ("cota ... este de 1%"),
+        # `d216.COTA_IMPOZIT=0.3` pe acelasi articol ca "3%", iar `d394.COTE=20` pe un "2%" din norme.
+        # Trei valori greșite confirmate de trei texte care spun altceva - o CONCORDA falsa e la fel
+        # de grava ca un DIFERA fals. Zerourile se taie NUMAI din partea zecimala.
+        pr = d * 100 if d < 1 else d
+        txt = format(pr, "f")
+        if "." in txt:
+            txt = txt.rstrip("0").rstrip(".")
+        for baza in {txt, txt.replace(".", ",")}:
+            forme.add(baza + "%")
+            forme.add(baza + " %")
         return forme
     intreg = int(d)
     frac = format(d, "f")
@@ -112,7 +118,11 @@ _SUMA_IN_TEXT = re.compile(r"(\d{1,3}(?:\.\d{3})+|\d+(?:,\d{1,2})?)\s*(?:lei|eur
 
 def numere_din_text(text_norm, fel):
     rx = _PROCENT_IN_TEXT if fel == "procent" else _SUMA_IN_TEXT
-    return [m.group(1) for m in rx.finditer(text_norm)]
+    ies = []
+    for m in rx.finditer(text_norm):
+        if m.group(1) not in ies:
+            ies.append(m.group(1))
+    return ies
 
 
 # ── indiciile de subiect (sursa (c): fraze, NU valori) ───────────────────────────────────────────
@@ -138,12 +148,10 @@ SUBIECT = {
     "facilitate_salariu_minim": ["nu se datoreaza impozit", "nu se cuprinde in baza lunara"],
     "plafon_facilitate_salariu_minim": ["venitul brut", "nu depaseste nivelul de"],
     "tichet_masa_plafon": ["tichet de masa", "valoarea nominala"],
-    # termene
-    "termen_depunere_d300": ["pana la data de 25 inclusiv a lunii urmatoare"],
-    "termen_depunere_d301": ["pana la data de 25 inclusiv a lunii urmatoare"],
-    "termen_depunere_d390": ["pana la data de 25 inclusiv", "declaratie recapitulativa"],
-    "termen_depunere_d394": ["declaratie informativa", "pana la data de 30 inclusiv"],
-    "termen_depunere_d406": ["fisierul standard de control fiscal", "saf-t"],
+    # Termenele NU au indicii aici: `_potriveste_termen` isi construieste fraza de scadenta din
+    # valoarea din cod (`_FRAZA_TERMEN`) si numele declaraţiei din `_NUME_DECLARATIE`. Intrarile de
+    # dinainte conţineau ziua ("pana la data de 25 inclusiv"), adica VALOAREA in indiciu - erau
+    # neutilizate, dar incalcau regula ca un indiciu nu poarta cifre.
     # constante nesursate - fraze scrise DUPA ce s-a citit ce face fiecare modul
     "COTA_IMPOZIT": ["bacsis", "cota de impozit"],
     "PLAFON_CADOU": ["cadouri", "cadou"],
@@ -155,13 +163,13 @@ SUBIECT = {
     "PLAFON_PF": ["persoane fizice", "numerar", "plafon"],
     "COTA_STANDARD": ["cota standard", "impozit pe profit"],
     "COTA_REDUSA": ["cota redusa"],
-    "PRAG_IMCA_EUR": ["cifra de afaceri", "50.000.000 euro"],
+    "PRAG_IMCA_EUR": ["cifra de afaceri"],
     "IMPOZIT_ANUAL": ["impozit anual"],
     "COTE": ["cota"],
     "_PCT_DEDUCERE_BAZA": ["deducere personala"],
     "DEDUCERE_COPIL_SCOALA": ["deducere personala suplimentara"],
     "PRAG_VENIT_DEDUCERE": ["deducere personala", "salariul de baza minim brut"],
-    "PLAFON_EUR": ["15.000 euro", "activitati economice"],
+    "PLAFON_EUR": ["activitati economice"],
     "PRAG_ELECTRONICE": ["taxare inversa", "telefoane mobile", "dispozitive cu circuite integrate"],
     "PRAG_BRENT_USD": ["brent", "petrol"],
 }
@@ -170,6 +178,78 @@ SUBIECT = {
 # temei - dar nici nu se ascund: ies NEGASIT cu acest motiv, ca sa se vada ca absenta e asteptata.
 OPERATIONALE = {"PRAG_ESECURI", "PRAG_RITM", "PRAG_VECHIME_ZILE", "PRAG_ATENTIE",
                 "PRAG_URMARIT_ZILE", "PRAG_ZILE", "PRAGURI", "DOAR_VENITURI", "MOD_VENIT_NET"}
+
+
+# Un indiciu nu are voie sa conţina cifre. Doua dintre cele scrise la prima versiune le conţineau
+# ("15.000 euro", "50.000.000 euro"): un indiciu cu valoarea in el se confirma pe sine, fiindca
+# localizarea unitaţii de text ar depinde de numarul caăutat. Gardul e verificat de o proba.
+_CIFRA = re.compile(r"\d")
+
+
+def _stemuri_indiciu(frază):
+    """Stemurile unui indiciu de subiect. TOATE trebuie sa apară in atom.
+
+    DE CE STEMURI si nu subsir. Indiciul "mijloace fixe" NU e subsir in "valoarea minima de intrare a
+    mijloacelor fixe ... este de 2.500 lei" - romana flexioneaza, iar potrivirea pe subsir cere forma
+    exacta a dicţionarului. Masurat: `plafon_mijloc_fix` ieșea NEGASIT desi HG 276/2013 din corpus
+    scrie limpede pragul. Se cere prezenţa TUTUROR stemurilor in acelasi atom, ca indiciul sa rămână
+    strâns: "mijloac" singur ar prinde si "mijloace de transport".
+    """
+    return [_stem(w) for w in norm(frază).split() if len(w) >= 3]
+
+
+_FEREASTRA_INDICIU = 80
+_ADIACENT = 25          # cate caractere pot sta intre doua stemuri ale aceleiasi fraze
+
+
+def _valoare_langa_subiect(atom, forma, indicii_stem):
+    """Valoarea sta la mai puţin de o fereastra de un stem de subiect, in acelasi atom.
+
+    Folosit NUMAI pentru actele fara structura de articol (pliante ANAF, structuri de formular), unde
+    atomul e un paragraf, nu un alineat. `anaf_limite_2025` e un tabel pe coloane redat in text: ANAF
+    publica pliantul cu coloane paralele, iar extractia le intretese, asa ca fraza-subiect se rupe
+    ("stabilirea valorii nominale inde-") si nu se mai potriveste cu indiciul. Acolo singurul test
+    disponibil e vecinatatea, si se declara ca atare in raport - nu se da drept ancora tare.
+    """
+    i = atom["_n"].find(forma)
+    if i < 0:
+        return False
+    for stems in indicii_stem:
+        for st in stems:
+            j = atom["_n"].find(st)
+            if j >= 0 and abs(j - i) <= 3 * _FEREASTRA_INDICIU:
+                return True
+    return False
+
+
+def _are_subiect(atom, indicii_stem):
+    """Un indiciu e prezent numai ca FRAZĂ: stemurile lui, in ORDINE, fiecare aproape de precedentul.
+
+    DE CE ORDINE SI ADIACENŢĂ, nu doar prezenţa. Cu stemuri cerute oriunde in atom, indiciul
+    "deducere personala" s-a intalnit intamplator in alineate despre cu totul altceva, si asa au ieșit
+    patru CONCORDA FALSE pentru procentele deducerii personale (20%, 25%, 30%, 35% "confirmate" pe
+    venituri din cedarea folosinţei bunurilor, pe definiţia persoanei afiliate si pe un tabel de
+    formular). Cu proximitate dar FARA ordine, doua au rămas: CF art.85 alin.(2) spune "...proprietate
+    personală se determină prin deducerea din venitul brut...", adica exact cele doua stemuri la 25 de
+    caractere unul de altul - dar in ordine INVERSĂ si in propoziţii diferite. O frază are ordine.
+
+    O CONCORDA falsa e la fel de grava ca un DIFERA fals: amandoua citeaza corect un atom care nu
+    stabileste parametrul.
+    """
+    for stems in indicii_stem:
+        if not stems:
+            continue
+        de_la = 0
+        ok = True
+        for k, st in enumerate(stems):
+            i = atom["_n"].find(st, de_la)
+            if i < 0 or (k > 0 and i - de_la > _ADIACENT):
+                ok = False
+                break
+            de_la = i + len(st)
+        if ok:
+            return True
+    return False
 
 
 def _fel(p):
@@ -185,6 +265,7 @@ def _fel(p):
 class Corpus(object):
     def __init__(self):
         rap = json.load(open(os.path.join(_RAD, "artefacte", "atomi_raport.json"), encoding="utf-8"))
+        self.structura = {b: v.get("structura") for b, v in rap["acte"].items()}
         self.strat = json.load(open(os.path.join(_RAD, "artefacte", "strat_text.json"),
                                    encoding="utf-8"))
         self.pe_act = {}
@@ -310,6 +391,75 @@ def _fragmente_citat(text_citat):
     return [b for b in bucati if len(b) >= 25]
 
 
+# ── potrivirea unui CITAT PARAFRAZAT ─────────────────────────────────────────────────────────────
+# `text_citat` din `Temei` e REDAREA iConta, nu textul legii: "impozit pe dividende cota 16% asupra
+# dividendului brut" fata de "Impozitul pe dividende se stabileste prin aplicarea unei cote de impozit
+# de 16% asupra dividendului brut". Potrivirea pe subsir cade pe parafraza, si atunci decizia trece la
+# indiciul de subiect - care pe un act mare e prea larg: `legea_141_2025_consolidat` vorbeste despre
+# dividende in cinci locuri, cu 16% si cu 10%, deci "dividende" singur confirma orice.
+#
+# CIFRELE SE EXCLUD DIN POTRIVIRE, si asta e miezul: daca numerele ar intra in punga de cuvinte,
+# gasirea unitatii de text ar depinde de valoarea caăutata, si un 10% greșit si-ar gasi singur gazda.
+# Aici se localizeaza UNITATEA prin cuvintele de conţinut, si abia apoi se verifica valoarea in ea.
+_SUFIXE = ("urilor", "urile", "ilor", "elor", "ului", "lui", "uri", "ile", "ele", "ii", "ei", "ea",
+           "or", "ul", "a", "e", "i", "u")
+_STOP = {"care", "prin", "pentru", "asupra", "unei", "unui", "este", "sunt", "dintre", "conform",
+         "potrivit", "prevazut", "prevazute", "art", "alin", "lit", "pct", "din", "catre"}
+
+
+def _stem(w):
+    for suf in _SUFIXE:
+        if len(w) > len(suf) + 2 and w.endswith(suf):
+            return w[:-len(suf)]
+    return w
+
+
+def _cuvinte_citat(text_citat):
+    """Punga de cuvinte de conţinut a citatului, FARA cifre. Pentru localizare, nu pentru valoare."""
+    t = norm(text_citat)
+    t = re.sub(r"[^a-z\s]", " ", t)          # scoate cifre si punctuaţie: raman numai cuvinte
+    ies = []
+    for w in t.split():
+        if len(w) < 4 or w in _STOP:
+            continue
+        st = _stem(w)
+        if len(st) >= 3 and st not in ies:
+            ies.append(st)
+    return ies
+
+
+def _alege_atom(atomi, cuvinte):
+    """Dintre atomii candidaţi, cel pe care CITAREA il descrie cel mai bine; la egalitate, cel mai scurt.
+
+    DE CE NU "cel mai scurt". HG 276/2013 poarta "2.500 lei" in doua alineate: alin.(1) stabileste
+    pragul ("valoarea minima de intrare a mijloacelor fixe ... este de 2.500 lei"), iar alin.(2) e o
+    regula tranzitorie despre valoarea rămasa neamortizata "cuprinsa intre 1.800 lei si 2.500 lei".
+    Cel mai SCURT e al doilea, deci raportul citea regula tranzitorie ca temei al pragului. Scorul pe
+    cuvintele citarii il alege pe primul (5 stemuri fata de 4), si nu foloseste cifre - deci nu poate
+    rescrie verdictul, doar alege unitatea de text pe care iConta o descrie.
+    """
+    def cheie(a):
+        scor = sum(1 for c in cuvinte if c in a["_n"]) if cuvinte else 0
+        return (-scor, len(a["text"]))
+    return min(atomi, key=cheie)
+
+
+def _potrivire_pe_cuvinte(atomi, cuvinte, prag=0.8):
+    """Atomii care conţin cel puţin `prag` din cuvintele de conţinut ale citatului."""
+    if len(cuvinte) < 3:
+        return []
+    nevoie = max(3, int(round(prag * len(cuvinte))))
+    ies = []
+    for a in atomi:
+        n = sum(1 for c in cuvinte if c in a["_n"])
+        if n >= nevoie:
+            ies.append((n, a))
+    if not ies:
+        return []
+    maxim = max(n for n, _a in ies)
+    return [a for n, a in ies if n == maxim]      # numai cei mai buni, nu toti cei care trec pragul
+
+
 def potriveste(p, corp, plan=None):
     if p["clasa"] == "cont":
         return _potriveste_cont(p, plan or {})
@@ -322,7 +472,7 @@ def potriveste(p, corp, plan=None):
     if not subiecte and temei.get("text_citat"):
         subiecte = _fragmente_citat(temei["text_citat"])[:3]
     if p["clasa"] == "termen":
-        return _potriveste_termen(p, corp, subiecte)
+        return _potriveste_termen(p, corp)
 
     rez = {"parametru": p["id"], "clasa": p["clasa"], "nume": p["nume"],
            "valoare_cod": p["valoare_cod"], "valabil_din_cod": p["valabil_din_cod"],
@@ -355,20 +505,38 @@ def potriveste(p, corp, plan=None):
 
     forme = forme_numar(p["valoare_cod"], fel) if fel != "alt" else set()
 
-    def _cu_subiect(atomi):
-        return [a for a in atomi if any(sb in a["_n"] for sb in subiecte)] if subiecte else []
+    indicii_stem = [_stemuri_indiciu(sb) for sb in subiecte]
+    cuvinte_citat = _cuvinte_citat(temei["text_citat"]) if temei.get("text_citat") else []
 
-    # ── NIVELURILE DE PROBA, in ordine descrescatoare de forta ───────────────────────────────────
-    # DE CE SE ACUMULEAZA si nu se opreste la primul nivel nevid. Prima versiune se oprea, si a
-    # produs trei NEGASIT false pe valori care ERAU in corpus:
-    #   - `cass` 10% sta in `#art156~2` (sufixul `~2` apare cand acelasi id revine - cuprins vs corp);
-    #     ancora `#art156` nu-l cuprindea, si cautarea se oprea acolo.
-    #   - `facilitate_salariu_minim` 200 lei sta in `oug_89_2025#artIII~2/alin4`, nu in `#artIII`.
-    #   - `tichet_masa_plafon` 45 lei sta in articolul CITAT de pct. 1 al art. I din Legea 201/2025,
-    #     deci nu sub id-ul articolului citat de iConta.
-    # Un NEGASIT fals e la fel de grav ca o valoare inventata: amandoua mint despre corpus. Deci se
-    # incearca toate nivelurile din ACTUL DECLARAT, si se raporteaza nivelul la care valoarea a fost
-    # chiar gasita - inclusiv cand el e mai slab decat cel declarat, fiindca ASTA e informatia.
+    def _cu_subiect(atomi):
+        return [a for a in atomi if _are_subiect(a, indicii_stem)] if subiecte else []
+
+    # ── DECIZIA VINE DIN ACTUL DECLARAT, si numai de acolo ───────────────────────────────────────
+    # ASA A TREBUIT SA FIE REFACUT, si de ce. Versiunea dinainte acumula niveluri de proba si CAUTA
+    # VALOAREA IN FIECARE, pana in tot corpusul. Scopul era bun - reparase trei NEGASIT false - dar
+    # efectul a fost ca a facut CONCORDA nefalsificabil: bancul de mutatii (`banc_mutatii.py`) a
+    # injectat cinci greșeli cunoscute din istoria fiscala si TOATE CINCI au ieșit CONCORDA.
+    #   - dividende 10% in loc de 16% -> "confirmat" pe `legea_141_2025_consolidat#artVII/alin2`
+    #   - TVA 19% in loc de 21%       -> "confirmat" pe OUG 200/2008 (!), gasit in tot corpusul
+    #   - salariu minim 4050 pe iulie 2026 -> "confirmat" pe HG 1506/2024, actul ABROGAT
+    #   - cota micro 5%, care nu exista in niciun act -> "confirmat" pe CF art.481 alin.(2) lit.b)
+    # Cauza e structurala, nu o scapare de reglaj: legislaţia fiscala romaneasca conţine aproape
+    # orice procent si aproape orice suma pe undeva, deci o cautare care se intinde pana la ultimul
+    # atom gaseste mereu o gazda pentru o valoare greșita. Un detector care nu poate produce DIFERA
+    # face din "0 DIFERA" o propozitie fara conţinut.
+    #
+    # REGULA de acum: cand iConta declara un temei, verdictul se ia din ACTUL ACELA. Nu exista
+    # salvare din alt act. Ce s-a pastrat din reparatia veche e strict necesarul - anume ca ANCORA
+    # dintr-un act poate fi imprecisa (id cu sufix `~2`, valoare intr-un articol CITAT de un punct) -,
+    # deci in interiorul actului declarat se coboara pe niveluri. Ce a dispărut cu totul sunt cele
+    # doua niveluri care rescriau verdictul: "valoarea, gasita oriunde in actul declarat" (fara
+    # subiect) si cautarea in tot corpusul pentru un parametru care ARE temei.
+    #
+    # UN NIVEL SE SARE DACA E NEINFORMATIV - adica nu poarta niciun numar de forma cerută. Un
+    # articol-antet ca `legea_201_2025#artI` nu spune nimic despre sume, deci nu are dreptul sa
+    # produca nici CONCORDA nici DIFERA; se trece la nivelul urmator. Dar primul nivel care POARTA
+    # un numar decide, si de acolo nu se mai coboara: altfel o valoare greșita ar fi iar salvata de
+    # un nivel mai slab.
     niveluri = []
     if act:
         atomi_act = corp.pe_act[act]
@@ -385,92 +553,132 @@ def potriveste(p, corp, plan=None):
             frag = _fragmente_citat(temei["text_citat"])
             pe_citat = [a for a in atomi_act if any(f in a["_n"] for f in frag)]
             if pe_citat:
-                niveluri.append((pe_citat, "citatul declarat de iConta, gasit in actul declarat", True))
+                niveluri.append((pe_citat, "citatul declarat de iConta, gasit verbatim in actul "
+                                           "declarat", True))
+            else:
+                cuv = _cuvinte_citat(temei["text_citat"])
+                pe_cuvinte = _potrivire_pe_cuvinte(atomi_act, cuv)
+                if pe_cuvinte:
+                    niveluri.append((pe_cuvinte,
+                                     "citatul declarat de iConta, potrivit pe cuvintele lui de "
+                                     "conţinut (%d cuvinte, fara cifre) in actul declarat"
+                                     % len(cuv), True))
         pe_subiect = _cu_subiect(atomi_act)
         if pe_subiect:
             niveluri.append((pe_subiect, "indiciu de subiect, in actul declarat (%s)" % act, True))
-        if forme:
-            pe_valoare = [a for a in atomi_act if gaseste_forma(a["_n"], forme)]
-            if pe_valoare:
-                niveluri.append((pe_valoare, "valoarea, gasita in actul declarat (%s)" % act, True))
-    if subiecte:
+        if corp.structura.get(act) == "fragmente" and forme:
+            pe_vecinatate = [a for a in atomi_act
+                             if any(_valoare_langa_subiect(a, f, indicii_stem) for f in forme)]
+            if pe_vecinatate:
+                niveluri.append((pe_vecinatate,
+                                 "valoarea in vecinatatea subiectului, in actul declarat (%s) - act "
+                                 "FARA structura de articol, deci ancora slaba" % act, True))
+    elif subiecte:
+        # Niciun temei declarat: singurul drum e indiciul de subiect in tot corpusul. El NU poate
+        # produce DIFERA (vezi mai jos) si se marcheaza ca ancora slaba in raport.
         pe_tot = _cu_subiect(corp.toti)
         if pe_tot:
             niveluri.append((pe_tot, "indiciu de subiect, CAUTAT IN TOT CORPUSUL", False))
 
-    rez["citare_rezolvata"] = bool(niveluri and niveluri[0][2] and url) if url else None
-
     if not niveluri:
+        rez["citare_rezolvata"] = False if url else None
         rez["clasificare"] = "NEGASIT"
-        rez["motiv"] = ("niciun atom din corpus nu poarta subiectul acestui parametru" if subiecte
-                        else "parametrul nu are nici temei declarat de iConta, nici indiciu de "
-                             "subiect - nu se poate interoga corpusul fara a inventa unul")
-        return rez
-
-    candidati, cum, in_actul_declarat = niveluri[0]
-
-    if fel == "alt":
-        # Un articol-antet (`opanaf_705_2020_d390#art5`) are textul in COPII, deci el insusi e gol.
-        # Masurat: doua nomenclatoare citau un verbatim de zero caractere. Se alege primul candidat
-        # care poarta text; daca niciunul nu poarta, se spune, nu se citeaza golul.
-        cu_text = [a for a in candidati if len(a["text"]) >= 40]
-        a = (cu_text or candidati)[0]
-        rez.update(_din_atom(a))
-        rez["clasificare"] = "CONCORDA"
-        rez["motiv"] = ("atomul poarta subiectul; parametrul nu e o valoare numerica comparabila "
-                        "(termen/nomenclator/cont) - se confirma temeiul, nu o cifra")
+        rez["motiv"] = (("actul declarat (%s) e in corpus, dar niciun atom al lui nu se potriveste "
+                         "nici cu articolul citat, nici cu citatul iConta, nici cu subiectul "
+                         "parametrului - citarea nu duce unde spune" % act) if act else
+                        ("niciun atom din corpus nu poarta subiectul acestui parametru" if subiecte
+                         else "parametrul nu are nici temei declarat de iConta, nici indiciu de "
+                              "subiect - nu se poate interoga corpusul fara a inventa unul"))
         return rez
 
     for atomi_n, cum_n, in_act_n in niveluri:
         potrivite = [a for a in atomi_n if gaseste_forma(a["_n"], forme)]
-        if not potrivite:
-            continue
-        # cel mai SCURT atom care poarta valoarea: alineatul care o stabileste, nu articolul-parinte
-        # care o contine din intamplare.
-        a = min(potrivite, key=lambda x: len(x["text"]))
-        forma = gaseste_forma(a["_n"], forme)
-        rez.update(_din_atom(a, forma))
-        rez["valoare_lege"] = forma
-        rez["ancora"] = cum_n
-        rez["cum_gasit"] = cum_n
-        rez["clasificare"] = "CONCORDA"
-        rez["motiv"] = "atomul poarta valoarea din cod, in forma legii, la nivelul: %s" % cum_n
-        if cum_n is not cum:
-            rez["nota"] = ("valoarea NU s-a gasit la nivelul cel mai tare de proba (%s), ci la %s - "
-                           "citarea iConta duce la actul corect, dar nu exact la unitatea care "
-                           "stabileste valoarea" % (cum, cum_n))
-        return rez
+        if potrivite and not in_act_n:
+            # ANCORA SLABA (cautare in tot corpusul, parametru pe care iConta nu-l sursează): nu e de
+            # ajuns ca atomul sa conţina fraza-subiect SI numarul. Intr-un atom mare ele pot fi la mii
+            # de caractere una de alta, deci nu aparţin aceleiasi reguli. Masurat:
+            # `_PCT_DEDUCERE_BAZA=0.20` a ieșit CONCORDA pe `og_16_2022#art77/alin14` - un alineat
+            # despre impozitarea JOCURILOR DE NOROC -, iar `=0.35` pe un tabel dintr-o anexa de
+            # formular. Cel corect din aceeasi familie, `PRAG_VENIT_DEDUCERE=2000`, are valoarea la 85
+            # de caractere de fraza ("Deducerea personală de bază se acordă ... venit lunar brut de
+            # până la 2.000 de lei"). Deci se cere VECINATATEA valorii cu subiectul, nu coexistenţa
+            # lor in acelasi atom - un test care nu depinde de marimea atomului.
+            potrivite = [a for a in potrivite
+                         if any(_valoare_langa_subiect(a, f, indicii_stem) for f in forme)]
+        if potrivite:
+            # atomul pe care CITAREA il descrie; la egalitate, cel mai scurt - adica alineatul care
+            # stabileste valoarea, nu articolul-parinte care o conţine din intamplare.
+            a = _alege_atom(potrivite, cuvinte_citat)
+            forma = gaseste_forma(a["_n"], forme)
+            rez.update(_din_atom(a, forma))
+            rez["valoare_lege"] = forma
+            rez["ancora"] = cum_n
+            rez["cum_gasit"] = cum_n
+            rez["citare_rezolvata"] = in_act_n if url else None
+            rez["clasificare"] = "CONCORDA"
+            rez["motiv"] = "atomul poarta valoarea din cod, in forma legii, la nivelul: %s" % cum_n
+            if cum_n != niveluri[0][1]:
+                rez["nota"] = ("valoarea NU s-a gasit la nivelul cel mai tare de proba (%s), ci la "
+                               "%s - citarea iConta duce la actul corect, dar nu exact la unitatea "
+                               "care stabileste valoarea" % (niveluri[0][1], cum_n))
+            return rez
 
-    # ── DIFERA e o AFIRMATIE TARE: "legea spune altceva". Ea cere o ANCORA TARE - adica citarea
-    # declarata de iConta sa se fi rezolvat la un articol sau la citatul lor. Masurat: fara aceasta
-    # conditie, cele 7 "DIFERA" produse erau TOATE false pozitive - un indiciu de doua-trei cuvinte
-    # ("deducere personala") cautat in 46.000 de atomi prinde un alineat intamplator din OPANAF
-    # 605/2026, si raportul ar fi pus "legea zice 3,5" langa "codul zice 0,20". Un parametru pe care
-    # iConta nu-l sursează deloc nu poate produce o divergenta dovedita; el produce NEGASIT, cu
-    # motivul scris. Asta e chiar regula 5 din CLAUDE.md: nicio valoare inventata.
-    # DIFERA e defensabil numai cand atomul vine din ACTUL DECLARAT de iConta. O potrivire pe
-    # cuvinte in tot corpusul nu susţine "legea spune altceva" - vezi masuratoarea din antet.
-    ancora_tare = in_actul_declarat
-    cu_numar = [(a, numere_din_text(a["_n"], fel)) for a in candidati] if ancora_tare else []
-    cu_numar = [(a, ns) for a, ns in cu_numar if ns]
-    if cu_numar:
-        a, ns = min(cu_numar, key=lambda t: len(t[0]["text"]))
+        # nivelul nu poarta valoarea din cod. Poarta el VREUN numar de forma cerută?
+        cu_numar = [(a, numere_din_text(a["_n"], fel)) for a in atomi_n]
+        cu_numar = [(a, ns) for a, ns in cu_numar if ns]
+        if not cu_numar:
+            continue                  # nivel NEINFORMATIV: nu decide, se trece la urmatorul
+
+        # DIFERA NU se pronunta pe un atom de FRAGMENT. Un fragment vine dintr-un act fara structura
+        # de articol, deci nu se poate spune CE unitate de text e - iar cand actul e un tabel pe
+        # coloane, textul lui e intretesut. Masurat: `tichet_masa_plafon@2025-04-01` (40,18 lei) a
+        # ieșit DIFERA pe `anaf_limite_2025#frag23`, un fragment de tabel cu sapte numere lipite
+        # ('15,18','20','20,01','20,09','20,17','30','35'), desi 40,18 chiar exista in act, in
+        # fragmentul urmator. Un fragment poate confirma o valoare care e literal in el; nu poate
+        # contrazice una.
+        cu_numar = [(a, ns) for a, ns in cu_numar if a["nivel"] != "fragment"]
+        if not cu_numar:
+            continue
+
+        # DIFERA se pronunta numai cand atomul vine din ACTUL DECLARAT de iConta. O potrivire pe
+        # cuvinte in tot corpusul nu susţine "legea spune altceva" - vezi masuratoarea din antet.
+        if not in_act_n:
+            a = _alege_atom([x[0] for x in cu_numar], cuvinte_citat)
+            ns = dict((id(x[0]), x[1]) for x in cu_numar)[id(a)]
+            rez.update(_din_atom(a, ns[0]))
+            rez["ancora"] = cum_n
+            rez["clasificare"] = "NEGASIT"
+            rez["motiv"] = ("s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot "
+                            "corpusul, fara temei declarat de iConta, si el poarta alta valoare "
+                            "(%s) decat cea din cod (%s). O astfel de potrivire e prea slaba ca sa "
+                            "susţina un verdict: se raporteaza NEGASIT, nu DIFERA."
+                            % (ns[0], p["valoare_cod"]))
+            return rez
+
+        a = _alege_atom([x[0] for x in cu_numar], cuvinte_citat)
+        ns = dict((id(x[0]), x[1]) for x in cu_numar)[id(a)]
         rez.update(_din_atom(a, ns[0]))
         rez["valoare_lege"] = ns[0] if len(ns) == 1 else ns
+        rez["ancora"] = cum_n
+        rez["cum_gasit"] = cum_n
+        rez["citare_rezolvata"] = True if url else None
         rez["clasificare"] = "DIFERA"
-        rez["motiv"] = ("atomul poarta subiectul, dar numarul din textul legii nu e cel din cod "
-                        "(vezi ambele parti)")
+        rez["motiv"] = ("atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar "
+                        "NU pe cel din cod (%s vs %s) - la nivelul: %s"
+                        % (p["valoare_cod"], ns[0] if len(ns) == 1 else ns, cum_n))
         return rez
 
-    a = candidati[0]
+    # toate nivelurile au fost neinformative
+    a = niveluri[0][0][0]
     rez.update(_din_atom(a))
+    rez["ancora"] = niveluri[0][1]
+    # citarea a dus la NISTE atomi, dar niciunul nu stabileste parametrul: deci nu s-a rezolvat.
+    # `citare_rezolvata` inseamna "proba duce unde spune", nu "s-a gasit ceva in actul numit".
+    rez["citare_rezolvata"] = False if url else None
     rez["clasificare"] = "NEGASIT"
-    rez["motiv"] = (("citarea declarata de iConta s-a rezolvat, dar atomul nu poarta nicio valoare "
-                     "de forma ceruta (%s) - deci nu el stabileste parametrul" % fel)
-                    if ancora_tare else
-                    ("s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot "
-                     "corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba "
-                     "ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA."))
+    rez["motiv"] = ("atomii gasiti prin temeiul declarat nu poarta nicio valoare de forma cerută "
+                    "(%s) - deci niciunul nu stabileste parametrul. Nu se caută in alte acte: "
+                    "cand iConta declara un temei, verdictul se ia din actul acela." % fel)
     return rez
 
 
@@ -515,7 +723,7 @@ _NUME_DECLARATIE = {
 }
 
 
-def _potriveste_termen(p, corp, subiecte):
+def _potriveste_termen(p, corp):
     temei = p["temei_declarat"] or {}
     act = corp.act_din_url(temei.get("url"))
     val = p["valoare_cod"]

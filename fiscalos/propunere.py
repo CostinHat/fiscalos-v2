@@ -47,6 +47,7 @@ def construieste():
     inv = _citeste("inventar_iconta.json")
     pot = _citeste("potriviri.json")
     durate = _citeste("durate.json")
+    banc = _citeste("banc_mutatii.json")
 
     dest = os.path.join(_RAD, "propuneri", VERSIUNE)
     os.makedirs(dest, exist_ok=True)
@@ -79,6 +80,7 @@ def construieste():
                   "citari_rezolvate_in_corpus": pot["citari_rezolvate"]},
         "parametri": P,
         "durate_masurate": durate,
+        "dovada_inversa": banc,
     }
     with open(os.path.join(dest, "propunere.json"), "w", encoding="utf-8") as f:
         json.dump(propunere, f, ensure_ascii=False, indent=1, sort_keys=True)
@@ -171,6 +173,28 @@ def construieste():
     A(_tabel([[c, pe.get((c, "CONCORDA"), 0), pe.get((c, "DIFERA"), 0), pe.get((c, "NEGASIT"), 0)]
               for c in clase], ["Clasă", "CONCORDĂ", "DIFERĂ", "NEGĂSIT"]))
     A("")
+    tari = [p for p in P if p["clasificare"] == "CONCORDA"
+            and "TOT CORPUSUL" not in str(p.get("ancora"))
+            and "ancora slaba" not in str(p.get("ancora"))]
+    slabi = [p for p in P if p["clasificare"] == "CONCORDA" and p not in tari]
+    A("### CONCORDĂ nu e un singur lucru — ancora contează")
+    A("")
+    A("| Fel de ancoră | Câți | Ce înseamnă |")
+    A("|---|---|---|")
+    A("| **Temei declarat de iConta, verificat în actul declarat** | %d | Citarea lor duce la actul "
+      "corect, iar atomul de acolo poartă valoarea. Verdict verificat. |" % len(tari))
+    A("| **Ancoră slabă** | %d | Parametri pe care iConta **nu-i sursează deloc**. Tot ce s-a putut "
+      "face e o căutare pe cuvinte în corpus, cu cerința ca valoarea să stea lângă fraza-subiect. "
+      "E **probă de confirmat de arhitect**, nu verdict verificat — vezi C2. |" % len(slabi))
+    A("")
+    if slabi:
+        A("Cei cu ancoră slabă, fiecare cu atomul lui, ca să poată fi confirmați sau respinși unul "
+          "câte unul:")
+        A("")
+        A(_tabel([[p["parametru"], p["valoare_cod"], p["atom"], _scurt(str(p["valoare_lege"]), 22)]
+                  for p in sorted(slabi, key=lambda x: x["parametru"])],
+                 ["Parametru", "Cod", "Atom din corpus", "În lege"]))
+        A("")
 
     # ── 4. registrul COTE, in detaliu ────────────────────────────────────────────────────────────
     A("## 4. Registrul `COTE` al iConta — partea cu temei declarat")
@@ -273,6 +297,38 @@ def construieste():
     A("")
     A("(%d conturi confirmate; tabelul arată primele 40. Lista completă în `propunere.json`.)"
       % len(ct))
+    A("")
+    A("## 9. Dovada în cealaltă direcție — detectorul poate produce DIFERĂ?")
+    A("")
+    A("**Un *0 DIFERĂ* nu spune nimic dacă detectorul nu poate contrazice niciodată.** Un clasificator "
+      "care răspunde mereu CONCORDĂ dă exact același zero și arată la fel în raport. Deci pe o "
+      "**copie în memorie** a inventarului (niciodată în iConta, niciodată în "
+      "`artefacte/inventar_iconta.json`) se injectează greșeli luate din istoria fiscală reală, și "
+      "se cere ca fiecare să iasă DIFERĂ, cu temeiul corect alături.")
+    A("")
+    A("**Rezultat: %d din %d trec.**" % (banc["n_trec"], banc["n_trec"] + banc["n_pica"]))
+    A("")
+    for x in banc["mutaţii"]:
+        m = x["mutant"]
+        A("### %s" % x["mutaţie"])
+        A("")
+        A("- *de ce această greșeală:* %s" % x["de_ce"])
+        A("- cod real `%s` → injectat `%s`" % (x["valoare_reala_in_cod"], x["valoare_injectata"]))
+        A("- **ieșit: %s** · în lege: `%s` · `citare_rezolvata=%s`"
+          % (m["clasificare"], m["valoare_lege"], m["citare_rezolvata"]))
+        A("- atom: `%s`" % m["atom"])
+        if m["verbatim"]:
+            A("")
+            A("  > %s" % _scurt(m["verbatim"], 300))
+        A("")
+    A("**Ce iese la citarea greșită** (valoarea din cod e corectă, dar temeiul trimite la alt act): "
+      "`NEGĂSIT` cu `citare_rezolvata=False`. Nu CONCORDĂ — chiar dacă valoarea *este* corectă — "
+      "fiindcă întrebarea la care răspunde acest livrabil nu e doar *ce valoare*, ci **duce proba "
+      "unde spune?**. Și nu DIFERĂ, fiindcă actul declarat nu spune altceva: nu spune nimic despre "
+      "acest parametru.")
+    A("")
+    A("Prima rulare a bancului a picat **5 din 5** — toate cele cinci greșeli ieșeau CONCORDĂ. "
+      "Defectele găsite astfel, și reparate, sunt scrise în §0 la cerința C7.")
     A("")
     A("---")
     A("")

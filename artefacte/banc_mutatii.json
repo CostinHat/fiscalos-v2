@@ -1,0 +1,130 @@
+{
+ "_ce": "OP7b dovada in cealalta direcţie: greșeli cunoscute injectate pe o COPIE a inventarului (niciodata in iConta), pentru a arata ca detectorul poate produce DIFERA.",
+ "n_trec": 5,
+ "n_pica": 0,
+ "mutaţii": [
+  {
+   "mutaţie": "dividende 10% in loc de 16%",
+   "de_ce": "cota reala din 2025 (OUG 156/2024), rămasa in cod dupa ce Legea 141/2025 a urcat-o la 16% de la 01.01.2026 - clasa 'cota veche rămasa in cod'",
+   "parametru": "cote/impozit_dividend@2026-01-01",
+   "aștept": "DIFERA",
+   "lege_conţine": "16",
+   "valoare_reala_in_cod": "0.16",
+   "valoare_injectata": "0.10",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "legea_141_2025_consolidat#artII",
+    "valoare_lege": "16%",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "legea_141_2025_consolidat#artII",
+    "valoare_lege": "16",
+    "citare_rezolvata": true,
+    "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.10 vs 16) - la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+    "verbatim": "Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului "
+   }
+  },
+  {
+   "mutaţie": "TVA standard 19% in loc de 21%",
+   "de_ce": "cota de dinainte de 01.08.2025; exact greșeala pe care Legea 141/2025 a produs-o in orice sistem care n-a fost actualizat",
+   "parametru": "cote/tva_standard@2025-08-01",
+   "aștept": "DIFERA",
+   "lege_conţine": "21",
+   "valoare_reala_in_cod": "0.21",
+   "valoare_injectata": "0.19",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "legea_141_2025_consolidat#art291/alin1",
+    "valoare_lege": "21%",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "legea_141_2025_consolidat#art291/alin1",
+    "valoare_lege": "21",
+    "citare_rezolvata": true,
+    "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.19 vs 21) - la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+    "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+   }
+  },
+  {
+   "mutaţie": "salariu minim 4050 pe o data din semestrul 2 2026",
+   "de_ce": "valoarea HG 1506/2024, aplicata unei perioade guvernate de HG 146/2026 (4.325) - clasa 'plafon vechi aplicat unei perioade noi'",
+   "parametru": "cote/salariu_minim@2026-07-01",
+   "aștept": "DIFERA",
+   "lege_conţine": "4.325",
+   "valoare_reala_in_cod": "4325",
+   "valoare_injectata": "4050",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "hg_146_2026_salariu_minim#art1",
+    "valoare_lege": "4.325",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "hg_146_2026_salariu_minim#art1",
+    "valoare_lege": [
+     "4.325",
+     "949"
+    ],
+    "citare_rezolvata": true,
+    "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
+    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (4050 vs ['4.325', '949']) - la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
+    "verbatim": "Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei lunar, pentru un program normal de lucru în medie de 166,667 ore pe lună, reprezentând 25,949 lei/o"
+   }
+  },
+  {
+   "mutaţie": "cota micro 5% - valoare care nu exista in niciun act",
+   "de_ce": "nu e o cota istorica, e o valoare pur greșita; testeaza daca detectorul cere potrivirea valorii sau se mulţumeşte cu subiectul",
+   "parametru": "cote/impozit_micro@2023-01-01",
+   "aștept": "DIFERA",
+   "lege_conţine": "1",
+   "valoare_reala_in_cod": "0.01",
+   "valoare_injectata": "0.05",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+    "valoare_lege": "1%",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+    "valoare_lege": "1",
+    "citare_rezolvata": true,
+    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.05 vs 1) - la nivelul: ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+    "verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%."
+   }
+  },
+  {
+   "mutaţie": "citare spre actul greșit (CAS 25% cu temei HG 146/2026)",
+   "de_ce": "valoarea din cod e CORECTA (25%), dar temeiul declarat trimite la o hotarare de salariu minim. Intrebarea nu e 'ce valoare', ci 'proba duce unde spune?'",
+   "parametru": "cote/cas@2018-01-01",
+   "aștept": "de_raportat",
+   "lege_conţine": null,
+   "valoare_reala_in_cod": "0.25",
+   "valoare_injectata": "0.25",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "cod_fiscal_227_2015_consolidat#art138",
+    "valoare_lege": "25%",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "NEGASIT",
+    "atom": "hg_146_2026_salariu_minim#art1",
+    "valoare_lege": null,
+    "citare_rezolvata": false,
+    "ancora": "ancora pe articolul din Temei (hg_146_2026_salariu_minim#art1)",
+    "motiv": "atomii gasiti prin temeiul declarat nu poarta nicio valoare de forma cerută (procent) - deci niciunul nu stabileste parametrul. Nu se caută in alte acte: cand iConta declara un temei, verdictul se ia din actul acela.",
+    "verbatim": "Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei lunar, pentru un program normal de lucru în medie de 166,667 ore pe lună, reprezentând 25,949 lei/o"
+   }
+  }
+ ]
+}

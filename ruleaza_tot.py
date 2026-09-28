@@ -17,6 +17,7 @@ PASI = [
     ("OP4 atomizare structurala", "fiscalos.atomizare", "atomizeaza_tot"),
     ("OP5 inventar parametri iConta (citire)", "fiscalos.inventar_iconta", "inventariaza"),
     ("OP6+OP7 potrivire si clasificare", "fiscalos.potrivire", "potriveste_tot"),
+    ("OP7b banc de mutatii (dovada inversa)", "fiscalos.banc_mutatii", "_ca_raport"),
 ]
 
 
@@ -29,7 +30,7 @@ def ruleaza():
         rez = getattr(m, functie)()
         d = time.time() - t0
         rezumat = {k: v for k, v in rez.items()
-                   if k in ("n_fisiere", "octeti_total", "n_acte_cu_text", "n_neextractibile",
+                   if k in ("n_trec", "n_pica", "n_fisiere", "octeti_total", "n_acte_cu_text", "n_neextractibile",
                             "n_acte", "n_atomi", "n_acte_pe_articole", "n_acte_pe_fragmente",
                             "n_parametri", "pe_clasa", "sumar", "citari_declarate",
                             "citari_rezolvate", "n_conturi_in_plan_din_corpus")}

@@ -2,9 +2,9 @@
 
 Propunerea `propuneri/v1/propunere.json` + `RAPORT.md`, generată la 28.09.2026:
 
-- CONCORDĂ: **202**
+- CONCORDĂ: **200**
 - DIFERĂ: **0**
-- NEGĂSIT: **29**
+- NEGĂSIT: **31**
 
 FiscalOS **nu are cale de scriere spre iConta**. Aplicarea oricărui rând din această propunere e un
 pas uman, separat de generarea ei.

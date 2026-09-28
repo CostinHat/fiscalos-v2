@@ -1,12 +1,12 @@
 # FiscalOS v2 — PROPUNERE v1: parametrii fiscali ai iConta confruntați cu corpusul
 
-Generat 28.09.2026 13:21 · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3).
+Generat 28.09.2026 16:13 · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3).
 
 | | |
 |---|---|
-| **CONCORDĂ** | **202** |
+| **CONCORDĂ** | **200** |
 | **DIFERĂ** | **0** |
-| **NEGĂSIT** | **29** |
+| **NEGĂSIT** | **31** |
 | Total parametri inventariați | 231 |
 | Citări declarate de iConta / rezolvate în corpus | 40 / 40 |
 | Atomi în corpus | 46.559 din 269 acte |
@@ -54,20 +54,21 @@ din brief. Oprirea e după acest livrabil.
 
 ## 1. Operațiile rulate, cu durata măsurată
 
-| Operație                               | Durată  | Rezultat                                                                                    |
-|----------------------------------------|---------|---------------------------------------------------------------------------------------------|
-| OP2 instantaneu corpus + manifest SHA  | 0.54 s  | {"n_fisiere": 726, "octeti_total": 130006698}                                               |
-| OP3 strat de text (txt/html/pdf)       | 2.09 s  | {"n_acte_cu_text": 269, "n_neextractibile": 4}                                              |
-| OP4 atomizare structurala              | 2.37 s  | {"n_acte": 269, "n_atomi": 46559, "n_acte_pe_articole": 201, "n_acte_pe_fragmente": 68}     |
-| OP5 inventar parametri iConta (citire) | 2.22 s  | {"n_parametri": 231, "pe_clasa": {"cota": 38, "plafon": 38, "termen": 5, "nomenclator": 4,… |
-| OP6+OP7 potrivire si clasificare       | 11.76 s | {"n_parametri": 231, "sumar": {"CONCORDA": 202, "NEGASIT": 29}, "citari_declarate": 40, "c… |
-| Probe pe corpus                        | 0.30 s  | {"cod_ieșire": 0}                                                                           |
+| Operație                               | Durată | Rezultat                                                                                    |
+|----------------------------------------|--------|---------------------------------------------------------------------------------------------|
+| OP2 instantaneu corpus + manifest SHA  | 0.49 s | {"n_fisiere": 726, "octeti_total": 130006698}                                               |
+| OP3 strat de text (txt/html/pdf)       | 2.13 s | {"n_acte_cu_text": 269, "n_neextractibile": 4}                                              |
+| OP4 atomizare structurala              | 2.15 s | {"n_acte": 269, "n_atomi": 46559, "n_acte_pe_articole": 201, "n_acte_pe_fragmente": 68}     |
+| OP5 inventar parametri iConta (citire) | 1.81 s | {"n_parametri": 231, "pe_clasa": {"cota": 38, "plafon": 38, "termen": 5, "nomenclator": 4,… |
+| OP6+OP7 potrivire si clasificare       | 9.59 s | {"n_parametri": 231, "sumar": {"CONCORDA": 200, "NEGASIT": 31}, "citari_declarate": 40, "c… |
+| OP7b banc de mutatii (dovada inversa)  | 3.88 s | {"n_trec": 5, "n_pica": 0}                                                                  |
+| Probe pe corpus                        | 4.19 s | {"cod_ieșire": 0}                                                                           |
 
-Total măsurat: **19.28 s**. Duratele sunt citite din `artefacte/durate.json`, scris de `ruleaza_tot.py` — nu sunt estimări.
+Total măsurat: **24.24 s**. Duratele sunt citite din `artefacte/durate.json`, scris de `ruleaza_tot.py` — nu sunt estimări.
 
 ## 2. Corpusul
 
-Instantaneu copiat din `/home/costin/iconta_nou/anaf_surse`, **doar citire**, la 2026-09-28T13:20:51: **726 fișiere, 130.0 MB**. Manifest SHA256 per fișier în `corpus_manifest.json`.
+Instantaneu copiat din `/home/costin/iconta_nou/anaf_surse`, **doar citire**, la 2026-09-28T16:12:51: **726 fișiere, 130.0 MB**. Manifest SHA256 per fișier în `corpus_manifest.json`.
 
 Toate cele 277 de amprente `.sha256` pe care ANAF/iConta le-au pus lângă acte confirmă hash-urile calculate aici — zero divergențe. Copierea e dovedită de două ori, nu presupusă.
 
@@ -91,8 +92,43 @@ Atomizare: **46.559 atomi**, 201 acte pe structură de articol, 68 pe fragmente 
 | cont        | 135      | 0      | 11      |
 | cota        | 30       | 0      | 8       |
 | nomenclator | 2        | 0      | 2       |
-| plafon      | 30       | 0      | 8       |
+| plafon      | 28       | 0      | 10      |
 | termen      | 5        | 0      | 0       |
+
+### CONCORDĂ nu e un singur lucru — ancora contează
+
+| Fel de ancoră | Câți | Ce înseamnă |
+|---|---|---|
+| **Temei declarat de iConta, verificat în actul declarat** | 177 | Citarea lor duce la actul corect, iar atomul de acolo poartă valoarea. Verdict verificat. |
+| **Ancoră slabă** | 23 | Parametri pe care iConta **nu-i sursează deloc**. Tot ce s-a putut face e o căutare pe cuvinte în corpus, cu cerința ca valoarea să stea lângă fraza-subiect. E **probă de confirmat de arhitect**, nu verdict verificat — vezi C2. |
+
+Cei cu ancoră slabă, fiecare cu atomul lui, ca să poată fi confirmați sau respinși unul câte unul:
+
+| Parametru                                      | Cod      | Atom din corpus                                                                 | În lege    |
+|------------------------------------------------|----------|---------------------------------------------------------------------------------|------------|
+| nesursat/bacsis.COTA_IMPOZIT=10                | 10       | cod_fiscal_227_2015_consolidat#art64/alin1                                      | 10%        |
+| nesursat/casa.PLAFON_INCASARE_PJ=5000          | 5000     | oug_115_2023_consolidat#artLXIV                                                 | 5.000      |
+| nesursat/casa.PLAFON_INCASARE_PJ_CC=10000      | 10000    | legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art4~2/alin1  | 10.000     |
+| nesursat/casa.PLAFON_PF=10000                  | 10000    | d394_struct_anaf#frag229                                                        | 10000      |
+| nesursat/casa.PLAFON_PLATA_PJ=5000             | 5000     | oug_115_2023_consolidat#artLXIV                                                 | 5.000      |
+| nesursat/casa.PLAFON_PLATA_PJ_TOTAL=10000      | 10000    | hg_1_2016_norme_cod_fiscal#artV~18/alin7/litc~2                                 | 10.000     |
+| nesursat/casa.PLAFON_SOLD_ZI_CC=500000         | 500000   | oug_115_2023_consolidat#art31/alin2^3                                           | 500.000    |
+| nesursat/cote_tva.COTA_REDUSA=11               | 11       | legea_141_2025#artII/pct42/alin2                                                | 11%        |
+| nesursat/cote_tva.COTA_STANDARD=21             | 21       | cod_fiscal_227_2015_consolidat#art291/alin1                                     | 21%        |
+| nesursat/d100_pozitia_116.PRAG_BRENT_USD=70    | 70       | oug_24_2026_contributie_solidaritate#art9/alin6                                 | 70         |
+| nesursat/d101.COTA_STANDARD=16                 | 16       | pdf_original/structura_D101G_2025_260126#frag178                                | 16%        |
+| nesursat/d101.PRAG_IMCA_EUR=50000000           | 50000000 | legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art18^1/alin8 | 50.000.000 |
+| nesursat/d101g.COTA_STANDARD=16                | 16       | pdf_original/structura_D101G_2025_260126#frag178                                | 16%        |
+| nesursat/d216.COTA_IMPOZIT=0.3                 | 0.3      | hg_1_2016_norme_cod_fiscal#artV~19/alin1~264/litb~3                             | 30%        |
+| nesursat/d394.COTE=11                          | 11       | d300_struct_anaf#frag85                                                         | 11%        |
+| nesursat/d394.COTE=19                          | 19       | pdf_original/structura_D300_v12.0.0_10022026#frag336                            | 19%        |
+| nesursat/d394.COTE=20                          | 20       | oug_138_2024#artIX/alin1/litb                                                   | 20%        |
+| nesursat/d394.COTE=21                          | 21       | d300_struct_anaf#frag82                                                         | 21%        |
+| nesursat/d394.COTE=24                          | 24       | d394_struct_anaf#frag304                                                        | 24%        |
+| nesursat/d394.COTE=5                           | 5        | pdf_original/structura_D300_v12.0.0_10022026#frag366                            | 5%         |
+| nesursat/d394.COTE=9                           | 9        | pdf_original/structura_D300_v12.0.0_10022026#frag514                            | 9%         |
+| nesursat/salarizare.PRAG_VENIT_DEDUCERE=2000   | 2000     | cod_fiscal_227_2015_consolidat#art77/alin3                                      | 2.000      |
+| nesursat/taxare_inversa.PRAG_ELECTRONICE=22500 | 22500    | cod_fiscal_227_2015_consolidat#art331/alin7                                     | 22.500     |
 
 ## 4. Registrul `COTE` al iConta — partea cu temei declarat
 
@@ -137,23 +173,23 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 
 - **cod iConta:** `300` din 2025-01-01 — core/common.py:675 (registrul COTE)
 - **temei declarat:** OUG 156 2024
-- **atom din corpus:** `oug_156_2024#artLXVI/alin4`
+- **atom din corpus:** `oug_156_2024#artLXVI/alin1`
 - **valoare în textul legii:** 300
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > Suma de 300 lei prevăzută la alin. (1) se diminuează în funcţie de:
+  > Prin derogare de la prevederile art. 78, art. 139 alin. (1), art. 140, art. 157 alin. (1) şi ale art. 2204 alin. (1) din Legea nr. 227/2015, cu modificările şi completările ulterioare, începând cu data de 1 ianuarie 2025, în cazul salariaţilor care desfăşoară activitate în baza contractului individual de muncă, încadraţi cu normă întreagă, la locul unde se află funcţia de bază, nu se datorează impozit pe venit şi nu se cuprinde în baza lunară de calcul al contribuţiilor sociale obligatorii suma de 300 lei/lună, reprezentând venituri din salarii şi asimilate salariilor, dacă sunt îndeplinite cu…
 
 ### `cote/facilitate_salariu_minim@2026-07-01` — **CONCORDA**
 
 - **cod iConta:** `200` din 2026-07-01 — core/common.py:674 (registrul COTE)
 - **temei declarat:** OUG 89 2025
-- **atom din corpus:** `oug_89_2025#artIII~2/alin5/litb`
+- **atom din corpus:** `oug_89_2025#artIII~2/alin1`
 - **valoare în textul legii:** 200
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > pentru veniturile aferente perioadei 1 iulie-31 decembrie 2026, cu suma de 200 lei lunar. ...
+  > Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, pentru suma de 300 lei/lună din veniturile din salarii și asimilate salariilor aferente perioadei 1 ianuarie-30 iunie 2026, respectiv pentru suma de 200 lei/lună, din veniturile din salarii și asimilate salariilor aferente perioadei 1 iulie-31 decembr…
 
 ### `cote/impozit_dividend@2016-01-01` — **CONCORDA**
 
@@ -181,23 +217,23 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 
 - **cod iConta:** `0.10` din 2025-01-01 — core/common.py:616 (registrul COTE)
 - **temei declarat:** OUG 156 2024
-- **atom din corpus:** `oug_156_2024#artLXIV/pct15`
+- **atom din corpus:** `oug_156_2024#artLXIV/pct9`
 - **valoare în textul legii:** 10%
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > La articolul 224 alineatul (4), litera b) se modifică şi va avea următorul cuprins: "b) 10% pentru veniturile din dividende prevăzute la art. 223 alin. (1) lit. a);".
+  > La articolul 97, alineatul (7) se modifică şi va avea următorul cuprins: "(7) Veniturile sub formă de dividende, inclusiv câştigul obţinut ca urmare a deţinerii de titluri de participare definite de legislaţia în materie la organisme de plasament colectiv, se impozitează cu o cotă de 10% din suma acestora, impozitul fiind final. Obligaţia calculării şi reţinerii impozitului pe veniturile sub formă de dividende revine persoanelor juridice, odată cu plata dividendelor/sumelor reprezentând câştigul obţinut ca urmare a deţinerii de titluri de participare de către acţionari/asociaţi/investitori. Te…
 
 ### `cote/impozit_dividend@2026-01-01` — **CONCORDA**
 
 - **cod iConta:** `0.16` din 2026-01-01 — core/common.py:615 (registrul COTE)
 - **temei declarat:** Legea 141 2025
-- **atom din corpus:** `legea_141_2025_consolidat#art183/alin4`
+- **atom din corpus:** `legea_141_2025_consolidat#artII`
 - **valoare în textul legii:** 16%
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > Persoanele fizice care au calitatea de pensionari sunt exceptate de la plata contribuției sociale de sănătate pentru veniturile din pensii realizate începând cu data de 1 ianuarie 2028. ... 41. La articolul 224 alineatul (4), litera b) se modifică și va avea următorul cuprins: b) 16% pentru veniturile din dividende prevăzute la art. 223 alin. (1) lit. a); ... ... 42. La articolul 291, alineatele (1) și (2) se modifică și vor avea următorul cuprins: +
+  > Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul. ... …
 
 ### `cote/impozit_micro@2023-01-01` — **CONCORDA**
 
@@ -226,13 +262,13 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 
 - **cod iConta:** `0.10` din 2018-01-01 — core/common.py:664 (registrul COTE)
 - **temei declarat:** CF
-- **atom din corpus:** `cod_fiscal_227_2015_consolidat#art78/alin2/litb`
+- **atom din corpus:** `cod_fiscal_227_2015_consolidat#art78/alin2`
 - **valoare în textul legii:** 10%
-- **valabil din (corpus):** 2018-01-01
-- **act modificator:** Litera b) din Alineatul (2) , Articolul 78 , Capitolul III , Titlul IV a fost modificată de Punctul 23, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noiembrie 2017, publicată …
+- **valabil din (corpus):** 2026-03-01
+- **act modificator:** Partea introductivă a literei a) din Alineatul (2) , Articolul 78 , Capitolul III , Titlul IV a fost modificată de Punctul 23, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noi…
 - **verbatim:**
 
-  > pentru veniturile obținute în celelalte cazuri, prin aplicarea cotei de 10% asupra bazei de calcul determinate ca diferență între venitul brut și contribuțiile sociale obligatorii aferente unei luni, datorate potrivit legii în România sau în conformitate cu instrumentele juridice internaționale la care România este parte, precum și, după caz, a contribuției individuale la bugetul de stat datorate potrivit legii, pe fiecare loc de realizare a acestora. ...
+  > Impozitul lunar prevăzut la alin. (1) se determină astfel: a) la locul unde se află funcția de bază, prin aplicarea cotei de 10% asupra bazei de calcul determinată ca diferență între venitul net din salarii calculat prin deducerea din venitul brut a contribuțiilor sociale obligatorii aferente unei luni, datorate potrivit legii în România sau în conformitate cu instrumentele juridice internaționale la care România este parte, precum și, după caz, a contribuției individuale la bugetul de stat datorată potrivit legii, și următoarele: ... (i) deducerea personală acordată pentru luna respectivă; ..…
 
 ### `cote/plafon_avans_decontare@2023-12-15` — **CONCORDA**
 
@@ -293,12 +329,12 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 
 - **cod iConta:** `2500` din 2015-01-01 — core/common.py:629 (registrul COTE)
 - **temei declarat:** HG 276 2013
-- **atom din corpus:** `hg_276_2013#art1~2/alin2`
+- **atom din corpus:** `hg_276_2013#art1~2/alin1`
 - **valoare în textul legii:** 2.500
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > Valoarea rămasă neamortizată a mijloacelor fixe cu valoarea de intrare cuprinsă între 1.800 lei şi 2.500 lei, existente în patrimoniul operatorilor economici la data intrării în vigoare a prezentei hotărâri, se va recupera pe durata normală de funcţionare rămasă. ... +
+  > Începând cu data intrării în vigoare a prezentei hotărâri, valoarea minimă de intrare a mijloacelor fixe stabilită în condiţiile art. 3 alin. 2 lit. a) din Legea nr. 15/1994 privind amortizarea capitalului imobilizat în active corporale şi necorporale, republicată, cu modificările şi completările ulterioare, este de 2.500 lei. ...
 
 ### `cote/plafon_mijloc_fix@2026-01-01` — **CONCORDA**
 
@@ -339,12 +375,12 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 
 - **cod iConta:** `5000000` din 2026-03-01 — core/common.py:624 (registrul COTE)
 - **temei declarat:** OUG 8 2026
-- **atom din corpus:** `oug_8_2026#art9/alin1`
+- **atom din corpus:** `oug_8_2026#art20^1/alin5^1/litg^2`
 - **valoare în textul legii:** 5.000.000
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > Persoanele impozabile care aplică sistemul TVA la încasare și care depășesc în cursul lunii ianuarie 2026 plafonul de 4.500.000 lei, dar nu depășesc plafonul de 5.000.000 lei, nu vor fi radiate din Registrul persoanelor impozabile care aplică sistemul TVA la încasare.
+  > … (3) Prin excepție de la prevederile alin. (1) și alin. (2) lit. a), exigibilitatea taxei intervine la data încasării contravalorii integrale sau parțiale a livrării de bunuri ori a prestării de servicii, în cazul persoanelor impozabile care optează în acest sens, denumite în continuare persoane care aplică sistemul TVA la încasare. Plafonul pentru aplicarea sistemului TVA la încasare este de: a) 5.000.000 lei, în perioada 1 martie-31 decembrie 2026; ...…
 
 ### `cote/plafon_tva_incasare@2027-01-01` — **CONCORDA**
 
@@ -411,7 +447,7 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 - **verbatim:**
 
   > Valoarea nominală a unui tichet de masă nu poate depăși suma de 45 lei. ... 2. După articolul 20 se introduce un nou articol, art. 20^1, cu următorul cuprins: +
-- ⚠ **notă:** valoarea NU s-a gasit la nivelul cel mai tare de proba (ancora pe articolul din Temei (legea_201_2025#artI)), ci la citatul declarat de iConta, gasit in actul declarat - citarea iConta duce la actul corect, dar nu exact la unitatea care stabileste valoarea
+- ⚠ **notă:** valoarea NU s-a gasit la nivelul cel mai tare de proba (ancora pe articolul din Temei (legea_201_2025#artI)), ci la citatul declarat de iConta, gasit verbatim in actul declarat - citarea iConta duce la actul corect, dar nu exact la unitatea care stabileste valoarea
 
 ### `cote/tva_redusa@2025-08-01` — **CONCORDA**
 
@@ -428,12 +464,12 @@ Acestea sunt cele 35 intrări (20 chei, cu versiunile lor în timp) pe care iCon
 
 - **cod iConta:** `0.05` din 2016-01-01 — core/common.py:605 (registrul COTE)
 - **temei declarat:** Legea 227 2015
-- **atom din corpus:** `cf_art291_2016_forma_initiala#art291/alin3`
+- **atom din corpus:** `cf_art291_2016_forma_initiala#art291/alin3/litc/pct3`
 - **valoare în textul legii:** 5%
 - **valabil din (corpus):** — (atomul nu poartă notă de intrare în vigoare)
 - **verbatim:**
 
-  > Cota redusa de 5% se aplica asupra bazei de impozitare pentru urmatoarele livrari de bunuri si prestari de servicii:
+  > …epaseste suprafata de 250 m2, inclusiv amprenta la sol a locuintei, in cazul caselor de locuit individuale. In cazul imobilelor care au mai mult de doua locuinte, cota indiviza a terenului aferent fiecarei locuinte nu poate depasi suprafata de 250 m2, inclusiv amprenta la sol aferenta fiecarei locuinte. Orice persoana necasatorita sau familie poate achizitiona o singura locuinta cu cota redusa de 5%, respectiv: (i) In cazul persoanelor necasatorite, sa nu fi detinut si sa nu detina nicio locuinta in proprietate pe care au achizitionat-o cu cota de 5%; (ii) In cazul familiilor, sotul sau sotia…
 
 ### `cote/tva_redusa_5@2025-08-01` — **CONCORDA**
 
@@ -515,9 +551,11 @@ Asta nu e o afirmație despre lume, ci una despre ce s-a putut dovedi, și are u
 - `nesursat/stare_partajata.PRAG_ESECURI=5` = `5` — core/stare_partajata.py:65
 - `nesursat/stare_partajata.PRAG_RITM=5` = `5` — core/stare_partajata.py:71
 
-**potrivire prea slabă ca să susțină un verdict (fără temei declarat de iConta)** (7):
+**potrivire prea slabă ca să susțină un verdict (fără temei declarat de iConta)** (9):
 
+- `nesursat/beneficii_api.PLAFON_CADOU=300` = `300` — core/beneficii_api.py:22
 - `nesursat/d108.IMPOZIT_ANUAL=18000` = `18000` — core/d108.py:58
+- `nesursat/ong.PLAFON_EUR=15000` = `15000` — core/ong.py:23
 - `nesursat/salarizare.DEDUCERE_COPIL_SCOALA=100` = `100` — core/salarizare.py:28
 - `nesursat/salarizare._PCT_DEDUCERE_BAZA=0.20` = `0.20` — core/salarizare.py:23
 - `nesursat/salarizare._PCT_DEDUCERE_BAZA=0.25` = `0.25` — core/salarizare.py:23
@@ -606,6 +644,61 @@ Planul citit din corpus: **583 simboluri**. Un simbol de cont nu e o valoare num
 | 4092 | 4092 Furnizori - debitori pentru prestări de servicii (A)               |
 
 (135 conturi confirmate; tabelul arată primele 40. Lista completă în `propunere.json`.)
+
+## 9. Dovada în cealaltă direcție — detectorul poate produce DIFERĂ?
+
+**Un *0 DIFERĂ* nu spune nimic dacă detectorul nu poate contrazice niciodată.** Un clasificator care răspunde mereu CONCORDĂ dă exact același zero și arată la fel în raport. Deci pe o **copie în memorie** a inventarului (niciodată în iConta, niciodată în `artefacte/inventar_iconta.json`) se injectează greșeli luate din istoria fiscală reală, și se cere ca fiecare să iasă DIFERĂ, cu temeiul corect alături.
+
+**Rezultat: 5 din 5 trec.**
+
+### dividende 10% in loc de 16%
+
+- *de ce această greșeală:* cota reala din 2025 (OUG 156/2024), rămasa in cod dupa ce Legea 141/2025 a urcat-o la 16% de la 01.01.2026 - clasa 'cota veche rămasa in cod'
+- cod real `0.16` → injectat `0.10`
+- **ieșit: DIFERA** · în lege: `16` · `citare_rezolvata=True`
+- atom: `legea_141_2025_consolidat#artII`
+
+  > Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) …
+
+### TVA standard 19% in loc de 21%
+
+- *de ce această greșeală:* cota de dinainte de 01.08.2025; exact greșeala pe care Legea 141/2025 a produs-o in orice sistem care n-a fost actualizat
+- cod real `0.21` → injectat `0.19`
+- **ieșit: DIFERA** · în lege: `21` · `citare_rezolvata=True`
+- atom: `legea_141_2025_consolidat#art291/alin1`
+
+  > Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%.
+
+### salariu minim 4050 pe o data din semestrul 2 2026
+
+- *de ce această greșeală:* valoarea HG 1506/2024, aplicata unei perioade guvernate de HG 146/2026 (4.325) - clasa 'plafon vechi aplicat unei perioade noi'
+- cod real `4325` → injectat `4050`
+- **ieșit: DIFERA** · în lege: `['4.325', '949']` · `citare_rezolvata=True`
+- atom: `hg_146_2026_salariu_minim#art1`
+
+  > Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei…
+
+### cota micro 5% - valoare care nu exista in niciun act
+
+- *de ce această greșeală:* nu e o cota istorica, e o valoare pur greșita; testeaza daca detectorul cere potrivirea valorii sau se mulţumeşte cu subiectul
+- cod real `0.01` → injectat `0.05`
+- **ieșit: DIFERA** · în lege: `1` · `citare_rezolvata=True`
+- atom: `cod_fiscal_227_2015_consolidat#art51/alin1`
+
+  > Cota de impozit pe veniturile microîntreprinderilor este de 1%.
+
+### citare spre actul greșit (CAS 25% cu temei HG 146/2026)
+
+- *de ce această greșeală:* valoarea din cod e CORECTA (25%), dar temeiul declarat trimite la o hotarare de salariu minim. Intrebarea nu e 'ce valoare', ci 'proba duce unde spune?'
+- cod real `0.25` → injectat `0.25`
+- **ieșit: NEGASIT** · în lege: `None` · `citare_rezolvata=False`
+- atom: `hg_146_2026_salariu_minim#art1`
+
+  > Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei…
+
+**Ce iese la citarea greșită** (valoarea din cod e corectă, dar temeiul trimite la alt act): `NEGĂSIT` cu `citare_rezolvata=False`. Nu CONCORDĂ — chiar dacă valoarea *este* corectă — fiindcă întrebarea la care răspunde acest livrabil nu e doar *ce valoare*, ci **duce proba unde spune?**. Și nu DIFERĂ, fiindcă actul declarat nu spune altceva: nu spune nimic despre acest parametru.
+
+Prima rulare a bancului a picat **5 din 5** — toate cele cinci greșeli ieșeau CONCORDĂ. Defectele găsite astfel, și reparate, sunt scrise în §0 la cerința C7.
 
 ---
 

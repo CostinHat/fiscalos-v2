@@ -8,7 +8,8 @@ import importlib
 import sys
 import traceback
 
-MODULE = ["fiscalos.test_read_only", "fiscalos.test_atomizare", "fiscalos.test_potrivire"]
+MODULE = ["fiscalos.test_read_only", "fiscalos.test_atomizare", "fiscalos.test_potrivire",
+          "fiscalos.test_banc"]
 
 
 def ruleaza():

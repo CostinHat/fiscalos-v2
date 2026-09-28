@@ -13,30 +13,39 @@ o probă care rulează pe corpus.
 
 | | |
 |---|---|
-| CONCORDĂ | **202** |
+| CONCORDĂ | **200** — din care 177 cu temei declarat de iConta și verificat, 23 pe ancoră slabă |
 | DIFERĂ | **0** |
-| NEGĂSIT | **29** |
+| NEGĂSIT | **31** |
 | Parametri inventariați | 231 |
 | Citări declarate de iConta / rezolvate în corpus | 40 / 40 |
 | Atomi în corpus | 46.559 din 269 acte |
-| Probe pe corpus | 29, toate trec |
+| Probe pe corpus | 38, toate trec |
+| Dovada inversă (greșeli injectate → DIFERĂ) | 5 / 5 |
 
-**Zero DIFERĂ** nu e o afirmație despre lume, ci despre ce s-a putut dovedi. Verdictul *legea spune
-altceva* se pronunță numai când citarea declarată de iConta duce la actul corect și atomul de acolo
-poartă un alt număr. Pentru cei 40 parametri cu temei declarat, citarea s-a rezolvat în toate
-cazurile și valoarea s-a confirmat. Parametrii pe care iConta nu-i sursează deloc nu pot produce o
-divergență *dovedită*: ei ies NEGĂSIT, cu motivul scris. Detaliile, în §5 și §6 ale raportului.
+### De ce 0 DIFERĂ nu e o afirmație goală
+
+Un detector care nu poate contrazice niciodată dă exact același zero. Așa că `banc_mutatii.py`
+injectează, pe o copie în memorie a inventarului, greșeli luate din istoria fiscală reală — dividende
+10% în loc de 16%, TVA 19% în loc de 21%, salariu minim 4.050 aplicat unei date din semestrul 2 al
+2026, o cotă care nu există în niciun act, și o citare care trimite la actul greșit — și cere ca
+fiecare să iasă DIFERĂ, cu temeiul corect alături.
+
+**Prima rulare a picat 5 din 5.** Toate cele cinci greșeli ieșeau CONCORDĂ, fiindcă valoarea era
+căutată până la ultimul atom din corpus, iar legislația fiscală conține aproape orice procent pe
+undeva. Regula de acum: *când iConta declară un temei, verdictul se ia din actul acela.* Detaliile și
+celelalte patru defecte găsite astfel sunt în §9 și în cerința C7 din raport.
 
 ## Cum se rulează
 
 ```sh
-python3 ruleaza_tot.py    # lanțul întreg (OP2→OP7) + probele, cu durata măsurată a fiecărui pas
-python3 probe.py          # numai probele
-python3 -m fiscalos.propunere   # regenerează pachetul de propunere
+python3 ruleaza_tot.py        # lanțul întreg + bancul de mutații + probele, cu durata fiecărui pas
+python3 probe.py              # numai probele
+python3 -m fiscalos.banc_mutatii   # numai dovada inversă
+python3 -m fiscalos.propunere      # regenerează pachetul de propunere
 ```
 
 Fără dependențe în afara bibliotecii standard, plus `pdftotext` (poppler-utils) pentru actele PDF.
-`ruleaza_tot.py` durează ~19 s pe corpusul întreg.
+`ruleaza_tot.py` durează ~24 s pe corpusul întreg.
 
 ## Cum e construit
 
@@ -47,6 +56,7 @@ Fără dependențe în afara bibliotecii standard, plus `pdftotext` (poppler-uti
 | `fiscalos/atomizare.py` | act → articol → alineat → literă/punct, id stabil, text verbatim, valabilitate din notele `(la DD-MM-YYYY, …)` |
 | `fiscalos/inventar_iconta.py` | inventarul parametrilor iConta, prin AST — niciun import, ca să nu se scrie bytecode în arborele lor |
 | `fiscalos/potrivire.py` | potrivirea pe niveluri de probă și clasificarea CONCORDĂ / DIFERĂ / NEGĂSIT |
+| `fiscalos/banc_mutatii.py` | dovada în cealaltă direcție: greșeli cunoscute injectate, care **trebuie** să iasă DIFERĂ |
 | `fiscalos/propunere.py` | pachetul versionat: JSON + raport + formular de aprobare |
 
 Corpusul (`corpus/`, 130 MB de acte publice) **nu e versionat aici**: e reproductibil din sursă,
