@@ -103,7 +103,43 @@ _SPAN_STRUCT = re.compile(
     r'TTL_TTL|TTL_DEN|PRT|PRT_TTL|PRT_DEN|ANX|ANX_TTL|ANX_DEN|CIT|DEN|HDR)"[^>]*>)', re.I)
 
 
+# V2 (decizia C22): elementele <span class="S_NTA"> ("Nota") conţin, pe langa explicatii, articole
+# CITATE din actele modificatoare ("Articolul III din OG 22/2025 prevede: (1) ... (6) ..."), cu propriile
+# lor marcaje de alineat. Tratate ca structura, ele deschideau un pseudo-articol "III" in MIJLOCUL
+# art. 310 al Codului fiscal, iar alineatele reale (3)-(6^2) ale art. 310 se lipeau de el - de aceea
+# `art310/alin6` lipsea. O nota nu e structura: se aplatizeaza intr-un singur rand, marcat NOTA_MARCAJ,
+# atasat atomului curent. Notele de VALABILITATE "(la 01-09-2025, ...)" stau in S_PAR si nu se ating.
+NOTA_MARCAJ = "⟦NOTĂ⟧"
+_SPAN_DESCHIS = re.compile(r"<span\b", re.I)
+_SPAN_INCHIS = re.compile(r"</span\s*>", re.I)
+
+
+def _aplatizeaza_note(h):
+    ies, poz = [], 0
+    for m in re.finditer(r'<span[^>]*class="S_NTA"[^>]*>', h):
+        if m.start() < poz:
+            continue                          # o nota imbricata intr-una deja aplatizata
+        ies.append(h[poz:m.start()])
+        adanc, i = 1, m.end()
+        while adanc and i < len(h):
+            d = _SPAN_DESCHIS.search(h, i)
+            z = _SPAN_INCHIS.search(h, i)
+            if z is None:
+                i = len(h)
+                break
+            if d is not None and d.start() < z.start():
+                adanc, i = adanc + 1, d.end()
+            else:
+                adanc, i = adanc - 1, z.end()
+        text = strat_text.html_in_text(h[m.end():i])
+        ies.append("<br/>%s %s<br/>" % (NOTA_MARCAJ, " ".join(text.split())))
+        poz = i
+    ies.append(h[poz:])
+    return "".join(ies)
+
+
 def html_portal_in_text(h):
+    h = _aplatizeaza_note(h)
     return strat_text.html_in_text(_SPAN_STRUCT.sub(lambda m: "<br/>" + m.group(1), h))
 
 

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""OP8 — PACHETUL DE PROPUNERE v4 (peste v3: stratul de surse oficiale, C12): JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
+"""OP8 — PACHETUL DE PROPUNERE v5 (peste v4: C18 candidat la nivelul fin fara ambiguitate, C19
+OPANAF 3769/2015 compus, V2 notele tranzitorii excluse din candidati): JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
 
 v1 si v2 RĂMÂN NEATINSE (propuneri/v1/, propuneri/v2/); probe le ingheata. v3 aplica, peste deciziile
 C1-C7 ale v2, deciziile C8-C11:
@@ -24,7 +25,7 @@ import os
 import time
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSIUNE = "v4"
+VERSIUNE = "v5"
 STARI = ("CONCORDA", "DIFERA", "NEVERIFICAT", "NEGASIT")
 ETICHETA = {"CONCORDA": "CONCORDĂ", "DIFERA": "DIFERĂ", "NEVERIFICAT": "NEVERIFICAT",
             "NEGASIT": "NEGĂSIT"}
@@ -164,6 +165,8 @@ def construieste():
             "candidati": [{"parametru": p["parametru"], "valoare_cod": p["valoare_cod"],
                            "unde_in_cod": p["unde_in_cod"], "atom": p["temei_candidat"]["atom"],
                            "act": p["temei_candidat"]["act"], "valoare_in_text": p["valoare_lege"],
+                           "ambiguu": bool(p["temei_candidat"].get("ambiguu")),
+                           "optiuni": p["temei_candidat"].get("optiuni") or [],
                            "verbatim": p["atom_verbatim"],
                            "valabilitate": p.get("atom_valabilitate") or p.get("valabilitate_lipsa")}
                           for p in candidate]}, f, ensure_ascii=False, indent=1)
@@ -177,7 +180,8 @@ def construieste():
             "_ce": "PROPUNERE FiscalOS v2. NU se aplica automat in iConta (CLAUDE.md §3).",
             "versiune": VERSIUNE, "generat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "aprobare": {"stare": "NEAPROBAT", "de_cine": None, "la": None},
-            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11", "C12"],
+            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11", "C12",
+                                 "C18", "C19", "C22"],
             "acte_aduse_din_sursa_oficiala": acte_aduse,
             "corpus": {"sursa": man["sursa"], "luat_la": man["luat_la"],
                        "n_fisiere": man["n_fisiere"], "manifest": "corpus_manifest.json"},
@@ -195,7 +199,7 @@ def construieste():
       % VERSIUNE)
     A("")
     A("Generat %s · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3). "
-      "Versiunile anterioare, `propuneri/v1/`–`propuneri/v3/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
+      "Versiunile anterioare, `propuneri/v1/`–`propuneri/v4/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
     A("")
     A("| | |")
     A("|---|---|")
@@ -349,7 +353,13 @@ def construieste():
           "valoarea apare în coloana de valabilitate, nu ca temei.")
         A("")
         A(_tabel([[p["parametru"] + (" ⚠ unitate dedusă" if p.get("unitate_dedusa") else ""),
-                   p["valoare_cod"], p["temei_candidat"]["atom"], _scurt(p["valoare_lege"], 14),
+                   p["valoare_cod"],
+                   p["temei_candidat"]["atom"] + ((" — **%d opțiuni** (C18): %s" % (
+                       len(p["temei_candidat"]["optiuni"]), ", ".join(
+                           o["atom"].split("#")[1] for o in p["temei_candidat"]["optiuni"][:6])
+                       + (" …" if len(p["temei_candidat"]["optiuni"]) > 6 else "")))
+                       if p["temei_candidat"].get("ambiguu") else ""),
+                   _scurt(p["valoare_lege"], 14),
                    ((p.get("atom_valabilitate") or {}).get("atom") or "—")
                    if not (p.get("atom_valabilitate") or {}).get("acelasi_cu_atomul_valorii")
                    else "același atom (%s)" % p["atom_valabilitate"]["valabil_din"]]
@@ -481,22 +491,18 @@ CERINTE_RATIFICATE = """
 | **C10** | temeiul candidat = actul de bază consolidat; modificatorul = atom-valabilitate; lipsa se scrie | §6 b) și c) |
 | **C11** | unitatea din folosire se acceptă, marcată „unitate dedusă"; R-UNIT în cerințe | §6, §10 |
 | **C12** | consolidatele la zi ale actelor de bază, aduse din legislatie.just.ro, într-un strat propriu | secțiunea „Actele aduse", `acte_aduse.json`, `surse_oficiale/MANIFEST.json` |
+| **C18** | candidatul la nivelul cel mai fin fără ambiguitate; mai multe litere cu valoarea → articolul, cu literele ca opțiuni | §6 b), coloana „Temei candidat"; opțiunile complete, cu verbatim, în `temeiuri_candidate.json` |
+| **C19** | OPANAF 3769/2015: textul ordinului din sursa oficială, anexele din instantaneu, fiecare cu data formei | `potrivire.COMPUSE`; atomii poartă `parte` și `data_formei` |
+| **C20, C21** | abținerea în plus se acceptă; motorul lexical rămâne reper, cu plasa | neschimbat |
+| **C22** | V2 reparat: notele tranzitorii citate nu sunt articole — nici temei candidat | 991 de atomi marcați `nota_tranzitorie` |
 | **C6** | motorul de întrebări | livrat separat, în `intrebari/` |
 """
 
 CERINTE_NOI = """
 ### Cerințe noi, de decis
 
-**C18 — Litera aleasă prin potrivire pe frază, în candidații din Legea 70/2015.** Cu actul de bază
-consolidat în corpus (C12), toți cei cinci candidați pentru plafoanele de numerar trimit la articolul
-corect, dar litera o alege potrivirea pe frază, iar două atribuiri arată greșit la citire. *De decis:*
-se lasă verificarea literei la aprobarea umană (cum e acum), sau candidatul se propune la nivel de
-articol când mai multe litere ale lui poartă valoarea?
-
-**C19 — OPANAF 3769/2015 de pe portal e mai sărac decât instantaneul.** Portalul are textul
-ordinului (consolidat la 17.09.2025), dar nu și anexele cu instrucțiunile D394 - 25 de atomi față de
-104. FiscalOS nu l-a folosit (regula: un act oficial înlocuiește instantaneul numai dacă nu e mai
-sărac). *De decis:* anexele se caută în altă sursă oficială (static.anaf.ro), sau rămâne instantaneul?
+Niciuna din partea propunerii. Deciziile C18–C22 sunt aplicate; cerințele motorului de întrebări sunt
+în `intrebari/v4/RAPORT.md`.
 """
 
 APROBARE = """# APROBARE — propunere %(versiune)s
@@ -515,7 +521,7 @@ candidat — e un pas uman, separat.
 
 ## Semnătură
 
-- [ ] Am citit §0 și am răspuns la C18–C19.
+- [ ] Am citit §0; la temeiurile ambigue (C18) am ales opțiunea.
 - [ ] Am verificat prin eșantion fragmentele verbatim la id-ul de atom indicat.
 - [ ] Aprob propunerea în întregime.
 - [ ] Aprob parțial — rândurile refuzate, cu motiv:

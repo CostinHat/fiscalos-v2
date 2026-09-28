@@ -271,6 +271,9 @@ def _fel(p):
 
 
 # ── indexul de atomi ─────────────────────────────────────────────────────────────────────────────
+COMPUSE = {"opanaf_3769_2015_d394_baza"}       # C19
+
+
 class Corpus(object):
     """Corpusul citit: instantaneul iConta, peste care se aplica stratul de surse oficiale (C12).
 
@@ -304,6 +307,26 @@ class Corpus(object):
                 info = {"data_formei_consolidate": v["data_formei_consolidate"],
                         "id_portal": man[act]["id_portal"], "atomi_oficial": len(atomi),
                         "atomi_instantaneu": vechi}
+                if act in COMPUSE:
+                    # DECIZIA C19: textul ordinului din sursa oficiala, ANEXELE din instantaneu;
+                    # fiecare parte isi poarta data formei. Anexele se recunosc dupa titlul
+                    # structural "ANEXA" (91 de atomi in instantaneu; portalul nu le are).
+                    anexe = [a for a in self.pe_act.get(act, [])
+                             if (a.get("titlu_structural") or "").upper().startswith("ANEXA")]
+                    ids = {a["id"] for a in atomi}
+                    for a in atomi:
+                        a["_n"] = norm(a["text"])
+                        a["parte"], a["data_formei"] = "textul ordinului (oficial)", \
+                            v["data_formei_consolidate"]
+                    for a in anexe:
+                        a["parte"], a["data_formei"] = "anexe (instantaneu iConta, forma de baza)", \
+                            "forma de baza 2015"
+                    self.pe_act[act] = atomi + [a for a in anexe if a["id"] not in ids]
+                    self.sursa_act[act] = dict(info, sursa="compus: ordinul oficial (forma din %s) + "
+                                                           "anexele din instantaneu (forma de baza)"
+                                                           % v["data_formei_consolidate"],
+                                               anexe_din_instantaneu=len(anexe))
+                    continue
                 if len(atomi) < 0.9 * vechi:
                     self.sursa_act[act] = dict(info, sursa="instantaneu iConta",
                                                oficial_neaplicat="versiunea oficiala e mai saraca "
@@ -318,6 +341,23 @@ class Corpus(object):
         self.toti = [a for ats in self.pe_act.values() for a in ats]
         self.dupa_id = {a["id"]: a for a in self.toti}
         self.modificatoare = surse.acte_modificatoare(self)
+        # V2 (decizia C22): intr-un act de BAZA ale carui articole proprii sunt arabe (un cod), un
+        # articol ROMAN e o NOTA a consolidatului care citeaza o dispozitie tranzitorie dintr-un act
+        # modificator ("Articolul III din OG 22/2025 prevede: ..."), nu un articol al codului. Masurat:
+        # la Q-TVA-03 modelul a citat `cod_fiscal...#artIII~2/alin6~2` in locul art. 310 alin. (6).
+        # Se marcheaza; cautarea le penalizeaza, temeiul le numeste, candidatii le exclud.
+        self.note_tranzitorii = 0
+        for act, ats in self.pe_act.items():
+            if act in self.modificatoare:
+                continue
+            arts = [a for a in ats if a["nivel"] == "articol" and a.get("parinte") is None]
+            rom = [a for a in arts if re.match(r"^[IVXLCDM]+$", str(a["cheie"]))]
+            if not arts or len(rom) >= 0.5 * len(arts) or not rom:
+                continue
+            for a in ats:
+                if a.get("articol") and re.match(r"^[IVXLCDM]+$", str(a["articol"])):
+                    a["nota_tranzitorie"] = True
+                    self.note_tranzitorii += 1
 
     def act_din_url(self, url):
         """'anaf_surse/legea_141_2025_consolidat.html' -> baza de act din corpus, sau None."""
@@ -678,7 +718,8 @@ def potriveste(p, corp, plan=None):
             # DECIZIA C10: temeiul candidat e ACTUL DE BAZA consolidat - ce citeaza un contabil -, nu
             # actul care l-a modificat. Actul modificator care poarta aceeasi valoare devine
             # atom-valabilitate (perechea C4). Daca niciun act de baza nu poarta valoarea, se scrie.
-            baza_ = [a for a in normative if surse.e_act_de_baza(a["act"], corp.modificatoare)]
+            baza_ = [a for a in normative if surse.e_act_de_baza(a["act"], corp.modificatoare)
+                     and not a.get("nota_tranzitorie")]          # V2: o nota nu e temei
             modif = [a for a in normative if a["act"] in corp.modificatoare]
             consolidate = [a for a in baza_ if "consolidat" in a["act"]]
             baza_ = consolidate or baza_
@@ -699,6 +740,33 @@ def potriveste(p, corp, plan=None):
             if normative:
                 rez["temei_candidat"] = {"atom": a["id"], "act": a["act"],
                                          "verbatim": rez["atom_verbatim"], "de_aprobat": True}
+                # DECIZIA C18: candidatul se propune la nivelul cel mai FIN fara ambiguitate. Daca mai
+                # multi atomi ai aceluiasi articol poarta valoarea, se propune stramosul lor comun
+                # (alineatul sau articolul), iar atomii devin OPTIUNI pentru aprobarea umana.
+                # Masurat pe Legea 70/2015: "5.000 lei" apare in art. 3 alin. (1) lit. a), c) si e) -
+                # alegerea literei prin potrivire pe fraza a dat o atribuire gresita la citire.
+                art_id = a["id"].split("/")[0]
+                frati = [x for x in corp.pe_act[a["act"]]
+                         if (x["id"] == art_id or x["id"].startswith(art_id + "/"))
+                         and not x.get("nota_tranzitorie") and gaseste_forma(x["_n"], forme)]
+                # numai cei mai fini: un parinte care conţine valoarea doar prin copilul lui nu conteaza
+                fini = [x for x in frati if not any(y["id"].startswith(x["id"] + "/") for y in frati)]
+                if len(fini) > 1:
+                    parti = [x["id"].split("/") for x in fini]
+                    comun = []
+                    for segs in zip(*parti):
+                        if len(set(segs)) != 1:
+                            break
+                        comun.append(segs[0])
+                    nivel = "/".join(comun)
+                    rez["temei_candidat"].update(
+                        atom=nivel, ambiguu=True,
+                        optiuni=[{"atom": x["id"], "verbatim": _fereastra_verbatim(x["text"], forma)}
+                                 for x in fini],
+                        nota=("%d atomi ai aceluiasi %s poarta valoarea %s; se propune %s, cu "
+                              "optiunile de mai jos, de ales la aprobare (C18)"
+                              % (len(fini), "alineat" if "/alin" in nivel else "articol", forma,
+                                 nivel.split("#")[1])))
                 rez["motiv"] = ("iConta nu sursează parametrul. Valoarea apare langa fraza-subiect "
                                 "in ACTUL DE BAZA %s - propus ca TEMEI CANDIDAT, de aprobat uman "
                                 "(nu verificat)." % a["act"])

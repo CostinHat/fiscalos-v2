@@ -79,10 +79,33 @@ def test_fiecare_raspuns_semantic_a_trecut_verificarea_mecanica():
     Fiecare versiune se verifica pe corpusul cu care a fost produsa: v2 pe instantaneu, v3 cu stratul
     oficial."""
     from fiscalos import potrivire
-    for ver, oficiale in (("v2", False), ("v3", True)):
-        f = os.path.join(_RAD, "intrebari", ver, "raspunsuri_semantic.json")
-        if os.path.exists(f):
-            _verifica_semantic(json.load(open(f, encoding="utf-8")), potrivire.Corpus(oficiale=oficiale))
+    f = os.path.join(_RAD, "intrebari", "v2", "raspunsuri_semantic.json")
+    _verifica_semantic(json.load(open(f, encoding="utf-8")), potrivire.Corpus(oficiale=False))
+    # v3 a fost produs pe atomizarea oficiala de DINAINTEA reparatiei V2; ea e in git la 7eb6fa0
+    f = os.path.join(_RAD, "intrebari", "v3", "raspunsuri_semantic.json")
+    _verifica_semantic(json.load(open(f, encoding="utf-8")), _corpus_la_commit("7eb6fa0"))
+
+
+class _CorpusIstoric(object):
+    def __init__(self, dupa_id):
+        self.dupa_id = dupa_id
+
+
+def _corpus_la_commit(commit):
+    """Instantaneul + atomii oficiali asa cum erau la `commit` (din git, nu de pe disc)."""
+    import subprocess
+    from fiscalos import potrivire
+    d = dict(potrivire.Corpus(oficiale=False).dupa_id)
+    lista = subprocess.run(["git", "ls-tree", "--name-only", commit, "artefacte/atomi_oficiale/"],
+                           cwd=_RAD, capture_output=True, text=True).stdout.split()
+    for cale in lista:
+        if cale.endswith(".jsonl"):
+            txt = subprocess.run(["git", "show", "%s:%s" % (commit, cale)], cwd=_RAD,
+                                 capture_output=True, text=True).stdout
+            for l in txt.splitlines():
+                a = json.loads(l)
+                d[a["id"]] = a
+    return _CorpusIstoric(d)
 
 
 def _verifica_semantic(r, c):

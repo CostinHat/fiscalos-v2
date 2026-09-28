@@ -119,5 +119,8 @@ def test_ancora_slaba_cere_valoarea_langa_subiect():
     # iConta nu-l sursează, deci ce s-a gasit e o propunere de aprobat, nu o verificare
     bun = P["nesursat/salarizare.PRAG_VENIT_DEDUCERE=2000"]
     assert bun["clasificare"] == "NEVERIFICAT", bun["clasificare"]
-    assert bun["temei_candidat"]["atom"] == "cod_fiscal_227_2015_consolidat#art77/alin3"
+    # C18: alin. (3) si (4) ale art. 77 poarta amandoua "2.000" -> candidatul e articolul, cu optiuni
+    c = bun["temei_candidat"]
+    assert c["atom"] == "cod_fiscal_227_2015_consolidat#art77", c["atom"]
+    assert "cod_fiscal_227_2015_consolidat#art77/alin3" in [o["atom"] for o in c["optiuni"]]
     assert "Deducerea personală de bază" in bun["atom_verbatim"]

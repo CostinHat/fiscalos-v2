@@ -26,10 +26,16 @@ def test_C12_instantaneul_iconta_ramane_neatins():
     assert d == "", d
 
 
-def test_C12_actul_oficial_mai_sarac_nu_inlocuieste_instantaneul():
+def test_C19_opanaf_3769_compus_ordin_oficial_si_anexe_din_instantaneu():
+    """C19: textul ordinului din sursa oficiala, anexele din instantaneu; fiecare parte cu data ei."""
     from fiscalos import potrivire
     c = potrivire.Corpus()
-    assert c.sursa_act["opanaf_3769_2015_d394_baza"]["sursa"] == "instantaneu iConta"
+    assert c.sursa_act["opanaf_3769_2015_d394_baza"]["sursa"].startswith("compus")
+    ats = c.pe_act["opanaf_3769_2015_d394_baza"]
+    assert {a["parte"] for a in ats} == {"textul ordinului (oficial)",
+                                          "anexe (instantaneu iConta, forma de baza)"}
+    assert all(a.get("data_formei") for a in ats)
+    assert sum(1 for a in ats if a["parte"].startswith("anexe")) == 91
     assert c.sursa_act["legea_70_2015_consolidat"]["sursa"].startswith("oficial")
     assert len(c.pe_act["legea_70_2015_consolidat"]) >= 50      # instantaneul avea 1 atom
 
@@ -74,3 +80,44 @@ def test_propunerea_v3_ramane_neatinsa_si_v4_listeaza_actele_aduse():
     assert d == "", d[:300]
     aa = json.load(open(os.path.join(_RAD, "propuneri", "v4", "acte_aduse.json"), encoding="utf-8"))
     assert len(aa["acte"]) == 6 and all(x["fisiere"][0]["sha256"] for x in aa["acte"])
+
+
+def test_V2_notele_nu_mai_rup_structura_codului():
+    """V2 reparat la radacina: nota "Articolul III din OG 22/2025 prevede: (1)...(6)" din mijlocul
+    art. 310 rupea articolul - alineatele (3)-(6^2) se lipeau de un pseudo-articol "III". Acum nota e
+    un rand marcat, atasat atomului curent, iar art. 310 isi are toate alineatele."""
+    from fiscalos import potrivire
+    c = potrivire.Corpus()
+    cf = c.pe_act["cod_fiscal_227_2015_consolidat"]
+    assert not any(a.get("nota_tranzitorie") for a in cf)
+    alin = [a["cheie"] for a in cf if a["id"].startswith("cod_fiscal_227_2015_consolidat#art310/")
+            and a["nivel"] == "alineat"]
+    for k in ("1", "2", "3", "4", "5", "6", "6^1", "6^2"):
+        assert k in alin, (k, alin)
+    assert any("⟦NOTĂ⟧" in a["text"] for a in cf)
+    r = json.load(open(os.path.join(_RAD, "artefacte", "potriviri.json"), encoding="utf-8"))
+    for p in r["potriviri"]:
+        t = p.get("temei_candidat")
+        if t:
+            assert not c.dupa_id.get(t["atom"], {}).get("nota_tranzitorie"), p["parametru"]
+
+
+def test_V2_derogarea_citata_in_nota_nu_e_a_atomului_gazda():
+    from fiscalos import potrivire, relatii
+    c = potrivire.Corpus()
+    r = relatii.Relatii(c)
+    for e in r.muchii:
+        s0 = c.dupa_id[e["sursa"]]["text"].split("⟦NOTĂ⟧")[0]
+        assert e["fragment"][:30] in " ".join(s0.split()), e["sursa"]
+
+
+def test_C18_candidatul_ambiguu_are_optiuni_si_nivel_comun():
+    r = json.load(open(os.path.join(_RAD, "artefacte", "potriviri.json"), encoding="utf-8"))
+    n = 0
+    for p in r["potriviri"]:
+        t = p.get("temei_candidat")
+        if t and t.get("ambiguu"):
+            n += 1
+            assert len(t["optiuni"]) > 1
+            assert all(o["atom"].startswith(t["atom"] + "/") for o in t["optiuni"]), p["parametru"]
+    assert n > 0

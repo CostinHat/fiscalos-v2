@@ -1,13 +1,13 @@
 {
  "cod_fiscal_227_2015_consolidat": {
-  "n": 6544,
+  "n": 6178,
   "structura": "articole",
-  "cu_valabilitate": 1819,
+  "cu_valabilitate": 1810,
   "ultima_nota": "2026-08-08",
   "data_formei_consolidate": "08.08.2026"
  },
  "legea_70_2015_consolidat": {
-  "n": 71,
+  "n": 70,
   "structura": "articole",
   "cu_valabilitate": 22,
   "ultima_nota": "2026-01-01",
@@ -21,23 +21,23 @@
   "data_formei_consolidate": "17.09.2025"
  },
  "legea_207_2015_consolidat": {
-  "n": 3818,
+  "n": 3661,
   "structura": "articole",
   "cu_valabilitate": 750,
   "ultima_nota": "2026-08-08",
   "data_formei_consolidate": "08.08.2026"
  },
  "hg_1_2016_norme_cod_fiscal": {
-  "n": 4850,
+  "n": 4767,
   "structura": "articole",
-  "cu_valabilitate": 703,
+  "cu_valabilitate": 701,
   "ultima_nota": "2026-03-31",
   "data_formei_consolidate": "31.03.2026"
  },
  "omfp_1802_2014": {
-  "n": 1594,
+  "n": 1445,
   "structura": "articole",
-  "cu_valabilitate": 174,
+  "cu_valabilitate": 173,
   "ultima_nota": "2025-11-19",
   "data_formei_consolidate": "19.11.2025"
  }

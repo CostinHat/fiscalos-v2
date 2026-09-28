@@ -1,14 +1,671 @@
 {
- "_ce": "OP6+OP7 potrivire si clasificare. Fiecare CONCORDA/DIFERA citeaza id-ul atomului si fragmentul verbatim (CLAUDE.md §2).",
- "citari_declarate": 40,
- "citari_rezolvate": 40,
- "facut_la": "2026-09-28T19:35:29",
- "n_acte_nenormative": 57,
- "n_acte_normative": 212,
- "n_atomi_corpus": 47698,
- "n_conturi_in_plan_din_corpus": 655,
- "n_parametri": 147,
- "potriviri": [
+ "_ce": "PROPUNERE FiscalOS v2. NU se aplica automat in iConta (CLAUDE.md §3).",
+ "acte_aduse_din_sursa_oficiala": [
+  {
+   "act_in_anaf_surse": "cod_fiscal_227_2015_consolidat",
+   "atomi_instantaneu": 5971,
+   "atomi_oficial": 6178,
+   "data_formei_consolidate": "08.08.2026",
+   "de_ce": "C12",
+   "fisiere": [
+    {
+     "articole": 0,
+     "consolidare": "08.08.2026",
+     "fisier": "cod_fiscal_227_2015_consolidat__171280.html",
+     "id_portal": "171280",
+     "octeti": 74637,
+     "sha256": "68f754b7cbfedf91387cd9c2c5a49b7f236de70cd5cde2577fca11ccc5212983",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/171280"
+    },
+    {
+     "articole": 3137,
+     "consolidare": "08.08.2026",
+     "fisier": "cod_fiscal_227_2015_consolidat__312601.html",
+     "id_portal": "312601",
+     "octeti": 7625635,
+     "sha256": "2393786755c97dc5af3274e832e27082bed0b6119dae0d47a6201756a1b765e0",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312601"
+    }
+   ],
+   "folosit_de_FiscalOS": true,
+   "id_portal": "171280",
+   "motiv_nefolosire": null
+  },
+  {
+   "act_in_anaf_surse": "legea_70_2015_consolidat",
+   "atomi_instantaneu": 1,
+   "atomi_oficial": 70,
+   "data_formei_consolidate": "01.01.2026",
+   "de_ce": "C12",
+   "fisiere": [
+    {
+     "articole": 71,
+     "consolidare": "01.01.2026",
+     "fisier": "legea_70_2015_consolidat__167088.html",
+     "id_portal": "167088",
+     "octeti": 156710,
+     "sha256": "661b016484f74b5268da3172b1311754cb759ee5051f45a48479e7b808b6c49b",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/167088"
+    }
+   ],
+   "folosit_de_FiscalOS": true,
+   "id_portal": "167088",
+   "motiv_nefolosire": null
+  },
+  {
+   "act_in_anaf_surse": "opanaf_3769_2015_d394_baza",
+   "atomi_instantaneu": 104,
+   "atomi_oficial": 25,
+   "data_formei_consolidate": "17.09.2025",
+   "de_ce": "C12",
+   "fisiere": [
+    {
+     "articole": 24,
+     "consolidare": "17.09.2025",
+     "fisier": "opanaf_3769_2015_d394_baza__174685.html",
+     "id_portal": "174685",
+     "octeti": 266995,
+     "sha256": "1f65c2437853588890b7f092b8ce56ab6ea78d3f80337e476e139b9f8fae8d66",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174685"
+    }
+   ],
+   "folosit_de_FiscalOS": false,
+   "id_portal": "174685",
+   "motiv_nefolosire": null
+  },
+  {
+   "act_in_anaf_surse": "legea_207_2015_consolidat",
+   "atomi_instantaneu": 3965,
+   "atomi_oficial": 3661,
+   "data_formei_consolidate": "08.08.2026",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "fisiere": [
+    {
+     "articole": 0,
+     "consolidare": "08.08.2026",
+     "fisier": "legea_207_2015_consolidat__170005.html",
+     "id_portal": "170005",
+     "octeti": 60899,
+     "sha256": "b8fe60746247260a6fac441551d9f78abb32030809e68c5599d7b644a46c0031",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/170005"
+    },
+    {
+     "articole": 1577,
+     "consolidare": "08.08.2026",
+     "fisier": "legea_207_2015_consolidat__312603.html",
+     "id_portal": "312603",
+     "octeti": 4939890,
+     "sha256": "44e0c401e6b66ac962f8a413418eec7194130ec3d62972baf4ef9cab19eb9166",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312603"
+    }
+   ],
+   "folosit_de_FiscalOS": true,
+   "id_portal": "170005",
+   "motiv_nefolosire": null
+  },
+  {
+   "act_in_anaf_surse": "hg_1_2016_norme_cod_fiscal",
+   "atomi_instantaneu": 3725,
+   "atomi_oficial": 4767,
+   "data_formei_consolidate": "31.03.2026",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "fisiere": [
+    {
+     "articole": 4,
+     "consolidare": "31.03.2026",
+     "fisier": "hg_1_2016_norme_cod_fiscal__174822.html",
+     "id_portal": "174822",
+     "octeti": 64162,
+     "sha256": "32b2634d6b380861ca6bf993b8c3b149cff84558ecc15ef4130e30d0756a3b2e",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174822"
+    },
+    {
+     "articole": 0,
+     "consolidare": "31.03.2026",
+     "fisier": "hg_1_2016_norme_cod_fiscal__307847.html",
+     "id_portal": "307847",
+     "octeti": 6703467,
+     "sha256": "114e36ac8c52dae4a8d701c68f3c1a6bc8f8d0b3d9af1c76fc333a516e9d7cff",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/307847"
+    }
+   ],
+   "folosit_de_FiscalOS": true,
+   "id_portal": "174822",
+   "motiv_nefolosire": null
+  },
+  {
+   "act_in_anaf_surse": "omfp_1802_2014",
+   "atomi_instantaneu": 1332,
+   "atomi_oficial": 1445,
+   "data_formei_consolidate": "19.11.2025",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "fisiere": [
+    {
+     "articole": 25,
+     "consolidare": "19.11.2025",
+     "fisier": "omfp_1802_2014__164320.html",
+     "id_portal": "164320",
+     "octeti": 88977,
+     "sha256": "0a4cd2b2d294708c306ae76943a42875f8c9ec1797302a25c7f472e75304881b",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/164320"
+    },
+    {
+     "articole": 53,
+     "consolidare": "19.11.2025",
+     "fisier": "omfp_1802_2014__303279.html",
+     "id_portal": "303279",
+     "octeti": 4748261,
+     "sha256": "8e1cc194188b278951b8acfd5e416b1bd0ca9a17508d9beb97e404725e1c533c",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/303279"
+    }
+   ],
+   "folosit_de_FiscalOS": true,
+   "id_portal": "164320",
+   "motiv_nefolosire": null
+  }
+ ],
+ "aprobare": {
+  "de_cine": null,
+  "la": null,
+  "stare": "NEAPROBAT"
+ },
+ "cerinte_iconta": [
+  {
+   "ce": "Marcarea explicita a simbolurilor de cont.",
+   "de_ce": "364 simboluri de 3-4 cifre, in 66 module din core/, nu stau in niciun container numit CONT. Multe sunt conturi reale folosite ca literale directe (`startswith(\"401\")`, tuple pozitionale), dar nu se pot distinge de un an sau de un rand de formular fara o modificare in iConta. De aceea NU sunt in propunere.",
+   "decizie": "C3",
+   "exemple": [
+    "100",
+    "1001",
+    "1002",
+    "1003",
+    "1004",
+    "1005",
+    "101",
+    "1011",
+    "1012",
+    "1015",
+    "1016",
+    "1017",
+    "1018",
+    "102",
+    "103"
+   ],
+   "id": "R-CONT-1",
+   "propunere": "Un container sau un tip numit (ca `Temei`) pentru conturi - de ex. `CONTURI_<scop> = (...)` sau `Cont(\"4426\")` -, ca inventarul sa le culeaga mecanic, fara euristica."
+  },
+  {
+   "ce": "Contul 412 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 412 ca CONT (core/ in 2 locuri: control_incrucisat.py:397 COD_CONT_D112, salarii_contare.py:5), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "decizie": "C3",
+   "id": "R-CONT-412",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:397 COD_CONT_D112, salarii_contare.py:57 CONT_D112"
+  },
+  {
+   "ce": "Contul 432 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 432 ca CONT (core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:5), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "decizie": "C3",
+   "id": "R-CONT-432",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:58 CONT_D112"
+  },
+  {
+   "ce": "Contul 459 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 459 ca CONT (core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:6), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "decizie": "C3",
+   "id": "R-CONT-459",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:61 CONT_D112"
+  },
+  {
+   "ce": "Contul 480 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 480 ca CONT (core/ in 2 locuri: control_incrucisat.py:399 COD_CONT_D112, salarii_contare.py:5), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "decizie": "C3",
+   "id": "R-CONT-480",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:399 COD_CONT_D112, salarii_contare.py:59 CONT_D112"
+  },
+  {
+   "ce": "Contul 739 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 739 ca CONT (core/ in 1 locuri: ong.py:22 CONT_VENIT), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "decizie": "C3",
+   "id": "R-CONT-739",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan.",
+   "unde": "core/ in 1 locuri: ong.py:22 CONT_VENIT"
+  },
+  {
+   "ce": "Temei structurat (`Temei(...)`) pentru constantele nesursate.",
+   "de_ce": "Pentru 21 constante fara temei, FiscalOS propune un TEMEI CANDIDAT din act normativ (temeiuri_candidate.json). E o propunere de aprobat uman, nu o verificare.",
+   "decizie": "C2",
+   "id": "R-TEMEI-1",
+   "propunere": "Dupa aprobare, iConta scrie temeiul in cod, ca obiect `Temei`."
+  },
+  {
+   "ce": "Unitatea declarata explicit pentru constantele-rata nesursate.",
+   "de_ce": "Registrul COTE tine ratele ca fractii (0.21 = 21%), dar 2 constante nesursate sunt procente literale (0.3 = 0,3%) - FiscalOS le-a dedus unitatea din folosire (`NUME / 100`): nesursat/bacsis.COTA_IMPOZIT=10, nesursat/d216.COTA_IMPOZIT=0.3.",
+   "decizie": "C11",
+   "id": "R-UNIT",
+   "propunere": "Un tip sau o conventie declarata (ex. `Procent(\"0.3\")` fata de `Fractie(\"0.003\")`), ca unitatea sa nu mai fie dedusa."
+  },
+  {
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tva_redusa_9@2016-01-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (nota redactata de iConta (PROVENIENTA: SCRIS - nota proprie despre forma initiala a CF art. 291 la 01.01.2016, cu sursa si observatiile c), nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "decizie": "C2",
+   "id": "R-SURSA-tva_redusa_9@2016-01-01",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  },
+  {
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tva_redusa_5@2016-01-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (nota redactata de iConta (PROVENIENTA: SCRIS - nota proprie despre forma initiala a CF art. 291 la 01.01.2016, cu sursa si observatiile c), nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "decizie": "C2",
+   "id": "R-SURSA-tva_redusa_5@2016-01-01",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  },
+  {
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tichet_masa_plafon@2025-04-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (pliant sau ghid ANAF - material de informare, nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "decizie": "C2",
+   "id": "R-SURSA-tichet_masa_plafon@2025-04-01",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  },
+  {
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tichet_masa_plafon@2025-01-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (pliant sau ghid ANAF - material de informare, nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "decizie": "C2",
+   "id": "R-SURSA-tichet_masa_plafon@2025-01-01",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  }
+ ],
+ "corpus": {
+  "luat_la": "2026-09-28T17:47:24",
+  "manifest": "corpus_manifest.json",
+  "n_fisiere": 726,
+  "sursa": "/home/costin/iconta_nou/anaf_surse"
+ },
+ "decizii_aplicate": [
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "C7",
+  "C8",
+  "C9",
+  "C10",
+  "C11",
+  "C12",
+  "C18",
+  "C19",
+  "C22"
+ ],
+ "dovada_inversa": {
+  "mutaţii": [
+   {
+    "aștept": "DIFERA",
+    "clasa": "cota",
+    "de_ce": "cota reala din 2025 (OUG 156/2024), rămasa in cod dupa ce Legea 141/2025 a urcat-o la 16% de la 01.01.2026 - clasa 'cota veche rămasa in cod'",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": "16",
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+     "atom": "legea_141_2025_consolidat#artII",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.10 vs 16) - la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
+     "valoare_lege": "16",
+     "verbatim": "Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului "
+    },
+    "mutaţie": "dividende 10% in loc de 16%",
+    "original": {
+     "atom": "legea_141_2025_consolidat#artII",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "16%"
+    },
+    "parametru": "cote/impozit_dividend@2026-01-01",
+    "valoare_injectata": "0.10",
+    "valoare_reala_in_cod": "0.16"
+   },
+   {
+    "aștept": "DIFERA",
+    "clasa": "cota",
+    "de_ce": "cota de dinainte de 01.08.2025; exact greșeala pe care Legea 141/2025 a produs-o in orice sistem care n-a fost actualizat",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": "21",
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+     "atom": "legea_141_2025_consolidat#art291/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.19 vs 21) - la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+     "valoare_lege": "21",
+     "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+    },
+    "mutaţie": "TVA standard 19% in loc de 21%",
+    "original": {
+     "atom": "legea_141_2025_consolidat#art291/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "21%"
+    },
+    "parametru": "cote/tva_standard@2025-08-01",
+    "valoare_injectata": "0.19",
+    "valoare_reala_in_cod": "0.21"
+   },
+   {
+    "aștept": "DIFERA",
+    "clasa": "cota",
+    "de_ce": "nu e o cota istorica, e o valoare pur greșita; testeaza daca detectorul cere potrivirea valorii sau se mulţumeşte cu subiectul",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": "1",
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+     "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.05 vs 1) - la nivelul: ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+     "valoare_lege": "1",
+     "verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%."
+    },
+    "mutaţie": "cota micro 5% - valoare care nu exista in niciun act",
+    "original": {
+     "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "1%"
+    },
+    "parametru": "cote/impozit_micro@2023-01-01",
+    "valoare_injectata": "0.05",
+    "valoare_reala_in_cod": "0.01"
+   },
+   {
+    "aștept": "DIFERA",
+    "clasa": "plafon",
+    "de_ce": "valoarea HG 1506/2024, aplicata unei perioade guvernate de HG 146/2026 (4.325) - clasa 'plafon vechi aplicat unei perioade noi'",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": "4.325",
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
+     "atom": "hg_146_2026_salariu_minim#art1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (4050 vs ['4.325', '949']) - la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
+     "valoare_lege": [
+      "4.325",
+      "949"
+     ],
+     "verbatim": "Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei lunar, pentru un program normal de lucru în medie de 166,667 ore pe lună, reprezentând 25,949 lei/o"
+    },
+    "mutaţie": "salariu minim 4050 pe o data din semestrul 2 2026",
+    "original": {
+     "atom": "hg_146_2026_salariu_minim#art1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "4.325"
+    },
+    "parametru": "cote/salariu_minim@2026-07-01",
+    "valoare_injectata": "4050",
+    "valoare_reala_in_cod": "4325"
+   },
+   {
+    "aștept": "DIFERA",
+    "clasa": "termen",
+    "de_ce": "o zi greșita de scadenta - clasa pe care vechiul detector de termene NU o putea prinde: cauta fraza construita din ziua din cod, deci pentru 20 nu gasea nimic si iesea NEGASIT, nu DIFERA",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": "25",
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "numele declaratiei + depunere, in cod_fiscal_227_2015_consolidat",
+     "atom": "cod_fiscal_227_2015_consolidat#art323/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "atomul care stabileste depunerea declaratiei scrie scadenta ['25'], codul foloseste 20 (numele declaratiei + depunere, in cod_fiscal_227_2015_consolidat)",
+     "valoare_lege": "25",
+     "verbatim": "Persoanele înregistrate conform art. 316 trebuie să depună la organele fiscale competente, pentru fiecare perioadă fiscală, un decont de taxă, până la data de 25 inclusiv a lunii următoare celei în care se încheie perioada fiscală respectivă."
+    },
+    "mutaţie": "decontul de TVA (D300) scadent pe 20 in loc de 25",
+    "original": {
+     "atom": "cod_fiscal_227_2015_consolidat#art323/alin1",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "25"
+    },
+    "parametru": "termen/d300",
+    "valoare_injectata": "20",
+    "valoare_reala_in_cod": "25"
+   },
+   {
+    "aștept": "DIFERA",
+    "clasa": "nomenclator",
+    "de_ce": "o valoare IN PLUS in cod. Vechiul prag (>=80% din valori prezente) o lasa sa treaca: 6 din 7 = 86%",
+    "doar_in_act": [],
+    "doar_in_cod": [
+     "x"
+    ],
+    "lege_conţine": null,
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "enumerarea, gasita in actul declarat (opanaf_705_2020_d390)",
+     "atom": "opanaf_705_2020_d390#art10/alin8",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": [],
+     "doar_in_cod": [
+      "x"
+     ],
+     "motiv": "enumerarea actului nu e aceeasi cu a codului: numai in cod ['x'], numai in act - (actul declarat (opanaf_705_2020_d390))",
+     "valoare_lege": "a/l/p/r/s/t",
+     "verbatim": "lit. c) şi d) din Codul fiscal. Coloana \"Tipul operaţiunii\": L - pentru livrări intracomunitare de bunuri către alte state membre; T - pentru livrări în cadrul unei operaţiuni triunghiulare; A - pentru achiziţii intracomunitare de bunuri, achiziţii care urmează transferurilor scutite, achiziţii efectuate de beneficiarul livrării ulterioare în cadrul unei operaţiuni triunghiulare din alte state mem"
+    },
+    "mutaţie": "D390 cu un tip de operaţiune inventat (X)",
+    "original": {
+     "atom": "opanaf_705_2020_d390#art10/alin8",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "a/l/p/r/s/t"
+    },
+    "parametru": "nomenclator/d390.TIPURI",
+    "valoare_injectata": "L,T,A,P,S,R,X",
+    "valoare_reala_in_cod": "L,T,A,P,S,R"
+   },
+   {
+    "aștept": "DIFERA",
+    "clasa": "nomenclator",
+    "de_ce": "o valoare pe care norma o enumera, dar codul n-o are - invizibila pentru un detector care verifica doar ce e in cod",
+    "doar_in_act": [
+     "r"
+    ],
+    "doar_in_cod": [],
+    "lege_conţine": null,
+    "motiv_conţine": null,
+    "mutant": {
+     "ancora": "enumerarea, gasita in actul declarat (opanaf_705_2020_d390)",
+     "atom": "opanaf_705_2020_d390#art10/alin8",
+     "citare_rezolvata": true,
+     "clasificare": "DIFERA",
+     "doar_in_act": [
+      "r"
+     ],
+     "doar_in_cod": [],
+     "motiv": "enumerarea actului nu e aceeasi cu a codului: numai in cod -, numai in act ['r'] (actul declarat (opanaf_705_2020_d390))",
+     "valoare_lege": "a/l/p/r/s/t",
+     "verbatim": "lit. c) şi d) din Codul fiscal. Coloana \"Tipul operaţiunii\": L - pentru livrări intracomunitare de bunuri către alte state membre; T - pentru livrări în cadrul unei operaţiuni triunghiulare; A - pentru achiziţii intracomunitare de bunuri, achiziţii care urmează transferurilor scutite, achiziţii efectuate de beneficiarul livrării ulterioare în cadrul unei operaţiuni triunghiulare din alte state mem"
+    },
+    "mutaţie": "D390 fara tipul R",
+    "original": {
+     "atom": "opanaf_705_2020_d390#art10/alin8",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "a/l/p/r/s/t"
+    },
+    "parametru": "nomenclator/d390.TIPURI",
+    "valoare_injectata": "L,T,A,P,S",
+    "valoare_reala_in_cod": "L,T,A,P,S,R"
+   },
+   {
+    "aștept": "NEGASIT",
+    "clasa": "cont",
+    "de_ce": "cifre inversate intr-un simbol de cont - contul nu exista in niciun plan",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": null,
+    "motiv_conţine": "nu apare in niciun plan de conturi",
+    "mutant": {
+     "ancora": "plan de conturi OMFP 1802/2014",
+     "atom": null,
+     "citare_rezolvata": null,
+     "clasificare": "NEGASIT",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "iConta foloseste 4262 ca CONT (core/ in 1 locuri: contare_facturi.py:44 CONTURI_TVA), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+     "valoare_lege": null,
+     "verbatim": ""
+    },
+    "mutaţie": "cont TVA deductibila scris 4262 in loc de 4426",
+    "original": {
+     "atom": "omfp_1802_2014_reglementari_consolidat#artII~2/alin13",
+     "citare_rezolvata": null,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "4426 TVA deductibilă (A)"
+    },
+    "parametru": "cont/4426",
+    "valoare_injectata": "4262",
+    "valoare_reala_in_cod": "4426"
+   },
+   {
+    "aștept": "NEGASIT",
+    "citare_rezolvata": false,
+    "clasa": "citare",
+    "de_ce": "valoarea din cod e CORECTA (25%), dar temeiul declarat trimite la o hotarare de salariu minim. Intrebarea nu e 'ce valoare', ci 'proba duce unde spune?'",
+    "doar_in_act": null,
+    "doar_in_cod": null,
+    "lege_conţine": null,
+    "motiv_conţine": "Nu se caută in alte acte",
+    "mutant": {
+     "ancora": "ancora pe articolul din Temei (hg_146_2026_salariu_minim#art1)",
+     "atom": "hg_146_2026_salariu_minim#art1",
+     "citare_rezolvata": false,
+     "clasificare": "NEGASIT",
+     "doar_in_act": null,
+     "doar_in_cod": null,
+     "motiv": "atomii gasiti prin temeiul declarat nu poarta nicio valoare de forma cerută (procent) - deci niciunul nu stabileste parametrul. Nu se caută in alte acte: cand iConta declara un temei, verdictul se ia din actul acela.",
+     "valoare_lege": null,
+     "verbatim": "Începând cu data de 1 iulie 2026, salariul de bază minim brut pe țară garantat în plată, prevăzut la art. 164 alin. (1) din Legea nr. 53/2003 - Codul muncii, republicată , cu modificările și completările ulterioare, se stabilește în bani, fără a include sporuri și alte adaosuri, la suma de 4.325 lei lunar, pentru un program normal de lucru în medie de 166,667 ore pe lună, reprezentând 25,949 lei/o"
+    },
+    "mutaţie": "citare spre actul greșit (CAS 25% cu temei HG 146/2026)",
+    "original": {
+     "atom": "cod_fiscal_227_2015_consolidat#art138",
+     "citare_rezolvata": true,
+     "clasificare": "CONCORDA",
+     "valoare_lege": "25%"
+    },
+    "parametru": "cote/cas@2018-01-01",
+    "valoare_injectata": "0.25",
+    "valoare_reala_in_cod": "0.25"
+   }
+  ],
+  "n_pica": 0,
+  "n_trec": 9
+ },
+ "durate_masurate": {
+  "masurat_la": "2026-09-28T17:47:47",
+  "pasi": [
+   {
+    "operatie": "OP2 instantaneu corpus + manifest SHA",
+    "rezumat": {
+     "n_fisiere": 726,
+     "octeti_total": 130006698
+    },
+    "secunde": 0.42
+   },
+   {
+    "operatie": "OP3 strat de text (txt/html/pdf)",
+    "rezumat": {
+     "n_acte_cu_text": 269,
+     "n_neextractibile": 4
+    },
+    "secunde": 1.32
+   },
+   {
+    "operatie": "OP4 atomizare structurala",
+    "rezumat": {
+     "n_acte": 269,
+     "n_acte_pe_articole": 201,
+     "n_acte_pe_fragmente": 68,
+     "n_atomi": 46559
+    },
+    "secunde": 1.38
+   },
+   {
+    "operatie": "OP5 inventar parametri iConta (citire)",
+    "rezumat": {
+     "n_parametri": 147,
+     "pe_clasa": {
+      "cont": 62,
+      "cota": 38,
+      "nomenclator": 4,
+      "plafon": 38,
+      "termen": 5
+     }
+    },
+    "secunde": 1.55
+   },
+   {
+    "operatie": "OP6+OP7 potrivire si clasificare",
+    "rezumat": {
+     "citari_declarate": 40,
+     "citari_rezolvate": 40,
+     "n_conturi_in_plan_din_corpus": 655,
+     "n_parametri": 147,
+     "sumar": {
+      "CONCORDA": 94,
+      "DIFERA": 1,
+      "NEGASIT": 27,
+      "NEVERIFICAT": 25
+     }
+    },
+    "secunde": 5.57
+   },
+   {
+    "operatie": "OP7b banc de mutatii (dovada inversa)",
+    "rezumat": {
+     "n_pica": 0,
+     "n_trec": 9
+    },
+    "secunde": 3.01
+   },
+   {
+    "operatie": "Probe pe corpus",
+    "rezumat": {
+     "cod_ieșire": 0
+    },
+    "secunde": 10.15
+   }
+  ],
+  "total_secunde": 23.4
+ },
+ "generat_la": "2026-09-28T19:35:33",
+ "parametri": [
   {
    "act_modificator": null,
    "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
@@ -4854,11 +5511,14 @@
    "valoare_lege": "22.500"
   }
  ],
- "secunde": 6.59,
  "sumar": {
   "CONCORDA": 94,
   "DIFERA": 1,
   "NEGASIT": 26,
-  "NEVERIFICAT": 26
- }
+  "NEVERIFICAT": 26,
+  "citari_declarate_de_iconta": 40,
+  "citari_rezolvate_in_corpus": 40,
+  "temeiuri_candidate": 21
+ },
+ "versiune": "v5"
 }

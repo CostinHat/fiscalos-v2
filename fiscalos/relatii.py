@@ -105,7 +105,10 @@ class Relatii(object):
         for a in corp.toti:
             if not _sursa_valida(corp, a):
                 continue
-            for m in _DECLANSATOR.finditer(a["text"]):
+            # textul unei NOTE atasate (V2) nu e al atomului: o derogare citata intr-o nota e a actului
+            # modificator, nu a atomului-gazda
+            propriu = a["text"].split("⟦NOTĂ⟧")[0]
+            for m in _DECLANSATOR.finditer(propriu):
                 self._din_trimitere(a, m)
             if a["nivel"] == "punct" and a.get("interventie"):
                 self._din_modificare(a)
@@ -123,7 +126,7 @@ class Relatii(object):
 
     def _din_trimitere(self, a, m):
         fel = "exceptie" if "excep" in m.group(1).lower() else "derogare"
-        rest = a["text"][m.end():m.end() + 260]
+        rest = a["text"].split("⟦NOTĂ⟧")[0][m.end():m.end() + 260]
         elemente, poz = [], 0
         while True:
             e = _ELEMENT.match(rest, poz)

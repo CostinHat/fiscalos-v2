@@ -288,6 +288,8 @@ class Index(object):
             elif self.modificator.get(a["act"]) and a.get("articol") and \
                     str(a["articol"])[:1].isdigit():
                 s *= 0.3                                  # D3b: text citat intr-un act modificator
+            if a.get("nota_tranzitorie"):
+                s *= 0.3                                  # V2: nota tranzitorie citata, nu articol
             if _e_act_de_formular(a["act"]) and not despre_formular:
                 s *= 0.3                                  # D7: instructiuni de formular, intrebare de fond
             ies.append((s, a))
@@ -321,7 +323,10 @@ def temei_uman(a):
                 v = seg[len(pref):]
                 parti.append(et + v + (")" if pref == "alin" else ")" if pref == "lit" else ""))
                 break
-    return "%s %s" % (nume, " ".join(parti))
+    t = "%s %s" % (nume, " ".join(parti))
+    if a.get("nota_tranzitorie"):
+        t += " (notă din consolidat: dispoziție tranzitorie citată, nu articol al actului)"
+    return t
 
 
 # ── extragerea valorilor ─────────────────────────────────────────────────────────────────────────
