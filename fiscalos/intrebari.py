@@ -318,6 +318,13 @@ def temei_uman(a):
     parti = []
     for seg in a["id"].split("#", 1)[1].split("/"):
         seg = seg.split("~")[0]
+        if seg.startswith("anexa"):
+            # C26: anexa se citeaza ca atare ("anexa, pct. 238"), nu sub ultimul articol; in Normele
+            # Codului fiscal punctele se renumeroteaza pe titluri, deci se numeste si titlul
+            parti.append(("anexa nr. %s," % seg[5:]) if seg[5:] else "anexa,")
+            if a.get("titlul") and a.get("nivel") != "anexa" and "/anexa" not in a["id"].split(seg, 1)[1]:
+                parti.append(a["titlul"] + ",")
+            continue
         for pref, et in (("art", "art. "), ("alin", "alin. ("), ("lit", "lit. "), ("pct", "pct. ")):
             if seg.startswith(pref) and seg[len(pref):] not in ("-", "None"):
                 v = seg[len(pref):]

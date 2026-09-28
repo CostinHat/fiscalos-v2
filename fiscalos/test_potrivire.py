@@ -193,9 +193,11 @@ def test_termenele_citeaza_articolul_declaratiei_nu_orice_fraza_cu_25():
     asteptat = {
         "termen/d300": ("cod_fiscal_227_2015_consolidat#art323/alin1", "decont de taxă"),
         "termen/d301": ("cod_fiscal_227_2015_consolidat#art324/alin2", "Decontul special de taxă"),
-        "termen/d390": ("opanaf_705_2020_d390#art10", "recapitulativă se depune lunar"),
-        "termen/d394": ("opanaf_2194_2025_d394#artIV", "până în data de 30 inclusiv"),
-        "termen/d406": ("opanaf_1783_2021_saft_d406#art8", "ultima zi calendaristică"),
+        # C26: instructiunile formularelor stau in ANEXE; inainte se lipeau de ultimul articol al
+        # ordinului (art. 10, art. IV, art. 8), iar temeiul iesea "art. 10 pct. 3 pct. 3 pct. 6 ..."
+        "termen/d390": ("opanaf_705_2020_d390#anexa", "recapitulativă se depune lunar"),
+        "termen/d394": ("opanaf_2194_2025_d394#anexa", "până în data de 30 inclusiv"),
+        "termen/d406": ("opanaf_1783_2021_saft_d406#anexa", "ultima zi calendaristică"),
     }
     for cheie, (prefix_atom, bucata) in asteptat.items():
         t = p[cheie]

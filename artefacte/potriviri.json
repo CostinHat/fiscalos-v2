@@ -2,10 +2,10 @@
  "_ce": "OP6+OP7 potrivire si clasificare. Fiecare CONCORDA/DIFERA citeaza id-ul atomului si fragmentul verbatim (CLAUDE.md §2).",
  "citari_declarate": 40,
  "citari_rezolvate": 40,
- "facut_la": "2026-09-28T19:35:29",
+ "facut_la": "2026-09-28T21:35:59",
  "n_acte_nenormative": 57,
  "n_acte_normative": 212,
- "n_atomi_corpus": 47698,
+ "n_atomi_corpus": 52485,
  "n_conturi_in_plan_din_corpus": 655,
  "n_parametri": 147,
  "potriviri": [
@@ -267,12 +267,12 @@
   {
    "act_modificator": null,
    "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
-   "atom": "og_16_2022_consolidat#artI/alin4",
+   "atom": "og_16_2022_consolidat#artI/pct3",
    "atom_abrogat": false,
-   "atom_linie": 71,
-   "atom_nivel": "alineat",
+   "atom_linie": 79,
+   "atom_nivel": "punct",
    "atom_valabilitate": null,
-   "atom_verbatim": "În cazul contribuabililor prevăzuți la art. 47 care devin plătitori de impozit pe profit în conformitate cu prevederile art. 52, pentru aplicarea facilității se ia în considerare profitul contabil brut cumulat de la începutul trimestrului respectiv investit în activele prevăzute la alin. (1), puse în funcțiune începând cu trimestrul în care aceștia au devenit plătitori de impozit pe profit. ... 2. La articolul 24 alineatul (1) litera a), punctul 1 se modifică și va avea următorul cuprins: 1. este constituită ca o «societate pe acțiuni», «societate în comandită pe acțiuni», «societate cu răspundere limitată», «societate în nume colectiv», «societate în comandită simplă» sau are forma de organizare a unei alte persoane juridice aflate sub incidența legislației române; ... ... 3. La articolul 43, alineatele (2)-(5) se modifică și vor avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 8% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul.",
+   "atom_verbatim": "La articolul 43, alineatele (2)-(5) se modifică și vor avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 8% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul.",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -1126,17 +1126,11 @@
   {
    "act_modificator": null,
    "ancora": "numele declaratiei + depunere, in opanaf_705_2020_d390",
-   "atom": "opanaf_705_2020_d390#art10/pct3/pct3/pct6/pct1/pct1",
+   "atom": "opanaf_705_2020_d390#anexa4/pct1/pct1",
    "atom_abrogat": false,
    "atom_linie": 619,
    "atom_nivel": "punct",
-   "atom_valabilitate": {
-    "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "sintagma: stagiului de cotizare a fost înlocuită de Punctul 11, Articolul I din ORDONANȚA DE URGENȚĂ nr. 74 din 30 iunie 2021, publicată în MONITORUL OFICIAL nr. 645 din 30 iunie 2021",
-    "atom": "oug_158_2005_consolidat#art10/alin4/litd",
-    "sursa_datei": "nota de consolidare, pe acelasi articol/alineat",
-    "valabil_din": "2021-08-01"
-   },
+   "atom_valabilitate": null,
    "atom_verbatim": "1. Declaraţia recapitulativă se depune lunar, până la data de 25 inclusiv a lunii următoare unei luni calendaristice, de către persoanele impozabile înregistrate în scopuri de TVA conform art. 316 sau 317 din Codul fiscal.",
    "citare_rezolvata": true,
    "clasa": "termen",
@@ -1157,23 +1151,18 @@
    "unde_in_cod": "core/scadente.py (default la _ZIUA.get(tip, 25) - linia 184)",
    "valabil_din_cod": null,
    "valabil_din_corpus": null,
+   "valabilitate_lipsa": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea",
    "valoare_cod": "25",
    "valoare_lege": "25"
   },
   {
    "act_modificator": null,
    "ancora": "act dedicat declaratiei (opanaf_2194_2025_d394) + depunere",
-   "atom": "opanaf_2194_2025_d394#artIV/pct1/pct7/pct2/pct2",
+   "atom": "opanaf_2194_2025_d394#anexa2/pct2",
    "atom_abrogat": false,
    "atom_linie": 751,
    "atom_nivel": "punct",
-   "atom_valabilitate": {
-    "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "Litera a) , Alineatul (1) , Articolul 43 , Capitolul X a fost modificată de Punctul 17. , Articolul I din ORDONANȚA DE URGENȚĂ nr. 10 din 13 martie 2025, publicată în MONITORUL OFICIAL nr. 225 din 13 martie 2025",
-    "atom": "legea_129_2019#artIV/alin7~3",
-    "sursa_datei": "nota de consolidare, pe acelasi articol/alineat",
-    "valabil_din": "2025-06-25"
-   },
+   "atom_valabilitate": null,
    "atom_verbatim": "Declaraţia se depune la organul fiscal competent până în data de 30 inclusiv a lunii următoare încheierii perioadei de raportare, declarate pentru depunerea decontului (luna, trimestrul etc.), inclusiv dacă în această perioadă nu au fost realizate operaţiuni de natura celor care fac obiectul declaraţiei. În cazul în care perioada de raportare este luna calendaristică, termenul de depunere a declaraţiei pentru luna ianuarie este până la data de 28, respectiv 29 februarie.",
    "citare_rezolvata": null,
    "clasa": "termen",
@@ -1192,13 +1181,14 @@
    "unde_in_cod": "core/scadente.py (_ZIUA['d394'])",
    "valabil_din_cod": null,
    "valabil_din_corpus": null,
+   "valabilitate_lipsa": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea",
    "valoare_cod": "30",
    "valoare_lege": "30"
   },
   {
    "act_modificator": null,
    "ancora": "act dedicat declaratiei (opanaf_1783_2021_saft_d406) + depunere",
-   "atom": "opanaf_1783_2021_saft_d406#art8/pct6/pct8/pct29/pct1",
+   "atom": "opanaf_1783_2021_saft_d406#anexa4/pct1",
    "atom_abrogat": false,
    "atom_linie": 763,
    "atom_nivel": "punct",
@@ -1228,7 +1218,7 @@
   {
    "act_modificator": null,
    "ancora": "enumerarea, gasita in actul declarat (opanaf_705_2020_d390)",
-   "atom": "opanaf_705_2020_d390#art10/alin8",
+   "atom": "opanaf_705_2020_d390#anexa2/pct1/alin8",
    "atom_abrogat": false,
    "atom_linie": 524,
    "atom_nivel": "alineat",
@@ -1261,7 +1251,7 @@
   {
    "act_modificator": null,
    "ancora": "enumerarea, gasita in actul declarat (opanaf_2194_2025_d394)",
-   "atom": "opanaf_2194_2025_d394#artIV/pct2/pct7/pct2",
+   "atom": "opanaf_2194_2025_d394#anexa2/pct7/pct2",
    "atom_abrogat": false,
    "atom_linie": 1166,
    "atom_nivel": "punct",
@@ -3030,7 +3020,7 @@
   {
    "act_modificator": null,
    "ancora": "plan de conturi OMFP 1802/2014",
-   "atom": "omfp_3103_2017#art10/pct344",
+   "atom": "omfp_3103_2017#anexa1/pct344",
    "atom_valabilitate": null,
    "atom_verbatim": "3 VENITURI DIN ACTIVITĂŢILE FĂRĂ SCOP PATRIMONIAL 731 Venituri din cotizaţiile membrilor, contribuţiile băneşti sau în natură ale membrilor şi simpatizanţilor, din cote-părţi primite potrivit statutului 7311 Venituri din co",
    "citare_rezolvata": null,
@@ -3056,7 +3046,7 @@
   {
    "act_modificator": null,
    "ancora": "plan de conturi OMFP 1802/2014",
-   "atom": "omfp_3103_2017#art10/pct344",
+   "atom": "omfp_3103_2017#anexa1/pct344",
    "atom_valabilitate": null,
    "atom_verbatim": "istrare stabilite potrivit legislaţiei în vigoare 733 Venituri din donaţii, sume sau bunuri primite prin sponsorizare şi ajutoare 7331 Venituri din do",
    "citare_rezolvata": null,
@@ -3082,7 +3072,7 @@
   {
    "act_modificator": null,
    "ancora": "plan de conturi OMFP 1802/2014",
-   "atom": "omfp_3103_2017#art10/pct344",
+   "atom": "omfp_3103_2017#anexa1/pct344",
    "atom_valabilitate": null,
    "atom_verbatim": "mite prin sponsorizare 7333 Venituri din ajutoare 734 Venituri financiare rezultate din activităţile fără scop patrimonial 7341 Venituri din do",
    "citare_rezolvata": null,
@@ -3108,7 +3098,7 @@
   {
    "act_modificator": null,
    "ancora": "plan de conturi OMFP 1802/2014",
-   "atom": "omfp_3103_2017#art10/pct344",
+   "atom": "omfp_3103_2017#anexa1/pct344",
    "atom_valabilitate": null,
    "atom_verbatim": "ri pentru care se datorează impozit pe spectacole 736 Venituri din subvenţii de exploatare 7362 Venituri din su",
    "citare_rezolvata": null,
@@ -3134,7 +3124,7 @@
   {
    "act_modificator": null,
    "ancora": "plan de conturi OMFP 1802/2014",
-   "atom": "omfp_3103_2017#art10/pct344",
+   "atom": "omfp_3103_2017#anexa1/pct344",
    "atom_valabilitate": null,
    "atom_verbatim": "potrivit statutului de organizare şi funcţionare 738 Alte venituri din activităţile fără scop patrimonial 7381 Venituri din de",
    "citare_rezolvata": null,
@@ -3678,11 +3668,11 @@
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "legea_141_2025_consolidat",
-    "atom": "legea_141_2025_consolidat#art291/alin1",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litb~3",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+    "verbatim": "cu cota standard de TVA 21%"
    },
    "atom_verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%.",
    "citare_rezolvata": null,
@@ -3718,11 +3708,11 @@
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "legea_141_2025",
-    "atom": "legea_141_2025#artII/pct42/alin2",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lite~2",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii şi/sau livrări de bunuri:"
+    "verbatim": "cu cota redusa de TVA 11%"
    },
    "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
    "citare_rezolvata": null,
@@ -3992,11 +3982,11 @@
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "opanaf_77_2022",
-    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lita~3",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+    "verbatim": "cu cota de TVA 24%                                      g) cu cota redusă de TVA 5%"
    },
    "atom_verbatim": "să completeze «Registrul achizițiilor de locuințe cu cota redusă de TVA de 5%, începând cu 1 ianuarie 2023» la data autentificării actelor juridice între vii care au ca obiect transferul dreptului de proprietate pentru locuințele prevăzute la alin. (3) lit. c) pct. 3 ; ...",
    "citare_rezolvata": null,
@@ -4042,17 +4032,17 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct2",
+   "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct2",
    "atom_abrogat": false,
    "atom_linie": 1092,
    "atom_nivel": "punct",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "opanaf_77_2022",
-    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litf",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+    "verbatim": "cu cota redusă de TVA 9%"
    },
    "atom_verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);",
    "citare_rezolvata": null,
@@ -4069,57 +4059,53 @@
    "temei_candidat": {
     "act": "opanaf_3769_2015_d394_baza",
     "ambiguu": true,
-    "atom": "opanaf_3769_2015_d394_baza#art12",
+    "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21",
     "de_aprobat": true,
-    "nota": "12 atomi ai aceluiasi articol poarta valoarea 9%; se propune art12, cu optiunile de mai jos, de ales la aprobare (C18)",
+    "nota": "11 atomi ai aceluiasi alineat poarta valoarea 9%; se propune anexa2/pct5/alin21, cu optiunile de mai jos, de ales la aprobare (C18)",
     "optiuni": [
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/pct2/pct2",
-      "verbatim": "…                       | |______________________________________________________________________________| | *) Tip operaţiune: L - livrări, A - achiziţii, AÎ - achiziţii de la persoane | | impozabile care aplică TVA la încasare, V - livrări cu taxare inversă,                | | C - achiziţii cu taxare inversă                                                       | | **) TVA defalcată pe cote 20%, 9%, 5%                                                 | |______________________________________________________________________________| ______________________________________________________________________________ |     LISTA OPERAŢIUNILOR TAXABILE EFECTUATE PE TERITORIUL NAŢIONAL (lit. D)            | | (cu detaliere pe operaţiuni efectuate cu persoane neînregistrate în scopuri | | de TVA)                                                                               | |                                                                                       | |                                                                                 (lei) | |______________________________________________________________________________| | Nr. *) Tip CUI/ Bunuri/              Denumire/Nume şi prenum…"
-     },
-     {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct2",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct2",
       "verbatim": "valoarea totală a bazei impozabile aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct3",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct3",
       "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct4",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct4",
       "verbatim": "valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă, precum şi cele pentru care se aplică TVA la încasare defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct1/pct1/pct1/pct1/pct1",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct1/pct1/pct1/pct1/pct1",
       "verbatim": "5. valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii pentru care s-au primit bonuri fiscale care îndeplinesc condiţiile unei facturi simplificate şi care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct2",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct2",
       "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct4",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct4",
       "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul normal de TVA: 4.1. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct5",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct5",
       "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul de TVA la încasare: 5.1. valoarea totală a TVA colectate aferentă facturilor încasate în perioada de raportare indiferent de data la care acestea au fost emise de către persoana impozabilă care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.2. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul normal de TVA defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.3. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct6",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct6",
       "verbatim": "Coloana \"Baza impozabilă\" de la lit. C, D, E, F - se înscriu valoarea bazei impozabile, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi valoarea bazei impozabile aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). În cazul în care baza impozabilă este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct7",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct7",
       "verbatim": "Coloana \"Taxă pe valoarea adăugată\" de la lit. C, D, E, F - se înscriu valoarea TVA, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi TVA aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). Dacă taxa pe valoarea adăugată este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct14",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct14",
       "verbatim": "Coloana \"Total bază impozabilă\" de la lit. G - se înscrie valoarea bazei impozabile, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea bazei impozabile aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct15",
-      "verbatim": "Coloana \"Taxa pe valoarea adăugată\" de la lit. G - se înscrie valoarea TVA, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea taxei pe valoarea adăugată aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%). Procedura de gestiune a formularului (394) \"Declaraţie informativă privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoanele înregistrate în scopuri de TVA\", cod MFP 14.13.01.02/f"
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct15",
+      "verbatim": "Coloana \"Taxa pe valoarea adăugată\" de la lit. G - se înscrie valoarea TVA, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea taxei pe valoarea adăugată aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
      }
     ],
     "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);"
@@ -4134,17 +4120,17 @@
   {
    "act_modificator": "Partea introductivă a alineatului (8) Punctul 37. , Capitolul VIII , Titlul VII a fost modificată de Punctul 6. , Articolul I din HOTĂRÂREA nr. 602 din 31 iulie 2025, publicată în MONITORUL OFICIAL nr. 715 din 31 iulie 2025",
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin8~39",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin8",
    "atom_abrogat": false,
    "atom_linie": 9202,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "opanaf_2194_2025_d394",
-    "atom": "opanaf_2194_2025_d394#artIV/pct1/pct7/pct2/pct5/pct4/pct3/pct17/pct10/pct10/pct10/pct4/pct3",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lite~2",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/ prestărilor de servicii taxabile efectuate, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%);"
+    "verbatim": "cu cota redusa de TVA 11%"
    },
    "atom_verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:",
    "citare_rezolvata": null,
@@ -4161,53 +4147,49 @@
    "temei_candidat": {
     "act": "hg_1_2016_norme_cod_fiscal",
     "ambiguu": true,
-    "atom": "hg_1_2016_norme_cod_fiscal#art2~2",
+    "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3",
     "de_aprobat": true,
-    "nota": "11 atomi ai aceluiasi articol poarta valoarea 11%; se propune art2~2, cu optiunile de mai jos, de ales la aprobare (C18)",
+    "nota": "10 atomi ai aceluiasi articol poarta valoarea 11%; se propune anexa/pct37~3, cu optiunile de mai jos, de ales la aprobare (C18)",
     "optiuni": [
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin4~81/litt",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin4/litt",
       "verbatim": "băuturi, oțet comestibil și înlocuitori de oțet comestibil obținuți din acid acetic, care se încadrează la codurile NC 2201 și 2209 00; ... ț) reziduuri și deșeuri ale industriei alimentare, alimente preparate pentru animale, care se încadrează la codurile NC 2301, 2302, 2304-2306, 2308 și 2309. ... Exemplul nr. 1: Un producător agricol vinde caise care se încadrează la codul NC 0809 10 00 către un comerciant. Pentru livrarea efectuată producătorul agricol aplică cota de TVA de 11%. La rândul său, comerciantul vinde caisele cu cota de 11%, indiferent ce destinație ulterioară vor avea fructele livrate: alimente, materie primă pentru dulceață, compoturi sau producția de alcool. Exemplul nr. 2: Un producător de miere livrează mierea, care se încadrează la codul NC 0409 00 00, atât către magazine de vânzare cu amănuntul, cât și către fabrici de produse cosmetice sau către producători de hidromel. În toate situațiile va aplica cota redusă de 11% la livrarea mierii. Exemplul nr. 3: O persoană impozabilă importă ulei de soia, care se încadrează la codul NC 1507, pentru producerea de biodiesel. Cota de TVA aplicabilă pentru importul de ulei de soia este cota redusă de 11%."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin4^1~3",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin4^1",
       "verbatim": "Conform art. 291 alin. (2) lit. b) pct. 3 din Codul fiscal, cota redusă de TVA de 11% se aplică pentru laptele praf pentru nou-născuți, sugari și copii de vârstă mică, respectiv formulele de lapte praf de început, de continuare și de creștere, care se încadrează la codurile NC 0402 și NC 1901 10."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin5~71",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin5",
       "verbatim": "Pentru livrarea următoarelor bunuri, cu excepția alimentelor cu zahăr adăugat, al căror conținut total de zahăr este de minimum 10 g/100 g produs, datorită naturii lor, cota redusă de TVA de 11% se aplică de orice furnizor numai dacă acesta poate face dovada că sunt utilizate ca alimente destinate consumului uman sau animal:"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin8~39",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin8",
       "verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin9~29",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin9",
       "verbatim": "Dacă persoana impozabilă care importă, achiziționează intracomunitar sau livrează în țară bunurile prevăzute la alin. (5) nu poate face dovada aplicării cotei reduse de TVA de 11% în condițiile prevăzute la alin. (6)-(8) , se aplică cota standard de TVA, chiar dacă pentru o livrare ulterioară se aplică cota redusă de 11% pentru același bun."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin13~15",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin13",
       "verbatim": "În aplicarea art. 291 alin. (2) lit. d) din Codul fiscal, se aplică cota redusă de TVA de 11% de orice persoană care livrează apă de irigații care este transportată prin infrastructura principală și/sau secundară de irigații. În categoria persoanelor care livrează apă destinată irigațiilor se cuprind inclusiv furnizorii de apă din Dunăre, din râuri interioare, izvoare, lacuri de acumulare sau alte surse de apă, care alimentează sistemele de irigații."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin14~13",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin14",
       "verbatim": "…otelier sau al sectoarelor cu funcție similară se înțelege cazarea în structurile de primire turistică cu funcțiuni de cazare turistică prevăzute la art. 2 lit. d) din Ordonanța Guvernului nr. 58/1998 privind organizarea și desfășurarea activității de turism în România, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare. Cota redusă de taxă de 11% prevăzută la art. 291 alin. (2) lit. m) din Codul fiscal se aplică pentru tipurile de cazare în structurile de primire turistică cu funcțiune de cazare, prevăzute la art. 2^1 din Ordonanța Guvernului nr. 58/1998, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare. În cazul cazării cu mic dejun, cu demipensiune, cu pensiune completă sau cu «all inclusive», astfel cum sunt definite la art. 2^1 din Ordonanța Guvernului nr. 58/1998, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare, cota redusă de TVA se aplică asupra prețului total al cazării, care poate include și băuturi alcoolice, băuturi nealcoolice care se încadrează la codul NC 2202, precum și alimente cu zahăr adăugat, al că…"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin16~7",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin16",
       "verbatim": "Cota redusă de taxă de 11% prevăzută la art. 291 alin. (2) lit. l) din Codul fiscal se aplică numai pentru livrarea, astfel cum este definită la art. 270 alin. (1) din Codul fiscal, a locuințelor ca parte a politicii sociale, respectiv pentru transferul dreptului de a dispune ca un proprietar de bunurile prevăzute la art. 291 alin. (2) lit. l) din Codul fiscal."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin19~4",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin19",
       "verbatim": "Persoanele impozabile care livrează locuințe vor aplica cota de 11%, inclusiv pentru avansurile aferente acestor livrări, dacă din contractele încheiate rezultă că la momentul livrării vor fi îndeplinite condițiile impuse de art. 291 alin. (2) lit. l) din Codul fiscal. În situația în care avansurile au fost facturate prin aplicarea cotei standard de TVA, la livrarea bunului imobil se efectuează regularizările prevăzute la art. 291 alin. (6) din Codul fiscal în vederea aplicării cotei de 11%, dacă condițiile impuse de art. 291 alin. (2) lit. l) din Codul fiscal sunt îndeplinite la data livrării."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin20~3",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin20",
       "verbatim": "Pentru clădirile prevăzute la art. 291 alin. (2) lit. l) din Codul fiscal, cumpărătorul va pune la dispoziția vânzătorului o declarație pe propria răspundere, autentificată de un notar, din care să rezulte că va utiliza aceste clădiri conform destinației prevăzute de lege, care se păstrează de vânzător pentru justificarea aplicării cotei reduse de TVA de 11%. Declarația trebuie prezentată cel mai târziu până la momentul livrării clădirii respective. Prevederile art. 291 alin. (2) lit. l) din Codul fiscal se aplică și în cazul livrării de părți dintr-o clădire destinate scopurilor respective."
-     },
-     {
-      "atom": "hg_1_2016_norme_cod_fiscal#art2~2/alin4~124",
-      "verbatim": "….......................................... Confirm că datele declarate sunt corecte și complete. Numele și prenumele ................., funcția .................... Semnătura ........... + Anexa nr. 4 la normele metodologice de aplicare a prevederilor titlului VII din Codul fiscal DECLARAȚIE-ANGAJAMENT privind respectarea destinației bunurilor pentru care se solicită aplicarea cotei reduse de TVA 11% Subsemnatul (Subsemnata)^1,[...............................], în numele^2 [................................], cu sediul în^3 [.....................................], declar că bunurile clasificate la codul TARIC [...................], codul adițional [...................] și care fac obiectul [....................................]^4: [ ] vor fi comercializate în propriile magazine de comerț cu amănuntul sau cash and carry; [ ] vor fi utilizate în propriile unități de producție de alimente destinate consumului uman sau animal, restaurante sau alte unități de servicii de alimentație, pentru prepararea alimentelor destinate consumului uman sau animal; [ ] vor fi livrate către persoane impozabile care desfășoară activități de comerț cu amănuntul, comerț cash and carry, restaurante sau alte…"
      }
     ],
     "verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:"
@@ -4220,21 +4202,25 @@
    "valoare_lege": "11%"
   },
   {
+   "act_de_baza": {
+    "citit_din_modificator": null,
+    "in_corpus": null
+   },
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "opanaf_3769_2015_d394_baza#art12~2/pct1/pct1/pct1/pct1/pct1",
+   "atom": "opanaf_2194_2025_d394#anexa1/pct1/litd~3",
    "atom_abrogat": false,
-   "atom_linie": 511,
-   "atom_nivel": "punct",
+   "atom_linie": 476,
+   "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "opanaf_77_2022",
-    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litd~3",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+    "verbatim": "cu cota de TVA 19%"
    },
-   "atom_verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ...",
+   "atom_verbatim": "cu cota de TVA 19%",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEVERIFICAT",
@@ -4243,27 +4229,10 @@
     "cote de tva",
     "defalcata pe cote"
    ],
-   "motiv": "iConta nu sursează parametrul. Valoarea apare langa fraza-subiect in ACTUL DE BAZA opanaf_3769_2015_d394_baza - propus ca TEMEI CANDIDAT, de aprobat uman (nu verificat).",
+   "motiv": "iConta nu sursează parametrul. Valoarea apare numai intr-un act MODIFICATOR (opanaf_2194_2025_d394); actul modificator nu-si numeste tinta intr-o forma citibila mecanic. Decizia C10: un act modificator nu se propune ca temei - ramane atom-valabilitate.",
    "nume": "COTE",
    "parametru": "nesursat/d394.COTE=19",
-   "temei_candidat": {
-    "act": "opanaf_3769_2015_d394_baza",
-    "ambiguu": true,
-    "atom": "opanaf_3769_2015_d394_baza#art12~2",
-    "de_aprobat": true,
-    "nota": "2 atomi ai aceluiasi articol poarta valoarea 19%; se propune art12~2, cu optiunile de mai jos, de ales la aprobare (C18)",
-    "optiuni": [
-     {
-      "atom": "opanaf_3769_2015_d394_baza#art12~2/pct1/pct1/pct1/pct1/pct1",
-      "verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ..."
-     },
-     {
-      "atom": "opanaf_3769_2015_d394_baza#art12~2/pct2",
-      "verbatim": "2.3. seria și numărul facturilor emise prin autofacturare, inclusiv baza impozabilă și TVA aferente, defalcate pe fiecare cotă (24%, 21%, 20%, 19%, 11%, 9%, 5%), cu excepția celor emise de beneficiar în numele furnizorilor înscrise la pct. 2.2.4 . Informațiile privind autofacturarea nu vor fi declarate la alte rubrici din declarație; ... 2.2.4. seria și numărul facturilor emise de persoana impozabilă în calitate de beneficiar, în numele furnizorilor conform art. 319 alin. (18) din Codul fiscal . Exemple: 1. Persoana impozabilă A a alocat la începutul anului o plajă de facturi de la seria A nr. 1 până la seria A nr. 100, ce va fi înscrisă la pct. 2.1 . În prima perioadă de raportare a emis facturi de la seria A nr. 1 la seria A nr. 25, pe care le va înscrie la pct. 2.2 . În următoarele perioade de raportare se va înscrie la pct. 2.1 plaja de facturi alocate de la seria A nr. 1 până la seria A nr. 100, până la utilizarea completă a acesteia. ... 2. Excepție: pentru anul 2016, contribuabilii vor declara la pct. 2.1 numai plaja de facturi rămasă neutilizată din plaja de facturi alocată la începutul anului prin decizie internă. De exemplu, la data de 1 octombrie 2016, persoana impozabil…"
-     }
-    ],
-    "verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ..."
-   },
+   "temei_candidat": null,
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/d394.py:84",
    "valabil_din_cod": null,
@@ -4274,17 +4243,17 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct2",
+   "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct2",
    "atom_abrogat": false,
    "atom_linie": 1092,
    "atom_nivel": "punct",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "opanaf_77_2022",
-    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litc~2",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+    "verbatim": "cu cota de TVA 20%"
    },
    "atom_verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);",
    "citare_rezolvata": null,
@@ -4301,57 +4270,53 @@
    "temei_candidat": {
     "act": "opanaf_3769_2015_d394_baza",
     "ambiguu": true,
-    "atom": "opanaf_3769_2015_d394_baza#art12",
+    "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21",
     "de_aprobat": true,
-    "nota": "12 atomi ai aceluiasi articol poarta valoarea 20%; se propune art12, cu optiunile de mai jos, de ales la aprobare (C18)",
+    "nota": "11 atomi ai aceluiasi alineat poarta valoarea 20%; se propune anexa2/pct5/alin21, cu optiunile de mai jos, de ales la aprobare (C18)",
     "optiuni": [
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/pct2/pct2",
-      "verbatim": "…                            | |______________________________________________________________________________| | *) Tip operaţiune: L - livrări, A - achiziţii, AÎ - achiziţii de la persoane | | impozabile care aplică TVA la încasare, V - livrări cu taxare inversă,                | | C - achiziţii cu taxare inversă                                                       | | **) TVA defalcată pe cote 20%, 9%, 5%                                                 | |______________________________________________________________________________| ______________________________________________________________________________ |     LISTA OPERAŢIUNILOR TAXABILE EFECTUATE PE TERITORIUL NAŢIONAL (lit. D)            | | (cu detaliere pe operaţiuni efectuate cu persoane neînregistrate în scopuri | | de TVA)                                                                               | |                                                                                       | |                                                                                 (lei) | |______________________________________________________________________________| | Nr. *) Tip CUI/ Bunuri/              Denumire/Nume şi p…"
-     },
-     {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct2",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct2",
       "verbatim": "valoarea totală a bazei impozabile aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct3",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct3",
       "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct4",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct4",
       "verbatim": "valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă, precum şi cele pentru care se aplică TVA la încasare defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct1/pct1/pct1/pct1/pct1",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct1/pct1/pct1/pct1/pct1",
       "verbatim": "5. valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii pentru care s-au primit bonuri fiscale care îndeplinesc condiţiile unei facturi simplificate şi care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct2",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct2",
       "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct4",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct4",
       "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul normal de TVA: 4.1. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct5",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct5",
       "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul de TVA la încasare: 5.1. valoarea totală a TVA colectate aferentă facturilor încasate în perioada de raportare indiferent de data la care acestea au fost emise de către persoana impozabilă care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.2. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul normal de TVA defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.3. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct6",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct6",
       "verbatim": "Coloana \"Baza impozabilă\" de la lit. C, D, E, F - se înscriu valoarea bazei impozabile, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi valoarea bazei impozabile aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). În cazul în care baza impozabilă este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct7",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct7",
       "verbatim": "Coloana \"Taxă pe valoarea adăugată\" de la lit. C, D, E, F - se înscriu valoarea TVA, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi TVA aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). Dacă taxa pe valoarea adăugată este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct14",
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct14",
       "verbatim": "Coloana \"Total bază impozabilă\" de la lit. G - se înscrie valoarea bazei impozabile, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea bazei impozabile aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct6/pct15",
-      "verbatim": "Coloana \"Taxa pe valoarea adăugată\" de la lit. G - se înscrie valoarea TVA, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea taxei pe valoarea adăugată aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%). Procedura de gestiune a formularului (394) \"Declaraţie informativă privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoanele înregistrate în scopuri de TVA\", cod MFP 14.13.01.02/f"
+      "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct15",
+      "verbatim": "Coloana \"Taxa pe valoarea adăugată\" de la lit. G - se înscrie valoarea TVA, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea taxei pe valoarea adăugată aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
      }
     ],
     "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);"
@@ -4364,21 +4329,25 @@
    "valoare_lege": "20%"
   },
   {
+   "act_de_baza": {
+    "citit_din_modificator": null,
+    "in_corpus": null
+   },
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "opanaf_3769_2015_d394_baza#art12~2/pct1/pct1/pct1/pct1/pct1",
+   "atom": "opanaf_2194_2025_d394#anexa1/pct1/litb~3",
    "atom_abrogat": false,
-   "atom_linie": 511,
-   "atom_nivel": "punct",
+   "atom_linie": 468,
+   "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "opanaf_2194_2025_d394",
-    "atom": "opanaf_2194_2025_d394#artIV/pct1/pct7/pct2/pct5/pct4/pct3/pct17/pct10/pct10/pct10/pct4/pct3",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litb~3",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/ prestărilor de servicii taxabile efectuate, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%);"
+    "verbatim": "cu cota standard de TVA 21%"
    },
-   "atom_verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ...",
+   "atom_verbatim": "cu cota standard de TVA 21%",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEVERIFICAT",
@@ -4387,27 +4356,10 @@
     "cote de tva",
     "defalcata pe cote"
    ],
-   "motiv": "iConta nu sursează parametrul. Valoarea apare langa fraza-subiect in ACTUL DE BAZA opanaf_3769_2015_d394_baza - propus ca TEMEI CANDIDAT, de aprobat uman (nu verificat).",
+   "motiv": "iConta nu sursează parametrul. Valoarea apare numai intr-un act MODIFICATOR (opanaf_2194_2025_d394); actul modificator nu-si numeste tinta intr-o forma citibila mecanic. Decizia C10: un act modificator nu se propune ca temei - ramane atom-valabilitate.",
    "nume": "COTE",
    "parametru": "nesursat/d394.COTE=21",
-   "temei_candidat": {
-    "act": "opanaf_3769_2015_d394_baza",
-    "ambiguu": true,
-    "atom": "opanaf_3769_2015_d394_baza#art12~2",
-    "de_aprobat": true,
-    "nota": "2 atomi ai aceluiasi articol poarta valoarea 21%; se propune art12~2, cu optiunile de mai jos, de ales la aprobare (C18)",
-    "optiuni": [
-     {
-      "atom": "opanaf_3769_2015_d394_baza#art12~2/pct1/pct1/pct1/pct1/pct1",
-      "verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ..."
-     },
-     {
-      "atom": "opanaf_3769_2015_d394_baza#art12~2/pct2",
-      "verbatim": "2.3. seria și numărul facturilor emise prin autofacturare, inclusiv baza impozabilă și TVA aferente, defalcate pe fiecare cotă (24%, 21%, 20%, 19%, 11%, 9%, 5%), cu excepția celor emise de beneficiar în numele furnizorilor înscrise la pct. 2.2.4 . Informațiile privind autofacturarea nu vor fi declarate la alte rubrici din declarație; ... 2.2.4. seria și numărul facturilor emise de persoana impozabilă în calitate de beneficiar, în numele furnizorilor conform art. 319 alin. (18) din Codul fiscal . Exemple: 1. Persoana impozabilă A a alocat la începutul anului o plajă de facturi de la seria A nr. 1 până la seria A nr. 100, ce va fi înscrisă la pct. 2.1 . În prima perioadă de raportare a emis facturi de la seria A nr. 1 la seria A nr. 25, pe care le va înscrie la pct. 2.2 . În următoarele perioade de raportare se va înscrie la pct. 2.1 plaja de facturi alocate de la seria A nr. 1 până la seria A nr. 100, până la utilizarea completă a acesteia. ... 2. Excepție: pentru anul 2016, contribuabilii vor declara la pct. 2.1 numai plaja de facturi rămasă neutilizată din plaja de facturi alocată la începutul anului prin decizie internă. De exemplu, la data de 1 octombrie 2016, persoana impozabil…"
-     }
-    ],
-    "verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ..."
-   },
+   "temei_candidat": null,
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/d394.py:84",
    "valabil_din_cod": null,
@@ -4418,19 +4370,19 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "opanaf_3769_2015_d394_baza#art12~2/pct1/pct1/pct1/pct1/pct1",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~3/alin2/lita",
    "atom_abrogat": false,
-   "atom_linie": 511,
-   "atom_nivel": "punct",
+   "atom_linie": 9351,
+   "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "opanaf_77_2022",
-    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lita",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+    "verbatim": "parcuri eoliene                                         a) cu cota de TVA 24%"
    },
-   "atom_verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ...",
+   "atom_verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ...",
    "citare_rezolvata": null,
    "clasa": "cota",
    "clasificare": "NEVERIFICAT",
@@ -4439,26 +4391,42 @@
     "cote de tva",
     "defalcata pe cote"
    ],
-   "motiv": "iConta nu sursează parametrul. Valoarea apare langa fraza-subiect in ACTUL DE BAZA opanaf_3769_2015_d394_baza - propus ca TEMEI CANDIDAT, de aprobat uman (nu verificat).",
+   "motiv": "iConta nu sursează parametrul. Valoarea apare langa fraza-subiect in ACTUL DE BAZA hg_1_2016_norme_cod_fiscal - propus ca TEMEI CANDIDAT, de aprobat uman (nu verificat).",
    "nume": "COTE",
    "parametru": "nesursat/d394.COTE=24",
    "temei_candidat": {
-    "act": "opanaf_3769_2015_d394_baza",
+    "act": "hg_1_2016_norme_cod_fiscal",
     "ambiguu": true,
-    "atom": "opanaf_3769_2015_d394_baza#art12~2",
+    "atom": "hg_1_2016_norme_cod_fiscal#anexa",
     "de_aprobat": true,
-    "nota": "2 atomi ai aceluiasi articol poarta valoarea 24%; se propune art12~2, cu optiunile de mai jos, de ales la aprobare (C18)",
+    "nota": "6 atomi ai aceluiasi articol poarta valoarea 24%; se propune anexa, cu optiunile de mai jos, de ales la aprobare (C18)",
     "optiuni": [
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12~2/pct1/pct1/pct1/pct1/pct1",
-      "verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ..."
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct25~6/alin3/pct1",
+      "verbatim": "000 euro x 10% x 4,41 lei/euro x 24% = 105,84 lei 5.000 euro x 10% x 4,45 lei/euro x 20% = 445 lei"
      },
      {
-      "atom": "opanaf_3769_2015_d394_baza#art12~2/pct2",
-      "verbatim": "2.3. seria și numărul facturilor emise prin autofacturare, inclusiv baza impozabilă și TVA aferente, defalcate pe fiecare cotă (24%, 21%, 20%, 19%, 11%, 9%, 5%), cu excepția celor emise de beneficiar în numele furnizorilor înscrise la pct. 2.2.4 . Informațiile privind autofacturarea nu vor fi declarate la alte rubrici din declarație; ... 2.2.4. seria și numărul facturilor emise de persoana impozabilă în calitate de beneficiar, în numele furnizorilor conform art. 319 alin. (18) din Codul fiscal . Exemple: 1. Persoana impozabilă A a alocat la începutul anului o plajă de facturi de la seria A nr. 1 până la seria A nr. 100, ce va fi înscrisă la pct. 2.1 . În prima perioadă de raportare a emis facturi de la seria A nr. 1 la seria A nr. 25, pe care le va înscrie la pct. 2.2 . În următoarele perioade de raportare se va înscrie la pct. 2.1 plaja de facturi alocate de la seria A nr. 1 până la seria A nr. 100, până la utilizarea completă a acesteia. ... 2. Excepție: pentru anul 2016, contribuabilii vor declara la pct. 2.1 numai plaja de facturi rămasă neutilizată din plaja de facturi alocată la începutul anului prin decizie internă. De exemplu, la data de 1 octombrie 2016, persoana impozabil…"
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct31~4/alin6",
+      "verbatim": "… imobil pe care-l deține în proprietate. Societatea X are încheiate contracte cu furnizorii de utilități, respectiv cu furnizorii de energie electrică, energie termică și apă. Conform contractelor încheiate, societatea X refacturează către chiriași aceste utilități, care sunt considerate distincte de închiriere. În luna decembrie 2015 furnizorii de utilități emit facturi către societatea X cu TVA 24%. Faptul generator pentru aceste livrări intervine conform prevederilor art. 281 alin. (8) din Codul fiscal la data emiterii facturilor, respectiv în luna decembrie 2015. În luna ianuarie 2016, societatea X refacturează utilitățile către chiriași. Exigibilitatea taxei pentru operațiunile refacturate intervine la data emiterii facturii de către societatea X către chiriași. Întrucât faptul generator pentru operațiunile refacturate rămâne neschimbat și a intervenit în luna decembrie 2015, cota aplicabilă la refacturare este cota în vigoare la data faptului generator de taxă, respectiv 24%.…"
+     },
+     {
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct35~3/alin2",
+      "verbatim": "…l țării a unui utilaj către clientul său B. Livrarea utilajului are loc în cursul lunii ianuarie la prețul de 6.000 euro. A va emite o factură pentru avansul de 2.000 euro către B la cursul de 4,45 lei/euro, valabil la data încasării avansului în luna decembrie. Baza de impozitare a TVA pentru avans: 2.000 euro x 4,45 lei/euro = 8.900 lei. Taxa pe valoarea adăugată aferentă avansului: 8.900 lei x 24% = 2.136 lei. În ianuarie 2016, la livrarea utilajului se regularizează avansul facturat, inclusiv cota de taxă pe valoarea adăugată ca urmare a modificării cotei standard la 1 ianuarie 2016. Cursul din data livrării bunului este de 4,5 lei/euro. Regularizările efectuate, inclusiv regularizarea cotei de TVA: Stornarea avansului, inclusiv a taxei pe valoarea adăugată aferente acestuia, respectiv 8.900 lei și 2.136 lei, cu semnul minus. Baza de impozitare a livrării: [(2.000 euro x 4,45 lei/euro) + (4.000 euro x 4,5 lei/euro)] = 8.900 lei + 18.000 lei = 26.900 lei. Taxa pe valoarea adăugată aferentă livrării: 26.900 lei x 20% = 5.380 lei. Exemplul nr. 3: Compania A livrează bunuri în valoare de 7.000 euro către compania B, la data de 20 februarie 2016. Compania A aplică sistemul TVA la în…"
+     },
+     {
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~3/alin2/lita",
+      "verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ..."
+     },
+     {
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~3/alin2/litb",
+      "verbatim": "…rării de bunuri care are loc la sfârșitul contractului de leasing. Pentru ratele facturate s-a aplicat cota în vigoare la data faptului generator de taxă (fiecare dată prevăzută în contract pentru plata ratei) și nu se mai fac regularizări la data transferului dreptului de proprietate asupra clădirii. Întrucât valoarea reziduală a fost încasată în avans față de data livrării, aplicându-se cota de 24%, dacă livrarea clădirii are loc după data de 1 ianuarie 2016, se va proceda la regularizarea sumelor încasate în avans pentru a aplica cota de TVA de 20% în vigoare la data faptului generator de taxă. ... + Operațiuni scutite de taxă + Secţiunea 1 Scutiri pentru anumite activități de interes general și scutiri pentru alte activități…"
+     },
+     {
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct109/alin17",
+      "verbatim": "…m art. 281 alin. (6) din Codul fiscal. Valoarea clădirii este de 20 milioane lei și TVA de 4.800.000 lei aferentă vor fi plătite de cumpărător în rate lunare egale timp de 8 ani. Ambele persoane sunt înregistrate normal în scopuri de TVA conform art. 316 din Codul fiscal. Factura se emite pe data de 10 ianuarie 2016, dar nu se aplică regimul de taxare inversă. De asemenea, cota aplicabilă este de 24%, de la data faptului generator de taxă. Chiar dacă factura ar fi fost emisă cu întârziere în altă lună din anul 2016, tratamentul fiscal ar fi același.…"
      }
     ],
-    "verbatim": "5. valoarea totală a bazei impozabile aferentă achizițiilor de bunuri și servicii pentru care s-au primit bonuri fiscale care îndeplinesc condițiile unei facturi simplificate și care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%); ..."
+    "verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ..."
    },
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/d394.py:84",
@@ -4566,7 +4534,7 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "og_16_2022_consolidat#art77/alin10",
+   "atom": "og_16_2022_consolidat#artI/pct40/art77/alin10",
    "atom_abrogat": false,
    "atom_linie": 691,
    "atom_nivel": "alineat",
@@ -4590,7 +4558,7 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "og_16_2022_consolidat#art77/alin10",
+   "atom": "og_16_2022_consolidat#artI/pct40/art77/alin10",
    "atom_abrogat": false,
    "atom_linie": 691,
    "atom_nivel": "alineat",
@@ -4614,7 +4582,7 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "og_16_2022_consolidat#art77/alin10",
+   "atom": "og_16_2022_consolidat#artI/pct40/art77/alin10",
    "atom_abrogat": false,
    "atom_linie": 691,
    "atom_nivel": "alineat",
@@ -4638,7 +4606,7 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "og_16_2022_consolidat#art77/alin10",
+   "atom": "og_16_2022_consolidat#artI/pct40/art77/alin10",
    "atom_abrogat": false,
    "atom_linie": 691,
    "atom_nivel": "alineat",
@@ -4662,7 +4630,7 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "og_16_2022_consolidat#art77/alin10",
+   "atom": "og_16_2022_consolidat#artI/pct40/art77/alin10",
    "atom_abrogat": false,
    "atom_linie": 691,
    "atom_nivel": "alineat",
@@ -4686,7 +4654,7 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "og_16_2022_consolidat#art77/alin10",
+   "atom": "og_16_2022_consolidat#artI/pct40/art77/alin10",
    "atom_abrogat": false,
    "atom_linie": 691,
    "atom_nivel": "alineat",
@@ -4717,7 +4685,7 @@
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "og_16_2022_consolidat",
-    "atom": "og_16_2022_consolidat#art77/alin3",
+    "atom": "og_16_2022_consolidat#artI/pct40/art77/alin3",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
     "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară."
@@ -4854,7 +4822,7 @@
    "valoare_lege": "22.500"
   }
  ],
- "secunde": 6.59,
+ "secunde": 6.73,
  "sumar": {
   "CONCORDA": 94,
   "DIFERA": 1,

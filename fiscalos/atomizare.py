@@ -74,15 +74,52 @@ _ART_TITLU = re.compile(r"^\s*(?:ART|Art)\.?\s*(\d+(?:\^\d+)?)\s+(\S[^.]{0,118})
 _NU_E_TITLU = re.compile(r"a fost (modificat|completat|abrogat|introdus|republicat)|"
                          r"^(alin|pct|lit|paragraf)|prevede|se aplică|se aplica", re.I)
 
-_ALIN = re.compile(r"^\s*\((\d+(?:\^\d+)?)\)\s*(.*)$")
+# "- (1) text": forma portalului pentru primul alineat al unui PUNCT ("238." / "- (1) Amortizarea ...")
+_ALIN = re.compile(r"^\s*(?:[-–]\s*)?\((\d+(?:\^\d+)?)\)\s*(.*)$")
 _LIT = re.compile(r"^\s*([a-z](?:\^\d+)?)\)\s*(.*)$")
-_PCT = re.compile(r"^\s*(\d+(?:\^\d+)?)\.\s*(\S.*)$")
+# C26: in forma portalului, numarul punctului sta SINGUR pe rand ("238."), textul vine dupa
+_PCT = re.compile(r"^\s*(\d+(?:\^\d+)?)\.\s*(\S.*)?$")
 _NOTA_DIN = re.compile(r"^\s*\(la\s+(\d{2})-(\d{2})-(\d{4})\s*,?\s*(.*)$")
 _ABROGAT = re.compile(r"^\s*Abrogat[ăa]?\.?\s*$", re.I)
 _TITLU = re.compile(r"^\s*(Titlul|TITLUL|Capitolul|CAPITOLUL|Secțiunea|SECȚIUNEA|Sectiunea|"
                     r"SECTIUNEA|Subsecțiunea|Subsectiunea|Partea|PARTEA|Anexa|ANEXA)\s+"
                     r"([IVXLCDM0-9]+.*)$")
 _ROMAN = re.compile(r"^[IVXLCDM]+$")
+# C26: inceputul unei ANEXE - rand de sine statator: "ANEXA", "ANEXĂ", "Anexa nr. 2", "ANEXA 1 *1)",
+# "Anexa Nr. 1*)", "ANEXĂ^1)", optional urmat de un titlu cu majuscule ("ANEXĂ REGLEMENTĂRI
+# CONTABILE ...", "ANEXA 1 - PROCEDURI ..."). NU: "Anexa nr. 1 a fost modificată", "Anexa face parte
+# integrantă", "Anexă Nr. crt. Țara" (cap de tabel).
+_ANEXA = re.compile(r"^\s*(?:ANEXA|ANEXĂ|Anexa|Anexă)"
+                    r"(?:\s*(?:nr\.|Nr\.|NR\.)?\s*(\d+(?:\^\d+)?(?:\.\d+)?|[IVX]+)(?![\w.]))?"
+                    r"\s*(?:\*+\d*\)?|\^\d+\))?"
+                    r"(?:\s*(?:[-–—]\s*)?(?=[A-ZĂÂÎȘȚŞŢ]{4,})(?![A-ZĂÂÎȘȚŞŢ]+\s+(?:a|se)\b).*)?\s*$")
+
+
+def _e_anexa(linie):
+    """Numarul anexei ('' daca e unica/nenumerotata), sau None daca randul nu deschide o anexa."""
+    if len(linie) > 200:
+        return None
+    m = _ANEXA.match(linie)
+    if not m:
+        return None
+    return (m.group(1) or "").replace(" ", "")
+
+
+def _valoare_art(cheie):
+    """Ordinea unui numar de articol: 18^1 -> (18, 1); roman -> valoarea lui."""
+    c = str(cheie)
+    if _ROMAN.match(c):
+        v, prev = 0, 0
+        for ch in reversed(c):
+            x = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}[ch]
+            v = v - x if x < prev else v + x
+            prev = max(prev, x)
+        return (v, 0)
+    b, _s, e = c.partition("^")
+    try:
+        return (int(b), int(e or 0))
+    except ValueError:
+        return (0, 0)
 
 
 def _marcaj(linie):
@@ -158,7 +195,7 @@ def _randuri_de_cuprins(randuri):
     return cuprins
 
 
-_RANG = {"articol": 0, "alineat": 1, "litera": 2, "punct": 3}
+_RANG = {"anexa": -1, "articol": 0, "alineat": 1, "litera": 2, "punct": 3}
 
 
 class _Culegator:
@@ -190,6 +227,9 @@ class _Culegator:
         self.stiva = []
         self.secv = {}          # id parinte -> ultimul numar de punct acceptat
         self.titlu = None
+        self.ultim_art_propriu = None
+        self.anexa_principala = None
+        self.titlul = None      # ultimul "Titlul X" (capitolele nu il sterg): numeste titlul in norme
 
     # ── ierarhie ────────────────────────────────────────────────────────────────────────────────
     @property
@@ -209,20 +249,29 @@ class _Culegator:
             top = self.stiva[-1]
             if top["nivel"] == "punct" and top.get("interventie") and nivel in ("alineat", "litera"):
                 return top                      # citat verbatim in actul modificator
+            if top["nivel"] == "punct" and top.get("punct_de_anexa") and nivel in ("alineat", "litera"):
+                return top                      # C26: punctul unei anexe e unitatea ei, ca un articol
             if _RANG[top["nivel"]] < _RANG[nivel]:
                 return top
             self.stiva.pop()
         return None
 
     def _parinte_punct(self, v):
-        """Nodul din stiva care ASTEAPTA punctul `v` (secventa), sau None daca niciunul."""
+        """Nodul din stiva care ASTEAPTA punctul `v` (secventa), sau None daca niciunul.
+
+        C26: o ANEXA isi numeroteaza punctele continuu (Reglementarile contabile: 1..600), cu goluri
+        (puncte abrogate nereproduse, 12^1). Daca niciun nod nu asteapta exact `v`, anexa il accepta
+        cand `v` urmeaza, cu un gol de cel mult 10, dupa ultimul ei punct."""
         for nod in reversed(self.stiva):
             if self.secv.get(nod["id"], 0) + 1 == v:
+                return nod
+        for nod in reversed(self.stiva):
+            if nod["nivel"] == "anexa" and self.secv.get(nod["id"], 0) < v <= self.secv.get(nod["id"], 0) + 10:
                 return nod
         return None
 
     _PREFIX = {"articol": "art", "alineat": "alin", "litera": "lit", "punct": "pct",
-               "fragment": "frag"}
+               "fragment": "frag", "anexa": "anexa"}
 
     def deschide(self, nivel, cheie, text, linie, parinte=None):
         if nivel == "articol" and parinte is None:
@@ -241,12 +290,34 @@ class _Culegator:
                     if nod["nivel"] == "punct" and nod.get("interventie"):
                         gazda = nod
                         break
+            anexa = self._nod("anexa")
+            if gazda is None and anexa is not None:
+                # C26: un articol dintr-o anexa (norme, regulament aprobat prin anexa) e al anexei,
+                # daca numerotarea lui NU continua articolele proprii ale actului. Unul care le
+                # continua (Codul fiscal: anexele unui titlu, apoi art. urmator) inchide anexa.
+                if self.ultim_art_propriu is not None and \
+                        _valoare_art(cheie) > _valoare_art(self.ultim_art_propriu):
+                    self.stiva = []
+                else:
+                    gazda = anexa
             if gazda is not None:
                 while self.stiva and self.stiva[-1] is not gazda:
                     self.stiva.pop()
                 parinte = gazda
             else:
                 self.stiva = []
+        elif nivel == "anexa":
+            # O anexa "la normele metodologice" e anexa NORMELOR, care sunt ele insele anexa actului
+            # (HG 1/2016): se cuibareste sub anexa principala, iar un "Titlul ..." ulterior revine la
+            # norme (vezi `atomizeaza_text`). Altfel, anexa e de nivel superior.
+            principala = self.anexa_principala
+            if principala is not None and re.search(r"\bla\s+(normele|prezentele norme|norme)\b",
+                                                    text or "", re.I):
+                self.stiva = [principala]
+                parinte = principala
+            else:
+                self.stiva = []
+                parinte = None
         elif nivel == "fragment":
             self.stiva = []
             parinte = None
@@ -258,6 +329,8 @@ class _Culegator:
                     self.stiva.pop()
             if parinte is None and nivel != "fragment":
                 return None                     # unitate fara articol-gazda: nu se inventeaza una
+        if nivel == "articol" and parinte is None:
+            self.ultim_art_propriu = cheie
         baza = parinte["id"] if parinte is not None else self.act + "#"
         sep = "/" if parinte is not None else ""
         aid = "%s%s%s%s" % (baza, sep, self._PREFIX[nivel], cheie)
@@ -277,10 +350,19 @@ class _Culegator:
              "titlu_structural": self.titlu, "linie": linie,
              "text": [text] if text else [],
              "valabil_din": None, "valabil_pana": None, "modificat_de": [], "abrogat": False}
+        anexa = self._nod("anexa") if nivel != "anexa" else a
+        if anexa is not None:
+            a["anexa"] = anexa["cheie"]
+            if self.titlul:
+                a["titlul"] = self.titlul
         if nivel == "punct":
             a["interventie"] = bool(parinte is not None and parinte["nivel"] == "articol"
                                     and _ROMAN.match(str(parinte["cheie"])))
+            if parinte is not None and parinte["nivel"] == "anexa":
+                a["punct_de_anexa"] = True
             self.secv[parinte["id"]] = int(cheie) if str(cheie).isdigit() else 0
+        if nivel == "anexa" and parinte is None and self.anexa_principala is None:
+            self.anexa_principala = a
         self.atomi.append(a)
         self.index[aid] = a
         if nivel != "fragment":
@@ -333,9 +415,43 @@ def atomizeaza_text(act, text):
                     tinta["modificat_de"].append({"din": d, "nota": nota})
             continue
 
+        nr_anexa = _e_anexa(linie)
+        # o anexa CITATA intr-un punct de interventie ("Anexa nr. 2 se modifica ... cu urmatorul
+        # cuprins:") e continutul punctului, nu o anexa a actului modificator
+        if nr_anexa is not None and any(x["nivel"] == "punct" and x.get("interventie") for x in c.stiva):
+            nr_anexa = None
+        if nr_anexa is not None:
+            # o SERIE de marcaje de anexa (lista anexelor, nu corpul lor) nu deschide nimic
+            vecini = []
+            for pas in (-1, 1):                 # cel mai apropiat rand NEGOL, in fiecare sens
+                j = idx + pas
+                while 0 <= j < n and not randuri[j].strip():
+                    j += pas
+                if 0 <= j < n:
+                    vecini.append(randuri[j].strip())
+            # ... si nici una lipita de CUPRINS (portalul incheie lista articolelor cu "Anexa nr. 2")
+            anterioare, j = [], idx - 1
+            while j >= 0 and len(anterioare) < 3:
+                if randuri[j].strip():
+                    anterioare.append(j)
+                j -= 1
+            if not any(_e_anexa(v) is not None for v in vecini) and \
+                    not any(j in cuprins for j in anterioare):
+                c.deschide("anexa", nr_anexa, linie, idx + 1)
+                c.titlu = None
+                if c.stiva and c.stiva[0] is c.curent():
+                    c.titlul = None             # anexa de nivel superior: titlurile incep din nou
+                continue
         fel, numar, rest = _marcaj(linie)
         if fel == "titlu":
             c.titlu = rest
+            mt = re.match(r"^(?:Titlul|TITLUL)\s+([IVXLC]+(?:\^\d+)?)\b", rest)
+            if mt:
+                c.titlul = "Titlul " + mt.group(1)
+            # un titlu nou al normelor inchide anexa-la-norme deschisa inainte
+            if rest.lower().startswith("titlul") and c.anexa_principala is not None and \
+                    any(x["nivel"] == "anexa" and x is not c.anexa_principala for x in c.stiva):
+                c.stiva = [c.anexa_principala]
             continue
         if fel == "articol":
             c.deschide("articol", numar.replace(" ", ""), "", idx + 1)
@@ -347,7 +463,7 @@ def atomizeaza_text(act, text):
                     c.adauga_text(rest)         # F3: titlul articolului
             continue
 
-        if c.art is None:
+        if c.art is None and c._nod("anexa") is None:
             continue
 
         m = _ALIN.match(linie)
@@ -356,15 +472,32 @@ def atomizeaza_text(act, text):
             continue
 
         m = _LIT.match(linie)
-        if m and c._nod("alineat") is not None:
+        if m and (c._nod("alineat") is not None or
+                  any(x["nivel"] == "punct" and x.get("punct_de_anexa") for x in c.stiva)):
             c.deschide("litera", m.group(1), m.group(2).strip(), idx + 1)
             continue
+
+        # C26: in forma portalului, punctul DE ANEXA sta singur pe rand ("238."), iar randul urmator
+        # incepe cu liniuta ("- (1) Amortizarea ..." / "- Capitalurile proprii ..."). Enumerarile
+        # interioare ("1. text") nu au liniuta. Acesta e punctul anexei, oricare ar fi secventa. In
+        # Normele Codului fiscal punctele se renumeroteaza pe fiecare titlu: acelasi numar primeste
+        # sufixul ~N, iar temeiul uman numeste titlul.
+        m = re.match(r"^(\d+(?:\^\d+)?)\.$", linie)
+        if m and c._nod("anexa") is not None:
+            j = i
+            while j < n and not randuri[j].strip():
+                j += 1
+            urm = randuri[j].strip() if j < n else ""
+            # "- ..." (Reglementarile contabile) sau "(1)" (Normele Codului fiscal: "40^1." / "(1)")
+            if urm[:1] in "-–" or re.match(r"^\(1\)", urm):
+                c.deschide("punct", m.group(1), "", idx + 1, parinte=c._nod("anexa"))
+                continue
 
         m = _PCT.match(linie)
         if m and m.group(1).isdigit() and len(m.group(1)) <= 3:
             par = c._parinte_punct(int(m.group(1)))
             if par is not None:
-                c.deschide("punct", m.group(1), m.group(2).strip(), idx + 1, parinte=par)
+                c.deschide("punct", m.group(1), (m.group(2) or "").strip(), idx + 1, parinte=par)
                 continue
             # niciun nod nu asteapta acest numar -> nu e punct, e proza care incepe cu o cifra
 
@@ -377,7 +510,7 @@ def atomizeaza_text(act, text):
 
         c.adauga_text(linie)
 
-    if not any(a["nivel"] == "articol" for a in c.atomi):
+    if not any(a["nivel"] in ("articol", "anexa") for a in c.atomi):
         # F4: actul nu are structura de articol. Atomul e FRAGMENTUL de paragraf, si se declara ca atare.
         c = _Culegator(act)
         k = 0

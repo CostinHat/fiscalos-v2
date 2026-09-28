@@ -20,10 +20,24 @@ def test_C12_fiecare_act_adus_are_SHA_data_si_provenienta_si_fisierele_sunt_inta
 
 
 def test_C12_instantaneul_iconta_ramane_neatins():
-    """Stratul oficial nu scrie in corpus/ si nu atinge artefacte/atomi/ (atomii instantaneului)."""
-    d = subprocess.run(["git", "diff", "--stat", "d7efc18", "--", "artefacte/atomi/",
-                        "corpus_manifest.json"], cwd=_RAD, capture_output=True, text=True).stdout
+    """Stratul oficial nu scrie in corpus/ si nu atinge atomii instantaneului.
+
+    Manifestul corpusului e neschimbat de la d7efc18. Atomii instantaneului (`artefacte/atomi/`) sunt
+    DERIVATI: se schimba cand se schimba atomizatorul (C26, anexele), dar numai prin el - fiecare
+    fisier e exact re-atomizarea textului instantaneului, fara nicio mana si fara stratul oficial."""
+    d = subprocess.run(["git", "diff", "--stat", "d7efc18", "--", "corpus_manifest.json"],
+                       cwd=_RAD, capture_output=True, text=True).stdout
     assert d == "", d
+    from fiscalos import atomizare
+    strat = json.load(open(os.path.join(_RAD, "artefacte", "strat_text.json"), encoding="utf-8"))
+    for baza in ("cod_fiscal_227_2015_consolidat", "omfp_1802_2014", "opanaf_3769_2015_d394_baza",
+                 "legea_141_2025"):
+        txt = open(os.path.join(_RAD, strat["acte"][baza]["text"]), encoding="utf-8").read()
+        atomi, _s = atomizare.atomizeaza_text(baza, txt)
+        disc = [json.loads(l) for l in open(os.path.join(
+            _RAD, "artefacte", "atomi", baza.replace("/", "__") + ".jsonl"), encoding="utf-8")]
+        assert atomi == disc, baza
+        assert not any(a.get("sursa") == "oficial" for a in disc), baza
 
 
 def test_C19_opanaf_3769_compus_ordin_oficial_si_anexe_din_instantaneu():
@@ -35,7 +49,10 @@ def test_C19_opanaf_3769_compus_ordin_oficial_si_anexe_din_instantaneu():
     assert {a["parte"] for a in ats} == {"textul ordinului (oficial)",
                                           "anexe (instantaneu iConta, forma de baza)"}
     assert all(a.get("data_formei") for a in ats)
-    assert sum(1 for a in ats if a["parte"].startswith("anexe")) == 91
+    # C26: anexele instantaneului au structura proprie; toate vin din instantaneu, niciuna oficiala
+    anexe = [a for a in ats if a["parte"].startswith("anexe")]
+    assert len(anexe) > 50 and all("#anexa" in a["id"] for a in anexe)
+    assert not any("#anexa" in a["id"] for a in ats if a["parte"].startswith("textul"))
     assert c.sursa_act["legea_70_2015_consolidat"]["sursa"].startswith("oficial")
     assert len(c.pe_act["legea_70_2015_consolidat"]) >= 50      # instantaneul avea 1 atom
 
@@ -121,3 +138,59 @@ def test_C18_candidatul_ambiguu_are_optiuni_si_nivel_comun():
             assert len(t["optiuni"]) > 1
             assert all(o["atom"].startswith(t["atom"] + "/") for o in t["optiuni"]), p["parametru"]
     assert n > 0
+
+
+# ── C26: anexele, structura proprie ─────────────────────────────────────────────────────────────
+def test_C26_anexa_are_structura_proprie_si_temeiul_o_numeste():
+    from fiscalos import atomizare, intrebari
+    txt = "\n".join(["Articolul 1", "Se aprobă reglementările din anexă.", "Articolul 2",
+                     "Prezentul ordin se publică.", "", "ANEXĂ", "REGLEMENTĂRI CONTABILE", "",
+                     "237.", "- (1) Text 237.", "", "238.", "- (1) Amortizarea se stabilește.",
+                     "(2)", "Amortizarea începe cu luna următoare punerii în funcțiune.",
+                     "239.", "- Alt punct."])
+    atomi, _s = atomizare.atomizeaza_text("omfp_1802_2014", txt)
+    ids = {a["id"]: a for a in atomi}
+    assert "omfp_1802_2014#anexa/pct238/alin2" in ids, sorted(ids)
+    assert "omfp_1802_2014#anexa/pct239" in ids
+    assert not any(i.startswith("omfp_1802_2014#art2/") for i in ids)       # nu sub ultimul articol
+    t = intrebari.temei_uman(ids["omfp_1802_2014#anexa/pct238/alin2"])
+    assert t.endswith("anexa, pct. 238 alin. (2)"), t
+
+
+def test_C26_articolul_care_continua_actul_inchide_anexa_si_lista_nu_deschide():
+    from fiscalos import atomizare
+    txt = "\n".join(["Articolul 45", "(1) Text.", "", "+", "Anexa nr. 1", "LISTA SOCIETĂȚILOR",
+                     "1. Societatea A", "Articolul 46", "(1) Text 46.",
+                     "Articolul 47", "Anexa nr. 2", "Anexa nr. 3", "Articolul 48", "(1) Text 48."])
+    atomi, _s = atomizare.atomizeaza_text("cf", txt)
+    ids = [a["id"] for a in atomi]
+    assert "cf#anexa1" in ids and "cf#art46/alin1" in ids and "cf#art48/alin1" in ids, ids
+    assert "cf#anexa2" not in ids and "cf#anexa3" not in ids          # serie = lista, nu anexe
+
+
+def test_C26_anexa_citata_intr_un_punct_de_interventie_nu_e_anexa():
+    from fiscalos import atomizare
+    txt = "\n".join(["Articolul I", "Legea nr. 227/2015 se modifică:", "1. Anexa nr. 2 se înlocuiește:",
+                     "Anexa nr. 2", "Nr. crt. Produs", "Articolul II", "(1) Text."])
+    atomi, _s = atomizare.atomizeaza_text("og_x_2022", txt)
+    assert not any(a["nivel"] == "anexa" for a in atomi)
+
+
+def test_C26_normele_numesc_titlul():
+    from fiscalos import potrivire, intrebari
+    c = potrivire.Corpus()
+    a = c.dupa_id["hg_1_2016_norme_cod_fiscal#anexa/pct1/alin1"]
+    assert "anexa, Titlul II, pct. 1 alin. (1)" in intrebari.temei_uman(a)
+    assert c.dupa_id["omfp_1802_2014#anexa/pct238/alin2"]["text"].startswith("Amortizarea")
+
+
+def test_propunerea_v5_ramane_neatinsa():
+    d = subprocess.run(["git", "diff", "0012001", "--", "propuneri/v5/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]
+
+
+def test_intrebari_v4_ramane_neatins():
+    d = subprocess.run(["git", "diff", "d35c21a", "--", "intrebari/v4/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]

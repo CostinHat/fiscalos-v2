@@ -1,0 +1,41 @@
+Q-TVA-01  RASPUNS          pasi=3  $0.0508 Cota standard de TVA este 21%, aplicată asupra bazei de impozitare pen
+Q-TVA-02  RASPUNS          pasi=4  $0.0888 Plafonul este de 395.000 lei cifră de afaceri anuală, declarată sau re
+Q-TVA-03  RASPUNS          pasi=4  $0.1649 Trebuie să solicite înregistrarea în scopuri de TVA cel târziu la data
+Q-TVA-04  RASPUNS          pasi=14 $0.3902 Perioada fiscală în 2026 este trimestrul calendaristic: persoana nu a 
+Q-TVA-05  RASPUNS          pasi=4  $0.1244 Nu. Livrarea utilajului (activ fix corporal) nu se include în cifra de
+Q-TVA-06  RASPUNS          pasi=7  $0.1347 Nu. Declarația recapitulativă (D390) se depune lunar, până la data de 
+Q-TVA-07  NU_POT_RASPUNDE  pasi=10 $0.2363 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
+Q-TVA-08  RASPUNS          pasi=6  $0.1369 Dreptul de deducere este limitat la 50% din TVA aferentă achiziției: l
+Q-TVA-09  RASPUNS          pasi=6  $0.1274 TVA colectată în total: 130 lei, adică 88 lei pentru mâncare (cota red
+Q-TVA-10  NU_POT_RASPUNDE  pasi=4  $0.0966 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: dacă ve
+Q-PRF-01  NU_POT_RASPUNDE  pasi=15 $0.3409 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
+Q-PRF-02  NU_POT_RASPUNDE  pasi=9  $0.1576 VERIFICAREA MECANICA a respins propunerea modelului: cifra '31' din ra
+Q-PRF-03  RASPUNS          pasi=12 $0.3315 Declarația anuală privind impozitul pe profit (formularul 101) pentru 
+Q-PRF-04  RASPUNS          pasi=10 $0.2793 Societatea datorează impozit pe profit la nivelul impozitului minim pe
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 651, in <module>
+    r = ruleaza(dest, ids or None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 621, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 510, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 487, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfWLSzWA3JYek28htRAxd'}

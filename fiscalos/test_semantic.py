@@ -120,3 +120,27 @@ def test_C17_derogarea_citata_trece():
     o = _out(citate=[{"atom": ATOM["id"], "fragment": FRAG},
                      {"atom": DEROG["id"], "fragment": "Prin excepție de la prevederile alin. (1)"}])
     assert semantic.verifica(o, [ATOM, DEROG], Q, "2026-09-28", rel) == []
+
+
+# ── C24: raspunsul gol se respinge INTOTDEAUNA, nu numai cand contextul are derogari ────────────
+def test_C24_raspunsul_gol_e_respins_fara_derogari():
+    for gol in ("", "x", "-", ".", "  "):
+        o = _out(raspuns=gol)
+        assert "raspuns gol" in semantic.verifica(o, [ATOM], Q, "2026-09-28"), repr(gol)
+
+
+def test_C24_raspunsul_gol_e_respins_si_cu_derogari():
+    o = _out(raspuns="x")
+    assert "raspuns gol" in semantic.verifica(o, [ATOM], Q, "2026-09-28", relatie={})
+
+
+def test_C24_raspunsul_scurt_dar_real_trece():
+    """Cealalta directie: "Nu." si "21%" sunt raspunsuri, nu goluri."""
+    assert semantic.verifica(_out(raspuns="21%"), [ATOM], Q, "2026-09-28") == []
+    o = _out(raspuns="Nu.")
+    assert "raspuns gol" not in semantic.verifica(o, [ATOM], Q, "2026-09-28")
+
+
+def test_C24_abtinerea_fara_raspuns_nu_e_raspuns_gol():
+    o = _out(stare="NU_POT_RASPUNDE", raspuns="", citate=[], motiv="nu am temei")
+    assert "raspuns gol" not in semantic.verifica(o, [ATOM], Q, "2026-09-28")

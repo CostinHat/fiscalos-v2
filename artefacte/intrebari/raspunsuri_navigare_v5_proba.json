@@ -1,0 +1,1120 @@
+{
+ "_ce": "Stratul semantic v5: navigare structurala + calcul evaluat de cod (C23, C25, C27-C29).",
+ "model": "claude-opus-5",
+ "la_limita_de_pasi_C29": [],
+ "abtineri_C23": [],
+ "reincercari_C23": [],
+ "max_pasi": 20,
+ "n": 3,
+ "raspunse": 3,
+ "respinse_de_verificare": 0,
+ "incomplete_detectate": 0,
+ "de_la_modelul_de_rezerva": [],
+ "pasi_medii": 11.33,
+ "tokeni": {
+  "intrare": 40,
+  "iesire": 19220,
+  "cache_scriere": 41376,
+  "cache_citire": 230499
+ },
+ "cost_usd": 0.8545,
+ "secunde_total": 282.0,
+ "raspunsuri": [
+  {
+   "id": "Q-PRF-03",
+   "tip": "CAPCANA",
+   "intrebare": "Până când se depune D101 și se plătește impozitul pe profit anual pentru anul fiscal 2026 (an calendaristic), la o societate care nu se dizolvă?",
+   "date_din_intrebare": [
+    [
+     "2026-09-28",
+     "an",
+     "2026"
+    ]
+   ],
+   "strat": "navigare v5",
+   "data_referinta": "2026-09-28",
+   "data_referinta_motiv": "Singura dată purtată de întrebare; faptul întrebat este obligația declarativă și de plată aferentă anului fiscal 2026, iar regula în vigoare la această dată (modificată prin OUG nr. 8/2026) se aplică începând cu anul fiscal 2026.",
+   "declaratie": "La data de referință 28.09.2026, presupun o societate plătitoare de impozit pe profit, cu an fiscal calendaristic (anul fiscal 2026), care nu se dizolvă (nu intră sub incidența art. 41 alin. (16)-(17)), care nu face parte dintr-un grup fiscal consolidat și care nu datorează impozit la ieșire potrivit art. 40^3.",
+   "propunerea_modelului": {
+    "stare": "RASPUNS",
+    "declaratie": "La data de referință 28.09.2026, presupun o societate plătitoare de impozit pe profit, cu an fiscal calendaristic (anul fiscal 2026), care nu se dizolvă (nu intră sub incidența art. 41 alin. (16)-(17)), care nu face parte dintr-un grup fiscal consolidat și care nu datorează impozit la ieșire potrivit art. 40^3.",
+    "raspuns": "Declarația anuală privind impozitul pe profit (formularul 101) se depune, iar impozitul pe profit anual se definitivează și se plătește, până la data de 25 iunie inclusiv a anului următor anului fiscal 2026 (termenul de plată coincide cu termenul de depunere a declarației anuale).",
+    "citate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art42/alin1",
+      "fragment": "Contribuabilii au obligația să depună o declarație anuală privind impozitul pe profit până la data de 25 iunie inclusiv a anului următor, cu excepția contribuabililor prevăzuți la art. 41 alin. (16) și (17) care depun declarația anuală privind impozitul pe profit până la termenele prevăzute în cadrul acestor alineate."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art41/alin1",
+      "fragment": "Calculul, declararea și plata impozitului pe profit, cu excepțiile prevăzute de prezentul articol, se efectuează trimestrial, până la data de 25 inclusiv a primei luni următoare încheierii trimestrelor I-III. Definitivarea și plata impozitului pe profit aferent anului fiscal respectiv se efectuează până la termenul de depunere a declarației privind impozitul pe profit prevăzut la art. 42 ."
+     }
+    ],
+    "lipsa": [],
+    "derogari_tratate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art42/alin5",
+      "cum": "Excepția vizează exclusiv impozitul pe profit stabilit potrivit art. 40^3 (impozitare la ieșire), care nu se declară prin declarația anuală; societatea din întrebare nu este în această situație, deci termenul general de la art. 42 alin. (1) rămâne aplicabil."
+     }
+    ],
+    "motiv": "Art. 42 alin. (1) din Codul fiscal, în forma în vigoare la data de referință (aplicabilă începând cu anul fiscal 2026 potrivit notei OUG nr. 8/2026), stabilește termenul de depunere a declarației anuale privind impozitul pe profit la 25 iunie inclusiv a anului următor, cu excepția persoanelor juridice care se dizolvă (art. 41 alin. (16) și (17)) - situație exclusă de întrebare. Art. 41 alin. (1) leagă definitivarea și plata impozitului anual de acest termen de depunere.",
+    "calcule": [],
+    "data_referinta": "2026-09-28",
+    "data_referinta_motiv": "Singura dată purtată de întrebare; faptul întrebat este obligația declarativă și de plată aferentă anului fiscal 2026, iar regula în vigoare la această dată (modificată prin OUG nr. 8/2026) se aplică începând cu anul fiscal 2026."
+   },
+   "apel": {
+    "model": "claude-opus-5",
+    "tururi": 5,
+    "pasi_navigare": 8,
+    "pasi": [
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "cod_fiscal_227_2015_consolidat",
+       "filtru": "declarația anuală de impozit pe profit"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "declarație anuală de impozit pe profit 25 martie inclusiv a anului următor"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art42/alin1"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art41"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art42/alin5"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art41/alin14"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art41/alin1"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art41/alin8"
+      }
+     }
+    ],
+    "reincercari_C23": 0,
+    "probleme_C23": [],
+    "tokeni": {
+     "intrare": 10,
+     "iesire": 4285,
+     "cache_scriere": 19020,
+     "cache_citire": 52327
+    },
+    "cost_usd": 0.25221,
+    "fallback": false,
+    "secunde": 80.59
+   },
+   "verificare": {
+    "trece": true,
+    "incalcari": []
+   },
+   "relatii_in_context": {
+    "cod_fiscal_227_2015_consolidat#art42/alin5": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art42/alin1"
+     ]
+    ],
+    "cod_fiscal_227_2015_consolidat#art41/alin7": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41"
+     ],
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41/alin8"
+     ]
+    ],
+    "cod_fiscal_227_2015_consolidat#art41/alin10": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41"
+     ],
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41/alin8"
+     ]
+    ],
+    "cod_fiscal_227_2015_consolidat#art41/alin10^1": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41"
+     ],
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41/alin8"
+     ]
+    ],
+    "cod_fiscal_227_2015_consolidat#art41/alin19": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41"
+     ]
+    ],
+    "cod_fiscal_227_2015_consolidat#art45/alin8": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41"
+     ],
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41/alin8"
+     ]
+    ],
+    "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate#anexa4/pct3": [
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41"
+     ],
+     [
+      "exceptie",
+      "cod_fiscal_227_2015_consolidat#art41/alin8"
+     ]
+    ]
+   },
+   "derogari_tratate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art42/alin5",
+     "cum": "Excepția vizează exclusiv impozitul pe profit stabilit potrivit art. 40^3 (impozitare la ieșire), care nu se declară prin declarația anuală; societatea din întrebare nu este în această situație, deci termenul general de la art. 42 alin. (1) rămâne aplicabil."
+    }
+   ],
+   "stare": "RASPUNS",
+   "raspuns": "Declarația anuală privind impozitul pe profit (formularul 101) se depune, iar impozitul pe profit anual se definitivează și se plătește, până la data de 25 iunie inclusiv a anului următor anului fiscal 2026 (termenul de plată coincide cu termenul de depunere a declarației anuale).  [data de referință: 28.09.2026 — Singura dată purtată de întrebare; faptul întrebat este obligația declarativă și de plată aferentă anului fiscal 2026, iar regula în vigoare la această dată (modificată prin OUG nr. 8/2026) se aplică începând cu anul fiscal 2026.]",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art42/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 42 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Contribuabilii au obligația să depună o declarație anuală privind impozitul pe profit până la data de 25 iunie inclusiv a anului următor, cu excepția contribuabililor prevăzuți la art. 41 alin. (16) și (17) care depun declarația anuală privind impozitul pe profit până la termenele prevăzute în cadrul acestor alineate.",
+     "valabilitate": {
+      "valabil_din": "2026-02-25",
+      "la_data_intrebarii": true,
+      "nota": "forma aceasta e in vigoare din 2026-02-25, adica s-a schimbat IN CURSUL anului 2026: inainte de acea data se aplica o alta forma"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art41/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 41 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Calculul, declararea și plata impozitului pe profit, cu excepțiile prevăzute de prezentul articol, se efectuează trimestrial, până la data de 25 inclusiv a primei luni următoare încheierii trimestrelor I-III. Definitivarea și plata impozitului pe profit aferent anului fiscal respectiv se efectuează până la termenul de depunere a declarației privind impozitul pe profit prevăzut la art. 42 .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+   "traseu": "cuprins(cod_fiscal_227_2015_consolidat, declarația anuală de impozit pe profit) → cauta(declarație anuală de impozit pe profit 25 martie inclusiv a anului următor) → deschide(cod_fiscal_227_2015_consolidat#art42/alin1) → deschide(cod_fiscal_227_2015_consolidat#art41) → deschide(cod_fiscal_227_2015_consolidat#art42/alin5) → deschide(cod_fiscal_227_2015_consolidat#art41/alin14) → deschide(cod_fiscal_227_2015_consolidat#art41/alin1) → deschide(cod_fiscal_227_2015_consolidat#art41/alin8)"
+  },
+  {
+   "id": "Q-PRF-04",
+   "tip": "CAPCANA",
+   "intrebare": "O societate cu cifra de afaceri 2025 peste 50 mil. euro are în 2026: VT = 300.000.000 lei, Vs = 20.000.000 lei, I = 0, A = 10.000.000 lei; impozitul pe profit anual calculat (fără sponsorizări sau alte sume de scăzut) = 1.000.000 lei. Cât impozit pe profit datorează pentru 2026?",
+   "date_din_intrebare": [
+    [
+     "2025-12-31",
+     "an",
+     "2025"
+    ],
+    [
+     "2026-09-28",
+     "an",
+     "2026"
+    ]
+   ],
+   "strat": "navigare v5",
+   "data_referinta": "2026-09-28",
+   "data_referinta_motiv": "Faptul întrebat este impozitul pe profit datorat pentru anul fiscal 2026; cifra de afaceri 2025 este doar condiția de intrare în sfera impozitului minim.",
+   "declaratie": "La data de referință 28.09.2026, presupun un contribuabil plătitor de impozit pe profit (persoană juridică română, alta decât cele de la art. 15 din Codul fiscal), cu cifră de afaceri în anul precedent (2025) de peste 50.000.000 euro, care nu este operator economic din categoria exceptată de la impozitul minim și care nu face parte dintr-un grup fiscal, fără sponsorizări sau alte sume de scăzut din impozit, pentru anul fiscal 2026 care coincide cu anul calendaristic.",
+   "propunerea_modelului": {
+    "stare": "RASPUNS",
+    "declaratie": "La data de referință 28.09.2026, presupun un contribuabil plătitor de impozit pe profit (persoană juridică română, alta decât cele de la art. 15 din Codul fiscal), cu cifră de afaceri în anul precedent (2025) de peste 50.000.000 euro, care nu este operator economic din categoria exceptată de la impozitul minim și care nu face parte dintr-un grup fiscal, fără sponsorizări sau alte sume de scăzut din impozit, pentru anul fiscal 2026 care coincide cu anul calendaristic.",
+    "raspuns": "Pentru anul fiscal 2026 societatea datorează impozit pe profit la nivelul impozitului minim pe cifra de afaceri, adică {impozit_datorat} lei, deoarece IMCA calculat cu cota de 0,5% aplicată bazei VT – Vs – I – A este mai mare decât impozitul pe profit calculat.",
+    "citate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin1",
+      "fragment": "mai mic decât impozitul minim pe cifra de afaceri stabilit potrivit prevederilor alin. (3) , sunt obligați la plata impozitului pe profit la nivelul impozitului minim pe cifra de afaceri."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin1",
+      "fragment": "Contribuabilii, alții decât cei prevăzuți la art. 15 , care înregistrează în anul precedent o cifră de afaceri de peste 50.000.000 euro și care în anul de calcul determină un impozit pe profit, cumulat de la începutul anului fiscal/anului fiscal modificat până la sfârșitul trimestrului/anului de calcul,"
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin3",
+      "fragment": "Impozitul minim pe cifra de afaceri se determină astfel: IMCA = 1% x (VT – Vs – I – A), unde indicatorii au următoarea semnificație: IMCA - impozit minim pe cifra de afaceri, determinat cumulat de la începutul anului fiscal/anului fiscal modificat până la sfârșitul trimestrului/anului de calcul;"
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin16",
+      "fragment": "Pentru anul fiscal 2026/anul fiscal modificat care începe în anul 2026, cota de impozit din cadrul formulei prevăzute la alin. (3) este 0,5%."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin17",
+      "fragment": "Prevederile prezentului articol se aplică până la data de 31 decembrie 2026 inclusiv/ultima zi a anului fiscal modificat care se încheie în anul 2027 inclusiv."
+     }
+    ],
+    "lipsa": [],
+    "derogari_tratate": [
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin16",
+      "cum": "Regula specială pentru anul fiscal 2026 înlocuiește cota de 1% din formula de la alin. (3) cu cota de 0,5%; ea se aplică cazului, fiind vorba de anul fiscal 2026, deci calculul IMCA s-a făcut cu 0,5%."
+     },
+     {
+      "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin17",
+      "cum": "Limitarea aplicării articolului până la 31 decembrie 2026 inclusiv confirmă că impozitul minim pe cifra de afaceri este în vigoare pentru anul fiscal 2026."
+     }
+    ],
+    "motiv": "Societatea are cifră de afaceri în anul precedent peste 50.000.000 euro, deci intră sub incidența impozitului minim pe cifra de afaceri. Pentru anul fiscal 2026 cota din formula IMCA este 0,5%, aplicată bazei VT – Vs – I – A. Rezultatul se compară cu impozitul pe profit calculat, iar contribuabilul datorează impozit la nivelul celui mai mare dintre cele două.",
+    "calcule": [
+     {
+      "nume": "IMCA",
+      "formula": "cota_2026 * (VT - Vs - I - A)",
+      "operanzi": [
+       {
+        "nume": "cota_2026",
+        "valoare": "0,5%",
+        "eticheta": "VALOARE_LEGALA",
+        "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin16",
+        "fragment": "cota de impozit din cadrul formulei prevăzute la alin. (3) este 0,5%"
+       },
+       {
+        "nume": "VT",
+        "valoare": "300.000.000",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "VT = 300.000.000 lei"
+       },
+       {
+        "nume": "Vs",
+        "valoare": "20.000.000",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "Vs = 20.000.000 lei"
+       },
+       {
+        "nume": "I",
+        "valoare": "0",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "I = 0"
+       },
+       {
+        "nume": "A",
+        "valoare": "10.000.000",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "A = 10.000.000 lei"
+       }
+      ]
+     },
+     {
+      "nume": "impozit_datorat",
+      "formula": "max(impozit_pe_profit_calculat, IMCA)",
+      "operanzi": [
+       {
+        "nume": "impozit_pe_profit_calculat",
+        "valoare": "1.000.000",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "impozitul pe profit anual calculat (fără sponsorizări sau alte sume de scăzut) = 1.000.000 lei"
+       }
+      ]
+     }
+    ],
+    "data_referinta": "2026-09-28",
+    "data_referinta_motiv": "Faptul întrebat este impozitul pe profit datorat pentru anul fiscal 2026; cifra de afaceri 2025 este doar condiția de intrare în sfera impozitului minim."
+   },
+   "apel": {
+    "model": "claude-opus-5",
+    "tururi": 6,
+    "pasi_navigare": 10,
+    "pasi": [
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "impozit minim pe cifra de afaceri IMCA abrogat 2026"
+      }
+     },
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "cod_fiscal_227_2015_consolidat",
+       "filtru": "cifra de afaceri"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art18^1/alin1"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art18^1/alin3"
+      }
+     },
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "legea_141_2025_consolidat",
+       "filtru": "abrog"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "art. 18^1 se abrogă impozit minim pe cifra de afaceri 1 ianuarie 2026"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art18^1"
+      }
+     },
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "oug_24_2026_contributie_solidaritate",
+       "filtru": ""
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art18^1/alin16"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "cod_fiscal_227_2015_consolidat#art18^1/alin17"
+      }
+     }
+    ],
+    "reincercari_C23": 0,
+    "probleme_C23": [],
+    "tokeni": {
+     "intrare": 12,
+     "iesire": 6956,
+     "cache_scriere": 10403,
+     "cache_citire": 63241
+    },
+    "cost_usd": 0.2706,
+    "fallback": false,
+    "secunde": 84.96
+   },
+   "verificare": {
+    "trece": true,
+    "incalcari": []
+   },
+   "relatii_in_context": {},
+   "derogari_tratate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin16",
+     "cum": "Regula specială pentru anul fiscal 2026 înlocuiește cota de 1% din formula de la alin. (3) cu cota de 0,5%; ea se aplică cazului, fiind vorba de anul fiscal 2026, deci calculul IMCA s-a făcut cu 0,5%."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin17",
+     "cum": "Limitarea aplicării articolului până la 31 decembrie 2026 inclusiv confirmă că impozitul minim pe cifra de afaceri este în vigoare pentru anul fiscal 2026."
+    }
+   ],
+   "stare": "RASPUNS",
+   "raspuns": "Pentru anul fiscal 2026 societatea datorează impozit pe profit la nivelul impozitului minim pe cifra de afaceri, adică 1.350.000 lei, deoarece IMCA calculat cu cota de 0,5% aplicată bazei VT – Vs – I – A este mai mare decât impozitul pe profit calculat.  [calcul: IMCA = cota_2026 * (VT - Vs - I - A) = (0,5% × (((300.000.000 − 20.000.000) − 0) − 10.000.000)) = 1.350.000; impozit_datorat = max(impozit_pe_profit_calculat, IMCA) = max(1.000.000, 1.350.000) = 1.350.000]  [data de referință: 28.09.2026 — Faptul întrebat este impozitul pe profit datorat pentru anul fiscal 2026; cifra de afaceri 2025 este doar condiția de intrare în sfera impozitului minim.]",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "mai mic decât impozitul minim pe cifra de afaceri stabilit potrivit prevederilor alin. (3) , sunt obligați la plata impozitului pe profit la nivelul impozitului minim pe cifra de afaceri.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Contribuabilii, alții decât cei prevăzuți la art. 15 , care înregistrează în anul precedent o cifră de afaceri de peste 50.000.000 euro și care în anul de calcul determină un impozit pe profit, cumulat de la începutul anului fiscal/anului fiscal modificat până la sfârșitul trimestrului/anului de calcul,",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Impozitul minim pe cifra de afaceri se determină astfel: IMCA = 1% x (VT – Vs – I – A), unde indicatorii au următoarea semnificație: IMCA - impozit minim pe cifra de afaceri, determinat cumulat de la începutul anului fiscal/anului fiscal modificat până la sfârșitul trimestrului/anului de calcul;",
+     "valabilitate": {
+      "valabil_din": "2024-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin16",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (16)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Pentru anul fiscal 2026/anul fiscal modificat care începe în anul 2026, cota de impozit din cadrul formulei prevăzute la alin. (3) este 0,5%.",
+     "valabilitate": {
+      "valabil_din": "2026-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin17",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (17)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "verbatim": "Prevederile prezentului articol se aplică până la data de 31 decembrie 2026 inclusiv/ultima zi a anului fiscal modificat care se încheie în anul 2027 inclusiv.",
+     "valabilitate": {
+      "valabil_din": "2026-01-01",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+   "traseu": "cauta(impozit minim pe cifra de afaceri IMCA abrogat 2026) → cuprins(cod_fiscal_227_2015_consolidat, cifra de afaceri) → deschide(cod_fiscal_227_2015_consolidat#art18^1/alin1) → deschide(cod_fiscal_227_2015_consolidat#art18^1/alin3) → cuprins(legea_141_2025_consolidat, abrog) → cauta(art. 18^1 se abrogă impozit minim pe cifra de afaceri 1 ianuarie 2026) → deschide(cod_fiscal_227_2015_consolidat#art18^1) → cuprins(oug_24_2026_contributie_solidaritate, ) → deschide(cod_fiscal_227_2015_consolidat#art18^1/alin16) → deschide(cod_fiscal_227_2015_consolidat#art18^1/alin17)",
+   "calcule": [
+    {
+     "nume": "IMCA",
+     "formula": "cota_2026 * (VT - Vs - I - A)",
+     "cu_valori": "(0,5% × (((300.000.000 − 20.000.000) − 0) − 10.000.000))",
+     "zile": [],
+     "rezultat": "1.350.000",
+     "operanzi": [
+      {
+       "nume": "cota_2026",
+       "valoare": "0,5%",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin16",
+       "fragment": "cota de impozit din cadrul formulei prevăzute la alin. (3) este 0,5%"
+      },
+      {
+       "nume": "VT",
+       "valoare": "300.000.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "VT = 300.000.000 lei"
+      },
+      {
+       "nume": "Vs",
+       "valoare": "20.000.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "Vs = 20.000.000 lei"
+      },
+      {
+       "nume": "I",
+       "valoare": "0",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "I = 0"
+      },
+      {
+       "nume": "A",
+       "valoare": "10.000.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "A = 10.000.000 lei"
+      }
+     ]
+    },
+    {
+     "nume": "impozit_datorat",
+     "formula": "max(impozit_pe_profit_calculat, IMCA)",
+     "cu_valori": "max(1.000.000, 1.350.000)",
+     "zile": [],
+     "rezultat": "1.350.000",
+     "operanzi": [
+      {
+       "nume": "impozit_pe_profit_calculat",
+       "valoare": "1.000.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "impozitul pe profit anual calculat (fără sponsorizări sau alte sume de scăzut) = 1.000.000 lei"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Q-CPF-03",
+   "tip": "CALCUL",
+   "intrebare": "La inspecție s-a stabilit prin decizie de impunere o diferență de TVA nedeclarată de 20.000 lei, cu scadența inițială 25.07.2025. Decizia e comunicată pe 10.03.2026, iar firma plătește diferența pe 03.04.2026. Ce accesorii datorează?",
+   "date_din_intrebare": [
+    [
+     "2025-07-25",
+     "zi",
+     "25.07.2025"
+    ],
+    [
+     "2026-03-10",
+     "zi",
+     "10.03.2026"
+    ],
+    [
+     "2026-04-03",
+     "zi",
+     "03.04.2026"
+    ]
+   ],
+   "strat": "navigare v5",
+   "data_referinta": "2026-04-03",
+   "data_referinta_motiv": "Faptul întrebat este cuantumul accesoriilor datorate până la stingerea creanței, care se calculează până la data plății, 03.04.2026; celelalte date (25.07.2025 scadența, 10.03.2026 comunicarea) sunt elemente ale perioadei de calcul și ale termenului de plată.",
+   "declaratie": "La data de referință 03.04.2026, presupun un contribuabil persoană juridică plătitor de TVA, creanță fiscală principală administrată de organul fiscal central (TVA de 20.000 lei nedeclarată, scadență 25.07.2025), stabilită prin decizie de impunere de inspecție fiscală comunicată la 10.03.2026 și stinsă prin plată la 03.04.2026; presupun că nu există eșalonare la plată, executare silită, insolvabilitate/insolvență, contestație cu suspendare și că diferența nu provine din aplicarea unor prevederi fiscale interpretabile sau din fapte de evaziune.",
+   "propunerea_modelului": {
+    "stare": "RASPUNS",
+    "declaratie": "La data de referință 03.04.2026, presupun un contribuabil persoană juridică plătitor de TVA, creanță fiscală principală administrată de organul fiscal central (TVA de 20.000 lei nedeclarată, scadență 25.07.2025), stabilită prin decizie de impunere de inspecție fiscală comunicată la 10.03.2026 și stinsă prin plată la 03.04.2026; presupun că nu există eșalonare la plată, executare silită, insolvabilitate/insolvență, contestație cu suspendare și că diferența nu provine din aplicarea unor prevederi fiscale interpretabile sau din fapte de evaziune.",
+    "raspuns": "Firma datorează: (1) dobânzi de 0,02% pentru fiecare zi de întârziere, calculate din ziua imediat următoare scadenței de 25.07.2025 până la data stingerii, 03.04.2026, inclusiv, adică {dobanzi} lei; (2) penalitate de nedeclarare de 0,08% pe fiecare zi, pentru aceeași perioadă (plafonată la nivelul creanței principale), redusă cu 75% deoarece decizia a fost comunicată în intervalul 1-15 din lună, iar plata s-a făcut până la data de 5 a lunii următoare, adică {penalitate_nedeclarare_redusa} lei. Penalitate de întârziere nu se datorează, fiind exclusă când se aplică penalitatea de nedeclarare. Total accesorii: {total_accesorii} lei.",
+    "citate": [
+     {
+      "atom": "legea_207_2015_consolidat#art181/alin1",
+      "fragment": "contribuabilul/plătitorul datorează o penalitate de nedeclarare de 0,08% pe fiecare zi, începând cu ziua imediat următoare scadenței și până la data stingerii sumei datorate, inclusiv, din obligațiile fiscale principale nedeclarate sau declarate incorect de contribuabil/plătitor și stabilite de organul fiscal prin decizii de impunere."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art181/alin2",
+      "fragment": "Penalitatea de nedeclarare stabilită potrivit alin. (1) se reduce cu 75%, dacă obligațiile fiscale principale stabilite prin decizie:"
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art181/alin2/lita",
+      "fragment": "se sting prin plată sau compensare până la termenul prevăzut la art. 156 alin. (1)"
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art156/alin1/lita",
+      "fragment": "dacă data comunicării este cuprinsă în intervalul 1-15 din lună, termenul de plată este până la data de 5 a lunii următoare, inclusiv"
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art174/alin5",
+      "fragment": "Nivelul dobânzii este de 0,02% pentru fiecare zi de întârziere."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art174/alin1",
+      "fragment": "Dobânzile se calculează pentru fiecare zi de întârziere, începând cu ziua imediat următoare termenului de scadență și până la data stingerii sumei datorate, inclusiv."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art181/alin4",
+      "fragment": "Aplicarea penalității de nedeclarare prevăzute de prezentul articol nu înlătură obligația de plată a dobânzilor prevăzute de prezentul cod."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art176/alin4",
+      "fragment": "Penalitatea de întârziere nu se aplică pentru obligațiile fiscale principale pentru care se datorează penalitate de nedeclarare potrivit art. 181"
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art181/alin11",
+      "fragment": "penalitatea de nedeclarare nu poate fi mai mare decât nivelul creanței fiscale principale la care se aplică"
+     }
+    ],
+    "lipsa": [],
+    "derogari_tratate": [
+     {
+      "atom": "legea_207_2015_consolidat#art278/alin4",
+      "cum": "Excepția de la art. 173 și art. 181 privește situația contestării actului administrativ fiscal cu suspendarea executării; în cazul din întrebare decizia nu este contestată, obligația fiind plătită, deci nu se aplică."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art174/alin4",
+      "cum": "Excepția de la art. 174 alin. (1) vizează creanțele stinse prin executare silită și obligațiile debitorului declarat insolvabil fără venituri/bunuri urmăribile; în speță stingerea s-a făcut prin plată voluntară, deci dobânzile se calculează după regula generală până la 03.04.2026."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art197/alin1",
+      "cum": "Excepția de la nivelul dobânzii de 0,02% se aplică debitorilor aflați în procedura insolvenței; nu este cazul firmei din întrebare, deci rămâne nivelul de 0,02% pe zi."
+     },
+     {
+      "atom": "legea_207_2015_consolidat#art181/alin3",
+      "cum": "Majorarea cu 100% a penalității de nedeclarare presupune fapte de evaziune fiscală constatate de organele judiciare; întrebarea nu indică astfel de fapte, deci nu se aplică."
+     }
+    ],
+    "motiv": "Creanța principală a fost nedeclarată și stabilită prin decizie de impunere, deci se datorează penalitate de nedeclarare de 0,08%/zi (art. 181 alin. (1)), care nu înlătură dobânzile de 0,02%/zi (art. 174 alin. (1) și (5), art. 181 alin. (4)), dar exclude penalitatea de întârziere (art. 176 alin. (4)). Decizia comunicată la 10.03.2026 (interval 1-15) are termen de plată 5 aprilie 2026; plata la 03.04.2026 se încadrează în acest termen, deci penalitatea de nedeclarare se reduce cu 75%. Perioada de calcul și sumele rezultă din calculele descrise, plafonul din art. 181 alin. (11) fiind aplicat prin min().",
+    "calcule": [
+     {
+      "nume": "zile_intarziere",
+      "formula": "zile(data_scadenta, data_platii)",
+      "operanzi": [
+       {
+        "nume": "data_scadenta",
+        "valoare": "25.07.2025",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "cu scadența inițială 25.07.2025"
+       },
+       {
+        "nume": "data_platii",
+        "valoare": "03.04.2026",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "firma plătește diferența pe 03.04.2026"
+       }
+      ]
+     },
+     {
+      "nume": "dobanzi",
+      "formula": "creanta * cota_dobanda * zile_intarziere",
+      "operanzi": [
+       {
+        "nume": "creanta",
+        "valoare": "20.000",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "o diferență de TVA nedeclarată de 20.000 lei"
+       },
+       {
+        "nume": "cota_dobanda",
+        "valoare": "0,02%",
+        "eticheta": "VALOARE_LEGALA",
+        "atom": "legea_207_2015_consolidat#art174/alin5",
+        "fragment": "Nivelul dobânzii este de 0,02% pentru fiecare zi de întârziere."
+       }
+      ]
+     },
+     {
+      "nume": "penalitate_nedeclarare_bruta",
+      "formula": "min(creanta * cota_nedeclarare * zile_intarziere, creanta)",
+      "operanzi": [
+       {
+        "nume": "creanta",
+        "valoare": "20.000",
+        "eticheta": "FAPT_CAZ",
+        "atom": "",
+        "fragment": "o diferență de TVA nedeclarată de 20.000 lei"
+       },
+       {
+        "nume": "cota_nedeclarare",
+        "valoare": "0,08%",
+        "eticheta": "VALOARE_LEGALA",
+        "atom": "legea_207_2015_consolidat#art181/alin1",
+        "fragment": "o penalitate de nedeclarare de 0,08% pe fiecare zi"
+       }
+      ]
+     },
+     {
+      "nume": "penalitate_nedeclarare_redusa",
+      "formula": "penalitate_nedeclarare_bruta * (1 - reducere)",
+      "operanzi": [
+       {
+        "nume": "reducere",
+        "valoare": "75%",
+        "eticheta": "VALOARE_LEGALA",
+        "atom": "legea_207_2015_consolidat#art181/alin2",
+        "fragment": "Penalitatea de nedeclarare stabilită potrivit alin. (1) se reduce cu 75%"
+       }
+      ]
+     },
+     {
+      "nume": "total_accesorii",
+      "formula": "dobanzi + penalitate_nedeclarare_redusa",
+      "operanzi": []
+     }
+    ],
+    "data_referinta": "2026-04-03",
+    "data_referinta_motiv": "Faptul întrebat este cuantumul accesoriilor datorate până la stingerea creanței, care se calculează până la data plății, 03.04.2026; celelalte date (25.07.2025 scadența, 10.03.2026 comunicarea) sunt elemente ale perioadei de calcul și ale termenului de plată."
+   },
+   "apel": {
+    "model": "claude-opus-5",
+    "tururi": 9,
+    "pasi_navigare": 16,
+    "pasi": [
+     {
+      "unealta": "cuprins",
+      "intrare": {
+       "act": "legea_207_2015_consolidat",
+       "filtru": "dobânzi penalitate nedeclarare întârziere"
+      }
+     },
+     {
+      "unealta": "cauta",
+      "intrare": {
+       "interogare": "penalitate de nedeclarare 0,08% obligații fiscale principale nedeclarate"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art181/alin1"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art181/alin2"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art181"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art156"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art156/alin1"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art181/alin4"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art156/alin1/lita"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art174"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art174/alin5"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art176"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art176/alin4"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art174/alin1"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art174/alin4"
+      }
+     },
+     {
+      "unealta": "deschide",
+      "intrare": {
+       "id": "legea_207_2015_consolidat#art181/alin2/lita"
+      }
+     }
+    ],
+    "reincercari_C23": 0,
+    "probleme_C23": [],
+    "tokeni": {
+     "intrare": 18,
+     "iesire": 7979,
+     "cache_scriere": 11953,
+     "cache_citire": 114931
+    },
+    "cost_usd": 0.33174,
+    "fallback": false,
+    "secunde": 105.22
+   },
+   "verificare": {
+    "trece": true,
+    "incalcari": []
+   },
+   "relatii_in_context": {
+    "legea_207_2015_consolidat#art278/alin4": [
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art181/alin1"
+     ],
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art181/alin2"
+     ],
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art181"
+     ],
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art181/alin4"
+     ],
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art181/alin2/lita"
+     ]
+    ],
+    "legea_207_2015_consolidat#art174/alin4": [
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art174"
+     ],
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art174/alin1"
+     ]
+    ],
+    "legea_207_2015_consolidat#art197/alin1": [
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art174"
+     ],
+     [
+      "exceptie",
+      "legea_207_2015_consolidat#art174/alin5"
+     ]
+    ]
+   },
+   "derogari_tratate": [
+    {
+     "atom": "legea_207_2015_consolidat#art278/alin4",
+     "cum": "Excepția de la art. 173 și art. 181 privește situația contestării actului administrativ fiscal cu suspendarea executării; în cazul din întrebare decizia nu este contestată, obligația fiind plătită, deci nu se aplică."
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art174/alin4",
+     "cum": "Excepția de la art. 174 alin. (1) vizează creanțele stinse prin executare silită și obligațiile debitorului declarat insolvabil fără venituri/bunuri urmăribile; în speță stingerea s-a făcut prin plată voluntară, deci dobânzile se calculează după regula generală până la 03.04.2026."
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art197/alin1",
+     "cum": "Excepția de la nivelul dobânzii de 0,02% se aplică debitorilor aflați în procedura insolvenței; nu este cazul firmei din întrebare, deci rămâne nivelul de 0,02% pe zi."
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin3",
+     "cum": "Majorarea cu 100% a penalității de nedeclarare presupune fapte de evaziune fiscală constatate de organele judiciare; întrebarea nu indică astfel de fapte, deci nu se aplică."
+    }
+   ],
+   "stare": "RASPUNS",
+   "raspuns": "Firma datorează: (1) dobânzi de 0,02% pentru fiecare zi de întârziere, calculate din ziua imediat următoare scadenței de 25.07.2025 până la data stingerii, 03.04.2026, inclusiv, adică 1.008 lei; (2) penalitate de nedeclarare de 0,08% pe fiecare zi, pentru aceeași perioadă (plafonată la nivelul creanței principale), redusă cu 75% deoarece decizia a fost comunicată în intervalul 1-15 din lună, iar plata s-a făcut până la data de 5 a lunii următoare, adică 1.008 lei. Penalitate de întârziere nu se datorează, fiind exclusă când se aplică penalitatea de nedeclarare. Total accesorii: 2.016 lei.  [calcul: zile(25.07.2025, 03.04.2026) = 252 zile; zile_intarziere = zile(data_scadenta, data_platii) = zile(25.07.2025, 03.04.2026) = 252; dobanzi = creanta * cota_dobanda * zile_intarziere = ((20.000 × 0,02%) × 252) = 1.008; penalitate_nedeclarare_bruta = min(creanta * cota_nedeclarare * zile_intarziere, creanta) = min(((20.000 × 0,08%) × 252), 20.000) = 4.032; penalitate_nedeclarare_redusa = penalitate_nedeclarare_bruta * (1 - reducere) = (4.032 × (1 − 75%)) = 1.008; total_accesorii = dobanzi + penalitate_nedeclarare_redusa = (1.008 + 1.008) = 2.016]  [data de referință: 03.04.2026 — Faptul întrebat este cuantumul accesoriilor datorate până la stingerea creanței, care se calculează până la data plății, 03.04.2026; celelalte date (25.07.2025 scadența, 10.03.2026 comunicarea) sunt elemente ale perioadei de calcul și ale termenului de plată.]",
+   "argument": [
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin1",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 181 alin. (1)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "contribuabilul/plătitorul datorează o penalitate de nedeclarare de 0,08% pe fiecare zi, începând cu ziua imediat următoare scadenței și până la data stingerii sumei datorate, inclusiv, din obligațiile fiscale principale nedeclarate sau declarate incorect de contribuabil/plătitor și stabilite de organul fiscal prin decizii de impunere.",
+     "valabilitate": {
+      "valabil_din": "2020-12-24",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin2",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 181 alin. (2)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "Penalitatea de nedeclarare stabilită potrivit alin. (1) se reduce cu 75%, dacă obligațiile fiscale principale stabilite prin decizie:",
+     "valabilitate": {
+      "valabil_din": "2020-12-24",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin2/lita",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 181 alin. (2) lit. a)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "se sting prin plată sau compensare până la termenul prevăzut la art. 156 alin. (1)",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art156/alin1/lita",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 156 alin. (1) lit. a)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "dacă data comunicării este cuprinsă în intervalul 1-15 din lună, termenul de plată este până la data de 5 a lunii următoare, inclusiv",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art174/alin5",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 174 alin. (5)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "Nivelul dobânzii este de 0,02% pentru fiecare zi de întârziere.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art174/alin1",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 174 alin. (1)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "Dobânzile se calculează pentru fiecare zi de întârziere, începând cu ziua imediat următoare termenului de scadență și până la data stingerii sumei datorate, inclusiv.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin4",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 181 alin. (4)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "Aplicarea penalității de nedeclarare prevăzute de prezentul articol nu înlătură obligația de plată a dobânzilor prevăzute de prezentul cod.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art176/alin4",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 176 alin. (4)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "Penalitatea de întârziere nu se aplică pentru obligațiile fiscale principale pentru care se datorează penalitate de nedeclarare potrivit art. 181",
+     "valabilitate": {
+      "valabil_din": "2017-09-03",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin11",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 181 alin. (11)",
+     "act": "legea_207_2015_consolidat",
+     "verbatim": "penalitatea de nedeclarare nu poate fi mai mare decât nivelul creanței fiscale principale la care se aplică",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+   "traseu": "cuprins(legea_207_2015_consolidat, dobânzi penalitate nedeclarare întârziere) → cauta(penalitate de nedeclarare 0,08% obligații fiscale principale nedeclarate) → deschide(legea_207_2015_consolidat#art181/alin1) → deschide(legea_207_2015_consolidat#art181/alin2) → deschide(legea_207_2015_consolidat#art181) → deschide(legea_207_2015_consolidat#art156) → deschide(legea_207_2015_consolidat#art156/alin1) → deschide(legea_207_2015_consolidat#art181/alin4) → deschide(legea_207_2015_consolidat#art156/alin1/lita) → deschide(legea_207_2015_consolidat#art174) → deschide(legea_207_2015_consolidat#art174/alin5) → deschide(legea_207_2015_consolidat#art176) → deschide(legea_207_2015_consolidat#art176/alin4) → deschide(legea_207_2015_consolidat#art174/alin1) → deschide(legea_207_2015_consolidat#art174/alin4) → deschide(legea_207_2015_consolidat#art181/alin2/lita)",
+   "calcule": [
+    {
+     "nume": "zile_intarziere",
+     "formula": "zile(data_scadenta, data_platii)",
+     "cu_valori": "zile(25.07.2025, 03.04.2026)",
+     "zile": [
+      "zile(25.07.2025, 03.04.2026) = 252 zile"
+     ],
+     "rezultat": "252",
+     "operanzi": [
+      {
+       "nume": "data_scadenta",
+       "valoare": "25.07.2025",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "cu scadența inițială 25.07.2025"
+      },
+      {
+       "nume": "data_platii",
+       "valoare": "03.04.2026",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "firma plătește diferența pe 03.04.2026"
+      }
+     ]
+    },
+    {
+     "nume": "dobanzi",
+     "formula": "creanta * cota_dobanda * zile_intarziere",
+     "cu_valori": "((20.000 × 0,02%) × 252)",
+     "zile": [],
+     "rezultat": "1.008",
+     "operanzi": [
+      {
+       "nume": "creanta",
+       "valoare": "20.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "o diferență de TVA nedeclarată de 20.000 lei"
+      },
+      {
+       "nume": "cota_dobanda",
+       "valoare": "0,02%",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "legea_207_2015_consolidat#art174/alin5",
+       "fragment": "Nivelul dobânzii este de 0,02% pentru fiecare zi de întârziere."
+      }
+     ]
+    },
+    {
+     "nume": "penalitate_nedeclarare_bruta",
+     "formula": "min(creanta * cota_nedeclarare * zile_intarziere, creanta)",
+     "cu_valori": "min(((20.000 × 0,08%) × 252), 20.000)",
+     "zile": [],
+     "rezultat": "4.032",
+     "operanzi": [
+      {
+       "nume": "creanta",
+       "valoare": "20.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "o diferență de TVA nedeclarată de 20.000 lei"
+      },
+      {
+       "nume": "cota_nedeclarare",
+       "valoare": "0,08%",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "legea_207_2015_consolidat#art181/alin1",
+       "fragment": "o penalitate de nedeclarare de 0,08% pe fiecare zi"
+      }
+     ]
+    },
+    {
+     "nume": "penalitate_nedeclarare_redusa",
+     "formula": "penalitate_nedeclarare_bruta * (1 - reducere)",
+     "cu_valori": "(4.032 × (1 − 75%))",
+     "zile": [],
+     "rezultat": "1.008",
+     "operanzi": [
+      {
+       "nume": "reducere",
+       "valoare": "75%",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "legea_207_2015_consolidat#art181/alin2",
+       "fragment": "Penalitatea de nedeclarare stabilită potrivit alin. (1) se reduce cu 75%"
+      }
+     ]
+    },
+    {
+     "nume": "total_accesorii",
+     "formula": "dobanzi + penalitate_nedeclarare_redusa",
+     "cu_valori": "(1.008 + 1.008)",
+     "zile": [],
+     "rezultat": "2.016",
+     "operanzi": []
+    }
+   ]
+  }
+ ]
+}

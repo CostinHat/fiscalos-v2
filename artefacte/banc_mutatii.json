@@ -1,4 +1,5 @@
 {
+ "_ce": "OP7b dovada in cealalta direcţie: greșeli cunoscute injectate pe o COPIE a inventarului (niciodata in iConta), pentru a arata ca detectorul poate produce DIFERA.",
  "n_trec": 9,
  "n_pica": 0,
  "mutaţii": [
@@ -171,13 +172,13 @@
    "valoare_injectata": "L,T,A,P,S,R,X",
    "original": {
     "clasificare": "CONCORDA",
-    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "atom": "opanaf_705_2020_d390#anexa2/pct1/alin8",
     "valoare_lege": "a/l/p/r/s/t",
     "citare_rezolvata": true
    },
    "mutant": {
     "clasificare": "DIFERA",
-    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "atom": "opanaf_705_2020_d390#anexa2/pct1/alin8",
     "valoare_lege": "a/l/p/r/s/t",
     "doar_in_cod": [
      "x"
@@ -205,13 +206,13 @@
    "valoare_injectata": "L,T,A,P,S",
    "original": {
     "clasificare": "CONCORDA",
-    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "atom": "opanaf_705_2020_d390#anexa2/pct1/alin8",
     "valoare_lege": "a/l/p/r/s/t",
     "citare_rezolvata": true
    },
    "mutant": {
     "clasificare": "DIFERA",
-    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "atom": "opanaf_705_2020_d390#anexa2/pct1/alin8",
     "valoare_lege": "a/l/p/r/s/t",
     "doar_in_cod": [],
     "doar_in_act": [

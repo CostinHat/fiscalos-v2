@@ -311,8 +311,10 @@ class Corpus(object):
                     # DECIZIA C19: textul ordinului din sursa oficiala, ANEXELE din instantaneu;
                     # fiecare parte isi poarta data formei. Anexele se recunosc dupa titlul
                     # structural "ANEXA" (91 de atomi in instantaneu; portalul nu le are).
-                    anexe = [a for a in self.pe_act.get(act, [])
-                             if (a.get("titlu_structural") or "").upper().startswith("ANEXA")]
+                    # C26: anexele au acum structura proprie (`#anexaN/...`, campul `anexa`), in
+                    # ambele straturi; ordinul = atomii oficiali din afara anexelor.
+                    anexe = [a for a in self.pe_act.get(act, []) if a.get("anexa") is not None]
+                    atomi = [a for a in atomi if a.get("anexa") is None]
                     ids = {a["id"] for a in atomi}
                     for a in atomi:
                         a["_n"] = norm(a["text"])

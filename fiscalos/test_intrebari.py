@@ -78,9 +78,9 @@ def test_fiecare_raspuns_semantic_a_trecut_verificarea_mecanica():
 
     Fiecare versiune se verifica pe corpusul cu care a fost produsa: v2 pe instantaneu, v3 cu stratul
     oficial."""
-    from fiscalos import potrivire
+    # v2 a fost produs pe instantaneul atomizat de DINAINTEA anexelor (C26): atomii lui, din git
     f = os.path.join(_RAD, "intrebari", "v2", "raspunsuri_semantic.json")
-    _verifica_semantic(json.load(open(f, encoding="utf-8")), potrivire.Corpus(oficiale=False))
+    _verifica_semantic(json.load(open(f, encoding="utf-8")), _corpus_la_commit("b0a02c6"))
     # v3 a fost produs pe atomizarea oficiala de DINAINTEA reparatiei V2; ea e in git la 7eb6fa0
     f = os.path.join(_RAD, "intrebari", "v3", "raspunsuri_semantic.json")
     _verifica_semantic(json.load(open(f, encoding="utf-8")), _corpus_la_commit("7eb6fa0"))
@@ -94,9 +94,9 @@ class _CorpusIstoric(object):
 def _corpus_la_commit(commit):
     """Instantaneul + atomii oficiali asa cum erau la `commit` (din git, nu de pe disc)."""
     import subprocess
-    from fiscalos import potrivire
-    d = dict(potrivire.Corpus(oficiale=False).dupa_id)
-    lista = subprocess.run(["git", "ls-tree", "--name-only", commit, "artefacte/atomi_oficiale/"],
+    d = {}
+    lista = subprocess.run(["git", "ls-tree", "--name-only", commit, "artefacte/atomi/",
+                            "artefacte/atomi_oficiale/"],
                            cwd=_RAD, capture_output=True, text=True).stdout.split()
     for cale in lista:
         if cale.endswith(".jsonl"):
@@ -131,3 +131,34 @@ def test_costul_e_masurat_pe_fiecare_apel():
 def test_comparatorul_recunoaste_data_in_litere():
     from fiscalos import comparatie
     assert comparatie._fapte("25 iunie 2027 inclusiv (nu 25 martie). Nota: 03.08.2026")[0] == "25 iunie"
+
+
+# ── C28: defectele de clasa ale comparatorului (numai scorul, nu motorul) ──────────────────────
+def test_C28_sumele_se_compara_ca_numere():
+    from fiscalos import comparatie
+    assert comparatie._fapte("2.020 lei") == comparatie._fapte("2020 lei") == ["2020 lei"]
+    assert comparatie._fapte("1.031,25 lei") == comparatie._fapte("1031,25 lei")
+    assert comparatie._fapte("0,5%") == comparatie._fapte("0.5%")
+    assert comparatie._fapte("21%") != comparatie._fapte("19%")          # cealalta directie
+
+
+def test_C28_faptul_negat_nu_e_faptul_principal():
+    from fiscalos import comparatie
+    k = "Nu 25% x 2.162,50 = 540,63 lei, ci minimul: 1.031,25 lei"
+    assert "540,63 lei" not in comparatie._fapte(k, fara_negate=True)
+    assert comparatie._fapte("25 iunie 2027 (nu 25 martie)", fara_negate=True)[0] == "25 iunie"
+    # fara negatie, nimic nu se taie
+    assert comparatie._fapte("Cota este 10%, fara recalculare.", fara_negate=True) == ["10%"]
+
+
+def test_C28_paranteza_de_provenienta_nu_e_temei():
+    from fiscalos import comparatie
+    t = comparatie._temeiuri_cheie("Cod fiscal art. 51 alin. (1) (mod. OUG 89/2025); art. 56 alin. (1)")
+    assert ("cf", "51") in t and ("cf", "56") in t
+    assert not any(f == "oug_89_2025" for f, _a in t)
+
+
+def test_C28_bucata_fara_act_continua_actul_anterior():
+    from fiscalos import comparatie
+    t = comparatie._temeiuri_cheie("Cod fiscal art. 291 alin. (1); art. 298 alin. (1)-(3)")
+    assert ("cf", "298") in t and (None, "298") not in t

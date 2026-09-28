@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""OP8 — PACHETUL DE PROPUNERE v5 (peste v4: C18 candidat la nivelul fin fara ambiguitate, C19
+"""OP8 — PACHETUL DE PROPUNERE v6 (peste v5: C26 anexele ca structura proprie; v5 peste v4: C18 candidat la nivelul fin fara ambiguitate, C19
 OPANAF 3769/2015 compus, V2 notele tranzitorii excluse din candidati): JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
 
 v1 si v2 RĂMÂN NEATINSE (propuneri/v1/, propuneri/v2/); probe le ingheata. v3 aplica, peste deciziile
@@ -25,7 +25,7 @@ import os
 import time
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSIUNE = "v5"
+VERSIUNE = "v6"
 STARI = ("CONCORDA", "DIFERA", "NEVERIFICAT", "NEGASIT")
 ETICHETA = {"CONCORDA": "CONCORDĂ", "DIFERA": "DIFERĂ", "NEVERIFICAT": "NEVERIFICAT",
             "NEGASIT": "NEGĂSIT"}
@@ -181,7 +181,7 @@ def construieste():
             "versiune": VERSIUNE, "generat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "aprobare": {"stare": "NEAPROBAT", "de_cine": None, "la": None},
             "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11", "C12",
-                                 "C18", "C19", "C22"],
+                                 "C18", "C19", "C22", "C26"],
             "acte_aduse_din_sursa_oficiala": acte_aduse,
             "corpus": {"sursa": man["sursa"], "luat_la": man["luat_la"],
                        "n_fisiere": man["n_fisiere"], "manifest": "corpus_manifest.json"},
@@ -199,7 +199,7 @@ def construieste():
       % VERSIUNE)
     A("")
     A("Generat %s · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3). "
-      "Versiunile anterioare, `propuneri/v1/`–`propuneri/v4/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
+      "Versiunile anterioare, `propuneri/v1/`–`propuneri/v5/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
     A("")
     A("| | |")
     A("|---|---|")
@@ -495,14 +495,15 @@ CERINTE_RATIFICATE = """
 | **C19** | OPANAF 3769/2015: textul ordinului din sursa oficială, anexele din instantaneu, fiecare cu data formei | `potrivire.COMPUSE`; atomii poartă `parte` și `data_formei` |
 | **C20, C21** | abținerea în plus se acceptă; motorul lexical rămâne reper, cu plasa | neschimbat |
 | **C22** | V2 reparat: notele tranzitorii citate nu sunt articole — nici temei candidat | 991 de atomi marcați `nota_tranzitorie` |
+| **C26** | anexele se atomizează ca structură proprie (anexă → punct/secțiune), cu id-uri proprii; temeiul le citează ca atare („anexa, pct. 238"), nu sub ultimul articol | `atomizare.py`: nivelul `anexa`; efect față de v5: aceleași clasificări (94/1/26/26), 23 de parametri cu atomul mutat la anexa lui (OMFP 3103/2017, OPANAF 705/2020, 2194/2025, 1783/2021, 3769/2015, Normele CF), 2 temeiuri candidate false retrase (d394.COTE=19 și =21 veneau din anexa lipită de art. 12 al OPANAF 3769/2015) |
 | **C6** | motorul de întrebări | livrat separat, în `intrebari/` |
 """
 
 CERINTE_NOI = """
 ### Cerințe noi, de decis
 
-Niciuna din partea propunerii. Deciziile C18–C22 sunt aplicate; cerințele motorului de întrebări sunt
-în `intrebari/v4/RAPORT.md`.
+Niciuna din partea propunerii. Deciziile C18–C22 și C26 sunt aplicate; cerințele motorului de
+întrebări sunt în `intrebari/v5/RAPORT.md`.
 """
 
 APROBARE = """# APROBARE — propunere %(versiune)s

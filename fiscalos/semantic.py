@@ -223,8 +223,11 @@ def verifica(out, atomi, intrebare, data_ref, relatie=None):
                     sursa not in citati and sursa not in tratate:
                 greseli.append("C17: atomul %s deroga de la / modifica un atom citat si raspunsul nu "
                                "il trateaza" % sursa)
-        if not (out["raspuns"] or "").strip():
-            greseli.append("raspuns gol")
+    # C24: verificarea "raspuns gol" ruleaza INTOTDEAUNA. Statea in ramura C17 (b), deci numai cand
+    # contextul avea derogari - asa au trecut in v4 raspunsuri "x", "-" si "". Gol = mai putin de doua
+    # caractere-cuvant ("Da"/"Nu" trec; "x", "-", "." nu).
+    if out["stare"] == "RASPUNS" and len(re.sub(r"\W", "", out["raspuns"] or "")) < 2:
+        greseli.append("raspuns gol")
     if out["stare"] == "INCOMPLET" and not out["lipsa"]:
         greseli.append("INCOMPLET fara faptele care lipsesc")
     return greseli

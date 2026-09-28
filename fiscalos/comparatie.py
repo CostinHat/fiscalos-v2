@@ -51,16 +51,36 @@ _LIPSA = re.compile(r"depinde|lipse|nu se poate (stabili|raspunde|determina)|ins
                     r"nu rezulta|incomplet|neprecizat", re.I)
 
 
-def _fapte(text):
+# C28 (defect de clasa, gasit dupa rularea v4): o suma se compara ca NUMAR, nu ca sir. "2.020 lei" si
+# "2020 lei", "1.031,25" si "1031,25", "0,5%" si "0.5%" sunt aceeasi valoare; comparatia pe sir le
+# despartea. Separatorul de mii se scoate, zecimala se scrie cu virgula, zecimalele nule cad.
+def _suma(x):
+    x = x.replace(" ", "")
+    if re.match(r"^\d{1,3}(\.\d{3})+(,\d+)?$", x):
+        x = x.replace(".", "")
+    elif re.match(r"^\d+\.\d{1,2}$", x):
+        x = x.replace(".", ",")
+    return re.sub(r",0+$", "", x)
+
+
+# C28: un fapt dintr-o propozitie NEGATA a cheii nu e faptul ei principal. "Nu 25% x 2.162,50 =
+# 540,63 lei, ci minimul: ... 1.031,25 lei" si "25 iunie 2027 (nu 25 martie)" numesc intai valoarea
+# RESPINSA. Se taie "nu ..." pana la ", ci" sau pana la paranteza care il inchide.
+_NEGAT = re.compile(r"\bnu\b[^;()]*?(?=,\s*ci\b|\))")
+
+
+def _fapte(text, fara_negate=False):
     t = potrivire.norm(text or "")
+    if fara_negate:
+        t = _NEGAT.sub(" ", t)
     ies = []
     for m in _FAPT.finditer(t):
         if m.group(1):
-            ies.append(re.sub(r"\s+", "", m.group(1)))
+            ies.append(_suma(re.sub(r"\s+", "", m.group(1)).rstrip("%")) + "%")
         elif m.group(2):
-            ies.append(m.group(2).replace(" ", "") + " lei")
+            ies.append(_suma(m.group(2)) + " lei")
         elif m.group(3):
-            ies.append(m.group(3) + " euro")
+            ies.append(_suma(m.group(3)) + " euro")
         elif m.group(4):
             ies.append("%s %s" % (m.group(4), m.group(5)))
         elif m.group(6):
@@ -96,7 +116,11 @@ def _familie_act_din_nume(act):
 def _temeiuri_cheie(text):
     """[(familie, articol)] numite in temeiul cheii."""
     t = potrivire.norm(text or "")
+    # C28: o paranteza cu cuvinte e PROVENIENTA ("(mod. OUG 89/2025)", "(forma OPANAF 2194/2025)",
+    # "(cota 21%)"), nu temeiul: actul numit in ea nu e actul articolului. "(1)" si "(5^6)" raman.
+    t = re.sub(r"\((?=[^)]*[a-z]{3})[^()]*\)", " ", t)
     ies = []
+    fam_anterioara = None
     for bucata in re.split(r";|\bsi\b(?=\s+[a-z])", t):
         fam = None
         for rx, f in _FAMILII:
@@ -110,6 +134,11 @@ def _temeiuri_cheie(text):
                 fam = "%s_%s_%s" % (m.group(1).replace("legea", "lege"), m.group(2), m.group(3))
         if fam is None and re.search(r"omfp\s*1802/2014|reglementari contabile", bucata):
             fam = "omfp_1802_2014"
+        # C28: "Cod fiscal art. 291 alin. (1); art. 298 alin. (1)-(3)" - bucata fara act continua
+        # actul bucatii dinainte (inainte ramanea fara act si nu se potrivea cu nimic)
+        if fam is None:
+            fam = fam_anterioara
+        fam_anterioara = fam
         # articole arabe SI romane: actele de sine statatoare (OUG 89/2025 art. III) numara roman
         for m in re.finditer(r"\bart\.?\s*(\d+(?:\^\d+)?|[ivxlcdm]+)\b", bucata):
             ies.append((fam, m.group(1).upper() if not m.group(1)[0].isdigit() else m.group(1)))
@@ -150,7 +179,7 @@ def compara(fis_raspunsuri=None):
         cheie = list(csv.DictReader(f))
     for k in cheie:
         r = R[k["id"]]
-        fapte_cheie = _fapte(k["raspuns_asteptat"])
+        fapte_cheie = _fapte(k["raspuns_asteptat"], fara_negate=True)
         tem_cheie = _temeiuri_cheie(k["temei"])
         linie = {"id": k["id"], "tip": k["tip"], "stare_motor": r["stare"],
                  "raspuns_motor": r.get("raspuns"), "raspuns_asteptat": k["raspuns_asteptat"],
