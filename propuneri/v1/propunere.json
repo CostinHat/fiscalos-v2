@@ -39,7 +39,7 @@
   "n_atomi": 46559
  },
  "corpus": {
-  "luat_la": "2026-09-28T13:17:02",
+  "luat_la": "2026-09-28T13:20:51",
   "manifest": "corpus_manifest.json",
   "mod": "DOAR CITIRE (CLAUDE.md §1)",
   "n_fisiere": 726,
@@ -47,7 +47,7 @@
   "sursa": "/home/costin/iconta_nou/anaf_surse"
  },
  "durate_masurate": {
-  "masurat_la": "2026-09-28T13:17:20",
+  "masurat_la": "2026-09-28T13:21:10",
   "pasi": [
    {
     "operatie": "OP2 instantaneu corpus + manifest SHA",
@@ -63,7 +63,7 @@
      "n_acte_cu_text": 269,
      "n_neextractibile": 4
     },
-    "secunde": 1.52
+    "secunde": 2.09
    },
    {
     "operatie": "OP4 atomizare structurala",
@@ -73,7 +73,7 @@
      "n_acte_pe_fragmente": 68,
      "n_atomi": 46559
     },
-    "secunde": 1.85
+    "secunde": 2.37
    },
    {
     "operatie": "OP5 inventar parametri iConta (citire)",
@@ -87,7 +87,7 @@
       "termen": 5
      }
     },
-    "secunde": 2.07
+    "secunde": 2.22
    },
    {
     "operatie": "OP6+OP7 potrivire si clasificare",
@@ -101,19 +101,19 @@
       "NEGASIT": 29
      }
     },
-    "secunde": 11.91
+    "secunde": 11.76
    },
    {
     "operatie": "Probe pe corpus",
     "rezumat": {
      "cod_ieșire": 0
     },
-    "secunde": 0.25
+    "secunde": 0.3
    }
   ],
-  "total_secunde": 18.14
+  "total_secunde": 19.28
  },
- "generat_la": "2026-09-28T13:17:20",
+ "generat_la": "2026-09-28T13:21:10",
  "inventar": {
   "cu_temei_declarat": 42,
   "fara_temei_declarat": 189,

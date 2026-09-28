@@ -1,6 +1,6 @@
 {
- "masurat_la": "2026-09-28T13:17:20",
- "total_secunde": 18.14,
+ "masurat_la": "2026-09-28T13:21:10",
+ "total_secunde": 19.28,
  "pasi": [
   {
    "operatie": "OP2 instantaneu corpus + manifest SHA",
@@ -12,7 +12,7 @@
   },
   {
    "operatie": "OP3 strat de text (txt/html/pdf)",
-   "secunde": 1.52,
+   "secunde": 2.09,
    "rezumat": {
     "n_acte_cu_text": 269,
     "n_neextractibile": 4
@@ -20,7 +20,7 @@
   },
   {
    "operatie": "OP4 atomizare structurala",
-   "secunde": 1.85,
+   "secunde": 2.37,
    "rezumat": {
     "n_acte": 269,
     "n_atomi": 46559,
@@ -30,7 +30,7 @@
   },
   {
    "operatie": "OP5 inventar parametri iConta (citire)",
-   "secunde": 2.07,
+   "secunde": 2.22,
    "rezumat": {
     "n_parametri": 231,
     "pe_clasa": {
@@ -44,7 +44,7 @@
   },
   {
    "operatie": "OP6+OP7 potrivire si clasificare",
-   "secunde": 11.91,
+   "secunde": 11.76,
    "rezumat": {
     "n_parametri": 231,
     "sumar": {
@@ -58,7 +58,7 @@
   },
   {
    "operatie": "Probe pe corpus",
-   "secunde": 0.25,
+   "secunde": 0.3,
    "rezumat": {
     "cod_ieșire": 0
    }

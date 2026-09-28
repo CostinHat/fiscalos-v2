@@ -135,6 +135,19 @@ def construieste():
     A("Toate cele 277 de amprente `.sha256` pe care ANAF/iConta le-au pus lângă acte confirmă "
       "hash-urile calculate aici — zero divergențe. Copierea e dovedită de două ori, nu presupusă.")
     A("")
+    A("**Garanția de citire (CLAUDE.md §1).** `_refuza_scrierea` respinge mecanic orice cale sub "
+      "`~/iconta_nou`, inclusiv prin legătură simbolică, iar inventarul nu importă niciodată cod "
+      "iConta — citește sursa și o trece prin `ast.parse`, tocmai ca să nu poată scrie bytecode în "
+      "arborele lor. Cele trei fișiere citite (`core/common.py`, `core/scadente.py`, "
+      "`core/nomenclatoare.py`) sunt neatinse, și un eșantion de 25 de fișiere din corpus dă încă "
+      "hash-urile din manifest. Ambele sunt verificate de `fiscalos/test_read_only.py`.")
+    A("")
+    A("Ce **nu** se poate afirma este că nimic nu s-a schimbat în `~/iconta_nou`: serviciul iConta "
+      "rulează (systemd `iconta-nou`, activ) și își scrie singur jurnalele. În timpul generării a "
+      "apărut acolo și un `.pyc` nou — un cache de **pytest**, pentru un modul pe care nu l-am "
+      "deschis niciodată; `pytest` nu există în interpretorul folosit aici, ci doar în "
+      "`iconta_nou/venv`. Nu e al nostru, și se scrie aici ca să nu fie citit greșit mai târziu.")
+    A("")
     A("Atomizare: **%s atomi**, %d acte pe structură de articol, %d pe fragmente (acte fără "
       "articole: pliante ANAF, structuri de formular)."
       % (format(atomi["n_atomi"], ",").replace(",", "."), atomi["n_acte_pe_articole"],

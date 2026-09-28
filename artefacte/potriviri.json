@@ -2,7 +2,7 @@
  "_ce": "OP6+OP7 potrivire si clasificare. Fiecare CONCORDA/DIFERA citeaza id-ul atomului si fragmentul verbatim (CLAUDE.md §2).",
  "citari_declarate": 40,
  "citari_rezolvate": 40,
- "facut_la": "2026-09-28T13:17:19",
+ "facut_la": "2026-09-28T13:21:09",
  "n_atomi_corpus": 46559,
  "n_conturi_in_plan_din_corpus": 583,
  "n_parametri": 231,
@@ -5206,7 +5206,7 @@
    "valoare_lege": "22.500"
   }
  ],
- "secunde": 11.86,
+ "secunde": 11.71,
  "sumar": {
   "CONCORDA": 202,
   "NEGASIT": 29

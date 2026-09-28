@@ -1,7 +1,7 @@
 {
  "_ce": "OP5 inventarul parametrilor fiscali ai iConta, prin CITIRE (AST, fara import - un import ar scrie __pycache__ in arborele iConta, deci ar incalca CLAUDE.md §1).",
  "cu_temei_declarat": 42,
- "facut_la": "2026-09-28T13:17:07",
+ "facut_la": "2026-09-28T13:20:57",
  "fara_temei_declarat": 189,
  "iconta": "/home/costin/iconta_nou",
  "n_parametri": 231,
@@ -3064,5 +3064,5 @@
   "termen": 5
  },
  "probleme": [],
- "secunde": 2.06
+ "secunde": 2.22
 }

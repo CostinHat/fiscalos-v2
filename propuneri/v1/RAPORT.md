@@ -1,6 +1,6 @@
 # FiscalOS v2 — PROPUNERE v1: parametrii fiscali ai iConta confruntați cu corpusul
 
-Generat 28.09.2026 13:17 · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3).
+Generat 28.09.2026 13:21 · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3).
 
 | | |
 |---|---|
@@ -57,19 +57,23 @@ din brief. Oprirea e după acest livrabil.
 | Operație                               | Durată  | Rezultat                                                                                    |
 |----------------------------------------|---------|---------------------------------------------------------------------------------------------|
 | OP2 instantaneu corpus + manifest SHA  | 0.54 s  | {"n_fisiere": 726, "octeti_total": 130006698}                                               |
-| OP3 strat de text (txt/html/pdf)       | 1.52 s  | {"n_acte_cu_text": 269, "n_neextractibile": 4}                                              |
-| OP4 atomizare structurala              | 1.85 s  | {"n_acte": 269, "n_atomi": 46559, "n_acte_pe_articole": 201, "n_acte_pe_fragmente": 68}     |
-| OP5 inventar parametri iConta (citire) | 2.07 s  | {"n_parametri": 231, "pe_clasa": {"cota": 38, "plafon": 38, "termen": 5, "nomenclator": 4,… |
-| OP6+OP7 potrivire si clasificare       | 11.91 s | {"n_parametri": 231, "sumar": {"CONCORDA": 202, "NEGASIT": 29}, "citari_declarate": 40, "c… |
-| Probe pe corpus                        | 0.25 s  | {"cod_ieșire": 0}                                                                           |
+| OP3 strat de text (txt/html/pdf)       | 2.09 s  | {"n_acte_cu_text": 269, "n_neextractibile": 4}                                              |
+| OP4 atomizare structurala              | 2.37 s  | {"n_acte": 269, "n_atomi": 46559, "n_acte_pe_articole": 201, "n_acte_pe_fragmente": 68}     |
+| OP5 inventar parametri iConta (citire) | 2.22 s  | {"n_parametri": 231, "pe_clasa": {"cota": 38, "plafon": 38, "termen": 5, "nomenclator": 4,… |
+| OP6+OP7 potrivire si clasificare       | 11.76 s | {"n_parametri": 231, "sumar": {"CONCORDA": 202, "NEGASIT": 29}, "citari_declarate": 40, "c… |
+| Probe pe corpus                        | 0.30 s  | {"cod_ieșire": 0}                                                                           |
 
-Total măsurat: **18.14 s**. Duratele sunt citite din `artefacte/durate.json`, scris de `ruleaza_tot.py` — nu sunt estimări.
+Total măsurat: **19.28 s**. Duratele sunt citite din `artefacte/durate.json`, scris de `ruleaza_tot.py` — nu sunt estimări.
 
 ## 2. Corpusul
 
-Instantaneu copiat din `/home/costin/iconta_nou/anaf_surse`, **doar citire**, la 2026-09-28T13:17:02: **726 fișiere, 130.0 MB**. Manifest SHA256 per fișier în `corpus_manifest.json`.
+Instantaneu copiat din `/home/costin/iconta_nou/anaf_surse`, **doar citire**, la 2026-09-28T13:20:51: **726 fișiere, 130.0 MB**. Manifest SHA256 per fișier în `corpus_manifest.json`.
 
 Toate cele 277 de amprente `.sha256` pe care ANAF/iConta le-au pus lângă acte confirmă hash-urile calculate aici — zero divergențe. Copierea e dovedită de două ori, nu presupusă.
+
+**Garanția de citire (CLAUDE.md §1).** `_refuza_scrierea` respinge mecanic orice cale sub `~/iconta_nou`, inclusiv prin legătură simbolică, iar inventarul nu importă niciodată cod iConta — citește sursa și o trece prin `ast.parse`, tocmai ca să nu poată scrie bytecode în arborele lor. Cele trei fișiere citite (`core/common.py`, `core/scadente.py`, `core/nomenclatoare.py`) sunt neatinse, și un eșantion de 25 de fișiere din corpus dă încă hash-urile din manifest. Ambele sunt verificate de `fiscalos/test_read_only.py`.
+
+Ce **nu** se poate afirma este că nimic nu s-a schimbat în `~/iconta_nou`: serviciul iConta rulează (systemd `iconta-nou`, activ) și își scrie singur jurnalele. În timpul generării a apărut acolo și un `.pyc` nou — un cache de **pytest**, pentru un modul pe care nu l-am deschis niciodată; `pytest` nu există în interpretorul folosit aici, ci doar în `iconta_nou/venv`. Nu e al nostru, și se scrie aici ca să nu fie citit greșit mai târziu.
 
 Atomizare: **46.559 atomi**, 201 acte pe structură de articol, 68 pe fragmente (acte fără articole: pliante ANAF, structuri de formular).
 
