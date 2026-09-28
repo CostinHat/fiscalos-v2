@@ -1,23 +1,28 @@
 # -*- coding: utf-8 -*-
-"""OP8 — PACHETUL DE PROPUNERE, versionat: JSON pentru maşină + raport pentru om.
+"""OP8 — PACHETUL DE PROPUNERE v2: JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
 
-DE CE O PROPUNERE si nu o aplicare (CLAUDE.md §3). FiscalOS nu are cale de scriere spre iConta, si
-asta nu e o omisiune - e forma livrabilului. Ce iese de aici e o propunere cu semnatura umana in
-coada; cine aproba vede pentru fiecare rand id-ul atomului si fragmentul verbatim, deci poate refuza
-un rand fara sa creada nimic pe cuvant.
+v1 RĂMÂNE NEATINS (propuneri/v1/), cu o singura exceptie ceruta de arhitect: textul C7, care nu
+ajunsese in fisier. v2 aplica deciziile C1-C7 si nu rescrie istoria.
 
-CE CONTINE PACHETUL:
-  propunere.json  fiecare parametru, cu valoarea din cod, atomul care o stabileste, fragmentul
-                  verbatim, valabilitatea din corpus si clasificarea
-  RAPORT.md       acelasi lucru, citibil, cu sectiunea "0. CERINTE" in fata
-  APROBARE.md     formularul de aprobare, NESEMNAT
+CE E NOU IN v2, fiecare din o decizie:
+  C2  NEVERIFICAT e stare separata. Sumarul de pe prima pagina numara CONCORDA NUMAI pe temei
+      declarat si verificat. Constantele fara temei primesc un TEMEI CANDIDAT - numai din act normativ -
+      intr-un fisier separat, livrabil pentru iConta, care NU se aplica.
+  C3  conturile se culeg numai din containerele numite CONT de iConta; restul devine CERINTA.
+  C4  perechea (atom-valoare, atom-valabilitate); lipsa celui de-al doilea se declara.
+  C7  bancul de mutaţii acopera fiecare clasa.
+
+FiscalOS nu are cale de scriere spre iConta (CLAUDE.md §3). Fiecare fisier de aici e o propunere.
 """
 import json
 import os
 import time
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSIUNE = "v1"
+VERSIUNE = "v2"
+STARI = ("CONCORDA", "DIFERA", "NEVERIFICAT", "NEGASIT")
+ETICHETA = {"CONCORDA": "CONCORDĂ", "DIFERA": "DIFERĂ", "NEVERIFICAT": "NEVERIFICAT",
+            "NEGASIT": "NEGĂSIT"}
 
 
 def _citeste(nume):
@@ -25,23 +30,76 @@ def _citeste(nume):
 
 
 def _tabel(randuri, capete):
-    lat = [max(len(str(c)), *(len(str(r[i])) for r in randuri)) if randuri else len(str(c))
-           for i, c in enumerate(capete)]
+    lat = [max([len(str(c))] + [len(str(r[i])) for r in randuri]) for i, c in enumerate(capete)]
     out = ["| " + " | ".join(str(c).ljust(lat[i]) for i, c in enumerate(capete)) + " |",
-           "|" + "|".join("-" * (l + 2) for l in lat) + "|"]
+           "|" + "|".join("-" * (x + 2) for x in lat) + "|"]
     for r in randuri:
         out.append("| " + " | ".join(str(x).ljust(lat[i]) for i, x in enumerate(r)) + " |")
     return "\n".join(out)
 
 
 def _scurt(t, n=150):
-    t = " ".join((t or "").split())
+    t = " ".join(str(t or "").split())
     return (t[:n] + "…") if len(t) > n else t
 
 
+def _valab(p):
+    v = p.get("atom_valabilitate")
+    if v:
+        s = "`%s` din **%s** (%s)" % (v["atom"], v["valabil_din"], v.get("sursa_datei", ""))
+        if v.get("nota_data"):
+            s += " — ⚠ " + v["nota_data"]
+        return s
+    if p.get("valabilitate_lipsa"):
+        return "**LIPSĂ** — " + p["valabilitate_lipsa"]
+    return "—"
+
+
+def _cerinte_iconta(inv, P):
+    """Ce ar trebui sa schimbe iConta ca FiscalOS sa poata verifica mai mult. Nu se aplica nimic."""
+    cn = inv.get("conturi_nemarcate", {})
+    cer = [{
+        "id": "R-CONT-1",
+        "decizie": "C3",
+        "ce": "Marcarea explicita a simbolurilor de cont.",
+        "de_ce": ("%d simboluri de 3-4 cifre, in %d module din core/, nu stau in niciun container "
+                  "numit CONT. Multe sunt conturi reale folosite ca literale directe "
+                  "(`startswith(\"401\")`, tuple pozitionale), dar nu se pot distinge de un an sau de "
+                  "un rand de formular fara o modificare in iConta. De aceea NU sunt in propunere."
+                  % (cn.get("n_simboluri", 0), cn.get("n_module", 0))),
+        "propunere": ("Un container sau un tip numit (ca `Temei`) pentru conturi - de ex. "
+                      "`CONTURI_<scop> = (...)` sau `Cont(\"4426\")` -, ca inventarul sa le culeaga "
+                      "mecanic, fara euristica."),
+        "exemple": cn.get("exemple", [])[:15],
+    }]
+    for p in P:
+        if p["clasa"] == "cont" and p["clasificare"] == "NEGASIT":
+            cer.append({"id": "R-CONT-%s" % p["valoare_cod"], "decizie": "C3",
+                        "ce": "Contul %s nu exista in niciun plan de conturi din corpus."
+                              % p["valoare_cod"],
+                        "de_ce": p["motiv"], "unde": p["unde_in_cod"],
+                        "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau "
+                                     "cont inexistent in plan."})
+    n_cand = sum(1 for p in P if p.get("temei_candidat"))
+    cer.append({"id": "R-TEMEI-1", "decizie": "C2",
+                "ce": "Temei structurat (`Temei(...)`) pentru constantele nesursate.",
+                "de_ce": ("Pentru %d constante fara temei, FiscalOS propune un TEMEI CANDIDAT din "
+                          "act normativ (temeiuri_candidate.json). E o propunere de aprobat uman, "
+                          "nu o verificare." % n_cand),
+                "propunere": "Dupa aprobare, iConta scrie temeiul in cod, ca obiect `Temei`."})
+    for p in P:
+        if p.get("clasificare_initiala"):
+            cer.append({"id": "R-SURSA-%s" % p["parametru"].split("/")[-1], "decizie": "C2",
+                        "ce": "Temei declarat pe o sursa care nu e act normativ: %s."
+                              % p["parametru"],
+                        "de_ce": p["motiv"],
+                        "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste "
+                                     "valoarea."})
+    return cer
+
+
 def construieste():
-    man = _citeste("../corpus_manifest.json") if False else json.load(
-        open(os.path.join(_RAD, "corpus_manifest.json"), encoding="utf-8"))
+    man = json.load(open(os.path.join(_RAD, "corpus_manifest.json"), encoding="utf-8"))
     strat = _citeste("strat_text.json")
     atomi = _citeste("atomi_raport.json")
     inv = _citeste("inventar_iconta.json")
@@ -52,355 +110,337 @@ def construieste():
     dest = os.path.join(_RAD, "propuneri", VERSIUNE)
     os.makedirs(dest, exist_ok=True)
     P = pot["potriviri"]
-    s = pot["sumar"]
+    n = {k: sum(1 for p in P if p["clasificare"] == k) for k in STARI}
+    candidate = [p for p in P if p.get("temei_candidat")]
+    cerinte = _cerinte_iconta(inv, P)
+
+    # ── livrabilele pentru iConta ────────────────────────────────────────────────────────────────
+    with open(os.path.join(dest, "temeiuri_candidate.json"), "w", encoding="utf-8") as f:
+        json.dump({
+            "_ce": "TEMEIURI CANDIDATE pentru constantele pe care iConta nu le sursează. Livrabil "
+                   "pentru iConta, DE APROBAT UMAN. NU se aplica. Fiecare candidat vine dintr-un act "
+                   "normativ (decizia C2: un formular, o structura de declaratie sau un pliant ANAF "
+                   "nu poate fi temei), si e gasit prin potrivire pe fraza-subiect, nu verificat.",
+            "versiune": VERSIUNE, "aprobare": "NEAPROBAT",
+            "candidati": [{"parametru": p["parametru"], "valoare_cod": p["valoare_cod"],
+                           "unde_in_cod": p["unde_in_cod"], "atom": p["temei_candidat"]["atom"],
+                           "act": p["temei_candidat"]["act"], "valoare_in_text": p["valoare_lege"],
+                           "verbatim": p["atom_verbatim"],
+                           "valabilitate": p.get("atom_valabilitate") or p.get("valabilitate_lipsa")}
+                          for p in candidate]}, f, ensure_ascii=False, indent=1)
+    with open(os.path.join(dest, "cerinte_iconta.json"), "w", encoding="utf-8") as f:
+        json.dump({"_ce": "Cerinte pentru iConta, rezultate din propunerea %s. Nu se aplica nimic "
+                          "automat." % VERSIUNE, "cerinte": cerinte}, f, ensure_ascii=False, indent=1)
 
     # ── JSON-ul propunerii ───────────────────────────────────────────────────────────────────────
-    propunere = {
-        "_ce": "PROPUNERE FiscalOS v2 - parametrii fiscali ai iConta confruntati cu corpusul de acte. "
-               "NU se aplica automat in iConta (CLAUDE.md §3). Cere aprobare umana.",
-        "versiune": VERSIUNE,
-        "generat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "aprobare": {"stare": "NEAPROBAT", "de_cine": None, "la": None,
-                     "nota": "Se aproba prin completarea propuneri/%s/APROBARE.md. Pana atunci, "
-                             "niciun rand nu are efect." % VERSIUNE},
-        "corpus": {"sursa": man["sursa"], "mod": man["sursa_mod"], "luat_la": man["luat_la"],
-                   "n_fisiere": man["n_fisiere"], "octeti": man["octeti_total"],
-                   "manifest": "corpus_manifest.json"},
-        "atomizare": {"n_acte": atomi["n_acte"], "n_atomi": atomi["n_atomi"],
-                      "acte_pe_articole": atomi["n_acte_pe_articole"],
-                      "acte_pe_fragmente": atomi["n_acte_pe_fragmente"],
-                      "acte_neextractibile": strat["neextractibile"]},
-        "inventar": {"iconta": inv["iconta"], "n_parametri": inv["n_parametri"],
-                     "pe_clasa": inv["pe_clasa"],
-                     "cu_temei_declarat": inv["cu_temei_declarat"],
-                     "fara_temei_declarat": inv["fara_temei_declarat"]},
-        "sumar": {"CONCORDA": s.get("CONCORDA", 0), "DIFERA": s.get("DIFERA", 0),
-                  "NEGASIT": s.get("NEGASIT", 0),
-                  "citari_declarate_de_iconta": pot["citari_declarate"],
-                  "citari_rezolvate_in_corpus": pot["citari_rezolvate"]},
-        "parametri": P,
-        "durate_masurate": durate,
-        "dovada_inversa": banc,
-    }
     with open(os.path.join(dest, "propunere.json"), "w", encoding="utf-8") as f:
-        json.dump(propunere, f, ensure_ascii=False, indent=1, sort_keys=True)
+        json.dump({
+            "_ce": "PROPUNERE FiscalOS v2. NU se aplica automat in iConta (CLAUDE.md §3).",
+            "versiune": VERSIUNE, "generat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
+            "aprobare": {"stare": "NEAPROBAT", "de_cine": None, "la": None},
+            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7"],
+            "corpus": {"sursa": man["sursa"], "luat_la": man["luat_la"],
+                       "n_fisiere": man["n_fisiere"], "manifest": "corpus_manifest.json"},
+            "sumar": {**n, "citari_declarate_de_iconta": pot["citari_declarate"],
+                      "citari_rezolvate_in_corpus": pot["citari_rezolvate"],
+                      "temeiuri_candidate": len(candidate)},
+            "parametri": P, "cerinte_iconta": cerinte,
+            "durate_masurate": durate, "dovada_inversa": banc,
+        }, f, ensure_ascii=False, indent=1, sort_keys=True)
 
-    # ── raportul lizibil ─────────────────────────────────────────────────────────────────────────
+    # ── raportul ─────────────────────────────────────────────────────────────────────────────────
     L = []
     A = L.append
-    A("# FiscalOS v2 — PROPUNERE %s: parametrii fiscali ai iConta confruntați cu corpusul" % VERSIUNE)
+    A("# FiscalOS v2 — PROPUNERE %s: parametrii fiscali ai iConta confruntați cu corpusul"
+      % VERSIUNE)
     A("")
-    A("Generat %s · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3)." %
-      time.strftime("%d.%m.%Y %H:%M"))
+    A("Generat %s · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3). "
+      "Versiunea anterioară, `propuneri/v1/`, rămâne neatinsă." % time.strftime("%d.%m.%Y %H:%M"))
     A("")
     A("| | |")
     A("|---|---|")
-    A("| **CONCORDĂ** | **%d** |" % s.get("CONCORDA", 0))
-    A("| **DIFERĂ** | **%d** |" % s.get("DIFERA", 0))
-    A("| **NEGĂSIT** | **%d** |" % s.get("NEGASIT", 0))
-    A("| Total parametri inventariați | %d |" % inv["n_parametri"])
-    A("| Citări declarate de iConta / rezolvate în corpus | %d / %d |" %
-      (pot["citari_declarate"], pot["citari_rezolvate"]))
-    A("| Atomi în corpus | %s din %d acte |" % (format(atomi["n_atomi"], ",").replace(",", "."),
-                                                atomi["n_acte"]))
+    A("| **CONCORDĂ** — pe temei declarat și verificat | **%d** |" % n["CONCORDA"])
+    A("| **DIFERĂ** | **%d** |" % n["DIFERA"])
+    A("| NEVERIFICAT — *gri: nu e verdict, e probă de aprobat* | %d |" % n["NEVERIFICAT"])
+    A("| **NEGĂSIT** | **%d** |" % n["NEGASIT"])
+    A("| Parametri inventariați | %d |" % len(P))
+    A("| Citări declarate de iConta / rezolvate în corpus | %d / %d |"
+      % (pot["citari_declarate"], pot["citari_rezolvate"]))
+    A("| Temeiuri candidate propuse (din act normativ, de aprobat) | %d |" % len(candidate))
+    A("| Dovada inversă — greșeli injectate care ies DIFERĂ/NEGĂSIT | %d / %d |"
+      % (banc["n_trec"], banc["n_trec"] + banc["n_pica"]))
+    A("")
+    A("---")
+    A("")
+    A("## 0. CERINȚE")
+    A("")
+    A(CERINTE_RATIFICATE.strip())
+    A("")
+    A(CERINTE_NOI.strip() % {
+        "n_scris": sum(1 for p in P if p.get("clasificare_initiala")),
+        "n_cand": len(candidate), "n_nemarcate": inv["conturi_nemarcate"]["n_simboluri"],
+        "n_module": inv["conturi_nemarcate"]["n_module"]})
     A("")
     A("---")
     A("")
 
-    # ── 0. CERINTE ───────────────────────────────────────────────────────────────────────────────
-    A("## 0. CERINȚE — decizii de arhitect")
-    A("")
-    A(CERINTE.strip())
-    A("")
-    A("---")
-    A("")
-
-    # ── 1. ce s-a rulat ──────────────────────────────────────────────────────────────────────────
     A("## 1. Operațiile rulate, cu durata măsurată")
     A("")
     A(_tabel([[d["operatie"], "%.2f s" % d["secunde"],
-               _scurt(json.dumps(d["rezumat"], ensure_ascii=False), 90)]
-              for d in durate["pasi"]],
+               _scurt(json.dumps(d["rezumat"], ensure_ascii=False), 80)] for d in durate["pasi"]],
              ["Operație", "Durată", "Rezultat"]))
     A("")
-    A("Total măsurat: **%.2f s**. Duratele sunt citite din `artefacte/durate.json`, scris de "
-      "`ruleaza_tot.py` — nu sunt estimări." % durate["total_secunde"])
+    A("Total măsurat: **%.2f s** (din `artefacte/durate.json`, scris de `ruleaza_tot.py`)."
+      % durate["total_secunde"])
     A("")
 
-    # ── 2. corpusul ──────────────────────────────────────────────────────────────────────────────
     A("## 2. Corpusul")
     A("")
-    A("Instantaneu copiat din `%s`, **doar citire**, la %s: **%d fișiere, %.1f MB**. "
-      "Manifest SHA256 per fișier în `corpus_manifest.json`."
-      % (man["sursa"], man["luat_la"], man["n_fisiere"], man["octeti_total"] / 1e6))
-    A("")
-    A("Toate cele 277 de amprente `.sha256` pe care ANAF/iConta le-au pus lângă acte confirmă "
-      "hash-urile calculate aici — zero divergențe. Copierea e dovedită de două ori, nu presupusă.")
-    A("")
-    A("**Garanția de citire (CLAUDE.md §1).** `_refuza_scrierea` respinge mecanic orice cale sub "
-      "`~/iconta_nou`, inclusiv prin legătură simbolică, iar inventarul nu importă niciodată cod "
-      "iConta — citește sursa și o trece prin `ast.parse`, tocmai ca să nu poată scrie bytecode în "
-      "arborele lor. Cele trei fișiere citite (`core/common.py`, `core/scadente.py`, "
-      "`core/nomenclatoare.py`) sunt neatinse, și un eșantion de 25 de fișiere din corpus dă încă "
-      "hash-urile din manifest. Ambele sunt verificate de `fiscalos/test_read_only.py`.")
-    A("")
-    A("Ce **nu** se poate afirma este că nimic nu s-a schimbat în `~/iconta_nou`: serviciul iConta "
-      "rulează (systemd `iconta-nou`, activ) și își scrie singur jurnalele. În timpul generării a "
-      "apărut acolo și un `.pyc` nou — un cache de **pytest**, pentru un modul pe care nu l-am "
-      "deschis niciodată; `pytest` nu există în interpretorul folosit aici, ci doar în "
-      "`iconta_nou/venv`. Nu e al nostru, și se scrie aici ca să nu fie citit greșit mai târziu.")
-    A("")
-    A("Atomizare: **%s atomi**, %d acte pe structură de articol, %d pe fragmente (acte fără "
-      "articole: pliante ANAF, structuri de formular)."
-      % (format(atomi["n_atomi"], ",").replace(",", "."), atomi["n_acte_pe_articole"],
-         atomi["n_acte_pe_fragmente"]))
-    A("")
-    A("**Neextractibile (%d)** — limită a uneltei, nu absență din lege:" %
-      len(strat["neextractibile"]))
-    A("")
-    for b, v in sorted(strat["neextractibile"].items()):
-        A("- `%s` — %s" % (b, v["motiv"]))
+    A("Instantaneu din `%s`, doar citire, %d fișiere, manifest SHA256 în `corpus_manifest.json` "
+      "(C1: corpusul rămâne în `.gitignore`, manifestul e proba). %s atomi în %d acte; "
+      "%d acte normative, %d surse care nu pot fi temei (formulare, structuri de declarație, "
+      "pliante ANAF, note redactate de iConta)."
+      % (man["sursa"], man["n_fisiere"], format(atomi["n_atomi"], ",").replace(",", "."),
+         atomi["n_acte"], pot.get("n_acte_normative", 0), pot.get("n_acte_nenormative", 0)))
     A("")
 
-    # ── 3. rezultatul, pe clase ──────────────────────────────────────────────────────────────────
-    A("## 3. Rezultatul, pe clase de parametri")
+    A("## 3. Rezultatul, pe clase")
     A("")
-    pe = {}
-    for p in P:
-        k = (p["clasa"], p["clasificare"])
-        pe[k] = pe.get(k, 0) + 1
     clase = sorted({p["clasa"] for p in P})
-    A(_tabel([[c, pe.get((c, "CONCORDA"), 0), pe.get((c, "DIFERA"), 0), pe.get((c, "NEGASIT"), 0)]
-              for c in clase], ["Clasă", "CONCORDĂ", "DIFERĂ", "NEGĂSIT"]))
+    A(_tabel([[c] + [sum(1 for p in P if p["clasa"] == c and p["clasificare"] == k) for k in STARI]
+              for c in clase], ["Clasă"] + [ETICHETA[k] for k in STARI]))
     A("")
-    tari = [p for p in P if p["clasificare"] == "CONCORDA"
-            and "TOT CORPUSUL" not in str(p.get("ancora"))
-            and "ancora slaba" not in str(p.get("ancora"))]
-    slabi = [p for p in P if p["clasificare"] == "CONCORDA" and p not in tari]
-    A("### CONCORDĂ nu e un singur lucru — ancora contează")
-    A("")
-    A("| Fel de ancoră | Câți | Ce înseamnă |")
-    A("|---|---|---|")
-    A("| **Temei declarat de iConta, verificat în actul declarat** | %d | Citarea lor duce la actul "
-      "corect, iar atomul de acolo poartă valoarea. Verdict verificat. |" % len(tari))
-    A("| **Ancoră slabă** | %d | Parametri pe care iConta **nu-i sursează deloc**. Tot ce s-a putut "
-      "face e o căutare pe cuvinte în corpus, cu cerința ca valoarea să stea lângă fraza-subiect. "
-      "E **probă de confirmat de arhitect**, nu verdict verificat — vezi C2. |" % len(slabi))
-    A("")
-    if slabi:
-        A("Cei cu ancoră slabă, fiecare cu atomul lui, ca să poată fi confirmați sau respinși unul "
-          "câte unul:")
-        A("")
-        A(_tabel([[p["parametru"], p["valoare_cod"], p["atom"], _scurt(str(p["valoare_lege"]), 22)]
-                  for p in sorted(slabi, key=lambda x: x["parametru"])],
-                 ["Parametru", "Cod", "Atom din corpus", "În lege"]))
-        A("")
 
-    # ── 4. registrul COTE, in detaliu ────────────────────────────────────────────────────────────
-    A("## 4. Registrul `COTE` al iConta — partea cu temei declarat")
+    A("## 4. Registrul `COTE` al iConta — valoare și valabilitate, în pereche")
     A("")
-    A("Acestea sunt cele %d intrări (20 chei, cu versiunile lor în timp) pe care iConta le "
-      "declară cu temei și citat. Pentru fiecare: valoarea din cod, atomul din corpus care o "
-      "stabilește, fragmentul verbatim și data de intrare." %
-      sum(1 for p in P if p["parametru"].startswith("cote/")))
+    A("C4: fiecare verdict citează **atomul valorii** și **atomul valabilității**. Când al doilea "
+      "lipsește, se spune. O dată de consolidare e data ultimei modificări a *textului*, nu neapărat "
+      "a valorii — nepotrivirile de dată se arată (⚠), nu se clasifică.")
     A("")
     for p in sorted((x for x in P if x["parametru"].startswith("cote/")),
                     key=lambda x: (x["nume"], x["valabil_din_cod"] or "")):
-        A("### `%s` — **%s**" % (p["parametru"], p["clasificare"]))
+        A("### `%s` — **%s**" % (p["parametru"], ETICHETA[p["clasificare"]]))
         A("")
         A("- **cod iConta:** `%s` din %s — %s" % (p["valoare_cod"], p["valabil_din_cod"],
                                                  p["unde_in_cod"]))
         A("- **temei declarat:** %s" % (p["temei_declarat_de_iconta"] or "—"))
         if p["atom"]:
-            A("- **atom din corpus:** `%s`" % p["atom"])
-            A("- **valoare în textul legii:** %s" % (p["valoare_lege"] or "—"))
-            A("- **valabil din (corpus):** %s" % (p["valabil_din_corpus"] or
-                                                  "— (atomul nu poartă notă de intrare în vigoare)"))
-            if p.get("act_modificator"):
-                A("- **act modificator:** %s" % _scurt(p["act_modificator"], 180))
-            A("- **verbatim:**")
+            A("- **atom-valoare:** `%s` → `%s`" % (p["atom"], p["valoare_lege"]))
+            A("- **atom-valabilitate:** %s" % _valab(p))
             A("")
-            A("  > %s" % _scurt(p["atom_verbatim"], 600))
-        else:
-            A("- **atom:** — (%s)" % _scurt(p["motiv"], 200))
-        if p.get("nota"):
-            A("- ⚠ **notă:** %s" % p["nota"])
+            A("  > %s" % _scurt(p["atom_verbatim"], 420))
+        if p["clasificare"] in ("NEVERIFICAT", "NEGASIT") or p.get("nota"):
+            A("")
+            A("  *%s*" % _scurt(p.get("nota") or p["motiv"], 300))
         A("")
 
-    # ── 5. DIFERA ────────────────────────────────────────────────────────────────────────────────
     A("## 5. DIFERĂ — ambele părți")
     A("")
     dif = [p for p in P if p["clasificare"] == "DIFERA"]
     if not dif:
-        A("**Niciun parametru nu iese DIFERĂ.**")
+        A("Niciun parametru.")
+    for p in dif:
+        A("### `%s`" % p["parametru"])
         A("")
-        A("Asta nu e o afirmație despre lume, ci una despre ce s-a putut dovedi, și are un motiv "
-          "care trebuie citit: un verdict *legea spune altceva* se pronunță numai când citarea "
-          "declarată de iConta duce la actul corect, iar atomul de acolo poartă un alt număr. "
-          "Pentru cei 42 de parametri cu temei declarat, citarea s-a rezolvat în toate cazurile și "
-          "valoarea s-a confirmat — deci registrul `COTE` al iConta e, pe corpusul acesta, corect. "
-          "Pentru parametrii pe care iConta nu-i sursează deloc, o divergență nu se poate DOVEDI: "
-          "ei ies NEGĂSIT, nu DIFERĂ (vezi §0, cerința C2).")
-    else:
-        for p in dif:
-            A("### `%s`" % p["parametru"])
-            A("")
-            A("- **cod iConta:** `%s` — %s" % (p["valoare_cod"], p["unde_in_cod"]))
-            A("- **text lege:** `%s` — atom `%s`" % (p["valoare_lege"], p["atom"]))
-            A("")
-            A("  > %s" % _scurt(p["atom_verbatim"], 600))
-            A("")
-    A("")
+        A("- **cod iConta:** `%s` — %s" % (p["valoare_cod"], p["unde_in_cod"]))
+        A("- **textul legii:** `%s` — atom `%s`" % (p["valoare_lege"], p["atom"]))
+        if p.get("doar_in_cod") is not None:
+            A("- **numai în cod:** %s · **numai în act:** %s"
+              % (p["doar_in_cod"] or "—", p["doar_in_act"] or "—"))
+        A("")
+        A("  > %s" % _scurt(p["atom_verbatim"], 500))
+        A("")
+        A("  *%s*" % _scurt(p["motiv"], 300))
+        A("")
 
-    # ── 6. NEGASIT ───────────────────────────────────────────────────────────────────────────────
-    A("## 6. NEGĂSIT — și de ce")
+    A("## 6. NEVERIFICAT — probă de aprobat, nu verdict")
     A("")
-    neg = [p for p in P if p["clasificare"] == "NEGASIT"]
+    nv = [p for p in P if p["clasificare"] == "NEVERIFICAT"]
+    din_decl = [p for p in nv if p.get("clasificare_initiala")]
+    din_cand = [p for p in nv if p.get("temei_candidat")]
+    A("**%d** parametri. Două feluri, cu motive diferite:" % len(nv))
+    A("")
+    A("**a) Temei declarat de iConta, dar pe o sursă care nu e act normativ (%d).** Verificarea s-a "
+      "făcut, dar pe o notă redactată de iConta sau pe un pliant — deci nu e o verificare pe lege. "
+      "Rezultatul inițial e păstrat." % len(din_decl))
+    A("")
+    if din_decl:
+        A(_tabel([[p["parametru"], p["valoare_cod"], ETICHETA[p["clasificare_initiala"]],
+                   p["atom"].split("#")[0]] for p in din_decl],
+                 ["Parametru", "Cod", "Inițial", "Sursa citată"]))
+        A("")
+    A("**b) Constantă fără temei, cu TEMEI CANDIDAT dintr-un act normativ (%d).** Lista completă, "
+      "cu fragmentul verbatim, e în `temeiuri_candidate.json` — livrabil pentru iConta, **de aprobat "
+      "uman, nu se aplică**." % len(din_cand))
+    A("")
+    if din_cand:
+        A(_tabel([[p["parametru"], p["valoare_cod"], p["temei_candidat"]["atom"],
+                   _scurt(p["valoare_lege"], 14)] for p in din_cand],
+                 ["Parametru", "Cod", "Temei candidat", "În text"]))
+        A("")
+    rest = [p for p in nv if p not in din_decl and p not in din_cand]
+    if rest:
+        A("**c) Fără temei și fără candidat (%d)** — valoarea apare doar în surse care nu pot fi "
+          "temei:" % len(rest))
+        A("")
+        for p in rest:
+            A("- `%s` = `%s` — %s" % (p["parametru"], p["valoare_cod"], _scurt(p["motiv"], 160)))
+        A("")
+
+    A("## 7. NEGĂSIT — și de ce")
+    A("")
     grupe = {}
-    for p in neg:
-        cheie = ("parametru operațional, fără act normativ de citat"
-                 if "OPERATIONAL" in p["motiv"] else
-                 "potrivire prea slabă ca să susțină un verdict (fără temei declarat de iConta)"
-                 if "prea slaba" in p["motiv"] else
-                 "simbol de cont care nu apare în planul OMFP 1802/2014"
-                 if p["clasa"] == "cont" else "altul")
-        grupe.setdefault(cheie, []).append(p)
-    for cheie in sorted(grupe):
-        A("**%s** (%d):" % (cheie, len(grupe[cheie])))
+    for p in (x for x in P if x["clasificare"] == "NEGASIT"):
+        m = p["motiv"]
+        g = ("parametru operațional, fără act normativ de citat" if "OPERATIONAL" in m else
+             "normă deschisă — nu există enumerare de confirmat" if "nu inchide lista" in m else
+             "cont folosit de iConta, absent din planurile de conturi din corpus"
+             if p["clasa"] == "cont" else
+             "potrivire prea slabă ca să susțină un verdict" if "prea slab" in m else
+             "altul")
+        grupe.setdefault(g, []).append(p)
+    for g in sorted(grupe):
+        A("**%s** (%d):" % (g, len(grupe[g])))
         A("")
-        for p in sorted(grupe[cheie], key=lambda x: x["parametru"]):
-            A("- `%s` = `%s` — %s" % (p["parametru"], p["valoare_cod"], p["unde_in_cod"]))
+        for p in sorted(grupe[g], key=lambda x: x["parametru"]):
+            A("- `%s` = `%s` — %s" % (p["parametru"], _scurt(p["valoare_cod"], 30),
+                                     _scurt(p["unde_in_cod"], 90)))
         A("")
 
-    # ── 7. termene si nomenclatoare ──────────────────────────────────────────────────────────────
-    A("## 7. Termene, nomenclatoare")
+    A("## 8. Termene și nomenclatoare")
     A("")
     for p in sorted((x for x in P if x["clasa"] in ("termen", "nomenclator")),
                     key=lambda x: x["parametru"]):
-        A("- **`%s`** = `%s` → %s · atom `%s`" % (p["parametru"], _scurt(p["valoare_cod"], 70),
-                                                 p["clasificare"], p["atom"] or "—"))
+        A("- **`%s`** = `%s` → **%s** · atom `%s`"
+          % (p["parametru"], _scurt(p["valoare_cod"], 40), ETICHETA[p["clasificare"]],
+             p["atom"] or "—"))
+        if p.get("doar_in_act"):
+            A("  - numai în act: %s — numai în cod: %s" % (p["doar_in_act"], p["doar_in_cod"] or "—"))
         if p["atom_verbatim"]:
-            A("  > %s" % _scurt(p["atom_verbatim"], 260))
+            A("  > %s" % _scurt(p["atom_verbatim"], 220))
     A("")
 
-    # ── 8. conturi ───────────────────────────────────────────────────────────────────────────────
-    A("## 8. Conturi — confruntate cu planul de conturi din OMFP 1802/2014")
+    A("## 9. Conturi")
     A("")
-    A("Planul citit din corpus: **%d simboluri**. Un simbol de cont nu e o valoare numerică — ce se "
-      "confirmă e existența lui în nomenclator, cu denumirea din act."
-      % pot["n_conturi_in_plan_din_corpus"])
+    A("C3: se culeg **numai** simbolurile din containerele pe care iConta le numește CONT "
+      "(`CONTURI_TVA`, `CONT_AVANS`, `cont_imo`…). Confruntate cu planurile de conturi din corpus: "
+      "OMFP 1802/2014 (entități economice) și OMFP 3103/2017 (entități fără scop patrimonial) — "
+      "%d simboluri citite." % pot["n_conturi_in_plan_din_corpus"])
     A("")
-    ct = [p for p in P if p["clasa"] == "cont" and p["clasificare"] == "CONCORDA"]
-    A(_tabel([[p["valoare_cod"], _scurt(p["valoare_lege"], 70)] for p in
-              sorted(ct, key=lambda x: x["valoare_cod"])[:40]],
-             ["Cont", "Denumire în OMFP 1802/2014"]))
+    ct = sorted((p for p in P if p["clasa"] == "cont"), key=lambda x: x["valoare_cod"])
+    A(_tabel([[p["valoare_cod"], ETICHETA[p["clasificare"]],
+               _scurt(p["valoare_lege"] or "—", 58),
+               "; ".join(x.split(" (")[0] for x in (p.get("planuri") or []))] for p in ct],
+             ["Cont", "Stare", "Denumire în plan", "Plan"]))
     A("")
-    A("(%d conturi confirmate; tabelul arată primele 40. Lista completă în `propunere.json`.)"
-      % len(ct))
+
+    A("## 10. Cerințe pentru iConta")
     A("")
-    A("## 9. Dovada în cealaltă direcție — detectorul poate produce DIFERĂ?")
+    A("Ce ar trebui schimbat în iConta ca FiscalOS să poată verifica mai mult. **Nu se aplică "
+      "nimic** — lista e și în `cerinte_iconta.json`.")
     A("")
-    A("**Un *0 DIFERĂ* nu spune nimic dacă detectorul nu poate contrazice niciodată.** Un clasificator "
-      "care răspunde mereu CONCORDĂ dă exact același zero și arată la fel în raport. Deci pe o "
-      "**copie în memorie** a inventarului (niciodată în iConta, niciodată în "
-      "`artefacte/inventar_iconta.json`) se injectează greșeli luate din istoria fiscală reală, și "
-      "se cere ca fiecare să iasă DIFERĂ, cu temeiul corect alături.")
+    for c in cerinte:
+        A("- **%s** (%s) — %s %s" % (c["id"], c["decizie"], c["ce"], _scurt(c.get("de_ce", ""), 220)))
+    A("")
+
+    A("## 11. Dovada în cealaltă direcție — bancul de mutații, pe fiecare clasă")
+    A("")
+    A("C7: cel puțin o mutație pe fiecare clasă, care trebuie să iasă DIFERĂ sau NEGĂSIT cu motivul "
+      "corect. Injectate pe o **copie în memorie** a inventarului — niciodată în iConta.")
     A("")
     A("**Rezultat: %d din %d trec.**" % (banc["n_trec"], banc["n_trec"] + banc["n_pica"]))
     A("")
-    for x in banc["mutaţii"]:
-        m = x["mutant"]
-        A("### %s" % x["mutaţie"])
-        A("")
-        A("- *de ce această greșeală:* %s" % x["de_ce"])
-        A("- cod real `%s` → injectat `%s`" % (x["valoare_reala_in_cod"], x["valoare_injectata"]))
-        A("- **ieșit: %s** · în lege: `%s` · `citare_rezolvata=%s`"
-          % (m["clasificare"], m["valoare_lege"], m["citare_rezolvata"]))
-        A("- atom: `%s`" % m["atom"])
-        if m["verbatim"]:
-            A("")
-            A("  > %s" % _scurt(m["verbatim"], 300))
-        A("")
-    A("**Ce iese la citarea greșită** (valoarea din cod e corectă, dar temeiul trimite la alt act): "
-      "`NEGĂSIT` cu `citare_rezolvata=False`. Nu CONCORDĂ — chiar dacă valoarea *este* corectă — "
-      "fiindcă întrebarea la care răspunde acest livrabil nu e doar *ce valoare*, ci **duce proba "
-      "unde spune?**. Și nu DIFERĂ, fiindcă actul declarat nu spune altceva: nu spune nimic despre "
-      "acest parametru.")
+    A(_tabel([[x["clasa"], x["mutaţie"], "%s → %s" % (_scurt(x["valoare_reala_in_cod"], 14),
+                                                     _scurt(x["valoare_injectata"], 14)),
+               ETICHETA.get(x["mutant"]["clasificare"], x["mutant"]["clasificare"]),
+               _scurt(x["mutant"]["valoare_lege"] or (x["mutant"].get("doar_in_act") or "")
+                      or x["mutant"]["motiv"], 40)]
+              for x in banc["mutaţii"]],
+             ["Clasă", "Mutație", "Cod → injectat", "Ieșit", "Lege / motiv"]))
     A("")
-    A("Prima rulare a bancului a picat **5 din 5** — toate cele cinci greșeli ieșeau CONCORDĂ. "
-      "Defectele găsite astfel, și reparate, sunt scrise în §0 la cerința C7.")
+    A("La **citarea greșită** (CAS 25%, corect, dar cu temei HG 146/2026): `NEGĂSIT` cu "
+      "`citare_rezolvata=False`. Nu CONCORDĂ, deși valoarea e corectă — întrebarea e și *duce proba "
+      "unde spune?* Nu DIFERĂ, fiindcă actul citat nu spune altceva: nu spune nimic despre CAS.")
     A("")
     A("---")
     A("")
     A("## Aprobare")
     A("")
-    A("Această propunere e **NEAPROBATĂ**. Se aprobă completând `propuneri/%s/APROBARE.md`. "
-      "FiscalOS nu are cale de scriere spre iConta; aplicarea e un pas uman, separat." % VERSIUNE)
-
+    A("Propunerea e **NEAPROBATĂ**. Se aprobă în `propuneri/%s/APROBARE.md`. FiscalOS nu are cale "
+      "de scriere spre iConta." % VERSIUNE)
     with open(os.path.join(dest, "RAPORT.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(L) + "\n")
 
-    # ── formularul de aprobare ───────────────────────────────────────────────────────────────────
     with open(os.path.join(dest, "APROBARE.md"), "w", encoding="utf-8") as f:
-        f.write(APROBARE % {"versiune": VERSIUNE, "concorda": s.get("CONCORDA", 0),
-                            "difera": s.get("DIFERA", 0), "negasit": s.get("NEGASIT", 0),
-                            "data": time.strftime("%d.%m.%Y")})
-    return {"dest": dest, "sumar": s, "n_parametri": len(P)}
+        f.write(APROBARE % dict(versiune=VERSIUNE, data=time.strftime("%d.%m.%Y"),
+                                **{k.lower(): n[k] for k in STARI}, cand=len(candidate)))
+    return {"dest": dest, "sumar": n, "n_parametri": len(P), "candidate": len(candidate)}
 
 
-CERINTE = """
-Cerințele de mai jos cer o decizie de arhitect. Niciuna nu blochează livrabilul — toate sunt scrise
-aici tocmai ca să nu fie luate tacit de executor.
+CERINTE_RATIFICATE = """
+### Deciziile arhitectului, aplicate în v2
 
-**C1 — Instantaneul corpusului nu intră în git.** 130 MB de acte publice, reproductibile din
-`~/iconta_nou/anaf_surse`. Ce intră e `corpus_manifest.json` (SHA256 per fișier), care e proba că un
-atom citat a fost extras din *acei* octeți. *Decizia luată de executor:* `corpus/` în `.gitignore`.
-*Ce ar schimba o decizie contrară:* repo-ul ar deveni greu, iar ZIP-ul livrabilului ar trece de
-130 MB. Dacă arhitectul vrea corpusul versionat, calea e un repo separat sau git-lfs, nu acest repo.
+| | Decizie | Cum e aplicată |
+|---|---|---|
+| **C1** | corpusul rămâne în `.gitignore`, manifestul SHA e proba | neschimbat |
+| **C2** | ancora slabă nu intră în CONCORDĂ: stare separată **NEVERIFICAT**; constantele fără temei primesc un **temei candidat** numai din act normativ, livrabil pentru iConta, neaplicat | §6, `temeiuri_candidate.json`; clasificatorul de surse e `fiscalos/surse.py` |
+| **C3** | conturile se culeg numai de unde iConta le folosește ca conturi; restul devine cerință pentru iConta | §9, §10 (R-CONT-1) |
+| **C4** | perechea (atom-valoare, atom-valabilitate); lipsa se declară | §4 |
+| **C5** | inventarul nu se extinde | neschimbat |
+| **C7** | regula ratificată; bancul acoperă fiecare clasă | §11 |
+| **C6** | motorul de întrebări | pasul următor, livrat separat |
+"""
 
-**C2 — Un parametru pe care iConta nu-l sursează nu poate produce un DIFERĂ dovedit.** Verdictul
-*legea spune altceva* cere ca citarea declarată să ducă la actul corect. Fără temei declarat, tot ce
-se poate face e o căutare pe cuvinte în 46.000 de atomi — care la prima rulare a produs 7 DIFERĂ,
-toate false. Acum acele cazuri ies NEGĂSIT, cu motivul scris. *Decizia cerută:* pentru cele 41 de
-constante fără temei, drumul e ca iConta să le dea un `Temei` (ele sunt chiar clasa pe care clichetul
-lor o numără), nu ca FiscalOS să ghicească actul. Confirmați direcția.
+CERINTE_NOI = """
+### Cerințe noi, de decis
 
-**C3 — Simbolurile de cont se culeg euristic.** Inventarul ia literalii de 3–4 cifre folosiți în
-≥3 locuri din `core/`. Euristica prinde și ce nu e cont: `2015`, `5000`, `100`, `102` ies NEGĂSIT cu
-această mențiune, în loc să fie tăiate tacit. *Decizia cerută:* se acceptă zgomotul vizibil, sau
-iConta marchează conturile explicit (un tip `Cont`, ca `Temei`) și inventarul devine exact?
+**C8 — Am aplicat C2 și temeiurilor DECLARATE, nu doar celor candidate.** C2 spune că un formular
+sau un pliant nu poate fi temei. Aplicată consecvent, regula lovește și %(n_scris)d intrări din
+registrul `COTE`: cotele reduse de TVA din 2016 citează nota `cf_art291_2016_forma_initiala`, pe care
+`PROVENIENTA.json` a iConta o clasifică ea însăși `SCRIS` (redactată de ei), iar tichetele de masă din
+2025 citează pliantul `anaf_limite_2025`. O valoare „verificată" pe o notă scrisă de cel verificat e o
+tautologie. Ele ies acum NEVERIFICAT, cu rezultatul inițial păstrat în `clasificare_initiala`.
+*De decis:* extensia se ratifică, sau C2 se aplică numai temeiurilor candidate?
 
-**C4 — Data de intrare în vigoare și valoarea se pot dovedi pe atomi DIFERIȚI.** Pentru cota de TVA,
-Legea 141/2025 din corpus poartă valoarea (21%), iar notele „(la 01-08-2025, …)" sunt ale
-consolidatului de Cod fiscal. Raportul le ține în coloane separate și nu le amestecă. *Decizia
-cerută:* propunerea să citeze un singur atom „cel mai bun", sau o pereche (atom-valoare,
-atom-valabilitate)? Astăzi citează atomul valorii și declară când data lipsește de pe el.
+**C9 — Un nomenclator care e o submulțime strictă a normei iese DIFERĂ.** `d394.TIPURI`: OPANAF
+2194/2025 enumeră `L/A/LS/AS/AÎ/V/C/N/Î1/Î2`, codul are aceleași opt fără `Î1/Î2`. iConta scrie în
+`nomenclatoare.py` că `Î1/Î2` sunt secțiunile de încasări prin AMEF, neconstruite încă — deci nu e o
+valoare greșită, ci o acoperire incompletă, declarată. Vechiul prag de 80%% o ascundea.
+*De decis:* rămâne DIFERĂ (cu ambele părți, cum e acum), sau o acoperire incompletă declarată de
+iConta e o stare separată?
 
-**C5 — Ce NU s-a inventariat**, scris fiindcă tăcerea unui scan se citește ca absență: planul de
-conturi al fiecărei firme (e date în bază, nu cod), valorile operaționale fără act normativ, și
-nomenclatoarele derivate din XSD-uri. Dacă vreuna din ele trebuie să intre în livrabilul următor,
-e o decizie, nu o omisiune.
+**C10 — Temeiurile candidate sunt găsite prin potrivire pe frază, nu verificate.** %(n_cand)d
+candidați, toți din acte normative, fiecare cu fragmentul verbatim. Frazele-subiect le-am scris citind
+ce face fiecare modul iConta (de ex. `casa.py` spune în antet că plafoanele sunt din Legea 70/2015).
+Doi candidați pentru plafoanele de numerar trimit la actele care au *modificat* Legea 70/2015 (OUG
+115/2023, Legea 296/2023), nu la Legea 70/2015 însăși. *De decis:* un candidat poate fi actul
+modificator, sau trebuie să fie întotdeauna actul de bază, consolidat?
 
-**C6 — Motorul de întrebări nu s-a început** (`FiscalOS_intrebari_test_50.csv`), conform punctului 7
-din brief. Oprirea e după acest livrabil.
+**C11 — Unitatea unei constante nesursate se citește din folosirea ei.** `d216.COTA_IMPOZIT = 0.3`
+e folosită ca `baza * COTA_IMPOZIT / 100`, deci înseamnă 0,3%%, nu 30%% (cum stă în registrul `COTE`,
+unde ratele sunt fracții). Fără această citire, potrivirea îi găsea un „temei" în normele despre
+impozitul pe clădiri. Regula e: `NUME / 100` în modul ⇒ procent literal. *De decis:* se acceptă, sau
+iConta își declară unitatea explicit (cerință R-UNIT)?
 """
 
 APROBARE = """# APROBARE — propunere %(versiune)s
 
-Propunerea `propuneri/%(versiune)s/propunere.json` + `RAPORT.md`, generată la %(data)s:
+`propuneri/%(versiune)s/` — `propunere.json`, `RAPORT.md`, `temeiuri_candidate.json`,
+`cerinte_iconta.json` — generate la %(data)s:
 
-- CONCORDĂ: **%(concorda)d**
+- CONCORDĂ (pe temei declarat verificat): **%(concorda)d**
 - DIFERĂ: **%(difera)d**
+- NEVERIFICAT: **%(neverificat)d**
 - NEGĂSIT: **%(negasit)d**
+- Temeiuri candidate propuse: **%(cand)d**
 
-FiscalOS **nu are cale de scriere spre iConta**. Aplicarea oricărui rând din această propunere e un
-pas uman, separat de generarea ei.
+FiscalOS **nu are cale de scriere spre iConta**. Aplicarea oricărui rând — inclusiv a unui temei
+candidat — e un pas uman, separat.
 
 ## Semnătură
 
-- [ ] Am citit §0 CERINȚE și am răspuns la C1–C6.
-- [ ] Am verificat, prin eșantion, că fragmentele verbatim citate se găsesc în `corpus/` la id-ul
-      de atom indicat.
+- [ ] Am citit §0 și am răspuns la C8–C11.
+- [ ] Am verificat prin eșantion fragmentele verbatim la id-ul de atom indicat.
 - [ ] Aprob propunerea în întregime.
 - [ ] Aprob parțial — rândurile refuzate, cu motiv:
 
@@ -408,14 +448,20 @@ pas uman, separat de generarea ei.
 (rândurile refuzate)
 ```
 
+- [ ] Aprob temeiurile candidate: toate / numai cele de mai jos:
+
+```
+(parametru → temei aprobat)
+```
+
 Aprobat de: ______________________  Data: ____________
 
-Stare: **NEAPROBAT** (se schimbă manual, la semnare)
+Stare: **NEAPROBAT**
 """
 
 
 if __name__ == "__main__":
     t0 = time.time()
     r = construieste()
-    print("propunere %s: %s | %d parametri | %.1f s" % (VERSIUNE, r["sumar"], r["n_parametri"],
-                                                       time.time() - t0))
+    print("propunere %s: %s | %d parametri | %d candidati | %.1f s"
+          % (VERSIUNE, r["sumar"], r["n_parametri"], r["candidate"], time.time() - t0))

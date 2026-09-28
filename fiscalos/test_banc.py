@@ -115,7 +115,9 @@ def test_ancora_slaba_cere_valoarea_langa_subiect():
     for cheie in ("nesursat/salarizare._PCT_DEDUCERE_BAZA=0.20",
                   "nesursat/salarizare._PCT_DEDUCERE_BAZA=0.35"):
         assert P[cheie]["clasificare"] == "NEGASIT", (cheie, P[cheie].get("atom"))
-    # iar cel corect din aceeasi familie rămâne confirmat
+    # iar cel corect din aceeasi familie primeste TEMEI CANDIDAT - dar NU CONCORDA (decizia C2):
+    # iConta nu-l sursează, deci ce s-a gasit e o propunere de aprobat, nu o verificare
     bun = P["nesursat/salarizare.PRAG_VENIT_DEDUCERE=2000"]
-    assert bun["clasificare"] == "CONCORDA"
+    assert bun["clasificare"] == "NEVERIFICAT", bun["clasificare"]
+    assert bun["temei_candidat"]["atom"] == "cod_fiscal_227_2015_consolidat#art77/alin3"
     assert "Deducerea personală de bază" in bun["atom_verbatim"]

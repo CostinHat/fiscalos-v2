@@ -1,14 +1,18 @@
 {
  "_ce": "OP7b dovada in cealalta direcţie: greșeli cunoscute injectate pe o COPIE a inventarului (niciodata in iConta), pentru a arata ca detectorul poate produce DIFERA.",
- "n_trec": 5,
+ "n_trec": 9,
  "n_pica": 0,
  "mutaţii": [
   {
+   "clasa": "cota",
    "mutaţie": "dividende 10% in loc de 16%",
    "de_ce": "cota reala din 2025 (OUG 156/2024), rămasa in cod dupa ce Legea 141/2025 a urcat-o la 16% de la 01.01.2026 - clasa 'cota veche rămasa in cod'",
    "parametru": "cote/impozit_dividend@2026-01-01",
    "aștept": "DIFERA",
    "lege_conţine": "16",
+   "motiv_conţine": null,
+   "doar_in_cod": null,
+   "doar_in_act": null,
    "valoare_reala_in_cod": "0.16",
    "valoare_injectata": "0.10",
    "original": {
@@ -21,6 +25,8 @@
     "clasificare": "DIFERA",
     "atom": "legea_141_2025_consolidat#artII",
     "valoare_lege": "16",
+    "doar_in_cod": null,
+    "doar_in_act": null,
     "citare_rezolvata": true,
     "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.10 vs 16) - la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
@@ -28,11 +34,15 @@
    }
   },
   {
+   "clasa": "cota",
    "mutaţie": "TVA standard 19% in loc de 21%",
    "de_ce": "cota de dinainte de 01.08.2025; exact greșeala pe care Legea 141/2025 a produs-o in orice sistem care n-a fost actualizat",
    "parametru": "cote/tva_standard@2025-08-01",
    "aștept": "DIFERA",
    "lege_conţine": "21",
+   "motiv_conţine": null,
+   "doar_in_cod": null,
+   "doar_in_act": null,
    "valoare_reala_in_cod": "0.21",
    "valoare_injectata": "0.19",
    "original": {
@@ -45,6 +55,8 @@
     "clasificare": "DIFERA",
     "atom": "legea_141_2025_consolidat#art291/alin1",
     "valoare_lege": "21",
+    "doar_in_cod": null,
+    "doar_in_act": null,
     "citare_rezolvata": true,
     "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.19 vs 21) - la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
@@ -52,11 +64,45 @@
    }
   },
   {
+   "clasa": "cota",
+   "mutaţie": "cota micro 5% - valoare care nu exista in niciun act",
+   "de_ce": "nu e o cota istorica, e o valoare pur greșita; testeaza daca detectorul cere potrivirea valorii sau se mulţumeşte cu subiectul",
+   "parametru": "cote/impozit_micro@2023-01-01",
+   "aștept": "DIFERA",
+   "lege_conţine": "1",
+   "motiv_conţine": null,
+   "doar_in_cod": null,
+   "doar_in_act": null,
+   "valoare_reala_in_cod": "0.01",
+   "valoare_injectata": "0.05",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+    "valoare_lege": "1%",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
+    "valoare_lege": "1",
+    "doar_in_cod": null,
+    "doar_in_act": null,
+    "citare_rezolvata": true,
+    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.05 vs 1) - la nivelul: ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
+    "verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%."
+   }
+  },
+  {
+   "clasa": "plafon",
    "mutaţie": "salariu minim 4050 pe o data din semestrul 2 2026",
    "de_ce": "valoarea HG 1506/2024, aplicata unei perioade guvernate de HG 146/2026 (4.325) - clasa 'plafon vechi aplicat unei perioade noi'",
    "parametru": "cote/salariu_minim@2026-07-01",
    "aștept": "DIFERA",
    "lege_conţine": "4.325",
+   "motiv_conţine": null,
+   "doar_in_cod": null,
+   "doar_in_act": null,
    "valoare_reala_in_cod": "4325",
    "valoare_injectata": "4050",
    "original": {
@@ -72,6 +118,8 @@
      "4.325",
      "949"
     ],
+    "doar_in_cod": null,
+    "doar_in_act": null,
     "citare_rezolvata": true,
     "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (4050 vs ['4.325', '949']) - la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
@@ -79,35 +127,144 @@
    }
   },
   {
-   "mutaţie": "cota micro 5% - valoare care nu exista in niciun act",
-   "de_ce": "nu e o cota istorica, e o valoare pur greșita; testeaza daca detectorul cere potrivirea valorii sau se mulţumeşte cu subiectul",
-   "parametru": "cote/impozit_micro@2023-01-01",
+   "clasa": "termen",
+   "mutaţie": "decontul de TVA (D300) scadent pe 20 in loc de 25",
+   "de_ce": "o zi greșita de scadenta - clasa pe care vechiul detector de termene NU o putea prinde: cauta fraza construita din ziua din cod, deci pentru 20 nu gasea nimic si iesea NEGASIT, nu DIFERA",
+   "parametru": "termen/d300",
    "aștept": "DIFERA",
-   "lege_conţine": "1",
-   "valoare_reala_in_cod": "0.01",
-   "valoare_injectata": "0.05",
+   "lege_conţine": "25",
+   "motiv_conţine": null,
+   "doar_in_cod": null,
+   "doar_in_act": null,
+   "valoare_reala_in_cod": "25",
+   "valoare_injectata": "20",
    "original": {
     "clasificare": "CONCORDA",
-    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
-    "valoare_lege": "1%",
+    "atom": "cod_fiscal_227_2015_consolidat#art323/alin1",
+    "valoare_lege": "25",
     "citare_rezolvata": true
    },
    "mutant": {
     "clasificare": "DIFERA",
-    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
-    "valoare_lege": "1",
+    "atom": "cod_fiscal_227_2015_consolidat#art323/alin1",
+    "valoare_lege": "25",
+    "doar_in_cod": null,
+    "doar_in_act": null,
     "citare_rezolvata": true,
-    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
-    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.05 vs 1) - la nivelul: ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
-    "verbatim": "Cota de impozit pe veniturile microîntreprinderilor este de 1%."
+    "ancora": "numele declaratiei + depunere, in cod_fiscal_227_2015_consolidat",
+    "motiv": "atomul care stabileste depunerea declaratiei scrie scadenta ['25'], codul foloseste 20 (numele declaratiei + depunere, in cod_fiscal_227_2015_consolidat)",
+    "verbatim": "Persoanele înregistrate conform art. 316 trebuie să depună la organele fiscale competente, pentru fiecare perioadă fiscală, un decont de taxă, până la data de 25 inclusiv a lunii următoare celei în care se încheie perioada fiscală respectivă."
    }
   },
   {
+   "clasa": "nomenclator",
+   "mutaţie": "D390 cu un tip de operaţiune inventat (X)",
+   "de_ce": "o valoare IN PLUS in cod. Vechiul prag (>=80% din valori prezente) o lasa sa treaca: 6 din 7 = 86%",
+   "parametru": "nomenclator/d390.TIPURI",
+   "aștept": "DIFERA",
+   "lege_conţine": null,
+   "motiv_conţine": null,
+   "doar_in_cod": [
+    "x"
+   ],
+   "doar_in_act": [],
+   "valoare_reala_in_cod": "L,T,A,P,S,R",
+   "valoare_injectata": "L,T,A,P,S,R,X",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "valoare_lege": "a/l/p/r/s/t",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "valoare_lege": "a/l/p/r/s/t",
+    "doar_in_cod": [
+     "x"
+    ],
+    "doar_in_act": [],
+    "citare_rezolvata": true,
+    "ancora": "enumerarea, gasita in actul declarat (opanaf_705_2020_d390)",
+    "motiv": "enumerarea actului nu e aceeasi cu a codului: numai in cod ['x'], numai in act - (actul declarat (opanaf_705_2020_d390))",
+    "verbatim": "lit. c) şi d) din Codul fiscal. Coloana \"Tipul operaţiunii\": L - pentru livrări intracomunitare de bunuri către alte state membre; T - pentru livrări în cadrul unei operaţiuni triunghiulare; A - pentru achiziţii intracomunitare de bunuri, achiziţii care urmează transferurilor scutite, achiziţii efectuate de beneficiarul livrării ulterioare în cadrul unei operaţiuni triunghiulare din alte state mem"
+   }
+  },
+  {
+   "clasa": "nomenclator",
+   "mutaţie": "D390 fara tipul R",
+   "de_ce": "o valoare pe care norma o enumera, dar codul n-o are - invizibila pentru un detector care verifica doar ce e in cod",
+   "parametru": "nomenclator/d390.TIPURI",
+   "aștept": "DIFERA",
+   "lege_conţine": null,
+   "motiv_conţine": null,
+   "doar_in_cod": [],
+   "doar_in_act": [
+    "r"
+   ],
+   "valoare_reala_in_cod": "L,T,A,P,S,R",
+   "valoare_injectata": "L,T,A,P,S",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "valoare_lege": "a/l/p/r/s/t",
+    "citare_rezolvata": true
+   },
+   "mutant": {
+    "clasificare": "DIFERA",
+    "atom": "opanaf_705_2020_d390#art10/alin8",
+    "valoare_lege": "a/l/p/r/s/t",
+    "doar_in_cod": [],
+    "doar_in_act": [
+     "r"
+    ],
+    "citare_rezolvata": true,
+    "ancora": "enumerarea, gasita in actul declarat (opanaf_705_2020_d390)",
+    "motiv": "enumerarea actului nu e aceeasi cu a codului: numai in cod -, numai in act ['r'] (actul declarat (opanaf_705_2020_d390))",
+    "verbatim": "lit. c) şi d) din Codul fiscal. Coloana \"Tipul operaţiunii\": L - pentru livrări intracomunitare de bunuri către alte state membre; T - pentru livrări în cadrul unei operaţiuni triunghiulare; A - pentru achiziţii intracomunitare de bunuri, achiziţii care urmează transferurilor scutite, achiziţii efectuate de beneficiarul livrării ulterioare în cadrul unei operaţiuni triunghiulare din alte state mem"
+   }
+  },
+  {
+   "clasa": "cont",
+   "mutaţie": "cont TVA deductibila scris 4262 in loc de 4426",
+   "de_ce": "cifre inversate intr-un simbol de cont - contul nu exista in niciun plan",
+   "parametru": "cont/4426",
+   "aștept": "NEGASIT",
+   "lege_conţine": null,
+   "motiv_conţine": "nu apare in niciun plan de conturi",
+   "doar_in_cod": null,
+   "doar_in_act": null,
+   "valoare_reala_in_cod": "4426",
+   "valoare_injectata": "4262",
+   "original": {
+    "clasificare": "CONCORDA",
+    "atom": "omfp_1802_2014_reglementari_consolidat#artII~2/alin13",
+    "valoare_lege": "4426 TVA deductibilă (A)",
+    "citare_rezolvata": null
+   },
+   "mutant": {
+    "clasificare": "NEGASIT",
+    "atom": null,
+    "valoare_lege": null,
+    "doar_in_cod": null,
+    "doar_in_act": null,
+    "citare_rezolvata": null,
+    "ancora": "plan de conturi OMFP 1802/2014",
+    "motiv": "iConta foloseste 4262 ca CONT (core/ in 1 locuri: contare_facturi.py:44 CONTURI_TVA), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+    "verbatim": ""
+   }
+  },
+  {
+   "clasa": "citare",
    "mutaţie": "citare spre actul greșit (CAS 25% cu temei HG 146/2026)",
    "de_ce": "valoarea din cod e CORECTA (25%), dar temeiul declarat trimite la o hotarare de salariu minim. Intrebarea nu e 'ce valoare', ci 'proba duce unde spune?'",
    "parametru": "cote/cas@2018-01-01",
-   "aștept": "de_raportat",
+   "aștept": "NEGASIT",
    "lege_conţine": null,
+   "motiv_conţine": "Nu se caută in alte acte",
+   "doar_in_cod": null,
+   "doar_in_act": null,
+   "citare_rezolvata": false,
    "valoare_reala_in_cod": "0.25",
    "valoare_injectata": "0.25",
    "original": {
@@ -120,6 +277,8 @@
     "clasificare": "NEGASIT",
     "atom": "hg_146_2026_salariu_minim#art1",
     "valoare_lege": null,
+    "doar_in_cod": null,
+    "doar_in_act": null,
     "citare_rezolvata": false,
     "ancora": "ancora pe articolul din Temei (hg_146_2026_salariu_minim#art1)",
     "motiv": "atomii gasiti prin temeiul declarat nu poarta nicio valoare de forma cerută (procent) - deci niciunul nu stabileste parametrul. Nu se caută in alte acte: cand iConta declara un temei, verdictul se ia din actul acela.",

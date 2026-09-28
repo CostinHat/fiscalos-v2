@@ -47,6 +47,22 @@ conturi al fiecărei firme (e date în bază, nu cod), valorile operaționale f�
 nomenclatoarele derivate din XSD-uri. Dacă vreuna din ele trebuie să intre în livrabilul următor,
 e o decizie, nu o omisiune.
 
+**C7 — Bancul de mutații a schimbat regulile de clasificare, și asta e o decizie de ratificat.**
+Prima lui rulare a picat 5 din 5: fiecare greșeală injectată ieșea CONCORDĂ. Cauza nu era un reglaj,
+ci o regulă greșită — căutarea valorii se întindea până la ultimul atom din corpus, iar legislația
+fiscală conține aproape orice procent pe undeva, deci o valoare greșită își găsea mereu o gazdă.
+Regula de acum: **când iConta declară un temei, verdictul se ia din actul acela; nu există salvare
+din alt act.** Consecința de ratificat: un parametru al cărui temei declarat nu duce la un atom care
+îl stabilește iese NEGĂSIT cu `citare_rezolvata=False`, *chiar dacă valoarea din cod e corectă*.
+Patru defecte adiacente, toate măsurate, sunt reparate în aceeași trecere: formele procentului
+pierdeau zeroul final (10% se confirma pe un text care spune 1%); două indicii de căutare conțineau
+ele însele valoarea; un indiciu se confirma pe cuvinte împrăștiate în ordine inversă; iar un DIFERĂ
+se putea pronunța pe un fragment de tabel OCR. Detaliile, în §9.
+
+*(Adăugat ulterior, la cererea arhitectului: textul C7 fusese scris în generator, dar nu ajunsese în
+acest fișier — patch-ul care îl inserase n-a rulat, fiindcă verificarea de sintaxă dinaintea lui
+eșuase și lanțul de comenzi s-a oprit. Restul v1 e neatins.)*
+
 **C6 — Motorul de întrebări nu s-a început** (`FiscalOS_intrebari_test_50.csv`), conform punctului 7
 din brief. Oprirea e după acest livrabil.
 

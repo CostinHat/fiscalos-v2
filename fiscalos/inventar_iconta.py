@@ -257,14 +257,33 @@ def din_nomenclatoare():
     return par, probleme
 
 
-def din_conturi():
-    """Simbolurile de cont scrise literal in modulele de productie.
+def _nume_de_cont(nume):
+    """iConta numeste ea insasi un container de conturi: CONTURI_TVA, CONT_AVANS, cont_imo, cont.
 
-    Ele AU o sursa - planul de conturi din OMFP 1802/2014, care e in corpus - dar codul nu o citeaza
-    nicaieri. Deci intra cu `temei_declarat = None`: intrebarea pe care o pun corpusului nu e "ce
-    valoare are", ci "exista contul asta in planul de conturi, si cu ce denumire".
+    Se cere TOKENUL `cont`/`conturi` (numele taiat pe `_`), nu subsirul: altfel `DECONT_LUNG`,
+    `control`, `contrib`, `contracte` si `continut` - toate masurate in core/ - ar trece drept conturi.
     """
-    folos = {}
+    return any(t.lower() in ("cont", "conturi") for t in nume.split("_") if t)
+
+
+def din_conturi():
+    """Simbolurile de cont, culese NUMAI de unde iConta le foloseste ca CONTURI.
+
+    DECIZIA C3 (Costin): "zgomotul nu se accepta intr-o propunere de aprobat uman. Conturile se culeg
+    doar din locurile unde iConta le foloseste ca conturi, nu din orice literal de 3-4 cifre."
+    Prima versiune lua orice literal de 3-4 cifre folosit in >=3 locuri si a adus in propunere `2015`
+    (un an), `5000` (un plafon), `100`/`102` (randuri de formular).
+
+    SEMNALUL de acum e numele pe care IConta il da containerului: un literal conteaza ca simbol de cont
+    numai daca sta in partea dreapta a unei atribuiri al carei nume poarta tokenul `cont`/`conturi`.
+    E numirea lor, nu ghicirea noastra. Masurat: 62 de simboluri marcate astfel, 364 nemarcate.
+
+    CE SE PIERDE, si se scrie: cele 364 nemarcate nu sunt neaparat altceva decat conturi - multe sunt
+    conturi reale folosite ca literale directe (`startswith("401")`, tuple pozitionale). Ele nu se pot
+    distinge de un an sau de un rand de formular FARA o modificare in iConta. Deci nu intra in
+    propunere; intra ca CERINTA pentru iConta (`conturi_nemarcate`), cu numarul lor.
+    """
+    folos, nemarcate = {}, {}
     rad = os.path.join(ICONTA, "core")
     for nume in sorted(os.listdir(rad)):
         if not nume.endswith(".py") or nume.startswith("test_") or nume.startswith("proba"):
@@ -272,18 +291,28 @@ def din_conturi():
         cale = os.path.join(rad, nume)
         try:
             with open(cale, encoding="utf-8") as f:
-                src = f.read()
-            arb = ast.parse(src)
+                arb = ast.parse(f.read())
         except (SyntaxError, OSError):
             continue
+        marcate_aici = set()
         for n in ast.walk(arb):
-            if isinstance(n, ast.Constant) and isinstance(n.value, str) and _CONT.match(n.value):
-                folos.setdefault(n.value, []).append("%s:%d" % (nume, n.lineno))
+            if not isinstance(n, ast.Assign):
+                continue
+            tinte = [t.id for t in n.targets if isinstance(t, ast.Name)]
+            if not tinte or not _nume_de_cont(tinte[0]):
+                continue
+            for sub in ast.walk(n.value):
+                if (isinstance(sub, ast.Constant) and isinstance(sub.value, str)
+                        and _CONT.match(sub.value)):
+                    folos.setdefault(sub.value, []).append("%s:%d %s" % (nume, sub.lineno, tinte[0]))
+                    marcate_aici.add(id(sub))
+        for n in ast.walk(arb):
+            if (isinstance(n, ast.Constant) and isinstance(n.value, str) and _CONT.match(n.value)
+                    and id(n) not in marcate_aici):
+                nemarcate.setdefault(n.value, set()).add(nume)
     par = []
     for cont in sorted(folos):
         locuri = folos[cont]
-        if len(locuri) < 3:      # aparitie izolata: prea probabil un cod care nu e cont
-            continue
         par.append({
             "id": "cont/%s" % cont,
             "clasa": "cont",
@@ -291,11 +320,19 @@ def din_conturi():
             "valoare_cod": cont,
             "procent_cod": None,
             "valabil_din_cod": None,
-            "unde": "core/ in %d locuri: %s" % (len(locuri), ", ".join(locuri[:4])),
+            "unde": "core/ in %d locuri: %s" % (len(locuri), ", ".join(locuri[:3])),
             "temei_declarat": None,
-            "sursa_inventar": "simboluri de cont din modulele de productie",
+            "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
         })
+    doar_nemarcate = {k: v for k, v in nemarcate.items() if k not in folos}
+    CONTURI_NEMARCATE.clear()
+    CONTURI_NEMARCATE.update({"n_simboluri": len(doar_nemarcate),
+                              "exemple": sorted(doar_nemarcate)[:25],
+                              "n_module": len({m for v in doar_nemarcate.values() for m in v})})
     return par, []
+
+
+CONTURI_NEMARCATE = {}
 
 
 # `Temei` e importat sub alias in unele module (`from core.common import Temei as _Tm` in d101.py).
@@ -341,6 +378,24 @@ def _valori_literale(nod):
     return ies
 
 
+def _folosit_ca_procent(arb, nume_c):
+    """True daca modulul imparte constanta la 100 (`X * NUME / 100`) - adica NUME e un PROCENT
+    LITERAL (0.3 = 0,3%), nu o fractie (0.21 = 21%).
+
+    DE CE DIN FOLOSIRE. Registrul COTE tine ratele ca fracţii (0.21), dar constantele nesursate nu au
+    o convenţie: `d216.COTA_IMPOZIT = 0.3` e folosita ca `baza * COTA_IMPOZIT / 100`, deci inseamna
+    0,3% - impozitul special pe bunuri de valoare mare din Legea 296/2023. Citita ca fractie, devenea
+    30%, iar potrivirea ii gasea un "temei candidat" in normele despre coeficienţii impozitului pe
+    cladiri. Literalul singur nu spune unitatea; codul care il foloseste o spune.
+    """
+    for n in ast.walk(arb):
+        if (isinstance(n, ast.BinOp) and isinstance(n.op, ast.Div)
+                and isinstance(n.right, ast.Constant) and n.right.value in (100, 100.0)):
+            if any(isinstance(x, ast.Name) and x.id == nume_c for x in ast.walk(n.left)):
+                return True
+    return False
+
+
 def din_constante_nesursate():
     """Constante fiscale de MODUL fara `Temei` in stramosi - clasa pe care clichetul lor o numara.
 
@@ -376,10 +431,12 @@ def din_constante_nesursate():
             if any(isinstance(x, ast.Call) and _APEL_TEMEI.match(_nume_apel(x.func))
                    for x in ast.walk(n.value)):
                 continue
+            ca_procent = _folosit_ca_procent(arb, nume_c)
             for v in _valori_literale(n.value):
                 if v in structura:
                     continue
                 par.append({
+                    "unitate": "procent_literal" if ca_procent else None,
                     "id": "nesursat/%s.%s=%s" % (nume[:-3], nume_c, v),
                     "clasa": _clasa_cheie(nume_c),
                     "nume": nume_c,
@@ -420,6 +477,7 @@ def inventariaza():
         "cu_temei_declarat": sum(1 for p in unic if p["temei_declarat"]),
         "fara_temei_declarat": sum(1 for p in unic if not p["temei_declarat"]),
         "probleme": probleme,
+        "conturi_nemarcate": dict(CONTURI_NEMARCATE),
         "parametri": unic,
         "secunde": round(time.time() - t0, 2),
     }

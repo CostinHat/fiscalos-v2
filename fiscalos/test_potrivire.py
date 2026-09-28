@@ -114,21 +114,43 @@ def test_difera_nu_se_pronunta_fara_ancora_in_actul_declarat():
         assert "prea slaba" in t["motiv"]
 
 
-def test_planul_de_conturi_nu_culege_ani_si_randuri_de_formular():
-    """`2015` (an), `100`/`102` (randuri de formular) nu sunt conturi. Toate trei ieseau CONCORDA."""
-    p, _r = _pot()
-    for fals in ("cont/2015", "cont/100", "cont/102", "cont/5000"):
-        assert p[fals]["clasificare"] == "NEGASIT", (fals, p[fals]["valoare_lege"])
+def test_non_conturile_nici_nu_mai_intra_in_inventar():
+    """C3: `2015` (an), `5000` (plafon), `100`/`102` (randuri de formular) nu sunt conturi.
+
+    Prima versiune le culegea (orice literal de 3-4 cifre) si le raporta NEGASIT "cu mentiune". Decizia
+    C3: zgomotul nu intra intr-o propunere de aprobat uman. Acum se culeg numai simbolurile din
+    containere pe care iConta le numeste CONT; restul se numara ca cerinta pentru iConta.
+    """
+    inv = _inv()
+    ids = {p["id"] for p in inv["parametri"]}
+    for fals in ("cont/2015", "cont/5000", "cont/100", "cont/102"):
+        assert fals not in ids, fals
+    assert inv["conturi_nemarcate"]["n_simboluri"] > 0
+    for p in inv["parametri"]:
+        if p["clasa"] == "cont":
+            assert "container numit de iConta ca CONT" in p["sursa_inventar"], p["id"]
 
 
-def test_conturile_adaugate_prin_modificari_sunt_in_plan():
-    """436 (CAM), 4315, 463, 646 au intrat in plan prin completari; ele stau INAINTEA planului de baza."""
-    p, _r = _pot()
+def test_planul_din_corpus_contine_conturile_adaugate_prin_modificari():
+    """436 (CAM), 4315, 463, 646 au intrat in plan prin completari si stau INAINTEA planului de baza.
+
+    Se verifica EXTRACTORUL de plan direct, nu prin inventar: ce conturi marcheaza iConta nu trebuie
+    sa decida daca planul e citit bine.
+    """
+    from fiscalos import potrivire
+    plan = potrivire.plan_de_conturi(potrivire.Corpus())
     for cont, bucata in (("436", "asiguratorie pentru muncă"), ("4315", "asigurări sociale"),
                          ("463", "dividende"), ("646", "asiguratorie")):
-        t = p["cont/%s" % cont]
-        assert t["clasificare"] == "CONCORDA", (cont, t["motiv"][:120])
-        assert bucata in t["valoare_lege"], (cont, t["valoare_lege"])
+        assert cont in plan, cont
+        assert bucata in plan[cont]["denumire"], (cont, plan[cont]["denumire"])
+
+
+def test_planul_ong_e_citit_din_OMFP_3103():
+    """731-738 sunt conturi ale entitaţilor fara scop patrimonial, din OMFP 3103/2017 - nu din 1802."""
+    from fiscalos import potrivire
+    plan = potrivire.plan_de_conturi(potrivire.Corpus())
+    assert "731" in plan and "cotizaţiile membrilor" in plan["731"]["denumire"], plan.get("731")
+    assert any("3103" in x for x in plan["733"]["planuri"]), plan["733"]["planuri"]
 
 
 def test_fiecare_concorda_citeaza_atom_si_verbatim():
