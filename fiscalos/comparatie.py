@@ -99,10 +99,16 @@ def _temeiuri_cheie(text):
                           bucata)
             if m:
                 fam = "%s_%s_%s" % (m.group(1).replace("legea", "lege"), m.group(2), m.group(3))
-        for m in re.finditer(r"\bart\.?\s*(\d+(?:\^\d+)?)", bucata):
-            ies.append((fam, m.group(1)))
-        for m in re.finditer(r"\bpct\.?\s*(\d+)", bucata):
-            if fam == "norme":
+        if fam is None and re.search(r"omfp\s*1802/2014|reglementari contabile", bucata):
+            fam = "omfp_1802_2014"
+        # articole arabe SI romane: actele de sine statatoare (OUG 89/2025 art. III) numara roman
+        for m in re.finditer(r"\bart\.?\s*(\d+(?:\^\d+)?|[ivxlcdm]+)\b", bucata):
+            ies.append((fam, m.group(1).upper() if not m.group(1)[0].isdigit() else m.group(1)))
+        # `pct.` pentru ORICE act, nu numai pentru norme: Reglementarile contabile (OMFP 1802/2014)
+        # isi numeroteaza prevederile pe puncte. Prima versiune le citea numai la norme, deci cheile
+        # OMFP ieseau fara niciun temei, si comparatorul le trata ca "temei indeplinit" (vezi mai jos).
+        if not re.search(r"\bart\.", bucata):
+            for m in re.finditer(r"\bpct\.?\s*(\d+)", bucata):
                 ies.append((fam, "pct" + m.group(1)))
     return ies
 
@@ -114,12 +120,14 @@ def _temei_nostru(r, corp):
         if at is None:
             continue
         fam = _familie_act_din_nume(at["act"])
+        if fam.startswith("omfp_1802_2014"):
+            fam = "omfp_1802_2014"
         if at.get("articol"):
-            ies.append((fam, str(at["articol"]).replace(" ", "")))
-        if fam == "norme":
-            for seg in at["id"].split("#", 1)[1].split("/"):
-                if seg.startswith("pct"):
-                    ies.append((fam, seg.split("~")[0]))
+            art = str(at["articol"]).replace(" ", "")
+            ies.append((fam, art.upper() if not art[:1].isdigit() else art))
+        for seg in at["id"].split("#", 1)[1].split("/"):
+            if seg.startswith("pct"):
+                ies.append((fam, seg.split("~")[0]))
     return ies
 
 
@@ -152,7 +160,17 @@ def compara(fis_raspunsuri=None):
         fapte_noi = _fapte(text_nostru)
         valoare_ok = (not fapte_cheie) or (potrivire.norm(fapte_cheie[0]).replace(" ", "")
                                            in [potrivire.norm(x).replace(" ", "") for x in fapte_noi])
-        temei_ok = bool(set(noi) & set(tem_cheie)) if tem_cheie else None
+        # DEFECT DE COMPARATOR, reparat dupa prima rulare si raportat ca atare: cand temeiul cheii
+        # nu se putea citi mecanic, `temei_ok` era None, iar None trecea drept "indeplinit". Asa au
+        # ieşit CORECT trei raspunsuri care citau ALT ACT decat cheia (Codul fiscal in loc de
+        # Reglementarile contabile OMFP 1802/2014). Un comparator care nu poate verifica articolul nu
+        # poate certifica CORECT. Reparaţia face notarea mai STRICTA, nu mai blanda.
+        if tem_cheie:
+            temei_ok = bool(set(noi) & set(tem_cheie))
+        elif (k["temei"] or "").strip():
+            temei_ok = False
+        else:
+            temei_ok = None
         linie.update(temei_motor=noi, fapte_motor=fapte_noi[:6], valoare_ok=valoare_ok,
                      temei_ok=temei_ok)
         if valoare_ok and (temei_ok or temei_ok is None):
@@ -162,7 +180,9 @@ def compara(fis_raspunsuri=None):
             if not valoare_ok:
                 lipsa.append("faptul principal al cheii (%s) nu e in raspuns" % fapte_cheie[:1])
             if temei_ok is False:
-                lipsa.append("articolul citat %s nu e printre cele ale cheii %s" % (noi, tem_cheie))
+                lipsa.append(("articolul citat %s nu e printre cele ale cheii %s" % (noi, tem_cheie))
+                             if tem_cheie else "temeiul cheii nu s-a putut citi mecanic - fara el, "
+                                               "CORECT nu se poate certifica (de rejudecat de om)")
             linie.update(verdict="GRESIT", de_ce="; ".join(lipsa))
         rez.append(linie)
     scor = {v: sum(1 for x in rez if x["verdict"] == v) for v in ("CORECT", "GRESIT", "NU_POT")}
