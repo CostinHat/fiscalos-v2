@@ -1,12 +1,12 @@
 {
  "_ce": "C6 raspunsurile motorului, scrise INAINTE de comparatia cu cheia.",
- "generat_la": "2026-09-28T17:20:30",
+ "generat_la": "2026-09-28T17:19:33",
  "n": 50,
- "raspunse": 21,
- "nu_pot": 29,
+ "raspunse": 30,
+ "nu_pot": 20,
  "n_atomi_indexati": 31485,
- "secunde_index": 8.92,
- "secunde_total": 11.56,
+ "secunde_index": 8.57,
+ "secunde_total": 10.76,
  "raspunsuri": [
   {
    "id": "Q-TVA-01",
@@ -369,11 +369,9 @@
    "id": "Q-TVA-10",
    "tip": "INCOMPLETA",
    "intrebare": "Firma a cumpărat o mașină cu 150.000 lei + TVA. Cât TVA deduce?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "În condițiile stabilite prin normele metodologice: a) persoana impozabilă nestabilită în România, care este stabilită în alt stat membru, neînregistrată și care nu este obligată să se înregistreze în scopuri de TVA în România, poate beneficia de rambursarea taxei pe valoarea adăugată aferente importurilor și achizițiilor de bunuri/servicii, efectuate în România;",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art302/alin1",
      "temei": "Codul fiscal (Legea 227/2015) art. 302 alin. (1)",
@@ -411,6 +409,8 @@
      }
     }
    ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
    "data_referinta": "2026-09-28",
    "precizie_data": "implicita (ziua intrebarii)",
    "data_din": null
@@ -502,11 +502,9 @@
    "id": "Q-PRF-04",
    "tip": "CAPCANA",
    "intrebare": "O societate cu cifra de afaceri 2025 peste 50 mil. euro are în 2026: VT = 300.000.000 lei, Vs = 20.000.000 lei, I = 0, A = 10.000.000 lei; impozitul pe profit anual calculat (fără sponsorizări sau alte sume de scăzut) = 1.000.000 lei. Cât impozit pe profit datorează pentru 2026?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "În cazul în care creditul fiscal este scăzut parțial din impozitul pe profit anual/impozitul minim pe cifra de afaceri anual, diferența se compensează sau se restituie în condițiile prevăzute la alin.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art20^1/alin3",
      "temei": "Codul fiscal (Legea 227/2015) art. 20^1 alin. (3)",
@@ -544,6 +542,8 @@
      }
     }
    ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
    "data_referinta": "2025-12-31",
    "precizie_data": "an",
    "data_din": "2025"
@@ -701,11 +701,9 @@
    "id": "Q-PRF-08",
    "tip": "REGULA",
    "intrebare": "O SRL înregistrată la registrul comerțului pe 10 martie 2026 optează pentru impozit micro din primul an. În cât timp trebuie să angajeze salariatul și ce se întâmplă dacă nu o face?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "O microîntreprindere care s-a aflat în inactivitate temporară înscrisă în registrul comerțului, potrivit prevederilor legale, continuă să fie plătitoare de impozit pe veniturile microîntreprinderilor de la data înscrierii în registrul comerțului a mențiunii de reluare a activității, dacă îndeplinește condițiile prevăzute la art.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art48/alin3^2",
      "temei": "Codul fiscal (Legea 227/2015) art. 48 alin. (3^2)",
@@ -740,6 +738,10 @@
       "la_data_intrebarii": true
      }
     }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "30 de zile"
    ],
    "data_referinta": "2026-03-10",
    "precizie_data": "zi",
@@ -1025,11 +1027,9 @@
    "id": "Q-SAL-06",
    "tip": "CAPCANA",
    "intrebare": "Septembrie 2026: salariat cu CIM cu timp parțial 4 h/zi, singurul contract, nu e elev/student, ucenic, persoană cu dizabilități sau pensionar, salariu brut 2.162,50 lei, contract activ toată luna. Cât este CAS datorat? (înainte de rotunjire)",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "Contribuția de asigurări sociale datorată de către persoanele fizice care obțin venituri din salarii sau asimilate salariilor, în baza unui contract individual de muncă cu normă întreagă sau cu timp parțial, calculată potrivit alin.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art146/alin5^6",
      "temei": "Codul fiscal (Legea 227/2015) art. 146 alin. (5^6)",
@@ -1063,6 +1063,10 @@
       "la_data_intrebarii": true
      }
     }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "300 lei"
    ],
    "data_referinta": "2026-09-30",
    "precizie_data": "luna",
@@ -1128,11 +1132,9 @@
    "id": "Q-SAL-09",
    "tip": "INCOMPLETA",
    "intrebare": "Cât este deducerea personală pentru un salariat cu venit brut de 5.000 lei în septembrie 2026?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
      "temei": "Codul fiscal (Legea 227/2015) art. 77 alin. (3)",
@@ -1169,6 +1171,10 @@
       "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
      }
     }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "2.000 lei"
    ],
    "data_referinta": "2026-09-30",
    "precizie_data": "luna",
@@ -1549,11 +1555,9 @@
    "id": "Q-CPF-10",
    "tip": "INCOMPLETA",
    "intrebare": "Ce amendă riscă o firmă care a depus D300 cu întârziere?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "cea referitoare la depunerea în termenul legal, cu amendă de la 300 lei la 1.000 lei, dacă perioada de întârziere este cuprinsă între 1 și 15 zile lucrătoare, cu amendă de la 1.000 lei la 3.000 lei, dacă perioada de întârziere este cuprinsă între 16 și 30 de zile lucrătoare, și cu amendă de la 1.500 lei la 4.500 lei, dacă perioada de întârziere depășește 30 de zile lucrătoare;",
+   "argument": [
     {
      "atom": "oug_115_2023_consolidat#artLXXVI",
      "temei": "OUG 115/2023 art. LXXVI",
@@ -1590,6 +1594,17 @@
       "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
      }
     }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "15 zile",
+    "30 de zile",
+    "30 de zile",
+    "15 zile",
+    "30 de zile",
+    "30 de zile",
+    "2.000 lei",
+    "20.000 lei"
    ],
    "data_referinta": "2026-09-28",
    "precizie_data": "implicita (ziua intrebarii)",
@@ -1707,11 +1722,9 @@
    "id": "Q-CTB-04",
    "tip": "REGULA",
    "intrebare": "Un mijloc fix corporal este pus în funcțiune pe 15 martie 2026. Din ce lună începe amortizarea contabilă?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "Amortizarea fiscală se calculează după cum urmează: a) începând cu luna următoare celei în care mijlocul fix amortizabil se pune în funcțiune, prin aplicarea regimului de amortizare prevăzut la alin.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art28/alin12",
      "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (12)",
@@ -1749,6 +1762,8 @@
      }
     }
    ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
    "data_referinta": "2026-03-15",
    "precizie_data": "zi",
    "data_din": "15 martie 2026"
@@ -1757,11 +1772,9 @@
    "id": "Q-CTB-05",
    "tip": "PROCEDURA",
    "intrebare": "În 2026 se descoperă o factură de cheltuieli din 2024 neînregistrată. Pe ce cont se corectează eroarea?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "Pentru determinarea impozitului pe cifra de afaceri, erorile constatate, definite potrivit reglementărilor contabile aplicabile, care se corectează pe seama rezultatului reportat, pentru elementele cifrei de afaceri corespunzătoare unor ani fiscali anteriori, se iau în calculul cifrei de afaceri a anului pentru care se constată eroarea, prin depunerea unei declarații rectificative în condițiile prevăzute de Codul de procedură fiscală.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art46^1/alin4^3",
      "temei": "Codul fiscal (Legea 227/2015) art. 46^1 alin. (4^3)",
@@ -1798,6 +1811,8 @@
      }
     }
    ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
    "data_referinta": "2026-09-28",
    "precizie_data": "an",
    "data_din": "2026"
@@ -1982,11 +1997,9 @@
    "id": "Q-CTB-10",
    "tip": "REGULA",
    "intrebare": "Un SRL are de plătit unui furnizor SRL o factură de 8.000 lei. Cât poate plăti în numerar?",
-   "stare": "NU_POT_RASPUNDE",
-   "raspuns": null,
-   "argument": [],
-   "motiv": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "candidati": [
+   "stare": "RASPUNS",
+   "raspuns": "(2)-(4) și (6) , trebuie să autofactureze suma avansurilor plătite în legătură cu operațiunile respective cel târziu până în cea de-a 15-a zi a lunii următoare celei în care a plătit avansurile, în cazul în care persoana respectivă nu se află în posesia facturii emise de furnizor/prestator, cu excepția situației în care faptul generator de taxă a intervenit în aceeași lună, caz în care sunt aplicabile prevederile alin.",
+   "argument": [
     {
      "atom": "cod_fiscal_227_2015_consolidat#art320/alin2",
      "temei": "Codul fiscal (Legea 227/2015) art. 320 alin. (2)",
@@ -2024,6 +2037,8 @@
      }
     }
    ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
    "data_referinta": "2026-09-28",
    "precizie_data": "implicita (ziua intrebarii)",
    "data_din": null

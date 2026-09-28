@@ -1,12 +1,6 @@
 {
- "_ce": "C6 raspunsurile motorului, scrise INAINTE de comparatia cu cheia.",
- "generat_la": "2026-09-28T17:20:30",
- "n": 50,
- "raspunse": 21,
- "nu_pot": 29,
- "n_atomi_indexati": 31485,
- "secunde_index": 8.92,
- "secunde_total": 11.56,
+ "_ce": "Raspunsurile finale ale motorului (dupa reparatiile de clasa D4..D15c).",
+ "data_intrebarii": "2026-09-28",
  "raspunsuri": [
   {
    "id": "Q-TVA-01",

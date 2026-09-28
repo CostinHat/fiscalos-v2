@@ -1,0 +1,322 @@
+[
+ {
+  "eticheta": "v0",
+  "descriere": "motorul v0, raspunsuri comise in f1997a8 inainte de comparator; notare dupa repararea comparatorului (da71623)",
+  "scor": {
+   "CORECT": 3,
+   "GRESIT": 33,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 12.7,
+  "secunde_comparatie": null,
+  "masurat_la": "2026-09-28T17:08:05"
+ },
+ {
+  "eticheta": "D4",
+  "descriere": "R-VERS: redarile istorice penalizate prin nume, nu prin gasirea perechii curente",
+  "scor": {
+   "CORECT": 4,
+   "GRESIT": 32,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 12.79,
+  "secunde_comparatie": 3.6,
+  "masurat_la": "2026-09-28T17:08:32"
+ },
+ {
+  "eticheta": "D3",
+  "descriere": "instructiunile de modificare (articol roman -> punct) nu sunt legea in vigoare",
+  "scor": {
+   "CORECT": 4,
+   "GRESIT": 32,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 13.19,
+  "secunde_comparatie": 3.78,
+  "masurat_la": "2026-09-28T17:09:07"
+ },
+ {
+  "eticheta": "D3b",
+  "descriere": "text citat (articol arab) in redarea unui act modificator = instantaneu, nu lege in vigoare",
+  "scor": {
+   "CORECT": 5,
+   "GRESIT": 31,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 13.47,
+  "secunde_comparatie": 3.71,
+  "masurat_la": "2026-09-28T17:10:07"
+ },
+ {
+  "eticheta": "D9",
+  "descriere": "abrevierile fiscale (TVA, CAS, CAM, D300...) extinse la forma lunga a actelor",
+  "scor": {
+   "CORECT": 4,
+   "GRESIT": 32,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 13.5,
+  "secunde_comparatie": 3.89,
+  "masurat_la": "2026-09-28T17:10:48"
+ },
+ {
+  "eticheta": "D9a",
+  "descriere": "abrevieri de CONCEPTE (TVA, CAS, CAM...) extinse; codurile de formular nu",
+  "scor": {
+   "CORECT": 5,
+   "GRESIT": 31,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 13.56,
+  "secunde_comparatie": 4.1,
+  "masurat_la": "2026-09-28T17:11:19"
+ },
+ {
+  "eticheta": "D7",
+  "descriere": "ordinele de formular (instructiuni de completare) cedeaza la intrebarile de fond care nu numesc un formular",
+  "scor": {
+   "CORECT": 5,
+   "GRESIT": 30,
+   "NU_POT": 15
+  },
+  "raspunse": 33,
+  "nu_pot_motor": 17,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 14.03,
+  "secunde_comparatie": 3.68,
+  "masurat_la": "2026-09-28T17:12:38"
+ },
+ {
+  "eticheta": "D12",
+  "descriere": "precizia datei: luna -> ultima zi, an -> sfarsitul anului dar nu dupa data intrebarii",
+  "scor": {
+   "CORECT": 5,
+   "GRESIT": 30,
+   "NU_POT": 15
+  },
+  "raspunse": 33,
+  "nu_pot_motor": 17,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 14.17,
+  "secunde_comparatie": 3.28,
+  "masurat_la": "2026-09-28T17:13:47"
+ },
+ {
+  "eticheta": "D13",
+  "descriere": "valoarea cautata si in copiii (litere/puncte) atomului gasit, cu aceleasi filtre de vigoare",
+  "scor": {
+   "CORECT": 6,
+   "GRESIT": 30,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-01",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 14.28,
+  "secunde_comparatie": 4.35,
+  "masurat_la": "2026-09-28T17:15:03"
+ },
+ {
+  "eticheta": "D10",
+  "descriere": "denumirea marginala a articolului (titlul) ca context pentru alineatele lui",
+  "scor": {
+   "CORECT": 7,
+   "GRESIT": 29,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-01",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-PRF-02",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 14.55,
+  "secunde_comparatie": 3.69,
+  "masurat_la": "2026-09-28T17:15:50"
+ },
+ {
+  "eticheta": "D1",
+  "descriere": "valoarea aleasa din atomul al carui text propriu potriveste cel mai bine cuvintele rare (extinse) ale intrebarii",
+  "scor": {
+   "CORECT": 7,
+   "GRESIT": 29,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-01",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-PRF-02",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 14.68,
+  "secunde_comparatie": 3.75,
+  "masurat_la": "2026-09-28T17:17:28"
+ },
+ {
+  "eticheta": "D14",
+  "descriere": "ierarhia actelor normative la alegerea intre candidati: legea prevaleaza asupra normei de aplicare",
+  "scor": {
+   "CORECT": 7,
+   "GRESIT": 29,
+   "NU_POT": 14
+  },
+  "raspunse": 34,
+  "nu_pot_motor": 16,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-01",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-PRF-02",
+   "Q-SAL-01",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 13.77,
+  "secunde_comparatie": 2.81,
+  "masurat_la": "2026-09-28T17:18:10"
+ },
+ {
+  "eticheta": "D5",
+  "descriere": "intrebarea fara data e datata la ziua in care e pusa (inlocuieste R-DATA)",
+  "scor": {
+   "CORECT": 5,
+   "GRESIT": 36,
+   "NU_POT": 9
+  },
+  "raspunse": 41,
+  "nu_pot_motor": 9,
+  "corecte": [
+   "Q-CTB-01",
+   "Q-CTB-08",
+   "Q-PRF-01",
+   "Q-PRF-02",
+   "Q-SAL-01"
+  ],
+  "secunde_motor": 10.89,
+  "secunde_comparatie": 2.54,
+  "masurat_la": "2026-09-28T17:18:47"
+ },
+ {
+  "eticheta": "D15",
+  "descriere": "certitudine: judecata Da/Nu -> abtinere cu material; faptul de forma cerută trebuie sa fie in raspuns",
+  "scor": {
+   "CORECT": 5,
+   "GRESIT": 26,
+   "NU_POT": 19
+  },
+  "raspunse": 30,
+  "nu_pot_motor": 20,
+  "corecte": [
+   "Q-CTB-01",
+   "Q-PRF-01",
+   "Q-PRF-02",
+   "Q-PRF-10",
+   "Q-SAL-01"
+  ],
+  "secunde_motor": 10.88,
+  "secunde_comparatie": 2.47,
+  "masurat_la": "2026-09-28T17:19:35"
+ },
+ {
+  "eticheta": "D15c",
+  "descriere": "drumul pur extractiv (forma faptului nerecunoscuta) -> abtinere cu material",
+  "scor": {
+   "CORECT": 8,
+   "GRESIT": 17,
+   "NU_POT": 25
+  },
+  "raspunse": 21,
+  "nu_pot_motor": 29,
+  "corecte": [
+   "Q-CPF-10",
+   "Q-CTB-01",
+   "Q-PRF-01",
+   "Q-PRF-02",
+   "Q-PRF-10",
+   "Q-SAL-01",
+   "Q-SAL-09",
+   "Q-TVA-10"
+  ],
+  "secunde_motor": 11.64,
+  "secunde_comparatie": 2.56,
+  "masurat_la": "2026-09-28T17:20:32"
+ }
+]

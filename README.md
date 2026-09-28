@@ -35,6 +35,29 @@ căutată până la ultimul atom din corpus, iar legislația fiscală conține a
 undeva. Regula de acum: *când iConta declară un temei, verdictul se ia din actul acela.* Detaliile și
 celelalte patru defecte găsite astfel sunt în §9 și în cerința C7 din raport.
 
+## Al doilea livrabil — motorul de întrebări
+
+[`intrebari/v1/RAPORT.md`](intrebari/v1/RAPORT.md) — 50 de întrebări de test, fiecare cu răspuns din
+atomi (temei + fragment verbatim + valabilitate la data întrebării) sau „nu pot răspunde" cu motivul.
+Niciodată un răspuns fără atom. Răspunsurile per întrebare sunt în `intrebari/v1/raspunsuri/`.
+
+| | |
+|---|---|
+| CORECT | **8** — din care **4 pe fond**, 4 abțineri pe întrebări INCOMPLETA (vezi C1 în raport) |
+| GREȘIT | **17** |
+| NU POT RĂSPUNDE | **25** |
+
+Motorul a fost **orb la cheie, mecanic**, iar răspunsurile v0 au fost comise (`f1997a8`) înainte ca
+modulul de comparație să existe. Linia de bază v0 cinstită a fost 3/33/14; fiecare reparație ulterioară
+e o clasă de defect măsurată pe toate cele 50 — istoricul complet, inclusiv o regresie și o ipoteză
+infirmată, e în §3 al raportului.
+
+```sh
+python3 -m fiscalos.intrebari          # raspunde la cele 50 (orb la cheie)
+python3 -m fiscalos.comparatie         # compara cu cheia - singurul modul care o citeste
+python3 -m fiscalos.raport_intrebari   # lantul final cronometrat + raportul
+```
+
 ## Cum se rulează
 
 ```sh

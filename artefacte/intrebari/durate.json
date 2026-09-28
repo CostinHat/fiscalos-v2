@@ -1,0 +1,21 @@
+{
+ "pasi": [
+  {
+   "operatie": "Index BM25 peste atomii din acte normative (31485 atomi)",
+   "secunde": 11.31
+  },
+  {
+   "operatie": "Raspuns la cele 50 intrebari",
+   "secunde": 3.12
+  },
+  {
+   "operatie": "Comparatia cu cheia",
+   "secunde": 3.5
+  },
+  {
+   "operatie": "Scrierea celor 50 fisiere per intrebare",
+   "secunde": 0.01
+  }
+ ],
+ "total_secunde": 17.94
+}
