@@ -313,12 +313,16 @@ def _fragmente_citat(text_citat):
 def potriveste(p, corp, plan=None):
     if p["clasa"] == "cont":
         return _potriveste_cont(p, plan or {})
+    if p["clasa"] == "nomenclator":
+        return _potriveste_nomenclator(p, corp)
     fel = _fel(p)
     temei = p["temei_declarat"] or {}
     url = temei.get("url")
     subiecte = [norm(s) for s in SUBIECT.get(p["nume"], [])]
     if not subiecte and temei.get("text_citat"):
         subiecte = _fragmente_citat(temei["text_citat"])[:3]
+    if p["clasa"] == "termen":
+        return _potriveste_termen(p, corp, subiecte)
 
     rez = {"parametru": p["id"], "clasa": p["clasa"], "nume": p["nume"],
            "valoare_cod": p["valoare_cod"], "valabil_din_cod": p["valabil_din_cod"],
@@ -467,6 +471,173 @@ def potriveste(p, corp, plan=None):
                     ("s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot "
                      "corpusul, fara temei declarat de iConta. O astfel de potrivire e prea slaba "
                      "ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA."))
+    return rez
+
+
+# ── termene: un termen se dovedeste pe FRAZA de scadenta, nu pe prezenta cifrei ──────────────────
+# Prima versiune declara CONCORDA cand atomul purta subiectul SAU numarul, oriunde in actul declarat.
+# Masurat, asta a confirmat greșit trei din cinci termene: `d301` cadea pe CF art.41 alin.(7) (plati
+# anticipate de impozit pe profit), `d394` pe art.96 alin.(3) lit.c) din forma initiala ("ultima zi a
+# lunii februarie"), iar `d406` pe definitia lui "declaratie informativa" din Codul de procedura.
+# Un "25" intr-un alineat nu e un termen; fraza de scadenta e.
+_FRAZA_TERMEN = [
+    "pana la data de %s inclusiv", "data de %s inclusiv", "%s inclusiv a lunii",
+    "pana la data de %s a lunii", "cel mai tarziu la data de %s",
+]
+_FRAZA_ULTIMA_ZI = ["ultima zi a lunii", "ultima zi calendaristica a lunii",
+                    "pana in ultima zi a lunii"]
+
+
+# Fraza de scadenta nu e de ajuns singura: "pana la data de 25 inclusiv a lunii urmatoare" apare in
+# Codul fiscal de zeci de ori, pentru impozite diferite. Masurat, cel mai SCURT atom cu fraza era
+# `art.68^2 alin.(4)` - impozit reţinut la sursa - pentru AMANDOUA declaraţiile de TVA, iar `d406`
+# cadea pe un fragment din structura XML a lui D112 ("dataAng <= dataSf <= ultima zi a lunii"). Deci
+# atomul trebuie sa fie si despre DEPUNEREA declaraţiei, si despre declaraţia CERUTA.
+# Lista a fost largita dupa o masuratoare, nu dupa intuiţie: cu numai formele verbale ("se depune"),
+# termenul lui D406 ieșea NEGASIT desi OPANAF 1783/2021 din corpus il scrie de doua ori - o data ca
+# "termen de depunere - ultima zi a lunii care urmeaza perioadei..." si o data in enumerarea
+# termenelor. Forma NOMINALA a depunerii era invizibila regulii.
+_MARCAJ_DEPUNERE = [norm(x) for x in ("se depune", "depun la organele fiscale", "trebuie sa depuna",
+                                      "trebuie să depună", "se completeaza si se depune",
+                                      "termen de depunere", "termenul de depunere",
+                                      "depunerea declaraţiei", "depunerea declaratiei")]
+# numele declaraţiei in limbajul actului - indiciu de cautare, nu valoare
+_NUME_DECLARATIE = {
+    "d300": ["decont de taxa"],
+    "d301": ["decont special de taxa", "decontul special"],
+    "d390": ["declaratie recapitulativa", "declaraţia recapitulativă"],
+    "d394": ["declaratie informativa privind livrarile", "declaraţia informativă privind livrările"],
+    "d406": ["fisierul standard de control fiscal", "saf-t"],
+    "d100": ["declaratie privind obligatiile de plata"],
+    "d101": ["declaratie privind impozitul pe profit"],
+    "d112": ["declaratie privind obligatiile de plata a contributiilor sociale"],
+    "d205": ["declaratie informativa privind impozitul retinut"],
+}
+
+
+def _potriveste_termen(p, corp, subiecte):
+    temei = p["temei_declarat"] or {}
+    act = corp.act_din_url(temei.get("url"))
+    val = p["valoare_cod"]
+    tip = p["id"].split("/")[-1]
+    if val == "ultima_zi_luna":
+        fraze = [norm(f) for f in _FRAZA_ULTIMA_ZI]
+    else:
+        fraze = [norm(f % val) for f in _FRAZA_TERMEN]
+    nume_decl = [norm(x) for x in _NUME_DECLARATIE.get(tip, [])]
+    citat = _fragmente_citat(temei["text_citat"]) if temei.get("text_citat") else []
+
+    rez = {"parametru": p["id"], "clasa": "termen", "nume": p["nume"], "valoare_cod": val,
+           "valabil_din_cod": None, "unde_in_cod": p["unde"],
+           "temei_declarat_de_iconta": temei.get("text"), "citare_rezolvata": None,
+           "atom": None, "atom_verbatim": None, "valabil_din_corpus": None,
+           "act_modificator": None, "valoare_lege": None,
+           "indicii": {"fraze_scadenta": fraze, "nume_declaratie": nume_decl}}
+
+    def _cu_fraza(atomi):
+        return [(a, f) for a in atomi for f in fraze if f in a["_n"]]
+
+    niveluri = []
+    if act:
+        ats = corp.pe_act[act]
+        if citat:
+            pe_citat = [(a, f) for a, f in _cu_fraza(ats) if any(c in a["_n"] for c in citat)]
+            if pe_citat:
+                niveluri.append((pe_citat, "citatul declarat de iConta + fraza de scadenta, in %s"
+                                 % act, True))
+        pe_nume = [(a, f) for a, f in _cu_fraza(ats) if any(n in a["_n"] for n in nume_decl)]
+        if pe_nume:
+            niveluri.append((pe_nume, "numele declaratiei + fraza de scadenta, in %s" % act, True))
+        pe_dep = [(a, f) for a, f in _cu_fraza(ats) if any(d in a["_n"] for d in _MARCAJ_DEPUNERE)]
+        if pe_dep:
+            niveluri.append((pe_dep, "marcaj de depunere + fraza de scadenta, in %s" % act, True))
+    # Actele corpusului isi poarta declaraţia in NUME (`opanaf_2194_2025_d394`). Pentru termenele pe
+    # care iConta nu le sursează, asta e indiciul cel mai tare disponibil - si e un indiciu de
+    # CAUTARE, nu o valoare: verdictul tot din atom iese. Fara el, `d394` ieșea NEGASIT desi actul
+    # lui spune limpede "Declaraţia se depune ... pana in data de 30 inclusiv" - textul nu repeta
+    # titlul lung al declaraţiei, fiindca tot ordinul e despre ea.
+    acte_ale_declaratiei = [b for b in corp.pe_act if tip in b.lower()]
+    for b in acte_ale_declaratiei:
+        pe_act_decl = [(a, f) for a, f in _cu_fraza(corp.pe_act[b])
+                       if any(d in a["_n"] for d in _MARCAJ_DEPUNERE)]
+        if pe_act_decl:
+            niveluri.append((pe_act_decl,
+                             "act dedicat declaratiei (%s) + depunere + fraza de scadenta" % b,
+                             False))
+    if nume_decl:
+        pe_tot = [(a, f) for a, f in _cu_fraza(corp.toti)
+                  if any(n in a["_n"] for n in nume_decl)
+                  and any(d in a["_n"] for d in _MARCAJ_DEPUNERE)]
+        if pe_tot:
+            niveluri.append((pe_tot, "numele declaratiei + depunere + fraza, CAUTAT IN TOT CORPUSUL",
+                             False))
+
+    if niveluri:
+        gasiti, unde, in_act = niveluri[0]
+        a, f = min(gasiti, key=lambda t: len(t[0]["text"]))
+        rez.update(_din_atom(a, val if val != "ultima_zi_luna" else "ultima zi"))
+        rez["valoare_lege"] = val
+        rez["ancora"] = unde
+        rez["citare_rezolvata"] = in_act if act else None
+        rez["clasificare"] = "CONCORDA"
+        rez["motiv"] = "atomul poarta fraza de scadenta cu ziua din cod (%r), la: %s" % (f, unde)
+        return rez
+
+    rez["clasificare"] = "NEGASIT"
+    rez["citare_rezolvata"] = False if act else None
+    rez["motiv"] = ("niciun atom nu poarta SI fraza de scadenta cu ziua %s, SI numele declaratiei, "
+                    "SI un marcaj de depunere. Fraza singura nu e o proba: ea apare de zeci de ori "
+                    "in Codul fiscal, pentru impozite diferite. %s"
+                    % (val, "iConta insasi noteaza acest termen ca NESURSAT in scadente.py."
+                       if not temei else ""))
+    return rez
+
+
+# ── nomenclatoare: enumerarea din cod trebuie sa fie ENUMERATA de act ────────────────────────────
+def _potriveste_nomenclator(p, corp):
+    temei = p["temei_declarat"] or {}
+    act = corp.act_din_url(temei.get("url"))
+    valori = [v for v in (p["valoare_cod"] or "").split(",") if v]
+    rez = {"parametru": p["id"], "clasa": "nomenclator", "nume": p["nume"],
+           "valoare_cod": p["valoare_cod"], "valabil_din_cod": p["valabil_din_cod"],
+           "unde_in_cod": p["unde"],
+           "temei_declarat_de_iconta": " ".join(str(temei.get(k)) for k in ("tip", "nr", "an")
+                                                if temei.get(k)) or None,
+           "citare_rezolvata": None, "atom": None, "atom_verbatim": None,
+           "valabil_din_corpus": None, "act_modificator": None, "valoare_lege": None,
+           "indicii": valori}
+    if p.get("deschis") or not valori:
+        # iConta declara ea insasi ca norma NU inchide lista (`deschis=True`). Atunci setul din cod e
+        # o inchidere CONSTRUITA de ei, nu o enumerare a actului - deci nu exista ce sa confirmi.
+        # Nici DIFERA nu e: actul nu spune altceva, nu spune nimic. NEGASIT, cu motivul exact.
+        rez["clasificare"] = "NEGASIT"
+        rez["motiv"] = ("norma nu inchide lista - iConta o declara `deschis=True` in "
+                        "nomenclatoare.py. Setul din cod e o inchidere construita de ei, nu o "
+                        "enumerare a actului, deci nu exista enumerare de confirmat in corpus.")
+        return rez
+    atomi = corp.pe_act.get(act) if act else None
+    for lot, unde in ([(atomi, "actul declarat (%s)" % act)] if atomi else []) + \
+                     [(corp.toti, "CAUTAT IN TOT CORPUSUL")]:
+        best, best_n = None, 0
+        for a in lot:
+            n = sum(1 for v in valori if re.search(r"\b%s\b" % re.escape(norm(v)), a["_n"]))
+            if n > best_n or (n == best_n and best is not None and len(a["text"]) < len(best["text"])):
+                best, best_n = a, n
+        if best is None or best_n < max(2, int(0.8 * len(valori))):
+            continue
+        rez.update(_din_atom(best))
+        rez["valoare_lege"] = "%d din %d valori enumerate in atom" % (best_n, len(valori))
+        rez["ancora"] = "enumerarea, gasita in %s" % unde
+        rez["citare_rezolvata"] = unde.startswith("actul declarat") if act else None
+        rez["clasificare"] = "CONCORDA"
+        rez["motiv"] = ("atomul ENUMERA %d din cele %d valori din cod (%s) - enumerarea actului, nu "
+                        "doar subiectul lui" % (best_n, len(valori), unde))
+        return rez
+    rez["clasificare"] = "NEGASIT"
+    rez["citare_rezolvata"] = False if act else None
+    rez["motiv"] = ("niciun atom nu enumera cel putin %d din cele %d valori din cod (%s) - "
+                    "prezenta subiectului nu e o enumerare"
+                    % (max(2, int(0.8 * len(valori))), len(valori), ", ".join(valori)))
     return rez
 
 

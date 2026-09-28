@@ -157,3 +157,48 @@ def test_nicio_valoare_inventata_valoarea_lege_apare_in_verbatim():
             continue
         assert n(str(t["valoare_lege"])) in n(t["atom_verbatim"]), (t["parametru"],
                                                                    t["valoare_lege"])
+
+
+# ── termene si nomenclatoare ─────────────────────────────────────────────────────────────────────
+def test_termenele_citeaza_articolul_declaratiei_nu_orice_fraza_cu_25():
+    """"pana la data de 25 inclusiv" apare de zeci de ori in CF, pentru impozite diferite.
+
+    Fara marcaj de depunere si nume de declaratie, cel mai scurt atom cu fraza era `art.68^2
+    alin.(4)` (impozit reţinut la sursa) - pentru AMANDOUA declaraţiile de TVA -, iar `d406` cadea pe
+    un fragment din structura XML a lui D112 ("dataAng <= dataSf <= ultima zi a lunii").
+    """
+    p, _r = _pot()
+    asteptat = {
+        "termen/d300": ("cod_fiscal_227_2015_consolidat#art323/alin1", "decont de taxă"),
+        "termen/d301": ("cod_fiscal_227_2015_consolidat#art324/alin2", "Decontul special de taxă"),
+        "termen/d390": ("opanaf_705_2020_d390#art10", "recapitulativă se depune lunar"),
+        "termen/d394": ("opanaf_2194_2025_d394#artIV", "până în data de 30 inclusiv"),
+        "termen/d406": ("opanaf_1783_2021_saft_d406#art8", "ultima zi calendaristică"),
+    }
+    for cheie, (prefix_atom, bucata) in asteptat.items():
+        t = p[cheie]
+        assert t["clasificare"] == "CONCORDA", (cheie, t["motiv"][:150])
+        assert t["atom"].startswith(prefix_atom), (cheie, t["atom"])
+        assert bucata in t["atom_verbatim"], (cheie, t["atom_verbatim"][:200])
+
+
+def test_nomenclatorul_cere_enumerare_nu_doar_subiect():
+    """d390.TIPURI se confirma numai pe atomul care ENUMERA L/T/A/P/S/R, nu pe oricare din ordin."""
+    p, _r = _pot()
+    t = p["nomenclator/d390.TIPURI"]
+    assert t["clasificare"] == "CONCORDA", t["motiv"]
+    for v in ("L", "T", "A", "P", "S", "R"):
+        assert v in t["atom_verbatim"], (v, t["atom_verbatim"][:250])
+
+
+def test_nomenclatorul_deschis_nu_se_confirma():
+    """Cand norma NU inchide lista (iConta scrie `deschis=True`), nu exista enumerare de confirmat.
+
+    Nici DIFERA nu e: actul nu spune altceva, nu spune nimic. Inainte, amandoua ieseau CONCORDA pe
+    un alineat oarecare din ordin - o confirmare a subiectului luata drept confirmare a listei.
+    """
+    p, _r = _pot()
+    for cheie in ("nomenclator/d390.TARI_UE", "nomenclator/d301.VALUTE"):
+        t = p[cheie]
+        assert t["clasificare"] == "NEGASIT", (cheie, t["clasificare"])
+        assert "nu inchide lista" in t["motiv"]

@@ -1,12 +1,133 @@
 {
- "_ce": "OP6+OP7 potrivire si clasificare. Fiecare CONCORDA/DIFERA citeaza id-ul atomului si fragmentul verbatim (CLAUDE.md §2).",
- "citari_declarate": 40,
- "citari_rezolvate": 40,
- "facut_la": "2026-09-28T13:17:19",
- "n_atomi_corpus": 46559,
- "n_conturi_in_plan_din_corpus": 583,
- "n_parametri": 231,
- "potriviri": [
+ "_ce": "PROPUNERE FiscalOS v2 - parametrii fiscali ai iConta confruntati cu corpusul de acte. NU se aplica automat in iConta (CLAUDE.md §3). Cere aprobare umana.",
+ "aprobare": {
+  "de_cine": null,
+  "la": null,
+  "nota": "Se aproba prin completarea propuneri/v1/APROBARE.md. Pana atunci, niciun rand nu are efect.",
+  "stare": "NEAPROBAT"
+ },
+ "atomizare": {
+  "acte_neextractibile": {
+   "D112_XML_2026_0726_050826": {
+    "forme": [
+     "D112_XML_2026_0726_050826.pdf"
+    ],
+    "motiv": "formular XFA: pdftotext a scos numai placeholderul Acrobat, nu corpul formularului (676 caractere)"
+   },
+   "D311_XML_2021_290121": {
+    "forme": [
+     "D311_XML_2021_290121.pdf"
+    ],
+    "motiv": "formular XFA: pdftotext a scos numai placeholderul Acrobat, nu corpul formularului (676 caractere)"
+   },
+   "d402_surse_sha256": {
+    "forme": [
+     "d402_surse_sha256.txt"
+    ],
+    "motiv": "fisier .txt aproape gol (176 caractere)"
+   },
+   "pdf_original/structura_D301": {
+    "forme": [
+     "pdf_original/structura_D301.pdf"
+    ],
+    "motiv": "pdftotext a intors 0 caractere - probabil formular XFA sau scan fara OCR"
+   }
+  },
+  "acte_pe_articole": 201,
+  "acte_pe_fragmente": 68,
+  "n_acte": 269,
+  "n_atomi": 46559
+ },
+ "corpus": {
+  "luat_la": "2026-09-28T13:17:02",
+  "manifest": "corpus_manifest.json",
+  "mod": "DOAR CITIRE (CLAUDE.md §1)",
+  "n_fisiere": 726,
+  "octeti": 130006698,
+  "sursa": "/home/costin/iconta_nou/anaf_surse"
+ },
+ "durate_masurate": {
+  "masurat_la": "2026-09-28T13:17:20",
+  "pasi": [
+   {
+    "operatie": "OP2 instantaneu corpus + manifest SHA",
+    "rezumat": {
+     "n_fisiere": 726,
+     "octeti_total": 130006698
+    },
+    "secunde": 0.54
+   },
+   {
+    "operatie": "OP3 strat de text (txt/html/pdf)",
+    "rezumat": {
+     "n_acte_cu_text": 269,
+     "n_neextractibile": 4
+    },
+    "secunde": 1.52
+   },
+   {
+    "operatie": "OP4 atomizare structurala",
+    "rezumat": {
+     "n_acte": 269,
+     "n_acte_pe_articole": 201,
+     "n_acte_pe_fragmente": 68,
+     "n_atomi": 46559
+    },
+    "secunde": 1.85
+   },
+   {
+    "operatie": "OP5 inventar parametri iConta (citire)",
+    "rezumat": {
+     "n_parametri": 231,
+     "pe_clasa": {
+      "cont": 146,
+      "cota": 38,
+      "nomenclator": 4,
+      "plafon": 38,
+      "termen": 5
+     }
+    },
+    "secunde": 2.07
+   },
+   {
+    "operatie": "OP6+OP7 potrivire si clasificare",
+    "rezumat": {
+     "citari_declarate": 40,
+     "citari_rezolvate": 40,
+     "n_conturi_in_plan_din_corpus": 583,
+     "n_parametri": 231,
+     "sumar": {
+      "CONCORDA": 202,
+      "NEGASIT": 29
+     }
+    },
+    "secunde": 11.91
+   },
+   {
+    "operatie": "Probe pe corpus",
+    "rezumat": {
+     "cod_ieșire": 0
+    },
+    "secunde": 0.25
+   }
+  ],
+  "total_secunde": 18.14
+ },
+ "generat_la": "2026-09-28T13:17:20",
+ "inventar": {
+  "cu_temei_declarat": 42,
+  "fara_temei_declarat": 189,
+  "iconta": "/home/costin/iconta_nou",
+  "n_parametri": 231,
+  "pe_clasa": {
+   "cont": 146,
+   "cota": 38,
+   "nomenclator": 4,
+   "plafon": 38,
+   "termen": 5
+  }
+ },
+ "parametri": [
   {
    "act_modificator": null,
    "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
@@ -5206,9 +5327,12 @@
    "valoare_lege": "22.500"
   }
  ],
- "secunde": 11.86,
  "sumar": {
   "CONCORDA": 202,
-  "NEGASIT": 29
- }
+  "DIFERA": 0,
+  "NEGASIT": 29,
+  "citari_declarate_de_iconta": 40,
+  "citari_rezolvate_in_corpus": 40
+ },
+ "versiune": "v1"
 }
