@@ -160,7 +160,8 @@
     ]
    ],
    "fapte_motor": [
-    "395.000 lei"
+    "395.000 lei",
+    "10 septembrie"
    ],
    "valoare_ok": false,
    "temei_ok": true,
@@ -463,7 +464,7 @@
    "raspuns_asteptat": "25 iunie 2027 inclusiv (nu 25 martie). Notă: validatorul DUKIntegrator testat la 03.08.2026 încă cere martie pentru an 2026 — termenul legal e totuși iunie",
    "temei_asteptat": "Cod fiscal art. 42 alin. (1), modificat de OUG 8/2026 art. 6 pct. 12 (MO 147/25.02.2026), aplicabil începând cu anul fiscal 2026 cf. art. 10 alin. (2) OUG 8/2026; art. 41 alin. (1) și (2) (definitivarea și plata până la termenul art. 42)",
    "fapt_principal_cheie": [
-    "03.08.2026"
+    "25 iunie"
    ],
    "temeiuri_cheie": [
     [
@@ -497,7 +498,7 @@
    "valoare_ok": false,
    "temei_ok": false,
    "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['03.08.2026']) nu e in raspuns; articolul citat [('cf', '41')] nu e printre cele ale cheii [('cf', '42'), ('cf', '6'), ('cf', '10'), (None, '41'), (None, '42')]",
+   "de_ce": "faptul principal al cheii (['25 iunie']) nu e in raspuns; articolul citat [('cf', '41')] nu e printre cele ale cheii [('cf', '42'), ('cf', '6'), ('cf', '10'), (None, '41'), (None, '42')]",
    "verdict_pe_fond": "GRESIT"
   },
   {
@@ -670,7 +671,9 @@
      "41"
     ]
    ],
-   "fapte_motor": [],
+   "fapte_motor": [
+    "25 decembrie"
+   ],
    "valoare_ok": false,
    "temei_ok": true,
    "verdict": "GRESIT",
@@ -1166,7 +1169,7 @@
    "raspuns_asteptat": "Curge de la 1 iulie 2022, durează 5 ani (se împlinește în iulie 2027), dacă nu intervin întreruperi/suspendări (ex. depunere declarație după termen sau rectificativă întrerup; inspecția fiscală suspendă). Dacă creanța rezultă dintr-o faptă penală: 10 ani de la săvârșirea faptei.",
    "temei_asteptat": "Legea 207/2015 art. 110 alin. (1)–(4); art. 111 alin. (1) lit. b)–c) și alin. (2) lit. b)",
    "fapt_principal_cheie": [
-    "5 ani"
+    "1 iulie"
    ],
    "temeiuri_cheie": [
     [
@@ -1655,6 +1658,6 @@
    "verdict_pe_fond": "NU_POT"
   }
  ],
- "comparat_la": "2026-09-28T17:50:46",
- "fisier_raspunsuri": "artefacte/intrebari/raspunsuri_D15c.json"
+ "comparat_la": "2026-09-28T18:26:30",
+ "fisier_raspunsuri": "intrebari/v2/raspunsuri_lexical.json"
 }

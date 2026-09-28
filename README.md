@@ -58,6 +58,26 @@ python3 -m fiscalos.comparatie         # compara cu cheia - singurul modul care 
 python3 -m fiscalos.raport_intrebari   # lantul final cronometrat + raportul
 ```
 
+## Al treilea livrabil — motorul de întrebări v2, stratul semantic ancorat pe atomi
+
+[`intrebari/v2/RAPORT.md`](intrebari/v2/RAPORT.md). Un model (`claude-opus-5`) propune răspunsul
+numai din atomii găsiți de căutarea mecanică; un verificator **fără model** respinge orice citat care
+nu e literal în atom și orice cifră care nu e literală într-un citat sau în întrebare. Ce nu trece
+devine abținere. Scor **indicativ** (setul de 50 e expus), pe fond:
+
+| Motor | CORECT | GREȘIT | NU POT | Cost / rulare |
+|---|---|---|---|---|
+| Stratul semantic | **12** | 7 | 31 | $2,51 |
+| Motorul lexical | 4 | 17 | 29 | $0 |
+
+Cheia API se citește numai din `~/.fiscalos/api_keys.env` (mod 600), niciodată din iConta.
+
+```sh
+venv/bin/python -m fiscalos.semantic --simulare   # marimea contextului, fara niciun apel
+venv/bin/python -m fiscalos.semantic              # cele 50 de apeluri, cost masurat
+python3 -m fiscalos.raport_intrebari_v2           # comparatia pe fond + raportul
+```
+
 ## Cum se rulează
 
 ```sh

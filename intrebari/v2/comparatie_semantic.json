@@ -1,13 +1,13 @@
 {
  "scor": {
-  "CORECT": 8,
-  "GRESIT": 17,
-  "NU_POT": 25
+  "CORECT": 16,
+  "GRESIT": 7,
+  "NU_POT": 27
  },
  "scor_referinta_pe_fond": {
-  "CORECT": 4,
-  "GRESIT": 17,
-  "NU_POT": 29
+  "CORECT": 12,
+  "GRESIT": 7,
+  "NU_POT": 31
  },
  "abtineri_pe_INCOMPLETA": [
   {
@@ -15,38 +15,44 @@
    "incompletitudine_detectata": false,
    "ce_lipseste_dupa_motor": [],
    "cheia_spune_ca_lipsesc_date": true,
-   "motivul_motorului": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns."
+   "motivul_motorului": "modelul s-a abţinut: Atomii primiți nu conțin nici cota de TVA aplicabilă, nici regulile privind dreptul de deducere a TVA pentru achiziția de vehicule (inclusiv eventuala limitare a deducerii); ei tr"
   },
   {
    "id": "Q-PRF-10",
    "incompletitudine_detectata": false,
    "ce_lipseste_dupa_motor": [],
    "cheia_spune_ca_lipsesc_date": true,
-   "motivul_motorului": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns."
+   "motivul_motorului": "modelul s-a abţinut: Între atomii primiți nu se află textul care stabilește condițiile de încadrare ca microîntreprindere (art. 47 din Codul fiscal): lipsește plafonul de venituri exprimat în euro apl"
   },
   {
    "id": "Q-SAL-09",
-   "incompletitudine_detectata": false,
-   "ce_lipseste_dupa_motor": [],
+   "incompletitudine_detectata": true,
+   "ce_lipseste_dupa_motor": [
+    "Numărul persoanelor aflate în întreținere (fără / 1 / 2 / 3 / 4 și peste), de care depinde procentul din tabelul de la alin. (4)",
+    "Dacă veniturile sunt realizate la locul unde se află funcția de bază",
+    "Vârsta salariatului (sub 26 de ani sau nu), pentru eventuala deducere personală suplimentară",
+    "Existența copiilor cu vârsta de până la 18 ani înscriși într-o unitate de învățământ",
+    "Nivelul salariului de bază minim brut pe țară garantat în plată în vigoare în septembrie 2026 (nu rezultă din atomii primiți), necesar pentru a verifica încadrarea venitului de 5.000 lei în plafonul de la alin. (3) și pentru determinarea sumei"
+   ],
    "cheia_spune_ca_lipsesc_date": true,
-   "motivul_motorului": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns."
+   "motivul_motorului": "INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Numărul persoanelor aflate în întreținere (fără / 1 / 2 / 3 / 4 și peste), de care depinde procentul din tabelul de la alin. (4); Dacă ve"
   },
   {
    "id": "Q-CPF-10",
    "incompletitudine_detectata": false,
    "ce_lipseste_dupa_motor": [],
    "cheia_spune_ca_lipsesc_date": true,
-   "motivul_motorului": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns."
+   "motivul_motorului": "modelul s-a abţinut: Atomii primiți nu conțin regula care sancționează depunerea cu întârziere a unei declarații fiscale (decontul de TVA/D300). Fragmentele din OUG 115/2023 și Legea 82/1991 privesc c"
   }
  ],
  "fapt_corect_articol_diferit": [
   {
    "id": "Q-SAL-10",
-   "raspuns_motor": "Plata drepturilor pentru munca suplimentară prestată în cadrul activităților deosebite cu caracter operativ sau neprevăzut se efectuează dacă munca astfel prestată nu a fost compensată cu timp liber corespunzător în termen de 90 de zile de la momentul prestării acesteia.",
+   "raspuns_motor": "Munca suplimentară se compensează prin ore libere plătite în următoarele 90 de zile calendaristice după efectuarea ei. Dacă această compensare nu este posibilă, munca suplimentară se plătește cu un spor la salariu stabilit prin negociere (contract colectiv sau individual de muncă), care nu poate fi mai mic de 75% din salariul de bază.",
    "articol_motor": [
     [
-     "lege_141_2025",
-     "XVIII"
+     "cm",
+     "281"
     ]
    ],
    "articole_cheie": [
@@ -60,6 +66,27 @@
     ]
    ],
    "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 122 alin. (1) (forma OUG 117/2021); art. 123 alin. (1) și (2)"
+  },
+  {
+   "id": "Q-CTB-06",
+   "raspuns_motor": "Nu. Pierderile din exploatare estimate pentru anul următor nu îndeplinesc condițiile de recunoaștere a unui provizion (nu există o obligație curentă generată de un eveniment anterior), deci nu se poate constitui provizionul la 31.12.2026. Previzionarea unor astfel de pierderi indică însă că activele de exploatare ar putea fi depreciate, iar entitatea trebuie să le testeze pentru depreciere.",
+   "articol_motor": [
+    [
+     "omfp_1802_2014",
+     "12"
+    ]
+   ],
+   "articole_cheie": [
+    [
+     "omfp_1802_2014",
+     "pct372"
+    ],
+    [
+     "omfp_1802_2014",
+     "pct374"
+    ]
+   ],
+   "temei_asteptat": "OMFP 1802/2014, Reglementări contabile, pct. 372 alin. (1)-(2) coroborat cu pct. 374 alin. (1)"
   }
  ],
  "comparatii": [
@@ -67,7 +94,7 @@
    "id": "Q-TVA-01",
    "tip": "PARAMETRU",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "9%",
+   "raspuns_motor": "Cota standard de TVA este 21%.",
    "raspuns_asteptat": "21%",
    "temei_asteptat": "Legea 227/2015 (Cod fiscal) art. 291 alin. (1), forma modificată de Legea 141/2025 art. II pct. 42, în vigoare de la 01.08.2025",
    "fapt_principal_cheie": [
@@ -90,19 +117,19 @@
     ]
    ],
    "fapte_motor": [
-    "9%"
+    "21%"
    ],
-   "valoare_ok": false,
+   "valoare_ok": true,
    "temei_ok": true,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['21%']) nu e in raspuns",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-TVA-02",
    "tip": "PARAMETRU",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "100.000 euro",
+   "raspuns_motor": "Plafonul este de 395.000 lei cifră de afaceri anuală, declarată sau realizată.",
    "raspuns_asteptat": "395.000 lei",
    "temei_asteptat": "Cod fiscal art. 310 alin. (1), forma modificată de OG 22/2025 art. I pct. 11, în vigoare de la 01.09.2025",
    "fapt_principal_cheie": [
@@ -121,23 +148,23 @@
    "temei_motor": [
     [
      "cf",
-     "310^1"
+     "310"
     ]
    ],
    "fapte_motor": [
-    "100.000 euro"
+    "395.000 lei"
    ],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['395.000 lei']) nu e in raspuns; articolul citat [('cf', '310^1')] nu e printre cele ale cheii [('cf', '310'), ('cf', 'I')]",
-   "verdict_pe_fond": "GRESIT"
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-TVA-03",
    "tip": "REGULA",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "Dacă în luna august 2025 a fost depășit și plafonul de 395.000 lei, persoana impozabilă trebuie să solicite înregistrarea în scopuri de TVA cel târziu în data de 10 septembrie 2025 și să aplice regimul normal de taxare începând cu această dată.",
+   "raspuns_motor": "Trebuie să solicite înregistrarea în scopuri de TVA cel târziu la data depășirii plafonului, adică cel târziu pe 14.05.2026. Regimul normal de taxare se aplică din data depășirii plafonului, începând cu tranzacția care a condus la depășire (factura din 14.05.2026); opțional, poate aplica regimul normal și pentru operațiunile anterioare acelei tranzacții, realizate în aceeași zi.",
    "raspuns_asteptat": "Cel târziu la data depășirii plafonului (14.05.2026); regimul normal se aplică din data depășirii, începând cu tranzacția care a condus la depășire (opțional și pentru operațiunile anterioare din aceeași zi)",
    "temei_asteptat": "Cod fiscal art. 310 alin. (6), forma modificată de OG 22/2025 art. I pct. 11, în vigoare de la 01.09.2025",
    "fapt_principal_cheie": [
@@ -160,13 +187,14 @@
     ]
    ],
    "fapte_motor": [
-    "395.000 lei"
+    "14.05.2026",
+    "14.05.2026"
    ],
-   "valoare_ok": false,
+   "valoare_ok": true,
    "temei_ok": true,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['14.05.2026']) nu e in raspuns",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-TVA-04",
@@ -189,14 +217,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt de forma 'suma', si niciun atom gasit (nici copiii lor) nu conţine unul",
+   "de_ce": "modelul s-a abţinut: Atomii primiți stabilesc plafonul în euro (100.000 euro), iar echivalentul în lei se calculează conform normelor metodologice, care nu se află printre atomii primiți; astfel, nu p",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-TVA-05",
    "tip": "CAPCANA",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Vânzarea utilajului (activ fix corporal) nu se cuprinde în cifra de afaceri de referință pentru plafonul de scutire, astfel că se ia în calcul doar suma de 300.000 lei din servicii, care rămâne sub plafonul de 395.000 lei. Firma poate continua regimul special de scutire.",
    "raspuns_asteptat": "Nu. Livrările de active fixe corporale nu se cuprind în cifra de afaceri de referință; CA relevantă = 300.000 lei < 395.000 lei",
    "temei_asteptat": "Cod fiscal art. 310 alin. (2) teza finală, forma modificată de OG 22/2025 art. I pct. 11",
    "fapt_principal_cheie": [
@@ -212,9 +240,21 @@
      "I"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "cf",
+     "310"
+    ]
+   ],
+   "fapte_motor": [
+    "300.000 lei",
+    "395.000 lei"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-TVA-06",
@@ -245,14 +285,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Atomii primiți nu conțin norma care reglementează periodicitatea și termenul de depunere a declarației recapitulative (D390). Singurul atom privind un termen de depunere corelat c",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-TVA-07",
    "tip": "PROCEDURA",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "316 , și nu se va înregistra în scopuri de TVA ca urmare a transferului, trebuie să depună, până la data de 25 inclusiv a lunii următoare celei în care a avut loc transferul, o declarație privind sumele rezultate ca urmare a livrărilor/ajustărilor taxei pe valoarea adăugată efectuate conform art.",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "Da, se depune și fără operațiuni. Termen nominal 28.02.2026, care cade sâmbătă → termen efectiv luni, 02.03.2026.",
    "temei_asteptat": "OPANAF 3769/2015 anexa 2 pct. 2 (forma OPANAF 2194/2025); CPF art. 75 (calculul termenelor după Codul de procedură civilă)",
    "fapt_principal_cheie": [
@@ -268,18 +308,9 @@
      "75"
     ]
    ],
-   "temei_motor": [
-    [
-     "cf",
-     "324"
-    ]
-   ],
-   "fapte_motor": [],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['28.02.2026']) nu e in raspuns; articolul citat [('cf', '324')] nu e printre cele ale cheii [('opanaf_3769_2015', 'pct2'), ('cpf', '75')]",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii primiți se referă la dreptul de deducere, sumele negative de TVA, rambursări și decontul de taxă, dar niciunul nu conține regula privind declarația informativă D394 (obliga",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-TVA-08",
@@ -302,7 +333,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "de_ce": "modelul s-a abţinut: Atomii primiți privesc exclusiv rambursarea TVA către persoane nestabilite/neînregistrate (art. 302), soldul sumei negative și rambursarea (art. 303), înregistrarea în scopuri de ",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -326,7 +357,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: intrebarea are 2 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "de_ce": "modelul s-a abţinut: Atomii primiți arată doar că băuturilor alcoolice servite în restaurant se aplică cota standard, iar mâncării o cotă redusă, dar nu conțin nivelul cotei standard și al cotei redus",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -356,8 +387,8 @@
   {
    "id": "Q-PRF-01",
    "tip": "PARAMETRU",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "1%",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "1% (cotă unică; cota de 3% a fost abrogată de la 01.01.2026); D100 cod obligație 121, câmp cota = 1",
    "temei_asteptat": "Legea 227/2015 (Cod fiscal) art. 51 alin. (1), modificat de OUG 89/2025 art. I pct. 4, în vigoare 01.01.2026; art. 51 alin. (1^1) abrogat de OUG 89/2025 art. I pct. 5; structura XML D100 v2 (OPANAF 57/2026), pct. 3 „cota micro”: dacă cod_oblig=121 atunci cota=1",
    "fapt_principal_cheie": [
@@ -385,26 +416,15 @@
      "pct3"
     ]
    ],
-   "temei_motor": [
-    [
-     "cf",
-     "51"
-    ]
-   ],
-   "fapte_motor": [
-    "1%"
-   ],
-   "valoare_ok": true,
-   "temei_ok": true,
-   "verdict": "CORECT",
-   "de_ce": "faptul principal si articolul coincid",
-   "verdict_pe_fond": "CORECT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii primiți conțin doar regula generală de cotă (art. 51 alin. (1) din Codul fiscal - 1%), dar nu conțin nicio prevedere privind tratamentul specific al veniturilor din consult",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-PRF-02",
    "tip": "REGULA",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "Dacă în cursul unui an fiscal o microîntreprindere realizează venituri mai mari de 100.000 euro, aceasta datorează impozit pe profit începând cu trimestrul în care s-a depășit această limită.",
+   "raspuns_motor": "Plafonul este de 100.000 euro venituri realizate în cursul anului fiscal. Verificarea se face pe baza veniturilor înregistrate cumulat de la începutul anului fiscal, iar echivalentul în euro se determină la cursul de schimb valabil la închiderea exercițiului financiar precedent. Microîntreprinderea datorează impozit pe profit începând cu trimestrul în care s-a depășit această limită (trimestrul în care se încadrează luna mai 2026).",
    "raspuns_asteptat": "Plafon 100.000 euro; curs valabil la închiderea exercițiului financiar precedent (31.12.2025); impozit pe profit începând cu trimestrul în care s-a depășit limita, adică trimestrul II 2026 (calculat pe veniturile și cheltuielile de la începutul trimestrului II)",
    "temei_asteptat": "Cod fiscal art. 52 alin. (1) (mod. OUG 8/2026 art. 6 pct. 20, aplicabil de la trim. I 2026 cf. art. 10 alin. (5) OUG 8/2026); art. 52 alin. (5) (mod. OUG 89/2025 art. I pct. 6); art. 52 alin. (6); art. 54 alin. (1)",
    "fapt_principal_cheie": [
@@ -459,11 +479,11 @@
    "id": "Q-PRF-03",
    "tip": "CAPCANA",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "în cazul în care anul fiscal modificat începe în a doua, respectiv în a treia lună a trimestrului calendaristic, prima lună, respectiv primele două luni ale trimestrului calendaristic respectiv, vor constitui un trimestru pentru care contribuabilul are obligația declarării și efectuării plăților anticipate, în sumă de 1/12 din impozitul pe profit datorat pentru anul precedent, pentru fiecare lună a trimestrului, până la data de 25 inclusiv a primei luni următoare încheierii trimestrului calendaristic respectiv.",
+   "raspuns_motor": "Declarația anuală privind impozitul pe profit (D101) pentru anul fiscal 2026 se depune până la data de 25 iunie inclusiv a anului următor, iar impozitul pe profit anual se plătește până la același termen, respectiv termenul de depunere a declarației anuale.",
    "raspuns_asteptat": "25 iunie 2027 inclusiv (nu 25 martie). Notă: validatorul DUKIntegrator testat la 03.08.2026 încă cere martie pentru an 2026 — termenul legal e totuși iunie",
    "temei_asteptat": "Cod fiscal art. 42 alin. (1), modificat de OUG 8/2026 art. 6 pct. 12 (MO 147/25.02.2026), aplicabil începând cu anul fiscal 2026 cf. art. 10 alin. (2) OUG 8/2026; art. 41 alin. (1) și (2) (definitivarea și plata până la termenul art. 42)",
    "fapt_principal_cheie": [
-    "03.08.2026"
+    "25 iunie"
    ],
    "temeiuri_cheie": [
     [
@@ -490,15 +510,17 @@
    "temei_motor": [
     [
      "cf",
-     "41"
+     "42"
     ]
    ],
-   "fapte_motor": [],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['03.08.2026']) nu e in raspuns; articolul citat [('cf', '41')] nu e printre cele ale cheii [('cf', '42'), ('cf', '6'), ('cf', '10'), (None, '41'), (None, '42')]",
-   "verdict_pe_fond": "GRESIT"
+   "fapte_motor": [
+    "25 iunie"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-PRF-04",
@@ -521,7 +543,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Răspunsul ar presupune determinarea impozitului minim pe cifra de afaceri pornind de la indicatorii VT, Vs, I și A și compararea lui cu impozitul pe profit de 1.000.000 lei, adică",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -553,7 +575,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: intrebarea are 4 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "de_ce": "modelul s-a abţinut: Atomii primiți conțin doar reguli privind elementele care se adaugă la baza impozabilă (reducerile comerciale din contul 609, diferențele de curs valutar doar în trimestrul IV), d",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -577,7 +599,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: intrebarea are 2 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "de_ce": "modelul s-a abţinut: Atomii primiți stabilesc doar regula de recuperare a pierderii (limita de 70% din profitul impozabil, în 5 ani consecutivi), dar determinarea sumei impozitului datorat și a pierde",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -597,14 +619,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: intrebarea are 3 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "de_ce": "modelul s-a abţinut: Atomii dau doar regula (limita de 2% aplicată asupra profitului contabil la care se adaugă cheltuielile cu impozitul pe profit și cheltuielile de protocol), dar sumele cerute (par",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-PRF-08",
    "tip": "REGULA",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Condiția privind salariatul trebuie îndeplinită în termen de 90 de zile inclusiv de la data înregistrării persoanei juridice. Dacă în acest termen condiția nu este îndeplinită, societatea datorează impozit pe profit începând cu trimestrul următor celui în care expiră perioada de 90 de zile.",
    "raspuns_asteptat": "În 90 de zile inclusiv de la înregistrare (nu 30, cum era înainte de OUG 8/2026); dacă nu, datorează impozit pe profit începând cu trimestrul următor celui în care expiră cele 90 de zile (termenul expiră 08.06.2026, trim. II → impozit pe profit din trim. III 2026)",
    "temei_asteptat": "Cod fiscal art. 48 alin. (3), modificat de OUG 8/2026 art. 6 pct. 18, în vigoare 25.02.2026; art. 47 alin. (1) lit. g); art. 51 alin. (4) (definiția salariatului)",
    "fapt_principal_cheie": [
@@ -628,15 +650,27 @@
      "51"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "cf",
+     "48"
+    ]
+   ],
+   "fapte_motor": [
+    "90 zile",
+    "90 zile"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-PRF-09",
    "tip": "PROCEDURA",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "Contribuabilii care aplică sistemul de declarare și plată a impozitului pe profit anual, cu plăți anticipate efectuate trimestrial, determină plățile anticipate trimestriale în sumă de o pătrime din impozitul pe profit datorat pentru anul precedent, actualizat cu indicele prețurilor de consum, estimat cu ocazia elaborării bugetului inițial al anului pentru care se efectuează plățile anticipate, până la data de 25 inclusiv a lunii următoare trimestrului pentru care se efectuează plata, cu excepția plății anticipate aferente trimestrului IV care se declară și se plătește până la data de 25 decembrie, respectiv până la data de 25 a ultimei luni din anul fiscal modificat.",
+   "raspuns_motor": "Plata anticipată pentru trimestrul I 2026 se stabilește în sumă de o pătrime din impozitul pe profit datorat pentru anul precedent (impozitul pe profit anual, conform declarației privind impozitul pe profit), actualizat cu indicele prețurilor de consum estimat cu ocazia elaborării bugetului inițial al anului pentru care se efectuează plățile anticipate. Termenul: până la data de 25 inclusiv a lunii următoare trimestrului pentru care se efectuează plata. Atomii primiți nu indică denumirea/codul formularului de declarare, deci acest element nu poate fi confirmat din textele furnizate.",
    "raspuns_asteptat": "16% × profitul contabil al trimestrului I 2026 (NU 1/4 din impozitul anului precedent actualizat cu IPC); D100, cod obligație 103; termen nominal 25.04.2026 (sâmbătă) → efectiv 27.04.2026.",
    "temei_asteptat": "Cod fiscal art. 41 alin. (10^1) (OUG 8/2026 art. 6 pct. 11, aplicabil din anul fiscal 2026 cf. art. 10 alin. (2)); art. 17; structura D100 cod 103; CPF art. 75",
    "fapt_principal_cheie": [
@@ -721,7 +755,7 @@
    "id": "Q-SAL-01",
    "tip": "PARAMETRU",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "2,25%",
+   "raspuns_motor": "Cota contribuției asiguratorii pentru muncă este de 2,25%. Ea este datorată de angajator: persoanele fizice și juridice care acordă veniturile din salarii și asimilate salariilor au obligația de a o calcula și de a o plăti la bugetul de stat, într-un cont distinct, până la data de 25 inclusiv a lunii (sau a lunii următoare trimestrului) următoare celei pentru care se plătesc veniturile.",
    "raspuns_asteptat": "2,25%, datorată de angajator, asupra bazei de la art. 220^4 (câștigurile brute din salarii)",
    "temei_asteptat": "Legea 227/2015 (Cod fiscal) art. 220^3 alin. (1); baza: art. 220^4 alin. (1)",
    "fapt_principal_cheie": [
@@ -755,8 +789,8 @@
   {
    "id": "Q-SAL-02",
    "tip": "PROCEDURA",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "d)-f) , precum și persoanele fizice care realizează în România venituri din salarii sau asimilate salariilor de la angajatori din state care nu intră sub incidența legislației europene aplicabile în domeniul securității sociale, precum și a acordurilor privind sistemele de securitate socială la care România este parte sunt obligate să depună lunar, până la data de 25 inclusiv a lunii următoare celei pentru care se plătesc veniturile, Declarația privind obligațiile de plată a contribuțiilor sociale, impozitului pe venit și evidența nominală a persoanelor asigurate.",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "D112, până la 25.09.2026 inclusiv; CAS și impozitul pe salarii se plătesc tot până la 25.09.2026. Excepție: angajatorii din CF art. 80 alin. (2) (ex. micro cu sub 3 salariați, ONG-uri, PFA/II) depun D112 trimestrial și plătesc până la 25 a lunii următoare trimestrului — pentru august (T3): 25.10.2026, duminică → efectiv 26.10.2026.",
    "temei_asteptat": "Cod fiscal art. 147 alin. (1) și (4); art. 146 alin. (3); art. 80 alin. (1)-(2); CPF art. 75",
    "fapt_principal_cheie": [
@@ -780,18 +814,9 @@
      "75"
     ]
    ],
-   "temei_motor": [
-    [
-     "cf",
-     "147"
-    ]
-   ],
-   "fapte_motor": [],
-   "valoare_ok": false,
-   "temei_ok": true,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['25.09.2026']) nu e in raspuns",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Dacă angajatorul face parte dintre plătitorii prevăzuți la art. 80 alin. (2), care depun declarația trimestrial, sau este obligat la depu",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-SAL-03",
@@ -830,14 +855,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "de_ce": "modelul s-a abţinut: Atomii primiți stabilesc doar bazele lunare de calcul (art. 139 alin. (1) pentru CAS, art. 157 alin. (1) pentru CASS) și regula salariului minim pentru CAS, dar nu conțin cotele a",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-SAL-04",
    "tip": "CALCUL",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Facilitatea de 300 lei/lună nu se aplică, deoarece una dintre condițiile cumulative este ca venitul brut din salarii pentru luna respectivă să nu depășească 4.300 lei inclusiv, iar numai salariul de bază din CIM este de 4.325 lei (la care se adaugă sporul de 200 lei). În plus, salariul de bază nu este la nivelul salariului minim brut pe țară garantat în plată.",
    "raspuns_asteptat": "Da (salariul de bază fără sporuri = salariul minim, iar brutul 4.525 lei ≤ 4.600 lei). Suma exceptată: 200 lei/lună. Baza CAS/CASS = 4.525 − 200 = 4.325 lei; CAS 25% = 1.081,25 lei; CASS 10% = 432,50 lei",
    "temei_asteptat": "OUG 89/2025 art. III alin. (1) lit. a) și b) (200 lei/lună pentru 01.07–31.12.2026, prag 4.600 lei inclusiv) și alin. (6); HG 146/2026 art. 1 (4.325 lei); Cod fiscal art. 138 lit. a), art. 156",
    "fapt_principal_cheie": [
@@ -861,15 +886,29 @@
      "156"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "R-CALC: intrebarea are 2 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "cf",
+     "146"
+    ]
+   ],
+   "fapte_motor": [
+    "300 lei",
+    "4.300 lei",
+    "4.325 lei",
+    "200 lei"
+   ],
+   "valoare_ok": false,
+   "temei_ok": false,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['4.525 lei']) nu e in raspuns; articolul citat [('cf', '146')] nu e printre cele ale cheii [('oug_89_2025', 'III'), ('hg_146_2026', '1'), ('cf', '138'), ('cf', '156')]",
+   "verdict_pe_fond": "GRESIT"
   },
   {
    "id": "Q-SAL-05",
    "tip": "CAPCANA",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Contravaloarea tichetelor de masă nu se include în venitul brut care se compară cu plafonul de 4.600 lei aplicabil în perioada 1 iulie-31 decembrie 2026. Se ia în calcul doar venitul brut din salarii fără tichete, adică 4.325 lei, care nu depășește 4.600 lei, așa că facilitatea de 200 lei/lună neimpozabilă și neinclusă în baza contribuțiilor se păstrează pentru octombrie 2026.",
    "raspuns_asteptat": "Nu, facilitatea se aplică: la verificarea pragului de 4.600 lei nu se include contravaloarea tichetelor de masă (nici vouchere de vacanță / indemnizație de hrană); venitul relevant este 4.325 lei ≤ 4.600 lei",
    "temei_asteptat": "OUG 89/2025 art. III alin. (1) lit. b) („fără a include contravaloarea tichetelor de masă, voucherelor de vacanță, respectiv indemnizația de hrană”)",
    "fapt_principal_cheie": [
@@ -881,9 +920,25 @@
      "III"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "oug_89_2025",
+     "III"
+    ]
+   ],
+   "fapte_motor": [
+    "4.600 lei",
+    "1 iulie",
+    "31 decembrie",
+    "4.325 lei",
+    "4.600 lei",
+    "200 lei"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-SAL-06",
@@ -914,14 +969,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Atomii primiți stabilesc doar principiul CAS minim (raportarea la salariul de bază minim brut pe țară), dar nu conțin nici cota de contribuție prevăzută la art. 138 lit. a), nici ",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-SAL-07",
    "tip": "REGULA",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "Cuantumul brut lunar al indemnizației pentru incapacitate temporară de muncă cauzată de boli obișnuite sau de accidente în afara muncii se determină raportat la fiecare episod de boală, după cum urmează: a) prin aplicarea procentului de 55% asupra bazei de calcul stabilite conform art.",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "65% din baza de calcul (episod de 8-14 zile). Pentru certificatele eliberate 01.02.2026–31.12.2027 prima zi a episodului nu se plătește (diminuare cu o zi); angajatorul suportă zilele 2-6, FNUASS din ziua a 7-a.",
    "temei_asteptat": "OUG 158/2005 art. 17 alin. (1) lit. b); OUG 91/2025 art. II alin. (1) și (1^1), modificat de Legea 64/2026; Norme OMS 15/2018 art. 78^4 (Ordinul 506/1030/2026)",
    "fapt_principal_cheie": [
@@ -941,26 +996,15 @@
      "78^4"
     ]
    ],
-   "temei_motor": [
-    [
-     "oug_158_2005",
-     "17"
-    ]
-   ],
-   "fapte_motor": [
-    "55%"
-   ],
-   "valoare_ok": false,
-   "temei_ok": true,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['65%']) nu e in raspuns",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Întrebarea are două componente, iar atomii primiți nu acoperă ambele. (1) Suportarea indemnizației: niciun atom nu conține regula privind cine plătește indemnizația (angajator pen",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-SAL-08",
    "tip": "CAPCANA",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "Cuantumul brut lunar al indemnizației pentru incapacitate temporară de muncă cauzată de boli obișnuite sau de accidente în afara muncii se determină raportat la fiecare episod de boală, după cum urmează: a) prin aplicarea procentului de 55% asupra bazei de calcul stabilite conform art.",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "Procentul se stabilește pe episodul de boală (10 zile) → 65% pentru tot episodul, inclusiv zilele din septembrie; diferența 55%→65% pentru septembrie se recalculează, se include în veniturile lunii octombrie 2026 și se declară în D112 pentru octombrie",
    "temei_asteptat": "OUG 158/2005 art. 17 alin. (1) partea introductivă („raportat la fiecare episod de boală”) și lit. b); art. 17 alin. (1^2) (introdus de OUG 89/2025 art. VII)",
    "fapt_principal_cheie": [
@@ -980,20 +1024,9 @@
      "VII"
     ]
    ],
-   "temei_motor": [
-    [
-     "oug_158_2005",
-     "17"
-    ]
-   ],
-   "fapte_motor": [
-    "55%"
-   ],
-   "valoare_ok": false,
-   "temei_ok": true,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['10 zile']) nu e in raspuns",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii arată că procentul se stabilește în funcție de totalul zilelor din episodul de boală, dar stabilirea încadrării în tranșa de zile ar presupune adunarea celor 3 zile cu cele",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-SAL-09",
@@ -1023,7 +1056,7 @@
    "id": "Q-SAL-10",
    "tip": "REGULA",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "Plata drepturilor pentru munca suplimentară prestată în cadrul activităților deosebite cu caracter operativ sau neprevăzut se efectuează dacă munca astfel prestată nu a fost compensată cu timp liber corespunzător în termen de 90 de zile de la momentul prestării acesteia.",
+   "raspuns_motor": "Munca suplimentară se compensează prin ore libere plătite în următoarele 90 de zile calendaristice după efectuarea ei. Dacă această compensare nu este posibilă, munca suplimentară se plătește cu un spor la salariu stabilit prin negociere (contract colectiv sau individual de muncă), care nu poate fi mai mic de 75% din salariul de bază.",
    "raspuns_asteptat": "Ore libere plătite în următoarele 90 de zile calendaristice; altfel se plătesc cu spor negociat de minim 75% din salariul de bază (în luna următoare)",
    "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 122 alin. (1) (forma OUG 117/2021); art. 123 alin. (1) și (2)",
    "fapt_principal_cheie": [
@@ -1041,24 +1074,25 @@
    ],
    "temei_motor": [
     [
-     "lege_141_2025",
-     "XVIII"
+     "cm",
+     "281"
     ]
    ],
    "fapte_motor": [
-    "90 zile"
+    "90 zile",
+    "75%"
    ],
    "valoare_ok": true,
    "temei_ok": false,
    "verdict": "GRESIT",
-   "de_ce": "articolul citat [('lege_141_2025', 'XVIII')] nu e printre cele ale cheii [('cm', '122'), (None, '123')]",
+   "de_ce": "articolul citat [('cm', '281')] nu e printre cele ale cheii [('cm', '122'), (None, '123')]",
    "verdict_pe_fond": "GRESIT"
   },
   {
    "id": "Q-CPF-01",
    "tip": "PARAMETRU",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "1%",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "Dobândă 0,02% pe fiecare zi de întârziere + penalitate de întârziere 0,01% pe fiecare zi de întârziere (cumulative), calculate din ziua următoare scadenței până la stingere inclusiv.",
    "temei_asteptat": "Legea 207/2015 art. 174 alin. (1) și (5); art. 176 alin. (1), (2) și (3)",
    "fapt_principal_cheie": [
@@ -1074,20 +1108,9 @@
      "176"
     ]
    ],
-   "temei_motor": [
-    [
-     "cpf",
-     "183"
-    ]
-   ],
-   "fapte_motor": [
-    "1%"
-   ],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['0,02%']) nu e in raspuns; articolul citat [('cpf', '183')] nu e printre cele ale cheii [('cpf', '174'), (None, '176')]",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii primiți confirmă doar că pentru neachitarea la scadență a obligațiilor fiscale principale se datorează dobânzi și penalități de întârziere (art. 173 alin. (1)), dar nu conț",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CPF-02",
@@ -1110,14 +1133,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "de_ce": "modelul s-a abţinut: Atomii primiți confirmă doar principiul că se datorează dobânzi și penalități de întârziere pentru neachitarea la scadență, dar nu conțin nivelul (procentul pe zi de întârziere) a",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CPF-03",
    "tip": "CALCUL",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "20.000 lei x 0,08% = 16,00 lei",
+   "raspuns_motor": "Firma datorează accesorii calculate de la scadența obligației principale (25.07.2025) până la data plății, inclusiv (03.04.2026), și anume: penalitate de nedeclarare de 0,08% pe fiecare zi, începând cu ziua imediat următoare scadenței și până la data stingerii sumei datorate, inclusiv, aplicată la cei 20.000 lei stabiliți prin decizia de impunere, la care se adaugă dobânzi pentru aceeași perioadă. Cuantumul exact în lei și cota dobânzii nu rezultă din textele avute la dispoziție.",
    "raspuns_asteptat": "252 zile (26.07.2025–03.04.2026 inclusiv). Penalitate de nedeclarare 20.000 × 0,08% × 252 = 4.032 lei, redusă cu 75% (plată până la 05.04.2026, termenul art. 156) → 1.008 lei. Dobânzi 20.000 × 0,02% × 252 = 1.008 lei. Penalitate de întârziere: 0 (nu se aplică când se datorează penalitate de nedeclarare). Total 2.016 lei.",
    "temei_asteptat": "Legea 207/2015 art. 181 alin. (1), (2) lit. a), (4); art. 156 alin. (1) lit. a); art. 176 alin. (4); art. 174 alin. (2) și (5)",
    "fapt_principal_cheie": [
@@ -1148,9 +1171,10 @@
     ]
    ],
    "fapte_motor": [
-    "20.000 lei",
+    "25.07.2025",
+    "03.04.2026",
     "0,08%",
-    "16,00 lei"
+    "20.000 lei"
    ],
    "valoare_ok": false,
    "temei_ok": true,
@@ -1166,7 +1190,7 @@
    "raspuns_asteptat": "Curge de la 1 iulie 2022, durează 5 ani (se împlinește în iulie 2027), dacă nu intervin întreruperi/suspendări (ex. depunere declarație după termen sau rectificativă întrerup; inspecția fiscală suspendă). Dacă creanța rezultă dintr-o faptă penală: 10 ani de la săvârșirea faptei.",
    "temei_asteptat": "Legea 207/2015 art. 110 alin. (1)–(4); art. 111 alin. (1) lit. b)–c) și alin. (2) lit. b)",
    "fapt_principal_cheie": [
-    "5 ani"
+    "1 iulie"
    ],
    "temeiuri_cheie": [
     [
@@ -1179,14 +1203,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt de forma 'termen', si niciun atom gasit (nici copiii lor) nu conţine unul",
+   "de_ce": "modelul s-a abţinut: Atomii primiți nu conțin textul art. 110 din Codul de procedură fiscală, care stabilește durata termenului de prescripție a dreptului de a stabili creanțe fiscale și momentul de l",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CPF-05",
    "tip": "PARAMETRU",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "60 de zile",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "45 de zile de la comunicarea actului, sub sancțiunea decăderii; dacă actul nu conține mențiunea privind calea de atac/termenul/organul (art. 46 alin. (2) lit. i)), termenul devine 3 luni de la comunicare.",
    "temei_asteptat": "Legea 207/2015 art. 270 alin. (1) și (4)",
    "fapt_principal_cheie": [
@@ -1198,26 +1222,15 @@
      "270"
     ]
    ],
-   "temei_motor": [
-    [
-     "cpf",
-     "281"
-    ]
-   ],
-   "fapte_motor": [
-    "60 zile"
-   ],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['45 zile']) nu e in raspuns; articolul citat [('cpf', '281')] nu e printre cele ale cheii [('cpf', '270')]",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii primiți nu conțin norma privind termenul de depunere a contestației împotriva actului administrativ fiscal și nici norma privind efectul lipsei mențiunii căii de atac în ac",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CPF-06",
    "tip": "PROCEDURA",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "soldul sumei negative de TVA solicitatâ la rambursare provine dintr-un numâr de perioade mai mare decât numârul perioadelor de raportare utilizate într-o perioadâ de 12 luni.",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "45 de zile de la înregistrarea cererii; dacă e necesară inspecția fiscală (pe baza analizei de risc), cel mult 90 de zile de la înregistrare (inspecție parțială), cu prelungirile pentru probe suplimentare (2/3/6 luni). Dacă termenul e depășit, firma are dreptul la dobândă 0,02%/zi, la cerere.",
    "temei_asteptat": "Legea 207/2015 art. 77 alin. (1), (2) și (5); art. 182 alin. (1) și (4)",
    "fapt_principal_cheie": [
@@ -1233,26 +1246,15 @@
      "182"
     ]
    ],
-   "temei_motor": [
-    [
-     "cpf",
-     "168"
-    ]
-   ],
-   "fapte_motor": [
-    "12 luni"
-   ],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['45 zile']) nu e in raspuns; articolul citat [('cpf', '168')] nu e printre cele ale cheii [('cpf', '77'), (None, '182')]",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii primiți reglementează doar modul de soluționare a deconturilor cu opțiune de rambursare (rambursare cu inspecție fiscală ulterioară, respectiv cazurile în care se efectueaz",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CPF-07",
    "tip": "REGULA",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "Contribuabilul/Plătitorul are obligația de a declara organului fiscal central, înființarea de sedii secundare, în termen de 30 de zile de la:",
+   "raspuns_motor": "Durata maximă a inspecției fiscale este de 45 de zile (termenul pentru „ceilalți contribuabili”, adică alții decât cei mari, cei cu sedii secundare, nerezidenții și cei mijlocii). Consecința depășirii acestui termen nu rezultă din atomii primiți, deci nu o pot preciza.",
    "raspuns_asteptat": "Maximum 45 de zile. Dacă nu se finalizează în dublul perioadei (90 de zile, fără perioadele de suspendare legală), inspecția încetează fără raport și fără decizie de impunere; poate fi reluată o singură dată, cu aprobarea organului ierarhic superior; suspendarea prescripției pe durata inspecției nu mai operează.",
    "temei_asteptat": "Legea 207/2015 art. 126 alin. (1) lit. c), (2) și (3)",
    "fapt_principal_cheie": [
@@ -1267,17 +1269,17 @@
    "temei_motor": [
     [
      "cpf",
-     "85"
+     "126"
     ]
    ],
    "fapte_motor": [
-    "30 zile"
+    "45 zile"
    ],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['45 zile']) nu e in raspuns; articolul citat [('cpf', '85')] nu e printre cele ale cheii [('cpf', '126')]",
-   "verdict_pe_fond": "GRESIT"
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-CPF-08",
@@ -1300,14 +1302,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Atomii primiți conțin exclusiv dispoziții din Codul de procedură fiscală (Legea 207/2015) privind certificarea declarațiilor, eșalonări la plată, certificatul de atestare fiscală ",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CPF-09",
    "tip": "CAPCANA",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu datorează nimic: pentru sumele datorate cu titlu de amenzi de orice fel nu se datorează dobânzi și penalități de întârziere, indiferent de durata întârzierii.",
    "raspuns_asteptat": "0 lei: nu se datorează dobânzi și penalități de întârziere pentru amenzi de orice fel (nici pentru accesorii, cheltuieli de executare etc.).",
    "temei_asteptat": "Legea 207/2015 art. 173 alin. (2)",
    "fapt_principal_cheie": [
@@ -1319,9 +1321,18 @@
      "173"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt de forma 'procent', si niciun atom gasit (nici copiii lor) nu conţine unul",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "cpf",
+     "173"
+    ]
+   ],
+   "fapte_motor": [],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['0 lei']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
   },
   {
    "id": "Q-CPF-10",
@@ -1359,7 +1370,7 @@
    "id": "Q-CTB-01",
    "tip": "PARAMETRU",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "5.000 lei",
+   "raspuns_motor": "5.000 lei (valoarea fiscală la data intrării în patrimoniu trebuie să fie egală sau mai mare de 5.000 lei; limita se actualizează anual prin hotărâre a Guvernului, în funcție de indicele de inflație).",
    "raspuns_asteptat": "5.000 lei (egală sau mai mare), limită actualizabilă anual cu inflația prin HG; până în 2025 limita era 2.500 lei (HG 276/2013).",
    "temei_asteptat": "Legea 227/2015 (Cod fiscal) art. 28 alin. (2) lit. b), modificat de OUG 8/2026 art. 6 pct. 7, aplicabil de la anul fiscal 2026 (OUG 8/2026 art. 10 alin. (2)); HG 276/2013 art. 1 alin. (1) pentru limita anterioară",
    "fapt_principal_cheie": [
@@ -1390,6 +1401,7 @@
     ]
    ],
    "fapte_motor": [
+    "5.000 lei",
     "5.000 lei"
    ],
    "valoare_ok": true,
@@ -1419,14 +1431,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Atomii primiți nu conțin nicio regulă despre pragul valoric de încadrare a unui bun ca mijloc fix amortizabil (nici valoarea de 3.200 lei, nici 5.000 lei) și nici o normă tranzito",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CTB-03",
    "tip": "CALCUL",
    "stare_motor": "RASPUNS",
-   "raspuns_motor": "100.000 lei x 65% = 65000,00 lei",
+   "raspuns_motor": "În primul an de utilizare, amortizarea fiscală nu poate depăși 65% din valoarea fiscală de la data intrării în patrimoniu, deci maximum 65% din cei 100.000 lei.",
    "raspuns_asteptat": "65.000 lei (maxim 65% din valoarea fiscală de intrare); restul de 35.000 lei se amortizează în anii următori raportat la durata normală de utilizare rămasă.",
    "temei_asteptat": "Legea 227/2015 art. 28 alin. (8^1) lit. a) și b), introdus de OUG 8/2026 art. 6 pct. 8, pentru active noi puse în funcțiune 01.01.2026-31.12.2026",
    "fapt_principal_cheie": [
@@ -1449,9 +1461,9 @@
     ]
    ],
    "fapte_motor": [
-    "100.000 lei",
     "65%",
-    "65000,00 lei"
+    "65%",
+    "100.000 lei"
    ],
    "valoare_ok": false,
    "temei_ok": true,
@@ -1474,7 +1486,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Atomii primiți provin exclusiv din Codul fiscal (art. 28) și reglementează amortizarea fiscală; unul dintre ei precizează chiar că deducerile de amortizare se determină fără a lua",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -1496,14 +1508,14 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Atomii primiți nu conțin regula contabilă de corectare a erorilor din exerciții financiare anterioare și nici simbolul/denumirea contului pe care se face corecția. Textele fiscale",
    "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CTB-06",
    "tip": "CAPCANA",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Pierderile din exploatare estimate pentru anul următor nu îndeplinesc condițiile de recunoaștere a unui provizion (nu există o obligație curentă generată de un eveniment anterior), deci nu se poate constitui provizionul la 31.12.2026. Previzionarea unor astfel de pierderi indică însă că activele de exploatare ar putea fi depreciate, iar entitatea trebuie să le testeze pentru depreciere.",
    "raspuns_asteptat": "Nu. Nu se recunosc provizioane pentru pierderi viitoare din exploatare (nu corespund definiției unei datorii); activele de exploatare se testează pentru depreciere.",
    "temei_asteptat": "OMFP 1802/2014, Reglementări contabile, pct. 372 alin. (1)-(2) coroborat cu pct. 374 alin. (1)",
    "fapt_principal_cheie": [],
@@ -1517,15 +1529,26 @@
      "pct374"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "omfp_1802_2014",
+     "12"
+    ]
+   ],
+   "fapte_motor": [
+    "31.12.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": false,
+   "verdict": "GRESIT",
+   "de_ce": "articolul citat [('omfp_1802_2014', '12')] nu e printre cele ale cheii [('omfp_1802_2014', 'pct372'), ('omfp_1802_2014', 'pct374')]",
+   "verdict_pe_fond": "GRESIT"
   },
   {
    "id": "Q-CTB-07",
    "tip": "CALCUL",
-   "stare_motor": "RASPUNS",
-   "raspuns_motor": "50.000 lei x 16% = 8000,00 lei",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
    "raspuns_asteptat": "Impozit 8.000 lei (16%, final); net 42.000 lei; virare până la 25 mai 2026 inclusiv (25 a lunii următoare plății). Dacă nu s-ar plăti până la sfârșitul anului aprobării, impozitul s-ar plăti până la 25 ianuarie a anului următor.",
    "temei_asteptat": "Legea 227/2015 art. 97 alin. (7), modificat de Legea 141/2025 art. II pct. 5, aplicabil dividendelor distribuite de la 01.01.2026 (Legea 141/2025 art. VII alin. (1) lit. c))",
    "fapt_principal_cheie": [
@@ -1545,28 +1568,15 @@
      "VII"
     ]
    ],
-   "temei_motor": [
-    [
-     "cf",
-     "43"
-    ]
-   ],
-   "fapte_motor": [
-    "50.000 lei",
-    "16%",
-    "8000,00 lei"
-   ],
-   "valoare_ok": false,
-   "temei_ok": false,
-   "verdict": "GRESIT",
-   "de_ce": "faptul principal al cheii (['8.000 lei']) nu e in raspuns; articolul citat [('cf', '43')] nu e printre cele ale cheii [('cf', '97'), ('cf', 'II'), ('cf', 'VII')]",
-   "verdict_pe_fond": "GRESIT"
+   "verdict": "NU_POT",
+   "de_ce": "modelul s-a abţinut: Atomii primiți stabilesc cota de 16% aplicată sumei dividendelor, reținerea odată cu plata și termenul de virare până la data de 25 inclusiv a lunii următoare celei în care se fac",
+   "verdict_pe_fond": "NU_POT"
   },
   {
    "id": "Q-CTB-08",
    "tip": "CAPCANA",
-   "stare_motor": "NU_POT_RASPUNDE",
-   "raspuns_motor": null,
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Pentru dividendele distribuite în baza situațiilor financiare interimare întocmite în cursul anului 2025 cota rămâne 10%, fără recalcularea impozitului după regularizarea lor pe baza situațiilor financiare anuale aferente exercițiului financiar 2025 aprobate potrivit legii.",
    "raspuns_asteptat": "Nu. Pentru dividendele distribuite pe baza situațiilor interimare din 2025 cota rămâne 10%, fără recalculare după regularizare. (Cota se stabilește după data distribuirii, nu a plății sau a aprobării anuale.)",
    "temei_asteptat": "Legea 141/2025 art. VII alin. (2); Legea 227/2015 art. 43 alin. (2) și art. 97 alin. (7) cu aplicare de la 01.01.2026 (Legea 141/2025 art. VII alin. (1) lit. a) și c))",
    "fapt_principal_cheie": [
@@ -1590,9 +1600,20 @@
      "VII"
     ]
    ],
-   "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere o JUDECATA (Da/Nu) - aplicarea unei reguli la faptele date. Motorul nu compune si nu aplica reguli; atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
-   "verdict_pe_fond": "NU_POT"
+   "temei_motor": [
+    [
+     "lege_141_2025",
+     "VII"
+    ]
+   ],
+   "fapte_motor": [
+    "10%"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
   },
   {
    "id": "Q-CTB-09",
@@ -1631,7 +1652,7 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "de_ce": "modelul s-a abţinut: Atomii primiți conțin doar regula de încadrare în plafonul de 12 salarii minime brute pe țară (art. 148 alin. (1)), fără baza anuală de calcul efectivă (art. 148 alin. (2)), fără ",
    "verdict_pe_fond": "NU_POT"
   },
   {
@@ -1651,10 +1672,10 @@
     ]
    ],
    "verdict": "NU_POT",
-   "de_ce": "D15: intrebarea cere un fapt a carui forma motorul nu o recunoaste; nu pot verifica ca un fragment extras raspunde la ce s-a intrebat. Atasez regula cea mai bine potrivita, ca material, nu ca raspuns.",
+   "de_ce": "modelul s-a abţinut: Niciunul dintre atomii primiți nu conține regulile privind plafonul operațiunilor de încasări și plăți în numerar între persoane juridice (de tipul Legii 70/2015). Atomii se refer",
    "verdict_pe_fond": "NU_POT"
   }
  ],
- "comparat_la": "2026-09-28T17:50:46",
- "fisier_raspunsuri": "artefacte/intrebari/raspunsuri_D15c.json"
+ "comparat_la": "2026-09-28T18:26:32",
+ "fisier_raspunsuri": "intrebari/v2/raspunsuri_semantic.json"
 }

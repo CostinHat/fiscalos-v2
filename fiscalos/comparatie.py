@@ -38,7 +38,14 @@ _FAPT = re.compile(
     r"|(\d{1,3}(?:\.\d{3})+|\d+)\s*(?:de\s+)?euro"                    # suma euro
     r"|(\d{1,3})\s+(?:de\s+)?(zile|luni|ani)"                         # durata
     r"|(\d{1,2}\.\d{1,2}\.\d{4})"                                     # data
+    r"|(\d{1,2}\s+(?:ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|"
+    r"octombrie|noiembrie|decembrie)(?:\s+\d{4})?)"                        # data in litere
 )
+# DEFECT DE COMPARATOR (al treilea, gasit dupa rularea stratului semantic): datele scrise in litere
+# ("25 iunie 2027") nu se recunosteau ca fapte. La Q-PRF-03 cheia spune "25 iunie 2027 inclusiv (nu
+# 25 martie). Nota: validatorul ... testat la 03.08.2026", deci "faptul principal" devenea data
+# NOTEI, 03.08.2026 - iar un raspuns corect ("25 iunie ... a anului urmator") iesea GRESIT. Faptul
+# de tip data in litere se compara pe zi + luna (anul poate fi dat relativ: "anul urmator").
 _LIPSA = re.compile(r"depinde|lipse|nu se poate (stabili|raspunde|determina)|insuficient|"
                     r"trebuie (precizat|stiut|cunoscut)|necesar(a|e)? (informati|date)|"
                     r"nu rezulta|incomplet|neprecizat", re.I)
@@ -58,6 +65,8 @@ def _fapte(text):
             ies.append("%s %s" % (m.group(4), m.group(5)))
         elif m.group(6):
             ies.append(m.group(6))
+        elif m.group(7):
+            ies.append(" ".join(m.group(7).split()[:2]))          # zi + luna
     return ies
 
 
@@ -186,7 +195,36 @@ def compara(fis_raspunsuri=None):
             linie.update(verdict="GRESIT", de_ce="; ".join(lipsa))
         rez.append(linie)
     scor = {v: sum(1 for x in rez if x["verdict"] == v) for v in ("CORECT", "GRESIT", "NU_POT")}
-    return {"scor": scor, "comparatii": rez, "comparat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
+    # ── DECIZIA C1: scorul de REFERINTA e cel PE FOND ──────────────────────────────────────────
+    # Regula de notare de mai sus rămâne neschimbata (istoricul ramane comparabil), dar scorul de
+    # referinta numara CORECT numai ce motorul a RASPUNS corect. Orice abţinere e NU POT, inclusiv
+    # pe INCOMPLETA; acelea se raporteaza separat, cu distinctia pe care arhitectul a cerut-o:
+    # a DETECTAT motorul incompletitudinea (`tip_abtinere == "INCOMPLET"`), sau s-a abţinut din alt
+    # motiv?
+    for x in rez:
+        x["verdict_pe_fond"] = ("CORECT" if x["stare_motor"] == "RASPUNS" and x["verdict"] == "CORECT"
+                                else "GRESIT" if x["stare_motor"] == "RASPUNS" else "NU_POT")
+    scor_ref = {v: sum(1 for x in rez if x["verdict_pe_fond"] == v)
+                for v in ("CORECT", "GRESIT", "NU_POT")}
+    abt_inc = []
+    for x in rez:
+        if x["tip"] == "INCOMPLETA" and x["stare_motor"] != "RASPUNS":
+            r = R[x["id"]]
+            abt_inc.append({"id": x["id"],
+                            "incompletitudine_detectata": r.get("tip_abtinere") == "INCOMPLET",
+                            "ce_lipseste_dupa_motor": r.get("lipsa") or [],
+                            "cheia_spune_ca_lipsesc_date": bool(_LIPSA.search(
+                                potrivire.norm(x["raspuns_asteptat"]))),
+                            "motivul_motorului": (r.get("motiv") or "")[:200]})
+    # ── DECIZIA C2: notarea rămâne stricta; "fapt corect, articol diferit" se listeaza separat ──
+    fapt_ok_art_dif = [{"id": x["id"], "raspuns_motor": x.get("raspuns_motor"),
+                        "articol_motor": x.get("temei_motor"), "articole_cheie": x["temeiuri_cheie"],
+                        "temei_asteptat": x["temei_asteptat"]}
+                       for x in rez if x["stare_motor"] == "RASPUNS" and x.get("valoare_ok")
+                       and x.get("temei_ok") is False]
+    return {"scor": scor, "scor_referinta_pe_fond": scor_ref,
+            "abtineri_pe_INCOMPLETA": abt_inc, "fapt_corect_articol_diferit": fapt_ok_art_dif,
+            "comparatii": rez, "comparat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "fisier_raspunsuri": os.path.relpath(fis_raspunsuri, _RAD)}
 
 

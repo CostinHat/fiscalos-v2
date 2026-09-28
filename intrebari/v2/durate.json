@@ -1,0 +1,24 @@
+{
+ "pasi": [
+  {
+   "operatie": "Index BM25 (31485 atomi din acte normative)",
+   "secunde": 7.06
+  },
+  {
+   "operatie": "Motorul lexical: 50 de intrebari",
+   "secunde": 1.99
+  },
+  {
+   "operatie": "Comparatia - motorul lexical",
+   "secunde": 2.45
+  },
+  {
+   "operatie": "Stratul semantic: 50 de apeluri la claude-opus-5",
+   "secunde": 875.87
+  },
+  {
+   "operatie": "Comparatia - stratul semantic",
+   "secunde": 2.35
+  }
+ ]
+}

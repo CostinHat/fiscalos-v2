@@ -407,7 +407,13 @@ def raspunde(q, idx):
         # de contestatie), si a "castigat" doua intrebari INCOMPLETA din motivul GRESIT - le lipseau
         # fapte (folosinta masinii, marimea firmei), nu data. Acum data implicita e declarata ca atare.
         data_ref, precizie, frag_data = DATA_INTREBARII, "implicita (ziua intrebarii)", None
-    baza = {"data_referinta": data_ref, "precizie_data": precizie, "data_din": frag_data}
+    baza = {"data_referinta": data_ref, "precizie_data": precizie, "data_din": frag_data,
+            # DECIZIA C5: fiecare raspuns incepe prin a declara data si perimetrul presupus. Motorul
+            # lexical NU citeste perimetrul din intrebare - il declara pe cel implicit, ca atare.
+            "declaratie": ("Data de referinta: %s (%s%s). Perimetru presupus: persoana juridica "
+                           "romana in regim general, fara situatii speciale nementionate in "
+                           "intrebare - implicit, motorul lexical nu citeste perimetrul din intrebare."
+                           % (data_ref, precizie, (", din \"%s\"" % frag_data) if frag_data else ""))}
 
     hit = idx.cauta(q["intrebare"], data_ref)
     if not hit or hit[0][0] < PRAG_SCOR:

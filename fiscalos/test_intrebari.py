@@ -59,3 +59,41 @@ def test_citatul_verbatim_e_chiar_in_atom():
             txt = c.dupa_id[a["atom"]]["text"]
             v = a["verbatim"].strip("…")
             assert v in txt, (x["id"], a["atom"])
+
+
+# ── motorul v2 ───────────────────────────────────────────────────────────────────────────────────
+def test_intrebari_v1_ramane_neatins():
+    import subprocess
+    d = subprocess.run(["git", "diff", "b0a02c6", "--", "intrebari/v1/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]
+
+
+def test_fiecare_raspuns_semantic_a_trecut_verificarea_mecanica():
+    """Niciun RASPUNS al stratului semantic fara verificare trecuta si fara citat literal in atom."""
+    from fiscalos import potrivire
+    c = potrivire.Corpus()
+    r = json.load(open(os.path.join(_RAD, "intrebari", "v2", "raspunsuri_semantic.json"),
+                       encoding="utf-8"))
+    n = 0
+    for x in r["raspunsuri"]:
+        if x["stare"] == "RASPUNS":
+            n += 1
+            assert x["verificare"]["trece"], x["id"]
+            for a in x["argument"]:
+                assert " ".join(a["verbatim"].split()) in " ".join(c.dupa_id[a["atom"]]["text"].split())
+        assert x.get("declaratie"), x["id"]            # C5
+    assert n > 0
+
+
+def test_costul_e_masurat_pe_fiecare_apel():
+    r = json.load(open(os.path.join(_RAD, "intrebari", "v2", "raspunsuri_semantic.json"),
+                       encoding="utf-8"))
+    for x in r["raspunsuri"]:
+        assert x["apel"]["cost_usd"] > 0 and x["apel"]["tokeni"]["iesire"] > 0, x["id"]
+    assert abs(sum(x["apel"]["cost_usd"] for x in r["raspunsuri"]) - r["cost_usd"]) < 0.01
+
+
+def test_comparatorul_recunoaste_data_in_litere():
+    from fiscalos import comparatie
+    assert comparatie._fapte("25 iunie 2027 inclusiv (nu 25 martie). Nota: 03.08.2026")[0] == "25 iunie"
