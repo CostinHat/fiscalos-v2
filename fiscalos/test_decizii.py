@@ -140,9 +140,9 @@ def test_v1_ramane_neatins_in_afara_de_C7():
 def test_v2_are_toate_livrabilele():
     for f in ("propunere.json", "RAPORT.md", "APROBARE.md", "temeiuri_candidate.json",
               "cerinte_iconta.json"):
-        assert os.path.isfile(os.path.join(_RAD, "propuneri", "v2", f)), f
-    r = open(os.path.join(_RAD, "propuneri", "v2", "RAPORT.md"), encoding="utf-8").read()
-    for c in ("C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11"):
+        assert os.path.isfile(os.path.join(_RAD, "propuneri", "v3", f)), f
+    r = open(os.path.join(_RAD, "propuneri", "v3", "RAPORT.md"), encoding="utf-8").read()
+    for c in ("C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11", "C12"):
         assert "**%s" % c in r, c
     # prima pagina: CONCORDA numai pe temei declarat verificat, NEVERIFICAT separat
     cap = r[:900]
@@ -151,9 +151,62 @@ def test_v2_are_toate_livrabilele():
 
 
 def test_temeiurile_candidate_sunt_toate_din_act_normativ_si_neaprobate():
-    t = json.load(open(os.path.join(_RAD, "propuneri", "v2", "temeiuri_candidate.json"),
+    t = json.load(open(os.path.join(_RAD, "propuneri", "v3", "temeiuri_candidate.json"),
                        encoding="utf-8"))
     assert t["aprobare"] == "NEAPROBAT"
     assert t["candidati"]
     for c in t["candidati"]:
         assert surse.e_act_normativ(c["act"])[0], c["act"]
+
+
+# ── deciziile C8-C11 (propunerea v3) ─────────────────────────────────────────────────────────────
+_V2_INGHETAT = "b0a02c6"
+
+
+def test_v2_ramane_neatins():
+    import subprocess
+    d = subprocess.run(["git", "diff", _V2_INGHETAT, "--", "propuneri/v2/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]
+
+
+def test_C9_difera_poarta_dezacordul_declarat_de_iconta_verbatim():
+    P = {p["parametru"]: p for p in _pot()}
+    t = P["nomenclator/d394.TIPURI"]
+    assert t["clasificare"] == "DIFERA"
+    dz = t["dezacord_declarat_de_iconta"]
+    assert "Î1/Î2" in dz["ce"] and dz["unde"].startswith("core/nomenclatoare.py:")
+    r = open(os.path.join(_RAD, "propuneri", "v3", "RAPORT.md"), encoding="utf-8").read()
+    assert dz["ce"] in r, "mentiunea C9 trebuie sa apara VERBATIM in raport"
+
+
+def test_C10_temeiul_candidat_e_act_de_baza_iar_modificatorul_e_valabilitate():
+    from fiscalos import potrivire
+    corp = potrivire.Corpus()
+    n = 0
+    for p in _pot():
+        c = p.get("temei_candidat")
+        if c:
+            n += 1
+            assert surse.e_act_de_baza(c["act"], corp.modificatoare), (p["parametru"], c["act"])
+        elif p["clasificare"] == "NEVERIFICAT" and not p.get("clasificare_initiala"):
+            assert p.get("act_de_baza") is not None, p["parametru"]
+            assert "MODIFICATOR" in p["motiv"]
+    assert n > 0
+
+
+def test_C10_normele_nu_sunt_act_modificator():
+    """HG 1/2016 are articole proprii romane ("Art. I - Se aproba Normele"), dar nu modifica nimic."""
+    from fiscalos import potrivire
+    corp = potrivire.Corpus()
+    assert "hg_1_2016_norme_cod_fiscal" not in corp.modificatoare
+    for a in ("legea_141_2025", "opanaf_2194_2025_d394", "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii"):
+        assert a in corp.modificatoare, a
+
+
+def test_C11_unitatea_dedusa_e_marcata_si_R_UNIT_e_cerinta():
+    P = {p["parametru"]: p for p in _pot()}
+    assert "unitate_dedusa" in P["nesursat/d216.COTA_IMPOZIT=0.3"]
+    cer = json.load(open(os.path.join(_RAD, "propuneri", "v3", "cerinte_iconta.json"),
+                         encoding="utf-8"))["cerinte"]
+    assert any(c["id"] == "R-UNIT" for c in cer)

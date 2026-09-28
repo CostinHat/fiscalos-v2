@@ -286,6 +286,7 @@ class Corpus(object):
             self.pe_act[baza] = atomi
         self.toti = [a for ats in self.pe_act.values() for a in ats]
         self.dupa_id = {a["id"]: a for a in self.toti}
+        self.modificatoare = surse.acte_modificatoare(self)
 
     def act_din_url(self, url):
         """'anaf_surse/legea_141_2025_consolidat.html' -> baza de act din corpus, sau None."""
@@ -643,23 +644,51 @@ def potriveste(p, corp, plan=None):
             # subiect se prefera cei din acte normative; daca exista numai din formulare/pliante,
             # parametrul rămâne NEVERIFICAT FARA candidat, cu motivul scris.
             normative = [a for a in potrivite if surse.e_act_normativ(a["act"])[0]]
-            # Un temei CANDIDAT trebuie sa fie forma IN VIGOARE: `d101.COTA_STANDARD=16` gasea intai
-            # `cf_2015_forma_initiala#art17`, adica textul din 2015. Daca un consolidat spune acelasi
-            # lucru, el e candidatul; o forma initiala ramane numai cand nu exista alta.
-            consolidate = [a for a in normative if "consolidat" in a["act"]]
-            curente = [a for a in normative if "forma_initiala" not in a["act"]]
-            normative = consolidate or curente or normative
-            a = _alege_atom(normative or potrivite, cuvinte_citat)
+            # DECIZIA C10: temeiul candidat e ACTUL DE BAZA consolidat - ce citeaza un contabil -, nu
+            # actul care l-a modificat. Actul modificator care poarta aceeasi valoare devine
+            # atom-valabilitate (perechea C4). Daca niciun act de baza nu poarta valoarea, se scrie.
+            baza_ = [a for a in normative if surse.e_act_de_baza(a["act"], corp.modificatoare)]
+            modif = [a for a in normative if a["act"] in corp.modificatoare]
+            consolidate = [a for a in baza_ if "consolidat" in a["act"]]
+            baza_ = consolidate or baza_
+            normative = baza_
+            a = _alege_atom(baza_ or potrivite, cuvinte_citat)
             forma = gaseste_forma(a["_n"], forme)
             rez.update(_din_atom(a, forma))
             rez.update({"valoare_lege": forma, "ancora": cum_n, "cum_gasit": cum_n,
                         "citare_rezolvata": None, "clasificare": "NEVERIFICAT"})
+            if modif:
+                m = _alege_atom(modif, cuvinte_citat)
+                rez["atom_valabilitate"] = {
+                    "atom": m["id"], "valabil_din": m.get("valabil_din")
+                    or _data_din_text(m["_n"]),
+                    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+                    "act_modificator": m["act"], "acelasi_cu_atomul_valorii": False,
+                    "verbatim": _fereastra_verbatim(m["text"], forma)}
             if normative:
                 rez["temei_candidat"] = {"atom": a["id"], "act": a["act"],
                                          "verbatim": rez["atom_verbatim"], "de_aprobat": True}
                 rez["motiv"] = ("iConta nu sursează parametrul. Valoarea apare langa fraza-subiect "
-                                "intr-un act normativ - propus ca TEMEI CANDIDAT, de aprobat uman "
-                                "(nu verificat).")
+                                "in ACTUL DE BAZA %s - propus ca TEMEI CANDIDAT, de aprobat uman "
+                                "(nu verificat)." % a["act"])
+            elif modif:
+                rez["temei_candidat"] = None
+                nume_t, act_t = surse.tinta_modificarii(corp, m)
+                rez["act_de_baza"] = {"citit_din_modificator": nume_t, "in_corpus": act_t}
+                if nume_t and not act_t:
+                    situatia = ("actul de baza pe care il modifica (%s) LIPSESTE din corpus"
+                                % nume_t)
+                elif act_t:
+                    situatia = ("actul de baza pe care il modifica (%s) E in corpus, ca `%s`, dar "
+                                "valoarea nu s-a gasit in el langa fraza-subiect cautata - de "
+                                "verificat de om: poate fi o limita a potrivirii, nu o absenta"
+                                % (nume_t, act_t))
+                else:
+                    situatia = ("actul modificator nu-si numeste tinta intr-o forma citibila "
+                                "mecanic")
+                rez["motiv"] = ("iConta nu sursează parametrul. Valoarea apare numai intr-un act "
+                                "MODIFICATOR (%s); %s. Decizia C10: un act modificator nu se propune "
+                                "ca temei - ramane atom-valabilitate." % (m["act"], situatia))
             else:
                 ok, de_ce = surse.e_act_normativ(a["act"])
                 rez["temei_candidat"] = None
@@ -934,6 +963,8 @@ def _potriveste_nomenclator(p, corp):
            "citare_rezolvata": None, "atom": None, "atom_verbatim": None,
            "valabil_din_corpus": None, "act_modificator": None, "valoare_lege": None,
            "indicii": valori}
+    if p.get("dezacord_declarat"):
+        rez["dezacord_declarat_de_iconta"] = p["dezacord_declarat"]
     if p.get("deschis") or not valori:
         rez["clasificare"] = "NEGASIT"
         rez["motiv"] = ("norma nu inchide lista - iConta o declara `deschis=True` in "
@@ -964,6 +995,9 @@ def _potriveste_nomenclator(p, corp):
         doar_act = sorted(set(en) - set(cod))
         rez["valoare_lege"] = "/".join(en)
         rez["doar_in_cod"], rez["doar_in_act"] = doar_cod, doar_act
+        if p.get("dezacord_declarat"):
+            # DECIZIA C9: DIFERA rămâne DIFERA, dar poarta ce declara iConta ea insasi, verbatim
+            rez["dezacord_declarat_de_iconta"] = p["dezacord_declarat"]
         if not doar_cod and not doar_act:
             rez["clasificare"] = "CONCORDA"
             rez["motiv"] = "actul enumera EXACT aceleasi %d valori ca si codul (%s)" % (len(cod), unde)
@@ -1107,6 +1141,8 @@ def _pereche_valabilitate(rez, corp):
     """
     if rez.get("clasificare") not in ("CONCORDA", "DIFERA", "NEVERIFICAT") or not rez.get("atom"):
         return rez
+    if rez.get("atom_valabilitate"):
+        return rez                          # stabilit deja: actul modificator (C10)
     a = corp.dupa_id.get(rez["atom"])
     if a is None:
         return rez
@@ -1161,12 +1197,21 @@ def _pereche_valabilitate(rez, corp):
     return rez
 
 
+def _unitate(rez, p):
+    """DECIZIA C11: citirea unitatii din folosire se accepta, dar verdictul o poarta ca DEDUSA."""
+    if p.get("unitate") == "procent_literal":
+        rez["unitate_dedusa"] = ("procent literal, dedus din folosirea constantei in modul "
+                                 "(`%s / 100`), nu declarat de iConta - vezi cerinta R-UNIT"
+                                 % p["nume"])
+    return rez
+
+
 def potriveste_tot():
     t0 = time.time()
     inv = json.load(open(os.path.join(_RAD, "artefacte", "inventar_iconta.json"), encoding="utf-8"))
     corp = Corpus()
     plan = plan_de_conturi(corp)
-    rez = [_pereche_valabilitate(_sursa_normativa(potriveste(p, corp, plan)), corp)
+    rez = [_unitate(_pereche_valabilitate(_sursa_normativa(potriveste(p, corp, plan)), corp), p)
            for p in inv["parametri"]]
     sumar = {}
     for r in rez:

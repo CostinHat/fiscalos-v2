@@ -32,7 +32,7 @@
   "n_simboluri": 364
  },
  "cu_temei_declarat": 42,
- "facut_la": "2026-09-28T16:58:59",
+ "facut_la": "2026-09-28T17:47:29",
  "fara_temei_declarat": 105,
  "iconta": "/home/costin/iconta_nou",
  "n_parametri": 147,
@@ -937,6 +937,7 @@
   {
    "clasa": "nomenclator",
    "deschis": false,
+   "dezacord_declarat": null,
    "id": "nomenclator/d390.TIPURI",
    "nume": "d390.TIPURI",
    "procent_cod": null,
@@ -961,6 +962,11 @@
   {
    "clasa": "nomenclator",
    "deschis": false,
+   "dezacord_declarat": {
+    "ce": "Norma scrie tipul cu diacritică — AÎ; structura tehnică și XML-ul îl scriu ASCII, AI. Al doilea, de acoperire: norma enumeră și Î1/Î2 (încasări prin aparate de marcat fiscale), pe care iConta nu le produce încă.",
+    "consecinta": "Pe transliterare, niciuna practică — arbitrul cere forma ASCII, deci abaterea de la litera normei e impusă, nu aleasă; se consemnează ca să nu fie confundată cu o citire greșită a ordinului. Pe Î1/Î2: o firmă cu aparat de marcat nu poate depune D394 complet prin iConta — absență declarată în d394.py, nu vocabular redus tăcut.",
+    "unde": "core/nomenclatoare.py:174 (_dez)"
+   },
    "id": "nomenclator/d394.TIPURI",
    "nume": "d394.TIPURI",
    "procent_cod": null,
@@ -985,6 +991,11 @@
   {
    "clasa": "nomenclator",
    "deschis": true,
+   "dezacord_declarat": {
+    "ce": "Norma NU enumeră țările: trimite la codul care a emis codul de TVA, adică la prefixul de TVA al statului membru. Lista din cod e o ÎNCHIDERE construită de noi peste o normă deschisă, iar limita ei efectivă e ce acceptă arbitrul.",
+    "consecinta": "Două întrebări rămân deschise, și niciuna nu are azi răspuns în cod: (1) GB e în listă deși Regatul Unit nu mai e stat membru din 2021 — se păstrează pentru perioade istorice și rectificări, dar valabilitatea prefixului NU e legată de perioada declarată, deci o livrare din 2026 către GB trece; (2) XI (Irlanda de Nord) e în listă pe temeiul Protocolului, care nu e citat nicăieri.",
+    "unde": "core/nomenclatoare.py:183 (_dez)"
+   },
    "id": "nomenclator/d390.TARI_UE",
    "nume": "d390.TARI_UE",
    "procent_cod": null,
@@ -1009,6 +1020,11 @@
   {
    "clasa": "nomenclator",
    "deschis": true,
+   "dezacord_declarat": {
+    "ce": "Norma NU închide lista — spune «de exemplu: USD, euro…». Cele 20 de valute sunt ale ARBITRULUI, enumerate prin probă DUK, nu ale legii.",
+    "consecinta": "O operațiune făcută legal într-o valută din afara celor 20 nu se poate depune prin acest instrument. E o limită a validatorului, nu o interdicție fiscală, și nu se poate repara în cod — se poate doar numi. Cazul invers, care a produs regula de clasă: codul avea 19 (structura tehnică 2013) și respingea HRK, pe care arbitrul îl accepta — cod mai strict decât ambele niveluri de deasupra lui.",
+    "unde": "core/nomenclatoare.py:193 (_dez)"
+   },
    "id": "nomenclator/d301.VALUTE",
    "nume": "d301.VALUTE",
    "procent_cod": null,
@@ -2212,5 +2228,5 @@
   "termen": 5
  },
  "probleme": [],
- "secunde": 2.82
+ "secunde": 1.55
 }

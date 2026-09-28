@@ -229,10 +229,33 @@ def din_scadente():
     return par, []
 
 
+def _dezacorduri_declarate():
+    """{(declaratie, cheie): {ce, consecinta, unde}} din apelurile `_dez(...)` din nomenclatoare.py.
+
+    Decizia C9: DIFERA-ul pe d394.TIPURI poarta mentiunea ca iConta declara Î1/Î2 neconstruite.
+    Mentiunea se ia din OBIECTUL `Dezacord` pe care iConta il construieste ea insasi, verbatim, nu
+    dintr-un comentariu si nu parafrazata de noi."""
+    arb, _l = _arbore("core/nomenclatoare.py")
+    ies = {}
+    for n in arb.body:
+        if not (isinstance(n, ast.Expr) and isinstance(n.value, ast.Call)
+                and _nume_apel(n.value.func) == "_dez" and n.value.args):
+            continue
+        try:
+            cheie = tuple(_ev(n.value.args[0]))
+            kw = {k.arg: _ev(k.value) for k in n.value.keywords if k.arg}
+        except Neevaluabil:
+            continue
+        ies[cheie] = {"ce": kw.get("ce"), "consecinta": kw.get("consecinta"),
+                      "unde": "core/nomenclatoare.py:%d (_dez)" % n.lineno}
+    return ies
+
+
 def din_nomenclatoare():
     """`ANCORE_NORMA`: enumerarea din cod + norma care pretinde ca o inchide."""
     atrib = _atribuiri_modul("core/nomenclatoare.py")
     nod, _l = atrib["ANCORE_NORMA"]
+    dezacorduri = _dezacorduri_declarate()
     par, probleme = [], []
     for k, v in zip(nod.keys, nod.values):
         cheie = _cheie(k).replace("|", ".")
@@ -252,6 +275,7 @@ def din_nomenclatoare():
             "unde": "core/nomenclatoare.py:%d (ANCORE_NORMA)" % v.lineno,
             "temei_declarat": a.get("norma"),
             "deschis": bool(a.get("deschis")),
+            "dezacord_declarat": dezacorduri.get(tuple(_ev(k))),
             "sursa_inventar": "nomenclatoare.ANCORE_NORMA",
         })
     return par, probleme

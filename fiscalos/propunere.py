@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
-"""OP8 — PACHETUL DE PROPUNERE v2: JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
+"""OP8 — PACHETUL DE PROPUNERE v3: JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
 
-v1 RĂMÂNE NEATINS (propuneri/v1/), cu o singura exceptie ceruta de arhitect: textul C7, care nu
-ajunsese in fisier. v2 aplica deciziile C1-C7 si nu rescrie istoria.
+v1 si v2 RĂMÂN NEATINSE (propuneri/v1/, propuneri/v2/); probe le ingheata. v3 aplica, peste deciziile
+C1-C7 ale v2, deciziile C8-C11:
+  C8   o nota sau un pliant scris de iConta nu poate verifica iConta (ratificat, aplicat din v2)
+  C9   d394.TIPURI rămâne DIFERA, cu mentiunea VERBATIM a dezacordului declarat de iConta
+  C10  temeiul candidat e actul de BAZA consolidat; actul modificator e atom-valabilitate; cand
+       actul de baza lipseste din corpus (sau e acolo fara valoare), se scrie explicit
+  C11  unitatea citita din folosire e marcata "unitate dedusa"; R-UNIT intra in cerinte
 
 CE E NOU IN v2, fiecare din o decizie:
   C2  NEVERIFICAT e stare separata. Sumarul de pe prima pagina numara CONCORDA NUMAI pe temei
@@ -19,7 +24,7 @@ import os
 import time
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSIUNE = "v2"
+VERSIUNE = "v3"
 STARI = ("CONCORDA", "DIFERA", "NEVERIFICAT", "NEGASIT")
 ETICHETA = {"CONCORDA": "CONCORDĂ", "DIFERA": "DIFERĂ", "NEVERIFICAT": "NEVERIFICAT",
             "NEGASIT": "NEGĂSIT"}
@@ -87,6 +92,16 @@ def _cerinte_iconta(inv, P):
                           "act normativ (temeiuri_candidate.json). E o propunere de aprobat uman, "
                           "nu o verificare." % n_cand),
                 "propunere": "Dupa aprobare, iConta scrie temeiul in cod, ca obiect `Temei`."})
+    unit = [p for p in P if p.get("unitate_dedusa")]
+    if unit:
+        cer.append({"id": "R-UNIT", "decizie": "C11",
+                    "ce": "Unitatea declarata explicit pentru constantele-rata nesursate.",
+                    "de_ce": ("Registrul COTE tine ratele ca fractii (0.21 = 21%%), dar %d constante "
+                              "nesursate sunt procente literale (0.3 = 0,3%%) - FiscalOS le-a dedus "
+                              "unitatea din folosire (`NUME / 100`): %s."
+                              % (len(unit), ", ".join(p["parametru"] for p in unit))),
+                    "propunere": "Un tip sau o conventie declarata (ex. `Procent(\"0.3\")` fata de "
+                                 "`Fractie(\"0.003\")`), ca unitatea sa nu mai fie dedusa."})
     for p in P:
         if p.get("clasificare_initiala"):
             cer.append({"id": "R-SURSA-%s" % p["parametru"].split("/")[-1], "decizie": "C2",
@@ -138,7 +153,7 @@ def construieste():
             "_ce": "PROPUNERE FiscalOS v2. NU se aplica automat in iConta (CLAUDE.md §3).",
             "versiune": VERSIUNE, "generat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "aprobare": {"stare": "NEAPROBAT", "de_cine": None, "la": None},
-            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7"],
+            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11"],
             "corpus": {"sursa": man["sursa"], "luat_la": man["luat_la"],
                        "n_fisiere": man["n_fisiere"], "manifest": "corpus_manifest.json"},
             "sumar": {**n, "citari_declarate_de_iconta": pot["citari_declarate"],
@@ -155,7 +170,7 @@ def construieste():
       % VERSIUNE)
     A("")
     A("Generat %s · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3). "
-      "Versiunea anterioară, `propuneri/v1/`, rămâne neatinsă." % time.strftime("%d.%m.%Y %H:%M"))
+      "Versiunile anterioare, `propuneri/v1/` și `propuneri/v2/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
     A("")
     A("| | |")
     A("|---|---|")
@@ -179,7 +194,9 @@ def construieste():
     A(CERINTE_NOI.strip() % {
         "n_scris": sum(1 for p in P if p.get("clasificare_initiala")),
         "n_cand": len(candidate), "n_nemarcate": inv["conturi_nemarcate"]["n_simboluri"],
-        "n_module": inv["conturi_nemarcate"]["n_module"]})
+        "n_module": inv["conturi_nemarcate"]["n_module"],
+        "n_rest": sum(1 for p in P if p["clasificare"] == "NEVERIFICAT"
+                      and not p.get("temei_candidat") and not p.get("clasificare_initiala"))})
     A("")
     A("---")
     A("")
@@ -247,6 +264,11 @@ def construieste():
         if p.get("doar_in_cod") is not None:
             A("- **numai în cod:** %s · **numai în act:** %s"
               % (p["doar_in_cod"] or "—", p["doar_in_act"] or "—"))
+        dz = p.get("dezacord_declarat_de_iconta")
+        if dz:
+            A("- **iConta declară ea însăși** (`%s`, verbatim, C9):" % dz["unde"])
+            A("  > %s" % dz["ce"])
+            A("  > *Consecința declarată:* %s" % dz["consecinta"])
         A("")
         A("  > %s" % _scurt(p["atom_verbatim"], 500))
         A("")
@@ -274,17 +296,34 @@ def construieste():
       "uman, nu se aplică**." % len(din_cand))
     A("")
     if din_cand:
-        A(_tabel([[p["parametru"], p["valoare_cod"], p["temei_candidat"]["atom"],
-                   _scurt(p["valoare_lege"], 14)] for p in din_cand],
-                 ["Parametru", "Cod", "Temei candidat", "În text"]))
+        A("C10: temeiul candidat e **actul de bază consolidat**; actul modificator care a introdus "
+          "valoarea apare în coloana de valabilitate, nu ca temei.")
+        A("")
+        A(_tabel([[p["parametru"] + (" ⚠ unitate dedusă" if p.get("unitate_dedusa") else ""),
+                   p["valoare_cod"], p["temei_candidat"]["atom"], _scurt(p["valoare_lege"], 14),
+                   ((p.get("atom_valabilitate") or {}).get("atom") or "—")
+                   if not (p.get("atom_valabilitate") or {}).get("acelasi_cu_atomul_valorii")
+                   else "același atom (%s)" % p["atom_valabilitate"]["valabil_din"]]
+                  for p in din_cand],
+                 ["Parametru", "Cod", "Temei candidat (act de bază)", "În text",
+                  "Atom-valabilitate"]))
         A("")
     rest = [p for p in nv if p not in din_decl and p not in din_cand]
     if rest:
-        A("**c) Fără temei și fără candidat (%d)** — valoarea apare doar în surse care nu pot fi "
-          "temei:" % len(rest))
+        A("**c) Fără temei candidat (%d)** — valoarea apare numai într-un act modificator, iar C10 "
+          "interzice propunerea lui ca temei. Pentru fiecare, actul de bază pe care îl modifică "
+          "(citit din textul modificatorului) și dacă e în corpus:" % len(rest))
         A("")
-        for p in rest:
-            A("- `%s` = `%s` — %s" % (p["parametru"], p["valoare_cod"], _scurt(p["motiv"], 160)))
+        A(_tabel([[p["parametru"] + (" ⚠ unitate dedusă" if p.get("unitate_dedusa") else ""),
+                   p["valoare_cod"],
+                   (p.get("act_de_baza") or {}).get("citit_din_modificator") or "necitibil",
+                   ("`%s` — **e în corpus, valoarea negăsită lângă fraza-subiect: de verificat**"
+                    % p["act_de_baza"]["in_corpus"]) if (p.get("act_de_baza") or {}).get("in_corpus")
+                   else "**LIPSEȘTE din corpus**",
+                   ((p.get("atom_valabilitate") or {}).get("atom") or "—")]
+                  for p in rest],
+                 ["Parametru", "Cod", "Actul de bază modificat", "În corpus?",
+                  "Atom-valabilitate (modificator)"]))
         A("")
 
     A("## 7. NEGĂSIT — și de ce")
@@ -388,39 +427,24 @@ CERINTE_RATIFICATE = """
 | **C4** | perechea (atom-valoare, atom-valabilitate); lipsa se declară | §4 |
 | **C5** | inventarul nu se extinde | neschimbat |
 | **C7** | regula ratificată; bancul acoperă fiecare clasă | §11 |
-| **C6** | motorul de întrebări | pasul următor, livrat separat |
+| **C8** | o notă sau un pliant scris de iConta nu poate verifica iConta | §6 a) — aplicat din v2, acum ratificat |
+| **C9** | `d394.TIPURI` rămâne DIFERĂ, cu mențiunea că iConta declară Î1/Î2 neconstruite | §5 — mențiunea e obiectul `Dezacord` al iConta, citat verbatim, nu parafrazat |
+| **C10** | temeiul candidat = actul de bază consolidat; modificatorul = atom-valabilitate; lipsa se scrie | §6 b) și c) |
+| **C11** | unitatea din folosire se acceptă, marcată „unitate dedusă"; R-UNIT în cerințe | §6, §10 |
+| **C6** | motorul de întrebări | livrat separat, în `intrebari/` |
 """
 
 CERINTE_NOI = """
 ### Cerințe noi, de decis
 
-**C8 — Am aplicat C2 și temeiurilor DECLARATE, nu doar celor candidate.** C2 spune că un formular
-sau un pliant nu poate fi temei. Aplicată consecvent, regula lovește și %(n_scris)d intrări din
-registrul `COTE`: cotele reduse de TVA din 2016 citează nota `cf_art291_2016_forma_initiala`, pe care
-`PROVENIENTA.json` a iConta o clasifică ea însăși `SCRIS` (redactată de ei), iar tichetele de masă din
-2025 citează pliantul `anaf_limite_2025`. O valoare „verificată" pe o notă scrisă de cel verificat e o
-tautologie. Ele ies acum NEVERIFICAT, cu rezultatul inițial păstrat în `clasificare_initiala`.
-*De decis:* extensia se ratifică, sau C2 se aplică numai temeiurilor candidate?
-
-**C9 — Un nomenclator care e o submulțime strictă a normei iese DIFERĂ.** `d394.TIPURI`: OPANAF
-2194/2025 enumeră `L/A/LS/AS/AÎ/V/C/N/Î1/Î2`, codul are aceleași opt fără `Î1/Î2`. iConta scrie în
-`nomenclatoare.py` că `Î1/Î2` sunt secțiunile de încasări prin AMEF, neconstruite încă — deci nu e o
-valoare greșită, ci o acoperire incompletă, declarată. Vechiul prag de 80%% o ascundea.
-*De decis:* rămâne DIFERĂ (cu ambele părți, cum e acum), sau o acoperire incompletă declarată de
-iConta e o stare separată?
-
-**C10 — Temeiurile candidate sunt găsite prin potrivire pe frază, nu verificate.** %(n_cand)d
-candidați, toți din acte normative, fiecare cu fragmentul verbatim. Frazele-subiect le-am scris citind
-ce face fiecare modul iConta (de ex. `casa.py` spune în antet că plafoanele sunt din Legea 70/2015).
-Doi candidați pentru plafoanele de numerar trimit la actele care au *modificat* Legea 70/2015 (OUG
-115/2023, Legea 296/2023), nu la Legea 70/2015 însăși. *De decis:* un candidat poate fi actul
-modificator, sau trebuie să fie întotdeauna actul de bază, consolidat?
-
-**C11 — Unitatea unei constante nesursate se citește din folosirea ei.** `d216.COTA_IMPOZIT = 0.3`
-e folosită ca `baza * COTA_IMPOZIT / 100`, deci înseamnă 0,3%%, nu 30%% (cum stă în registrul `COTE`,
-unde ratele sunt fracții). Fără această citire, potrivirea îi găsea un „temei" în normele despre
-impozitul pe clădiri. Regula e: `NUME / 100` în modul ⇒ procent literal. *De decis:* se acceptă, sau
-iConta își declară unitatea explicit (cerință R-UNIT)?
+**C12 — Candidați la care actul de bază e în corpus, dar valoarea nu s-a găsit în el.** C10 cere
+temei din actul de bază. Pentru %(n_rest)d constante, valoarea apare numai în actul modificator, deși
+actul de bază pe care îl modifică **e** în corpus (Codul fiscal consolidat, Legea 70/2015 consolidată,
+OPANAF 3769/2015 în forma de bază). Două explicații posibile, pe care motorul nu le poate distinge
+singur: (a) potrivirea pe frază n-a prins alineatul din actul de bază; (b) redarea din corpus a actului
+de bază e anterioară modificării (OPANAF 3769/2015 e în corpus numai în forma din 2015; Legea 70/2015
+are note de consolidare numai până în 2019). Le-am lăsat fără candidat, cu situația scrisă în §6 c).
+*De decis:* se aduce în corpus consolidatul la zi al acestor acte, sau un om confirmă alineatul?
 """
 
 APROBARE = """# APROBARE — propunere %(versiune)s
@@ -439,7 +463,7 @@ candidat — e un pas uman, separat.
 
 ## Semnătură
 
-- [ ] Am citit §0 și am răspuns la C8–C11.
+- [ ] Am citit §0 și am răspuns la C12.
 - [ ] Am verificat prin eșantion fragmentele verbatim la id-ul de atom indicat.
 - [ ] Aprob propunerea în întregime.
 - [ ] Aprob parțial — rândurile refuzate, cu motiv:

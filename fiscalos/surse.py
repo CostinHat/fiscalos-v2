@@ -79,3 +79,96 @@ def e_act_normativ(baza):
     pref = re.match(r"([a-zA-Z]+)", nume)
     pref = pref.group(1).lower() if pref else ""
     return False, _MOTIVE_PREFIX.get(pref, "nu are forma unui act normativ (%s)" % pref)
+
+
+def acte_modificatoare(corp):
+    """Actele ale caror articole PROPRII (de nivel superior) sunt in majoritate romane: acte care
+    modifica alte acte (Legea 141/2025, OUG 115/2023, OG 16/2022). Semnalul e structural, acelasi pe
+    care il foloseste motorul de intrebari (D3b)."""
+    # Articole romane NU inseamna automat act modificator: HG 1/2016 are "Art. I - Se aproba Normele
+    # metodologice", deci articole proprii romane, dar nu modifica nimic. Masurat: fara conditia de
+    # mai jos, normele Codului fiscal devenau "actul modificator care introduce valoarea" pentru cota
+    # de impozit pe venit. Se cere si o INTERVENTIE reala, in textul actului.
+    ies = set()
+    for act, ats in corp.pe_act.items():
+        # NORMELE DE APLICARE nu sunt act modificator, ci text de baza - cel pe care il citeaza un
+        # contabil ("pct. 103 din Norme"). Redarea lor consolidata conţine insa articole romane CITATE
+        # din hotararile care le-au modificat ("Art. V din HOTĂRÂREA nr. ... se abroga"), deci trec de
+        # ambele teste structurale de mai jos. Masurat: HG 1/2016 are 0 puncte de interventie proprii
+        # din 3725 de atomi, la fel ca Legea 296/2023 (aplatizata) - structura nu le separa; functia da.
+        if "norme" in act:
+            continue
+        arts = [a for a in ats if a["nivel"] == "articol" and a.get("parinte") is None]
+        rom = sum(1 for a in arts if re.match(r"^[IVXLCDM]+$", str(a["cheie"])))
+        if not arts or rom < 0.5 * len(arts):
+            continue
+        if any(_INTERVENTIE_TXT.search(a["text"]) for a in ats[:400]):
+            ies.add(act)
+    return ies
+
+
+# Formulele de interventie, in variantele gasite in corpus: legile scriu "se modifica si va avea
+# urmatorul cuprins", ordinele OPANAF "se modifica si se inlocuieste cu anexa...". Prima varianta a
+# regulii le cerea pe cele din lege si a pierdut ordinele (OPANAF 2194/2025 modifica OPANAF 3769/2015).
+_INTERVENTIE_TXT = re.compile(r"se modific[aă] (si|și) (se |va |vor )|se completeaz[aă]|"
+                              r"se introduc(e)? (un|o|dou[aă]|trei|patru|noi)|se abrog[aă]\b|"
+                              r"se [iî]nlocuie[sș]te cu", re.I)
+_TINTA = re.compile(r"\b(Legea|Ordonan[tţț]a de urgen[tţț][aă] a Guvernului|Ordonan[tţț]a Guvernului|"
+                    r"Hot[aă]r[aâ]rea Guvernului|Ordinul[^,]{0,120}?)\s+nr\.\s*([\d.]+)/(\d{4})", re.I)
+_TIP_TINTA = [("urgen", "oug"), ("ordonan", "og"), ("hot", "hg"), ("ordin", "o"), ("lege", "legea")]
+
+
+def tinta_modificarii(corp, atom):
+    """(nume_citit, act_din_corpus_sau_None) - actul pe care il modifica atomul unui act modificator.
+
+    Se citeste din textul articolului roman gazda ("Legea nr. 227/2015 privind Codul fiscal ... se
+    modifica si se completeaza dupa cum urmeaza:"). Decizia C10 cere sa se scrie EXPLICIT cand actul
+    de baza consolidat lipseste din corpus - deci lipsa trebuie constatata, nu dedusa din faptul ca
+    potrivirea n-a gasit nimic."""
+    # Tinta se numeste in ARTICOLUL ROMAN gazda. Un atom citat adanc (articol arab citat sub un punct
+    # de interventie) nu o poarta; se urca pe lanţul de parinţi pana la primul articol roman.
+    lant, x = [], atom
+    while x is not None:
+        lant.append(x)
+        x = corp.dupa_id.get(x.get("parinte")) if x.get("parinte") else None
+    romane = [y for y in lant if y["nivel"] == "articol" and re.match(r"^[IVXLCDM]+$", str(y["cheie"]))]
+    if not romane:
+        # Unele redari APLATIZEAZA textul citat: Legea 296/2023 pune CF art. 500^2 la nivelul
+        # superior, fara parinte roman. Atunci contextul interventiei e ultimul articol roman care il
+        # PRECEDE in act - ordinea din text.
+        ats = corp.pe_act[atom["act"]]
+        i = next((k for k, y in enumerate(ats) if y["id"] == atom["id"]), None)
+        if i is not None:
+            for y in reversed(ats[:i]):
+                if y["nivel"] == "articol" and re.match(r"^[IVXLCDM]+$", str(y["cheie"])):
+                    romane = [y]
+                    break
+    texte = [y["text"] for y in romane] + [atom["text"]]
+    for txt in texte:
+        m = _TINTA.search(txt[:600])
+        if not m:
+            continue
+        tip = next((t for k, t in _TIP_TINTA if k in m.group(1).lower()), "act")
+        nr, an = m.group(2).replace(".", ""), m.group(3)
+        nume = "%s %s/%s" % (m.group(1).split()[0], nr, an)
+        if (nr, an) == ("227", "2015"):
+            cand = ["cod_fiscal_227_2015_consolidat"]
+        elif (nr, an) == ("207", "2015"):
+            cand = ["legea_207_2015_consolidat"]
+        else:
+            cand = sorted((b for b in corp.pe_act if "_%s_%s" % (nr, an) in b
+                           and b != atom["act"]),
+                          key=lambda b: ("consolidat" not in b, len(b)))
+        return nume, (cand[0] if cand and cand[0] in corp.pe_act else None)
+    return None, None
+
+
+
+def e_act_de_baza(act, modificatoare):
+    """Actul pe care il citeaza un contabil: normativ, nemodificator, neistoric.
+
+    Decizia C10: temeiul candidat e actul de baza consolidat; actul modificator apare doar ca
+    atom-valabilitate in perechea C4."""
+    if act in modificatoare or not e_act_normativ(act)[0]:
+        return False
+    return "forma_initiala" not in act and "_pre_" not in act

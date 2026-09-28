@@ -1,10 +1,10 @@
 {
- "masurat_la": "2026-09-28T16:59:26",
- "total_secunde": 34.61,
+ "masurat_la": "2026-09-28T17:47:47",
+ "total_secunde": 23.4,
  "pasi": [
   {
    "operatie": "OP2 instantaneu corpus + manifest SHA",
-   "secunde": 0.56,
+   "secunde": 0.42,
    "rezumat": {
     "n_fisiere": 726,
     "octeti_total": 130006698
@@ -12,7 +12,7 @@
   },
   {
    "operatie": "OP3 strat de text (txt/html/pdf)",
-   "secunde": 2.02,
+   "secunde": 1.32,
    "rezumat": {
     "n_acte_cu_text": 269,
     "n_neextractibile": 4
@@ -20,7 +20,7 @@
   },
   {
    "operatie": "OP4 atomizare structurala",
-   "secunde": 2.24,
+   "secunde": 1.38,
    "rezumat": {
     "n_acte": 269,
     "n_atomi": 46559,
@@ -30,7 +30,7 @@
   },
   {
    "operatie": "OP5 inventar parametri iConta (citire)",
-   "secunde": 2.82,
+   "secunde": 1.55,
    "rezumat": {
     "n_parametri": 147,
     "pe_clasa": {
@@ -44,7 +44,7 @@
   },
   {
    "operatie": "OP6+OP7 potrivire si clasificare",
-   "secunde": 9.06,
+   "secunde": 5.57,
    "rezumat": {
     "n_parametri": 147,
     "sumar": {
@@ -60,7 +60,7 @@
   },
   {
    "operatie": "OP7b banc de mutatii (dovada inversa)",
-   "secunde": 5.05,
+   "secunde": 3.01,
    "rezumat": {
     "n_trec": 9,
     "n_pica": 0
@@ -68,7 +68,7 @@
   },
   {
    "operatie": "Probe pe corpus",
-   "secunde": 12.86,
+   "secunde": 10.15,
    "rezumat": {
     "cod_ieșire": 0
    }
