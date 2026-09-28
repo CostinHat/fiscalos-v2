@@ -9,7 +9,7 @@ import sys
 import traceback
 
 MODULE = ["fiscalos.test_read_only", "fiscalos.test_atomizare", "fiscalos.test_potrivire",
-          "fiscalos.test_banc", "fiscalos.test_decizii"]
+          "fiscalos.test_banc", "fiscalos.test_decizii", "fiscalos.test_intrebari"]
 
 
 def ruleaza():

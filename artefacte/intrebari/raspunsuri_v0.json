@@ -1,0 +1,2079 @@
+{
+ "_ce": "C6 raspunsurile motorului, scrise INAINTE de comparatia cu cheia.",
+ "generat_la": "2026-09-28T17:03:04",
+ "n": 50,
+ "raspunse": 34,
+ "nu_pot": 16,
+ "n_atomi_indexati": 31485,
+ "secunde_index": 11.41,
+ "secunde_total": 12.66,
+ "raspunsuri": [
+  {
+   "id": "Q-TVA-01",
+   "tip": "PARAMETRU",
+   "intrebare": "Care este cota standard de TVA aplicabilă în 2026?",
+   "stare": "RASPUNS",
+   "raspuns": "24%",
+   "argument": [
+    {
+     "atom": "opanaf_2194_2025_d394#artIV/pct1/pct3",
+     "temei": "OPANAF 2194/2025 art. IV pct. 1 pct. 3",
+     "act": "opanaf_2194_2025_d394",
+     "scor": 18.19,
+     "verbatim": "…ta datele cu privire la natura operaţiunilor din care provine acesta: Achiziţii de bunuri şi servicii legate                     Livrări de bunuri imobile direct de bunurile imobile din                             Livrări de bunuri, cu excepţia bunurilor următoarele categorii:                                     imobile: a) parcuri eoliene                                         a) cu cota de TVA 24% b) construcţii rezidenţiale                                b) cu cota standard de TVA 21% c) clădiri de birouri                                      c) cu cota de TVA 20% d) construcţii industriale                                 d) cu cota de TVA 19% e) altele                                                  e) cu cota redusă de TVA 11% f) cu cota redusă de TVA 9% g) cu cota redusă de TVA 5% Achiziţii de bunuri, cu excepţia celor                     Livrări de bunuri scutite de TVA legate direct de bunuri imobile: a) cu cota de TVA 24%                                      Livrări de bunuri/prestări de servicii b) cu cota standard de TVA 21%                             pentru care se aplică taxarea inversă c) cu cota de TVA 20% d) cu cota de TVA 19%                                     …",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "valoarea de forma cerută (procent) din atomul cel mai bine potrivit care o poarta",
+   "valori_in_atom": [
+    "24%",
+    "21%",
+    "20%",
+    "19%",
+    "11%",
+    "9%"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-TVA-02",
+   "tip": "PARAMETRU",
+   "intrebare": "Care este plafonul cifrei de afaceri anuale sub care o persoană impozabilă stabilită în România poate aplica regimul special de scutire pentru întreprinderi mici în 2026?",
+   "stare": "RASPUNS",
+   "raspuns": "100.000 euro",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art310^1/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 310^1 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 56.36,
+     "verbatim": "O persoană impozabilă stabilită în România conform art. 266 alin. (2) lit. a) poate aplica regimul special de scutire pentru întreprinderile mici în alte state membre dacă îndeplinește următoarele condiții: a) cifra de afaceri anuală la nivelul Uniunii Europene a respectivei persoane impozabile nu depășește 100.000 euro în anul în care solicită acordarea scutirii și în anul calendaristic precedent; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "valoarea de forma cerută (suma) din atomul cel mai bine potrivit care o poarta",
+   "valori_in_atom": [
+    "100.000 euro"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-TVA-03",
+   "tip": "REGULA",
+   "intrebare": "O firmă neplătitoare de TVA (regim special de scutire) depășește plafonul de scutire pe 14.05.2026 printr-o factură emisă în acea zi. Până când trebuie să solicite înregistrarea în scopuri de TVA și de când aplică regimul normal de taxare?",
+   "stare": "RASPUNS",
+   "raspuns": "Persoana impozabilă poate aplica regimul normal de taxare și pentru operațiunile anterioare tranzacției care a condus la depășirea plafonului de scutire, realizate în data în care plafonul de scutire este depășit.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art310/alin6~2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 310 alin. (6)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 60.59,
+     "verbatim": "Persoana impozabilă care aplică regimul special de scutire și a cărei cifră de afaceri, prevăzută la alin. (2) , depășește plafonul de scutire prevăzut la alin. (1) trebuie să solicite înregistrarea în scopuri de TVA, conform art. 316 , cel târziu la data depășirii plafonului. Regimul normal de taxare se aplică din data depășirii plafonului prevăzut la alin. (1) , începând cu tranzacția care conduce la depășirea plafonului. Persoana impozabilă poate aplica regimul normal de taxare și pentru operațiunile anterioare tranzacției care a condus la depășirea plafonului de scutire, realizate în data în care plafonul de scutire este depășit.",
+     "valabilitate": {
+      "valabil_din": "2025-09-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art316/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 316 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 43.41,
+     "verbatim": "Persoana impozabilă care are sediul activității economice în România și realizează sau intenționează să realizeze o activitate economică ce implică operațiuni taxabile, scutite de taxa pe valoarea adăugată cu drept de deducere, cu locul în România, trebuie să solicite înregistrarea în scopuri de TVA la organul fiscal competent, după cum urmează: a) înainte de realizarea unor astfel de operațiuni, în următoarele cazuri: 1. dacă declară că urmează să realizeze o cifră de afaceri care depășește plafonul de scutire prevăzut la art. 310 alin. (1) , cu privire la regimul special de scutire pentru întreprinderile mici; ... 2. dacă declară că urmează să realizeze o cifră de afaceri inferioară plafonului de scutire prevăzut la art. 310 alin. (1) , dar optează pentru aplicarea regimului normal de taxă; ... ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art315^1/alin14",
+     "temei": "Codul fiscal (Legea 227/2015) art. 315^1 alin. (14)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 40.12,
+     "verbatim": "Persoana impozabilă prevăzută la alin. (13) care se înregistrează în scopuri de TVA conform art. 316 , prin opțiune conform art. 316 alin. (1) lit. c) sau ca urmare a depășirii plafonului de scutire prevăzut la art. 310 din alte activități economice decât cele prevăzute la alin. (1) lit. c) și d) , nu mai poate aplica regimul special pentru agricultori de la data înregistrării în scopuri de TVA sau de la data la care ar fi fost înregistrată dacă avea obligația de a solicita înregistrarea conform art. 310 alin. (6) și nu solicită sau solicită cu întârziere înregistrarea în scopuri de TVA. În cazul înregistrării în scopuri de TVA, prin normele metodologice se stabilesc ajustările de efectuat pentru achizițiile destinate activității pentru care nu a fost aplicat regimul special pentru agricultori. În situația în care agricultorul nu solicită sau solicită înregistrarea cu întârziere, organul fiscal competent aplică dispozițiile art. 310 alin. (6) lit. a) și b) . Organul fiscal competent va opera radierea din Registrul agricultorilor care aplică regimul special a agricultorilor care sunt înregistrați în scopuri de TVA conform art. 316 , în termen de 3 zile de la data la care înregistrar",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-05-14",
+   "precizie_data": "zi",
+   "data_din": "14.05.2026"
+  },
+  {
+   "id": "Q-TVA-04",
+   "tip": "REGULA",
+   "intrebare": "O persoană înregistrată în scopuri de TVA a avut în 2025 o cifră de afaceri de 350.000 lei și nu a făcut achiziții intracomunitare de bunuri. Ce perioadă fiscală de TVA are în 2026 și la ce curs se verifică plafonul?",
+   "stare": "RASPUNS",
+   "raspuns": "(2) , persoana impozabilă va utiliza trimestrul calendaristic ca perioadă fiscală, cu excepția situației în care a efectuat în cursul anului calendaristic respectiv una sau mai multe achiziții intracomunitare de bunuri înainte de înregistrarea în scopuri de TVA conform art.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art322/alin4",
+     "temei": "Codul fiscal (Legea 227/2015) art. 322 alin. (4)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 54.31,
+     "verbatim": "Întreprinderile mici care se înregistrează în scopuri de TVA, conform art. 316 , în cursul anului, trebuie să declare cu ocazia înregistrării cifra de afaceri obținută, recalculată în baza activității corespunzătoare unui an calendaristic întreg. Dacă această cifră de afaceri recalculată depășește plafonul prevăzut la alin. (2) , în anul respectiv perioada fiscală va fi luna calendaristică, conform alin. (1) . Dacă această cifră de afaceri recalculată nu depășește plafonul prevăzut la alin. (2) , persoana impozabilă va utiliza trimestrul calendaristic ca perioadă fiscală, cu excepția situației în care a efectuat în cursul anului calendaristic respectiv una sau mai multe achiziții intracomunitare de bunuri înainte de înregistrarea în scopuri de TVA conform art. 316 .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cf_2015_forma_initiala#art322/alin4",
+     "temei": "cf_2015_forma_initiala art. 322 alin. (4)",
+     "act": "cf_2015_forma_initiala",
+     "scor": 47.23,
+     "verbatim": "Întreprinderile mici care se înregistrează în scopuri de TVA, conform art. 316 , în cursul anului, trebuie să declare cu ocazia înregistrării cifra de afaceri obținută, recalculată în baza activității corespunzătoare unui an calendaristic întreg. Dacă această cifră de afaceri recalculată depășește plafonul prevăzut la alin. (2) , în anul respectiv perioada fiscală va fi luna calendaristică, conform alin. (1) . Dacă această cifră de afaceri recalculată nu depășește plafonul prevăzut la alin. (2) , persoana impozabilă va utiliza trimestrul calendaristic ca perioadă fiscală, cu excepția situației în care a efectuat în cursul anului calendaristic respectiv una sau mai multe achiziții intracomunitare de bunuri înainte de înregistrarea în scopuri de TVA conform art. 316 .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art322/alin5",
+     "temei": "Codul fiscal (Legea 227/2015) art. 322 alin. (5)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 47.02,
+     "verbatim": "Dacă cifra de afaceri efectiv obținută în anul înregistrării, recalculată în baza activității corespunzătoare unui an calendaristic întreg, depășește plafonul prevăzut la alin. (2) , în anul următor perioada fiscală va fi luna calendaristică, conform alin. (1) . Dacă această cifră de afaceri efectivă nu depășește plafonul prevăzut la alin. (2) , persoana impozabilă va utiliza trimestrul calendaristic ca perioadă fiscală, cu excepția situației în care persoana impozabilă a efectuat în cursul anului calendaristic precedent una sau mai multe achiziții intracomunitare de bunuri.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2025-01-01",
+   "precizie_data": "an",
+   "data_din": "2025"
+  },
+  {
+   "id": "Q-TVA-05",
+   "tip": "CAPCANA",
+   "intrebare": "O firmă în regim special de scutire are în 2026 venituri din servicii de 300.000 lei și vinde în același an un utilaj (mijloc fix) cu 120.000 lei. A depășit plafonul de scutire de 395.000 lei?",
+   "stare": "RASPUNS",
+   "raspuns": "Persoana impozabilă poate aplica regimul normal de taxare și pentru operațiunile anterioare tranzacției care a condus la depășirea plafonului de scutire, realizate în data în care plafonul de scutire este depășit.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art310/alin6~2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 310 alin. (6)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 32.59,
+     "verbatim": "Persoana impozabilă care aplică regimul special de scutire și a cărei cifră de afaceri, prevăzută la alin. (2) , depășește plafonul de scutire prevăzut la alin. (1) trebuie să solicite înregistrarea în scopuri de TVA, conform art. 316 , cel târziu la data depășirii plafonului. Regimul normal de taxare se aplică din data depășirii plafonului prevăzut la alin. (1) , începând cu tranzacția care conduce la depășirea plafonului. Persoana impozabilă poate aplica regimul normal de taxare și pentru operațiunile anterioare tranzacției care a condus la depășirea plafonului de scutire, realizate în data în care plafonul de scutire este depășit.",
+     "valabilitate": {
+      "valabil_din": "2025-09-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art310^2/alin4",
+     "temei": "Codul fiscal (Legea 227/2015) art. 310^2 alin. (4)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 32.39,
+     "verbatim": "Persoana impozabilă prevăzută la alin. (1) nu mai poate beneficia în România de regimul special de scutire pe o perioadă de un an calendaristic dacă în anul calendaristic precedent a depășit plafonul de scutire prevăzut la alin. (1) lit. a) sau la art. 310 alin. (1) .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art310/alin2~2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 310 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 30.74,
+     "verbatim": "Persoanele impozabile înființate anterior anului 2025, care s-au înregistrat în scopuri de TVA până la data de 1 septembrie 2025 inclusiv, ca urmare a depășirii plafonului de scutire de 300.000 lei prevăzut la alin. (1), pot solicita, începând cu data de 1 septembrie 2025, scoaterea din evidența persoanelor înregistrate în scopuri de TVA conform art. 316 din Legea nr. 227/2015 , cu modificările și completările ulterioare, în vederea aplicării regimului special de scutire, dacă nu au depășit plafonul de scutire de 300.000 lei din anul precedent, respectiv anul 2024, și dacă până la data solicitării scoaterii din evidență nu au depășit plafonul de 395.000 lei, calculat conform art. 310 alin. (2) din Legea nr. 227/2015 , cu modificările și completările ulterioare.",
+     "valabilitate": {
+      "valabil_din": "2025-09-01",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-TVA-06",
+   "tip": "CAPCANA",
+   "intrebare": "O firmă cu perioadă fiscală trimestrială face o livrare intracomunitară scutită în februarie 2026. Depune D390 trimestrial, odată cu D300 din aprilie?",
+   "stare": "RASPUNS",
+   "raspuns": "Prin excepţie, contribuabilii care au perioada fiscală luna calendaristică vor depune pentru lunile ianuarie şi februarie 2016 declaraţia informativă privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoane înregistrate în scopuri de TVA, prevăzută în Ordinul preşedintelui Agenţiei Naţionale de Administrare Fiscală nr.",
+   "argument": [
+    {
+     "atom": "opanaf_3769_2015_d394_baza#art12/alin21",
+     "temei": "OPANAF 3769/2015 art. 12 alin. (21)",
+     "act": "opanaf_3769_2015_d394_baza",
+     "scor": 25.48,
+     "verbatim": "din Codul fiscal, dacă au înscris codul de înregistrare în scopuri de TVA al beneficiarului. 2. Declaraţia se depune la organul fiscal competent până în data de 25 inclusiv a lunii următoare încheierii perioadei de raportare declarate pentru depunerea decontului (lunar, trimestrial etc.), inclusiv dacă în această perioadă nu au fost realizate operaţiuni de natura celor care fac obiectul declaraţiei. Prin excepţie, contribuabilii care au perioada fiscală luna calendaristică vor depune pentru lunile ianuarie şi februarie 2016 declaraţia informativă privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoane înregistrate în scopuri de TVA, prevăzută în Ordinul preşedintelui Agenţiei Naţionale de Administrare Fiscală nr. 3.596/2011 privind declararea livrărilor/prestărilor şi achiziţiilor efectuate pe teritoriul naţional de persoanele înregistrate în scopuri de TVA şi pentru aprobarea modelului şi conţinutului declaraţiei informative privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoanele înregistrate în scopuri de TVA, cu modificările ulterioare, urmând ca, până la data de 25 aprilie 2016 inclusiv, să depună declaraţia pr",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin3~35",
+     "temei": "Normele metodologice ale Codului fiscal (HG 1/2016) art. V alin. (3)",
+     "act": "hg_1_2016_norme_cod_fiscal",
+     "scor": 21.42,
+     "verbatim": "Dacă beneficiarul nu a primit o factură de la furnizor până în a 15-a zi a lunii următoare celei în care a avut loc faptul generator, are obligația să emită autofactura prevăzută la art. 320 alin. (1) din Codul fiscal. Pentru determinarea taxei se utilizează cursul de schimb prevăzut la art. 290 din Codul fiscal, respectiv cel din data emiterii autofacturii. În situația în care, ulterior emiterii autofacturii, beneficiarul primește factura de la furnizor, care este emisă la o dată anterioară datei autofacturii, acesta are obligația de a ajusta baza de impozitare în funcție de cursul de schimb în vigoare la data emiterii facturii de către furnizor. Exemplul nr. 1: Factura pentru livrarea intracomunitară este emisă în luna următoare celei în care se efectuează livrarea. Alt stat Livrare intracomunitară scutită de TVA Data livrării: 25.01.2016 Data facturii: 12.02.2016 Faptul generator: 25.01.2016 Exigibilitatea: 12.02.2016 Livrarea este inclusă în declarația recapitulativă și în decontul de TVA aferente lunii februarie 2016. România Achiziție intracomunitară supusă TVA și taxabilă Faptul generator: 25.01.2016 Exigibilitatea: 12.02.2016 Achiziția intracomunitară se evidențiază în decl",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin2~38",
+     "temei": "Normele metodologice ale Codului fiscal (HG 1/2016) art. V alin. (2)",
+     "act": "hg_1_2016_norme_cod_fiscal",
+     "scor": 20.96,
+     "verbatim": "Exigibilitatea determină perioada fiscală în care livrarea intracomunitară scutită se înregistrează în decontul de taxă pe valoarea adăugată prevăzut la art. 323 din Codul fiscal și în declarația recapitulativă prevăzută la art. 325 din Codul fiscal. 28.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "25 inclusiv"
+   ],
+   "data_referinta": "2026-02-01",
+   "precizie_data": "luna",
+   "data_din": "februarie 2026"
+  },
+  {
+   "id": "Q-TVA-07",
+   "tip": "PROCEDURA",
+   "intrebare": "O firmă înregistrată în scopuri de TVA, cu perioadă fiscală lunară, nu a avut nicio operațiune în ianuarie 2026. Trebuie să depună D394 pentru ianuarie și până când?",
+   "stare": "RASPUNS",
+   "raspuns": "Prin excepţie, contribuabilii care au perioada fiscală luna calendaristică vor depune pentru lunile ianuarie şi februarie 2016 declaraţia informativă privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoane înregistrate în scopuri de TVA, prevăzută în Ordinul preşedintelui Agenţiei Naţionale de Administrare Fiscală nr.",
+   "argument": [
+    {
+     "atom": "opanaf_3769_2015_d394_baza#art12/alin21",
+     "temei": "OPANAF 3769/2015 art. 12 alin. (21)",
+     "act": "opanaf_3769_2015_d394_baza",
+     "scor": 29.49,
+     "verbatim": "din Codul fiscal, dacă au înscris codul de înregistrare în scopuri de TVA al beneficiarului. 2. Declaraţia se depune la organul fiscal competent până în data de 25 inclusiv a lunii următoare încheierii perioadei de raportare declarate pentru depunerea decontului (lunar, trimestrial etc.), inclusiv dacă în această perioadă nu au fost realizate operaţiuni de natura celor care fac obiectul declaraţiei. Prin excepţie, contribuabilii care au perioada fiscală luna calendaristică vor depune pentru lunile ianuarie şi februarie 2016 declaraţia informativă privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoane înregistrate în scopuri de TVA, prevăzută în Ordinul preşedintelui Agenţiei Naţionale de Administrare Fiscală nr. 3.596/2011 privind declararea livrărilor/prestărilor şi achiziţiilor efectuate pe teritoriul naţional de persoanele înregistrate în scopuri de TVA şi pentru aprobarea modelului şi conţinutului declaraţiei informative privind livrările/prestările şi achiziţiile efectuate pe teritoriul naţional de persoanele înregistrate în scopuri de TVA, cu modificările ulterioare, urmând ca, până la data de 25 aprilie 2016 inclusiv, să depună declaraţia pr",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art315^1/alin16",
+     "temei": "Codul fiscal (Legea 227/2015) art. 315^1 alin. (16)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 24.81,
+     "verbatim": "În cazul în care, după expirarea perioadei prevăzute la alin. (15) , agricultorul optează din nou pentru aplicarea regimului special pentru agricultori, acesta trebuie să depună la organele fiscale competente o notificare în acest sens. Persoanele impozabile înregistrate în scopuri de TVA care optează pentru aplicarea regimului special pentru agricultori pot solicita scoaterea din evidența persoanelor înregistrate în scopuri de TVA în vederea aplicării regimului special. Solicitarea se poate depune la organele fiscale competente între data de 1 și 10 a fiecărei luni următoare perioadei fiscale aplicate de persoana impozabilă, anularea înregistrării fiind valabilă de la data comunicării deciziei privind anularea înregistrării în scopuri de TVA. Organele fiscale competente au obligația de a soluționa solicitările de scoatere a persoanelor impozabile din evidența persoanelor înregistrate în scopuri de TVA cel târziu până la finele lunii în care a fost depusă solicitarea și de a înscrie agricultorul în Registrul agricultorilor care aplică regimul special. În cazul persoanelor impozabile înregistrate în scopuri de TVA conform art. 316 , până la comunicarea deciziei de anulare a înregist",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#art12/pct5",
+     "temei": "OPANAF 3769/2015 art. 12 pct. 5",
+     "act": "opanaf_3769_2015_d394_baza",
+     "scor": 24.21,
+     "verbatim": "Declaraţia se completează/validează cu ajutorul programelor de asistenţă. Programele de asistenţă sunt puse la dispoziţia contribuabililor gratuit de unităţile fiscale subordonate sau pot fi descărcate de pe site-ul ANAF, la adresa www.anaf.mfinante.gov.ro Completarea declaraţiei SECŢIUNEA 1 Cartuşul referitor la tipul plătitorului şi perioada de raportare se completează cu: a) la tip plătitor se înscrie perioada fiscală declarată pentru depunerea decontului de taxă pe valoarea adăugată (formularul 300), prevăzută la art. 322 din Codul fiscal, respectiv L - lunar, T - trimestrial, S - semestrial, A - anual; b) anul la care se referă declaraţia; se înscrie anul calendaristic cu 4 caractere (de exemplu, 2015); c) luna - se înscrie cu cifre arabe numărul aferent perioadei de raportare (de exemplu, 01 pentru ianuarie, 03 pentru trimestrul I, 06 pentru semestrul II, 12 pentru an); d) sistem normal de TVA - se completează în cazul în care persoana impozabilă care depune declaraţia a optat pentru aplicarea sistemului normal de TVA; e) sistem de TVA la încasare - se completează în cazul în care persoana impozabilă care depune declaraţia a optat pentru aplicarea sistemului de TVA la încasar",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "25 inclusiv"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "luna",
+   "data_din": "ianuarie 2026"
+  },
+  {
+   "id": "Q-TVA-08",
+   "tip": "CALCUL",
+   "intrebare": "O firmă cumpără în 2026 un autoturism (sub 3.500 kg, max. 9 locuri, nu intră în excepțiile legale) la 100.000 lei + TVA, folosit și în scop personal. Cât TVA poate deduce?",
+   "stare": "RASPUNS",
+   "raspuns": "100.000 lei x 50% = 50000,00 lei",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin12/liti^1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (12) lit. i^1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 18.68,
+     "verbatim": "pentru un sediu social care nu este utilizat exclusiv în scopul activității economice, situat în clădiri de locuințe sau în clădiri individuale de locuit, din ansambluri rezidențiale definite potrivit prevederilor legale, înregistrate în patrimoniul contribuabilului, amortizarea este deductibilă la nivelul de 50%. În cazul utilizării sediilor sociale, aflate în patrimoniul contribuabilului, în scop personal de către acționari sau asociați, amortizarea fiscală aferentă sediului social nu se deduce la calculul rezultatului fiscal; ...",
+     "valabilitate": {
+      "valabil_din": "2024-01-01",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "motiv": "R-CALC: o baza, o cota; baza x cota",
+   "calcul": {
+    "baza": 100000.0,
+    "cota": 50.0,
+    "rezultat": 50000.0
+   },
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-TVA-09",
+   "tip": "CALCUL",
+   "intrebare": "Un restaurant emite în 2026 o notă cu mâncare 800 lei bază și vin 200 lei bază. Cât TVA colectează în total?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: intrebarea are 2 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "candidati": [
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin8~19",
+     "temei": "Normele metodologice ale Codului fiscal (HG 1/2016) art. V alin. (8)",
+     "act": "hg_1_2016_norme_cod_fiscal",
+     "scor": 22.0,
+     "verbatim": "În aplicarea art. 291 alin. (3) lit. e) din Codul fiscal, prin servicii de restaurant și de catering se înțelege serviciile prevăzute la pct. 18. Orice combinație de băuturi alcoolice și nealcoolice, indiferent de concentrația alcoolică, este considerată băutură alcoolică. Pentru băuturile alcoolice servite la restaurant sau oferite în cazul serviciilor de catering se aplică cota standard de TVA, dar nu se consideră că are loc o livrare separată de bunuri, oferirea de băuturi alcoolice făcând parte din serviciile de restaurant sau de catering. Exemplu: Un restaurant care vinde și mâncare pentru a fi servită în afara locației restaurantului nu realizează o prestare de servicii de restaurant, ci o livrare de bunuri, pentru care aplică cota redusă de TVA de 9%, inclusiv pentru caserola sau paharele în care sunt servite alimentele sau băuturile nealcoolice, chiar dacă contravaloarea acestora ar fi evidențiată separat pe bonul fiscal. În acest caz se consideră că livrarea alimentelor este livrarea principală care atrage aceeași cotă de TVA livrării caserolei sau a paharului, acestea fiind livrări accesorii, nu un scop în sine pentru client.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin3~37",
+     "temei": "Normele metodologice ale Codului fiscal (HG 1/2016) art. V alin. (3)",
+     "act": "hg_1_2016_norme_cod_fiscal",
+     "scor": 14.66,
+     "verbatim": "În sensul art. 286 alin. (4) lit. e) din Codul fiscal, sumele achitate de o persoană impozabilă în numele și în contul altei persoane impozabile reprezintă sumele achitate de o persoană impozabilă pentru facturi emise de diverși furnizori/prestatori pe numele altei persoane și care apoi sunt recuperate de cel care le achită de la beneficiar. Persoana care achită sume în numele și în contul altei persoane nu primește facturi pe numele său și nici nu emite facturi pe numele său. Pentru recuperarea sumelor achitate în numele și în contul altei persoane se poate emite, în mod opțional, o factură de decontare de către persoana impozabilă care a achitat respectivele facturi. În situația în care părțile convin să își deconteze sumele achitate pe baza facturii de decontare, taxa nu se menționează distinct, fiind inclusă în totalul sumei de recuperat. Factura de decontare se transmite beneficiarului însoțită de factura achitată în numele său. Persoana care a achitat facturile în numele altei persoane nu exercită dreptul de deducere pentru sumele achitate, nu colectează taxa pe baza facturii de decontare și nu înregistrează aceste sume în conturile de cheltuieli, respectiv de venituri. Benef",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin3^8/litd",
+     "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (3^8) lit. d)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 14.49,
+     "verbatim": "să înscrie în actele juridice între vii care au ca obiect transferul dreptului de proprietate sau plata în avans pentru locuințele prevăzute la alin. (2) lit. m) pct. 3 cota de TVA aplicată, indiferent dacă TVA se aplică la preț sau este inclusă în preț. ... Notă ... Potrivit alineatului (1) al art. IV din LEGEA nr. 296 din 26 octombrie 2023, publicată în MONITORUL OFICIAL nr. 977 din 27 octombrie 2023, ordinul președintelui Agenției Naționale de Administrare Fiscală prevăzut la art. III pct. 45 se emite până la data de 1 ianuarie 2024 și se publică în Monitorul Oficial al României, Partea I.",
+     "valabilitate": {
+      "valabil_din": "2024-01-01",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-TVA-10",
+   "tip": "INCOMPLETA",
+   "intrebare": "Firma a cumpărat o mașină cu 150.000 lei + TVA. Cât TVA deduce?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  },
+  {
+   "id": "Q-PRF-01",
+   "tip": "PARAMETRU",
+   "intrebare": "Ce cotă de impozit pe veniturile microîntreprinderilor se aplică în 2026 unei microîntreprinderi care realizează venituri din consultanță, și cu ce cod de obligație se declară în D100?",
+   "stare": "RASPUNS",
+   "raspuns": "20%",
+   "argument": [
+    {
+     "atom": "oug_50_2015_consolidat#artI~2/pct7",
+     "temei": "OUG 50/2015 art. I pct. 7",
+     "act": "oug_50_2015_consolidat",
+     "scor": 27.67,
+     "verbatim": "La articolul 52, alineatul (1) se modifică şi va avea următorul cuprins: \"(1) Dacă în cursul unui an fiscal o microîntreprindere realizează venituri mai mari de 100.000 euro sau ponderea veniturilor realizate din consultanţă şi management în veniturile totale este de peste 20% inclusiv, aceasta datorează impozit pe profit, începând cu trimestrul în care s-a depăşit oricare dintre aceste limite.\"",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "valoarea de forma cerută (procent) din atomul cel mai bine potrivit care o poarta",
+   "valori_in_atom": [
+    "20%"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-PRF-02",
+   "tip": "REGULA",
+   "intrebare": "O microîntreprindere depășește în luna mai 2026 plafonul de venituri cumulate de la începutul anului. Care e plafonul, la ce curs se verifică și de când datorează impozit pe profit?",
+   "stare": "RASPUNS",
+   "raspuns": "în trimestrul IV sau în ultimul trimestru al perioadei impozabile, în cazul contribuabililor care își încetează existența, diferența favorabilă dintre veniturile din diferențe de curs valutar/veniturile financiare aferente creanțelor și datoriilor cu decontare în funcție de cursul unei valute, rezultate din evaluarea sau decontarea acestora, și cheltuielile din diferențe de curs valutar/cheltuielile financiare aferente, înregistrate cumulat de la începutul anului;",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art53/alin2/litb",
+     "temei": "Codul fiscal (Legea 227/2015) art. 53 alin. (2) lit. b)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 43.08,
+     "verbatim": "în trimestrul IV sau în ultimul trimestru al perioadei impozabile, în cazul contribuabililor care își încetează existența, diferența favorabilă dintre veniturile din diferențe de curs valutar/veniturile financiare aferente creanțelor și datoriilor cu decontare în funcție de cursul unei valute, rezultate din evaluarea sau decontarea acestora, și cheltuielile din diferențe de curs valutar/cheltuielile financiare aferente, înregistrate cumulat de la începutul anului; în cazul microîntreprinderilor care devin plătitoare de impozit pe profit, potrivit art. 52 , această diferență reprezintă elemente similare veniturilor în primul trimestru pentru care datorează impozit pe profit; în cazul microîntreprinderilor care devin plătitoare de impozit pe profit, potrivit art. 52 , în primul trimestru al anului fiscal, diferența respectivă nu reprezintă elemente similare veniturilor în acest prim trimestru; ...",
+     "valabilitate": {
+      "valabil_din": "2023-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art52/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 52 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 38.56,
+     "verbatim": "Dacă în cursul unui an fiscal o microîntreprindere realizează venituri mai mari de 100.000 euro, aceasta datorează impozit pe profit începând cu trimestrul în care s-a depășit această limită. Notă ... Potrivit alin. (5) al art. 10 din ORDONANȚA DE URGENȚĂ nr. 8 din 24 februarie 2026, publicată în MONITORUL OFICIAL nr. 147 din 25 februarie 2026, prevederile art. 6 pct. 20 se aplică pentru calculul plafonului microîntreprinderilor începând cu trimestrul I 2026.",
+     "valabilitate": {
+      "valabil_din": "2026-02-25",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art52/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 52 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 35.84,
+     "verbatim": "În cazul în care, în cursul unui an fiscal, o microîntreprindere nu a depus în termen situațiile financiare anuale pentru exercițiul financiar precedent anului fiscal respectiv, dacă avea această obligație potrivit legii, microîntreprinderea datorează impozit pe profit începând cu trimestrul în care nu mai este îndeplinită această condiție.",
+     "valabilitate": {
+      "valabil_din": "2026-02-25",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-05-01",
+   "precizie_data": "luna",
+   "data_din": "mai 2026"
+  },
+  {
+   "id": "Q-PRF-03",
+   "tip": "CAPCANA",
+   "intrebare": "Până când se depune D101 și se plătește impozitul pe profit anual pentru anul fiscal 2026 (an calendaristic), la o societate care nu se dizolvă?",
+   "stare": "RASPUNS",
+   "raspuns": "Persoanele juridice care, în cursul anului fiscal, se dizolvă fără lichidare au obligația să depună declarația anuală de impozit pe profit și să plătească impozitul până la închiderea perioadei impozabile.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art41/alin17",
+     "temei": "Codul fiscal (Legea 227/2015) art. 41 alin. (17)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 32.66,
+     "verbatim": "Persoanele juridice care, în cursul anului fiscal, se dizolvă fără lichidare au obligația să depună declarația anuală de impozit pe profit și să plătească impozitul până la închiderea perioadei impozabile.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art41/alin16",
+     "temei": "Codul fiscal (Legea 227/2015) art. 41 alin. (16)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 31.45,
+     "verbatim": "Persoanele juridice care se dizolvă cu lichidare, potrivit legii, au obligația să depună declarația anuală de impozit pe profit pentru perioada prevăzută la art. 16 alin. (6) și să plătească impozitul pe profit aferent până la data depunerii situațiilor financiare la organul fiscal competent.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cf_2015_forma_initiala#art41/alin17",
+     "temei": "cf_2015_forma_initiala art. 41 alin. (17)",
+     "act": "cf_2015_forma_initiala",
+     "scor": 28.4,
+     "verbatim": "Persoanele juridice care, în cursul anului fiscal, se dizolvă fără lichidare au obligația să depună declarația anuală de impozit pe profit și să plătească impozitul până la închiderea perioadei impozabile.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-PRF-04",
+   "tip": "CAPCANA",
+   "intrebare": "O societate cu cifra de afaceri 2025 peste 50 mil. euro are în 2026: VT = 300.000.000 lei, Vs = 20.000.000 lei, I = 0, A = 10.000.000 lei; impozitul pe profit anual calculat (fără sponsorizări sau alte sume de scăzut) = 1.000.000 lei. Cât impozit pe profit datorează pentru 2026?",
+   "stare": "RASPUNS",
+   "raspuns": "În cazul în care creditul fiscal este scăzut parțial din impozitul pe profit anual/impozitul minim pe cifra de afaceri anual, diferența se compensează sau se restituie în condițiile prevăzute la alin.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art20^1/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 20^1 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 40.1,
+     "verbatim": "Creditul fiscal determinat potrivit prevederilor alin. (2) se scade anual din impozitul pe profit/impozitul minim pe cifra de afaceri datorat și se înregistrează în registrul de evidență fiscală al contribuabilului. În cazul în care creditul fiscal este scăzut parțial din impozitul pe profit anual/impozitul minim pe cifra de afaceri anual, diferența se compensează sau se restituie în condițiile prevăzute la alin. (4) și (5) .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art20^1/alin4/litb",
+     "temei": "Codul fiscal (Legea 227/2015) art. 20^1 alin. (4) lit. b)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 38.68,
+     "verbatim": "impozitul minim pe cifra de afaceri anual reprezintă impozitul minim pe cifra de afaceri anual rezultat după scăderea, în ordinea prevăzută de prezenta literă, a sumelor reprezentând: credit fiscal extern și sponsorizare/mecenat. În cazul grupului fiscal, impozitul minim pe cifra de afaceri anual reprezintă impozitul minim pe cifra de afaceri anual rezultat după scăderea sumelor reprezentând creditul fiscal extern, sponsorizare/ mecenat, precum și a valorii rezultate prin aplicarea cotei de 16% asupra deducerii suplimentare pentru cercetare-dezvoltare, după caz, dacă un membru al grupului a optat pentru aplicarea prevederilor art. 18^1 alin. (11^1) . ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cf_2015_forma_initiala#art25/alin4/liti",
+     "temei": "cf_2015_forma_initiala art. 25 alin. (4) lit. i)",
+     "act": "cf_2015_forma_initiala",
+     "scor": 37.96,
+     "verbatim": "cheltuielile de sponsorizare și/sau mecenat și cheltuielile privind bursele private, acordate potrivit legii; contribuabilii care efectuează sponsorizări și/sau acte de mecenat, potrivit prevederilor Legii nr. 32/1994 privind sponsorizarea, cu modificările și completările ulterioare, și ale Legii bibliotecilor nr. 334/2002 , republicată, cu modificările și completările ulterioare, precum și cei care acordă burse private, potrivit legii, scad sumele aferente din impozitul pe profit datorat la nivelul valorii minime dintre următoarele: 1. valoarea calculată prin aplicarea a 0,5% la cifra de afaceri; pentru situațiile în care reglementările contabile aplicabile nu definesc indicatorul cifra de afaceri, această limită se determină potrivit normelor; ... 2. valoarea reprezentând 20% din impozitul pe profit datorat. ... Sumele care nu sunt scăzute din impozitul pe profit, potrivit prevederilor prezentei litere, se reportează în următorii 7 ani consecutivi. Recuperarea acestor sume se va efectua în ordinea înregistrării acestora, în aceleași condiții, la fiecare termen de plată a impozitului pe profit. ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2025-01-01",
+   "precizie_data": "an",
+   "data_din": "2025"
+  },
+  {
+   "id": "Q-PRF-05",
+   "tip": "CALCUL",
+   "intrebare": "Microîntreprindere, trimestrul I 2026: venituri din vânzări 200.000 lei, dividende primite de la o SRL română 30.000 lei, venituri din diferențe de curs valutar 5.000 lei, reduceri comerciale primite ulterior facturării (cont 609) 2.000 lei. Cât impozit datorează pentru T1?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: intrebarea are 4 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "candidati": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art53/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 53 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 52.28,
+     "verbatim": "Pentru determinarea impozitului pe veniturile microîntreprinderilor, la baza impozabilă determinată potrivit alin. (1) se adaugă următoarele: a) valoarea reducerilor comerciale primite ulterior facturării, înregistrate în contul \"609\", potrivit reglementărilor contabile aplicabile; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_296_2020_consolidat#art42^11/alin7",
+     "temei": "Legea 296/2020 art. 42^11 alin. (7)",
+     "act": "legea_296_2020_consolidat",
+     "scor": 46.88,
+     "verbatim": "Contribuabilii care la determinarea impozitului pe profit aferent anului 2020 scad costul de achiziție al aparatelor de marcat electronice fiscale achiziționate și puse în funcțiune în anii 2018 și 2019, potrivit Legii nr. 153/2020 , pentru care au aplicat în anii respectivi prevederile art. 22, adaugă la impozitul datorat și valoarea impozitului pe profit scutit aferent acestor aparate. ... 22. La articolul 51, alineatele (2) și (3) se abrogă. ... 23. La articolul 53 alineatul (1), după litera m) se introduce o nouă literă, litera n), cu următorul cuprins: n) dividendele primite de la o persoană juridică română. ... ... 24. La articolul 53, litera b) a alineatului (2) se modifică și va avea următorul cuprins: b) în trimestrul IV sau în ultimul trimestru al perioadei impozabile, în cazul contribuabililor care își încetează existența, diferența favorabilă dintre veniturile din diferențe de curs valutar/veniturile financiare aferente creanțelor și datoriilor cu decontare în funcție de cursul unei valute, rezultate din evaluarea sau decontarea acestora, și cheltuielile din diferențe de curs valutar/cheltuielile financiare aferente, înregistrate cumulat de la începutul anului; în cazul",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art53/alin2/litb",
+     "temei": "Codul fiscal (Legea 227/2015) art. 53 alin. (2) lit. b)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 46.56,
+     "verbatim": "în trimestrul IV sau în ultimul trimestru al perioadei impozabile, în cazul contribuabililor care își încetează existența, diferența favorabilă dintre veniturile din diferențe de curs valutar/veniturile financiare aferente creanțelor și datoriilor cu decontare în funcție de cursul unei valute, rezultate din evaluarea sau decontarea acestora, și cheltuielile din diferențe de curs valutar/cheltuielile financiare aferente, înregistrate cumulat de la începutul anului; în cazul microîntreprinderilor care devin plătitoare de impozit pe profit, potrivit art. 52 , această diferență reprezintă elemente similare veniturilor în primul trimestru pentru care datorează impozit pe profit; în cazul microîntreprinderilor care devin plătitoare de impozit pe profit, potrivit art. 52 , în primul trimestru al anului fiscal, diferența respectivă nu reprezintă elemente similare veniturilor în acest prim trimestru; ...",
+     "valabilitate": {
+      "valabil_din": "2023-01-01",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-PRF-06",
+   "tip": "CALCUL",
+   "intrebare": "Plătitor de impozit pe profit (cifra de afaceri sub 50 mil. euro) are o pierdere fiscală din 2024 de 100.000 lei, nerecuperată. În 2026 profitul impozabil înainte de recuperarea pierderii este 120.000 lei. Cât impozit pe profit datorează și ce pierdere rămâne de recuperat?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: intrebarea are 2 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "candidati": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 41.91,
+     "verbatim": "În situația în care rezultatul fiscal cumulat la sfârșitul trimestrului/anului de calcul este pierdere fiscală sau profit impozabil, înainte de recuperarea pierderii fiscale din anii precedenți, potrivit art. 31 , contribuabilul determină impozitul minim pe cifra de afaceri potrivit alin. (3) .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art18^1/alin2",
+     "temei": "Legea 296/2023 art. 18^1 alin. (2)",
+     "act": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
+     "scor": 36.44,
+     "verbatim": "În situația în care rezultatul fiscal cumulat la sfârșitul trimestrului/anului de calcul este pierdere fiscală sau profit impozabil, înainte de recuperarea pierderii fiscale din anii precedenți, potrivit art. 31, contribuabilul determină impozitul minim pe cifra de afaceri potrivit alin. (3).",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin8/litd",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (8) lit. d)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 34.13,
+     "verbatim": "persoana juridică responsabilă compară impozitul pe profit trimestrial/anual determinat la nivelul grupului, respectiv plățile anticipate, după caz, cu valoarea însumată a impozitelor minime pe cifra de afaceri transmise de membrii grupului fiscal, urmând să aplice prevederile alin. (1) coroborate cu cele ale alin. (5)-(7) și (9) . În cazul în care rezultatul fiscal al grupului este pierdere fiscală, impozitul grupului se datorează la nivelul valorii însumate a impozitelor minime pe cifra de afaceri transmise de membrii grupului. ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "data_referinta": "2024-01-01",
+   "precizie_data": "an",
+   "data_din": "2024"
+  },
+  {
+   "id": "Q-PRF-07",
+   "tip": "CALCUL",
+   "intrebare": "Profit contabil 2026 = 100.000 lei, cheltuiala cu impozitul pe profit = 20.000 lei, cheltuieli de protocol = 10.000 lei. Ce sumă din protocol e deductibilă și cât se adaugă ca nedeductibil?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: intrebarea are 3 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "candidati": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art25/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 25 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 40.67,
+     "verbatim": "Următoarele cheltuieli au deductibilitate limitată: a) cheltuielile de protocol în limita unei cote de 2% aplicată asupra profitului contabil la care se adaugă cheltuielile cu impozitul pe profit și cheltuielile de protocol. În cadrul cheltuielilor de protocol se includ și cheltuielile înregistrate cu taxa pe valoarea adăugată colectată potrivit prevederilor titlului VII , pentru cadourile oferite de contribuabil, cu valoare mai mare de 100 lei; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cf_2015_forma_initiala#art25/alin3",
+     "temei": "cf_2015_forma_initiala art. 25 alin. (3)",
+     "act": "cf_2015_forma_initiala",
+     "scor": 35.36,
+     "verbatim": "Următoarele cheltuieli au deductibilitate limitată: a) cheltuielile de protocol în limita unei cote de 2% aplicată asupra profitului contabil la care se adaugă cheltuielile cu impozitul pe profit și cheltuielile de protocol. În cadrul cheltuielilor de protocol se includ și cheltuielile înregistrate cu taxa pe valoarea adăugată colectată potrivit prevederilor titlului VII , pentru cadourile oferite de contribuabil, cu valoare mai mare de 100 lei; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art26/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 26 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 35.17,
+     "verbatim": "Contribuabilul are dreptul la deducerea rezervelor și provizioanelor/ajustărilor pentru depreciere, numai în conformitate cu prezentul articol, astfel: a) rezerva legală este deductibilă în limita unei cote de 5% aplicate asupra profitului contabil, la care se adaugă cheltuielile cu impozitul pe profit, până ce aceasta va atinge a cincea parte din capitalul social subscris și vărsat sau din patrimoniu, după caz; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-PRF-08",
+   "tip": "REGULA",
+   "intrebare": "O SRL înregistrată la registrul comerțului pe 10 martie 2026 optează pentru impozit micro din primul an. În cât timp trebuie să angajeze salariatul și ce se întâmplă dacă nu o face?",
+   "stare": "RASPUNS",
+   "raspuns": "data înregistrării/menționării acestora la registrul comerțului sau în alte registre în care a fost înregistrată entitatea care le-a înființat;",
+   "argument": [
+    {
+     "atom": "legea_207_2015_consolidat#art85~2/alin1/lita",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 85 alin. (1) lit. a)",
+     "act": "legea_207_2015_consolidat",
+     "scor": 18.43,
+     "verbatim": "data înregistrării/menționării acestora la registrul comerțului sau în alte registre în care a fost înregistrată entitatea care le-a înființat;",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art101/alin4",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 101 alin. (4)",
+     "act": "legea_207_2015_consolidat",
+     "scor": 17.87,
+     "verbatim": "în cazul obligațiilor de declarare a unor venituri care, potrivit legii, sunt scutite la plata impozitului pe venit, organul fiscal central poate aproba, la cererea contribuabilului/plătitorului, alte termene sau condiții de depunere a declarațiilor fiscale, în funcție de necesitățile administrării obligațiilor fiscale. Asupra termenelor și condițiilor decide organul fiscal central potrivit competențelor aprobate prin ordin al președintelui A.N.A.F. Ordine de aplicare ORDIN nr. 889/2016 din 2 martie 2016 privind Procedura de aprobare a regimului de declarare derogatoriu (4 1 ) Entitățile înregistrate în registrul comerțului, pentru care există înscrise mențiuni privind inactivitatea temporară, nu au obligația depunerii declarațiilor fiscale pentru perioada în care se află în inactivitate temporară, începând cu data de 1 a lunii următoare înscrierii mențiunii privind inactivitatea temporară în registrul comerțului. (4 2 ) Celelalte entități, altele decât cele prevăzute la alin. (4 1 ), nu au obligația depunerii declarațiilor fiscale, pentru perioada pentru care au solicitat suspendarea activității la organismele care le-au autorizat, începând cu data de 1 a lunii următoare înscrieri",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art316/alin1^1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 316 alin. (1^1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 17.85,
+     "verbatim": "În cazul în care o persoană este obligată să solicite înregistrarea în condițiile alin. (1) , (2) , (4) sau (6) ori optează pentru înregistrare conform alin. (4) , înregistrarea respectivei persoane se va considera valabilă începând cu: a) data înregistrării fiscale, în cazul prevăzut la alin. (1) lit. a) . Prin excepție, în cazul persoanelor impozabile care solicită odată cu înregistrarea în registrul comerțului și înregistrarea în scopuri de TVA conform alin. (1) lit. a) , înregistrarea în scopuri de TVA se consideră valabilă începând cu data înregistrării persoanei impozabile în registrul comerțului; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-03-10",
+   "precizie_data": "zi",
+   "data_din": "10 martie 2026"
+  },
+  {
+   "id": "Q-PRF-09",
+   "tip": "PROCEDURA",
+   "intrebare": "Societate care aplică sistemul anual cu plăți anticipate trimestriale. Cum se calculează plata anticipată pentru trimestrul I 2026, până când și cu ce declarație/cod?",
+   "stare": "RASPUNS",
+   "raspuns": "227/2015 privind Codul fiscal, cu modificările și completările ulterioare, contribuabilii care aplică sistemul de declarare și plată a impozitului pe profit anual, cu plăți anticipate efectuate trimestrial, pot efectua plățile anticipate trimestriale pentru anul 2020, la nivelul sumei rezultate din calculul impozitului pe profit trimestrial curent.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art503/alin4",
+     "temei": "Codul fiscal (Legea 227/2015) art. 503 alin. (4)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 35.5,
+     "verbatim": "Măsurile fiscale prevăzute la alin. (1)-(3) încetează în termen de 30 de zile de la încetarea stării de urgență. Articolul VIII (1) Prin derogare de la prevederile art. 41 alin. (8) din Legea nr. 227/2015 privind Codul fiscal, cu modificările și completările ulterioare, contribuabilii care aplică sistemul de declarare și plată a impozitului pe profit anual, cu plăți anticipate efectuate trimestrial, pot efectua plățile anticipate trimestriale pentru anul 2020, la nivelul sumei rezultate din calculul impozitului pe profit trimestrial curent. Modul de calcul se păstrează pentru toate trimestrele anului fiscal 2020.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art41/alin8",
+     "temei": "Codul fiscal (Legea 227/2015) art. 41 alin. (8)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 35.33,
+     "verbatim": "Contribuabilii care aplică sistemul de declarare și plată a impozitului pe profit anual, cu plăți anticipate efectuate trimestrial, determină plățile anticipate trimestriale în sumă de o pătrime din impozitul pe profit datorat pentru anul precedent, actualizat cu indicele prețurilor de consum, estimat cu ocazia elaborării bugetului inițial al anului pentru care se efectuează plățile anticipate, până la data de 25 inclusiv a lunii următoare trimestrului pentru care se efectuează plata, cu excepția plății anticipate aferente trimestrului IV care se declară și se plătește până la data de 25 decembrie, respectiv până la data de 25 a ultimei luni din anul fiscal modificat. Contribuabilii care intră sub incidența prevederilor art. 16 alin. (5) actualizează plățile anticipate trimestriale cu ultimul indice al prețurilor de consum comunicat pentru anul în care începe anul fiscal modificat. Impozitul pe profit pentru anul precedent, pe baza căruia se determină plățile anticipate trimestriale, este impozitul pe profit anual, conform declarației privind impozitul pe profit. Nu intră sub incidența acestor prevederi contribuabilii care se dizolvă cu lichidare, pentru perioada cuprinsă între pri",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin6",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (6)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 32.91,
+     "verbatim": "În cazul contribuabililor care aplică sistemul anual de plată cu efectuarea de plăți anticipate, prevederile alin. (1)-(5) se aplică pentru trimestrele I, II și III ale fiecărui an fiscal/an fiscal modificat, prin compararea impozitului minim pe cifra de afaceri, determinat potrivit alin. (3) , cu plățile anticipate, urmând ca definitivarea impozitului pe profit anual să se efectueze până la termenul de depunere a declarației anuale de impozit pe profit. Comparația se efectuează astfel: a) pentru trimestrul I, impozitul minim pe cifra de afaceri, determinat potrivit alin. (3) , se compară cu plata anticipată aferentă acestui trimestru; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "30 de zile"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-PRF-10",
+   "tip": "INCOMPLETA",
+   "intrebare": "SRL-ul meu a avut în 2025 cifră de afaceri de 90.000 euro și are un salariat cu normă întreagă. Pot plăti impozit micro în 2026?",
+   "stare": "RASPUNS",
+   "raspuns": "Impozitul pe cifra de afaceri se calculează cumulat de la începutul anului fiscal.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art46^1/alin4",
+     "temei": "Codul fiscal (Legea 227/2015) art. 46^1 alin. (4)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 23.37,
+     "verbatim": "Impozitul pe cifra de afaceri se calculează cumulat de la începutul anului fiscal. Impozitul pe cifra de afaceri datorat trimestrial se determină ca diferență între impozitul pe cifra de afaceri calculat cumulat de la începutul anului fiscal și impozitul pe cifra de afaceri datorat pentru perioada anterioară celei de calcul.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 18^1 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 23.33,
+     "verbatim": "Contribuabilii, alții decât cei prevăzuți la art. 15 , care înregistrează în anul precedent o cifră de afaceri de peste 50.000.000 euro și care în anul de calcul determină un impozit pe profit, cumulat de la începutul anului fiscal/anului fiscal modificat până la sfârșitul trimestrului/anului de calcul, mai mic decât impozitul minim pe cifra de afaceri stabilit potrivit prevederilor alin. (3) , sunt obligați la plata impozitului pe profit la nivelul impozitului minim pe cifra de afaceri. Cursul de schimb pentru determinarea echivalentului în euro a cifrei de afaceri este cel valabil la închiderea exercițiului financiar în care s-au înregistrat veniturile. În sensul prezentului alineat, cifra de afaceri a anului precedent reprezintă diferența dintre veniturile totale (VT) și veniturile care se scad din veniturile totale (Vs), astfel cum sunt definite la alin. (3) .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art46^2/alin4",
+     "temei": "Codul fiscal (Legea 227/2015) art. 46^2 alin. (4)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 23.06,
+     "verbatim": "Impozitul specific pe cifra de afaceri se calculează cumulat de la începutul anului fiscal. Impozitul specific pe cifra de afaceri datorat trimestrial se determină ca diferență între impozitul specific pe cifra de afaceri calculat cumulat de la începutul anului fiscal și impozitul specific pe cifra de afaceri datorat pentru perioada anterioară celei de calcul.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2025-01-01",
+   "precizie_data": "an",
+   "data_din": "2025"
+  },
+  {
+   "id": "Q-SAL-01",
+   "tip": "PARAMETRU",
+   "intrebare": "Care este cota contribuției asiguratorii pentru muncă (CAM) datorată de angajator în 2026 și cine o suportă?",
+   "stare": "RASPUNS",
+   "raspuns": "26,3%",
+   "argument": [
+    {
+     "atom": "cf_2015_forma_initiala#art138~2",
+     "temei": "cf_2015_forma_initiala art. 138",
+     "act": "cf_2015_forma_initiala",
+     "scor": 24.87,
+     "verbatim": "Cotele de contribuții de asigurări sociale datorate bugetului asigurărilor sociale de stat Cotele de contribuții de asigurări sociale sunt următoarele: a) 26,3% pentru condiții normale de muncă, din care 10,5% pentru contribuția individuală și 15,8% pentru contribuția datorată de angajator; ... b) 31,3% pentru condiții deosebite de muncă, din care 10,5% pentru contribuția individuală și 20,8% pentru contribuția datorată de angajator; ... c) 36,3% pentru condiții speciale de muncă și pentru alte condiții de muncă astfel cum sunt prevăzute în Legea nr. 263/2010 privind sistemul unitar de pensii publice, cu modificările și completările ulterioare, din care 10,5% pentru contribuția individuală și 25,8% pentru contribuția datorată de angajator. ... + Secţiunea a 3-a Baza de calcul al contribuției de asigurări sociale datorate bugetului asigurărilor sociale de stat în cazul persoanelor care realizează venituri din salarii sau asimilate salariilor, precum și în cazul persoanelor pentru care plata unor prestații sociale se achită de instituții publice +",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "valoarea de forma cerută (procent) din atomul cel mai bine potrivit care o poarta",
+   "valori_in_atom": [
+    "26,3%",
+    "10,5%",
+    "15,8%",
+    "31,3%",
+    "10,5%",
+    "20,8%"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-SAL-02",
+   "tip": "PROCEDURA",
+   "intrebare": "Pentru salariile aferente lunii august 2026, ce declarație depune angajatorul și până când; până când se plătesc CAS și impozitul reținut?",
+   "stare": "RASPUNS",
+   "raspuns": "(2) , în calitate de angajatori sau de persoane asimilate angajatorului, depun trimestrial Declarația privind obligațiile de plată a contribuțiilor sociale, impozitului pe venit și evidența nominală a persoanelor asigurate aferentă fiecărei luni a trimestrului, până la data de 25 inclusiv a lunii următoare trimestrului.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art147~2/alin4",
+     "temei": "Codul fiscal (Legea 227/2015) art. 147 alin. (4)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 26.73,
+     "verbatim": "Prin excepție de la prevederile alin. (1) , plătitorii de venituri din salarii și asimilate salariilor prevăzuți la art. 80 alin. (2) , în calitate de angajatori sau de persoane asimilate angajatorului, depun trimestrial Declarația privind obligațiile de plată a contribuțiilor sociale, impozitului pe venit și evidența nominală a persoanelor asigurate aferentă fiecărei luni a trimestrului, până la data de 25 inclusiv a lunii următoare trimestrului.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art147~2/alin11",
+     "temei": "Codul fiscal (Legea 227/2015) art. 147 alin. (11)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 26.06,
+     "verbatim": "Ori de câte ori în cursul trimestrului persoanele fizice care realizează venituri din salarii sau asimilate salariilor beneficiază de concedii și indemnizații de asigurări sociale de sănătate sau le încetează calitatea de asigurat, plătitorii de venituri din salarii și asimilate salariilor prevăzuți la art. 80 alin. (2) , în calitate de angajatori ori de persoane asimilate angajatorului, depun declarația prevăzută la alin. (1) până la data de 25 inclusiv a lunii următoare celei în care a intervenit concediul medical sau încetarea calității de asigurat. În acest caz, declarația/declarațiile aferentă/aferente perioadei rămase din trimestru se depune/se depun până la data de 25 inclusiv a lunii următoare trimestrului. În cazul în care încetarea calității de asigurat are loc în luna a doua a trimestrului, se vor depune atât declarația pentru prima lună a trimestrului, cât și cea pentru luna a doua, urmând ca după încheierea trimestrului să se depună numai declarația pentru luna a treia.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art147~2/alin1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 147 alin. (1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 25.58,
+     "verbatim": "Persoanele fizice și juridice care au calitatea de angajatori sau sunt asimilate acestora, instituțiile prevăzute la art. 136 lit. d)-f) , precum și persoanele fizice care realizează în România venituri din salarii sau asimilate salariilor de la angajatori din state care nu intră sub incidența legislației europene aplicabile în domeniul securității sociale, precum și a acordurilor privind sistemele de securitate socială la care România este parte sunt obligate să depună lunar, până la data de 25 inclusiv a lunii următoare celei pentru care se plătesc veniturile, Declarația privind obligațiile de plată a contribuțiilor sociale, impozitului pe venit și evidența nominală a persoanelor asigurate.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "25 inclusiv"
+   ],
+   "data_referinta": "2026-08-01",
+   "precizie_data": "luna",
+   "data_din": "august 2026"
+  },
+  {
+   "id": "Q-SAL-03",
+   "tip": "CALCUL",
+   "intrebare": "Salariat cu normă întreagă la funcția de bază, septembrie 2026, salariu brut 10.000 lei, fără persoane în întreținere, fără copii școlarizați, peste 26 de ani, fără alte deduceri. Calculați CAS, CASS, impozit, net și CAM.",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "candidati": [
+    {
+     "atom": "oug_115_2023_consolidat#artLXXIII/alin1",
+     "temei": "OUG 115/2023 art. LXXIII alin. (1)",
+     "act": "oug_115_2023_consolidat",
+     "scor": 35.15,
+     "verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, începând cu data de 1 ianuarie 2024, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, nu se datorează impozit pe venit și nu se cuprinde în baza lunară de calcul al contribuțiilor sociale obligatorii suma de 200 lei/lună, reprezentând venituri din salarii și asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin hotărâre a Guvernului, în vigoare în luna căreia îi sunt aferente veniturile; ...",
+     "valabilitate": {
+      "valabil_din": "2024-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art146/alin5^6",
+     "temei": "Codul fiscal (Legea 227/2015) art. 146 alin. (5^6)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 34.66,
+     "verbatim": "Contribuția de asigurări sociale datorată de către persoanele fizice care obțin venituri din salarii sau asimilate salariilor, în baza unui contract individual de muncă cu normă întreagă sau cu timp parțial, calculată potrivit alin. (5) , nu poate fi mai mică decât nivelul contribuției de asigurări sociale calculate prin aplicarea cotei prevăzute la art. 138 lit. a) asupra salariului de bază minim brut pe țară în vigoare în luna pentru care se datorează contribuția de asigurări sociale, corespunzător numărului zilelor lucrătoare din lună în care contractul a fost activ. Notă ... Potrivit alin. (3) al art. LXV din ORDONANȚA DE URGENȚĂ nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 1334 din 31 decembrie 2024, prevederile art. LXIV pct. 7, 8 și 10-14 se aplică începând cu veniturile aferente lunii ianuarie 2025. Notă ... Reproducem mai jos prevederile art. LXVI din ORDONANȚA DE URGENȚĂ nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 1334 din 31 decembrie 2024, astfel cum a fost modificată prin RECTIFICAREA nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 12 din 10 ianuarie 2025: Articolul LXVI (1) Prin derogare de la prevederile ar",
+     "valabilitate": {
+      "valabil_din": "2025-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 77 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 31.1,
+     "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "data_referinta": "2026-09-01",
+   "precizie_data": "luna",
+   "data_din": "septembrie 2026"
+  },
+  {
+   "id": "Q-SAL-04",
+   "tip": "CALCUL",
+   "intrebare": "Septembrie 2026: salariat cu normă întreagă, funcția de bază, salariu de bază din CIM = 4.325 lei, plus spor de 200 lei, fără alte venituri. Se aplică facilitatea pentru salariul minim? Dacă da, care sunt baza și valoarea CAS și CASS (înainte de rotunjire)?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: intrebarea are 2 baze monetare; calculul cere compunerea mai multor reguli, pe care motorul nu o face",
+   "candidati": [
+    {
+     "atom": "oug_115_2023_consolidat#artLXXIII/alin1",
+     "temei": "OUG 115/2023 art. LXXIII alin. (1)",
+     "act": "oug_115_2023_consolidat",
+     "scor": 40.49,
+     "verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, începând cu data de 1 ianuarie 2024, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, nu se datorează impozit pe venit și nu se cuprinde în baza lunară de calcul al contribuțiilor sociale obligatorii suma de 200 lei/lună, reprezentând venituri din salarii și asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin hotărâre a Guvernului, în vigoare în luna căreia îi sunt aferente veniturile; ...",
+     "valabilitate": {
+      "valabil_din": "2024-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art168/alin6^1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 168 alin. (6^1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 35.08,
+     "verbatim": "Prevederile art. 146 alin. (5^6)-(5^9) se aplică în mod corespunzător. Notă ... Reproducem mai jos prevederile art. LXVI din ORDONANȚA DE URGENȚĂ nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 1334 din 31 decembrie 2024, astfel cum a fost modificată prin RECTIFICAREA nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 12 din 10 ianuarie 2025: Articolul LXVI (1) Prin derogare de la prevederile art. 78, art. 139 alin. (1), art. 140, art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015, cu modificările și completările ulterioare, începând cu data de 1 ianuarie 2025, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, nu se datorează impozit pe venit și nu se cuprinde în baza lunară de calcul al contribuțiilor sociale obligatorii suma de 300 lei/lună, reprezentând venituri din salarii și asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim ",
+     "valabilitate": {
+      "valabil_din": "2023-11-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "oug_89_2025#artIII~2/alin1",
+     "temei": "OUG 89/2025 art. III alin. (1)",
+     "act": "oug_89_2025",
+     "scor": 34.66,
+     "verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, pentru suma de 300 lei/lună din veniturile din salarii și asimilate salariilor aferente perioadei 1 ianuarie-30 iunie 2026, respectiv pentru suma de 200 lei/lună, din veniturile din salarii și asimilate salariilor aferente perioadei 1 iulie-31 decembrie 2026, nu se datorează impozit pe venit și contribuții sociale obligatorii dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin act normativ, în vigoare în luna căreia îi sunt aferente veniturile; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "data_referinta": "2026-09-01",
+   "precizie_data": "luna",
+   "data_din": "septembrie 2026"
+  },
+  {
+   "id": "Q-SAL-05",
+   "tip": "CAPCANA",
+   "intrebare": "Octombrie 2026: salariat cu normă întreagă, funcția de bază, salariu de bază = salariul minim 4.325 lei, fără sporuri, primește și tichete de masă de 800 lei. Total 5.125 lei depășește 4.600 lei — pierde facilitatea de 200 lei?",
+   "stare": "RASPUNS",
+   "raspuns": "227/2015 , cu modificările și completările ulterioare, începând cu data de 1 ianuarie 2024, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, nu se datorează impozit pe venit și nu se cuprinde în baza lunară de calcul al contribuțiilor sociale obligatorii suma de 200 lei/lună, reprezentând venituri din salarii și asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin hotărâre a Guvernului, în vigoare în luna căreia îi sunt aferente veniturile;",
+   "argument": [
+    {
+     "atom": "oug_115_2023_consolidat#artLXXIII/alin1",
+     "temei": "OUG 115/2023 art. LXXIII alin. (1)",
+     "act": "oug_115_2023_consolidat",
+     "scor": 35.49,
+     "verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, începând cu data de 1 ianuarie 2024, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, nu se datorează impozit pe venit și nu se cuprinde în baza lunară de calcul al contribuțiilor sociale obligatorii suma de 200 lei/lună, reprezentând venituri din salarii și asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin hotărâre a Guvernului, în vigoare în luna căreia îi sunt aferente veniturile; ...",
+     "valabilitate": {
+      "valabil_din": "2024-01-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art168/alin6^1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 168 alin. (6^1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 30.66,
+     "verbatim": "Prevederile art. 146 alin. (5^6)-(5^9) se aplică în mod corespunzător. Notă ... Reproducem mai jos prevederile art. LXVI din ORDONANȚA DE URGENȚĂ nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 1334 din 31 decembrie 2024, astfel cum a fost modificată prin RECTIFICAREA nr. 156 din 30 decembrie 2024, publicată în MONITORUL OFICIAL nr. 12 din 10 ianuarie 2025: Articolul LXVI (1) Prin derogare de la prevederile art. 78, art. 139 alin. (1), art. 140, art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015, cu modificările și completările ulterioare, începând cu data de 1 ianuarie 2025, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, nu se datorează impozit pe venit și nu se cuprinde în baza lunară de calcul al contribuțiilor sociale obligatorii suma de 300 lei/lună, reprezentând venituri din salarii și asimilate salariilor, dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim ",
+     "valabilitate": {
+      "valabil_din": "2023-11-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "opanaf_299_2025#art8/alin2/pct1/pct1/pct1/pct1/pct1/pct1/pct1/pct1",
+     "temei": "OPANAF 299/2025 art. 8 alin. (2) pct. 1 pct. 1 pct. 1 pct. 1 pct. 1 pct. 1 pct. 1 pct. 1",
+     "act": "opanaf_299_2025",
+     "scor": 30.19,
+     "verbatim": "11.2 Salariat care desfăşoară activitate în baza unui contract individual de      Da         Da         Da muncă cu normă întreagă/raport de serviciu, după caz, beneficiar al măsurii \"300 de lei din salariul minim, sumă netaxabilă\" prevăzută de art. LXVI din O.U.G. nr. 156/2024",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "200 lei"
+   ],
+   "data_referinta": "2026-10-01",
+   "precizie_data": "luna",
+   "data_din": "octombrie 2026"
+  },
+  {
+   "id": "Q-SAL-06",
+   "tip": "CAPCANA",
+   "intrebare": "Septembrie 2026: salariat cu CIM cu timp parțial 4 h/zi, singurul contract, nu e elev/student, ucenic, persoană cu dizabilități sau pensionar, salariu brut 2.162,50 lei, contract activ toată luna. Cât este CAS datorat? (înainte de rotunjire)",
+   "stare": "RASPUNS",
+   "raspuns": "ucenicii, elevii şi studenţii, pe toată durata efectuării practicii profesionale.",
+   "argument": [
+    {
+     "atom": "legea_346_2002_consolidat#art5/alin1/litd",
+     "temei": "Legea 346/2002 art. 5 alin. (1) lit. d)",
+     "act": "legea_346_2002_consolidat",
+     "scor": 40.98,
+     "verbatim": "ucenicii, elevii şi studenţii, pe toată durata efectuării practicii profesionale. ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "omf_1855_2022#art5",
+     "temei": "OMF 1855/2022 art. 5",
+     "act": "omf_1855_2022",
+     "scor": 35.21,
+     "verbatim": "Exemple privind aplicarea prevederilor art. 146 alin. (5^7) lit. e) şi art. 168 alin. (6^1) din Codul fiscal: Exemplul 1 O persoană fizică încheie un contract individual de muncă cu normă întreagă cu societatea A şi un contract cu timp parţial cu societatea B. Contractele sunt active toată luna. Pentru activitatea desfăşurată la angajatorul A, persoana fizică realizează un venit brut lunar de 2.550 lei, iar la angajatorul B, un venit brut lunar de 400 lei. Baza lunară de calcul cumulată, determinată potrivit regulilor specifice fiecărei contribuţii, este de 2.950 lei (2.550 lei + 400 lei), iar nivelul salariului minim brut pe ţară garantat în plată este de 2.550 lei. Prin compararea bazei lunare de calcul cumulate, în valoare de 2.950 lei, cu nivelul salariului minim brut pe ţară garantat în plată de 2.550 lei rezultă că baza lunară de calcul cumulată din cele două contracte individuale de muncă este mai mare decât salariul minim brut pe ţară garantat în plată. În acest caz, persoana fizică depune declaraţia pe propria răspundere numai la angajatorul B, întrucât la angajatorul A baza lunară de calcul al contribuţiilor datorate de acesta este egală cu salariul minim brut pe ţară gar",
+     "valabilitate": {
+      "valabil_din": "2022-09-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "legea_346_2002_consolidat#art9/alin2",
+     "temei": "Legea 346/2002 art. 9 alin. (2)",
+     "act": "legea_346_2002_consolidat",
+     "scor": 30.55,
+     "verbatim": "Calitatea de asigurat se dobândeşte, iar raporturile de asigurare se stabilesc la data: încheierii contractului individual de muncă, stabilirii raporturilor de serviciu în cazul funcţionarilor publici, validării mandatului pentru persoanele care desfăşoară activităţi în funcţii elective, numirii în cadrul autorităţii executive, legislative ori judecătoreşti, depunerii adeziunii în cazul membrilor cooperatori, începerii practicii profesionale pentru şomeri, ucenici, elevi şi studenţi sau încheierii contractului individual de asigurare, după caz. ... +",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-09-01",
+   "precizie_data": "luna",
+   "data_din": "septembrie 2026"
+  },
+  {
+   "id": "Q-SAL-07",
+   "tip": "REGULA",
+   "intrebare": "Salariat cu stagiu minim îndeplinit primește certificat de concediu medical pentru boală obișnuită (cod 01), eliberat pentru 10 zile, în 2026. Ce procent din baza de calcul și cine suportă indemnizația?",
+   "stare": "RASPUNS",
+   "raspuns": "2    Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 55% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă de până la 7 zile de incapacitate temporară de muncă.",
+   "argument": [
+    {
+     "atom": "opanaf_605_2026_d112#art8/alin31/pct1/pct1",
+     "temei": "OPANAF 605/2026 art. 8 alin. (31) pct. 1 pct. 1",
+     "act": "opanaf_605_2026_d112",
+     "scor": 62.1,
+     "verbatim": "2    Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 55% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă de până la 7 zile de incapacitate temporară de muncă.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "opanaf_605_2026_d112#art8/alin31/pct1/pct1/pct1/pct1/pct2/pct5/pct1/pct1",
+     "temei": "OPANAF 605/2026 art. 8 alin. (31) pct. 1 pct. 1 pct. 1 pct. 1 pct. 2 pct. 5 pct. 1 pct. 1",
+     "act": "opanaf_605_2026_d112",
+     "scor": 62.1,
+     "verbatim": "2 Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 55% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă de până la 7 zile de incapacitate temporară de muncă.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "opanaf_605_2026_d112#art8/alin31/pct1/pct1/pct1",
+     "temei": "OPANAF 605/2026 art. 8 alin. (31) pct. 1 pct. 1 pct. 1",
+     "act": "opanaf_605_2026_d112",
+     "scor": 61.55,
+     "verbatim": "3    Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 65% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă cuprinsă între 8 şi 14 zile de incapacitate temporară de muncă.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "7 zile",
+    "55%"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-SAL-08",
+   "tip": "CAPCANA",
+   "intrebare": "Boală obișnuită (cod 01): certificat inițial 28–30.09.2026 (3 zile), prelungit fără întrerupere 01–07.10.2026 (7 zile). Septembrie a fost plătit cu 55%. Ce procent se aplică și cum se tratează luna septembrie?",
+   "stare": "RASPUNS",
+   "raspuns": "2    Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 55% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă de până la 7 zile de incapacitate temporară de muncă.",
+   "argument": [
+    {
+     "atom": "opanaf_605_2026_d112#art8/alin31/pct1/pct1",
+     "temei": "OPANAF 605/2026 art. 8 alin. (31) pct. 1 pct. 1",
+     "act": "opanaf_605_2026_d112",
+     "scor": 34.01,
+     "verbatim": "2    Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 55% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă de până la 7 zile de incapacitate temporară de muncă.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "opanaf_605_2026_d112#art8/alin31/pct1/pct1/pct1/pct1/pct2/pct5/pct1/pct1",
+     "temei": "OPANAF 605/2026 art. 8 alin. (31) pct. 1 pct. 1 pct. 1 pct. 1 pct. 2 pct. 5 pct. 1 pct. 1",
+     "act": "opanaf_605_2026_d112",
+     "scor": 34.01,
+     "verbatim": "2 Incapacitate temporară de muncă, cauzată de boli obişnuite sau de accidente în afara muncii (cod indemnizaţie 01-Boală obişnuită) prin aplicarea procentului de 55% asupra bazei de calcul pentru certificatele de concediu medical eliberate pentru o perioadă de până la 7 zile de incapacitate temporară de muncă.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "oms_15_2018_modificare_2025#artI",
+     "temei": "OMS 15/2018 art. I",
+     "act": "oms_15_2018_modificare_2025",
+     "scor": 33.9,
+     "verbatim": "După articolul 30 din Normele de aplicare a prevederilor Ordonanței de urgență a Guvernului nr. 158/2005 privind concediile și indemnizațiile de asigurări sociale de sănătate, aprobate prin Ordinul ministrului sănătății și al președintelui Casei Naționale de Asigurări de Sănătate nr. 15/2018/1.311/2017, publicat în Monitorul Oficial al României, Partea I, nr. 31 din 12 ianuarie 2018, cu modificările și completările ulterioare, se introduce un nou articol, articolul 30^1, cu următorul cuprins: ”Art. 30 - În aplicarea articolului 17 din Ordonanța de urgență a Guvernului nr. 158/2005, aprobată cu modificări și completări prin Legea nr. 399/2006, cu modificările și completările ulterioare, cuantumul brut lunar al indemnizației pentru incapacitate temporară de muncă cauzată de boli obișnuite sau de accidente în afara muncii se determină raportat la fiecare episod de boală și în funcție de totalul zilelor de concediu medical acordate pentru fiecare episod de boală. Exemplu: pe parcursul unui episod de boală este acordat un certificat de concediu medical inițial urmat, după caz, de unul sau mai multe certificate de concediu medical în continuare, acestea putând fi acordate în aceeași lună",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "7 zile",
+    "55%"
+   ],
+   "data_referinta": "2026-09-30",
+   "precizie_data": "zi",
+   "data_din": "30.09.2026"
+  },
+  {
+   "id": "Q-SAL-09",
+   "tip": "INCOMPLETA",
+   "intrebare": "Cât este deducerea personală pentru un salariat cu venit brut de 5.000 lei în septembrie 2026?",
+   "stare": "RASPUNS",
+   "raspuns": "Venitul net anual din închirierea pe termen scurt a camerelor situate în locuințe proprietate personală se determină prin deducerea din venitul brut a cheltuielilor determinate prin aplicarea cotei forfetare de 30% asupra venitului brut.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art85/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 85 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 21.18,
+     "verbatim": "Venitul net anual din închirierea pe termen scurt a camerelor situate în locuințe proprietate personală se determină prin deducerea din venitul brut a cheltuielilor determinate prin aplicarea cotei forfetare de 30% asupra venitului brut. Venitul brut reprezintă totalitatea sumelor în bani și/sau echivalentul în lei al veniturilor în natură încasate în cursul anului fiscal.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cf_2015_forma_initiala#art77/alin2",
+     "temei": "cf_2015_forma_initiala art. 77 alin. (2)",
+     "act": "cf_2015_forma_initiala",
+     "scor": 19.71,
+     "verbatim": "Deducerea personală se acordă pentru persoanele fizice care au un venit lunar brut de până la 1.500 lei inclusiv, astfel: (i) pentru contribuabilii care nu au persoane în întreținere - 300 lei; ... (ii) pentru contribuabilii care au o persoană în întreținere - 400 lei; ... (iii) pentru contribuabilii care au două persoane în întreținere - 500 lei; ... (iv) pentru contribuabilii care au trei persoane în întreținere - 600 lei; ... (v) pentru contribuabilii care au patru sau mai multe persoane în întreținere - 800 lei. ... Pentru contribuabilii care realizează venituri brute lunare din salarii cuprinse între 1.501 lei și 3.000 lei, inclusiv, deducerile personale sunt degresive față de cele de mai sus și se stabilesc prin ordin al ministrului finanțelor publice. Pentru contribuabilii care realizează venituri brute lunare din salarii de peste 3.000 lei nu se acordă deducerea personală.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 77 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 19.53,
+     "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "30%"
+   ],
+   "data_referinta": "2026-09-01",
+   "precizie_data": "luna",
+   "data_din": "septembrie 2026"
+  },
+  {
+   "id": "Q-SAL-10",
+   "tip": "REGULA",
+   "intrebare": "Un salariat a prestat ore suplimentare în septembrie 2026. În ce termen trebuie compensate prin ore libere plătite și, dacă nu este posibil, care este sporul minim?",
+   "stare": "RASPUNS",
+   "raspuns": "Plata majorării se efectuează în cazul în care compensarea prin ore libere plătite nu este posibilă în următoarele 60 de zile după prestarea muncii suplimentare.",
+   "argument": [
+    {
+     "atom": "oug_115_2023_consolidat#artIII/alin3",
+     "temei": "OUG 115/2023 art. III alin. (3)",
+     "act": "oug_115_2023_consolidat",
+     "scor": 29.6,
+     "verbatim": "Prin excepție de la prevederile alin. (1) , munca suplimentară prestată în anul 2024 peste programul normal de lucru de către personalul cu statut special care are atribuții pentru desfășurarea activităților deosebite cu caracter operativ sau neprevăzut în domeniul ordinii și siguranței publice, în respectarea regimului frontierei de stat a României, în situații de urgență, în personalizarea, emiterea și evidența generală a documentelor de identitate și a pașapoartelor simple, în emiterea și evidența permiselor de conducere și a certificatelor de înmatriculare ale autovehiculelor rutiere, precum și de către polițiștii de penitenciare, care nu se poate compensa cu timp liber corespunzător, se plătește cu o majorare de 70% din solda de funcție/salariul de funcție cuvenită/cuvenit, proporțional cu timpul efectiv lucrat în aceste condiții. Plata majorării se efectuează în cazul în care compensarea prin ore libere plătite nu este posibilă în următoarele 60 de zile după prestarea muncii suplimentare.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_141_2025_consolidat#artXVIII/alin7",
+     "temei": "Legea 141/2025 art. XVIII alin. (7)",
+     "act": "legea_141_2025_consolidat",
+     "scor": 27.98,
+     "verbatim": "Ordonatorii de credite au obligația de a dispune măsuri pentru asigurarea cu prioritate a timpului liber corespunzător muncii suplimentare prestate, în condițiile legii, fără afectarea gradului de eficiență a misiunilor. În cazul prestării muncii suplimentare, plata drepturilor prevăzute la alin. (2) se efectuează cu aprobarea ordonatorului ierarhic superior, pe baza unui raport justificativ al ordonatorului de credite sau, după caz, al comandantului/șefului unității la nivelul căreia s-a prestat munca suplimentară, în care sunt prezentate motivele pentru care nu a fost posibilă acordarea timpului liber corespunzător.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_141_2025_consolidat#artXVIII/alin2",
+     "temei": "Legea 141/2025 art. XVIII alin. (2)",
+     "act": "legea_141_2025_consolidat",
+     "scor": 26.98,
+     "verbatim": "Prin excepție de la prevederile alin. (1) , în anul 2026, pentru activitatea desfășurată de personalul militar, polițiștii și polițiștii de penitenciare din instituțiile publice de apărare, ordine publică și securitate națională în zilele de repaus săptămânal, de sărbători legale și în celelalte zile în care, în conformitate cu reglementările în vigoare, nu se lucrează, precum și pentru munca suplimentară, care nu se poate compensa cu timp liber corespunzător, prestată peste programul normal de lucru de către aceste categorii de personal în cadrul activităților deosebite cu caracter operativ sau neprevăzut în domeniul ordinii și siguranței publice, în respectarea regimului frontierei de stat a României ori în situații de urgență, se acordă drepturile prevăzute de legislația în vigoare în luna decembrie 2025. Plata drepturilor pentru munca suplimentară prestată în cadrul activităților deosebite cu caracter operativ sau neprevăzut se efectuează dacă munca astfel prestată nu a fost compensată cu timp liber corespunzător în termen de 90 de zile de la momentul prestării acesteia.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "60 de zile",
+    "70%"
+   ],
+   "data_referinta": "2026-09-01",
+   "precizie_data": "luna",
+   "data_din": "septembrie 2026"
+  },
+  {
+   "id": "Q-CPF-01",
+   "tip": "PARAMETRU",
+   "intrebare": "Care sunt, în 2026, nivelurile dobânzii și penalității de întârziere pentru obligațiile fiscale principale datorate bugetului de stat (organ fiscal central) neachitate la scadență?",
+   "stare": "RASPUNS",
+   "raspuns": "1%",
+   "argument": [
+    {
+     "atom": "legea_207_2015_consolidat#art183/alin2",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 183 alin. (2)",
+     "act": "legea_207_2015_consolidat",
+     "scor": 45.08,
+     "verbatim": "Nivelul majorării de întârziere este de 1% din cuantumul obligațiilor fiscale principale neachitate în termen, calculată pentru fiecare lună sau fracțiune de lună, începând cu ziua imediat următoare termenului de scadență și până la data stingerii sumei datorate, inclusiv.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "valoarea de forma cerută (procent) din atomul cel mai bine potrivit care o poarta",
+   "valori_in_atom": [
+    "1%"
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-CPF-02",
+   "tip": "CALCUL",
+   "intrebare": "O SRL avea TVA de plată 10.000 lei cu scadența 25.03.2026 și a plătit integral pe 24.04.2026. Ce accesorii datorează (dobânzi și penalități de întârziere)?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "candidati": [
+    {
+     "atom": "legea_207_2015_consolidat#art173/alin1",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 173 alin. (1)",
+     "act": "legea_207_2015_consolidat",
+     "scor": 39.05,
+     "verbatim": "Pentru neachitarea la termenul de scadență de către debitor a obligațiilor fiscale principale, se datorează după acest termen dobânzi și penalități de întârziere.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art179",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 179",
+     "act": "legea_207_2015_consolidat",
+     "scor": 32.33,
+     "verbatim": "Dobânzi și penalități de întârziere în cazul deschiderii procedurii insolvenței Pentru creanțele fiscale datorate de debitorii cărora li s-a deschis procedura insolvenței se calculează și datorează dobânzi și penalități de întârziere, potrivit legii care reglementează această procedură.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art173/alin2",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 173 alin. (2)",
+     "act": "legea_207_2015_consolidat",
+     "scor": 31.85,
+     "verbatim": "Nu se datorează dobânzi și penalități de întârziere pentru sumele datorate cu titlu de amenzi de orice fel, obligații fiscale accesorii stabilite potrivit legii, cheltuieli de executare silită, cheltuieli judiciare, sumele confiscate, precum și sumele reprezentând echivalentul în lei al bunurilor și sumelor confiscate care nu sunt găsite la locul faptei.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "data_referinta": "2026-03-25",
+   "precizie_data": "zi",
+   "data_din": "25.03.2026"
+  },
+  {
+   "id": "Q-CPF-03",
+   "tip": "CALCUL",
+   "intrebare": "La inspecție s-a stabilit prin decizie de impunere o diferență de TVA nedeclarată de 20.000 lei, cu scadența inițială 25.07.2025. Decizia e comunicată pe 10.03.2026, iar firma plătește diferența pe 03.04.2026. Ce accesorii datorează?",
+   "stare": "RASPUNS",
+   "raspuns": "20.000 lei x 0,08% = 16,00 lei",
+   "argument": [
+    {
+     "atom": "legea_207_2015_consolidat#art181/alin1",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 181 alin. (1)",
+     "act": "legea_207_2015_consolidat",
+     "scor": 35.37,
+     "verbatim": "Pentru obligațiile fiscale principale nedeclarate sau declarate incorect de contribuabil/plătitor și stabilite de organul fiscal prin decizii de impunere, contribuabilul/plătitorul datorează o penalitate de nedeclarare de 0,08% pe fiecare zi, începând cu ziua imediat următoare scadenței și până la data stingerii sumei datorate, inclusiv, din obligațiile fiscale principale nedeclarate sau declarate incorect de contribuabil/plătitor și stabilite de organul fiscal prin decizii de impunere.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "R-CALC: o baza, o cota; baza x cota",
+   "calcul": {
+    "baza": 20000.0,
+    "cota": 0.08,
+    "rezultat": 16.0
+   },
+   "data_referinta": "2025-07-25",
+   "precizie_data": "zi",
+   "data_din": "25.07.2025"
+  },
+  {
+   "id": "Q-CPF-04",
+   "tip": "REGULA",
+   "intrebare": "Pentru impozitele aferente anului 2021, de când curge și cât durează termenul de prescripție a dreptului ANAF de a stabili creanțe fiscale?",
+   "stare": "RASPUNS",
+   "raspuns": "Efectul împlinirii termenului de prescripție a dreptului de a stabili creanțe fiscale Dacă organul fiscal constată împlinirea termenului de prescripție a dreptului de stabilire a creanței fiscale, procedează la încetarea procedurii de emitere a titlului de creanță fiscală.",
+   "argument": [
+    {
+     "atom": "legea_207_2015_consolidat#art112",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 112",
+     "act": "legea_207_2015_consolidat",
+     "scor": 36.01,
+     "verbatim": "Efectul împlinirii termenului de prescripție a dreptului de a stabili creanțe fiscale Dacă organul fiscal constată împlinirea termenului de prescripție a dreptului de stabilire a creanței fiscale, procedează la încetarea procedurii de emitere a titlului de creanță fiscală.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art109",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 109",
+     "act": "legea_207_2015_consolidat",
+     "scor": 35.2,
+     "verbatim": "Reguli pentru conducerea evidențelor contabile și fiscale ART. 110 Obiectul, termenul și momentul de la care începe să curgă termenul de prescripție a dreptului de stabilire a creanțelor fiscale",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_207_2015_consolidat#art111",
+     "temei": "Codul de procedură fiscală (Legea 207/2015) art. 111",
+     "act": "legea_207_2015_consolidat",
+     "scor": 34.82,
+     "verbatim": "Întreruperea și suspendarea termenului de prescripție a dreptului de a stabili creanțe fiscale",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2021-01-01",
+   "precizie_data": "an",
+   "data_din": "2021"
+  },
+  {
+   "id": "Q-CPF-05",
+   "tip": "PARAMETRU",
+   "intrebare": "În ce termen se poate depune contestația împotriva unei decizii de impunere emise de ANAF și ce se întâmplă dacă decizia nu menționează calea de atac?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  },
+  {
+   "id": "Q-CPF-06",
+   "tip": "PROCEDURA",
+   "intrebare": "O firmă a depus decont de TVA cu opțiune de rambursare. În ce termen trebuie ANAF să soluționeze cererea, și dacă analiza de risc impune inspecție fiscală anticipată?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  },
+  {
+   "id": "Q-CPF-07",
+   "tip": "REGULA",
+   "intrebare": "Care este durata maximă a unei inspecții fiscale la o microîntreprindere fără sedii secundare (nici contribuabil mijlociu/mare) și ce se întâmplă dacă inspecția depășește acest termen?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  },
+  {
+   "id": "Q-CPF-08",
+   "tip": "CAPCANA",
+   "intrebare": "ANAF constată în 2026 că o SRL a depus cu întârziere D100 în martie 2024 și vrea să aplice amendă. Nu s-a prescris aplicarea amenzii, având în vedere termenul de 6 luni din OG 2/2001?",
+   "stare": "RASPUNS",
+   "raspuns": "15 zile lucrătoare, cu amendă de la 2.000 lei la 4.000 lei, dacă cea referitoare la depunerea în termenul legal, cu       perioada de întârziere este cuprinsă între 16 și 30 de zile amendă de la 300 lei la 1.000 lei, dacă perioada de      lucrătoare, și cu amendă de la 3.000 lei la 5.000 lei, dacă întârziere este cuprinsă între 1 şi 15 zile lucrătoare, cu perioada de întârziere depășește 30 de zile lucrătoare;",
+   "argument": [
+    {
+     "atom": "legea_82_1991_modif_oug115_2023#frag4",
+     "temei": "Legea 82/1991 ",
+     "act": "legea_82_1991_modif_oug115_2023",
+     "scor": 19.56,
+     "verbatim": "Page 1 of 2 lei la 200 lei;                                          20.000 lei; e) cea prevăzută la pct. 3, cu amendă de la 200 lei la   e) cele prevăzute la pct. 2 lit. e), astfel: 1.000 lei;                                                 cele referitoare la întocmire și semnare, cu amendă de la f) cele prevăzute la pct. 2 lit. d), pct. 4 şi 5, cu amendă 2.000 lei la 3.000 lei; de la 400 lei la 5.000 lei;                              cea referitoare la depunerea în termenul legal, cu amendă de g) cea prevăzută la pct. 6, cu amendă de la 10.000 lei   la 300 lei la 1.000 lei, dacă perioada de întârziere este la 30.000 lei;                                           cuprinsă între 1 și 15 zile lucrătoare, cu amendă de la 1.000 h) cea prevăzută la pct. 7, cu amendă de la 30.000 lei   lei la 3.000 lei, dacă perioada de întârziere este cuprinsă între la 40.000 lei;                                           16 și 30 de zile lucrătoare, și cu amendă de la 1.500 lei la i) cea prevăzută la pct. 8, cu amendă de la 2.000 lei la 4.500 lei, dacă perioada de întârziere depășește 30 de zile 5.000 lei;                                               lucrătoare; j) cele prevăzute la pct. 2 lit. e), ",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "og_2_2001#art51/alin4~5",
+     "temei": "OG 2/2001 art. 51 alin. (4)",
+     "act": "og_2_2001",
+     "scor": 19.37,
+     "verbatim": "Împotriva actelor de executare se poate face contestație la executare, în condițiile legii. + Articolul 39^1 (1) În cazul în care contravenientul nu a achitat amenda în termen de 30 de zile de la rămânerea definitivă a sancțiunii și nu există posibilitatea executării silite, acesta va sesiza instanța în circumscripția căreia s-a săvârșit contravenția, în vederea înlocuirii amenzii cu sancțiunea prestării unei activități în folosul comunității, ținându-se seama, după caz, și de partea din amendă care a fost achitată. (2) În cazul în care contravenientul, citat de instanță, nu a achitat amenda în termenul prevăzut la alin. (1) , instanța procedează la înlocuirea amenzii cu sancțiunea prestării unei activități în folosul comunității pe o durată maximă de 50 de ore, iar pentru minori începând cu vârsta de 16 ani, de 25 de ore.",
+     "valabilitate": {
+      "valabil_din": "2009-10-04",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "oug_115_2023_consolidat#artLXXVI",
+     "temei": "OUG 115/2023 art. LXXVI",
+     "act": "oug_115_2023_consolidat",
+     "scor": 19.03,
+     "verbatim": "Legea contabilității nr. 82/1991, republicată în Monitorul Oficial al României, Partea I, nr. 454 din 18 iunie 2008, cu modificările și completările ulterioare se modifică și se completează după cum urmează: 1. La articolul 34, după alineatul (3) se introduce un nou alineat, alin. (3^1), cu următorul cuprins: (3^1) Persoanele juridice fără scop patrimonial care, în exercițiul financiar de raportare, au primit sume reprezentând subvenții, sponsorizări, sume redirecționate, conform legii, din impozitul pe profit, impozitul pe venitul microîntreprinderilor, respectiv din impozitul pe venitul datorat de persoanele fizice, precum și alte forme similare de finanțare, indiferent de valoarea cumulată a acestora, întocmesc o declarație care însoțește situațiile financiare anuale și evidențiază sumele astfel primite, respectiv utilizate. ... 2. La articolul 41, după punctul 4 se introduce un nou punct, pct. 4^1, cu următorul cuprins: 4^1. nerespectarea prevederilor referitoare la întocmirea declarației prevăzute la art. 34 alin. (3^1); ... ... 3. La articolul 42, alineatul (1) se modifică și va avea următorul cuprins: (1) Contravențiile prevăzute la art. 41 se sancționează cu amendă după cum",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "15 zile",
+    "30 de zile",
+    "30 de zile",
+    "15 zile",
+    "30 de zile",
+    "15 zile",
+    "30 de zile",
+    "30 de zile"
+   ],
+   "data_referinta": "2024-03-01",
+   "precizie_data": "luna",
+   "data_din": "martie 2024"
+  },
+  {
+   "id": "Q-CPF-09",
+   "tip": "CAPCANA",
+   "intrebare": "O firmă a plătit cu 60 de zile întârziere o amendă contravențională de 2.000 lei aplicată de ANAF. Cât datorează ca dobânzi și penalități de întârziere pentru această întârziere?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  },
+  {
+   "id": "Q-CPF-10",
+   "tip": "INCOMPLETA",
+   "intrebare": "Ce amendă riscă o firmă care a depus D300 cu întârziere?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  },
+  {
+   "id": "Q-CTB-01",
+   "tip": "PARAMETRU",
+   "intrebare": "Care este valoarea fiscală minimă de intrare de la care o imobilizare corporală este mijloc fix amortizabil în anul fiscal 2026?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "niciunul din primii 5 atomi nu poarta o valoare de forma cerută (suma)",
+   "candidati": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin2",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (2)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 37.88,
+     "verbatim": "Mijlocul fix amortizabil este orice imobilizare corporală care îndeplinește cumulativ următoarele condiții: a) este deținut și utilizat în producția, livrarea de bunuri sau în prestarea de servicii, pentru a fi închiriat terților sau în scopuri administrative; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin6",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (6)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 36.88,
+     "verbatim": "În cazul metodei de amortizare liniară, amortizarea se stabilește prin aplicarea cotei de amortizare liniară la valoarea fiscală de la data intrării în patrimoniul contribuabilului a mijlocului fix amortizabil.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cf_2015_forma_initiala#art28/alin2",
+     "temei": "cf_2015_forma_initiala art. 28 alin. (2)",
+     "act": "cf_2015_forma_initiala",
+     "scor": 32.94,
+     "verbatim": "Mijlocul fix amortizabil este orice imobilizare corporală care îndeplinește cumulativ următoarele condiții: a) este deținut și utilizat în producția, livrarea de bunuri sau în prestarea de servicii, pentru a fi închiriat terților sau în scopuri administrative; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-CTB-02",
+   "tip": "CAPCANA",
+   "intrebare": "O societate are un echipament cu valoare fiscală de intrare de 3.200 lei, intrat în 2024 și amortizat parțial la 31.12.2025. Din 2026 pragul e 5.000 lei: se trece valoarea rămasă integral pe cheltuieli deductibile în 2026?",
+   "stare": "RASPUNS",
+   "raspuns": "În cazul în care, potrivit reglementărilor contabile aplicabile, se înlocuiesc părți componente ale mijloacelor fixe amortizabile/imobilizărilor necorporale cu valoare fiscală rămasă neamortizată, cheltuielile reprezentând valoarea fiscală rămasă neamortizată aferentă părților înlocuite reprezintă cheltuieli deductibile la calculul profitului impozabil.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin18",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (18)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 26.43,
+     "verbatim": "În cazul în care, potrivit reglementărilor contabile aplicabile, se înlocuiesc părți componente ale mijloacelor fixe amortizabile/imobilizărilor necorporale cu valoare fiscală rămasă neamortizată, cheltuielile reprezentând valoarea fiscală rămasă neamortizată aferentă părților înlocuite reprezintă cheltuieli deductibile la calculul profitului impozabil. Valoarea fiscală rămasă neamortizată a mijloacelor fixe amortizabile/imobilizărilor necorporale se recalculează în mod corespunzător, prin diminuarea acesteia cu valoarea fiscală rămasă neamortizată aferentă părților înlocuite și majorarea cu valoarea fiscală aferentă părților noi înlocuite, și se amortizează pe durata normală de utilizare rămasă.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale#art18",
+     "temei": "Legea 15/1994 art. 18",
+     "act": "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale",
+     "scor": 24.18,
+     "verbatim": "Agenții economici amortizează mijloacele fixe potrivit prevederilor prezentei legi, utilizând unul dintre următoarele regimuri de amortizare: A. Amortizarea liniara - se realizează prin includerea uniforma în cheltuielile de exploatare a unor sume fixe, stabilite proporțional cu numărul de ani ai duratei normale de utilizare a mijlocului fix. ... Amortizarea liniara se calculează prin aplicarea cotei anuale de amortizare la valoarea de intrare a mijloacelor fixe. B. Amortizarea degresiva - consta în multiplicarea cotelor de amortizare liniara cu unul dintre coeficienții următori: ... a) 1,5, dacă durata normală de utilizare a mijlocului fix de amortizat este între 2 și 5 ani; ... b) 2,0, dacă durata normală de utilizare a mijlocului fix de amortizat este între 5 și 10 ani; ... c) 2,5, dacă durata normală de utilizare a mijlocului fix de amortizat este mai mare de 10 ani. ... Acești coeficienți pot fi modificati numai prin hotărâre a Guvernului, la propunerea Ministerului Finanțelor. C. Amortizarea accelerata - consta în includerea, în primul an de funcționare, în cheltuielile de exploatare a unei amortizări de până la 50% din valoarea de intrare a mijlocului fix respectiv. ... Amor",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "omfp_1802_2014#art12/alin3~51",
+     "temei": "OMFP 1802/2014 art. 12 alin. (3)",
+     "act": "omfp_1802_2014",
+     "scor": 23.7,
+     "verbatim": "Atunci când pentru fondul comercial au fost constituite ajustări pentru depreciere potrivit pct. 142, cheltuiala cu amortizarea aferentă acestuia trebuie ajustată ulterior pentru a aloca valoarea contabilă astfel rezultată, pe o bază sistematică pe parcursul duratei rămase din perioada de amortizare stabilită pentru acel activ. 184. ‐ În situația în care cheltuielile de dezvoltare nu au fost integral amortizate, nu se face nicio distribuire din profituri, cu excepția cazului în care suma rezervelor disponibile pentru distribuire şi a profitului reportat este cel puțin egală cu cea a cheltuielilor neamortizate. 185. ‐ (1) O entitate poate include cheltuielile de constituire la \"Active\", caz în care poate imobiliza cheltuielile de constituire. În această situație, cheltuielile de constituire trebuie amortizate în cadrul unei perioade de maximum 5 ani.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2025-12-31",
+   "precizie_data": "zi",
+   "data_din": "31.12.2025"
+  },
+  {
+   "id": "Q-CTB-03",
+   "tip": "CALCUL",
+   "intrebare": "Un utilaj nou din subgrupa 2.1 (echipamente tehnologice), valoare fiscală 100.000 lei, achiziționat și pus în funcțiune în aprilie 2026. Contribuabilul aplică metoda superaccelerată. Care este amortizarea fiscală maximă în primul an de utilizare?",
+   "stare": "RASPUNS",
+   "raspuns": "100.000 lei x 65% = 65000,00 lei",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin8^1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (8^1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 83.31,
+     "verbatim": "Prin excepție de la prevederile alin. (5) și (8) , pentru activele noi, achiziționate/produse și puse în funcțiune, în perioada cuprinsă între 1 ianuarie 2026-31 decembrie 2026 inclusiv, respectiv în anul fiscal modificat care începe în anul 2026, după caz, din subgrupa 2.1 - Echipamente tehnologice, respectiv mașini, unelte și instalații de lucru și/sau subgrupa 2.4 - «Animale și plantații» se poate aplica o metodă de amortizare superaccelerată potrivit căreia amortizarea se calculează după cum urmează: a) pentru primul an de utilizare, amortizarea nu poate depăși 65% din valoarea fiscală de la data intrării în patrimoniul contribuabilului a activului; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "R-CALC: o baza, o cota; baza x cota",
+   "calcul": {
+    "baza": 100000.0,
+    "cota": 65.0,
+    "rezultat": 65000.0
+   },
+   "data_referinta": "2026-04-01",
+   "precizie_data": "luna",
+   "data_din": "aprilie 2026"
+  },
+  {
+   "id": "Q-CTB-04",
+   "tip": "REGULA",
+   "intrebare": "Un mijloc fix corporal este pus în funcțiune pe 15 martie 2026. Din ce lună începe amortizarea contabilă?",
+   "stare": "RASPUNS",
+   "raspuns": "Amortizarea fiscală se calculează după cum urmează: a) începând cu luna următoare celei în care mijlocul fix amortizabil se pune în funcțiune, prin aplicarea regimului de amortizare prevăzut la alin.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin12",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (12)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 32.19,
+     "verbatim": "Amortizarea fiscală se calculează după cum urmează: a) începând cu luna următoare celei în care mijlocul fix amortizabil se pune în funcțiune, prin aplicarea regimului de amortizare prevăzut la alin. (5) ; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin17",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (17)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 30.64,
+     "verbatim": "Pentru mijloacele fixe amortizabile, deducerile de amortizare se determină fără a lua în calcul amortizarea contabilă. Câștigurile sau pierderile rezultate din vânzarea ori din scoaterea din funcțiune a acestor mijloace fixe se calculează pe baza valorii fiscale a acestora, diminuată cu amortizarea fiscală, cu excepția celor prevăzute la alin. (14) .",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art28/alin3/litb",
+     "temei": "Codul fiscal (Legea 227/2015) art. 28 alin. (3) lit. b)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 28.31,
+     "verbatim": "mijloacele fixe puse în funcțiune parțial, pentru care nu s-au întocmit formele de înregistrare ca imobilizare corporală; acestea se cuprind în grupele în care urmează a se înregistra, la valoarea rezultată prin însumarea cheltuielilor efective ocazionate de realizarea lor; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-03-15",
+   "precizie_data": "zi",
+   "data_din": "15 martie 2026"
+  },
+  {
+   "id": "Q-CTB-05",
+   "tip": "PROCEDURA",
+   "intrebare": "În 2026 se descoperă o factură de cheltuieli din 2024 neînregistrată. Pe ce cont se corectează eroarea?",
+   "stare": "RASPUNS",
+   "raspuns": "Pentru determinarea impozitului pe cifra de afaceri, erorile constatate, definite potrivit reglementărilor contabile aplicabile, care se corectează pe seama rezultatului reportat, pentru elementele cifrei de afaceri corespunzătoare unor ani fiscali anteriori, se iau în calculul cifrei de afaceri a anului pentru care se constată eroarea, prin depunerea unei declarații rectificative în condițiile prevăzute de Codul de procedură fiscală.",
+   "argument": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art46^1/alin4^3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 46^1 alin. (4^3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 17.0,
+     "verbatim": "Pentru determinarea impozitului pe cifra de afaceri, erorile constatate, definite potrivit reglementărilor contabile aplicabile, care se corectează pe seama rezultatului reportat, pentru elementele cifrei de afaceri corespunzătoare unor ani fiscali anteriori, se iau în calculul cifrei de afaceri a anului pentru care se constată eroarea, prin depunerea unei declarații rectificative în condițiile prevăzute de Codul de procedură fiscală.",
+     "valabilitate": {
+      "valabil_din": "2025-08-01",
+      "la_data_intrebarii": true
+     }
+    },
+    {
+     "atom": "opanaf_1783_2021_saft_d406#art8/pct6/pct8/pct12",
+     "temei": "OPANAF 1783/2021 art. 8 pct. 6 pct. 8 pct. 12",
+     "act": "opanaf_1783_2021_saft_d406",
+     "scor": 16.54,
+     "verbatim": "În situaţia în care, ca urmare a încercării de transmitere a Declaraţiei D406, sunt primite mesaje de eroare/erori, utilizatorul trebuie să verifice cauza erorii prin analiza documentului generat de programul \"Validator\", fişierul SAFT.xml.err.txt. Odată identificată eroarea sau identificate erorile, se corectează problema semnalată de către utilizator şi se generează un nou fişier XML. Cu fişierul nou-obţinut se reiau paşii prezentaţi la pct. 5 şi 6, pentru validarea şi generarea Declaraţiei informative D406, începând cu pasul 1. Dacă nu s-au primit mesaje de eroare, declaraţia este pregătită pentru semnarea electronică şi transmitere.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "omfp_1802_2014#art12/alin2~22",
+     "temei": "OMFP 1802/2014 art. 12 alin. (2)",
+     "act": "omfp_1802_2014",
+     "scor": 16.12,
+     "verbatim": "Trebuie să se țină cont de veniturile şi cheltuielile aferente exercițiului financiar, indiferent de data încasării veniturilor sau data plății cheltuielilor. Astfel, se vor evidenția în conturile de venituri şi creanțele pentru care nu a fost întocmită încă factura (contul 418 \"Clienți ‐ facturi de întocmit\"), respectiv în conturile de cheltuieli sau bunuri, datoriile pentru care nu s‐a primit încă factura (contul 408 \"Furnizori ‐ facturi nesosite\"). În toate cazurile, înregistrarea în aceste conturi se efectuează pe baza documentelor care atestă livrarea bunurilor, respectiv prestarea serviciilor (de exemplu, avize de însoțire a mărfii, situații de lucrări etc.).",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-CTB-06",
+   "tip": "CAPCANA",
+   "intrebare": "Societatea estimează pierderi din exploatare de 200.000 lei în 2027. Poate constitui la 31.12.2026 un provizion pentru ele?",
+   "stare": "RASPUNS",
+   "raspuns": "Înainte de a constitui un provizion separat pentru un contract cu titlu oneros, o entitate recunoaşte orice pierdere din deprecierea activelor alocate contractului în cauză.",
+   "argument": [
+    {
+     "atom": "omfp_3103_2017#art10/alin3~65",
+     "temei": "OMFP 3103/2017 art. 10 alin. (3)",
+     "act": "omfp_3103_2017",
+     "scor": 21.86,
+     "verbatim": "Înainte de a constitui un provizion separat pentru un contract cu titlu oneros, o entitate recunoaşte orice pierdere din deprecierea activelor alocate contractului în cauză. Alte provizioane",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "omfp_1802_2014#art12/alin2~196",
+     "temei": "OMFP 1802/2014 art. 12 alin. (2)",
+     "act": "omfp_1802_2014",
+     "scor": 20.19,
+     "verbatim": "Previzionarea unor pierderi viitoare din exploatare indică faptul că anumite active de exploatare ar putea fi depreciate. Ca urmare, entitatea testează aceste active pentru depreciere. 373. ‐ Un provizion este o datorie cu exigibilitate sau valoare incertă. 374. ‐ (1) Un provizion va fi recunoscut numai în momentul în care: ‐ o entitate are o obligație curentă generată de un eveniment anterior; ‐ este probabil ca o ieşire de resurse să fie necesară pentru a onora obligația respectivă; şi ‐ poate fi realizată o estimare credibilă a valorii obligației. Dacă aceste condiții nu sunt îndeplinite, nu va fi recunoscut un provizion.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "omfp_1802_2014#art12/alin2~248",
+     "temei": "OMFP 1802/2014 art. 12 alin. (2)",
+     "act": "omfp_1802_2014",
+     "scor": 16.57,
+     "verbatim": "Unele tranzacții, cum ar fi vânzarea unui element al unei instalații, pot genera un câştig sau o pierdere, recunoscut(ă) în rezultatul perioadei curente. Fluxurile de trezorerie aferente acestui tip de tranzacții sunt fluxuri de trezorerie provenite din activități de investiții. Cu toate acestea, plățile în numerar pentru producerea sau dobândirea de active deținute în vederea închirierii către alții sunt fluxuri de trezorerie din activități de exploatare. Încasările de numerar din închirierea şi vânzarea ulterioară a acestor active sunt, de asemenea, fluxuri de trezorerie din activități de exploatare. Activități de exploatare 455. ‐ Fluxurile de trezorerie provenite din activități de exploatare sunt derivate, în primul rând, din principalele activități producătoare de venit ale entității. Prin urmare, ele rezultă în general din tranzacțiile şi alte evenimente care intră în determinarea profitului sau a pierderii. Exemple de fluxuri de trezorerie provenite din activități de exploatare sunt:",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [],
+   "data_referinta": "2026-12-31",
+   "precizie_data": "zi",
+   "data_din": "31.12.2026"
+  },
+  {
+   "id": "Q-CTB-07",
+   "tip": "CALCUL",
+   "intrebare": "SRL distribuie (hotărâre AGA) și plătește în 10 aprilie 2026 unui asociat persoană fizică rezidentă dividende brute de 50.000 lei. Cât impozit se reține, cât primește net și până când se virează?",
+   "stare": "RASPUNS",
+   "raspuns": "50.000 lei x 5% = 2500,00 lei",
+   "argument": [
+    {
+     "atom": "oug_50_2015_consolidat#artI~2/pct2",
+     "temei": "OUG 50/2015 art. I pct. 2",
+     "act": "oug_50_2015_consolidat",
+     "scor": 30.95,
+     "verbatim": "La articolul 43, alineatul (2) se modifică şi va avea următorul cuprins: \"(2) Impozitul pe dividende se stabileşte prin aplicarea unei cote de impozit de 5% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară şi se plăteşte la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plăteşte dividendul.\"",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "R-CALC: o baza, o cota; baza x cota",
+   "calcul": {
+    "baza": 50000.0,
+    "cota": 5.0,
+    "rezultat": 2500.0
+   },
+   "data_referinta": "2026-04-10",
+   "precizie_data": "zi",
+   "data_din": "10 aprilie 2026"
+  },
+  {
+   "id": "Q-CTB-08",
+   "tip": "CAPCANA",
+   "intrebare": "În 2025 s-au distribuit dividende interimare cu impozit de 10%. În 2026 se aprobă situațiile financiare 2025 și se regularizează dividendele interimare. Se recalculează impozitul la 16%?",
+   "stare": "RASPUNS",
+   "raspuns": "În cazul dividendelor distribuite în baza situațiilor financiare interimare întocmite în cursul anului 2025/anului fiscal modificat care începe în anul 2025, cota de impozit pe dividende este de 10%, fără recalcularea impozitului pe dividendele respective, după regularizarea acestora pe baza situațiilor financiare anuale aferente exercițiului financiar 2025/anului fiscal modificat care începe în anul 2025, aprobate potrivit legii.",
+   "argument": [
+    {
+     "atom": "legea_141_2025_consolidat#artVII/alin2",
+     "temei": "Legea 141/2025 art. VII alin. (2)",
+     "act": "legea_141_2025_consolidat",
+     "scor": 38.67,
+     "verbatim": "În cazul dividendelor distribuite în baza situațiilor financiare interimare întocmite în cursul anului 2025/anului fiscal modificat care începe în anul 2025, cota de impozit pe dividende este de 10%, fără recalcularea impozitului pe dividendele respective, după regularizarea acestora pe baza situațiilor financiare anuale aferente exercițiului financiar 2025/anului fiscal modificat care începe în anul 2025, aprobate potrivit legii.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_141_2025#artVII/alin2",
+     "temei": "Legea 141/2025 art. VII alin. (2)",
+     "act": "legea_141_2025",
+     "scor": 33.63,
+     "verbatim": "În cazul dividendelor distribuite în baza situaţiilor financiare interimare întocmite în cursul anului 2025/anului fiscal modificat care începe în anul 2025, cota de impozit pe dividende este de 10%, fără recalcularea impozitului pe dividendele respective, după regularizarea acestora pe baza situaţiilor financiare anuale aferente exerciţiului financiar 2025/anului fiscal modificat care începe în anul 2025, aprobate potrivit legii.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "oug_156_2024#artLXV/alin5",
+     "temei": "OUG 156/2024 art. LXV alin. (5)",
+     "act": "oug_156_2024",
+     "scor": 33.63,
+     "verbatim": "În cazul dividendelor distribuite în baza situaţiilor financiare interimare întocmite în cursul anului 2024/anului fiscal modificat care începe în anul 2024, cota de impozit pe dividende este de 8%, fără recalcularea impozitului pe dividendele respective, după regularizarea acestora pe baza situaţiilor financiare anuale aferente exerciţiului financiar 2024/anului fiscal modificat care începe în anul 2024, aprobate potrivit legii.",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    }
+   ],
+   "motiv": "raspuns extractiv: fraza din atomul cel mai bine potrivit care poarta cele mai multe cuvinte ale intrebarii. Motorul nu compune reguli.",
+   "valori_in_atom": [
+    "10%"
+   ],
+   "data_referinta": "2025-01-01",
+   "precizie_data": "an",
+   "data_din": "2025"
+  },
+  {
+   "id": "Q-CTB-09",
+   "tip": "CALCUL",
+   "intrebare": "PFA în sistem real, venit net anual 2026 de 60.000 lei, nepensionar, fără salariu sau alte venituri. Cât este CAS minim datorat pentru 2026 și până când se depune D212?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-CALC: niciun atom din primii 5 nu da O SINGURA cota",
+   "candidati": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art118/alin2^1",
+     "temei": "Codul fiscal (Legea 227/2015) art. 118 alin. (2^1)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 30.67,
+     "verbatim": "Pentru veniturile prevăzute la art. 61 lit. a^1) , pentru care venitul net anual se determină în sistem real, pe baza datelor din contabilitate, la determinarea venitului net anual impozabil, contribuabilul stabilește: a) venitul net anual recalculat/pierderea netă recalculată pe fiecare sursă din categoriile de venituri prevăzute, prin deducerea din venitul net anual, determinat în sistem real, a pierderilor fiscale reportate; ...",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "legea_296_2020_consolidat#art92/alin3^3",
+     "temei": "Legea 296/2020 art. 92 alin. (3^3)",
+     "act": "legea_296_2020_consolidat",
+     "scor": 30.5,
+     "verbatim": "În cazul veniturilor prevăzute la art. 114 alin. (2) lit. k^1), în vederea stabilirii venitului impozabil potrivit alin. (2) lit. b), contribuabilii pot depune declarația unică privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice. ... 78. La articolul 118, partea introductivă a alineatului (2) și litera b) se modifică și vor avea următorul cuprins: (2) Pentru veniturile prevăzute la art. 61 lit. a) și a^1), pentru care venitul net anual se determină în sistem real, pe baza datelor din contabilitate, la determinarea venitului net anual impozabil, contribuabilul stabilește: .........................................................",
+     "valabilitate": {
+      "valabil_din": null,
+      "la_data_intrebarii": null,
+      "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+     }
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art73/alin3",
+     "temei": "Codul fiscal (Legea 227/2015) art. 73 alin. (3)",
+     "act": "cod_fiscal_227_2015_consolidat",
+     "scor": 29.45,
+     "verbatim": "Opțiunea pentru determinarea venitului net anual în sistem real, inclusiv în cazul contribuabililor care încep să realizeze venituri în cursul anului fiscal, se exercită prin completarea Declarației unice privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice cu informații privind determinarea venitului net anual în sistem real și depunerea formularului la organul fiscal competent în termenul legal de depunere prevăzut la art. 122 alin. (3) . În acest caz, perioada de 2 ani fiscali cuprinde anul fiscal de realizare a veniturilor pentru care se depune Declarația unică privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice pentru care se exercită opțiunea și anul fiscal următor acestuia. Notă ... Potrivit alineatului (2) al articolului II din ORDONANȚA DE URGENȚĂ nr. 128 din 7 noiembrie 2024, publicată în MONITORUL OFICIAL nr. 1125 din 11 noiembrie 2024, prevederile art. I pct. 1-4, 6-10, 12-17, 18 referitoare la dispozițiile art. 133 alin. (30) și pct. 19-24 se aplică începând cu veniturile aferente anului 2025.",
+     "valabilitate": {
+      "valabil_din": "2025-01-01",
+      "la_data_intrebarii": true
+     }
+    }
+   ],
+   "data_referinta": "2026-01-01",
+   "precizie_data": "an",
+   "data_din": "2026"
+  },
+  {
+   "id": "Q-CTB-10",
+   "tip": "REGULA",
+   "intrebare": "Un SRL are de plătit unui furnizor SRL o factură de 8.000 lei. Cât poate plăti în numerar?",
+   "stare": "NU_POT_RASPUNDE",
+   "raspuns": null,
+   "argument": [],
+   "motiv": "R-DATA: intrebarea nu spune cand. Valorile fiscale se schimba in timp, iar raspunsul trebuie sa fie valabil la data intrebarii - fara ea, valabilitatea nu se poate stabili.",
+   "data_referinta": null,
+   "precizie_data": null,
+   "data_din": null
+  }
+ ]
+}
