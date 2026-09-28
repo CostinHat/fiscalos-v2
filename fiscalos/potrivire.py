@@ -272,7 +272,15 @@ def _fel(p):
 
 # ── indexul de atomi ─────────────────────────────────────────────────────────────────────────────
 class Corpus(object):
-    def __init__(self):
+    """Corpusul citit: instantaneul iConta, peste care se aplica stratul de surse oficiale (C12).
+
+    `oficiale=False` il citeste fara stratul oficial - pentru masuratori comparative. Un act oficial
+    inlocuieste actul cu acelasi nume din instantaneu NUMAI daca nu e mai sarac: masurat, OPANAF
+    3769/2015 de pe portal are 25 de atomi (numai ordinul, fara anexele cu instructiunile D394), fata
+    de 104 in instantaneu - inlocuirea ar fi PIERDUT continut. Fiecare decizie se inregistreaza in
+    `sursa_act`."""
+
+    def __init__(self, oficiale=True):
         rap = json.load(open(os.path.join(_RAD, "artefacte", "atomi_raport.json"), encoding="utf-8"))
         self.structura = {b: v.get("structura") for b, v in rap["acte"].items()}
         self.strat = json.load(open(os.path.join(_RAD, "artefacte", "strat_text.json"),
@@ -284,6 +292,29 @@ class Corpus(object):
             for a in atomi:
                 a["_n"] = norm(a["text"])
             self.pe_act[baza] = atomi
+        self.sursa_act = {b: {"sursa": "instantaneu iConta"} for b in self.pe_act}
+        f_of = os.path.join(_RAD, "artefacte", "atomi_oficiale", "_raport.json")
+        if oficiale and os.path.exists(f_of):
+            man = json.load(open(os.path.join(_RAD, "surse_oficiale", "MANIFEST.json"),
+                                 encoding="utf-8"))["acte"]
+            for act, v in json.load(open(f_of, encoding="utf-8")).items():
+                atomi = [json.loads(l) for l in open(os.path.join(
+                    _RAD, "artefacte", "atomi_oficiale", act + ".jsonl"), encoding="utf-8")]
+                vechi = len(self.pe_act.get(act, []))
+                info = {"data_formei_consolidate": v["data_formei_consolidate"],
+                        "id_portal": man[act]["id_portal"], "atomi_oficial": len(atomi),
+                        "atomi_instantaneu": vechi}
+                if len(atomi) < 0.9 * vechi:
+                    self.sursa_act[act] = dict(info, sursa="instantaneu iConta",
+                                               oficial_neaplicat="versiunea oficiala e mai saraca "
+                                               "(%d atomi fata de %d)" % (len(atomi), vechi))
+                    continue
+                for a in atomi:
+                    a["_n"] = norm(a["text"])
+                self.pe_act[act] = atomi
+                self.structura[act] = v["structura"]
+                self.sursa_act[act] = dict(info, sursa="oficial: legislatie.just.ro, forma "
+                                                       "consolidata din %s" % v["data_formei_consolidate"])
         self.toti = [a for ats in self.pe_act.values() for a in ats]
         self.dupa_id = {a["id"]: a for a in self.toti}
         self.modificatoare = surse.acte_modificatoare(self)

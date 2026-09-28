@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""OP8 — PACHETUL DE PROPUNERE v3: JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
+"""OP8 — PACHETUL DE PROPUNERE v4 (peste v3: stratul de surse oficiale, C12): JSON pentru masina, raport pentru om, doua livrabile pentru iConta.
 
 v1 si v2 RĂMÂN NEATINSE (propuneri/v1/, propuneri/v2/); probe le ingheata. v3 aplica, peste deciziile
 C1-C7 ale v2, deciziile C8-C11:
@@ -24,7 +24,7 @@ import os
 import time
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VERSIUNE = "v3"
+VERSIUNE = "v4"
 STARI = ("CONCORDA", "DIFERA", "NEVERIFICAT", "NEGASIT")
 ETICHETA = {"CONCORDA": "CONCORDĂ", "DIFERA": "DIFERĂ", "NEVERIFICAT": "NEVERIFICAT",
             "NEGASIT": "NEGĂSIT"}
@@ -124,6 +124,30 @@ def construieste():
 
     dest = os.path.join(_RAD, "propuneri", VERSIUNE)
     os.makedirs(dest, exist_ok=True)
+    # ── C12: actele aduse din sursa oficiala - lista e LIVRABIL pentru iConta (anaf_surse) ───────
+    from fiscalos import potrivire as _pot
+    man_of = json.load(open(os.path.join(_RAD, "surse_oficiale", "MANIFEST.json"), encoding="utf-8"))
+    corp_ = _pot.Corpus()
+    acte_aduse = []
+    for act, v in man_of["acte"].items():
+        sa = corp_.sursa_act.get(act, {})
+        acte_aduse.append({
+            "act_in_anaf_surse": act, "id_portal": v["id_portal"], "de_ce": v["de_ce"],
+            "data_formei_consolidate": v["data_formei_consolidate"],
+            "folosit_de_FiscalOS": sa.get("sursa", "").startswith("oficial"),
+            "motiv_nefolosire": sa.get("oficial_neaplicat"),
+            "atomi_oficial": sa.get("atomi_oficial"), "atomi_instantaneu": sa.get("atomi_instantaneu"),
+            "fisiere": [{k: x[k] for k in ("fisier", "url", "id_portal", "consolidare", "sha256",
+                                         "octeti", "articole")} for x in v["fisiere"]]})
+    with open(os.path.join(dest, "acte_aduse.json"), "w", encoding="utf-8") as f:
+        json.dump({"_ce": "Consolidatele la zi aduse de FiscalOS din legislatie.just.ro (C12), cu "
+                          "provenienta, data formei consolidate si SHA256. Livrabil pentru iConta: "
+                          "le poate prelua in anaf_surse. Fisierele sunt in surse_oficiale/.",
+                   "sursa": man_of["sursa"], "adus_la": man_of["adus_la"],
+                   "cum_se_ajunge_la_text": "Pentru actele mari, pagina actului de aprobare e un ciot "
+                   "cu o trimitere S_REF catre documentul care conţine codul/normele "
+                   "(DetaliiDocumentAfis/<id>). Raspunde limitei notate in PORTAL_IDS.json.",
+                   "acte": acte_aduse}, f, ensure_ascii=False, indent=1)
     P = pot["potriviri"]
     n = {k: sum(1 for p in P if p["clasificare"] == k) for k in STARI}
     candidate = [p for p in P if p.get("temei_candidat")]
@@ -153,7 +177,8 @@ def construieste():
             "_ce": "PROPUNERE FiscalOS v2. NU se aplica automat in iConta (CLAUDE.md §3).",
             "versiune": VERSIUNE, "generat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "aprobare": {"stare": "NEAPROBAT", "de_cine": None, "la": None},
-            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11"],
+            "decizii_aplicate": ["C1", "C2", "C3", "C4", "C5", "C7", "C8", "C9", "C10", "C11", "C12"],
+            "acte_aduse_din_sursa_oficiala": acte_aduse,
             "corpus": {"sursa": man["sursa"], "luat_la": man["luat_la"],
                        "n_fisiere": man["n_fisiere"], "manifest": "corpus_manifest.json"},
             "sumar": {**n, "citari_declarate_de_iconta": pot["citari_declarate"],
@@ -170,7 +195,7 @@ def construieste():
       % VERSIUNE)
     A("")
     A("Generat %s · **NEAPROBAT** · nu se aplică automat în iConta (CLAUDE.md §3). "
-      "Versiunile anterioare, `propuneri/v1/` și `propuneri/v2/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
+      "Versiunile anterioare, `propuneri/v1/`–`propuneri/v3/`, rămân neatinse." % time.strftime("%d.%m.%Y %H:%M"))
     A("")
     A("| | |")
     A("|---|---|")
@@ -191,7 +216,7 @@ def construieste():
     A("")
     A(CERINTE_RATIFICATE.strip())
     A("")
-    A(CERINTE_NOI.strip() % {
+    A(CERINTE_NOI.strip() and CERINTE_NOI.strip() % {
         "n_scris": sum(1 for p in P if p.get("clasificare_initiala")),
         "n_cand": len(candidate), "n_nemarcate": inv["conturi_nemarcate"]["n_simboluri"],
         "n_module": inv["conturi_nemarcate"]["n_module"],
@@ -201,6 +226,30 @@ def construieste():
     A("---")
     A("")
 
+    A("## Actele aduse din sursa oficială (C12)")
+    A("")
+    A("Stratul `surse_oficiale/`, separat de instantaneul iConta (care rămâne neatins). Lista e "
+      "**livrabil pentru iConta** — `acte_aduse.json`, cu URL, data formei consolidate și SHA256 — "
+      "ca să le poată prelua în `anaf_surse`.")
+    A("")
+    A(_tabel([[x["act_in_anaf_surse"], x["id_portal"], x["data_formei_consolidate"],
+               "%s → %s" % (x["atomi_instantaneu"], x["atomi_oficial"]),
+               "da" if x["folosit_de_FiscalOS"] else "**nu** — %s" % x["motiv_nefolosire"]]
+              for x in acte_aduse],
+             ["Act", "Id portal", "Forma consolidată din", "Atomi (instantaneu → oficial)",
+              "Folosit"]))
+    A("")
+    A("**Pentru iConta, și dincolo de lista aceasta:** la actele mari (Codul fiscal, Codul de "
+      "procedură fiscală, normele), pagina de pe portal a actului de aprobare e un ciot, iar textul "
+      "stă într-un document separat, legat prin trimiterea `S_REF` (`DetaliiDocumentAfis/<id>`). "
+      "E răspunsul la limita notată în `PORTAL_IDS.json` (*forma consolidată la alt id, negăsit*).")
+    A("")
+    A("**Candidații pentru plafoanele de numerar** trimit acum la actul de bază consolidat — Legea "
+      "70/2015 art. 3–4 —, cum cere C10. Litera din articol e aleasă prin potrivire pe frază, iar "
+      "două atribuiri arată greșit la citire: `casa.PLAFON_PLATA_PJ` (plăți) primește lit. a), care "
+      "e despre încasări; `casa.PLAFON_PF` primește art. 3 alin. (2), deși regula pentru persoane "
+      "fizice pare să fie art. 4. De verificat la aprobare.")
+    A("")
     A("## 1. Operațiile rulate, cu durata măsurată")
     A("")
     A(_tabel([[d["operatie"], "%.2f s" % d["secunde"],
@@ -431,20 +480,23 @@ CERINTE_RATIFICATE = """
 | **C9** | `d394.TIPURI` rămâne DIFERĂ, cu mențiunea că iConta declară Î1/Î2 neconstruite | §5 — mențiunea e obiectul `Dezacord` al iConta, citat verbatim, nu parafrazat |
 | **C10** | temeiul candidat = actul de bază consolidat; modificatorul = atom-valabilitate; lipsa se scrie | §6 b) și c) |
 | **C11** | unitatea din folosire se acceptă, marcată „unitate dedusă"; R-UNIT în cerințe | §6, §10 |
+| **C12** | consolidatele la zi ale actelor de bază, aduse din legislatie.just.ro, într-un strat propriu | secțiunea „Actele aduse", `acte_aduse.json`, `surse_oficiale/MANIFEST.json` |
 | **C6** | motorul de întrebări | livrat separat, în `intrebari/` |
 """
 
 CERINTE_NOI = """
 ### Cerințe noi, de decis
 
-**C12 — Candidați la care actul de bază e în corpus, dar valoarea nu s-a găsit în el.** C10 cere
-temei din actul de bază. Pentru %(n_rest)d constante, valoarea apare numai în actul modificator, deși
-actul de bază pe care îl modifică **e** în corpus (Codul fiscal consolidat, Legea 70/2015 consolidată,
-OPANAF 3769/2015 în forma de bază). Două explicații posibile, pe care motorul nu le poate distinge
-singur: (a) potrivirea pe frază n-a prins alineatul din actul de bază; (b) redarea din corpus a actului
-de bază e anterioară modificării (OPANAF 3769/2015 e în corpus numai în forma din 2015; Legea 70/2015
-are note de consolidare numai până în 2019). Le-am lăsat fără candidat, cu situația scrisă în §6 c).
-*De decis:* se aduce în corpus consolidatul la zi al acestor acte, sau un om confirmă alineatul?
+**C18 — Litera aleasă prin potrivire pe frază, în candidații din Legea 70/2015.** Cu actul de bază
+consolidat în corpus (C12), toți cei cinci candidați pentru plafoanele de numerar trimit la articolul
+corect, dar litera o alege potrivirea pe frază, iar două atribuiri arată greșit la citire. *De decis:*
+se lasă verificarea literei la aprobarea umană (cum e acum), sau candidatul se propune la nivel de
+articol când mai multe litere ale lui poartă valoarea?
+
+**C19 — OPANAF 3769/2015 de pe portal e mai sărac decât instantaneul.** Portalul are textul
+ordinului (consolidat la 17.09.2025), dar nu și anexele cu instrucțiunile D394 - 25 de atomi față de
+104. FiscalOS nu l-a folosit (regula: un act oficial înlocuiește instantaneul numai dacă nu e mai
+sărac). *De decis:* anexele se caută în altă sursă oficială (static.anaf.ro), sau rămâne instantaneul?
 """
 
 APROBARE = """# APROBARE — propunere %(versiune)s
@@ -463,7 +515,7 @@ candidat — e un pas uman, separat.
 
 ## Semnătură
 
-- [ ] Am citit §0 și am răspuns la C12.
+- [ ] Am citit §0 și am răspuns la C18–C19.
 - [ ] Am verificat prin eșantion fragmentele verbatim la id-ul de atom indicat.
 - [ ] Aprob propunerea în întregime.
 - [ ] Aprob parțial — rândurile refuzate, cu motiv:

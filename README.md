@@ -78,6 +78,25 @@ venv/bin/python -m fiscalos.semantic              # cele 50 de apeluri, cost mas
 python3 -m fiscalos.raport_intrebari_v2           # comparatia pe fond + raportul
 ```
 
+## Pasul 4 — consolidatele oficiale (C12) și relația de derogare (C17)
+
+- [`intrebari/v3/RAPORT.md`](intrebari/v3/RAPORT.md) — ambele motoare, rerulate (scor indicativ).
+- [`propuneri/v4/RAPORT.md`](propuneri/v4/RAPORT.md) + `acte_aduse.json` — propunerea cu actele aduse.
+- `surse_oficiale/` — 6 acte consolidate la zi, aduse de FiscalOS din legislatie.just.ro, cu
+  `MANIFEST.json` (URL, data formei consolidate, SHA256). Instantaneul iConta rămâne neatins.
+- `fiscalos/relatii.py` — relația „derogă de la / prin excepție de la / modifică", extrasă din text.
+
+| Motor | CORECT | GREȘIT | NU POT | Cost |
+|---|---|---|---|---|
+| Stratul semantic v3 | 10 | 8 | 32 | $3,25 |
+| Motorul lexical v3 | 2 | 12 | 36 | $0 |
+
+```sh
+venv/bin/python -m fiscalos.surse_oficiale --aduce   # aduce din nou actele (retea)
+python3 -m fiscalos.ablatie_lexical                  # L0 / L1 / L2, ablatie exacta
+python3 -m fiscalos.raport_intrebari_v3
+```
+
 ## Cum se rulează
 
 ```sh

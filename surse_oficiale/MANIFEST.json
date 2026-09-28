@@ -1,0 +1,182 @@
+{
+ "_ce": "Consolidatele la zi aduse de FiscalOS din sursa oficiala (C12). Separate de instantaneul iConta, care rămâne neatins.",
+ "sursa": "https://legislatie.just.ro",
+ "user_agent": "Mozilla/5.0 (compatible; FiscalOS/2.0; audit fiscal; +https://github.com/CostinHat/fiscalos-v2)",
+ "adus_la": "2026-09-28T18:45:40",
+ "acte": {
+  "cod_fiscal_227_2015_consolidat": {
+   "id_portal": "171280",
+   "de_ce": "C12",
+   "fisiere": [
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__171280.html",
+     "id_portal": "171280",
+     "id_forma": "312600",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/171280",
+     "titlu": "LEGE 227 08/09/2015 - Portal Legislativ",
+     "consolidare": "08.08.2026",
+     "e_forma_curenta": true,
+     "articole": 0,
+     "octeti": 74637,
+     "sha256": "68f754b7cbfedf91387cd9c2c5a49b7f236de70cd5cde2577fca11ccc5212983"
+    },
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__312601.html",
+     "id_portal": "312601",
+     "id_forma": "312601",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312601",
+     "titlu": "COD FISCAL (A) 08/09/2015 - Portal Legislativ",
+     "consolidare": "08.08.2026",
+     "e_forma_curenta": true,
+     "articole": 3137,
+     "octeti": 7625635,
+     "sha256": "2393786755c97dc5af3274e832e27082bed0b6119dae0d47a6201756a1b765e0"
+    }
+   ],
+   "data_formei_consolidate": "08.08.2026",
+   "articole_total": 3137,
+   "secunde": 13.5
+  },
+  "legea_70_2015_consolidat": {
+   "id_portal": "167088",
+   "de_ce": "C12",
+   "fisiere": [
+    {
+     "fisier": "legea_70_2015_consolidat__167088.html",
+     "id_portal": "167088",
+     "id_forma": "304521",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/167088",
+     "titlu": "LEGE 70 02/04/2015 - Portal Legislativ",
+     "consolidare": "01.01.2026",
+     "e_forma_curenta": true,
+     "articole": 71,
+     "octeti": 156710,
+     "sha256": "661b016484f74b5268da3172b1311754cb759ee5051f45a48479e7b808b6c49b"
+    }
+   ],
+   "data_formei_consolidate": "01.01.2026",
+   "articole_total": 71,
+   "secunde": 3.3
+  },
+  "opanaf_3769_2015_d394_baza": {
+   "id_portal": "174685",
+   "de_ce": "C12",
+   "fisiere": [
+    {
+     "fisier": "opanaf_3769_2015_d394_baza__174685.html",
+     "id_portal": "174685",
+     "id_forma": "302073",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174685",
+     "titlu": "ORDIN 3769 23/12/2015 - Portal Legislativ",
+     "consolidare": "17.09.2025",
+     "e_forma_curenta": true,
+     "articole": 24,
+     "octeti": 266995,
+     "sha256": "1f65c2437853588890b7f092b8ce56ab6ea78d3f80337e476e139b9f8fae8d66"
+    }
+   ],
+   "data_formei_consolidate": "17.09.2025",
+   "articole_total": 24,
+   "secunde": 3.0
+  },
+  "legea_207_2015_consolidat": {
+   "id_portal": "170005",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "fisiere": [
+    {
+     "fisier": "legea_207_2015_consolidat__170005.html",
+     "id_portal": "170005",
+     "id_forma": "312602",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/170005",
+     "titlu": "LEGE 207 20/07/2015 - Portal Legislativ",
+     "consolidare": "08.08.2026",
+     "e_forma_curenta": true,
+     "articole": 0,
+     "octeti": 60899,
+     "sha256": "b8fe60746247260a6fac441551d9f78abb32030809e68c5599d7b644a46c0031"
+    },
+    {
+     "fisier": "legea_207_2015_consolidat__312603.html",
+     "id_portal": "312603",
+     "id_forma": "312603",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312603",
+     "titlu": "COD PR FISCALA (A) 20/07/2015 - Portal Legislativ",
+     "consolidare": "08.08.2026",
+     "e_forma_curenta": true,
+     "articole": 1577,
+     "octeti": 4939890,
+     "sha256": "44e0c401e6b66ac962f8a413418eec7194130ec3d62972baf4ef9cab19eb9166"
+    }
+   ],
+   "data_formei_consolidate": "08.08.2026",
+   "articole_total": 1577,
+   "secunde": 11.4
+  },
+  "hg_1_2016_norme_cod_fiscal": {
+   "id_portal": "174822",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "fisiere": [
+    {
+     "fisier": "hg_1_2016_norme_cod_fiscal__174822.html",
+     "id_portal": "174822",
+     "id_forma": "307846",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174822",
+     "titlu": "HOTARARE 1 06/01/2016 - Portal Legislativ",
+     "consolidare": "31.03.2026",
+     "e_forma_curenta": true,
+     "articole": 4,
+     "octeti": 64162,
+     "sha256": "32b2634d6b380861ca6bf993b8c3b149cff84558ecc15ef4130e30d0756a3b2e"
+    },
+    {
+     "fisier": "hg_1_2016_norme_cod_fiscal__307847.html",
+     "id_portal": "307847",
+     "id_forma": "307847",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/307847",
+     "titlu": "NORMA (A) 06/01/2016 - Portal Legislativ",
+     "consolidare": "31.03.2026",
+     "e_forma_curenta": true,
+     "articole": 0,
+     "octeti": 6703467,
+     "sha256": "114e36ac8c52dae4a8d701c68f3c1a6bc8f8d0b3d9af1c76fc333a516e9d7cff"
+    }
+   ],
+   "data_formei_consolidate": "31.03.2026",
+   "articole_total": 4,
+   "secunde": 11.5
+  },
+  "omfp_1802_2014": {
+   "id_portal": "164320",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "fisiere": [
+    {
+     "fisier": "omfp_1802_2014__164320.html",
+     "id_portal": "164320",
+     "id_forma": "303278",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/164320",
+     "titlu": "ORDIN 1802 29/12/2014 - Portal Legislativ",
+     "consolidare": "19.11.2025",
+     "e_forma_curenta": true,
+     "articole": 25,
+     "octeti": 88977,
+     "sha256": "0a4cd2b2d294708c306ae76943a42875f8c9ec1797302a25c7f472e75304881b"
+    },
+    {
+     "fisier": "omfp_1802_2014__303279.html",
+     "id_portal": "303279",
+     "id_forma": "303279",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/303279",
+     "titlu": "REGLEMENTARI (A) 29/12/2014 - Portal Legislativ",
+     "consolidare": "19.11.2025",
+     "e_forma_curenta": true,
+     "articole": 53,
+     "octeti": 4748261,
+     "sha256": "8e1cc194188b278951b8acfd5e416b1bd0ca9a17508d9beb97e404725e1c533c"
+    }
+   ],
+   "data_formei_consolidate": "19.11.2025",
+   "articole_total": 78,
+   "secunde": 9.3
+  }
+ }
+}

@@ -1,0 +1,307 @@
+{
+ "_ce": "TEMEIURI CANDIDATE pentru constantele pe care iConta nu le sursează. Livrabil pentru iConta, DE APROBAT UMAN. NU se aplica. Fiecare candidat vine dintr-un act normativ (decizia C2: un formular, o structura de declaratie sau un pliant ANAF nu poate fi temei), si e gasit prin potrivire pe fraza-subiect, nu verificat.",
+ "versiune": "v4",
+ "aprobare": "NEAPROBAT",
+ "candidati": [
+  {
+   "parametru": "nesursat/bacsis.COTA_IMPOZIT=10",
+   "valoare_cod": "10",
+   "unde_in_cod": "core/bacsis.py:13",
+   "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "10%",
+   "verbatim": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei surse din fiecare categorie pentru determinarea impozitului pe veniturile din:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_156_2024",
+    "atom": "oug_156_2024#artLXIV/pct1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "La articolul 43, alineatul (2) se modifică şi va avea următorul cuprins: \"(2) Impozitul pe dividende se stabileşte prin aplicarea unei cote de impozit de 10% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară şi se plăteşte la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plăteşte dividendul.\""
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_INCASARE_PJ=5000",
+   "valoare_cod": "5000",
+   "unde_in_cod": "core/casa.py:22",
+   "atom": "legea_70_2015_consolidat#art3/alin1/lita",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "5.000",
+   "verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "…publicată, cu modificările și completările ulterioare; ... e) hipermagazin - structură de vânzare, astfel cum este definit la art. 4 lit. s) din Ordonanța Guvernului nr. 99/2000, republicată , cu modificările și completările ulterioare. ... ... 2. La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ... 3. La articolul 4, alineatele (1) și (4) se modifică și vor avea următorul cuprins: (1) Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)…"
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_INCASARE_PJ_CC=10000",
+   "valoare_cod": "10000",
+   "unde_in_cod": "core/casa.py:23",
+   "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "10.000",
+   "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
+    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art4~2/alin1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi și primiri ori restituiri de împrumuturi sau alte finanțări, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană."
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_PLATA_PJ=5000",
+   "valoare_cod": "5000",
+   "unde_in_cod": "core/casa.py:24",
+   "atom": "legea_70_2015_consolidat#art3/alin1/lita",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "5.000",
+   "verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "…publicată, cu modificările și completările ulterioare; ... e) hipermagazin - structură de vânzare, astfel cum este definit la art. 4 lit. s) din Ordonanța Guvernului nr. 99/2000, republicată , cu modificările și completările ulterioare. ... ... 2. La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ... 3. La articolul 4, alineatele (1) și (4) se modifică și vor avea următorul cuprins: (1) Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)…"
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_PLATA_PJ_TOTAL=10000",
+   "valoare_cod": "10000",
+   "unde_in_cod": "core/casa.py:25",
+   "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "10.000",
+   "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
+    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art4~2/alin1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi și primiri ori restituiri de împrumuturi sau alte finanțări, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană."
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_PF=10000",
+   "valoare_cod": "10000",
+   "unde_in_cod": "core/casa.py:26",
+   "atom": "legea_70_2015_consolidat#art3/alin2",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "10.000",
+   "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei.",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": true,
+    "act_modificator": "Alineatul (2), Articolul 3, Capitolul I a fost modificat ca urmare a modificării integrale a de Punctului 1., Articolul LXIV, Sectiunea a 3-a, Capitolul IV din LEGEA nr. 296 din 26 octombrie 2023, publicată în MONITORUL OFICIAL nr. 977 din 27 octombrie 2023 prin Punctul 1., Articolul I din ORDONANȚA DE URGENȚĂ nr. 98 din 9 noiembrie 2023, publicată în MONITORUL OFICIAL nr. 1.026 din 10 noiembrie 2023.",
+    "atom": "legea_70_2015_consolidat#art3/alin2",
+    "sursa_datei": "nota de consolidare",
+    "valabil_din": "2023-11-11"
+   }
+  },
+  {
+   "parametru": "nesursat/cote_tva.COTA_STANDARD=21",
+   "valoare_cod": "21",
+   "unde_in_cod": "core/cote_tva.py:19",
+   "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "21%",
+   "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%.",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "legea_141_2025_consolidat",
+    "atom": "legea_141_2025_consolidat#art291/alin1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+   }
+  },
+  {
+   "parametru": "nesursat/cote_tva.COTA_REDUSA=11",
+   "valoare_cod": "11",
+   "unde_in_cod": "core/cote_tva.py:20",
+   "atom": "cod_fiscal_227_2015_consolidat#art291/alin2",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "11%",
+   "verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "legea_141_2025",
+    "atom": "legea_141_2025#artII/pct42/alin2",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii şi/sau livrări de bunuri:"
+   }
+  },
+  {
+   "parametru": "nesursat/d100_pozitia_116.PRAG_BRENT_USD=70",
+   "valoare_cod": "70",
+   "unde_in_cod": "core/d100_pozitia_116.py:109",
+   "atom": "oug_24_2026_contributie_solidaritate#art9/alin6",
+   "act": "oug_24_2026_contributie_solidaritate",
+   "valoare_in_text": "70",
+   "verbatim": "Pentru aplicarea prevederilor alin. (5) , cota se stabilește în funcție de intervalul în care se încadrează prețul mediu lunar al țițeiului sortiment/clasă Brent, calculat conform alin. (2) . În cazul în care prețul mediu lunar al țițeiului sortimentul/clasa Brent nu depășește pragul de 70 USD/baril, contribuția de solidaritate nu se datorează pentru luna respectivă. (7) Cursul de schimb valutar utilizat pentru determinarea echivalentului în lei a cotației de 70 USD, prevăzută la alin. (4) lit. a) , este cel valabil în ultima zi a lunii pentru care se datorează contribuția de solidaritate. (8) În aplicarea prevederilor alin. (1) , teritoriul României reprezintă teritoriul delimitat de frontiera de stat a României, în conformitate cu prevederile capitolului II al Ordonanței de urgență a Guvernului nr. 105/2001 privind frontiera de stat a României, aprobată cu modificări prin Legea nr. 243/2002 , cu modificările și completările ulterioare. Nu intră sub incidența prevederilor prezentului capitol țițeiul extras din marea teritorială a României, astfel cum este definită de capitolul I din Legea nr. 17/1990 privind regimul juridic al apelor maritime interioare, al mării teritoriale, al z…",
+   "valabilitate": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea"
+  },
+  {
+   "parametru": "nesursat/d101.COTA_STANDARD=16",
+   "valoare_cod": "16",
+   "unde_in_cod": "core/d101.py:46",
+   "atom": "cod_fiscal_227_2015_consolidat#art17",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "16%",
+   "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valabilitate": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea"
+  },
+  {
+   "parametru": "nesursat/d101.PRAG_IMCA_EUR=50000000",
+   "valoare_cod": "50000000",
+   "unde_in_cod": "core/d101.py:54",
+   "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin8",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "50.000.000",
+   "verbatim": "În cazul grupului fiscal, cifra de afaceri de peste 50.000.000 euro prevăzută la alin. (1) se calculează de persoana juridică responsabilă prin însumarea cifrei de afaceri a membrilor grupului fiscal. Celelalte prevederi ale alin. (1) , precum și prevederile alin. (2)-(7) , (9) și (10) se aplică în mod corespunzător de către membrii/persoana juridică responsabilă având în vedere și următoarele reguli:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "omfp_1802_2014",
+    "atom": "omfp_1802_2014#art5~2/alin3~5/litb",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": "2024-08-23",
+    "verbatim": "cifra de afaceri netă: 50.000.000 lei; ..."
+   }
+  },
+  {
+   "parametru": "nesursat/d101g.COTA_STANDARD=16",
+   "valoare_cod": "16",
+   "unde_in_cod": "core/d101g.py:68",
+   "atom": "cod_fiscal_227_2015_consolidat#art17",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "16%",
+   "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valabilitate": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea"
+  },
+  {
+   "parametru": "nesursat/d394.COTE=5",
+   "valoare_cod": "5",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "cod_fiscal_227_2015_consolidat#art291/alin3^5/litb",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "5%",
+   "verbatim": "să completeze «Registrul achizițiilor de locuințe cu cota redusă de TVA de 5%, începând cu 1 ianuarie 2023» la data autentificării actelor juridice între vii care au ca obiect transferul dreptului de proprietate pentru locuințele prevăzute la alin. (3) lit. c) pct. 3 ; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_77_2022",
+    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=9",
+   "valoare_cod": "9",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "cod_fiscal_227_2015_consolidat#artIII/alin1",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "9%",
+   "verbatim": "Persoana fizică, în mod individual sau în comun cu altă persoană fizică/alte persoane fizice, poate achiziționa în perioada 1 august 2025-31 iulie 2026 inclusiv o singură locuință cu cota redusă de TVA de 9%, dacă se îndeplinesc în mod cumulativ următoarele condiții:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_77_2022",
+    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=11",
+   "valoare_cod": "11",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin8~18",
+   "act": "hg_1_2016_norme_cod_fiscal",
+   "valoare_in_text": "11%",
+   "verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#artIV/pct1/pct7/pct2/pct5/pct4/pct3/pct17/pct10/pct10/pct10/pct4/pct3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/ prestărilor de servicii taxabile efectuate, defalcată pe cote de TVA (24%, 21%, 20%, 19%, 11%, 9%, 5%);"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=20",
+   "valoare_cod": "20",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "opanaf_3769_2015_d394_baza#art12/alin21~2/pct5/pct2",
+   "act": "opanaf_3769_2015_d394_baza",
+   "valoare_in_text": "20%",
+   "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_77_2022",
+    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=24",
+   "valoare_cod": "24",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "hg_1_2016_norme_cod_fiscal#artV~19/alin2~55/lita",
+   "act": "hg_1_2016_norme_cod_fiscal",
+   "valoare_in_text": "24%",
+   "verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_77_2022",
+    "atom": "opanaf_77_2022#artIII/pct2/alin6~2/pct4/pct3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "valoarea totală a TV A aferente livrărilor de bunuri/prestărilor de servicii taxabile efectuate, defalcată pe cote de TV A (24%, 20%, 19%, 9%, 5%);"
+   }
+  },
+  {
+   "parametru": "nesursat/salarizare.PRAG_VENIT_DEDUCERE=2000",
+   "valoare_cod": "2000",
+   "unde_in_cod": "core/salarizare.py:29",
+   "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "2.000",
+   "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară.",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "og_16_2022_consolidat",
+    "atom": "og_16_2022_consolidat#art77/alin3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară."
+   }
+  },
+  {
+   "parametru": "nesursat/taxare_inversa.PRAG_ELECTRONICE=22500",
+   "valoare_cod": "22500",
+   "unde_in_cod": "core/taxare_inversa.py:15",
+   "atom": "cod_fiscal_227_2015_consolidat#art331/alin7",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "22.500",
+   "verbatim": "Pentru livrarea bunurilor prevăzute la alin. (2) lit. i)-k) se aplică taxarea inversă numai dacă valoarea bunurilor livrate, exclusiv TVA, înscrise într-o factură, este mai mare sau egală cu 22.500 lei. + Dispoziții tranzitorii +",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": true,
+    "act_modificator": "Alin. (7) al art. 331 a fost introdus de pct. 8 al art. unic din LEGEA nr. 358 din 31 decembrie 2015, publicată în MONITORUL OFICIAL nr. 988 din 31 decembrie 2015, care completează art. I din ORDONANȚA DE URGENȚĂ nr. 50 din 27 octombrie 2015, publicată în MONITORUL OFICIAL nr. 817 din 3 noiembrie 2015, cu pct. 36^3.",
+    "atom": "cod_fiscal_227_2015_consolidat#art331/alin7",
+    "sursa_datei": "nota de consolidare",
+    "valabil_din": "2016-01-03"
+   }
+  }
+ ]
+}

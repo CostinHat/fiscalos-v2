@@ -1,0 +1,70 @@
+{
+ "config": {
+  "L0": {
+   "descriere": "instantaneul iConta, fara relatia C17",
+   "scor_pe_fond": {
+    "CORECT": 4,
+    "GRESIT": 17,
+    "NU_POT": 29
+   },
+   "secunde": 15.47
+  },
+  "L1": {
+   "descriere": "+ consolidatele oficiale (C12)",
+   "scor_pe_fond": {
+    "CORECT": 4,
+    "GRESIT": 17,
+    "NU_POT": 29
+   },
+   "secunde": 15.18
+  },
+  "L2": {
+   "descriere": "+ relatia de derogare C17 (b)",
+   "scor_pe_fond": {
+    "CORECT": 2,
+    "GRESIT": 12,
+    "NU_POT": 36
+   },
+   "secunde": 21.5
+  }
+ },
+ "tranzitii": {
+  "L0->L1": {
+   "abtineri_disparute": [
+    "Q-CPF-04"
+   ],
+   "abtineri_aparute": [
+    "Q-CTB-03"
+   ],
+   "din_care_corecte_acum": [],
+   "raspunsuri_retrase_care_erau_gresite": [
+    "Q-CTB-03"
+   ],
+   "raspunsuri_retrase_care_erau_corecte": []
+  },
+  "L1->L2": {
+   "abtineri_disparute": [],
+   "abtineri_aparute": [
+    "Q-CPF-03",
+    "Q-CTB-07",
+    "Q-PRF-01",
+    "Q-PRF-02",
+    "Q-PRF-09",
+    "Q-SAL-02",
+    "Q-TVA-02"
+   ],
+   "din_care_corecte_acum": [],
+   "raspunsuri_retrase_care_erau_gresite": [
+    "Q-CPF-03",
+    "Q-CTB-07",
+    "Q-PRF-01",
+    "Q-PRF-09",
+    "Q-SAL-02"
+   ],
+   "raspunsuri_retrase_care_erau_corecte": [
+    "Q-PRF-02",
+    "Q-TVA-02"
+   ]
+  }
+ }
+}

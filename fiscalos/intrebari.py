@@ -180,8 +180,10 @@ def _e_istoric(act):
 
 
 class Index(object):
-    def __init__(self, corp=None):
+    def __init__(self, corp=None, relatii_c17=True):
         self.corp = corp or potrivire.Corpus()
+        from fiscalos import relatii
+        self.rel = relatii.Relatii(self.corp) if relatii_c17 else None
         self.normativ = {}
         for act in self.corp.pe_act:
             self.normativ[act] = surse.e_act_normativ(act)[0]
@@ -400,6 +402,26 @@ def _fraza_cheie(text, stemuri_q):
 
 # ── raspunsul ────────────────────────────────────────────────────────────────────────────────────
 def raspunde(q, idx):
+    """Raspunsul lexical, trecut prin plasa de siguranta C17 (b).
+
+    Motorul lexical nu poate TRATA o derogare - nu compune reguli. Deci daca atomul pe care
+    raspunde are o derogare / exceptie / modificare valabila la data intrebarii (relatia C17), raspunsul
+    devine abţinere, cu derogarea atasata ca material."""
+    r = _raspunde(q, idx)
+    if r["stare"] != "RASPUNS" or not r.get("argument") or idx.rel is None:
+        return r
+    a = idx.corp.dupa_id.get(r["argument"][0]["atom"])
+    der = idx.rel.asupra(a, r.get("data_referinta")) if a else []
+    if not der:
+        return r
+    return dict(r, stare="NU_POT_RASPUNDE", raspuns_retras=r["raspuns"], raspuns=None,
+                motiv="C17 (b): atomul pe care as raspunde are %d derogari/exceptii/modificari valabile "
+                      "la data intrebarii (ex. %s: \"%s\"); motorul lexical nu le poate trata, deci "
+                      "se abţine." % (len(der), der[0]["sursa"], der[0]["fragment"][:120]),
+                derogari=der[:5])
+
+
+def _raspunde(q, idx):
     data_ref, precizie, frag_data = data_referinta(q["intrebare"])
     if not data_ref:
         # D5: o intrebare fara data intreaba de regula in vigoare in ziua in care e pusa. R-DATA o

@@ -1,0 +1,170 @@
+{
+ "_ce": "Consolidatele la zi aduse de FiscalOS din legislatie.just.ro (C12), cu provenienta, data formei consolidate si SHA256. Livrabil pentru iConta: le poate prelua in anaf_surse. Fisierele sunt in surse_oficiale/.",
+ "sursa": "https://legislatie.just.ro",
+ "adus_la": "2026-09-28T18:45:40",
+ "cum_se_ajunge_la_text": "Pentru actele mari, pagina actului de aprobare e un ciot cu o trimitere S_REF catre documentul care conţine codul/normele (DetaliiDocumentAfis/<id>). Raspunde limitei notate in PORTAL_IDS.json.",
+ "acte": [
+  {
+   "act_in_anaf_surse": "cod_fiscal_227_2015_consolidat",
+   "id_portal": "171280",
+   "de_ce": "C12",
+   "data_formei_consolidate": "08.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 6544,
+   "atomi_instantaneu": 5971,
+   "fisiere": [
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__171280.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/171280",
+     "id_portal": "171280",
+     "consolidare": "08.08.2026",
+     "sha256": "68f754b7cbfedf91387cd9c2c5a49b7f236de70cd5cde2577fca11ccc5212983",
+     "octeti": 74637,
+     "articole": 0
+    },
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__312601.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312601",
+     "id_portal": "312601",
+     "consolidare": "08.08.2026",
+     "sha256": "2393786755c97dc5af3274e832e27082bed0b6119dae0d47a6201756a1b765e0",
+     "octeti": 7625635,
+     "articole": 3137
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_70_2015_consolidat",
+   "id_portal": "167088",
+   "de_ce": "C12",
+   "data_formei_consolidate": "01.01.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 71,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "legea_70_2015_consolidat__167088.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/167088",
+     "id_portal": "167088",
+     "consolidare": "01.01.2026",
+     "sha256": "661b016484f74b5268da3172b1311754cb759ee5051f45a48479e7b808b6c49b",
+     "octeti": 156710,
+     "articole": 71
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "opanaf_3769_2015_d394_baza",
+   "id_portal": "174685",
+   "de_ce": "C12",
+   "data_formei_consolidate": "17.09.2025",
+   "folosit_de_FiscalOS": false,
+   "motiv_nefolosire": "versiunea oficiala e mai saraca (25 atomi fata de 104)",
+   "atomi_oficial": 25,
+   "atomi_instantaneu": 104,
+   "fisiere": [
+    {
+     "fisier": "opanaf_3769_2015_d394_baza__174685.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174685",
+     "id_portal": "174685",
+     "consolidare": "17.09.2025",
+     "sha256": "1f65c2437853588890b7f092b8ce56ab6ea78d3f80337e476e139b9f8fae8d66",
+     "octeti": 266995,
+     "articole": 24
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_207_2015_consolidat",
+   "id_portal": "170005",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "data_formei_consolidate": "08.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 3818,
+   "atomi_instantaneu": 3965,
+   "fisiere": [
+    {
+     "fisier": "legea_207_2015_consolidat__170005.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/170005",
+     "id_portal": "170005",
+     "consolidare": "08.08.2026",
+     "sha256": "b8fe60746247260a6fac441551d9f78abb32030809e68c5599d7b644a46c0031",
+     "octeti": 60899,
+     "articole": 0
+    },
+    {
+     "fisier": "legea_207_2015_consolidat__312603.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312603",
+     "id_portal": "312603",
+     "consolidare": "08.08.2026",
+     "sha256": "44e0c401e6b66ac962f8a413418eec7194130ec3d62972baf4ef9cab19eb9166",
+     "octeti": 4939890,
+     "articole": 1577
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_1_2016_norme_cod_fiscal",
+   "id_portal": "174822",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "data_formei_consolidate": "31.03.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 4850,
+   "atomi_instantaneu": 3725,
+   "fisiere": [
+    {
+     "fisier": "hg_1_2016_norme_cod_fiscal__174822.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174822",
+     "id_portal": "174822",
+     "consolidare": "31.03.2026",
+     "sha256": "32b2634d6b380861ca6bf993b8c3b149cff84558ecc15ef4130e30d0756a3b2e",
+     "octeti": 64162,
+     "articole": 4
+    },
+    {
+     "fisier": "hg_1_2016_norme_cod_fiscal__307847.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/307847",
+     "id_portal": "307847",
+     "consolidare": "31.03.2026",
+     "sha256": "114e36ac8c52dae4a8d701c68f3c1a6bc8f8d0b3d9af1c76fc333a516e9d7cff",
+     "octeti": 6703467,
+     "articole": 0
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "omfp_1802_2014",
+   "id_portal": "164320",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "data_formei_consolidate": "19.11.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 1594,
+   "atomi_instantaneu": 1332,
+   "fisiere": [
+    {
+     "fisier": "omfp_1802_2014__164320.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/164320",
+     "id_portal": "164320",
+     "consolidare": "19.11.2025",
+     "sha256": "0a4cd2b2d294708c306ae76943a42875f8c9ec1797302a25c7f472e75304881b",
+     "octeti": 88977,
+     "articole": 25
+    },
+    {
+     "fisier": "omfp_1802_2014__303279.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/303279",
+     "id_portal": "303279",
+     "consolidare": "19.11.2025",
+     "sha256": "8e1cc194188b278951b8acfd5e416b1bd0ca9a17508d9beb97e404725e1c533c",
+     "octeti": 4748261,
+     "articole": 53
+    }
+   ]
+  }
+ ]
+}

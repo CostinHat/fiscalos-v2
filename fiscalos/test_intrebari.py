@@ -49,9 +49,13 @@ def test_fiecare_raspuns_declara_valabilitatea_la_data_intrebarii():
 
 
 def test_citatul_verbatim_e_chiar_in_atom():
-    """Fragmentul citat trebuie sa fie literal in textul atomului - altfel e o afirmaţie, nu o proba."""
+    """Fragmentul citat trebuie sa fie literal in textul atomului - altfel e o afirmaţie, nu o proba.
+
+    Raspunsurile din artefacte/intrebari/ au fost produse pe INSTANTANEUL iConta, inainte de stratul
+    oficial (C12); se verifica pe corpusul cu care au fost produse, nu pe cel de azi - altfel un text
+    consolidat mai nou ar face sa para inventat un citat care era literal la momentul lui."""
     from fiscalos import potrivire
-    c = potrivire.Corpus()
+    c = potrivire.Corpus(oficiale=False)
     r = json.load(open(os.path.join(_RAD, "artefacte", "intrebari", "raspunsuri.json"),
                        encoding="utf-8"))
     for x in r["raspunsuri"]:
@@ -70,11 +74,18 @@ def test_intrebari_v1_ramane_neatins():
 
 
 def test_fiecare_raspuns_semantic_a_trecut_verificarea_mecanica():
-    """Niciun RASPUNS al stratului semantic fara verificare trecuta si fara citat literal in atom."""
+    """Niciun RASPUNS al stratului semantic fara verificare trecuta si fara citat literal in atom.
+
+    Fiecare versiune se verifica pe corpusul cu care a fost produsa: v2 pe instantaneu, v3 cu stratul
+    oficial."""
     from fiscalos import potrivire
-    c = potrivire.Corpus()
-    r = json.load(open(os.path.join(_RAD, "intrebari", "v2", "raspunsuri_semantic.json"),
-                       encoding="utf-8"))
+    for ver, oficiale in (("v2", False), ("v3", True)):
+        f = os.path.join(_RAD, "intrebari", ver, "raspunsuri_semantic.json")
+        if os.path.exists(f):
+            _verifica_semantic(json.load(open(f, encoding="utf-8")), potrivire.Corpus(oficiale=oficiale))
+
+
+def _verifica_semantic(r, c):
     n = 0
     for x in r["raspunsuri"]:
         if x["stare"] == "RASPUNS":

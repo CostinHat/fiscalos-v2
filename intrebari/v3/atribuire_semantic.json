@@ -1,0 +1,22 @@
+{
+ "disparute": [
+  {
+   "id": "Q-SAL-08",
+   "cauze": [
+    "variatie intre rulari"
+   ],
+   "atomi_noi_citati": [],
+   "atomi_din_relatie": []
+  }
+ ],
+ "aparute": [
+  {
+   "id": "Q-TVA-05",
+   "cauza": "modelul s-a abţinut"
+  },
+  {
+   "id": "Q-SAL-04",
+   "cauza": "modelul s-a abţinut"
+  }
+ ]
+}

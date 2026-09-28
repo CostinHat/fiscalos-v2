@@ -50,8 +50,10 @@ cu aceleași diacritice, spații și punctuație -, între 40 și 400 de caracte
 scurtezi din interior, nu unești bucăți. Primul citat din listă este cel decisiv: fragmentul care \
 stabilește răspunsul.
 
-3. Orice cifră din `raspuns` (procent, sumă, număr de zile/luni/ani, dată) trebuie să apară literal, \
-cu aceeași scriere, într-unul dintre citatele tale sau în textul întrebării. NU calculezi: dacă \
+3. Orice VALOARE LEGALĂ din `raspuns` (cotă, procent, plafon, prag, limită, termen legal, număr de \
+zile/luni/ani) trebuie să apară literal, cu aceeași scriere, într-unul dintre citatele tale - chiar \
+dacă apare și în întrebare. Cifrele din întrebare sunt permise numai ca FAPTE ALE CAZULUI (date, sume \
+ale cazului). NU calculezi: dacă \
 răspunsul cere un rezultat obținut prin calcul (o înmulțire, o sumă, o diferență) care nu apare \
 literal într-un atom, răspunzi cu stare NU_POT și explici în `motiv` că e nevoie de un calcul. Nu \
 pune în `raspuns` trimiteri la articole (temeiul se dă prin citate).
@@ -70,7 +72,13 @@ enumeri în `lipsa` faptele care lipsesc și citezi atomul care arată dependen�
 valoroasă decât un răspuns ghicit.
 
 8. `raspuns` e scurt, în română: faptul cerut, fără ocolișuri. Pentru NU_POT și INCOMPLET, `raspuns` \
-e un șir gol."""
+e un șir gol.
+
+9. Unii atomi poartă atributul `deroga_de_la` sau `modifica`: sunt reguli speciale care derogă de la \
+alt atom din context, îl modifică sau fac excepție de la el. Dacă citezi un atom de la care un alt \
+atom din context derogă, TREBUIE să tratezi derogarea: fie o citezi (dacă se aplică cazului), fie o \
+treci în `derogari_tratate` cu explicația de ce nu se aplică cazului din întrebare. Un răspuns care \
+ignoră o derogare prezentă în context e respins."""
 
 SCHEMA = {
     "type": "object",
@@ -83,15 +91,22 @@ SCHEMA = {
             "properties": {"atom": {"type": "string"}, "fragment": {"type": "string"}},
             "required": ["atom", "fragment"], "additionalProperties": False}},
         "lipsa": {"type": "array", "items": {"type": "string"}},
+        "derogari_tratate": {"type": "array", "items": {
+            "type": "object",
+            "properties": {"atom": {"type": "string"}, "cum": {"type": "string"}},
+            "required": ["atom", "cum"], "additionalProperties": False}},
         "motiv": {"type": "string"},
     },
-    "required": ["stare", "declaratie", "raspuns", "citate", "lipsa", "motiv"],
+    "required": ["stare", "declaratie", "raspuns", "citate", "lipsa", "derogari_tratate", "motiv"],
     "additionalProperties": False,
 }
 
 
 # ── contextul: numai ce a gasit cautarea mecanica ────────────────────────────────────────────────
-def context(q, idx):
+MAX_DEROGARI = 8
+
+
+def context(q, idx, rel=None):
     data_ref, precizie, frag = intrebari.data_referinta(q["intrebare"])
     if not data_ref:
         data_ref, precizie, frag = intrebari.DATA_INTREBARII, "implicita (ziua intrebarii)", None
@@ -102,6 +117,20 @@ def context(q, idx):
             if x["id"] not in vazut and len(atomi) < MAX_ATOMI:
                 vazut.add(x["id"])
                 atomi.append(x)
+    # C17 (a): atomii care DEROGA DE LA / fac EXCEPTIE DE LA / MODIFICA un atom gasit, valabili la data
+    # intrebarii, intra in context, marcati. `relatie[id]` = [(fel, id_tinta)].
+    relatie = {}
+    if rel is not None:
+        adaugate = 0
+        for a in list(atomi):
+            for e in rel.asupra(a, data_ref):
+                relatie.setdefault(e["sursa"], []).append((e["fel"], a["id"]))
+                if e["sursa"] not in vazut and adaugate < MAX_DEROGARI:
+                    x = idx.corp.dupa_id.get(e["sursa"])
+                    if x is not None:
+                        vazut.add(x["id"])
+                        atomi.append(x)
+                        adaugate += 1
     stem = set(intrebari._stemuri(intrebari._extinde(q["intrebare"])))
     blocuri = []
     for a in atomi:
@@ -114,25 +143,49 @@ def context(q, idx):
             c = sorted(poz)[len(poz) // 2] if poz else 0
             i = max(0, min(c - MAX_CARACTERE_ATOM // 2, len(txt) - MAX_CARACTERE_ATOM))
             txt = txt[i:i + MAX_CARACTERE_ATOM]
-        blocuri.append('<atom id="%s" temei="%s" valabil_din="%s"%s>\n%s\n</atom>'
+        rel_atr = "".join(' %s="%s"' % ("modifica" if fel == "modificare" else "deroga_de_la", t)
+                          for fel, t in relatie.get(a["id"], []) if t in vazut)
+        blocuri.append('<atom id="%s" temei="%s" valabil_din="%s"%s%s>\n%s\n</atom>'
                        % (a["id"], intrebari.temei_uman(a), a.get("valabil_din") or "nedovedit",
-                          ' fragment="trunchiat"' if trunchiat else "", txt))
+                          ' fragment="trunchiat"' if trunchiat else "", rel_atr, txt))
     utilizator = ("<intrebare>%s</intrebare>\n<data_referinta>%s (%s)</data_referinta>\n\n%s"
                   % (q["intrebare"], data_ref, precizie, "\n\n".join(blocuri)))
-    return utilizator, atomi, data_ref, precizie
+    return utilizator, atomi, data_ref, precizie, relatie
 
 
 # ── verificarea MECANICA ─────────────────────────────────────────────────────────────────────────
 _SPATII = re.compile(r"\s+")
 _CIFRA = re.compile(r"\d+(?:[.,]\d+)*")
 _TRIMITERE = re.compile(r"\b(art|alin|lit|pct|nr|anexa)\.?\s*\(?[\w^]+\)?", re.I)
+# V1 (defect de clasa, gasit dupa rularea v3): identificatorul unui ACT ("OPANAF 587/2016",
+# "Legea nr. 227/2015") nu e o valoare - e o trimitere. Verificatorul il trata ca pe o cifra si a respins
+# la Q-PRF-09 un raspuns corect pe fond ("587" si "2016" nu apareau in citate). Se scoate, ca si
+# trimiterile la articole, inainte de verificarea cifrelor.
+_ID_ACT = re.compile(r"\b\d{1,5}/(19|20)\d\d\b")
 
 
 def _n(t):
     return _SPATII.sub(" ", t or "").strip()
 
 
-def verifica(out, atomi, intrebare, data_ref):
+# C13: o cifra e VALOARE LEGALA daca e procent, termen (zile/luni/ani, "inclusiv") sau sta langa un
+# cuvant de valoare legala; atunci trebuie sa fie intr-un CITAT, chiar daca apare si in intrebare.
+# Datele calendaristice (zz.ll.aaaa) sunt fapte ale cazului.
+_LEGAL_DUPA = re.compile(r"^\s*(%|(de\s+)?(zile|zi|luni|ani)\b|inclusiv)", re.I)
+_LEGAL_LANGA = re.compile(r"cot[aăe]|procent|plafon|prag|limit|termen|nivel|maxim|minim|valoare[a]? "
+                          r"(nominal|minim|maxim|fiscal)", re.I)
+_DATA = re.compile(r"^\d{1,2}\.\d{1,2}\.\d{4}$")
+
+
+def e_valoare_legala(text, m):
+    if _DATA.match(m.group(0)):
+        return False
+    if _LEGAL_DUPA.match(text[m.end():m.end() + 12]):
+        return True
+    return bool(_LEGAL_LANGA.search(text[max(0, m.start() - 40):m.start()]))
+
+
+def verifica(out, atomi, intrebare, data_ref, relatie=None):
     """Lista de incalcari; goala = raspunsul trece. Nu cheama niciun model."""
     dupa_id = {a["id"]: a for a in atomi}
     greseli = []
@@ -151,11 +204,25 @@ def verifica(out, atomi, intrebare, data_ref):
             greseli.append("atomul %s nu era in vigoare la %s" % (c["atom"], data_ref))
     if out["stare"] == "RASPUNS":
         citate = " ".join(_n(c["fragment"]) for c in out["citate"])
-        rasp = _TRIMITERE.sub(" ", out["raspuns"] or "")
-        for cifra in _CIFRA.findall(rasp):
-            if cifra not in citate and cifra not in intrebare:
+        rasp = _ID_ACT.sub(" ", _TRIMITERE.sub(" ", out["raspuns"] or ""))
+        for m in _CIFRA.finditer(rasp):
+            cifra = m.group(0)
+            if e_valoare_legala(rasp, m):
+                if cifra not in citate:
+                    greseli.append("valoarea legala %r nu apare in niciun citat (C13: o valoare "
+                                   "legala se dovedeste din atom, chiar daca e si in intrebare)" % cifra)
+            elif cifra not in citate and cifra not in intrebare:
                 greseli.append("cifra %r din raspuns nu apare literal in citate sau in intrebare"
                                % cifra)
+    # C17 (b): o derogare prezenta in context, de la un atom citat, trebuie TRATATA
+    if out["stare"] == "RASPUNS" and relatie:
+        citati = {c["atom"] for c in out["citate"]}
+        tratate = {d["atom"] for d in out.get("derogari_tratate") or []}
+        for sursa, tinte in relatie.items():
+            if sursa in dupa_id and any(t in citati for _f, t in tinte) and \
+                    sursa not in citati and sursa not in tratate:
+                greseli.append("C17: atomul %s deroga de la / modifica un atom citat si raspunsul nu "
+                               "il trateaza" % sursa)
         if not (out["raspuns"] or "").strip():
             greseli.append("raspuns gol")
     if out["stare"] == "INCOMPLET" and not out["lipsa"]:
@@ -210,8 +277,8 @@ def cheama(client, utilizator):
     return r
 
 
-def raspunde(q, idx, client):
-    utilizator, atomi, data_ref, precizie = context(q, idx)
+def raspunde(q, idx, client, rel=None):
+    utilizator, atomi, data_ref, precizie, relatie = context(q, idx, rel)
     baza = {"id": q["id"], "tip": q["tip"], "intrebare": q["intrebare"],
             "data_referinta": data_ref, "precizie_data": precizie, "strat": "semantic"}
     t0 = time.time()
@@ -222,6 +289,11 @@ def raspunde(q, idx, client):
                        "cache_scriere": getattr(u, "cache_creation_input_tokens", 0) or 0,
                        "cache_citire": getattr(u, "cache_read_input_tokens", 0) or 0},
             "cost_usd": round(_cost(u, r.model), 5), "secunde": round(time.time() - t0, 2)}
+    # C15: fallback-ul se pastreaza; orice raspuns venit de la modelul de rezerva se MARCHEAZA
+    iteratii = getattr(u, "iterations", None) or []
+    apel["fallback"] = bool(r.model != MODEL
+                            or any(getattr(b, "type", "") == "fallback" for b in r.content)
+                            or any(getattr(x, "type", "") == "fallback_message" for x in iteratii))
     if r.stop_reason == "refusal":
         return dict(baza, stare="NU_POT_RASPUNDE", raspuns=None, argument=[], apel=apel,
                     motiv="modelul a refuzat cererea (stop_reason=refusal) - abţinere")
@@ -231,18 +303,28 @@ def raspunde(q, idx, client):
     except ValueError:
         return dict(baza, stare="NU_POT_RASPUNDE", raspuns=None, argument=[], apel=apel,
                     motiv="iesirea modelului nu e JSON valid (stop_reason=%s)" % r.stop_reason)
-    greseli = verifica(out, atomi, q["intrebare"], data_ref)
+    return finalizeaza(baza, out, atomi, q, data_ref, relatie, apel)
+
+
+def finalizeaza(baza, out, atomi, q, data_ref, relatie, apel):
+    """Verificarea mecanica + forma raspunsului. Fara model: se poate re-rula pe o propunere salvata."""
+    greseli = verifica(out, atomi, q["intrebare"], data_ref, relatie)
     dupa_id = {a["id"]: a for a in atomi}
     argument = [{"atom": c["atom"], "temei": intrebari.temei_uman(dupa_id[c["atom"]]),
                  "act": dupa_id[c["atom"]]["act"], "verbatim": c["fragment"],
                  "valabilitate": intrebari._valabilitate(dupa_id[c["atom"]], data_ref)}
                 for c in out["citate"] if c["atom"] in dupa_id]
     rez = dict(baza, declaratie=out["declaratie"], propunerea_modelului=out, apel=apel,
-               verificare={"trece": not greseli, "incalcari": greseli})
+               verificare={"trece": not greseli, "incalcari": greseli},
+               relatii_in_context=relatie,
+               derogari_tratate=out.get("derogari_tratate") or [])
     if greseli:
         return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None, argument=argument,
                     motiv="VERIFICAREA MECANICA a respins propunerea modelului: " + "; ".join(greseli))
     if out["stare"] == "RASPUNS":
+        # C14: langa orice Da/Nu, citatul decisiv - ca cititorul sa-l poata verifica
+        if re.match(r"^\s*(Da|Nu)\b", out["raspuns"] or "") and argument:
+            rez["citat_decisiv"] = {"atom": argument[0]["atom"], "fragment": argument[0]["verbatim"]}
         return dict(rez, stare="RASPUNS", raspuns=out["raspuns"], argument=argument,
                     motiv="propus de model, trecut prin verificarea mecanica: citate verbatim, cifre "
                           "literale")
@@ -255,6 +337,33 @@ def raspunde(q, idx, client):
                 motiv="modelul s-a abţinut: " + out["motiv"])
 
 
+def reverifica(fis, dest):
+    """Re-verifica propunerile SALVATE ale modelului cu verificatorul de acum - fara niciun apel.
+
+    Contextul se reconstruieste determinist (cautarea e mecanica), deci verificarea vede exact atomii
+    pe care i-a vazut modelul. Asa se masoara o reparatie a verificatorului pe aceleasi iesiri."""
+    from fiscalos import relatii
+    vechi = json.load(open(fis, encoding="utf-8"))
+    idx = intrebari.Index()
+    rel = relatii.Relatii(idx.corp)
+    Q = {q["id"]: q for q in intrebari.incarca_intrebari()}
+    ies = []
+    for r in vechi["raspunsuri"]:
+        if not r.get("propunerea_modelului"):
+            ies.append(r)
+            continue
+        q = Q[r["id"]]
+        _u, atomi, data_ref, precizie, relatie = context(q, idx, rel)
+        baza = {k: r[k] for k in ("id", "tip", "intrebare", "data_referinta", "precizie_data", "strat")}
+        ies.append(finalizeaza(baza, r["propunerea_modelului"], atomi, q, data_ref, relatie, r["apel"]))
+    rez = dict(vechi, raspunsuri=ies, reverificat_la=time.strftime("%Y-%m-%dT%H:%M:%S"),
+               raspunse=sum(1 for r in ies if r["stare"] == "RASPUNS"),
+               respinse_de_verificare=sum(1 for r in ies if r.get("verificare") and
+                                          not r["verificare"]["trece"]))
+    json.dump(rez, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    return rez
+
+
 def ruleaza(dest=None, simulare=False):
     t0 = time.time()
     idx = intrebari.Index()
@@ -262,12 +371,16 @@ def ruleaza(dest=None, simulare=False):
     qs = intrebari.incarca_intrebari()
     if simulare:
         # fara apel: marimea contextului, pentru o estimare de cost INAINTE de a cheltui ceva
-        L = [len(context(q, idx)[0]) for q in qs]
+        from fiscalos import relatii
+        rel = relatii.Relatii(idx.corp)
+        L = [len(context(q, idx, rel)[0]) for q in qs]
         return {"intrebari": len(qs), "caractere_context": sum(L), "max": max(L),
                 "tokeni_intrare_estimati": int(sum(L) / 3.2) + len(qs) * int(len(SISTEM) / 3.2)}
     import anthropic
+    from fiscalos import relatii
     client = anthropic.Anthropic(api_key=cheie())
-    ies = [raspunde(q, idx, client) for q in qs]
+    rel = relatii.Relatii(idx.corp)
+    ies = [raspunde(q, idx, client, rel) for q in qs]
     for r in ies:
         if r["stare"] == "RASPUNS":
             assert r["argument"] and r["verificare"]["trece"], r["id"]
@@ -279,6 +392,11 @@ def ruleaza(dest=None, simulare=False):
            "respinse_de_verificare": sum(1 for r in ies if r.get("verificare") and
                                          not r["verificare"]["trece"]),
            "incomplete_detectate": sum(1 for r in ies if r.get("tip_abtinere") == "INCOMPLET"),
+           "de_la_modelul_de_rezerva": [r["id"] for r in ies if r.get("apel", {}).get("fallback")],
+           "respinse_C17": [r["id"] for r in ies if any("C17" in g for g in
+                                                          (r.get("verificare") or {}).get("incalcari", []))],
+           "respinse_C13": [r["id"] for r in ies if any("C13" in g for g in
+                                                          (r.get("verificare") or {}).get("incalcari", []))],
            "tokeni": tok, "cost_usd": round(sum(r["apel"]["cost_usd"] for r in ies if r.get("apel")), 4),
            "secunde_index": round(t_idx, 2), "secunde_total": round(time.time() - t0, 2),
            "raspunsuri": ies}
