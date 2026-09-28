@@ -1,0 +1,3640 @@
+{
+ "_ce": "Manifestul instantaneului de corpus FiscalOS v2. Leaga fiecare id de atom de octetii din care a fost extras.",
+ "fisiere": {
+  "D107_XML_2024_010726.pdf": {
+   "mtime_sursa": "2026-08-12T21:32:29",
+   "octeti": 125529,
+   "sha256": "f1b41f3c6f2d4a4309c356bb899e865c20edca376f972135457f5826a08fadbc"
+  },
+  "D107_XML_2024_010726.pdf.sha256": {
+   "mtime_sursa": "2026-08-12T21:32:29",
+   "octeti": 65,
+   "sha256": "a3964aa3d4ff239075b1afbfd7c98c525ed1e0e0ebb000c278ca079ada388c30"
+  },
+  "D107_XML_2024_010726.txt": {
+   "mtime_sursa": "2026-08-12T21:32:29",
+   "octeti": 681,
+   "sha256": "9695b0219622ff285304ac76235b8ddf27386c49f547b212b21b3304f360bbc1"
+  },
+  "D112_XML_2026_0726_050826.pdf": {
+   "mtime_sursa": "2026-08-08T23:27:32",
+   "octeti": 317975,
+   "sha256": "ef49b18a9a68b8af3f44b7bd6219d682261eef7987366d9ee994a4d5f580973b"
+  },
+  "D112_XML_2026_0726_050826.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "67bf6234af7924af122937ccf3274b30214ae4bcac057295b9c8dde9d517b127"
+  },
+  "D212_IstoriaVersiunilor.txt": {
+   "mtime_sursa": "2026-08-14T15:07:28",
+   "octeti": 5924,
+   "sha256": "4c8a2c53323a96d0c0f2cb037512a1b0a57e4d8860ec9332538443ae435f01ff"
+  },
+  "D212_IstoriaVersiunilor.txt.sha256": {
+   "mtime_sursa": "2026-08-14T15:07:56",
+   "octeti": 94,
+   "sha256": "e7a52c993e5d521bb9fb9757a68873fc66ed3be69d52c7ad139b22bce1059134"
+  },
+  "D311_XML_2021_290121.pdf": {
+   "mtime_sursa": "2026-08-12T14:35:33",
+   "octeti": 102825,
+   "sha256": "8e8c3016dac398a2585caf4b54611b4ebb6bf1440cc8e23fbd02833c8750654e"
+  },
+  "D311_XML_2021_290121.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f3591c75ae539dcfb8b32a13be5e2f3318f3938a963f2d9c4a5e4b4953714d91"
+  },
+  "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.html": {
+   "mtime_sursa": "2026-08-13T17:18:14",
+   "octeti": 470283,
+   "sha256": "0aa63b5b1ee5a28b77029415ca49849ab6fe096dbabc97b318ae2265eb17151b"
+  },
+  "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "ca15eff8c846754817be8a805146831becfadbbf082cc798aa6da89e40d87cda"
+  },
+  "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 122248,
+   "sha256": "912e5fc6a5ecbad6297eb2490bbdeb25c8b72134675eef0c7e376b34b256fc4d"
+  },
+  "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.html": {
+   "mtime_sursa": "2026-08-13T17:18:14",
+   "octeti": 293016,
+   "sha256": "75264d1a3675921b9fc647de800a2eeca36851631057fcb101e736514ed5e6e2"
+  },
+  "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f971f8477834aeedf511636aa7bf75b72c35f250a4c2b68dcc1e81e5f2902250"
+  },
+  "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 80451,
+   "sha256": "2163780df65e74d96cf3e1588f3f4175e53f1863b69d46f1468eb083bf2239d9"
+  },
+  "INDEX.json": {
+   "mtime_sursa": "2026-09-01T06:51:27",
+   "octeti": 76356,
+   "sha256": "d2589c634d9f1d3abfcade8810044441216a630d06eb46d9ff708905691273f1"
+  },
+  "OPANAF_3562_2024_D177.pdf": {
+   "mtime_sursa": "2026-08-04T16:14:16",
+   "octeti": 306903,
+   "sha256": "666287b2224397da1f3178906929bc42b1e0873d89ad73d65b83af413670a34a"
+  },
+  "OPANAF_3562_2024_D177.pdf.sha256": {
+   "mtime_sursa": "2026-08-04T16:14:16",
+   "octeti": 92,
+   "sha256": "876218a1cc06f77c6fc005e822834a05221701afea94a95bbf325162f8aee840"
+  },
+  "OPANAF_3562_2024_D177.txt": {
+   "mtime_sursa": "2026-08-04T16:14:34",
+   "octeti": 41165,
+   "sha256": "2d48dc053b4161eb34757249996613304e155f48db681ef3098ff47a7c93ea2f"
+  },
+  "PORTAL_IDS.json": {
+   "mtime_sursa": "2026-09-01T03:57:09",
+   "octeti": 3256,
+   "sha256": "8f97463d91a371c3f2ef99fa49f1c98e8384d9e1d4fb075fd8cbddf4b8999e43"
+  },
+  "PROVENIENTA.json": {
+   "mtime_sursa": "2026-09-25T17:47:46",
+   "octeti": 40752,
+   "sha256": "8febc458200db286e33d8c3a9df8993a8921297b2a2f250a97c02adde1a4eb6e"
+  },
+  "RAPORT_verificare_temeiuri.md": {
+   "mtime_sursa": "2026-08-02T19:08:25",
+   "octeti": 14194,
+   "sha256": "a5757bd75d8b4369e4042109e715421201965091fbfbe2298d86c395926c4698"
+  },
+  "anaf_bilete_de_valoare.pdf": {
+   "mtime_sursa": "2026-08-02T18:27:49",
+   "octeti": 203339,
+   "sha256": "e161cce1543a033d880242b03e3ba8c1c697eec1ff37478f63d4c141543603be"
+  },
+  "anaf_bilete_de_valoare.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "63f58b6e89f4a1857999d842235f1bf4ee7cad658dc0d85f51aed5333a0d5051"
+  },
+  "anaf_bilete_de_valoare.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 19340,
+   "sha256": "33d91bdc13f0f664767da7bdf489fcb9a136dfb11ace7c8e83178cb08a2e6ca2"
+  },
+  "anaf_cass_concedii_medicale_2024.pdf": {
+   "mtime_sursa": "2026-08-13T15:44:45",
+   "octeti": 162848,
+   "sha256": "a8e11cb1f4604970eab277ed0dd95019c8feeb63ef52bf1ca1d9ae67a3188aa2"
+  },
+  "anaf_cass_concedii_medicale_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "e2e7ff399a743018904c191f2a0735ff89b644892b9fb6c311b9cbbb3b625860"
+  },
+  "anaf_cass_concedii_medicale_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 6720,
+   "sha256": "8ab058f711a3dd5718c9ccce3cc9b1c705ff8c3b3a8e7cc15ab41716a81c652a"
+  },
+  "anaf_concedii_2025.pdf": {
+   "mtime_sursa": "2026-08-02T18:27:48",
+   "octeti": 141570,
+   "sha256": "45533d358283af2567a9ee0731b9fd52b849d506eb66d10cfb974d8a41a40173"
+  },
+  "anaf_concedii_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "45822d8cff686def3d8539fd16fcad828264bc71099d07aea547783838d49813"
+  },
+  "anaf_concedii_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 4710,
+   "sha256": "294e55d015c318b90aa2ff9627d1cddc8665d4d9e57e38d993a769813e3da469"
+  },
+  "anaf_concedii_medicale_contributii.pdf": {
+   "mtime_sursa": "2026-08-13T15:44:45",
+   "octeti": 274455,
+   "sha256": "10c58c5d89c93d42aaeb360f877c9bb9dd30fd95cb9241d9f76b586e0b557402"
+  },
+  "anaf_concedii_medicale_contributii.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "5d30599f709b02e0b3dd2729fb6dfc21e4da56401974d601342c824daf16fba0"
+  },
+  "anaf_concedii_medicale_contributii.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 7401,
+   "sha256": "66471adf109b1204f6ec3a375c7e3d7645870756c97dcdaf9fb86f3f1a0160c9"
+  },
+  "anaf_limite_2025.pdf": {
+   "mtime_sursa": "2026-08-02T18:31:55",
+   "octeti": 335267,
+   "sha256": "a019c3e403bb838795e019e3f10598110f80a4911417081c04082195241a11a8"
+  },
+  "anaf_limite_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "387b8a2ad895b63472f0637b3078f2ac81fdd3d41b078312e37c8765e520fea8"
+  },
+  "anaf_limite_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 47380,
+   "sha256": "97eb340d50b9aff3c2a15d262b1412f23b9fe426bacae771c1b0b6d64b4b35ab"
+  },
+  "anaf_mo_apr_2026.pdf": {
+   "mtime_sursa": "2026-08-02T18:31:19",
+   "octeti": 381430,
+   "sha256": "a4fc05e12d0c4a6af364ada9dc82478be8820f419b383658d7a4861005d0fab0"
+  },
+  "anaf_mo_apr_2026.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "a8e83c6eb168d219997f0c06d823f86bfdb39e94643b64738535acb42ee4c604"
+  },
+  "anaf_mo_apr_2026.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 51290,
+   "sha256": "bb5d2988b523ebbef2c15386465220376932e67528b0d5cfe785843c066818dd"
+  },
+  "anaf_oug_153_2020_capital_propriu.pdf": {
+   "mtime_sursa": "2026-08-13T15:45:44",
+   "octeti": 902802,
+   "sha256": "73b1ca8f5ac7e0f4112b0a9d409a9e54358120828e77e12c76f230bd3b8d9500"
+  },
+  "anaf_oug_153_2020_capital_propriu.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "1dc65d8851e57dd3274cafb94accb03c15b64a86cb1d2acadef6dfbd7110a504"
+  },
+  "anaf_oug_153_2020_capital_propriu.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 12917,
+   "sha256": "679fe9ac85739c4cf4623833097ad24a1956084e19260022c388ab46e149a0d7"
+  },
+  "anaf_oug_153_2020_reduceri_impozit.pdf": {
+   "mtime_sursa": "2026-08-13T15:45:45",
+   "octeti": 185876,
+   "sha256": "09ee11b87e614bc2587579159df292f308fad2619cfddd2e09f48a1d83f9b2ae"
+  },
+  "anaf_oug_153_2020_reduceri_impozit.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "be9615c47a020bd776ce2b56520412a98ae2389e8413c2f269f83b189e23a50c"
+  },
+  "anaf_oug_153_2020_reduceri_impozit.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 9132,
+   "sha256": "c0c17e26cbac0a1faa81ceab3dfb74e51e761fdf8eebe2786520ffb9d13fb056"
+  },
+  "cf_2015_forma_initiala.html": {
+   "mtime_sursa": "2026-08-09T12:29:19",
+   "octeti": 4719210,
+   "sha256": "ca983a5e8f594b775b825073708e91c96e9d56c94fb5934090dc669cf0a6283c"
+  },
+  "cf_2015_forma_initiala.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "487fa5689e895fe4de87091abb15d9e4ae823b4cdde4e3c053ac88c51ef87fe0"
+  },
+  "cf_2015_forma_initiala.txt": {
+   "mtime_sursa": "2026-08-13T17:27:08",
+   "octeti": 1398978,
+   "sha256": "119861c2d07a20b6d1ac21e5fc4eda85cb4aca90303d8abc757e196ca7297dfd"
+  },
+  "cf_art291_2016_forma_initiala.txt": {
+   "mtime_sursa": "2026-08-03T13:01:54",
+   "octeti": 4400,
+   "sha256": "d065557f42007b7daf31757a5c9c11b40bd6b6e2c41f07ba4c4d674ff1863817"
+  },
+  "cf_art56_alin15_istoric_micro_sponsorizare.txt": {
+   "mtime_sursa": "2026-08-03T13:02:17",
+   "octeti": 5616,
+   "sha256": "918054ae26e79b69ada82a9ba000fefb6659c14c7b5b4324503fed1ebb8e3819"
+  },
+  "cod_civil_287_2009_art_1616_1623_compensare.html": {
+   "mtime_sursa": "2026-08-14T10:21:02",
+   "octeti": 2967,
+   "sha256": "900d1b0f4bba7b3e2d9be030592ced10106fc6e50d19338a418c92c319146ec5"
+  },
+  "cod_civil_287_2009_art_1616_1623_compensare.html.sha256": {
+   "mtime_sursa": "2026-08-14T10:21:02",
+   "octeti": 115,
+   "sha256": "279c91239efb02309a46e647ce36f71bab592c4201af8e40f84f03124c0d044c"
+  },
+  "cod_civil_287_2009_art_1616_1623_compensare.txt": {
+   "mtime_sursa": "2026-08-14T10:21:02",
+   "octeti": 2805,
+   "sha256": "bd6642459671b4e8365b93795f96963d3a37f7639f1a4c0887e117b968ed96c0"
+  },
+  "cod_fiscal_227_2015_consolidat.html": {
+   "mtime_sursa": "2026-08-02T18:29:26",
+   "octeti": 7606800,
+   "sha256": "4a749d6cf95a810ad4f574972a8866fa555ee4811d5a5645ae4e80d8347c033d"
+  },
+  "cod_fiscal_227_2015_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "a8c8d08c4e432677493de2974ea276afda845bde175ac3eb0a27c309d9261271"
+  },
+  "cod_fiscal_227_2015_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 2652334,
+   "sha256": "1b92ca11bf33d70c941e35251c4fa967048402daf4b6f02173a886b96a568747"
+  },
+  "d010_d020_d070_d700_status.md": {
+   "mtime_sursa": "2026-08-12T18:28:20",
+   "octeti": 2728,
+   "sha256": "1894135084ddf889d0a6346fb8266c63b4a61db74a40174114048fd696e155bd"
+  },
+  "d100_struct_anaf.txt": {
+   "mtime_sursa": "2026-07-16T08:53:24",
+   "octeti": 62430,
+   "sha256": "03587b51b6def12b32d60c5db22b2ae49cb2baddefb26fb073d229b7ad1fd37e"
+  },
+  "d100_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "436ae47c51574d3569c76950b68006c88403fa34890b7747381879f3e7551a17"
+  },
+  "d101_scadenta_conflict_lege_validator.md": {
+   "mtime_sursa": "2026-08-03T17:11:01",
+   "octeti": 2942,
+   "sha256": "09022c663607f1425e15375b2ad87e97c23059f79a86761c223f17f531b4fb24"
+  },
+  "d101_struct_anaf.txt": {
+   "mtime_sursa": "2026-07-16T08:13:42",
+   "octeti": 22568,
+   "sha256": "a930b33f0b1df971dc753ce93b28de465e1fe09e0acee1209b34c24b4f7385d6"
+  },
+  "d101_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "3446cf4e4b71206cfda3b9a548790f169ddbbe1151c85582f753abbd85d9c803"
+  },
+  "d104.xsd": {
+   "mtime_sursa": "2026-08-13T00:37:18",
+   "octeti": 5585,
+   "sha256": "203d437985dc3b0e1ed27f771f8c04edd07c25b2776e5b04cf05202875d3c2d6"
+  },
+  "d104.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T00:37:18",
+   "octeti": 65,
+   "sha256": "60dfebf1b41b34d513b79be9a2eced25202ff927e85f55edc3b7f0ae97b9dff8"
+  },
+  "d110_20260330.xsd": {
+   "mtime_sursa": "2026-08-13T01:17:36",
+   "octeti": 6324,
+   "sha256": "79e41550426a50a7efa8f772e11a4c0f57e1f1f03561044aa7976da92d036946"
+  },
+  "d110_20260330.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T01:17:36",
+   "octeti": 65,
+   "sha256": "de6717bbbfef51101ff836dc2189f8240459af4dc87f070f1dadb7365dcf30bb"
+  },
+  "d112_06082026.xsd": {
+   "mtime_sursa": "2026-08-08T23:27:31",
+   "octeti": 79833,
+   "sha256": "c3ca8f4217465cdf0744f41d6de84b4478b9423f5490563b9aa1df20d301f1e1"
+  },
+  "d112_06082026.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "83572c48d6b836c4ddcc191a090ca56d60cc804cd9f28c010b541fc101462765"
+  },
+  "d112_struct_anaf.txt": {
+   "mtime_sursa": "2026-07-16T08:08:01",
+   "octeti": 191383,
+   "sha256": "eb11fd3b23b282a6144735039b40a08ebf64dfd829d71a2f60f5062fe421ec4d"
+  },
+  "d112_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "045e371d33463c26dfef50391e03e0bb9086851ec09086667c6ffe3b720ca3d2"
+  },
+  "d177_structura_note.txt": {
+   "mtime_sursa": "2026-08-04T16:16:05",
+   "octeti": 2176,
+   "sha256": "23b0cb675af74684049ad6ad750f92e08d2679a56360c4de419dc4dff873e74f"
+  },
+  "d205_struct_anaf.txt": {
+   "mtime_sursa": "2026-07-16T08:08:02",
+   "octeti": 18037,
+   "sha256": "6bae3e45831421bb2fd168f3f718fa31dd904cc577c9c78f4fe6bf3abf3a3257"
+  },
+  "d205_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "7593f27a089ca5f6d763d87b2023f0d642a3a5d71da0568ea62f8fc49fd7668e"
+  },
+  "d214/SHA256": {
+   "mtime_sursa": "2026-08-14T13:17:27",
+   "octeti": 207,
+   "sha256": "f0f00fbe31ef95686fe603ff9bb33c3a8f8f2b879b619223257abd5d4cf82612"
+  },
+  "d214/d214_static_anaf.html": {
+   "mtime_sursa": "2026-08-14T13:17:27",
+   "octeti": 5720,
+   "sha256": "8a0a63e4fe99a9d88fc69c38493fa3d70da4da3e54a05699d5be73eb1d61574e"
+  },
+  "d214/d214_static_anaf.txt": {
+   "mtime_sursa": "2026-08-14T13:17:27",
+   "octeti": 774,
+   "sha256": "1df2cc57d88e664c827cdfdad38eff66b197208689768d1327eb168a0ea3e84a"
+  },
+  "d220_20180108.xsd": {
+   "mtime_sursa": "2026-08-13T00:42:53",
+   "octeti": 43199,
+   "sha256": "67848b810cf9b7f1643db6754cccc39a67b23d04ed9fb52e4362e34057a53f72"
+  },
+  "d220_20180108.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T00:42:53",
+   "octeti": 65,
+   "sha256": "a2432892193d70cb4a15d7b77bfb2eab8be107b0258661ca882b826f7bd27b8e"
+  },
+  "d221_20170303.xsd": {
+   "mtime_sursa": "2026-08-13T01:07:50",
+   "octeti": 8706,
+   "sha256": "14920badf64351cc49060e9b5dc9f70a2945c8982140419fb38e678071be2df2"
+  },
+  "d221_20170303.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T01:07:50",
+   "octeti": 65,
+   "sha256": "3ea86c775ab516962b418e1345e11775bbdb313d40db3d54d2ac484a71cfcd39"
+  },
+  "d223_20160113.xsd": {
+   "mtime_sursa": "2026-08-13T00:53:20",
+   "octeti": 31170,
+   "sha256": "d8b8e6b808b54b3fc8fe92fad522400336fb3542830b156017150e0768e36e29"
+  },
+  "d223_20160113.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T00:53:20",
+   "octeti": 65,
+   "sha256": "3f11a54c92031ecda125f8b9f3bf90c36694ac59630701a38ac7245deafe700a"
+  },
+  "d230_structura_din_validator.md": {
+   "mtime_sursa": "2026-08-12T18:04:50",
+   "octeti": 3030,
+   "sha256": "7850359f68f4c34880459d950ae5d48f7bbb5091a425b486f4555e957ceca010"
+  },
+  "d300_struct_anaf.txt": {
+   "mtime_sursa": "2026-07-16T08:08:04",
+   "octeti": 37498,
+   "sha256": "3e926891a1e99caee959868cc0098c21072deceb2483174a71e3f3279a008c5a"
+  },
+  "d300_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "0476db1daab64b20d008716b8c76dd4ee9ccc4bde237918a0431990cd3168766"
+  },
+  "d301_struct_anaf.txt": {
+   "mtime_sursa": "2026-08-04T11:30:06",
+   "octeti": 6354,
+   "sha256": "e50c4350155d872a578348507e1200d9902c58640ea23a178385e7f97c689584"
+  },
+  "d301_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "83b69fdf3195034020de27a3ce6b0ea4c1ba0781797d650e3884bbeb09f17180"
+  },
+  "d307_20171205.xsd": {
+   "mtime_sursa": "2026-08-13T01:26:38",
+   "octeti": 4663,
+   "sha256": "dd454d712a8427a0f6ebb0b9e725a51ab152880c5e8b1ea64003afcbebc0b457"
+  },
+  "d307_20171205.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T01:26:38",
+   "octeti": 65,
+   "sha256": "59d2981f96b75213757e7f6623eee6ed69bfc540d828351b1eca140ff630ecea"
+  },
+  "d311_20210129.xsd": {
+   "mtime_sursa": "2026-08-12T14:35:33",
+   "octeti": 4691,
+   "sha256": "4576b822100ca20ee5cf8d874c356ad8bfa7e129735e65b047acdc56d367d95a"
+  },
+  "d311_20210129.xsd.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "06db084fd0e48965b1a0519555d05b7b669b59dd3472daef4e170d3c514f08e7"
+  },
+  "d318_instructiuni_anaf.html": {
+   "mtime_sursa": "2026-08-14T12:37:42",
+   "octeti": 4611,
+   "sha256": "d7aed73953368ab7679e72b698537a3bf13eb3b788bbd66a32bd0163bab8b66a"
+  },
+  "d318_instructiuni_anaf.html.sha256": {
+   "mtime_sursa": "2026-08-14T12:37:42",
+   "octeti": 94,
+   "sha256": "2bc5e3e7925072d9e67539f9c05f37365d224ecb3ea50f7e47fea7a9a2dfe344"
+  },
+  "d390_struct_anaf.txt": {
+   "mtime_sursa": "2026-08-04T11:46:47",
+   "octeti": 8571,
+   "sha256": "312641d9d7521197806bd9555ee8420a7626a3563af8eda87ed5b23f8375603d"
+  },
+  "d390_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "59917e1a737d5e4ee91ab360bbadcb9e2fde9e190e35ca08e895940431ffce2f"
+  },
+  "d394_codpr_gaze_naturale.txt": {
+   "mtime_sursa": "2026-08-03T13:02:48",
+   "octeti": 1422,
+   "sha256": "711ff5aa9215546648b30dc49eb1811419335a89f954dcf516e96c5906cf68a2"
+  },
+  "d394_struct_anaf.txt": {
+   "mtime_sursa": "2026-08-03T23:32:43",
+   "octeti": 67542,
+   "sha256": "c84b49ebaba96a3878d6e333ddee26a48725fd48a60f577b5bb69574e625e989"
+  },
+  "d394_struct_anaf.txt.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 87,
+   "sha256": "8d49d6c689e2cb570b2e18432108b3fa450e9863d0b833a50af25f7bd4f6bce8"
+  },
+  "d402_20160226.xsd": {
+   "mtime_sursa": "2026-08-14T13:19:01",
+   "octeti": 18278,
+   "sha256": "91025c5b3ea113aeaf42cc004b356c27a1395626ad8a43fd4c282fb1eb8c7cee"
+  },
+  "d402_20160226.xsd.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 84,
+   "sha256": "817a836d74595541deffb76685f99980b61e3de1704d2d73099c737d1f45091a"
+  },
+  "d402_20160226_xsd_linii.txt": {
+   "mtime_sursa": "2026-08-14T13:19:01",
+   "octeti": 21918,
+   "sha256": "3b7f0f054f2f20925a0a62cc2c99100fa9f1c1ed8191a8dabcf11c0f8ee51bd0"
+  },
+  "d402_surse_sha256.txt": {
+   "mtime_sursa": "2026-08-14T13:19:01",
+   "octeti": 177,
+   "sha256": "22d5c63141668729fab83aba101e9f36541557409d169a43430b37ee1bfc4b81"
+  },
+  "d406_nomenclatoare_anaf.properties": {
+   "mtime_sursa": "2026-07-15T12:03:07",
+   "octeti": 65269,
+   "sha256": "10abf062f205b00ad142f58b04f1c859d5bfc368b8624532f319989a4ab8664e"
+  },
+  "d406_schema_anaf.xlsx": {
+   "mtime_sursa": "2026-07-15T12:17:57",
+   "octeti": 2020107,
+   "sha256": "d0981202182438e4597ff3bc27d2c41dec06c60bc32b86620c1de29a9cb8436d"
+  },
+  "gen_index.py": {
+   "mtime_sursa": "2026-09-01T06:51:10",
+   "octeti": 9745,
+   "sha256": "a3366a6b18873c6bb12485193130166ada078f6375e44688204b9ecd19f4ed16"
+  },
+  "hg518_1995_diurna_externa.txt": {
+   "mtime_sursa": "2026-08-03T13:00:11",
+   "octeti": 2228,
+   "sha256": "bc48ff1255f39b07315b63a4e4e27a6e010155ac2d7ed215d821b5448a14449b"
+  },
+  "hg714_2018_diurna_interna.txt": {
+   "mtime_sursa": "2026-08-03T12:59:46",
+   "octeti": 1837,
+   "sha256": "ff5891288c82991000d79d65f47fdc35b99e2bb61f920b6b88aba75d8d625477"
+  },
+  "hg_1045_2018_hotarare.html": {
+   "mtime_sursa": "2026-08-02T18:30:14",
+   "octeti": 67212,
+   "sha256": "fb704cfe95391a6922f729fe8ec0604e9058acd34ed42d5e4e6108167a0717b7"
+  },
+  "hg_1045_2018_hotarare.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "8b9325aebebecb088f00589699b61f261b5a7d2801638d4608d81fe09e16b13f"
+  },
+  "hg_1045_2018_hotarare.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 6117,
+   "sha256": "81695238ecf54cdb3896d0f94d6fcc93524496c410253f7ff63b844826dd5d77"
+  },
+  "hg_1045_2018_norme_consolidat.html": {
+   "mtime_sursa": "2026-08-02T18:30:13",
+   "octeti": 300254,
+   "sha256": "2976752f05fbe42cb49f96a4e9aa1ba248ee565cf3de8a889aea5da740be7ad1"
+  },
+  "hg_1045_2018_norme_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "44bb33352c20a0b8f3dbc4ca853936f03027cd4c552120dac7a23957fbb9c4ca"
+  },
+  "hg_1045_2018_norme_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 70394,
+   "sha256": "5d2edf0cd48116d6d087f26ad151709438327503c39823d8d42408e9130e593b"
+  },
+  "hg_1074_2021.html": {
+   "mtime_sursa": "2026-08-24T15:14:31",
+   "octeti": 338937,
+   "sha256": "4f64a788de4eda09883e9e3aa441138f79ddfe7e414378e2ec22edf49412072d"
+  },
+  "hg_1074_2021.html.sha256": {
+   "mtime_sursa": "2026-08-24T15:36:41",
+   "octeti": 65,
+   "sha256": "d940457d5bf714cbc929b897f2a5d485101b87551ec796590a873cddb8e1b204"
+  },
+  "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.html": {
+   "mtime_sursa": "2026-08-13T17:18:06",
+   "octeti": 288181,
+   "sha256": "321575b0c89eafb204da25cdac4c2ddaa514e6703f39f764f9bc5539bae50cfd"
+  },
+  "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "28959710f4d348aa939e947a836a44b1c52369ec6ca6f3c4f95938614c3e3bdb"
+  },
+  "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 70920,
+   "sha256": "e582ba0b1d4133caf677685de64b1f3f736231eb2597a485f04ac3ec266529a3"
+  },
+  "hg_1094_2025.html": {
+   "mtime_sursa": "2026-08-24T16:42:18",
+   "octeti": 275041,
+   "sha256": "aa7a6ebc062450f997acd8d2c9ac81094b389e7fb7e6a75614771b01ef1ea537"
+  },
+  "hg_1094_2025.html.sha256": {
+   "mtime_sursa": "2026-08-24T16:47:32",
+   "octeti": 65,
+   "sha256": "f75c01327270febcfb3c3de01a7402943c10605e65a20edc40b41adafd41cebe"
+  },
+  "hg_145_2026.html": {
+   "mtime_sursa": "2026-08-24T15:14:31",
+   "octeti": 67695,
+   "sha256": "099c4049c0130d47504a737a3690a04a508465d388bd2d7002a4cf56f9e61f24"
+  },
+  "hg_145_2026.html.sha256": {
+   "mtime_sursa": "2026-08-24T15:36:41",
+   "octeti": 65,
+   "sha256": "50069eee683848b2a6b9475732ae950f0f6fb93794f2636829c520ca10c325f2"
+  },
+  "hg_146_2026_salariu_minim.html": {
+   "mtime_sursa": "2026-08-02T19:27:43",
+   "octeti": 52500,
+   "sha256": "403b8e9832cce7da7753d333718fad2eec599f8d7a45fc88d66d0507e77a3446"
+  },
+  "hg_146_2026_salariu_minim.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "b48174334bfdc1115a7434a3b64e300a009a9576d1e91af1ed85c9a35425b2de"
+  },
+  "hg_146_2026_salariu_minim.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 3902,
+   "sha256": "51565f7bcc348de21e120bddcead5ae2752dcd063b625c1bb6f545367b2a8708"
+  },
+  "hg_1506_2024_salariu_minim.html": {
+   "mtime_sursa": "2026-08-02T19:27:42",
+   "octeti": 52328,
+   "sha256": "d4e67352ca09faee4dab9f9e4784f44f9a93b580ef0b9f2fc09a44a146f5e4f7"
+  },
+  "hg_1506_2024_salariu_minim.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "c76b877ae66ca708271c0cbc921c42a3838932a8093ffdca3eeca5d03f8282d2"
+  },
+  "hg_1506_2024_salariu_minim.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 3743,
+   "sha256": "484695d9b5d6585379f9b7b0801229c0a6adb107d91486af7d85b056cfa4db66"
+  },
+  "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.html": {
+   "mtime_sursa": "2026-08-13T17:18:06",
+   "octeti": 112188,
+   "sha256": "c6d5d33f4c1507af34a6dcdd17a7cfd315f7aa1992bbf5e805425155b325e67b"
+  },
+  "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "cce8eae6b81a8362fd6779ea7eade39bd884a9b71c8def50b036d095483f88a8"
+  },
+  "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 19068,
+   "sha256": "2a27180d210a7407075e9bacb734c98c97e13325d13babd6e69d973b890dbc53"
+  },
+  "hg_1_2016_norme_cod_fiscal.html": {
+   "mtime_sursa": "2026-08-09T14:06:56",
+   "octeti": 6382763,
+   "sha256": "3f4db71fbe8e90251011ee23d4dede89a75cffb19142d5588262d6d9a529275d"
+  },
+  "hg_1_2016_norme_cod_fiscal.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "7d3a67f20f95088516b7e6bfbede402f00773407b97d1ef93d6b2beb67111890"
+  },
+  "hg_1_2016_norme_cod_fiscal.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 2259965,
+   "sha256": "224e4e263458355a4057fbe581b05879cc6297b61af2a893a92abbf331fa7983"
+  },
+  "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.html": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 996200,
+   "sha256": "1bf5961d1ad9a204341429dc1d63e6d674072bc481259979764e02cd7dffd0c7"
+  },
+  "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.html.sha256": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 125,
+   "sha256": "1a289b3880ec8435432e3d2f1dd33ea40c0734947483d9ec688c0be29d4889e8"
+  },
+  "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.txt": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 102231,
+   "sha256": "a9a35403b455ac6d5f8852d01dcc7fc63a120f2ddf616da5b1d0a4aee4034f37"
+  },
+  "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.txt.sha256": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 124,
+   "sha256": "5645ca380015aa2d4d3d7a8572cf14281f152a985bbc392aadf3715aa4ad0320"
+  },
+  "hg_276_2013.html": {
+   "mtime_sursa": "2026-08-09T12:33:05",
+   "octeti": 54099,
+   "sha256": "883ec63be87def952a08ff8968115c617efd2892d7964e711a12384cb9a76049"
+  },
+  "hg_276_2013.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "01b0b4af0b9b157c24961453f5680847ffc5f73de4ef464b77dc24ec77085ac9"
+  },
+  "hg_276_2013.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 3713,
+   "sha256": "93514e06cb3e2bd8e763c3263269d8956d7d3f5115273a698cbe2f4c6f638f17"
+  },
+  "hg_295_2025_reges_online_registru_salariati.html": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 140376,
+   "sha256": "da4735cd902028970617ab6abd366a8e624e4df870f6ad386a9a9b0f760e9568"
+  },
+  "hg_295_2025_reges_online_registru_salariati.html.sha256": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 115,
+   "sha256": "5050ff92e51a5dd18e9ff525192a5c85b03796580eb438a5120fd5e898f7247a"
+  },
+  "hg_295_2025_reges_online_registru_salariati.txt": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 30626,
+   "sha256": "7046987a2bc6a0463e89098a54e72b76b31925002a4b42239722d19f194c10fc"
+  },
+  "hg_295_2025_reges_online_registru_salariati.txt.sha256": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 114,
+   "sha256": "23ba665dc23052297d1b9514f7dada217d411a9717097f3df4fe37ae89c8f8c3"
+  },
+  "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.html": {
+   "mtime_sursa": "2026-08-13T17:18:06",
+   "octeti": 193647,
+   "sha256": "0bd6f581cacdbb5449d7a0f73796fbd6e17feb0ac9b22e056357e49deedc1f9b"
+  },
+  "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "e290f1f7da3c81f6fd32f495b316c34d3ae79ee9302ea48dcd9ea81d906d00be"
+  },
+  "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 15247,
+   "sha256": "13f1c038a3c1fb5e745c3266a4a9a64568d658c9130a1c7a145c198d27bc43d7"
+  },
+  "hg_479_2003.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 56190,
+   "sha256": "edd1e4159a7f8a0213cfcd2b1d9f34e4ded6e953c6daab5c4577df1ba3198b2a"
+  },
+  "hg_479_2003.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "d4fb4e84cc700d593fafb100e630ac39c7d8a68f4fcc4494581fa0c843870d86"
+  },
+  "hg_518_1995.html": {
+   "mtime_sursa": "2026-08-24T15:14:32",
+   "octeti": 408545,
+   "sha256": "ae75807499ca9d5e353a9d4ac710bfc9103a492cc4f8d62c2d816c36908dcbcb"
+  },
+  "hg_518_1995.html.sha256": {
+   "mtime_sursa": "2026-08-24T15:36:41",
+   "octeti": 65,
+   "sha256": "53a54d01ba02431eb72c35668cd7163a7b5efeaa290a2784d63e3e39485c6471"
+  },
+  "hg_598_2024_stabilirea_salariului_baza_minim_brut.html": {
+   "mtime_sursa": "2026-08-13T17:18:07",
+   "octeti": 52972,
+   "sha256": "6922e3d9726ce47d9b4fc7e3d7ba4f8588ebffee6ccd53b9d62c3a575429ad4e"
+  },
+  "hg_598_2024_stabilirea_salariului_baza_minim_brut.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "3e81b9f66f0825437be9f3d27e0c1d12ac2c77c8b703d9a7d528d385479f3bfb"
+  },
+  "hg_598_2024_stabilirea_salariului_baza_minim_brut.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 3892,
+   "sha256": "9bc5fb7718ba5bbe9fd3378e10a3a4da7a78fef558c9718aacf215d216364ab5"
+  },
+  "hg_685_1999_norme_compensare_creante_datorii.html": {
+   "mtime_sursa": "2026-08-14T10:25:52",
+   "octeti": 153326,
+   "sha256": "75e36eea1e74b303f5927188992c305a1e31485751eb6bf35d1f3e0f3cc1cf77"
+  },
+  "hg_685_1999_norme_compensare_creante_datorii.html.sha256": {
+   "mtime_sursa": "2026-08-14T10:25:52",
+   "octeti": 116,
+   "sha256": "263ce690448b72ee34b9b4d8138c090d77589caa72dc18b6ed84f039a613dedb"
+  },
+  "hg_685_1999_norme_compensare_creante_datorii.txt": {
+   "mtime_sursa": "2026-08-14T10:25:52",
+   "octeti": 29658,
+   "sha256": "894b2719c12e9a70a4b6d0d31225ce8ac8265ac2ddcbaf280113133fd615ba82"
+  },
+  "hg_773_2019_norme_monitorizare_datorii_nerambursate.html": {
+   "mtime_sursa": "2026-08-14T11:03:17",
+   "octeti": 51889,
+   "sha256": "0af78cc6eed8612fb2f81a7f56bb64b17869f3d3da62a09aa296443b93f42c6d"
+  },
+  "hg_773_2019_norme_monitorizare_datorii_nerambursate.html.sha256": {
+   "mtime_sursa": "2026-08-14T11:03:17",
+   "octeti": 123,
+   "sha256": "84049a848392f7949516884e68b476a9a88fac28f86984e08d5a90b0eed8523d"
+  },
+  "hg_773_2019_norme_monitorizare_datorii_nerambursate.txt": {
+   "mtime_sursa": "2026-08-14T11:03:17",
+   "octeti": 11656,
+   "sha256": "3f0eda891f4017a63d7675964a222b703f544982dc332a497ea6b6dfd3fc1e4a"
+  },
+  "hg_773_2019_norme_monitorizare_datorii_nerambursate.txt.sha256": {
+   "mtime_sursa": "2026-08-14T11:03:17",
+   "octeti": 122,
+   "sha256": "446690fc1d4e6de009c18a791adc510240900f133ea8cce0f098e610b87ba7ee"
+  },
+  "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.html": {
+   "mtime_sursa": "2026-08-13T17:18:05",
+   "octeti": 52890,
+   "sha256": "70d540717025fc02c0124cd344f4ee077fed15b606b0bcb858d05b6a23264d77"
+  },
+  "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "3dd4214a5fb09ed98d2370b1949b95bb1d56229c8e1c710d5f29bab8bac20d52"
+  },
+  "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 3194,
+   "sha256": "958c64f8016d5314a111eda645257d14c54cea8fd25c5498536a5662bb9ec1c1"
+  },
+  "hg_867_2015.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 778480,
+   "sha256": "a184fe37f827c6c4d5f1c9661c815ac6d5e48a7546bafcf3c1bd964796716d92"
+  },
+  "hg_867_2015.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "fa162334f986bd0b6a2e285977a2b9cf1bc328e722000c2d16817be2a5097cf6"
+  },
+  "hg_905_2017.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 133899,
+   "sha256": "4b25b65746478d201f24ce503cffc723d1f268c6c82a84c0f9fea05cd350306b"
+  },
+  "hg_905_2017.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "319c4caa48d2fe0640cfbf9130fbf1ecc58f0855c42fb20b291bc0db6d06dcff"
+  },
+  "impozit_dividende_istoric_cote.txt": {
+   "mtime_sursa": "2026-08-16T02:18:01",
+   "octeti": 2370,
+   "sha256": "7254391f4be98666c928ec3112afa74ade6550906229da0c9c2f2dfeb6755951"
+  },
+  "lege_64_2026.html": {
+   "mtime_sursa": "2026-08-09T10:24:33",
+   "octeti": 59333,
+   "sha256": "3d145d87131a8b1ca67b112bd0fd78420ba97284adbe8e265036e04c36f40d84"
+  },
+  "lege_64_2026.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "18130219eb33b5005bb85c5e96aa2213639bb93ea30b2d9c963229aa6acc4de0"
+  },
+  "lege_64_2026.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 6049,
+   "sha256": "3f6a75de71f16e5ea180ba61a37dbc390357a47696d67e900a2c8e11aa567847"
+  },
+  "legea_125_2006_rambursarea_ratelor_capital_cota_parte.html": {
+   "mtime_sursa": "2026-08-13T17:18:07",
+   "octeti": 55634,
+   "sha256": "747189f4a8a182ac7dab3746fd540c37e5cc99db48347ae9acc312106e762340"
+  },
+  "legea_125_2006_rambursarea_ratelor_capital_cota_parte.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "2fd9449a93b60ec8e028767e6ce93cdc44e8daa9d433ca2d71bc6510c61acabc"
+  },
+  "legea_125_2006_rambursarea_ratelor_capital_cota_parte.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 4404,
+   "sha256": "c64857198b71efceabf9a14f2cca6991faaf6817ef6baad24de3b47a498951cd"
+  },
+  "legea_129_2019.html": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 978414,
+   "sha256": "1aa9cea9c00ae79d414748f5161d756014ac049f90686f263c678b51840873d4"
+  },
+  "legea_129_2019.html.sha256": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 65,
+   "sha256": "85ab41f0929fa00b82db5fc875a4c449503ee1958e65659f6a14bfb48a1c80b3"
+  },
+  "legea_136_2020_consolidat.html": {
+   "mtime_sursa": "2026-08-09T11:41:14",
+   "octeti": 175288,
+   "sha256": "c5d41ca4aac518f89ea1d71bba14e502a4b6b42205034dc0301f44a1327dbc5b"
+  },
+  "legea_136_2020_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "9676660b3139000b3861e58ff9b9d8a86df6ce8bdc8b422c0db32049784d940b"
+  },
+  "legea_136_2020_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 54464,
+   "sha256": "27570987d094b51acdc5e29a42848e4dd46440f1b3a8aaf510354a851302d0de"
+  },
+  "legea_141_2025.pdf": {
+   "mtime_sursa": "2026-08-02T18:27:43",
+   "octeti": 531837,
+   "sha256": "ee46f1e5164bdd0262de8707269cb83d263dadf40366f5b273e79699bbc434ef"
+  },
+  "legea_141_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "5e7e35ba04c45ab14b34fcb67d634ec8430dfe2a4140270ac609ed88af3a8fe2"
+  },
+  "legea_141_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 179590,
+   "sha256": "167851ddfd22acffb0296453aacbc3b54dbf6cd874a621d0afc50c8b4bfbf73b"
+  },
+  "legea_141_2025_consolidat.html": {
+   "mtime_sursa": "2026-08-02T18:27:44",
+   "octeti": 646128,
+   "sha256": "4a9b4058824473021a64f086e57fdf07757f4ef2887eafd086fdf4340f0333ee"
+  },
+  "legea_141_2025_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "91ca2ccd11374669e38e33b03ea763b6c81c77ec18df37312467e8a59752991a"
+  },
+  "legea_141_2025_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 173682,
+   "sha256": "23c0b9b2f5958eeb1d1e69af3089c51658c6e659d4e470e4e33bf0a97cb09c78"
+  },
+  "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.html": {
+   "mtime_sursa": "2026-08-13T17:18:08",
+   "octeti": 132970,
+   "sha256": "3f0bfdea6209d4a26623d451602abb8bc9c94cefd6b7e790f0eee7c13ad09ea7"
+  },
+  "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "df54259e7c3c400ab6db4b915fe16de5756b496c1b4af90f0934355cd7a2b172"
+  },
+  "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 23887,
+   "sha256": "e90b14ed1ad41b14e6a4b743b3a08e276bba8e8df53b0b7bf240e0a54537b67f"
+  },
+  "legea_160_2026.html": {
+   "mtime_sursa": "2026-08-24T16:42:20",
+   "octeti": 79959,
+   "sha256": "ae4b550703bfc88d0131d1057e66185ef9e8a63888850c13a1631b540e615eb5"
+  },
+  "legea_160_2026.html.sha256": {
+   "mtime_sursa": "2026-08-24T16:47:32",
+   "octeti": 65,
+   "sha256": "ada4fd5607f6945376c420f67b7b4d07db34ececb27e7e92718f01641c26e440"
+  },
+  "legea_161_2026.html": {
+   "mtime_sursa": "2026-08-24T16:42:19",
+   "octeti": 69660,
+   "sha256": "2ee7f2b442601a9a0bbaf133a043c89e5b2ded7cab92d5518b2ac7ad555c43fd"
+  },
+  "legea_161_2026.html.sha256": {
+   "mtime_sursa": "2026-08-24T16:47:32",
+   "octeti": 65,
+   "sha256": "b4e2ff9af30fa5d47658fb4c3203f713934cc2f9d48d426b5c6b1848d1b2f2d6"
+  },
+  "legea_165_2018_anaf.pdf": {
+   "mtime_sursa": "2026-08-02T18:31:19",
+   "octeti": 115464,
+   "sha256": "279d11648cf67b007fe236bb352f20878d376927da8645bacb435516d8a73b6e"
+  },
+  "legea_165_2018_anaf.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "7ed6b2a3e6a2416fde388765f909aca2d8d901aa801e09dd9e51d97d11eb88f6"
+  },
+  "legea_165_2018_anaf.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 34784,
+   "sha256": "dd28dc1d55baf79bac9bf93efbecc26766943831b3998955a0c9e7248e411b0e"
+  },
+  "legea_165_2018_consolidat.html": {
+   "mtime_sursa": "2026-08-02T18:27:48",
+   "octeti": 200346,
+   "sha256": "a07dd35925095f3a128fd2273279f76d94251b0204441cc9e0b0d763c66d9819"
+  },
+  "legea_165_2018_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "9dcc5e21f6fb66e72367d6d0202252fd8b812fd45457da45993bbe003ccf36d3"
+  },
+  "legea_165_2018_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 41036,
+   "sha256": "52dde38076983b91143eea2d05aacfaebeaa01484bbd15d5187698a1502a6e48"
+  },
+  "legea_165_2018_mf_2024.pdf": {
+   "mtime_sursa": "2026-08-02T18:27:49",
+   "octeti": 221239,
+   "sha256": "d226bd5a0cdd8364eb774d96d991b20128afb33ea4d7036a91507032dbf9f79b"
+  },
+  "legea_165_2018_mf_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "2298f70b127f804becd5b00f905ff3485ab198cf936cf446d1231e37ee2ec054"
+  },
+  "legea_165_2018_mf_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 43946,
+   "sha256": "8d2cdf3145bfec12cade1bddcbeb78079e7103a0f9817c46e5f42ee602c1cad1"
+  },
+  "legea_175_2018_modificarea_completarea_291_2_legea.html": {
+   "mtime_sursa": "2026-08-13T17:18:08",
+   "octeti": 54703,
+   "sha256": "42b00d431666c271b1b3a5a697cc4dd56e1dc4987d497a5bd1f96a73b0a0ddbc"
+  },
+  "legea_175_2018_modificarea_completarea_291_2_legea.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "7b6a76cad9d3afa6d8da9d86febc489c6fe70fbc8b86f4c73b95c39a73aa7e1e"
+  },
+  "legea_175_2018_modificarea_completarea_291_2_legea.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 3443,
+   "sha256": "2dee296c8db6cf396919106aa36be86db9e16ecb03568a5484d0e8f3620b8d0c"
+  },
+  "legea_1_2020.html": {
+   "mtime_sursa": "2026-08-24T16:42:19",
+   "octeti": 1048798,
+   "sha256": "159f35494c1f4627ee74f652415bdfa5d2e11348ba34803bf85de8aaba2cd6eb"
+  },
+  "legea_1_2020.html.sha256": {
+   "mtime_sursa": "2026-08-24T16:47:32",
+   "octeti": 65,
+   "sha256": "656c62b4d2e91760279a6dfc3ddcbb4def072fe4df2b5b6d58b325787f825aa7"
+  },
+  "legea_201_2025.html": {
+   "mtime_sursa": "2026-08-07T13:53:18",
+   "octeti": 55926,
+   "sha256": "b6212bec1a068af4b5022d5059b8161bcb1e5097438f1e5b9e00d5451bcfe985"
+  },
+  "legea_201_2025.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "5f134268703875c718a158ba1c3d3cc6ef32691c4711fdd3a705f7bf639b3085"
+  },
+  "legea_201_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 4066,
+   "sha256": "0c89545855a6df7595c1a5ac25499d1caa9ff8fc892fd1c7ddef8ef59c517850"
+  },
+  "legea_207_2015_consolidat.html": {
+   "mtime_sursa": "2026-08-13T08:50:31",
+   "octeti": 2098242,
+   "sha256": "504b8fd78c2e4430dbb14095095c8a107ee7c7adc00c4a0f4b71715dade39e76"
+  },
+  "legea_207_2015_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T08:50:31",
+   "octeti": 65,
+   "sha256": "0962c52ea301e588d73395d449dd8e1a0fc3c6cc4f366bcdf10fb0cf4b7e2730"
+  },
+  "legea_207_2015_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T08:50:31",
+   "octeti": 1554407,
+   "sha256": "37cda2af71cb64ec3acffbd185147d09eb081a92678538292a9774632100ee2e"
+  },
+  "legea_226_2023.html": {
+   "mtime_sursa": "2026-08-24T15:14:32",
+   "octeti": 282918,
+   "sha256": "fc181966c1ad4415f5547317a0abc5d1f5b0aa8f3d47dd11760e7d74849d8e56"
+  },
+  "legea_226_2023.html.sha256": {
+   "mtime_sursa": "2026-08-24T15:36:41",
+   "octeti": 65,
+   "sha256": "840d45c0ea4d52fc9827d6335b16728472e7d55de6b1c2169c496065a861532e"
+  },
+  "legea_230_2007.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 230824,
+   "sha256": "79f4df57179fc4a4d88ea6d91b829d84835e078d3d5809d39262c8ecf729e5bf"
+  },
+  "legea_230_2007.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "361d0dadc9da863af463495acd6d8e99d3658f1f73fbf8ae7d4383da13347cbc"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.html": {
+   "mtime_sursa": "2026-08-13T18:03:11",
+   "octeti": 810730,
+   "sha256": "ce71366ba3fab6f5162ec4afa3c6a488886d3f2fe9a4b990d8490c50b7aee5d5"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.html.sha256": {
+   "mtime_sursa": "2026-08-13T18:10:22",
+   "octeti": 65,
+   "sha256": "02a5d619c8e95b450d69431e5f949af2346b0b96f24840414b5f1e972b322e82"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.txt": {
+   "mtime_sursa": "2026-08-13T18:10:22",
+   "octeti": 249274,
+   "sha256": "36187cca0cc418c4eb92fc0c85d6935380859307514afd903ca23650e9550301"
+  },
+  "legea_241_2005.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 237826,
+   "sha256": "cdd2ea9b32dd9d8d4f3733b78a4c3fc3e4def399c45f213a362f1a094446f1bb"
+  },
+  "legea_241_2005.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "364a978b701e70cbf90ce08d0a8e0ed42a3e71ba6ae1e646f90cd14bf66e95b5"
+  },
+  "legea_265_2022.html": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 759566,
+   "sha256": "670fa7be2be5831b50b76c6e9baf5491cf8d0a0174e81d1786c554272ecb6fdc"
+  },
+  "legea_265_2022.html.sha256": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 65,
+   "sha256": "ebe51d4e3410e34b05d1ab6dceb47481c1a9cc5343154ccd72af91021e882216"
+  },
+  "legea_26_1990.html": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 274205,
+   "sha256": "c87a49ec8500150868b5e1272df4006392cc9646b7a43a99ac4a9663e4ae07b3"
+  },
+  "legea_26_1990.html.sha256": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 65,
+   "sha256": "30f0309631b4515d801006666daa25b957fe6b25ade1c8b626662104028dfcc4"
+  },
+  "legea_273_2006_fin_publice_locale.pdf": {
+   "mtime_sursa": "2026-08-13T15:47:07",
+   "octeti": 487877,
+   "sha256": "9be762044e9c70eab414fd68dd3935c84ed2700064acea1e37b71f4e2cea8185"
+  },
+  "legea_273_2006_fin_publice_locale.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "9ccbf2ece2f0bd54749d0a53c7a92667793a094fb227e74aac8de1a515cb43b9"
+  },
+  "legea_273_2006_fin_publice_locale.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 198263,
+   "sha256": "af2ea5168ba772f373935cd1a0d84eed3782f735df26e47612b24c100a23f026"
+  },
+  "legea_287_2009.html": {
+   "mtime_sursa": "2026-09-24T11:02:51",
+   "octeti": 6266084,
+   "sha256": "b62d868d19b987d09ac86481ba9e3da56ca93fd37b80d4d3441ac3f0481a5bf4"
+  },
+  "legea_287_2009.html.sha256": {
+   "mtime_sursa": "2026-09-24T11:02:51",
+   "octeti": 65,
+   "sha256": "ddea5ca0605595af46461a1f64f5354cc19e12160a2ed5e958e1949b4ca33ddf"
+  },
+  "legea_296_2020_consolidat.html": {
+   "mtime_sursa": "2026-08-09T11:41:10",
+   "octeti": 670703,
+   "sha256": "ce30a213c3a8b85ca82047c706e9dced4713e1d074b30cf7df88fb778b3e9e55"
+  },
+  "legea_296_2020_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "44983eef1aaa0c0421f1ca89ead7fbe363a056197a1ee32fe8c1518d972bf70c"
+  },
+  "legea_296_2020_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 211007,
+   "sha256": "99b5abf95562bf61249d1a96efb1fd06b0d53c48f8556df648e73d629e6a8966"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.html": {
+   "mtime_sursa": "2026-08-13T18:03:12",
+   "octeti": 1023416,
+   "sha256": "2853e8af0bb8a9070387782d8daae488a2536fe91bc5f3b9c47234286cff7cda"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.html.sha256": {
+   "mtime_sursa": "2026-08-13T18:10:22",
+   "octeti": 65,
+   "sha256": "d837ae31641ed6b3c7a546385343ee05a4a227c4652e3ccf123b89053463ee1d"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.txt": {
+   "mtime_sursa": "2026-08-13T18:10:22",
+   "octeti": 337275,
+   "sha256": "39116d49f1dcb64e6d0342318ce5e6e55a9b75bec0075b9594f940d96a2bc8d5"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.html": {
+   "mtime_sursa": "2026-08-13T17:18:09",
+   "octeti": 197294,
+   "sha256": "0ba39234173a5d885af8c380eb7a1486bee49d3905b675ba3bad7e1f8269a596"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "70de58f8321fda93d3aab18dbc8f7eed92b347975fb83e70a05720fa30f899a6"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 45532,
+   "sha256": "0b8596afa3e013fce1e6af7350cba5cee369522edb7c32a0afee1cf1b7424464"
+  },
+  "legea_319_2006_consolidat.html": {
+   "mtime_sursa": "2026-08-09T13:05:16",
+   "octeti": 335508,
+   "sha256": "15979498c19e8bd6355517566b8b1c592e779a9b471b6817369af8e2ada6bcd1"
+  },
+  "legea_319_2006_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "1fd29d6dfe7ab4f0b51f5301aedc3e7e7aa3a1faaa1f6fe3f829e4909cd1dd2f"
+  },
+  "legea_319_2006_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 63539,
+   "sha256": "be8b04213dd29eaacc892bc4298c15800018228f70b593ce19dca5fbacb53bfe"
+  },
+  "legea_31_1990_modif_L222_2023.pdf": {
+   "mtime_sursa": "2026-08-13T15:43:00",
+   "octeti": 145233,
+   "sha256": "39db3a4defecbe956475306fa157e8923fef8ffc5e97136d24a5c2bdc86d4b1a"
+  },
+  "legea_31_1990_modif_L222_2023.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "c312affc1cc73c58464813226e78b679ec6e5964e017712a3cfb8dc5029550d5"
+  },
+  "legea_31_1990_modif_L222_2023.txt": {
+   "mtime_sursa": "2026-08-13T18:07:08",
+   "octeti": 5617,
+   "sha256": "aff10e004a8b027e01cb554c89e887032dc3341e75019b7e8e26180fcdbf73c6"
+  },
+  "legea_31_1990_modif_L239_2025.pdf": {
+   "mtime_sursa": "2026-08-13T15:43:00",
+   "octeti": 214691,
+   "sha256": "75d53cc803e176e6c85d7f80f89c3ac2c46b2bfe9c02802ab2745cf956730d6f"
+  },
+  "legea_31_1990_modif_L239_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "7c2cc00ba832c33f0779f31f5ec23de9dd9d1378e529a38d9a6f62586435d728"
+  },
+  "legea_31_1990_modif_L239_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 35301,
+   "sha256": "a553aec00d52cdd934dd9f056973d25c354e51ffb1648ffcdfdbe003c2025c66"
+  },
+  "legea_31_1990_societatile.html": {
+   "mtime_sursa": "2026-08-13T17:18:09",
+   "octeti": 2068158,
+   "sha256": "5114ccc36ed48d506048984d0508f990c8485e2c33039da28533fc169ee60084"
+  },
+  "legea_31_1990_societatile.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "18bd04920b98623dc06fcf31c07cb5a9f87bd49b294143b236aee2525e077a46"
+  },
+  "legea_31_1990_societatile.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 632978,
+   "sha256": "e7f393a322307fc5963ede685971ff877542162dab6e08d07a5e4146fbfad71a"
+  },
+  "legea_32_1994_sponsorizarea.html": {
+   "mtime_sursa": "2026-08-13T17:18:10",
+   "octeti": 100516,
+   "sha256": "f4149876e6867767780a1357729c20f8abc34faca1745611676f3038630bf7cd"
+  },
+  "legea_32_1994_sponsorizarea.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "df36a4c8f5d1b30e1c9240cb7af70dee5691c5e51be944f700c4e8952367416b"
+  },
+  "legea_32_1994_sponsorizarea.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 15941,
+   "sha256": "3c8e0c6f3d6b5209a27c763f74b281c73ea1143e77234f2ac76366752b3e32fe"
+  },
+  "legea_346_2002_consolidat.html": {
+   "mtime_sursa": "2026-08-09T11:41:08",
+   "octeti": 420228,
+   "sha256": "149bffcb33dc3099f62040c7b67cc4944834af57fdc92045bd1459f9456a6807"
+  },
+  "legea_346_2002_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "56c31533c435ee4135b7cf77aed12c6b66497cd8e29928c9b35e96f461cf732c"
+  },
+  "legea_346_2002_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 84621,
+   "sha256": "49dbcf505e02c42339acec773346068830c8ed163bedda945a489b3d7e99b1f6"
+  },
+  "legea_358_2015_aprobarea.html": {
+   "mtime_sursa": "2026-08-13T17:18:10",
+   "octeti": 88637,
+   "sha256": "37ace153c4e327656bf4d62455f8498d2dc2f284a6fd0f99c4fce811c80cfe00"
+  },
+  "legea_358_2015_aprobarea.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "27dfdfede9c9b8367c214ce447cebf0d731e18e53b57d845d9a2f94607fa9b5b"
+  },
+  "legea_358_2015_aprobarea.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 28232,
+   "sha256": "8ad8357f34bfc4364567faccffbbd41d577be9321125acb3dff4121d95a1aaa3"
+  },
+  "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.html": {
+   "mtime_sursa": "2026-08-13T17:18:10",
+   "octeti": 170040,
+   "sha256": "fb9231a13efa00ad540f16cd6d31eaa3475c3e9f89176b767c0b601d37980ede"
+  },
+  "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f49b21b968d14d2ff8b056a2f0dd4f9b1d5f5babe11d0db4fe2d1667ae7b3234"
+  },
+  "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 22392,
+   "sha256": "2918c3a1933556b61878977796b6c557afc0aa29d83baf2185cb3db54dc525a3"
+  },
+  "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.html": {
+   "mtime_sursa": "2026-08-13T17:18:11",
+   "octeti": 64653,
+   "sha256": "e78c3ec7136f208c3dc675de0ffe5eec2b2078e323a1e3009ceaa9a56574f71f"
+  },
+  "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f7866842c0dbf955413ce4c0316388f9290d0b1943a9657d83361de02af16099"
+  },
+  "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 7933,
+   "sha256": "e079cf690e6074d9ff76b545af031d2efc07ad24b745071202a53ac40d56e3cd"
+  },
+  "legea_399_2006_aprobare_oug158.pdf": {
+   "mtime_sursa": "2026-08-13T15:44:45",
+   "octeti": 317729,
+   "sha256": "684c06b3b509efdca3f020bddbd4aa956192634163b0550ca05c6e0dcaabdd55"
+  },
+  "legea_399_2006_aprobare_oug158.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "a4155c3741fc76a051def3c28a6a6ff8773108dbb9df9a24d4c934fdb483821d"
+  },
+  "legea_399_2006_aprobare_oug158.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 19381,
+   "sha256": "e589d21073b30ef9f957cac6d508bcab1f6c83a0eaec73061e2251dad516790f"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap.html": {
+   "mtime_sursa": "2026-08-14T16:01:13",
+   "octeti": 956546,
+   "sha256": "3839dc0625c32246d54d49bb6d2ff8321b2f65ccb5bc04832547690e25eee41d"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap.html.sha256": {
+   "mtime_sursa": "2026-08-14T16:01:13",
+   "octeti": 120,
+   "sha256": "e1a076776b29540a1d9191400635c1cad2a606bc6a20970b7b67b3d59b58ba5e"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap.txt": {
+   "mtime_sursa": "2026-08-14T16:01:13",
+   "octeti": 277140,
+   "sha256": "e3ff58b81ac3bf2ade514ddba0fccbfcc5c8589b0ee4837b9d0fdcf5a334e12b"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap.txt.sha256": {
+   "mtime_sursa": "2026-08-14T16:01:13",
+   "octeti": 119,
+   "sha256": "a83e88576a47e906c7e768556a968ec84554cac7a8d9d6ff49307e4e40f22de3"
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.html": {
+   "mtime_sursa": "2026-08-13T17:18:07",
+   "octeti": 160489,
+   "sha256": "5e6a572870d33051e701e56973569ceb68c653f5d95db27b35dc0791b42d3c34"
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "9c95e7f1591aa45e1e8529b46c3a3b0e4dbd86dcb93edbf5bff30794251702ec"
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 29376,
+   "sha256": "3d98eca23ecce26b8da95f11b4809756d8b0a8a499a02fbf7353819f9434573f"
+  },
+  "legea_53_2003_codul_muncii.html": {
+   "mtime_sursa": "2026-09-25T17:47:46",
+   "octeti": 1309291,
+   "sha256": "ee671f1593649b7cc239bf08a80a59964e5ce2e0c869fad129e70ffc3b4fbfb7"
+  },
+  "legea_53_2003_codul_muncii.html.sha256": {
+   "mtime_sursa": "2026-09-25T17:47:46",
+   "octeti": 65,
+   "sha256": "decacbab235721e112554adac9b095e4cbc0e8aaffef27f61de1e1b9ca6a9a5e"
+  },
+  "legea_53_2003_codul_muncii.txt": {
+   "mtime_sursa": "2026-09-25T17:47:46",
+   "octeti": 359141,
+   "sha256": "f422960f8e9507cd1d60a4623fdbf30cbc51911608a514576c363f3efa1f5f78"
+  },
+  "legea_56_2021_suplimentele_alimentare.html": {
+   "mtime_sursa": "2026-08-13T17:18:12",
+   "octeti": 130658,
+   "sha256": "aefbc48d1ebc3d9cf8f5b99418d4c7adeb598c8b3710cf47dd1ee3b38abf19ca"
+  },
+  "legea_56_2021_suplimentele_alimentare.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "e62e43f1ba92a9bbf3c607b72ed8d5f7796ae75cd88433bbf11ba464e73309b4"
+  },
+  "legea_56_2021_suplimentele_alimentare.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 27797,
+   "sha256": "23375cfa9557ae75f3bf54eee934804ac9e84738f94b97b1a54c360f938a25e4"
+  },
+  "legea_70_2015_consolidat.html": {
+   "mtime_sursa": "2026-09-25T17:45:30",
+   "octeti": 124577,
+   "sha256": "9e1d2392418c8b77e97e92a094ce6ad7b4effd1a0e7effd8cd68762e957a66b7"
+  },
+  "legea_70_2015_consolidat.html.sha256": {
+   "mtime_sursa": "2026-09-25T17:45:30",
+   "octeti": 65,
+   "sha256": "400e072046335d9a8440afb7bf389e78792378f8bfc7570b95e08c30c928f432"
+  },
+  "legea_70_2015_consolidat.txt": {
+   "mtime_sursa": "2026-09-25T17:45:30",
+   "octeti": 26430,
+   "sha256": "c2edbe22dc1ec0a4b00f1f0ea64ef614f7664402dc8c4a3560ffaaff1f5ec5c4"
+  },
+  "legea_72_2013.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 130709,
+   "sha256": "8f3ba43c29bcd6a78da6daf4008e39e4edd5827f97e620117f092f70e7128b06"
+  },
+  "legea_72_2013.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "b79cd68f2e5097cab8d9b787459cf00e48cb5927f173ded06d39916e9b38f9d8"
+  },
+  "legea_82_1991_consolidat.html": {
+   "mtime_sursa": "2026-08-22T16:02:30",
+   "octeti": 345487,
+   "sha256": "4490a223cfe5982232331763d9984f90449e3c75074861005d20bd238ddab152"
+  },
+  "legea_82_1991_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-22T14:30:45",
+   "octeti": 65,
+   "sha256": "caa455426805fc5e84be85d143cce732125600940ea56e1f960fb2e897d8a194"
+  },
+  "legea_82_1991_consolidat.txt": {
+   "mtime_sursa": "2026-08-22T16:25:22",
+   "octeti": 103048,
+   "sha256": "21381373de838fa24922ef8bb2929791af02df4cbcdfe3898c943ee4439686fb"
+  },
+  "legea_82_1991_consolidat.txt.sha256": {
+   "mtime_sursa": "2026-08-22T16:25:22",
+   "octeti": 65,
+   "sha256": "02152576f3364fa6b22ddc766fb7771e68725fe8674076fcfd7c7016f55f2c03"
+  },
+  "legea_82_1991_modif_oug115_2023.pdf": {
+   "mtime_sursa": "2026-08-13T15:42:29",
+   "octeti": 160535,
+   "sha256": "f7fe1a83774668d89ad4740e3e43081be1e4e188a5e37f93d39e442b451442c0"
+  },
+  "legea_82_1991_modif_oug115_2023.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "1b4163028450512b3ebf53985d9b5d9d5b68e1ec30fd1e5787d814dbd49f9443"
+  },
+  "legea_82_1991_modif_oug115_2023.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 9180,
+   "sha256": "504a95d1436e83160eea60ec6825d1beed01ca7ec40abf46571ed84fa4a7a76d"
+  },
+  "legea_82_1991_modif_oug138_2024.pdf": {
+   "mtime_sursa": "2026-08-13T15:42:29",
+   "octeti": 175129,
+   "sha256": "c5ed4e05df5ca89e435e858a731b776b22bf3802341df1150086c48b1a985d81"
+  },
+  "legea_82_1991_modif_oug138_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f005f4da3a4f1aa56692b1727260b94e661ad204acac57fa4c414d0fd836911f"
+  },
+  "legea_82_1991_modif_oug138_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 11536,
+   "sha256": "0138a34e2fcfbb218bfd477f605a1e593987ed8903a60f5f25a2636debf1da6a"
+  },
+  "legea_85_2014.html": {
+   "mtime_sursa": "2026-09-24T11:02:51",
+   "octeti": 2195078,
+   "sha256": "b9e14e93f387d7a36379d55be61856cd87ce4c86b319fd0eddfedd38135b88f6"
+  },
+  "legea_85_2014.html.sha256": {
+   "mtime_sursa": "2026-09-24T11:02:51",
+   "octeti": 65,
+   "sha256": "18af223b3ddbc57f8fcb4642259c7bb5bd2388560c880aed55a905334f189ce3"
+  },
+  "legea_98_2016.html": {
+   "mtime_sursa": "2026-09-24T11:02:51",
+   "octeti": 1675787,
+   "sha256": "33570487b9afbed5524873a24b995a9e1ee6f1b802801ef9f08a4a2b025971b2"
+  },
+  "legea_98_2016.html.sha256": {
+   "mtime_sursa": "2026-09-24T11:02:51",
+   "octeti": 65,
+   "sha256": "de5262b650becaaf04bbff3c8f8f424ed49e0af75d5b420f06d199ae65d5e9c4"
+  },
+  "og_11_2022.html": {
+   "mtime_sursa": "2026-09-22T20:56:43",
+   "octeti": 168755,
+   "sha256": "ac6fa8855179017067a4136896629574df3ae6eb70767ab42ed941ffa89e96d3"
+  },
+  "og_11_2022.html.sha256": {
+   "mtime_sursa": "2026-09-22T20:56:43",
+   "octeti": 65,
+   "sha256": "27de0b398abbd26f8185ee49b94487a767d491b32f9e4fb209c645b0486d97e5"
+  },
+  "og_13_2011.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 329890,
+   "sha256": "8a350f60958b655200434bcdc4584ff803a81c682c28f9cdbd9c0260ef15d988"
+  },
+  "og_13_2011.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "a4b4f4a6181acaef9e07458fb5a33a90690330e75870bfc70dd8180d43a2e057"
+  },
+  "og_16_2022_consolidat.html": {
+   "mtime_sursa": "2026-08-09T11:41:13",
+   "octeti": 561953,
+   "sha256": "4d4e65fcf1b08c4cd0b6cb5b6de146ab62bb048c19b1e5e7418d17f74e0f33c6"
+  },
+  "og_16_2022_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "d589ed417480a96c13d12c6867ed0e4c27195d678750d4d0ed1e6be652b9b5cf"
+  },
+  "og_16_2022_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 144305,
+   "sha256": "274e3afc148676dca33443a39b13a10056838e6a9804be3be4ea0412299cccd2"
+  },
+  "og_22_2025.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 182528,
+   "sha256": "52f13a49550438bd5fa2db5319190a6243cbd9213c1ffb3cb426dd2f3190f99f"
+  },
+  "og_22_2025.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "2a56497fc93a3f6054bee849a761ca17590bfe2f72ab9fcfd10830444acd09cf"
+  },
+  "og_26_2000_asociatii_fundatii.html": {
+   "mtime_sursa": "2026-08-13T17:18:12",
+   "octeti": 475186,
+   "sha256": "27cf980988a7fb6579a08853074662c65be016d925032ac583d295f971b26253"
+  },
+  "og_26_2000_asociatii_fundatii.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "c1a2d09faf70a8dae2785de8a3af1c6deece39a1f3bd529b9e17e3c55de56539"
+  },
+  "og_26_2000_asociatii_fundatii.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 116356,
+   "sha256": "ece1a3885038dbf2d9b2aa9587e56f5591f33939bb3af2b74376fc4101edac71"
+  },
+  "og_2_2001.html": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 233823,
+   "sha256": "aa758b4c39cc75128b0d66294ff3f9e1062e1a8988fee4fa371175443729b6cf"
+  },
+  "og_2_2001.html.sha256": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 65,
+   "sha256": "198bd539785146558598d2d17b1998dde2d95b37fad0d6b923303a849b60fa82"
+  },
+  "og_39_2015.html": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 128634,
+   "sha256": "dc0d05d4d830551198d3f061baee8b3dae46d1f35d7eeed7b2f1f9230e6568f6"
+  },
+  "og_39_2015.html.sha256": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 65,
+   "sha256": "ea7030312086e84114887c211f97f742dd9d871cc57242658abc18326a1e3476"
+  },
+  "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.html": {
+   "mtime_sursa": "2026-08-13T17:18:13",
+   "octeti": 73245,
+   "sha256": "74b28bea700d291a6bc774ff2b66ad6c0ed83560fa5e252d04a5899c42bdb224"
+  },
+  "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "cad9b57adc6abf7cef91f8a650cd0edca991c350f8f820712f28ac7c52f34740"
+  },
+  "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 7166,
+   "sha256": "093f908b4c540a8a92fbf5e0e647d6727ed1574577e2d1bc42c5530315bfb670"
+  },
+  "omf_1235_2023.pdf": {
+   "mtime_sursa": "2026-08-13T08:50:31",
+   "octeti": 54902,
+   "sha256": "aa3bb7e6b2ce69798983b0bc1161f6c88a3f5c429262770195a7249ba51ecd6c"
+  },
+  "omf_1235_2023.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T08:50:31",
+   "octeti": 65,
+   "sha256": "7f8c541bb7561d3e7e591c39915a327ed03749cd1935dcbc92f878fb073231ed"
+  },
+  "omf_1235_2023.txt": {
+   "mtime_sursa": "2026-08-13T08:50:31",
+   "octeti": 1970,
+   "sha256": "9c7954eb0db36112f4a21ca7b7adf99f8053679c637c57206f079e4a2638f2b7"
+  },
+  "omf_1855_2022.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:35",
+   "octeti": 67463,
+   "sha256": "8ea18ad58aa40175fb1435a9d82b7b0e0b647c3601de4aa93756d2b1ea794a5e"
+  },
+  "omf_1855_2022.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "86a91224b45fe5018729199ecbf4eba36608468cd0ef62ab5db070bcc4effe38"
+  },
+  "omf_1855_2022.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 14260,
+   "sha256": "deaaf7acb6160e1b2c3b8afa9f8ff7ddc89faa69dc0964500c766bced1b235bb"
+  },
+  "omfp_170_2015.pdf": {
+   "mtime_sursa": "2026-08-13T15:47:51",
+   "octeti": 145528,
+   "sha256": "158d5ad1647f0fc613c0315bc09fd3a99494e189d717444f01b2d95f5eedfd37"
+  },
+  "omfp_170_2015.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "bdd9592da115ee2df8f890a72d449b89aee8d6a32ea20525b8119d1e5b2c612f"
+  },
+  "omfp_170_2015.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 31209,
+   "sha256": "7c572a092e913a4584587dc82c8117dcf0f784521cc80a8952f1c58f9b5d23e8"
+  },
+  "omfp_1802_2014.pdf": {
+   "mtime_sursa": "2026-08-13T15:39:48",
+   "octeti": 1411029,
+   "sha256": "6e0de23520f49de718dead66462f14d624c527a87e8b27eeb5306ab9cc84ff4c"
+  },
+  "omfp_1802_2014.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "2d75310a91c6ac90a15c721125784897fd08de5e77441fe093458378a7be48d6"
+  },
+  "omfp_1802_2014.txt": {
+   "mtime_sursa": "2026-08-13T15:41:24",
+   "octeti": 1029183,
+   "sha256": "e0ca6432ba9ef2b22988d31de5ce2b2cafa540a7f2ce214ab66669e227af1766"
+  },
+  "omfp_1802_2014_ordin_consolidat.html": {
+   "mtime_sursa": "2026-08-22T15:40:21",
+   "octeti": 88977,
+   "sha256": "d305f540454e2477957c6e05aeb2faf0c43665a4e21bf6aae1df68c365915cdb"
+  },
+  "omfp_1802_2014_ordin_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-22T15:40:21",
+   "octeti": 65,
+   "sha256": "83bab44b85755ca45159c11b51f197f4049ff34d640b3f957c00ce8bfeeabcb3"
+  },
+  "omfp_1802_2014_ordin_consolidat.txt": {
+   "mtime_sursa": "2026-08-22T15:40:21",
+   "octeti": 15523,
+   "sha256": "8ca6c5f80dbf6ea51da4064bdf829f03301f8825fa42411d35682266df4961e9"
+  },
+  "omfp_1802_2014_ordin_consolidat.txt.sha256": {
+   "mtime_sursa": "2026-08-22T16:02:30",
+   "octeti": 65,
+   "sha256": "8ab737900f8a7a7cef73daf0009da686aa65b613610d528d3564f3287bfe9acf"
+  },
+  "omfp_1802_2014_reglementari_consolidat.html": {
+   "mtime_sursa": "2026-08-22T15:40:20",
+   "octeti": 4748261,
+   "sha256": "7636b1e1e8ea9ffc935f8112e5d02da1885a6286b0367f509d2dca414d7d9cfe"
+  },
+  "omfp_1802_2014_reglementari_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-22T15:40:20",
+   "octeti": 65,
+   "sha256": "7c7d9b8cae22b58c33dbd96b48c7442c614ec3f54ee90d86afd0077cb25eaddc"
+  },
+  "omfp_1802_2014_reglementari_consolidat.txt": {
+   "mtime_sursa": "2026-08-22T15:40:20",
+   "octeti": 1325035,
+   "sha256": "19dfff1f0b6df287a52e05bcdc55b3c4ba4b46ef909fa20e565354da6331c08b"
+  },
+  "omfp_1802_2014_reglementari_consolidat.txt.sha256": {
+   "mtime_sursa": "2026-08-22T16:02:30",
+   "octeti": 65,
+   "sha256": "6a750d8fa49b0f9e5ea8d6a2a7e0e39f67ae76bd0d55492b89a36c3a7a8f746c"
+  },
+  "omfp_2634_2015.pdf": {
+   "mtime_sursa": "2026-08-13T15:47:51",
+   "octeti": 123863,
+   "sha256": "295230f6e767e378fa293dff1bc5a02362e876f9dd8b4183de5e41946863c7ff"
+  },
+  "omfp_2634_2015.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "2a7235afb39187481aec9407d1d00e95faffa9c0606c9aa9f93331db52780228"
+  },
+  "omfp_2634_2015.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 47842,
+   "sha256": "1148d2a0d3eec73338a7632c79be01e8f99c591b57fda268bfe4734eac7b265f"
+  },
+  "omfp_2634_2015_anexa1_norme_generale.html": {
+   "mtime_sursa": "2026-08-22T14:41:36",
+   "octeti": 189071,
+   "sha256": "c97d03c6476a79af2c56268c567bb859b2f2e9ec5ebdef02aa94b18b10b9bea9"
+  },
+  "omfp_2634_2015_anexa1_norme_generale.html.sha256": {
+   "mtime_sursa": "2026-08-22T14:41:36",
+   "octeti": 65,
+   "sha256": "fd6103896e460cbd9e92575580e2e63562363059a12439e66828feb2b05beaf6"
+  },
+  "omfp_2634_2015_anexa1_norme_generale.txt": {
+   "mtime_sursa": "2026-08-22T14:41:36",
+   "octeti": 42577,
+   "sha256": "bf39029e2767e0c901a2dd55cb747024d928650d0148cc9b72666963748ea87f"
+  },
+  "omfp_2634_2015_anexa1_norme_generale.txt.sha256": {
+   "mtime_sursa": "2026-08-22T16:02:30",
+   "octeti": 65,
+   "sha256": "9723cde57f397df73f7963aab34f6b67502b16794157b7da94ab3208b03c9174"
+  },
+  "omfp_2634_2015_anexa2_norme_specifice.html": {
+   "mtime_sursa": "2026-08-22T14:41:34",
+   "octeti": 171458,
+   "sha256": "b4da639721a77fb7a8bb4df196fb1d75845bc89791cbef5bc238bf242c4ab52e"
+  },
+  "omfp_2634_2015_anexa2_norme_specifice.html.sha256": {
+   "mtime_sursa": "2026-08-22T14:41:34",
+   "octeti": 65,
+   "sha256": "ae99e7cbab6936fa7be175b9d9c3b85f7857bf2aaed1cc9cb317a1ec89693453"
+  },
+  "omfp_2634_2015_anexa2_norme_specifice.txt": {
+   "mtime_sursa": "2026-08-22T14:41:34",
+   "octeti": 48821,
+   "sha256": "7db9c657b8f063914ea2e6a2eb679421176c689b4cb13bb4f0bd3c1bafcdfb6e"
+  },
+  "omfp_2634_2015_anexa2_norme_specifice.txt.sha256": {
+   "mtime_sursa": "2026-08-22T16:02:30",
+   "octeti": 65,
+   "sha256": "4c953752d1a51e444d61ef40ac0d98bd0abd68fd9fed33687419aa4316177264"
+  },
+  "omfp_2634_2015_anexa3_modele.html": {
+   "mtime_sursa": "2026-08-22T14:41:35",
+   "octeti": 572491,
+   "sha256": "5e59958bbcc3ae0c33b05cf560a53c0bc79e0219d7b70137c990507e94521a64"
+  },
+  "omfp_2634_2015_anexa3_modele.html.sha256": {
+   "mtime_sursa": "2026-08-22T14:41:35",
+   "octeti": 65,
+   "sha256": "5b46ddcbd7237afa5415a9373f2e84cde77dcf53ef5e8c8be2e23165edcfa934"
+  },
+  "omfp_2634_2015_anexa3_modele.txt": {
+   "mtime_sursa": "2026-08-22T14:41:35",
+   "octeti": 215810,
+   "sha256": "e56f2e96b440426a980cbb80b097b644b9254bb33c310228ecc5ba2c7d9f7c21"
+  },
+  "omfp_2634_2015_anexa3_modele.txt.sha256": {
+   "mtime_sursa": "2026-08-22T16:02:30",
+   "octeti": 65,
+   "sha256": "5e6c31152a66908fa13950829d7a61069a95ccf7e26015f6e521a9974518eb30"
+  },
+  "omfp_2861_2009.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:35",
+   "octeti": 104235,
+   "sha256": "68fd7d1ce53b8b2263b3f0e051e687c105b228138d7008bb6701f3deba2a2769"
+  },
+  "omfp_2861_2009.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "70c6b259a4b4856e6aa2effaaaf85886ac8f2b83e984bbffbe43ee820740da07"
+  },
+  "omfp_2861_2009.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 48060,
+   "sha256": "9752f2a666729d86c4b19de126d7a0d508345ff514ea5016c93d6237ba4041a5"
+  },
+  "omfp_3067_2018.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:35",
+   "octeti": 62749,
+   "sha256": "e72fdcd766c7707ebe3f2916c930bb9fef80fb2c32f443564cfc8fa60c9f0fed"
+  },
+  "omfp_3067_2018.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "858df2d3cf11c33f075d765c1da6af467f89670b7d16099557eb3b49dc9017f7"
+  },
+  "omfp_3067_2018.txt": {
+   "mtime_sursa": "2026-08-13T17:27:09",
+   "octeti": 10067,
+   "sha256": "2b8f5b4f1d4e7055b2a6ee4e5dd5973abc665c920dc4e7da6d608f391ef257e0"
+  },
+  "omfp_3103_2017.pdf": {
+   "mtime_sursa": "2026-08-13T15:47:51",
+   "octeti": 1157450,
+   "sha256": "a0097a7b2b576b406bd84461f1cbe6ce41e43034506357ce57837815c648abdc"
+  },
+  "omfp_3103_2017.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "38a62c492d6523fd75b0a41226d28d0abd2d6fbc8c7d1cccc04e3531e9dae152"
+  },
+  "omfp_3103_2017.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 853650,
+   "sha256": "c7d69d0528a7ad97af6fa637e3d43367fbd5331e5c392ae4b36450752837c2cb"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.html": {
+   "mtime_sursa": "2026-08-30T17:56:42",
+   "octeti": 84538,
+   "sha256": "0f530e532f881a1bed8e85f8df94a56d7d5802956ecc6d3b6c7264b5c6fdbb01"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.html.sha256": {
+   "mtime_sursa": "2026-08-30T17:56:42",
+   "octeti": 65,
+   "sha256": "9608862ca7b1176100137e0cfa0b46f15f7c1c805aa43cfeed9b71c66ff21884"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.txt": {
+   "mtime_sursa": "2026-08-30T17:56:42",
+   "octeti": 12035,
+   "sha256": "df801e1437447766795e6fa4a42edc7ef3bd7a244cc3209d2b770dd42ff5d49f"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.txt.sha256": {
+   "mtime_sursa": "2026-08-30T17:56:42",
+   "octeti": 65,
+   "sha256": "64af1d05d47c092b2c16a904ed13307efeda9fb5939a2377609594fc341f43b1"
+  },
+  "omfp_660_2017.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:35",
+   "octeti": 176516,
+   "sha256": "c5bc677ee58cdf58114b195ece631799a9ca8002c6b93cd96852e0de65fdbab9"
+  },
+  "omfp_660_2017.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "1ca8de3637260b8732f9480d6983f7654a732d49bb46b9d722cf70da3c2fc0d8"
+  },
+  "omfp_660_2017.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 75959,
+   "sha256": "392b4be838f8d887c6152af2590b933b376072cd0ae79f91f473741a3f4519f7"
+  },
+  "omfp_897_2015.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:34",
+   "octeti": 45985,
+   "sha256": "7535b37eebd60d981a4be9d0104c4f143ea49b8368fc184bc625bd6b96dfc0b2"
+  },
+  "omfp_897_2015.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "e9da732114f5d74d3a6ec63756e30553e973233df5e9d436d1b4795638619882"
+  },
+  "omfp_897_2015.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 4765,
+   "sha256": "ddceb34f7dacbd6dd6e18755e0683819dee4ba04f5d71e96124609e6bf7d9e16"
+  },
+  "oms_15_2018_modificare_2025.pdf": {
+   "mtime_sursa": "2026-08-02T18:27:45",
+   "octeti": 666739,
+   "sha256": "c1e30dff1e870e96b97a38dfba8bb4b0e5d9c6090dd8feb5dc281ae72915a866"
+  },
+  "oms_15_2018_modificare_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "c54b7494594afa95a10ef882b34d48ef14f2ff2c871fd3770ee3d1356d3e3fdc"
+  },
+  "oms_15_2018_modificare_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 9641,
+   "sha256": "7573c73c3c9fb628f9a98948e2775f9f4a4f3e236c6d93f161149cea040d323c"
+  },
+  "oms_15_2018_norme.pdf": {
+   "mtime_sursa": "2026-08-02T18:27:44",
+   "octeti": 280302,
+   "sha256": "d12fcbf7b90f798b79224100b56c2836131ccd6018ac61e24eb0cea05ddb4062"
+  },
+  "oms_15_2018_norme.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "b9dd741c4039c64fd9067eb5770b2ee999b0cf479f7732c07f6881b9e2d3d959"
+  },
+  "oms_15_2018_norme.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 148042,
+   "sha256": "2f0de194f00fc153b89eb0d80590d4fd0bc968da4368ab75e984083e9a12a870"
+  },
+  "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.html": {
+   "mtime_sursa": "2026-08-13T17:18:13",
+   "octeti": 122681,
+   "sha256": "3cbed6750d043b4f2e4552da2271883175f6db4c95bbe1616786d21ccf1f5e13"
+  },
+  "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "5c27e0cd607b4cd740bc86716417ffc471dab241b3c2cfcada5586a8879c06cd"
+  },
+  "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 27012,
+   "sha256": "2257e3b937eba57322a7ffef022cd30912699a4f5c36f150b5199c04a64f8d5b"
+  },
+  "opanaf_1292_2014_d106_instructiuni.pdf": {
+   "mtime_sursa": "2026-08-14T12:35:31",
+   "octeti": 72524,
+   "sha256": "0ca1ced81d35bef90499f7d17505d871cf9ea16836aeff09069d8afcd60ae7a9"
+  },
+  "opanaf_1292_2014_d106_instructiuni.pdf.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 105,
+   "sha256": "f28a102aa83ddbdf7ab4c7a434397efa95ad64617b1c84b55cc3a9bfe005bb08"
+  },
+  "opanaf_1292_2014_d106_instructiuni.txt": {
+   "mtime_sursa": "2026-08-14T12:35:31",
+   "octeti": 3911,
+   "sha256": "1ed7aafb69e89c9907cee33c944823952dc88a63a7d8976fc9956605d1f8f952"
+  },
+  "opanaf_146_2018.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:34",
+   "octeti": 355309,
+   "sha256": "a831e148b32590919f0a92a1094b6bbf2d1fa3e1b4f7f4c5f51e5aaf7c03f96d"
+  },
+  "opanaf_146_2018.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "a8aa714d3c216b4cd6a183c56193958bb9e4cbe4e77754d7d2aa1743fa3a084e"
+  },
+  "opanaf_146_2018.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 147659,
+   "sha256": "af1187aba942ca779e3cda17de0e16083e16cd9ca80db197ee59dc9bfca75e35"
+  },
+  "opanaf_174_2026_d300.pdf": {
+   "mtime_sursa": "2026-08-10T16:00:42",
+   "octeti": 351831,
+   "sha256": "b2af283078e04dd799a7b311b0d2ca3aac91bf2a1cacc10949d5726ad22ccf02"
+  },
+  "opanaf_174_2026_d300.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "cf368770fb6ee5a4e7df4b520c9bd9aece8afee29cf4599217ca2d13eab251a1"
+  },
+  "opanaf_174_2026_d300.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 64350,
+   "sha256": "43d0d6c6c51963db9ff5af2d3c1f57146ad3295cbc8d8910233815fe8cc6175e"
+  },
+  "opanaf_1783_2021_saft_d406.pdf": {
+   "mtime_sursa": "2026-08-10T16:00:14",
+   "octeti": 182606,
+   "sha256": "c6fd52add135682f57f54c1e2e174553962c1d94f392fc989632597106177a65"
+  },
+  "opanaf_1783_2021_saft_d406.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "89d3519a50b6a147f746776ca0226a75abb1e1061037b139622f65ec6778f011"
+  },
+  "opanaf_1783_2021_saft_d406.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 64820,
+   "sha256": "4af60c32e20ed13bdcc74bb64cdd38abc05d13660fa5faa885ba65765c8d21af"
+  },
+  "opanaf_179_2022_d205_d207_baza.pdf": {
+   "mtime_sursa": "2026-08-10T16:01:59",
+   "octeti": 203923,
+   "sha256": "fac74d36ffefa86dfe1ea0c4953703394c036c4225a0dc44a5b1e503bb5777aa"
+  },
+  "opanaf_179_2022_d205_d207_baza.pdf.sha256": {
+   "mtime_sursa": "2026-08-10T16:01:59",
+   "octeti": 101,
+   "sha256": "774e9560e38abc1a6ed8cdb4da8162db08e557d2a838fbaa204da4a9ae8386d8"
+  },
+  "opanaf_179_2022_d205_d207_baza.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 52302,
+   "sha256": "44ddbb85f332b6437abeae7ef0afe18b8525cbe6b2b367fbdaadd555ebbaadc7"
+  },
+  "opanaf_184_2013.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:32",
+   "octeti": 423283,
+   "sha256": "5f240581dd6581f517e65b03692a3a3077dc1896d6a59570d123a763766daad8"
+  },
+  "opanaf_184_2013.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "8c08b56cdfd8b07aa0bf374a6530ccfdaace8b07f71b0edc59464ca359f5a319"
+  },
+  "opanaf_184_2013.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 54226,
+   "sha256": "7757e4ea1b155471fc41fef8dbe1e88e202e4ab67c61acb032053039c2251589"
+  },
+  "opanaf_1950_2012.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:32",
+   "octeti": 455851,
+   "sha256": "322576da32fdc3e62338e224a21b4213b5a08dcac1744fa99c400790ffba99f7"
+  },
+  "opanaf_1950_2012.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "9a83073a33473d8ad90ea64d305755a70139af52b6fb53cd6dd0914d827cd001"
+  },
+  "opanaf_1950_2012.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 135706,
+   "sha256": "8a70cc21a3c2ab4466e669ff6455e4bc4de1e61f4add0aeef39d4c3eb56e0dbf"
+  },
+  "opanaf_1950_2012_130.html": {
+   "mtime_sursa": "2026-08-14T12:34:45",
+   "octeti": 4682,
+   "sha256": "9f1b08dd20ddb879a7265c5a19f34d4518ce0412c54979ede6ca1b28642b1650"
+  },
+  "opanaf_1950_2012_130.html.sha256": {
+   "mtime_sursa": "2026-08-14T12:35:05",
+   "octeti": 65,
+   "sha256": "f0ce1c40b6ac2bc3fa5b6a7284f31e28ba5975831a992e52d028d623c845dddc"
+  },
+  "opanaf_1950_2012_decl130.pdf": {
+   "mtime_sursa": "2026-08-14T12:34:45",
+   "octeti": 188881,
+   "sha256": "ad3ca3a3365c61375f2d1341650613778a8c193ad5b9d4dd6848cf7ff55ec69b"
+  },
+  "opanaf_1950_2012_decl130.pdf.sha256": {
+   "mtime_sursa": "2026-08-14T12:35:05",
+   "octeti": 65,
+   "sha256": "12c14302ddb5e8bdedb722cf26526bcdf02a162b145685aaad4787a94d61765f"
+  },
+  "opanaf_1950_2012_decl130.txt": {
+   "mtime_sursa": "2026-08-14T12:35:12",
+   "octeti": 4238,
+   "sha256": "dc7bdbcb3a5a3f3b81cee54623918fa74795f19cb68f35038fc8caf8b1e569b4"
+  },
+  "opanaf_1950_2012_instr_130_1950.pdf": {
+   "mtime_sursa": "2026-08-14T12:34:45",
+   "octeti": 84390,
+   "sha256": "8a48aa3c3c9dc2a6c75365320c4375b15281f5048f12e6789adfaf6650c69e41"
+  },
+  "opanaf_1950_2012_instr_130_1950.pdf.sha256": {
+   "mtime_sursa": "2026-08-14T12:35:05",
+   "octeti": 65,
+   "sha256": "cd3477990b5fb1a1a58a05e08cb6275f84997ed29a4aa2ad3ed3aa4c1358d271"
+  },
+  "opanaf_1950_2012_instr_130_1950.txt": {
+   "mtime_sursa": "2026-08-14T12:35:12",
+   "octeti": 2618,
+   "sha256": "8907dbb61caa0cf260b4c16e98f714e80d754ed5bf15ff084fc2c63f7e325e51"
+  },
+  "opanaf_206_2025_d101.pdf": {
+   "mtime_sursa": "2026-08-10T15:59:59",
+   "octeti": 374564,
+   "sha256": "95abe75927447b7f34f644cf01e7385c9ae58b1e8da785877a9adf4bed13844d"
+  },
+  "opanaf_206_2025_d101.pdf.sha256": {
+   "mtime_sursa": "2026-08-10T16:00:22",
+   "octeti": 91,
+   "sha256": "9983417fc1f59da27c4bbd7ea1de7048becdad6021bc4f9929fb0acf2d36a825"
+  },
+  "opanaf_206_2025_d101.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 78876,
+   "sha256": "c19fa4a785e2492d47b65aaa97e399adb1d5bdc6c3126e4def17e774b4bd1221"
+  },
+  "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.html": {
+   "mtime_sursa": "2026-08-14T13:26:09",
+   "octeti": 331413,
+   "sha256": "e80cf89d6f97a4b1d91b0101e4c88ea69e4dacd5baa063c7ce44a17934d0d653"
+  },
+  "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.html.sha256": {
+   "mtime_sursa": "2026-08-14T13:26:09",
+   "octeti": 65,
+   "sha256": "7a49d93e553ed29c6ea8250cf47046be0949f6c5ec0c30dbe86144e02fc36054"
+  },
+  "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.txt": {
+   "mtime_sursa": "2026-08-14T13:26:09",
+   "octeti": 41702,
+   "sha256": "189df83c163b40d6f0ac9cc02cfde4a3d8e8fc8ad140ec22bccaf7c5c46a90ff"
+  },
+  "opanaf_2175_2025_d169n.pdf": {
+   "mtime_sursa": "2026-08-14T13:13:02",
+   "octeti": 200086,
+   "sha256": "b29f16e21f4de774d2ecf8b130e779fb1c17583f76365cdec16b671624105926"
+  },
+  "opanaf_2175_2025_d169n.pdf.sha256": {
+   "mtime_sursa": "2026-08-14T13:22:52",
+   "octeti": 65,
+   "sha256": "df31361a4ee6758b6da1bc2a9dee396f2e89814c4a439bbea53ce2e44fd2d1eb"
+  },
+  "opanaf_2175_2025_d169n.txt": {
+   "mtime_sursa": "2026-08-14T13:13:02",
+   "octeti": 8821,
+   "sha256": "95ff0dd7a9fd9cc0dd44402162a34210f2bcaf659f989bbdbbc6a9329d62d116"
+  },
+  "opanaf_2194_2025_d394.pdf": {
+   "mtime_sursa": "2026-08-10T16:01:19",
+   "octeti": 792266,
+   "sha256": "9aa80e67709c46d41fa51f05b52c08c093896744ed140d720a63a1594a114b7b"
+  },
+  "opanaf_2194_2025_d394.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "574d48e3dc506101bb542119a90fbc0ec08bfb37ddcd36a1ecb4bc6b20f5f796"
+  },
+  "opanaf_2194_2025_d394.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 89908,
+   "sha256": "4994669a599522f0d587be597f429fe123b1495f632585ff480afd73f34a3b2c"
+  },
+  "opanaf_299_2025.pdf": {
+   "mtime_sursa": "2026-08-13T15:44:46",
+   "octeti": 1096609,
+   "sha256": "b774b0ae392ed3c1ee2e764153f59f117f0dad66c900aad2df51dabe5bf5c6a9"
+  },
+  "opanaf_299_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "926d23dbd91d43de5f592a05fd29fa9531496ece7b274be3609e81236570c7a0"
+  },
+  "opanaf_299_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 296132,
+   "sha256": "01f2f5a23c227071e39e117ff9eae03d23556cae32ba06e6214cddcec9ae0e82"
+  },
+  "opanaf_303_2026_d205.pdf": {
+   "mtime_sursa": "2026-08-10T16:01:26",
+   "octeti": 40785,
+   "sha256": "9489251b1ae6bfaac47c6aa4109ca7dd2c49f8e377c89f77297fd38b001499eb"
+  },
+  "opanaf_303_2026_d205.pdf.sha256": {
+   "mtime_sursa": "2026-08-10T16:01:26",
+   "octeti": 91,
+   "sha256": "fa397b1182850ca384951c8e6f05f0d906a6461c55df28352285b1e8289720cb"
+  },
+  "opanaf_303_2026_d205.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 5221,
+   "sha256": "8581e8f9867b5095018abe502c4996cb3e95022b4da0bedf26b87302de7c68da"
+  },
+  "opanaf_355_2024.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:33",
+   "octeti": 223742,
+   "sha256": "81a70ac9b917c5429e589073d8509e27262b743d279b511df7104a334fc932b2"
+  },
+  "opanaf_355_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "75486c3a7e2e51ef82c7b6e4bd3040c83e2243f0c59d0b6e4c0c2145f14b5e1c"
+  },
+  "opanaf_355_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 15004,
+   "sha256": "41b668cb43556e85d165466a6980cf23ad49d4056a8cedf99ffdb37bbd92be3a"
+  },
+  "opanaf_3562_2024.html": {
+   "mtime_sursa": "2026-08-24T16:42:20",
+   "octeti": 153852,
+   "sha256": "add724fd467413bccdbaf75079a8428b527de0a24bb28fbc20e49500453a8f0c"
+  },
+  "opanaf_3562_2024.html.sha256": {
+   "mtime_sursa": "2026-08-24T16:47:32",
+   "octeti": 65,
+   "sha256": "781f0348b3fd371cda0c80c0b263ec1a92de6a8d749492caba99b655955eee6b"
+  },
+  "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.html": {
+   "mtime_sursa": "2026-08-13T17:18:13",
+   "octeti": 544659,
+   "sha256": "e377906bf19d01373d8ff3da7257f2c998379e05f60e879ee44088991c0dace4"
+  },
+  "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "11deab325c09f35fca6183700c9f41a7b41a680daacebbbfde21f9642963bcd0"
+  },
+  "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.txt": {
+   "mtime_sursa": "2026-08-13T17:27:10",
+   "octeti": 254128,
+   "sha256": "895a1862383272afaab147abb4a0d7215d981bba3d72e4afcb1f94018d59aa22"
+  },
+  "opanaf_3769_2015_d394_baza.pdf": {
+   "mtime_sursa": "2026-08-10T16:01:20",
+   "octeti": 242479,
+   "sha256": "7b489956f8a3846de8c1733291969c9617e924e123d5d7afb3de4cc9aa1c096e"
+  },
+  "opanaf_3769_2015_d394_baza.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "8b28bd4bb69eabf976f37c33a9208e747693cda71b7e2ecc8374fe5af7a0fe0f"
+  },
+  "opanaf_3769_2015_d394_baza.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 104274,
+   "sha256": "1de63de634110d9f3e1021f2193e3954631636d0d6c9bd4c4b691722eba892f9"
+  },
+  "opanaf_394_2017_d390_anexa2_instructiuni.pdf": {
+   "mtime_sursa": "2026-08-13T18:36:42",
+   "octeti": 312533,
+   "sha256": "7fa6ce775699c26a1233ce279dd74503114fa9e4040c276bab63fe0927083bd7"
+  },
+  "opanaf_394_2017_d390_anexa2_instructiuni.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T18:55:27",
+   "octeti": 65,
+   "sha256": "cbd58bdb702ae0a81f8ad8cf71085bcb5e5d424c7c405e09db36af84f49cc489"
+  },
+  "opanaf_394_2017_d390_anexa2_instructiuni.txt": {
+   "mtime_sursa": "2026-08-13T18:55:27",
+   "octeti": 18163,
+   "sha256": "43285fea76fd690caa36d41ff01e4845098291e015685cf183110b5e7c9e5acf"
+  },
+  "opanaf_407_2025_saft_d406.pdf": {
+   "mtime_sursa": "2026-08-10T16:00:14",
+   "octeti": 68390,
+   "sha256": "65c28805d4832feae60ec627c9842c46a9eb48a4aa3a7b348a495ecf2098b082"
+  },
+  "opanaf_407_2025_saft_d406.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "515364a93ad7357debe69d33c1af514c555a1c76fb49d46ff00f6abb09f7d069"
+  },
+  "opanaf_407_2025_saft_d406.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 14205,
+   "sha256": "b4622325617dd1cc7f55ebbb1d250a30cd88db70c41c264717fd0434587f8895"
+  },
+  "opanaf_57_2026_d100_d710.pdf": {
+   "mtime_sursa": "2026-08-10T15:59:58",
+   "octeti": 108559,
+   "sha256": "adeb4c1967ae2315f9df0b1ae3992eff9017979a350217f2232eb5391e203516"
+  },
+  "opanaf_57_2026_d100_d710.pdf.sha256": {
+   "mtime_sursa": "2026-08-10T16:00:22",
+   "octeti": 95,
+   "sha256": "91f01a87fe636213f38062aeb7bd582ef8fe40497dbff769b4844e4e68fbe2fb"
+  },
+  "opanaf_57_2026_d100_d710.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 12082,
+   "sha256": "c704019e07b663fc0d713c467bba0ec5f281728e47c9ab9d2061f7f115675eb5"
+  },
+  "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.html": {
+   "mtime_sursa": "2026-08-13T18:03:12",
+   "octeti": 455031,
+   "sha256": "c95075d85d1958a0f693b31a2eae7ec7d7b630c8f89096b5937917f1d0282e25"
+  },
+  "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.html.sha256": {
+   "mtime_sursa": "2026-08-13T18:10:22",
+   "octeti": 65,
+   "sha256": "2da6d89e95ca86ccd6eb325be8d5d87b03afe8ff95af6a6483a77d20308bdfc9"
+  },
+  "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.txt": {
+   "mtime_sursa": "2026-08-13T18:10:22",
+   "octeti": 133088,
+   "sha256": "cd85a0241aa3848f732652e8814628e22b3db60208f7721b71d8c38146c18d1d"
+  },
+  "opanaf_592_2016_d301.pdf": {
+   "mtime_sursa": "2026-08-10T16:00:42",
+   "octeti": 105127,
+   "sha256": "4c801357002ebee5760fbf2dc254f094b1823a25d02efc6b5792bcfc32f54ad0"
+  },
+  "opanaf_592_2016_d301.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "49f24bd99a01fd6f959e44f52ab23536eba4887df3bfef9d63a5e7d310405eea"
+  },
+  "opanaf_592_2016_d301.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 30414,
+   "sha256": "b7697265e15440d76a0ef331912e3591a54e0f20626ad9f91b6e26291f4804b2"
+  },
+  "opanaf_602_2026_modificare_opanaf_587_2016_formulare.html": {
+   "mtime_sursa": "2026-08-31T09:57:26",
+   "octeti": 65620,
+   "sha256": "cb3526057aa5d9a66f13cccd6729ddf021c9cd3abd56810cb4d50f94c94bf7b0"
+  },
+  "opanaf_602_2026_modificare_opanaf_587_2016_formulare.html.sha256": {
+   "mtime_sursa": "2026-08-31T09:57:26",
+   "octeti": 65,
+   "sha256": "bd3b16eb0d4419d1d8139f84cb22eab9d2016ffb2fcb55fd9b186b5d2cf82fc8"
+  },
+  "opanaf_602_2026_modificare_opanaf_587_2016_formulare.txt": {
+   "mtime_sursa": "2026-08-31T09:57:26",
+   "octeti": 9177,
+   "sha256": "fef31fbb7c679f5e3084e69abda02102fa5399e4ff552f7aae27f3a22dead7a4"
+  },
+  "opanaf_602_2026_modificare_opanaf_587_2016_formulare.txt.sha256": {
+   "mtime_sursa": "2026-08-31T09:57:26",
+   "octeti": 65,
+   "sha256": "931a3db29417c3194569a9766b8fbd17e4a81df6b186983494c5c5013756f084"
+  },
+  "opanaf_603_2026_recalculare_oficiu_cass.html": {
+   "mtime_sursa": "2026-08-31T09:56:41",
+   "octeti": 110862,
+   "sha256": "b693a8ad5128fd7dd8bc5eec3937c1fbe6361e30eb5e46cba4b024cec3b0f9e4"
+  },
+  "opanaf_603_2026_recalculare_oficiu_cass.html.sha256": {
+   "mtime_sursa": "2026-08-31T09:56:41",
+   "octeti": 65,
+   "sha256": "8101a737ba9d1ee3bbcd8c568294b802ee96da871b4fa7d3b69f16840792c84d"
+  },
+  "opanaf_603_2026_recalculare_oficiu_cass.txt": {
+   "mtime_sursa": "2026-08-31T09:56:41",
+   "octeti": 16454,
+   "sha256": "e257836ec892dba8dc24712f6abb37fa86ca4e01e02aacdeba2526b4cdfbcd7e"
+  },
+  "opanaf_603_2026_recalculare_oficiu_cass.txt.sha256": {
+   "mtime_sursa": "2026-08-31T09:56:41",
+   "octeti": 65,
+   "sha256": "a46abb92d1646b19eeb5038a93df138a0c89686085e75191e9de375ee528ec0d"
+  },
+  "opanaf_605_2026_d112.pdf": {
+   "mtime_sursa": "2026-08-10T16:01:26",
+   "octeti": 1455458,
+   "sha256": "2c7c4a03e9cf14d2b77201d98a9af10d70b22171379d76aab606d0ca971e5e6d"
+  },
+  "opanaf_605_2026_d112.pdf.sha256": {
+   "mtime_sursa": "2026-08-10T16:01:26",
+   "octeti": 91,
+   "sha256": "2551776eb6c82d513f2935f405d7299f13f2575c05e8273005641740949524d4"
+  },
+  "opanaf_605_2026_d112.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 347795,
+   "sha256": "58dad394aad32e28f2933c48a030b334cbd14d2c51b3a15d5800eaf6b37b9ce1"
+  },
+  "opanaf_6073_2024.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 55366,
+   "sha256": "9f863075a249231bc1735ce1596c85d95848b1d1f887a6fa9cca1eb6a2398d66"
+  },
+  "opanaf_6073_2024.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "955b65f6ad49510ee6ab36248744240f84b801841eb70a57361160187e74db9c"
+  },
+  "opanaf_649_2025.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65948,
+   "sha256": "5124d83ba91cd7c102edff7bfa177785bcb561fa6689590adc7949dbc5b022d4"
+  },
+  "opanaf_649_2025.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "76ed3f1450c623c9c55e444e6dd4a84a7629795eb626ca25005a7859b2e121f7"
+  },
+  "opanaf_705_2020_d390.pdf": {
+   "mtime_sursa": "2026-08-10T16:00:43",
+   "octeti": 125671,
+   "sha256": "33b8a5426059c35f8cdb18e83985c5355e98f21900fcd5d3b03bf5cfd3c3611c"
+  },
+  "opanaf_705_2020_d390.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "928fa5a42f6510b8e98f2c6e7322ca3099841bd69d35dac930fb24d57cddc4de"
+  },
+  "opanaf_705_2020_d390.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 49075,
+   "sha256": "4c770bfc70100d5aeaf1f8f8da04f4de539f77a39139977b202b0b9861691eb2"
+  },
+  "opanaf_779_2024.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:34",
+   "octeti": 195685,
+   "sha256": "d5aee793ff14e69e983f5866e260b2f88627719275ad8aaf60402ab77eb1f0fd"
+  },
+  "opanaf_779_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f43c6f56a3fa5e3b4ad403e69eed2df6e34c18570e8c0895dba8945cc02b6f89"
+  },
+  "opanaf_779_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 14083,
+   "sha256": "d1a4d1e07ad17d93b5344275c0c7584523195f11080fb9533f514433d4a3e707"
+  },
+  "opanaf_77_2022.pdf": {
+   "mtime_sursa": "2026-08-03T23:25:29",
+   "octeti": 368055,
+   "sha256": "86524aa921c226fafb417c4d494b112aebbc3e6dc6b91ca228486b4b1bb3b22c"
+  },
+  "opanaf_77_2022.pdf.sha256": {
+   "mtime_sursa": "2026-08-03T23:25:29",
+   "octeti": 96,
+   "sha256": "2f4f301911fdaa47595e8305b9dae4902074a5e35b599a510ff3ceb4767e459b"
+  },
+  "opanaf_77_2022.txt": {
+   "mtime_sursa": "2026-08-03T23:25:29",
+   "octeti": 157307,
+   "sha256": "d56671a022bac57d3b930f10b8588ef93860f07b5e2eb7e02c2585d18b1909b9"
+  },
+  "opanaf_793_2016.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:31",
+   "octeti": 159635,
+   "sha256": "57daabe74ad58dfee05971d997b6c1c3a3070bd481424c21b2a17ab779faf114"
+  },
+  "opanaf_793_2016.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "36be4dfdf592aa19b44843f85488da44cb3ebe75b2dc0e0aceed28150ecb35a1"
+  },
+  "opanaf_793_2016.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 24915,
+   "sha256": "1a6c0a95e9b14f5a0bf60112c55ad79c4db984e1eebec5922ad99a75f34d9458"
+  },
+  "opanaf_888_2018.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:33",
+   "octeti": 311122,
+   "sha256": "47f6df35c3cc4cd0699e0dc8c4c87c5e67546361023e7e12a356be4952b76f97"
+  },
+  "opanaf_888_2018.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "499fbe96d478f78543bc5137b587ca0c0aace00d6ab23557e1a6585dbc15be0e"
+  },
+  "opanaf_888_2018.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 245342,
+   "sha256": "c163ed500d98b79bb1486ad4e9532bf8f4a052fb72afcad64528bcd90fb3a9d7"
+  },
+  "ordin_1029_2020.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 177145,
+   "sha256": "4e5bd47e0461f0da454d1a311f94599e21d75a3ab1f2d31658fcd589a51c26c6"
+  },
+  "ordin_1029_2020.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "5dab3f984cf89a2c188712acee3ec612f39d5dfb96879613f11b218d23bcf203"
+  },
+  "ordin_1090_2022.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 70242,
+   "sha256": "1ac1b7e6c613180363e1a009d18fb3e2ed9e555923b969181e78709ada84fb3e"
+  },
+  "ordin_1090_2022.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "2b9fb76cb3709cbbb5c69838f3bb0ee59e7c3be1d102ff662cb5a605caf9565e"
+  },
+  "ordin_1094_2016.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 82960,
+   "sha256": "0dc3d2bd54207c975e53b2572ff873a8f4683d84425a411d0750a898dc8d1a8b"
+  },
+  "ordin_1094_2016.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "63abb569c5925b76f6a7ed434ee094ab6bbdac2597f8c7779fbaec6e70ae6e0b"
+  },
+  "ordin_1099_2016.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 264860,
+   "sha256": "e9f4e7c8b4d525a595e95091e046a4d27b311dfd17ccd97fb1eee34de1380762"
+  },
+  "ordin_1099_2016.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "b5a02741df396a7f9600a63d0c42554a31769da9c89b22c52ecf0ac846c7eedd"
+  },
+  "ordin_1366_2021.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 55053,
+   "sha256": "af83de80e0a75358ecdeee4bbf2d894b1dc300477c6326fa2198e9a5e1091328"
+  },
+  "ordin_1366_2021.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "d8a0d158c4fd80e3d3448b71379d703d0e63a718175d8ae633f778cf62cdd413"
+  },
+  "ordin_1517_2017.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 148482,
+   "sha256": "d63111dd6a85b10f0adf113e5d72a2fc3013de8b78c6bd16058736ee9df3d7b8"
+  },
+  "ordin_1517_2017.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "5cb361b64c96b1ee4d4af0c113b898a3d53f14613840fd15a1251d324eb98278"
+  },
+  "ordin_1574_3246_2025_cultural.pdf": {
+   "mtime_sursa": "2026-08-04T16:27:49",
+   "octeti": 42707,
+   "sha256": "2f7a8a57e7cb9935ab599fa8c0506a06ce96648ea6ca943ae73ef5de3fe8a270"
+  },
+  "ordin_1574_3246_2025_cultural.pdf.sha256": {
+   "mtime_sursa": "2026-08-04T16:28:13",
+   "octeti": 100,
+   "sha256": "5d00574fd492f558bb0a1524d084d6a669c6e34cec295fd11626bf5de8495118"
+  },
+  "ordin_1574_3246_2025_cultural.txt": {
+   "mtime_sursa": "2026-08-13T18:07:08",
+   "octeti": 1797,
+   "sha256": "ad62fbc2a6d08d943f3b17d93b93e5c33b0f79897482de5d7e3b709509772ff1"
+  },
+  "ordin_1604_2025_intrastat.html": {
+   "mtime_sursa": "2026-09-01T03:22:32",
+   "octeti": 56938,
+   "sha256": "7906620ad807b6245133d83768da5a6accc218bb75ada97f98b18b869eb57316"
+  },
+  "ordin_1604_2025_intrastat.html.sha256": {
+   "mtime_sursa": "2026-09-01T03:22:32",
+   "octeti": 65,
+   "sha256": "1e5f8fe2f1d95d1f43d91664cc6f1a0dbf9f3ed02a5cc23c23ed4eeccfba24dc"
+  },
+  "ordin_1604_2025_intrastat.txt": {
+   "mtime_sursa": "2026-09-01T03:22:32",
+   "octeti": 5583,
+   "sha256": "b808064fe940f0fd286c206926fdb2d0a14f651eb81d5fcc0ccc6906e71835a6"
+  },
+  "ordin_1604_2025_intrastat.txt.sha256": {
+   "mtime_sursa": "2026-09-01T03:22:32",
+   "octeti": 65,
+   "sha256": "b3f7e1e0ca32bf584a7ffcbeef8919d0bf57f30b6102b83de3a32d82a2d83491"
+  },
+  "ordin_1604_2025_intrastat_mo.pdf": {
+   "mtime_sursa": "2026-09-01T06:43:44",
+   "octeti": 19229,
+   "sha256": "93562d591c737c2631e396c6e7f30146971dc13ad38429f3c3544d83b409f1b4"
+  },
+  "ordin_1604_2025_intrastat_mo.pdf.sha256": {
+   "mtime_sursa": "2026-09-01T06:43:44",
+   "octeti": 65,
+   "sha256": "1a6ea084b05d1cf98baf88bbe5c752d7206caa0fc6dfdcf69ec41c83884eced0"
+  },
+  "ordin_1604_2025_intrastat_mo.txt": {
+   "mtime_sursa": "2026-09-01T06:43:44",
+   "octeti": 3036,
+   "sha256": "bf1faac952a812f0286c5ad9a8489d452a0b19ab2ca8bd7eefb1859f78b2a6e7"
+  },
+  "ordin_1604_2025_intrastat_mo.txt.sha256": {
+   "mtime_sursa": "2026-09-01T06:43:44",
+   "octeti": 65,
+   "sha256": "84c93a96d76d70d95bbaafabf248a5e1e2b8ebf866af6fce3af7579cc5f64ca0"
+  },
+  "ordin_161_2025.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 79595,
+   "sha256": "08edec31e49a436c8b016b1e6abc0622c5b35561565c87d7f3727d7dbce5515e"
+  },
+  "ordin_161_2025.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "8e18d2420725f112b698c0abfc41b342591fd169a13c41562b23f583d8d40c89"
+  },
+  "ordin_1699_2021.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 128160,
+   "sha256": "a1f2f1ae2d58649517e0086ce127cd0e8b759915eba578a088a95f329aded8ac"
+  },
+  "ordin_1699_2021.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "22201eda5be4768a02d71fd7ca118ce794d17292c6f833fcfc1d87140783156d"
+  },
+  "ordin_1757_2019.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 134238,
+   "sha256": "7ea07d89700cc196eb50acc65b27059d64540e9e8b3ba0edbe3502c9c0057247"
+  },
+  "ordin_1757_2019.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "f9fa04675f1a71b672c68394b4b55a9a73d37ad1c0187198e558d0ff5169a9df"
+  },
+  "ordin_1760_2018.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 123152,
+   "sha256": "f8b38caa5c7ac31fc26ed449cb1e81cedee26a1e3d1712f1d8ad20eb91334727"
+  },
+  "ordin_1760_2018.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "3960bff85c44f714609d2ff7b61ade347e62c8902b23b4a1555fe86d6ac23c38"
+  },
+  "ordin_1767_2021.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 59177,
+   "sha256": "6cbdbbbce583cf9d4fa217291da77db559e142700b1419df2182330679fc9b41"
+  },
+  "ordin_1767_2021.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "0223915485698d2d546de39fa09d98b52ce9a031c1bc14afae5b01b6dc275a9d"
+  },
+  "ordin_187_2018.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 102951,
+   "sha256": "4be16ae4ae30d3ead985103068b28d198de879f2f434b74d245ac43ec75800be"
+  },
+  "ordin_187_2018.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "560c602c679b26726451603ab857e530ba316f24d495f7e9dd73038ad064e517"
+  },
+  "ordin_188_2018.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 157220,
+   "sha256": "20e43549fa6bb608a871a6d6d0400a5c19e2a84eff38ece03fc27f5b4571df4c"
+  },
+  "ordin_188_2018.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "5848cc736bc72c2655b000cfd6a3a7128af45c1fe6eff98d2ead502ffe744057"
+  },
+  "ordin_1946_2023.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 77562,
+   "sha256": "1936d5a9722f68b3d16ea1e1f42f5430a4b4d7beebf12cbc9fefa572de514451"
+  },
+  "ordin_1946_2023.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "1d1cbd506c8f70557f42f96d3a286b07508a5dd0c4933c7240518b9df0475aad"
+  },
+  "ordin_1996_2023.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 107858,
+   "sha256": "c0dc7d95c84591064dac3fb1745c58cdec458f49cdb97e2151805be962ead976"
+  },
+  "ordin_1996_2023.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "a611f7cdee0582e45ae09283c12647a9b7ff80872ea95fb4e40904f2f99cee0c"
+  },
+  "ordin_2026_2023.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 76267,
+   "sha256": "171ec1063ad30e9938cf3bd7a39108dfc1db181d8eb2a5be890fc68b63ae5721"
+  },
+  "ordin_2026_2023.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "c8febb70ee1ef71d2171474adb3289cfe6ec85b7a3f8cb391c2c190afe2afb46"
+  },
+  "ordin_2066_2025.html": {
+   "mtime_sursa": "2026-08-24T15:14:32",
+   "octeti": 67138,
+   "sha256": "bcbe96c163b6fab2eaa99f0b5c0a3c91afc835f19e8a402e2d912e7434d9eb7e"
+  },
+  "ordin_2066_2025.html.sha256": {
+   "mtime_sursa": "2026-08-24T15:36:41",
+   "octeti": 65,
+   "sha256": "01b8867f31b391d72957b1d9a3f4d1cf1a619d1b55b942ac5c384787067039e8"
+  },
+  "ordin_2117_2018.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 694287,
+   "sha256": "11ff9703c2f134ab6dd87f4a3253ad4d93113cb03ee3e56a9c7b7f50b73ff47d"
+  },
+  "ordin_2117_2018.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "24568834c7774cf23355e58e0d8c9a29b9c94d61ad7001c489b4c4b5080ee6b7"
+  },
+  "ordin_2229_2025.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 79419,
+   "sha256": "722688834aa93a4d9c556882ca3a76f90d0821a9aa00a00af0e7fe3411e8dc84"
+  },
+  "ordin_2229_2025.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "7a14c78fc22d0f8d0e861ffea7c589377bf8297f33f5571cada3c21ee7b54705"
+  },
+  "ordin_2430_2025.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 148192,
+   "sha256": "02ac7f6849b452b7ba9c23ce30c1a6d3ebf5ea579e65ab33a26a360f30408b2f"
+  },
+  "ordin_2430_2025.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "3af70733887952056e9e1afdbf669ce719448a489c5e109b86838f400247246d"
+  },
+  "ordin_2547_2019.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 283515,
+   "sha256": "8a34b113ba6ee4e2bf86eda0cd87877b23305b3a150b7d2e721d9f7a00808a06"
+  },
+  "ordin_2547_2019.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "6489db21cc4e918c92adb4f747cc94f552c272a2687d90fb9888cb7e0ea04468"
+  },
+  "ordin_2594_2015.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 251479,
+   "sha256": "fbe92f0b604dbacaeb5ae0b75f9ef7ffbcb035494e839e256d315529ee5ffe50"
+  },
+  "ordin_2594_2015.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "17ef80ff7c4fbaf1e7b13190c3d08681fa101a585be7c6c95239b8ac1fbaedfc"
+  },
+  "ordin_2736_2025.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 61989,
+   "sha256": "834fae5db3d03e6f2842e31e57f8af8825ec43d0eb47644bb49fbc0dae009d38"
+  },
+  "ordin_2736_2025.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "ed0af19c15a8ebe05af23c770d6fa5f6368cc62e2f412b627576d6b487c133d6"
+  },
+  "ordin_3357_2017.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 84423,
+   "sha256": "5625b65e5e033b2229aedf4e77d4bac190ce4c3e46c1823ee9316d71e9921288"
+  },
+  "ordin_3357_2017.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "5f6574ea6873b43e25d16457a635befe3c0230253916b4f2122d7621ff4c3865"
+  },
+  "ordin_3391_2017.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 84430,
+   "sha256": "34c285bb0f86c4abab2731faf7d74e57f447b98e20ac8630e2d2f8e4250cb39a"
+  },
+  "ordin_3391_2017.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "fe0511e23365bdf74dab84847afd375508255ee3c920cc65b436a7d55f15f29a"
+  },
+  "ordin_352_2022.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 77651,
+   "sha256": "479d804c8a0172f8e1612b9ddc35189e638891702a21c1ec1cf7cdaaea562446"
+  },
+  "ordin_352_2022.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "db11dd7c834921a2979527d898d88ac18e262cbb312ddda1f54d945e2f1fe991"
+  },
+  "ordin_361_2680_2025.html": {
+   "mtime_sursa": "2026-08-02T18:31:55",
+   "octeti": 53283,
+   "sha256": "6cd34d460440f8ed8cd5bc1df9c98b43665364ca763fc232e6e1e56002bc91fe"
+  },
+  "ordin_361_2680_2025.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "d08b816c0a098b8e680f145d86f7f07a389aab3db7623302d1d3fd76fd9cdf8f"
+  },
+  "ordin_361_2680_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 4149,
+   "sha256": "017f473a1a400eab232a29f603d7b83a07a8ec66c4607bd0ef3aef5ba0618be2"
+  },
+  "ordin_369_2624_2026.html": {
+   "mtime_sursa": "2026-08-02T18:31:19",
+   "octeti": 53233,
+   "sha256": "3552340587bba7ebc5a4d1bf9f3b6d9df80feeb6a7955710fce8a27aaa5ee21a"
+  },
+  "ordin_369_2624_2026.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "ec9c3258723c420fd89b68cb6858da018676c8ff05131d490e7cf14417794b24"
+  },
+  "ordin_369_2624_2026.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 4094,
+   "sha256": "9e3460d81d35d3587ca186a7853c148599b34e8cdd435a39564b4b073d9aab17"
+  },
+  "ordin_3708_2015.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 98909,
+   "sha256": "57a599f6ffa2fa085d2cef4f9092eeea3677a6427346046f3006d7d8560ef3ba"
+  },
+  "ordin_3708_2015.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "adb365b6eca98d705c71e443bce7c6baea7d39c8087e939fc48329784fd3f15a"
+  },
+  "ordin_3711_2015.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 301798,
+   "sha256": "a4ba2dd37345dd08d109071687d86f7c735e54e1757afe3b430b74e48a93ec77"
+  },
+  "ordin_3711_2015.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "5f98183fa64ab43ede8a0c26203c85f919fab6a48fe5befbf6cc566d322baa98"
+  },
+  "ordin_3738_2024.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 105426,
+   "sha256": "3df8092c9f91c56d1fc2072dd93a73bc0f342e1c1a4cab2324d762a423d6c42e"
+  },
+  "ordin_3738_2024.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "dbe811e393a3a40adf394e4a4182c4eed64eaf2f4dd171b9150d2e2c8649ef29"
+  },
+  "ordin_3775_2024.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 64148,
+   "sha256": "4b5c14ef47cdc45e0e1b7dac30061055baaeefe09e6952af7e4acbb420c83d2d"
+  },
+  "ordin_3775_2024.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "f90edbfffd52f2e967c7920940bfd4d308ae33ab8e638f8bc846239de4dc0377"
+  },
+  "ordin_3780_2017.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 484224,
+   "sha256": "e4506516e482a2dd99f4e2587be592f0da91926a2d65005a10d58e46920226a7"
+  },
+  "ordin_3780_2017.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "a63597d9d9bba059697b9c1d84e6a5d7a64c0c3e85f227a4cb48ed4e496adcfd"
+  },
+  "ordin_3792_2024.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 114313,
+   "sha256": "54f28a9a5a53291d6693e694f82d899bcdf53da577fbb47ef3a4bef944ef46d7"
+  },
+  "ordin_3792_2024.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "45d66fec7476135f61e875995a85cc29e1a6c0d04098a9ace7278394a47b53fa"
+  },
+  "ordin_382_2025.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 109368,
+   "sha256": "5206dcf83f1bd959a7dbd708183f65bbd0a9a1dea8ceb58b70f6b327272a5db8"
+  },
+  "ordin_382_2025.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "1f6fbc6b4304bf387de0d46882b79d7580ede1e21881947324488b1aa75f94df"
+  },
+  "ordin_3845_2015.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 134349,
+   "sha256": "62f6f9e2a32bf0daaed36a927c13720b82c4718c8b5cc5543396e9b7de7c681f"
+  },
+  "ordin_3845_2015.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "1a169b31e17ee730f134e4a44759c16e3d8874315713e4574e15331c888e02f4"
+  },
+  "ordin_3846_2015.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 276417,
+   "sha256": "73d54955d7a813e0c92366e1c753562761a3bf360264bcaac003cf25fa1b0d83"
+  },
+  "ordin_3846_2015.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "4f5a1caf7d2d108f247ad94a5e956fd258614bb5fcefec366826591d03b882b6"
+  },
+  "ordin_396_2025.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 98990,
+   "sha256": "233eacb9f164fc4d2539233eee0ff6f440018e7a7f35e32ea8e3681d80f8c12b"
+  },
+  "ordin_396_2025.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "21aa0bb44e4e560e0565d59d93bb8b0b3aa4f970966223b42bdf867e34923cd4"
+  },
+  "ordin_4156_2017.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 254392,
+   "sha256": "76b9287a251fa66fc4f536b66f16c47da23963efcba346d654c42f78375255f6"
+  },
+  "ordin_4156_2017.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "a5e6404509ed22e3131b72d9eb032a1b33e502c20bdb1df66b34a14b3e3f2017"
+  },
+  "ordin_435_2021.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 80341,
+   "sha256": "80fa8470577b80da54a18a7c362202b14341ba32276ed1bf8cf42a0bcd4b54fb"
+  },
+  "ordin_435_2021.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "36efb3c17521d6594060252e92ea659fdae71591e6ee5e38f77660c99bf188ad"
+  },
+  "ordin_506_1030_2026_norme_oug158.html": {
+   "mtime_sursa": "2026-08-09T10:24:35",
+   "octeti": 71245,
+   "sha256": "a246b75a9cd38cd759786b40cf33151f2d61996366733f7c3ae5ac5000868ac9"
+  },
+  "ordin_506_1030_2026_norme_oug158.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "b9916f8c15363aba4e831586fffe79ef8e2686335fbbb89805fb0aa299ecfee8"
+  },
+  "ordin_506_1030_2026_norme_oug158.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 8734,
+   "sha256": "c24644e9f9b301463e4e743d773ab7a26bc32961faa81a02f9d1f13875004880"
+  },
+  "ordin_5521_2024.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 54313,
+   "sha256": "c87dfab565e090602afd26a2838bbb72cdb083268f99cfd0f07ddec8e362a4b0"
+  },
+  "ordin_5521_2024.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "2dff31d1ad57b049f8b9b7f0cba2b8021a50a57a973f809345afba8391d764d6"
+  },
+  "ordin_608_2026.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 27130,
+   "sha256": "9ae258b2f1cc13ab755509a73541f02e185503041ca0d2d88aa7ab1d5749b65a"
+  },
+  "ordin_608_2026.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "be32841f43791fb1e3299a40e544d8770f698e471e8b68bb407916e6dabc3e65"
+  },
+  "ordin_63_2017.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 127056,
+   "sha256": "78f81c490f9365a3b73fba274b10b0487869102413e820991739c163fc42f6f2"
+  },
+  "ordin_63_2017.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "a53eb7a9ae898481eceb04f482d97f98348a2c5ff2975a585a386b643e7aaa4a"
+  },
+  "ordin_802_2022.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 57420,
+   "sha256": "58f3a8d236dc031843e7bc2e7499edd3e9628c7972446f2621e314264dbfd347"
+  },
+  "ordin_802_2022.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "ad76800cf71e696d8e1282d53a22562d97aaf2ccbf8096e4c327f64fe5c249ab"
+  },
+  "ordin_878_2022.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 162280,
+   "sha256": "2aa3091bc070b579e87676b910b701df508047f5e7b395a08153cd08ae3eb0fa"
+  },
+  "ordin_878_2022.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "307a3a85c7f450c0681e8fece2d13c34ca6bcce57f13961418dd219b8394ff9f"
+  },
+  "ordin_90_2016.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 126236,
+   "sha256": "ed2be8b6ea6f726359d64031fe9bebf3287efa1bcf269c8f43c536fdb494b814"
+  },
+  "ordin_90_2016.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "3c85961d4eb76562a7ff5a5ff59800bc167394bf5dc308c7ffd5524524838a92"
+  },
+  "oug_115_2023_consolidat.html": {
+   "mtime_sursa": "2026-08-09T11:41:09",
+   "octeti": 760777,
+   "sha256": "f5fb72a196651c51714778049f991274d2351eff451f3e2fe407d66ab5b69463"
+  },
+  "oug_115_2023_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "6232cc803bbcddb89ad9f5a40eac3d2fe7483e0515ee6ca8392c9a3c98f5246e"
+  },
+  "oug_115_2023_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 245203,
+   "sha256": "d1ffdcddd99445f4bf582751e1855cd792fb8e6eae17c06e742eab21a387a414"
+  },
+  "oug_116_2023.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 132074,
+   "sha256": "4ea766eed3b5a65035aa4b91be29a963c0f4f8936005d967d8cf1f1ba37ffc10"
+  },
+  "oug_116_2023.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "14ae33b0eea542aeee0c98ea0c87671717958dfdd1873ff0deba0134ffe37537"
+  },
+  "oug_120_2021.html": {
+   "mtime_sursa": "2026-09-25T17:45:30",
+   "octeti": 187046,
+   "sha256": "9250b066203e15e8b3598bb9fdbd88958a629adb98ae90f5790f6a7b03d85801"
+  },
+  "oug_120_2021.html.sha256": {
+   "mtime_sursa": "2026-09-25T17:45:30",
+   "octeti": 65,
+   "sha256": "641980e0c8eab3ce4f40606bae891b574326d6db928a822854bed513c4e5fdc6"
+  },
+  "oug_120_2021.pdf": {
+   "mtime_sursa": "2026-08-13T15:48:28",
+   "octeti": 133548,
+   "sha256": "697e28c6d6f30ee30726f6295bd72dd03f503e7df779ffe6c1f7de92d8c0152f"
+  },
+  "oug_120_2021.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f2c77d29de88cfbcebf67d99fc79e1d6065918d749e943322f681ab9bfee4d47"
+  },
+  "oug_120_2021.txt": {
+   "mtime_sursa": "2026-09-25T17:45:30",
+   "octeti": 54133,
+   "sha256": "dd0779a58bdfbbd45b7d2c6e7afe853e8eaf1ae5ebb03bf6127aa4ca3a702eec"
+  },
+  "oug_138_2024.pdf": {
+   "mtime_sursa": "2026-08-13T15:48:28",
+   "octeti": 210378,
+   "sha256": "3c2557494e7fe3a2e2dfe9426770015cdbe2b32ef1953831a7cb44d52c04f5df"
+  },
+  "oug_138_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "e109e7d1c4a45c7a59892f87deea9e9675c17dfefbc911380d6ea3de4f3a3815"
+  },
+  "oug_138_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 77444,
+   "sha256": "9c2c5c8ca892e4795b47a4fe224e2624f5980e7eaac1029663d8c67e9d69ad2c"
+  },
+  "oug_153_2020.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 118879,
+   "sha256": "f549ba286cc960452a3090e5965f92b5fd4187b9573b8119a98f3fe740c4779e"
+  },
+  "oug_153_2020.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "7f1e0806f8a396f1aa3efa25f1ba3080eacb8b45485ab5c2924d43d3dfb9cd2c"
+  },
+  "oug_156_2024.pdf": {
+   "mtime_sursa": "2026-08-07T12:23:03",
+   "octeti": 245356,
+   "sha256": "1e52bf2722bbb7d19ea8ba2868fad591684277957923891aa9e92cc0f3fecccf"
+  },
+  "oug_156_2024.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "283eca6bad150bbf8fc234800d8f9be16b3e5ba90d75fa1b45ce4f290d0ed270"
+  },
+  "oug_156_2024.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 103159,
+   "sha256": "b4818826a58ea1aad765a8cabb5fad8cd9384eb1a28af64e088e0a9ec853ae77"
+  },
+  "oug_158_2005_consolidat.html": {
+   "mtime_sursa": "2026-08-02T18:27:42",
+   "octeti": 440961,
+   "sha256": "c48af13e8b0384d2a5355d7dea8b61fe7bbf6aeb3aec6db64ffadf0541fe9513"
+  },
+  "oug_158_2005_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "f2a200ac68c2ad9dc72558a9d77989d3a4848513a37a993e0b663ed81e2d4601"
+  },
+  "oug_158_2005_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 140406,
+   "sha256": "246369eba7ae55fb5450c3572ea70e32b5f3498771639816947c58d27e4a7b09"
+  },
+  "oug_158_2005_pre_L141.html": {
+   "mtime_sursa": "2026-08-07T11:09:33",
+   "octeti": 424170,
+   "sha256": "41498b8ec5f0ad48962a8b22721b643737d2d250110a92e2cabcf2c9b61909e4"
+  },
+  "oug_158_2005_pre_L141.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "ea77be560f763c6559b1196e91c12852dcd9d6fb061cd64991e952ffad04ce05"
+  },
+  "oug_158_2005_pre_L141.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 128296,
+   "sha256": "29b3250d8cf5b6e5326333c2356e15aa75c3362b54b20c7a357a87e94b82e745"
+  },
+  "oug_193_2002.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 110707,
+   "sha256": "06a763f89a7359994d8a78da239c05396d2105c847343bf24220e0c9c48d2ddf"
+  },
+  "oug_193_2002.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "74da3afd837bf6229c603d39331be7dc790412c6c6d660f7f73c9ab3cfac6105"
+  },
+  "oug_200_2008_modificarea_completarea.html": {
+   "mtime_sursa": "2026-08-13T17:18:15",
+   "octeti": 86842,
+   "sha256": "6a0d69e50d6a36c1845cefa8139924b54435a91fac9acd4ced193894cb08b822"
+  },
+  "oug_200_2008_modificarea_completarea.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "ab731f1aad1eccfd9eae99d6b70c648fe8f825ecb5f1a41872bb97078cc2b2ed"
+  },
+  "oug_200_2008_modificarea_completarea.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 20452,
+   "sha256": "d9049bdaeb617e15533cf9130936aec994ca82ebe63968a057d7a630a4bc15f9"
+  },
+  "oug_24_2026_contributie_solidaritate.html": {
+   "mtime_sursa": "2026-08-31T10:49:09",
+   "octeti": 104349,
+   "sha256": "caebd06239cefdffcd66a0af993b5b88062c2732edf55c84a5667639611e4859"
+  },
+  "oug_24_2026_contributie_solidaritate.html.sha256": {
+   "mtime_sursa": "2026-08-31T10:49:09",
+   "octeti": 65,
+   "sha256": "ea891dbecc204426e5db5000571950e2268947d09ca7a9c0a64b57ca4d674b39"
+  },
+  "oug_24_2026_contributie_solidaritate.txt": {
+   "mtime_sursa": "2026-08-31T10:49:09",
+   "octeti": 25318,
+   "sha256": "331fe803e846ec9cadc195af606240e6db0e8a9893220d708c7cab0c3614d471"
+  },
+  "oug_24_2026_contributie_solidaritate.txt.sha256": {
+   "mtime_sursa": "2026-08-31T10:49:09",
+   "octeti": 65,
+   "sha256": "43b04ecc4fe7ad85f0006cc95b2c19a21e67bc4d3c5a4c0eb1a1fdf387f693e9"
+  },
+  "oug_25_2018.html": {
+   "mtime_sursa": "2026-09-22T20:56:42",
+   "octeti": 240656,
+   "sha256": "5082de25fecfa9856435be0a8e20a47deab7ec3285bc62cde2179fdeb87ac9c2"
+  },
+  "oug_25_2018.html.sha256": {
+   "mtime_sursa": "2026-09-22T20:56:43",
+   "octeti": 65,
+   "sha256": "8aed0aa4576b7616871b1093ecabfcd7638b2e1fbe7c9f7413accabe7558eb0f"
+  },
+  "oug_25_2018.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:37",
+   "octeti": 119393,
+   "sha256": "148d2d211d830019aa16873370b6f26db96da73eeb734166a1bc6c33bec06891"
+  },
+  "oug_25_2018.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "7badd770d839bc38dffb56cd499f098a897bc7ebb8ab0569724560f7406e5963"
+  },
+  "oug_25_2018.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 68464,
+   "sha256": "316fe7b041261d1b32e83224cdf241f6538209160ae8199b76ffff28d94a8a9d"
+  },
+  "oug_26_2019_modificarea_completarea_acte_normative.html": {
+   "mtime_sursa": "2026-08-13T17:18:12",
+   "octeti": 118488,
+   "sha256": "a8694a91f75bf11411664451e3d367ef226b5762971644acde8f2d8c64aef008"
+  },
+  "oug_26_2019_modificarea_completarea_acte_normative.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "05496468728b8bc0af9477f94e8c814dcb0aba831466485b4520305a11890f5b"
+  },
+  "oug_26_2019_modificarea_completarea_acte_normative.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 22207,
+   "sha256": "851a0815ac9d5578a8e7ff0d989f14f0c80a70af9dbb05d9336e618007547278"
+  },
+  "oug_28_1999.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 287092,
+   "sha256": "7976c763d99052d34520b325d20a9075df80c8c2d89e924c007a00880fa6f78f"
+  },
+  "oug_28_1999.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "c07b901a8c358fbc7d2b117fdc8c5011da7e0b6aa15dc8bb7d43264807de9134"
+  },
+  "oug_34_2024_consolidat.html": {
+   "mtime_sursa": "2026-08-09T11:41:15",
+   "octeti": 147811,
+   "sha256": "1f414dac647f59f0c1ae61ecc4a06f9b310405cf0754e69abcff2b9504e5849d"
+  },
+  "oug_34_2024_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "ebb948d485660c0a742ca7d2848558e90d5749aff7deb6e102a19ed8483448bc"
+  },
+  "oug_34_2024_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 40002,
+   "sha256": "9ee13979ac95c1b68ca267945be302e61e79fc59ee082043dcd5bbd1852e6f71"
+  },
+  "oug_41_2022.pdf": {
+   "mtime_sursa": "2026-08-13T15:48:28",
+   "octeti": 61295,
+   "sha256": "175c84f62a7ebfe41150e03ee95f4616ba2c908d93d80d786c8b42d62b06541e"
+  },
+  "oug_41_2022.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "cced4f4f5fef11b36259cad3a5ea8279bd24059c4c23b7995d6563193eb9def5"
+  },
+  "oug_41_2022.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 21376,
+   "sha256": "cf61891ed2fd2c360cdf4cb140078a79861d31b30a6f12fd4a9e15abc8f80877"
+  },
+  "oug_44_2008.html": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 268920,
+   "sha256": "37dd24b46d9bc69bdd180c9d93f2e87394ca54492b54bfbc4b54853d54bda05f"
+  },
+  "oug_44_2008.html.sha256": {
+   "mtime_sursa": "2026-09-25T13:57:38",
+   "octeti": 65,
+   "sha256": "1620e3b8c9a4e8516076930d4cfed900e4437d00bde2d2d13921a9093a653ec1"
+  },
+  "oug_46_2025.html": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 71387,
+   "sha256": "b59e0b243d42846be66ee416dcc6b54b30e19f0448da192ce88013cef5717cea"
+  },
+  "oug_46_2025.html.sha256": {
+   "mtime_sursa": "2026-09-24T10:24:07",
+   "octeti": 65,
+   "sha256": "c7a15b9d927e29a1e536fd9fd2e324b7e4c6caa9fa717d00a3f152134fa00d71"
+  },
+  "oug_50_2015_consolidat.html": {
+   "mtime_sursa": "2026-08-09T12:33:03",
+   "octeti": 206954,
+   "sha256": "1790ed10dc0eabf43804be826035f4a8dfe475700aa7ac4e49d1334a3db3e930"
+  },
+  "oug_50_2015_consolidat.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "1d27cd3a312b5b4c242bb817361c5010ea489b28d30f5b02200736643c7e4dd3"
+  },
+  "oug_50_2015_consolidat.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 87059,
+   "sha256": "e1a04514969bb7420e2687c9126024df5982f16bad42cf050f442a499fb24a40"
+  },
+  "oug_68_2025.html": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 122840,
+   "sha256": "41910c3df05ccd1614fd0fb18ae7d090b08cdccb4a26fceefcb1bc1532ab6dd2"
+  },
+  "oug_68_2025.html.sha256": {
+   "mtime_sursa": "2026-09-21T18:58:50",
+   "octeti": 65,
+   "sha256": "e3c898761151423e81a5ed0d574003c97a86a59036e6443cd20ceb5fcb5b12a9"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat.html": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 151847,
+   "sha256": "9229dceb758c81157ac37be67409112239e90ab4576215498d57fb71a10222b2"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat.html.sha256": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 111,
+   "sha256": "610393112ecb181808299d094253a044144affd1f52dc428b9ae1aaa9ab532e1"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat.txt": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 34972,
+   "sha256": "4d5410df8dd260a7d74e4f143181559e4f2c9c3eb4445fe9107fe425748f947e"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat.txt.sha256": {
+   "mtime_sursa": "2026-08-14T16:00:36",
+   "octeti": 110,
+   "sha256": "7403168947214cf8981d908e328f33ec9d5d7c961db9c581db5008f974576487"
+  },
+  "oug_77_1999_masuri_prevenire_incapacitate_plata.html": {
+   "mtime_sursa": "2026-08-14T10:25:52",
+   "octeti": 126214,
+   "sha256": "f056b4a28561d318332a1be9a04fdc9eb9307ff01143865221e9fd19f18ea864"
+  },
+  "oug_77_1999_masuri_prevenire_incapacitate_plata.html.sha256": {
+   "mtime_sursa": "2026-08-14T10:25:52",
+   "octeti": 119,
+   "sha256": "dc84b793023c4ffeeb6c277296ce1436ebc03a6ed5fb6c265d60e885a937f129"
+  },
+  "oug_77_1999_masuri_prevenire_incapacitate_plata.txt": {
+   "mtime_sursa": "2026-08-14T10:25:52",
+   "octeti": 5935,
+   "sha256": "8e4ae011f806e1d1e021ccdb41b6b024f377a450a8eaa13142eb84b1c10be0f9"
+  },
+  "oug_85_2022.pdf": {
+   "mtime_sursa": "2026-08-13T15:57:37",
+   "octeti": 81474,
+   "sha256": "3e5b217bbf12e638b39f506dc3b72c79f40e201bd15ec9201cbea6a5b8b99e25"
+  },
+  "oug_85_2022.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "6847c4d7fc44461fff2bca3f1ecb17642e7f68a1640395db855bbb3a0154584f"
+  },
+  "oug_85_2022.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 25467,
+   "sha256": "910e3f3fe158867887a7b20341120e423ec802203198769ec9b2bf81316b6f19"
+  },
+  "oug_89_2025.html": {
+   "mtime_sursa": "2026-08-07T17:06:21",
+   "octeti": 525576,
+   "sha256": "515000971fbfc74b602f6018cfe1a646fb2031e1ff3ef72b02bf9ea387bfa5f5"
+  },
+  "oug_89_2025.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "0b25b95ad140d6ac8057ad376da26711c3691cb9000f5d994900f95b6db5a772"
+  },
+  "oug_89_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 163914,
+   "sha256": "f4f7e1c7bfc33913ba01d6488d2341762e6d0f96b8d5b9252c428ad20042736b"
+  },
+  "oug_8_2009_acordarea_tichetelor_vacanta.html": {
+   "mtime_sursa": "2026-08-13T17:18:15",
+   "octeti": 652012,
+   "sha256": "5b4196d29817716b8f3c674e0e63ca4afd813391f8fc0737331e319d1ad413ea"
+  },
+  "oug_8_2009_acordarea_tichetelor_vacanta.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "0e8afa97b794963ec8c2ecf9f27d1c60d02ac073670d49994f78fbc17c1b498c"
+  },
+  "oug_8_2009_acordarea_tichetelor_vacanta.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 23650,
+   "sha256": "58bc64b23de58567ec2ca395693f45192da6d5c7d52650c9656b56b4a5de144c"
+  },
+  "oug_8_2026.html": {
+   "mtime_sursa": "2026-08-07T17:06:28",
+   "octeti": 334975,
+   "sha256": "0604e79bc2674b24c21159befcd90d875c348e4efd023ee6550b1e04390f6479"
+  },
+  "oug_8_2026.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "db84e4059d7faa4169eebcf71aa34ef4d4a60f2d1b73cf1c83e992ed5044f9ef"
+  },
+  "oug_8_2026.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 111609,
+   "sha256": "a92a80b879303c938665c75dc6c1fa2c0bd9e2c9409077d180d74bf692294b37"
+  },
+  "oug_91_2025.html": {
+   "mtime_sursa": "2026-08-09T10:24:32",
+   "octeti": 83770,
+   "sha256": "455df908f10750ff801c3568934e02abbece4465f2a407a91934f0b2ed20f737"
+  },
+  "oug_91_2025.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "0bbd52808cfc697dd019ca03e77f28f456c171451a3be510ad58fd02aaff160d"
+  },
+  "oug_91_2025.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 15681,
+   "sha256": "6c3e2d6db1029cc86596eaaaef065cf8cc725935a1f17500126dfed502a43b9a"
+  },
+  "oug_96_2003_protectia_maternitatii_locurile_munca.html": {
+   "mtime_sursa": "2026-08-13T17:18:15",
+   "octeti": 176813,
+   "sha256": "b3c3a8bc6cf0d95bfc5ee11f9c345b81740f4d660a11e02ba6c6903026a10654"
+  },
+  "oug_96_2003_protectia_maternitatii_locurile_munca.html.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "3796d2fd091ba179cdd7726702f7ba0a2eb889d6fe7f4a8932d9a2ee67af7e2f"
+  },
+  "oug_96_2003_protectia_maternitatii_locurile_munca.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 36428,
+   "sha256": "2feed2917004a914487ceb07edb5c9487d689458d846a28c1516d6404751ee48"
+  },
+  "pdf_original/structura_D100_2026.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 906615,
+   "sha256": "0b82a4dcf6c7beb6dea6c08bcae63d4bccf0a04446cd8983dba7ac26893b9050"
+  },
+  "pdf_original/structura_D100_v200_2014.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 206094,
+   "sha256": "92c29bd2cbb99c6cbaac6225e35c6dad217afbedec054ed08903cf0af5d98afc"
+  },
+  "pdf_original/structura_D101G_2025_260126.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 410249,
+   "sha256": "f5b52bb9658a9b7edd93f59a5d79d7d19ba656f0d569c03fc56b750e70f29fa7"
+  },
+  "pdf_original/structura_D101_2024_200225.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 557732,
+   "sha256": "9b7f6cdc423d971ce92426c8dedc465ce190fc1833432abd796ba49c09c13c40"
+  },
+  "pdf_original/structura_D112_0126_030226.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 2395157,
+   "sha256": "cb4d44f3b979b8cc6f265dc2734c0f405d1183a89b0cab19ef4b7dc93da5f28c"
+  },
+  "pdf_original/structura_D205_2025_120226.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 583721,
+   "sha256": "ac971e3d865009194e31c491edc134f66e9f93c0021ccee4906534d2e295be92"
+  },
+  "pdf_original/structura_D300_v12.0.0_10022026.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 873220,
+   "sha256": "fedbf3b11b3e06e72a5f4be8be3c5b0fafd267a87d71de3261b0fd8af2a89b3e"
+  },
+  "pdf_original/structura_D301.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 628,
+   "sha256": "e6d15df796630ebc5c53157403d7829f693bd29e8812c7a3637ca9873aa0dca4"
+  },
+  "pdf_original/structura_D301_20130327.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 114331,
+   "sha256": "358882d6e30a6d4219c7ac3b68f62e4c78a774821813f11bac2d0c79d5fe1ffb"
+  },
+  "pdf_original/structura_D390_2020_180320.pdf": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 74193,
+   "sha256": "0e1f339d081b6a92f57059b908c816ffdf23cf4c31513771f54e7896516d2005"
+  },
+  "structuraXML_D402_2022.pdf": {
+   "mtime_sursa": "2026-08-14T13:19:01",
+   "octeti": 128840,
+   "sha256": "9c17dc73539336fb5e01780b03fd0e3cda2fdd5e5c987ea92a575db499d1fb41"
+  },
+  "structuraXML_D402_2022.pdf.sha256": {
+   "mtime_sursa": "2026-08-23T09:05:53",
+   "octeti": 93,
+   "sha256": "db2a42bc5423a55c4dbc5cbf33a9915a0e6f4e4814de9e0f9d3e61e245b066eb"
+  },
+  "structura_D104_2012_v100_030613.pdf": {
+   "mtime_sursa": "2026-08-13T00:37:17",
+   "octeti": 108033,
+   "sha256": "05c0e1117bce37953fde407a288e77887653375cfb1fb3425f22b213ebfe47b7"
+  },
+  "structura_D104_2012_v100_030613.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T00:37:17",
+   "octeti": 65,
+   "sha256": "6fd6ab54d9a4394ff2bcb534332b8b1c47954940e8d36a526a44fd3f112132aa"
+  },
+  "structura_D104_2012_v100_030613.txt": {
+   "mtime_sursa": "2026-08-13T00:37:18",
+   "octeti": 11310,
+   "sha256": "3e5e3b9ba84569d48fe71da33c40b615e0fee4a2f206842dd5f67adf6f95e6d8"
+  },
+  "structura_D107_2024_010726.pdf": {
+   "mtime_sursa": "2026-08-12T21:32:29",
+   "octeti": 352391,
+   "sha256": "ef6720598eb56cee1194348b46ff01a02ad9045c9c24ffb8a0e09649c386cea6"
+  },
+  "structura_D107_2024_010726.pdf.sha256": {
+   "mtime_sursa": "2026-08-12T21:32:29",
+   "octeti": 65,
+   "sha256": "da8df23168d812b7722a2dc5d065920b9e6e207ed5edd76d331e58e4418c2af2"
+  },
+  "structura_D107_2024_010726.txt": {
+   "mtime_sursa": "2026-08-12T21:32:29",
+   "octeti": 22094,
+   "sha256": "779d9cc091943765b023fca02519d3a3eca4e633dacac5c2f713aa114da8f155"
+  },
+  "structura_D110_2026_240326.pdf": {
+   "mtime_sursa": "2026-08-13T01:17:36",
+   "octeti": 291700,
+   "sha256": "64e46326cb03fe0a89f8a8d2fbec615fb1cc295b482804091009fb465f8de088"
+  },
+  "structura_D110_2026_240326.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T01:17:36",
+   "octeti": 65,
+   "sha256": "941fe7a320daa3c0ba8a2111be5cc32c3891433d270bbb1f427eed9d654c67b9"
+  },
+  "structura_D110_2026_240326.txt": {
+   "mtime_sursa": "2026-08-13T01:17:36",
+   "octeti": 18020,
+   "sha256": "750e5d2a7c13571d8864c2318aefb48b34eb9fea3e066bc44aaa9694bb32d55e"
+  },
+  "structura_D112_0726_030826.pdf": {
+   "mtime_sursa": "2026-08-08T23:27:32",
+   "octeti": 2284106,
+   "sha256": "3a67e57e8997d6a9f847dcf0ae6bc90091f4f34d292ec0570b13f0376a6c1ab3"
+  },
+  "structura_D112_0726_030826.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "7b83c52ab4bc8580626b3acbee0690d580a296f50c54341595daf23b40030ad1"
+  },
+  "structura_D112_0726_030826.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 474871,
+   "sha256": "604786ad5294403b2dd66e9e6c22e19a76f0136695ff8fd48f268bef182b1506"
+  },
+  "structura_D177_2026.pdf": {
+   "mtime_sursa": "2026-08-12T19:45:05",
+   "octeti": 412914,
+   "sha256": "9df60cd6d8702cbcb1d91bd542bf7ee2db81494278ed1274cb9bb2e00354b835"
+  },
+  "structura_D177_2026.pdf.sha256": {
+   "mtime_sursa": "2026-08-12T19:45:05",
+   "octeti": 65,
+   "sha256": "5ae4fa4e85fad4ccebd6e9c46b42befe37298b45f2aed7a6140e9f576334f54b"
+  },
+  "structura_D177_2026.txt": {
+   "mtime_sursa": "2026-08-12T19:45:05",
+   "octeti": 10319,
+   "sha256": "bb2a7109c7957804925447925a606a5d85714112fea8b356207f3af4f0caa168"
+  },
+  "structura_D207_2025.pdf": {
+   "mtime_sursa": "2026-08-12T18:56:21",
+   "octeti": 461387,
+   "sha256": "790b09dbf226ad95aaecd401fd8718bed8bea0927c94acb3d497cc01cb7a5e0d"
+  },
+  "structura_D207_2025.pdf.sha256": {
+   "mtime_sursa": "2026-08-12T18:56:21",
+   "octeti": 65,
+   "sha256": "2912eb3b75500245ffe8faf6a3556071b38b369438b530840ce17a354cf10ebf"
+  },
+  "structura_D207_2025.txt": {
+   "mtime_sursa": "2026-08-12T18:56:21",
+   "octeti": 26998,
+   "sha256": "355356d9964e43ccefb6a2c36a2bf63bc4b4a1dca185639c68718b97fb894234"
+  },
+  "structura_D220_2017_09012018.pdf": {
+   "mtime_sursa": "2026-08-13T00:42:52",
+   "octeti": 1243490,
+   "sha256": "8996b31b9105c5c06543fd3b0e2ace16240e21e0f31e8f2573c30bf5d7c6bf91"
+  },
+  "structura_D220_2017_09012018.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T00:42:52",
+   "octeti": 65,
+   "sha256": "9321c02f053b0193bb8649cbbdd8000a37723da52429d63f7063d55ebd8ec222"
+  },
+  "structura_D220_2017_09012018.txt": {
+   "mtime_sursa": "2026-08-13T00:42:53",
+   "octeti": 38954,
+   "sha256": "5bb2d9553c6ded8713b3093698c26b78d8aaf120476f5a3e984e3afe6e29d5cd"
+  },
+  "structura_D221_2017_050118.pdf": {
+   "mtime_sursa": "2026-08-13T01:07:49",
+   "octeti": 285559,
+   "sha256": "9db04e85e8afb718c787c4997c35edf44e7ee6ed63531f1c1550a603f0756c42"
+  },
+  "structura_D221_2017_050118.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T01:07:49",
+   "octeti": 65,
+   "sha256": "230999d376cbaf6b02dd6203fdd6148e2e73ba189bf9e92ae38befca5e47c974"
+  },
+  "structura_D221_2017_050118.txt": {
+   "mtime_sursa": "2026-08-13T01:07:49",
+   "octeti": 17293,
+   "sha256": "792ba4ee8b137d54634091c6fdf8376ff16aea0a62f1d3085d22fe508435b671"
+  },
+  "structura_D223_2016_050116_13012016.pdf": {
+   "mtime_sursa": "2026-08-13T00:53:20",
+   "octeti": 703709,
+   "sha256": "4097110746b2d95e9e139f637ac912121b75a12d0468fa145bd3e6c5f8f994c8"
+  },
+  "structura_D223_2016_050116_13012016.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T00:53:20",
+   "octeti": 65,
+   "sha256": "93919a71cdfca8cfd3ddf9d5b7bda1942106d49f324611bbe1f71c88f2839dfe"
+  },
+  "structura_D223_2016_050116_13012016.txt": {
+   "mtime_sursa": "2026-08-13T00:53:20",
+   "octeti": 23299,
+   "sha256": "53125801c81fd0aeef656fdae28cc697c6b650cb8ffecaccfa5e4ac3c1d0b23d"
+  },
+  "structura_D307_2017_071117.pdf": {
+   "mtime_sursa": "2026-08-13T01:26:38",
+   "octeti": 541344,
+   "sha256": "0b1a3333ccea297a484cbeeb77cc7f45b065a8e30eaa564d37576eb1e9d8bf4f"
+  },
+  "structura_D307_2017_071117.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T01:26:38",
+   "octeti": 65,
+   "sha256": "bd5e17e179f492175c745ff420c344e70c3d7f03832d4cc7796f997a7132eb18"
+  },
+  "structura_D307_2017_071117.txt": {
+   "mtime_sursa": "2026-08-13T01:26:38",
+   "octeti": 10381,
+   "sha256": "c65c783b123a56c207aa3a95e40de0cf11dc908fdca909fcce1522a54ea08f6d"
+  },
+  "structura_D311_2021_290121.pdf": {
+   "mtime_sursa": "2026-08-12T14:35:34",
+   "octeti": 487348,
+   "sha256": "56eb5018b8c4312f259905c23fb534d424279584d95a0602086e4b3f1e793d91"
+  },
+  "structura_D311_2021_290121.pdf.sha256": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 65,
+   "sha256": "68f022f37ba6f4c4914588c0329bb1f58b8dae6e578d2d11938f376bed0d4515"
+  },
+  "structura_D311_2021_290121.txt": {
+   "mtime_sursa": "2026-08-13T17:27:11",
+   "octeti": 16680,
+   "sha256": "02259e63fd1a2405f7223ce0d5240842763f79e52b35e87549eac1e0dbc0f969"
+  },
+  "versiuni.xml": {
+   "mtime_sursa": "2026-07-16T10:00:14",
+   "octeti": 62841,
+   "sha256": "7fa2957cad31150f7bbbf91a1117b6b204eee1b1268fb06c12fc54b1bd81baf8"
+  }
+ },
+ "luat_la": "2026-09-28T12:37:58",
+ "n_fisiere": 726,
+ "octeti_total": 130006698,
+ "sursa": "/home/costin/iconta_nou/anaf_surse",
+ "sursa_mod": "DOAR CITIRE (CLAUDE.md §1)"
+}

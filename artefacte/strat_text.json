@@ -1,0 +1,2614 @@
+{
+ "_ce": "OP3 strat de text. `neextractibile` e o limita a UNELTEI, nu a legii (CLAUDE.md §2).",
+ "acte": {
+  "D107_XML_2024_010726": {
+   "caractere": 678,
+   "din": "D107_XML_2024_010726.txt",
+   "forme_disponibile": [
+    "D107_XML_2024_010726.pdf",
+    "D107_XML_2024_010726.txt"
+   ],
+   "randuri": 11,
+   "text": "artefacte/strat_text/D107_XML_2024_010726.text"
+  },
+  "D212_IstoriaVersiunilor": {
+   "caractere": 5758,
+   "din": "D212_IstoriaVersiunilor.txt",
+   "forme_disponibile": [
+    "D212_IstoriaVersiunilor.txt"
+   ],
+   "randuri": 145,
+   "text": "artefacte/strat_text/D212_IstoriaVersiunilor.text"
+  },
+  "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere": {
+   "caractere": 115731,
+   "din": "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.txt",
+   "forme_disponibile": [
+    "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.html",
+    "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.txt"
+   ],
+   "randuri": 1658,
+   "text": "artefacte/strat_text/GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.text"
+  },
+  "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019": {
+   "caractere": 76107,
+   "din": "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.txt",
+   "forme_disponibile": [
+    "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.html",
+    "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.txt"
+   ],
+   "randuri": 1041,
+   "text": "artefacte/strat_text/GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.text"
+  },
+  "OPANAF_3562_2024_D177": {
+   "caractere": 39091,
+   "din": "OPANAF_3562_2024_D177.txt",
+   "forme_disponibile": [
+    "OPANAF_3562_2024_D177.pdf",
+    "OPANAF_3562_2024_D177.txt"
+   ],
+   "randuri": 502,
+   "text": "artefacte/strat_text/OPANAF_3562_2024_D177.text"
+  },
+  "RAPORT_verificare_temeiuri": {
+   "caractere": 14161,
+   "din": "RAPORT_verificare_temeiuri.md",
+   "forme_disponibile": [
+    "RAPORT_verificare_temeiuri.md"
+   ],
+   "randuri": 97,
+   "text": "artefacte/strat_text/RAPORT_verificare_temeiuri.text"
+  },
+  "anaf_bilete_de_valoare": {
+   "caractere": 18694,
+   "din": "anaf_bilete_de_valoare.txt",
+   "forme_disponibile": [
+    "anaf_bilete_de_valoare.pdf",
+    "anaf_bilete_de_valoare.txt"
+   ],
+   "randuri": 211,
+   "text": "artefacte/strat_text/anaf_bilete_de_valoare.text"
+  },
+  "anaf_cass_concedii_medicale_2024": {
+   "caractere": 6424,
+   "din": "anaf_cass_concedii_medicale_2024.txt",
+   "forme_disponibile": [
+    "anaf_cass_concedii_medicale_2024.pdf",
+    "anaf_cass_concedii_medicale_2024.txt"
+   ],
+   "randuri": 118,
+   "text": "artefacte/strat_text/anaf_cass_concedii_medicale_2024.text"
+  },
+  "anaf_concedii_2025": {
+   "caractere": 4613,
+   "din": "anaf_concedii_2025.txt",
+   "forme_disponibile": [
+    "anaf_concedii_2025.pdf",
+    "anaf_concedii_2025.txt"
+   ],
+   "randuri": 57,
+   "text": "artefacte/strat_text/anaf_concedii_2025.text"
+  },
+  "anaf_concedii_medicale_contributii": {
+   "caractere": 7195,
+   "din": "anaf_concedii_medicale_contributii.txt",
+   "forme_disponibile": [
+    "anaf_concedii_medicale_contributii.pdf",
+    "anaf_concedii_medicale_contributii.txt"
+   ],
+   "randuri": 140,
+   "text": "artefacte/strat_text/anaf_concedii_medicale_contributii.text"
+  },
+  "anaf_limite_2025": {
+   "caractere": 46014,
+   "din": "anaf_limite_2025.txt",
+   "forme_disponibile": [
+    "anaf_limite_2025.pdf",
+    "anaf_limite_2025.txt"
+   ],
+   "randuri": 631,
+   "text": "artefacte/strat_text/anaf_limite_2025.text"
+  },
+  "anaf_mo_apr_2026": {
+   "caractere": 49694,
+   "din": "anaf_mo_apr_2026.txt",
+   "forme_disponibile": [
+    "anaf_mo_apr_2026.pdf",
+    "anaf_mo_apr_2026.txt"
+   ],
+   "randuri": 664,
+   "text": "artefacte/strat_text/anaf_mo_apr_2026.text"
+  },
+  "anaf_oug_153_2020_capital_propriu": {
+   "caractere": 12532,
+   "din": "anaf_oug_153_2020_capital_propriu.txt",
+   "forme_disponibile": [
+    "anaf_oug_153_2020_capital_propriu.pdf",
+    "anaf_oug_153_2020_capital_propriu.txt"
+   ],
+   "randuri": 171,
+   "text": "artefacte/strat_text/anaf_oug_153_2020_capital_propriu.text"
+  },
+  "anaf_oug_153_2020_reduceri_impozit": {
+   "caractere": 8874,
+   "din": "anaf_oug_153_2020_reduceri_impozit.txt",
+   "forme_disponibile": [
+    "anaf_oug_153_2020_reduceri_impozit.pdf",
+    "anaf_oug_153_2020_reduceri_impozit.txt"
+   ],
+   "randuri": 155,
+   "text": "artefacte/strat_text/anaf_oug_153_2020_reduceri_impozit.text"
+  },
+  "cf_2015_forma_initiala": {
+   "caractere": 1339802,
+   "din": "cf_2015_forma_initiala.txt",
+   "forme_disponibile": [
+    "cf_2015_forma_initiala.html",
+    "cf_2015_forma_initiala.txt"
+   ],
+   "randuri": 18545,
+   "text": "artefacte/strat_text/cf_2015_forma_initiala.text"
+  },
+  "cf_art291_2016_forma_initiala": {
+   "caractere": 4399,
+   "din": "cf_art291_2016_forma_initiala.txt",
+   "forme_disponibile": [
+    "cf_art291_2016_forma_initiala.txt"
+   ],
+   "randuri": 24,
+   "text": "artefacte/strat_text/cf_art291_2016_forma_initiala.text"
+  },
+  "cf_art56_alin15_istoric_micro_sponsorizare": {
+   "caractere": 5615,
+   "din": "cf_art56_alin15_istoric_micro_sponsorizare.txt",
+   "forme_disponibile": [
+    "cf_art56_alin15_istoric_micro_sponsorizare.txt"
+   ],
+   "randuri": 91,
+   "text": "artefacte/strat_text/cf_art56_alin15_istoric_micro_sponsorizare.text"
+  },
+  "cod_civil_287_2009_art_1616_1623_compensare": {
+   "caractere": 2701,
+   "din": "cod_civil_287_2009_art_1616_1623_compensare.txt",
+   "forme_disponibile": [
+    "cod_civil_287_2009_art_1616_1623_compensare.html",
+    "cod_civil_287_2009_art_1616_1623_compensare.txt"
+   ],
+   "randuri": 27,
+   "text": "artefacte/strat_text/cod_civil_287_2009_art_1616_1623_compensare.text"
+  },
+  "cod_fiscal_227_2015_consolidat": {
+   "caractere": 2552897,
+   "din": "cod_fiscal_227_2015_consolidat.txt",
+   "forme_disponibile": [
+    "cod_fiscal_227_2015_consolidat.html",
+    "cod_fiscal_227_2015_consolidat.txt"
+   ],
+   "randuri": 32321,
+   "text": "artefacte/strat_text/cod_fiscal_227_2015_consolidat.text"
+  },
+  "d010_d020_d070_d700_status": {
+   "caractere": 2715,
+   "din": "d010_d020_d070_d700_status.md",
+   "forme_disponibile": [
+    "d010_d020_d070_d700_status.md"
+   ],
+   "randuri": 44,
+   "text": "artefacte/strat_text/d010_d020_d070_d700_status.text"
+  },
+  "d100_struct_anaf": {
+   "caractere": 61548,
+   "din": "d100_struct_anaf.txt",
+   "forme_disponibile": [
+    "d100_struct_anaf.txt"
+   ],
+   "randuri": 3382,
+   "text": "artefacte/strat_text/d100_struct_anaf.text"
+  },
+  "d101_scadenta_conflict_lege_validator": {
+   "caractere": 2941,
+   "din": "d101_scadenta_conflict_lege_validator.md",
+   "forme_disponibile": [
+    "d101_scadenta_conflict_lege_validator.md"
+   ],
+   "randuri": 39,
+   "text": "artefacte/strat_text/d101_scadenta_conflict_lege_validator.text"
+  },
+  "d101_struct_anaf": {
+   "caractere": 22308,
+   "din": "d101_struct_anaf.txt",
+   "forme_disponibile": [
+    "d101_struct_anaf.txt"
+   ],
+   "randuri": 943,
+   "text": "artefacte/strat_text/d101_struct_anaf.text"
+  },
+  "d112_struct_anaf": {
+   "caractere": 187971,
+   "din": "d112_struct_anaf.txt",
+   "forme_disponibile": [
+    "d112_struct_anaf.txt"
+   ],
+   "randuri": 8050,
+   "text": "artefacte/strat_text/d112_struct_anaf.text"
+  },
+  "d177_structura_note": {
+   "caractere": 2175,
+   "din": "d177_structura_note.txt",
+   "forme_disponibile": [
+    "d177_structura_note.txt"
+   ],
+   "randuri": 26,
+   "text": "artefacte/strat_text/d177_structura_note.text"
+  },
+  "d205_struct_anaf": {
+   "caractere": 17847,
+   "din": "d205_struct_anaf.txt",
+   "forme_disponibile": [
+    "d205_struct_anaf.txt"
+   ],
+   "randuri": 782,
+   "text": "artefacte/strat_text/d205_struct_anaf.text"
+  },
+  "d214/d214_static_anaf": {
+   "caractere": 744,
+   "din": "d214/d214_static_anaf.txt",
+   "forme_disponibile": [
+    "d214/d214_static_anaf.html",
+    "d214/d214_static_anaf.txt"
+   ],
+   "randuri": 31,
+   "text": "artefacte/strat_text/d214/d214_static_anaf.text"
+  },
+  "d230_structura_din_validator": {
+   "caractere": 3005,
+   "din": "d230_structura_din_validator.md",
+   "forme_disponibile": [
+    "d230_structura_din_validator.md"
+   ],
+   "randuri": 51,
+   "text": "artefacte/strat_text/d230_structura_din_validator.text"
+  },
+  "d300_struct_anaf": {
+   "caractere": 37002,
+   "din": "d300_struct_anaf.txt",
+   "forme_disponibile": [
+    "d300_struct_anaf.txt"
+   ],
+   "randuri": 1858,
+   "text": "artefacte/strat_text/d300_struct_anaf.text"
+  },
+  "d301_struct_anaf": {
+   "caractere": 6321,
+   "din": "d301_struct_anaf.txt",
+   "forme_disponibile": [
+    "d301_struct_anaf.txt"
+   ],
+   "randuri": 208,
+   "text": "artefacte/strat_text/d301_struct_anaf.text"
+  },
+  "d318_instructiuni_anaf": {
+   "caractere": 2663,
+   "din": "d318_instructiuni_anaf.html",
+   "forme_disponibile": [
+    "d318_instructiuni_anaf.html"
+   ],
+   "randuri": 55,
+   "text": "artefacte/strat_text/d318_instructiuni_anaf.text"
+  },
+  "d390_struct_anaf": {
+   "caractere": 8449,
+   "din": "d390_struct_anaf.txt",
+   "forme_disponibile": [
+    "d390_struct_anaf.txt"
+   ],
+   "randuri": 373,
+   "text": "artefacte/strat_text/d390_struct_anaf.text"
+  },
+  "d394_codpr_gaze_naturale": {
+   "caractere": 1421,
+   "din": "d394_codpr_gaze_naturale.txt",
+   "forme_disponibile": [
+    "d394_codpr_gaze_naturale.txt"
+   ],
+   "randuri": 29,
+   "text": "artefacte/strat_text/d394_codpr_gaze_naturale.text"
+  },
+  "d394_struct_anaf": {
+   "caractere": 67034,
+   "din": "d394_struct_anaf.txt",
+   "forme_disponibile": [
+    "d394_struct_anaf.txt"
+   ],
+   "randuri": 3589,
+   "text": "artefacte/strat_text/d394_struct_anaf.text"
+  },
+  "d402_20160226_xsd_linii": {
+   "caractere": 21392,
+   "din": "d402_20160226_xsd_linii.txt",
+   "forme_disponibile": [
+    "d402_20160226_xsd_linii.txt"
+   ],
+   "randuri": 520,
+   "text": "artefacte/strat_text/d402_20160226_xsd_linii.text"
+  },
+  "hg518_1995_diurna_externa": {
+   "caractere": 2225,
+   "din": "hg518_1995_diurna_externa.txt",
+   "forme_disponibile": [
+    "hg518_1995_diurna_externa.txt"
+   ],
+   "randuri": 39,
+   "text": "artefacte/strat_text/hg518_1995_diurna_externa.text"
+  },
+  "hg714_2018_diurna_interna": {
+   "caractere": 1836,
+   "din": "hg714_2018_diurna_interna.txt",
+   "forme_disponibile": [
+    "hg714_2018_diurna_interna.txt"
+   ],
+   "randuri": 32,
+   "text": "artefacte/strat_text/hg714_2018_diurna_interna.text"
+  },
+  "hg_1045_2018_hotarare": {
+   "caractere": 5931,
+   "din": "hg_1045_2018_hotarare.txt",
+   "forme_disponibile": [
+    "hg_1045_2018_hotarare.html",
+    "hg_1045_2018_hotarare.txt"
+   ],
+   "randuri": 155,
+   "text": "artefacte/strat_text/hg_1045_2018_hotarare.text"
+  },
+  "hg_1045_2018_norme_consolidat": {
+   "caractere": 67833,
+   "din": "hg_1045_2018_norme_consolidat.txt",
+   "forme_disponibile": [
+    "hg_1045_2018_norme_consolidat.html",
+    "hg_1045_2018_norme_consolidat.txt"
+   ],
+   "randuri": 1063,
+   "text": "artefacte/strat_text/hg_1045_2018_norme_consolidat.text"
+  },
+  "hg_1074_2021": {
+   "caractere": 85826,
+   "din": "hg_1074_2021.html",
+   "forme_disponibile": [
+    "hg_1074_2021.html"
+   ],
+   "randuri": 486,
+   "text": "artefacte/strat_text/hg_1074_2021.text"
+  },
+  "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje": {
+   "caractere": 68009,
+   "din": "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.txt",
+   "forme_disponibile": [
+    "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.html",
+    "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.txt"
+   ],
+   "randuri": 1100,
+   "text": "artefacte/strat_text/hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.text"
+  },
+  "hg_1094_2025": {
+   "caractere": 71701,
+   "din": "hg_1094_2025.html",
+   "forme_disponibile": [
+    "hg_1094_2025.html"
+   ],
+   "randuri": 446,
+   "text": "artefacte/strat_text/hg_1094_2025.text"
+  },
+  "hg_145_2026": {
+   "caractere": 7545,
+   "din": "hg_145_2026.html",
+   "forme_disponibile": [
+    "hg_145_2026.html"
+   ],
+   "randuri": 140,
+   "text": "artefacte/strat_text/hg_145_2026.text"
+  },
+  "hg_146_2026_salariu_minim": {
+   "caractere": 3778,
+   "din": "hg_146_2026_salariu_minim.txt",
+   "forme_disponibile": [
+    "hg_146_2026_salariu_minim.html",
+    "hg_146_2026_salariu_minim.txt"
+   ],
+   "randuri": 91,
+   "text": "artefacte/strat_text/hg_146_2026_salariu_minim.text"
+  },
+  "hg_1506_2024_salariu_minim": {
+   "caractere": 3623,
+   "din": "hg_1506_2024_salariu_minim.txt",
+   "forme_disponibile": [
+    "hg_1506_2024_salariu_minim.html",
+    "hg_1506_2024_salariu_minim.txt"
+   ],
+   "randuri": 92,
+   "text": "artefacte/strat_text/hg_1506_2024_salariu_minim.text"
+  },
+  "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei": {
+   "caractere": 18183,
+   "din": "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.txt",
+   "forme_disponibile": [
+    "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.html",
+    "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.txt"
+   ],
+   "randuri": 359,
+   "text": "artefacte/strat_text/hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.text"
+  },
+  "hg_1_2016_norme_cod_fiscal": {
+   "caractere": 2164902,
+   "din": "hg_1_2016_norme_cod_fiscal.txt",
+   "forme_disponibile": [
+    "hg_1_2016_norme_cod_fiscal.html",
+    "hg_1_2016_norme_cod_fiscal.txt"
+   ],
+   "randuri": 21772,
+   "text": "artefacte/strat_text/hg_1_2016_norme_cod_fiscal.text"
+  },
+  "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe": {
+   "caractere": 98469,
+   "din": "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.txt",
+   "forme_disponibile": [
+    "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.html",
+    "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.txt"
+   ],
+   "randuri": 1405,
+   "text": "artefacte/strat_text/hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.text"
+  },
+  "hg_276_2013": {
+   "caractere": 3602,
+   "din": "hg_276_2013.txt",
+   "forme_disponibile": [
+    "hg_276_2013.html",
+    "hg_276_2013.txt"
+   ],
+   "randuri": 93,
+   "text": "artefacte/strat_text/hg_276_2013.text"
+  },
+  "hg_295_2025_reges_online_registru_salariati": {
+   "caractere": 29386,
+   "din": "hg_295_2025_reges_online_registru_salariati.txt",
+   "forme_disponibile": [
+    "hg_295_2025_reges_online_registru_salariati.html",
+    "hg_295_2025_reges_online_registru_salariati.txt"
+   ],
+   "randuri": 204,
+   "text": "artefacte/strat_text/hg_295_2025_reges_online_registru_salariati.text"
+  },
+  "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico": {
+   "caractere": 14773,
+   "din": "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.txt",
+   "forme_disponibile": [
+    "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.html",
+    "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.txt"
+   ],
+   "randuri": 734,
+   "text": "artefacte/strat_text/hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.text"
+  },
+  "hg_479_2003": {
+   "caractere": 4114,
+   "din": "hg_479_2003.html",
+   "forme_disponibile": [
+    "hg_479_2003.html"
+   ],
+   "randuri": 149,
+   "text": "artefacte/strat_text/hg_479_2003.text"
+  },
+  "hg_518_1995": {
+   "caractere": 46425,
+   "din": "hg_518_1995.html",
+   "forme_disponibile": [
+    "hg_518_1995.html"
+   ],
+   "randuri": 601,
+   "text": "artefacte/strat_text/hg_518_1995.text"
+  },
+  "hg_598_2024_stabilirea_salariului_baza_minim_brut": {
+   "caractere": 3768,
+   "din": "hg_598_2024_stabilirea_salariului_baza_minim_brut.txt",
+   "forme_disponibile": [
+    "hg_598_2024_stabilirea_salariului_baza_minim_brut.html",
+    "hg_598_2024_stabilirea_salariului_baza_minim_brut.txt"
+   ],
+   "randuri": 92,
+   "text": "artefacte/strat_text/hg_598_2024_stabilirea_salariului_baza_minim_brut.text"
+  },
+  "hg_685_1999_norme_compensare_creante_datorii": {
+   "caractere": 28288,
+   "din": "hg_685_1999_norme_compensare_creante_datorii.txt",
+   "forme_disponibile": [
+    "hg_685_1999_norme_compensare_creante_datorii.html",
+    "hg_685_1999_norme_compensare_creante_datorii.txt"
+   ],
+   "randuri": 518,
+   "text": "artefacte/strat_text/hg_685_1999_norme_compensare_creante_datorii.text"
+  },
+  "hg_773_2019_norme_monitorizare_datorii_nerambursate": {
+   "caractere": 11300,
+   "din": "hg_773_2019_norme_monitorizare_datorii_nerambursate.txt",
+   "forme_disponibile": [
+    "hg_773_2019_norme_monitorizare_datorii_nerambursate.html",
+    "hg_773_2019_norme_monitorizare_datorii_nerambursate.txt"
+   ],
+   "randuri": 104,
+   "text": "artefacte/strat_text/hg_773_2019_norme_monitorizare_datorii_nerambursate.text"
+  },
+  "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate": {
+   "caractere": 3112,
+   "din": "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.txt",
+   "forme_disponibile": [
+    "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.html",
+    "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.txt"
+   ],
+   "randuri": 91,
+   "text": "artefacte/strat_text/hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.text"
+  },
+  "hg_867_2015": {
+   "caractere": 150485,
+   "din": "hg_867_2015.html",
+   "forme_disponibile": [
+    "hg_867_2015.html"
+   ],
+   "randuri": 719,
+   "text": "artefacte/strat_text/hg_867_2015.text"
+  },
+  "hg_905_2017": {
+   "caractere": 28020,
+   "din": "hg_905_2017.html",
+   "forme_disponibile": [
+    "hg_905_2017.html"
+   ],
+   "randuri": 188,
+   "text": "artefacte/strat_text/hg_905_2017.text"
+  },
+  "impozit_dividende_istoric_cote": {
+   "caractere": 2369,
+   "din": "impozit_dividende_istoric_cote.txt",
+   "forme_disponibile": [
+    "impozit_dividende_istoric_cote.txt"
+   ],
+   "randuri": 32,
+   "text": "artefacte/strat_text/impozit_dividende_istoric_cote.text"
+  },
+  "lege_64_2026": {
+   "caractere": 5830,
+   "din": "lege_64_2026.txt",
+   "forme_disponibile": [
+    "lege_64_2026.html",
+    "lege_64_2026.txt"
+   ],
+   "randuri": 102,
+   "text": "artefacte/strat_text/lege_64_2026.text"
+  },
+  "legea_125_2006_rambursarea_ratelor_capital_cota_parte": {
+   "caractere": 4274,
+   "din": "legea_125_2006_rambursarea_ratelor_capital_cota_parte.txt",
+   "forme_disponibile": [
+    "legea_125_2006_rambursarea_ratelor_capital_cota_parte.html",
+    "legea_125_2006_rambursarea_ratelor_capital_cota_parte.txt"
+   ],
+   "randuri": 93,
+   "text": "artefacte/strat_text/legea_125_2006_rambursarea_ratelor_capital_cota_parte.text"
+  },
+  "legea_129_2019": {
+   "caractere": 303753,
+   "din": "legea_129_2019.html",
+   "forme_disponibile": [
+    "legea_129_2019.html"
+   ],
+   "randuri": 1473,
+   "text": "artefacte/strat_text/legea_129_2019.text"
+  },
+  "legea_136_2020_consolidat": {
+   "caractere": 51697,
+   "din": "legea_136_2020_consolidat.txt",
+   "forme_disponibile": [
+    "legea_136_2020_consolidat.html",
+    "legea_136_2020_consolidat.txt"
+   ],
+   "randuri": 520,
+   "text": "artefacte/strat_text/legea_136_2020_consolidat.text"
+  },
+  "legea_141_2025": {
+   "caractere": 172147,
+   "din": "legea_141_2025.txt",
+   "forme_disponibile": [
+    "legea_141_2025.pdf",
+    "legea_141_2025.txt"
+   ],
+   "randuri": 2082,
+   "text": "artefacte/strat_text/legea_141_2025.text"
+  },
+  "legea_141_2025_consolidat": {
+   "caractere": 166182,
+   "din": "legea_141_2025_consolidat.txt",
+   "forme_disponibile": [
+    "legea_141_2025_consolidat.html",
+    "legea_141_2025_consolidat.txt"
+   ],
+   "randuri": 2045,
+   "text": "artefacte/strat_text/legea_141_2025_consolidat.text"
+  },
+  "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale": {
+   "caractere": 23141,
+   "din": "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.txt",
+   "forme_disponibile": [
+    "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.html",
+    "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.txt"
+   ],
+   "randuri": 394,
+   "text": "artefacte/strat_text/legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.text"
+  },
+  "legea_160_2026": {
+   "caractere": 12798,
+   "din": "legea_160_2026.html",
+   "forme_disponibile": [
+    "legea_160_2026.html"
+   ],
+   "randuri": 134,
+   "text": "artefacte/strat_text/legea_160_2026.text"
+  },
+  "legea_161_2026": {
+   "caractere": 10511,
+   "din": "legea_161_2026.html",
+   "forme_disponibile": [
+    "legea_161_2026.html"
+   ],
+   "randuri": 129,
+   "text": "artefacte/strat_text/legea_161_2026.text"
+  },
+  "legea_165_2018_anaf": {
+   "caractere": 33347,
+   "din": "legea_165_2018_anaf.txt",
+   "forme_disponibile": [
+    "legea_165_2018_anaf.pdf",
+    "legea_165_2018_anaf.txt"
+   ],
+   "randuri": 630,
+   "text": "artefacte/strat_text/legea_165_2018_anaf.text"
+  },
+  "legea_165_2018_consolidat": {
+   "caractere": 39629,
+   "din": "legea_165_2018_consolidat.txt",
+   "forme_disponibile": [
+    "legea_165_2018_consolidat.html",
+    "legea_165_2018_consolidat.txt"
+   ],
+   "randuri": 697,
+   "text": "artefacte/strat_text/legea_165_2018_consolidat.text"
+  },
+  "legea_165_2018_mf_2024": {
+   "caractere": 42270,
+   "din": "legea_165_2018_mf_2024.txt",
+   "forme_disponibile": [
+    "legea_165_2018_mf_2024.pdf",
+    "legea_165_2018_mf_2024.txt"
+   ],
+   "randuri": 754,
+   "text": "artefacte/strat_text/legea_165_2018_mf_2024.text"
+  },
+  "legea_175_2018_modificarea_completarea_291_2_legea": {
+   "caractere": 3350,
+   "din": "legea_175_2018_modificarea_completarea_291_2_legea.txt",
+   "forme_disponibile": [
+    "legea_175_2018_modificarea_completarea_291_2_legea.html",
+    "legea_175_2018_modificarea_completarea_291_2_legea.txt"
+   ],
+   "randuri": 92,
+   "text": "artefacte/strat_text/legea_175_2018_modificarea_completarea_291_2_legea.text"
+  },
+  "legea_1_2020": {
+   "caractere": 216914,
+   "din": "legea_1_2020.html",
+   "forme_disponibile": [
+    "legea_1_2020.html"
+   ],
+   "randuri": 820,
+   "text": "artefacte/strat_text/legea_1_2020.text"
+  },
+  "legea_201_2025": {
+   "caractere": 3953,
+   "din": "legea_201_2025.txt",
+   "forme_disponibile": [
+    "legea_201_2025.html",
+    "legea_201_2025.txt"
+   ],
+   "randuri": 99,
+   "text": "artefacte/strat_text/legea_201_2025.text"
+  },
+  "legea_207_2015_consolidat": {
+   "caractere": 1487393,
+   "din": "legea_207_2015_consolidat.txt",
+   "forme_disponibile": [
+    "legea_207_2015_consolidat.html",
+    "legea_207_2015_consolidat.txt"
+   ],
+   "randuri": 6669,
+   "text": "artefacte/strat_text/legea_207_2015_consolidat.text"
+  },
+  "legea_226_2023": {
+   "caractere": 65392,
+   "din": "legea_226_2023.html",
+   "forme_disponibile": [
+    "legea_226_2023.html"
+   ],
+   "randuri": 293,
+   "text": "artefacte/strat_text/legea_226_2023.text"
+  },
+  "legea_230_2007": {
+   "caractere": 50907,
+   "din": "legea_230_2007.html",
+   "forme_disponibile": [
+    "legea_230_2007.html"
+   ],
+   "randuri": 392,
+   "text": "artefacte/strat_text/legea_230_2007.text"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor": {
+   "caractere": 238887,
+   "din": "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.txt",
+   "forme_disponibile": [
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.html",
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.txt"
+   ],
+   "randuri": 2415,
+   "text": "artefacte/strat_text/legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.text"
+  },
+  "legea_241_2005": {
+   "caractere": 93233,
+   "din": "legea_241_2005.html",
+   "forme_disponibile": [
+    "legea_241_2005.html"
+   ],
+   "randuri": 397,
+   "text": "artefacte/strat_text/legea_241_2005.text"
+  },
+  "legea_265_2022": {
+   "caractere": 201055,
+   "din": "legea_265_2022.html",
+   "forme_disponibile": [
+    "legea_265_2022.html"
+   ],
+   "randuri": 713,
+   "text": "artefacte/strat_text/legea_265_2022.text"
+  },
+  "legea_26_1990": {
+   "caractere": 68715,
+   "din": "legea_26_1990.html",
+   "forme_disponibile": [
+    "legea_26_1990.html"
+   ],
+   "randuri": 724,
+   "text": "artefacte/strat_text/legea_26_1990.text"
+  },
+  "legea_273_2006_fin_publice_locale": {
+   "caractere": 190923,
+   "din": "legea_273_2006_fin_publice_locale.txt",
+   "forme_disponibile": [
+    "legea_273_2006_fin_publice_locale.pdf",
+    "legea_273_2006_fin_publice_locale.txt"
+   ],
+   "randuri": 2527,
+   "text": "artefacte/strat_text/legea_273_2006_fin_publice_locale.text"
+  },
+  "legea_287_2009": {
+   "caractere": 1419413,
+   "din": "legea_287_2009.html",
+   "forme_disponibile": [
+    "legea_287_2009.html"
+   ],
+   "randuri": 10083,
+   "text": "artefacte/strat_text/legea_287_2009.text"
+  },
+  "legea_296_2020_consolidat": {
+   "caractere": 202166,
+   "din": "legea_296_2020_consolidat.txt",
+   "forme_disponibile": [
+    "legea_296_2020_consolidat.html",
+    "legea_296_2020_consolidat.txt"
+   ],
+   "randuri": 1886,
+   "text": "artefacte/strat_text/legea_296_2020_consolidat.text"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii": {
+   "caractere": 323554,
+   "din": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.txt",
+   "forme_disponibile": [
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.html",
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.txt"
+   ],
+   "randuri": 3364,
+   "text": "artefacte/strat_text/legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.text"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
+   "caractere": 43742,
+   "din": "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.txt",
+   "forme_disponibile": [
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.html",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.txt"
+   ],
+   "randuri": 506,
+   "text": "artefacte/strat_text/legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.text"
+  },
+  "legea_319_2006_consolidat": {
+   "caractere": 60217,
+   "din": "legea_319_2006_consolidat.txt",
+   "forme_disponibile": [
+    "legea_319_2006_consolidat.html",
+    "legea_319_2006_consolidat.txt"
+   ],
+   "randuri": 912,
+   "text": "artefacte/strat_text/legea_319_2006_consolidat.text"
+  },
+  "legea_31_1990_modif_L222_2023": {
+   "caractere": 5240,
+   "din": "legea_31_1990_modif_L222_2023.txt",
+   "forme_disponibile": [
+    "legea_31_1990_modif_L222_2023.pdf",
+    "legea_31_1990_modif_L222_2023.txt"
+   ],
+   "randuri": 113,
+   "text": "artefacte/strat_text/legea_31_1990_modif_L222_2023.text"
+  },
+  "legea_31_1990_modif_L239_2025": {
+   "caractere": 34180,
+   "din": "legea_31_1990_modif_L239_2025.txt",
+   "forme_disponibile": [
+    "legea_31_1990_modif_L239_2025.pdf",
+    "legea_31_1990_modif_L239_2025.txt"
+   ],
+   "randuri": 304,
+   "text": "artefacte/strat_text/legea_31_1990_modif_L239_2025.text"
+  },
+  "legea_31_1990_societatile": {
+   "caractere": 607846,
+   "din": "legea_31_1990_societatile.txt",
+   "forme_disponibile": [
+    "legea_31_1990_societatile.html",
+    "legea_31_1990_societatile.txt"
+   ],
+   "randuri": 8474,
+   "text": "artefacte/strat_text/legea_31_1990_societatile.text"
+  },
+  "legea_32_1994_sponsorizarea": {
+   "caractere": 15465,
+   "din": "legea_32_1994_sponsorizarea.txt",
+   "forme_disponibile": [
+    "legea_32_1994_sponsorizarea.html",
+    "legea_32_1994_sponsorizarea.txt"
+   ],
+   "randuri": 282,
+   "text": "artefacte/strat_text/legea_32_1994_sponsorizarea.text"
+  },
+  "legea_346_2002_consolidat": {
+   "caractere": 81324,
+   "din": "legea_346_2002_consolidat.txt",
+   "forme_disponibile": [
+    "legea_346_2002_consolidat.html",
+    "legea_346_2002_consolidat.txt"
+   ],
+   "randuri": 1226,
+   "text": "artefacte/strat_text/legea_346_2002_consolidat.text"
+  },
+  "legea_358_2015_aprobarea": {
+   "caractere": 27019,
+   "din": "legea_358_2015_aprobarea.txt",
+   "forme_disponibile": [
+    "legea_358_2015_aprobarea.html",
+    "legea_358_2015_aprobarea.txt"
+   ],
+   "randuri": 190,
+   "text": "artefacte/strat_text/legea_358_2015_aprobarea.text"
+  },
+  "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022": {
+   "caractere": 21523,
+   "din": "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.txt",
+   "forme_disponibile": [
+    "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.html",
+    "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.txt"
+   ],
+   "randuri": 532,
+   "text": "artefacte/strat_text/legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.text"
+  },
+  "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului": {
+   "caractere": 7641,
+   "din": "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.txt",
+   "forme_disponibile": [
+    "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.html",
+    "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.txt"
+   ],
+   "randuri": 119,
+   "text": "artefacte/strat_text/legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.text"
+  },
+  "legea_399_2006_aprobare_oug158": {
+   "caractere": 18557,
+   "din": "legea_399_2006_aprobare_oug158.txt",
+   "forme_disponibile": [
+    "legea_399_2006_aprobare_oug158.pdf",
+    "legea_399_2006_aprobare_oug158.txt"
+   ],
+   "randuri": 261,
+   "text": "artefacte/strat_text/legea_399_2006_aprobare_oug158.text"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap": {
+   "caractere": 266535,
+   "din": "legea_448_2006_protectia_persoanelor_cu_handicap.txt",
+   "forme_disponibile": [
+    "legea_448_2006_protectia_persoanelor_cu_handicap.html",
+    "legea_448_2006_protectia_persoanelor_cu_handicap.txt"
+   ],
+   "randuri": 1956,
+   "text": "artefacte/strat_text/legea_448_2006_protectia_persoanelor_cu_handicap.text"
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
+   "caractere": 27096,
+   "din": "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.txt",
+   "forme_disponibile": [
+    "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.html",
+    "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.txt"
+   ],
+   "randuri": 516,
+   "text": "artefacte/strat_text/legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.text"
+  },
+  "legea_53_2003_codul_muncii": {
+   "caractere": 342397,
+   "din": "legea_53_2003_codul_muncii.txt",
+   "forme_disponibile": [
+    "legea_53_2003_codul_muncii.html",
+    "legea_53_2003_codul_muncii.txt"
+   ],
+   "randuri": 2850,
+   "text": "artefacte/strat_text/legea_53_2003_codul_muncii.text"
+  },
+  "legea_56_2021_suplimentele_alimentare": {
+   "caractere": 26890,
+   "din": "legea_56_2021_suplimentele_alimentare.txt",
+   "forme_disponibile": [
+    "legea_56_2021_suplimentele_alimentare.html",
+    "legea_56_2021_suplimentele_alimentare.txt"
+   ],
+   "randuri": 409,
+   "text": "artefacte/strat_text/legea_56_2021_suplimentele_alimentare.text"
+  },
+  "legea_70_2015_consolidat": {
+   "caractere": 24845,
+   "din": "legea_70_2015_consolidat.txt",
+   "forme_disponibile": [
+    "legea_70_2015_consolidat.html",
+    "legea_70_2015_consolidat.txt"
+   ],
+   "randuri": 724,
+   "text": "artefacte/strat_text/legea_70_2015_consolidat.text"
+  },
+  "legea_72_2013": {
+   "caractere": 22161,
+   "din": "legea_72_2013.html",
+   "forme_disponibile": [
+    "legea_72_2013.html"
+   ],
+   "randuri": 239,
+   "text": "artefacte/strat_text/legea_72_2013.text"
+  },
+  "legea_82_1991_consolidat": {
+   "caractere": 99187,
+   "din": "legea_82_1991_consolidat.txt",
+   "forme_disponibile": [
+    "legea_82_1991_consolidat.html",
+    "legea_82_1991_consolidat.txt"
+   ],
+   "randuri": 843,
+   "text": "artefacte/strat_text/legea_82_1991_consolidat.text"
+  },
+  "legea_82_1991_modif_oug115_2023": {
+   "caractere": 8907,
+   "din": "legea_82_1991_modif_oug115_2023.txt",
+   "forme_disponibile": [
+    "legea_82_1991_modif_oug115_2023.pdf",
+    "legea_82_1991_modif_oug115_2023.txt"
+   ],
+   "randuri": 82,
+   "text": "artefacte/strat_text/legea_82_1991_modif_oug115_2023.text"
+  },
+  "legea_82_1991_modif_oug138_2024": {
+   "caractere": 11186,
+   "din": "legea_82_1991_modif_oug138_2024.txt",
+   "forme_disponibile": [
+    "legea_82_1991_modif_oug138_2024.pdf",
+    "legea_82_1991_modif_oug138_2024.txt"
+   ],
+   "randuri": 109,
+   "text": "artefacte/strat_text/legea_82_1991_modif_oug138_2024.text"
+  },
+  "legea_85_2014": {
+   "caractere": 675450,
+   "din": "legea_85_2014.html",
+   "forme_disponibile": [
+    "legea_85_2014.html"
+   ],
+   "randuri": 3180,
+   "text": "artefacte/strat_text/legea_85_2014.text"
+  },
+  "legea_98_2016": {
+   "caractere": 478792,
+   "din": "legea_98_2016.html",
+   "forme_disponibile": [
+    "legea_98_2016.html"
+   ],
+   "randuri": 2068,
+   "text": "artefacte/strat_text/legea_98_2016.text"
+  },
+  "og_11_2022": {
+   "caractere": 37545,
+   "din": "og_11_2022.html",
+   "forme_disponibile": [
+    "og_11_2022.html"
+   ],
+   "randuri": 186,
+   "text": "artefacte/strat_text/og_11_2022.text"
+  },
+  "og_13_2011": {
+   "caractere": 87719,
+   "din": "og_13_2011.html",
+   "forme_disponibile": [
+    "og_13_2011.html"
+   ],
+   "randuri": 351,
+   "text": "artefacte/strat_text/og_13_2011.text"
+  },
+  "og_16_2022_consolidat": {
+   "caractere": 138255,
+   "din": "og_16_2022_consolidat.txt",
+   "forme_disponibile": [
+    "og_16_2022_consolidat.html",
+    "og_16_2022_consolidat.txt"
+   ],
+   "randuri": 1868,
+   "text": "artefacte/strat_text/og_16_2022_consolidat.text"
+  },
+  "og_22_2025": {
+   "caractere": 49023,
+   "din": "og_22_2025.html",
+   "forme_disponibile": [
+    "og_22_2025.html"
+   ],
+   "randuri": 155,
+   "text": "artefacte/strat_text/og_22_2025.text"
+  },
+  "og_26_2000_asociatii_fundatii": {
+   "caractere": 112019,
+   "din": "og_26_2000_asociatii_fundatii.txt",
+   "forme_disponibile": [
+    "og_26_2000_asociatii_fundatii.html",
+    "og_26_2000_asociatii_fundatii.txt"
+   ],
+   "randuri": 1918,
+   "text": "artefacte/strat_text/og_26_2000_asociatii_fundatii.text"
+  },
+  "og_2_2001": {
+   "caractere": 58503,
+   "din": "og_2_2001.html",
+   "forme_disponibile": [
+    "og_2_2001.html"
+   ],
+   "randuri": 650,
+   "text": "artefacte/strat_text/og_2_2001.text"
+  },
+  "og_39_2015": {
+   "caractere": 30063,
+   "din": "og_39_2015.html",
+   "forme_disponibile": [
+    "og_39_2015.html"
+   ],
+   "randuri": 215,
+   "text": "artefacte/strat_text/og_39_2015.text"
+  },
+  "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea": {
+   "caractere": 7027,
+   "din": "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.txt",
+   "forme_disponibile": [
+    "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.html",
+    "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.txt"
+   ],
+   "randuri": 188,
+   "text": "artefacte/strat_text/omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.text"
+  },
+  "omf_1235_2023": {
+   "caractere": 1847,
+   "din": "omf_1235_2023.txt",
+   "forme_disponibile": [
+    "omf_1235_2023.pdf",
+    "omf_1235_2023.txt"
+   ],
+   "randuri": 41,
+   "text": "artefacte/strat_text/omf_1235_2023.text"
+  },
+  "omf_1855_2022": {
+   "caractere": 13648,
+   "din": "omf_1855_2022.txt",
+   "forme_disponibile": [
+    "omf_1855_2022.pdf",
+    "omf_1855_2022.txt"
+   ],
+   "randuri": 196,
+   "text": "artefacte/strat_text/omf_1855_2022.text"
+  },
+  "omfp_170_2015": {
+   "caractere": 29612,
+   "din": "omfp_170_2015.txt",
+   "forme_disponibile": [
+    "omfp_170_2015.pdf",
+    "omfp_170_2015.txt"
+   ],
+   "randuri": 446,
+   "text": "artefacte/strat_text/omfp_170_2015.text"
+  },
+  "omfp_1802_2014": {
+   "caractere": 988933,
+   "din": "omfp_1802_2014.txt",
+   "forme_disponibile": [
+    "omfp_1802_2014.pdf",
+    "omfp_1802_2014.txt"
+   ],
+   "randuri": 13073,
+   "text": "artefacte/strat_text/omfp_1802_2014.text"
+  },
+  "omfp_1802_2014_ordin_consolidat": {
+   "caractere": 14940,
+   "din": "omfp_1802_2014_ordin_consolidat.txt",
+   "forme_disponibile": [
+    "omfp_1802_2014_ordin_consolidat.html",
+    "omfp_1802_2014_ordin_consolidat.txt"
+   ],
+   "randuri": 221,
+   "text": "artefacte/strat_text/omfp_1802_2014_ordin_consolidat.text"
+  },
+  "omfp_1802_2014_reglementari_consolidat": {
+   "caractere": 1270058,
+   "din": "omfp_1802_2014_reglementari_consolidat.txt",
+   "forme_disponibile": [
+    "omfp_1802_2014_reglementari_consolidat.html",
+    "omfp_1802_2014_reglementari_consolidat.txt"
+   ],
+   "randuri": 3019,
+   "text": "artefacte/strat_text/omfp_1802_2014_reglementari_consolidat.text"
+  },
+  "omfp_2634_2015": {
+   "caractere": 46022,
+   "din": "omfp_2634_2015.txt",
+   "forme_disponibile": [
+    "omfp_2634_2015.pdf",
+    "omfp_2634_2015.txt"
+   ],
+   "randuri": 638,
+   "text": "artefacte/strat_text/omfp_2634_2015.text"
+  },
+  "omfp_2634_2015_anexa1_norme_generale": {
+   "caractere": 40751,
+   "din": "omfp_2634_2015_anexa1_norme_generale.txt",
+   "forme_disponibile": [
+    "omfp_2634_2015_anexa1_norme_generale.html",
+    "omfp_2634_2015_anexa1_norme_generale.txt"
+   ],
+   "randuri": 149,
+   "text": "artefacte/strat_text/omfp_2634_2015_anexa1_norme_generale.text"
+  },
+  "omfp_2634_2015_anexa2_norme_specifice": {
+   "caractere": 46761,
+   "din": "omfp_2634_2015_anexa2_norme_specifice.txt",
+   "forme_disponibile": [
+    "omfp_2634_2015_anexa2_norme_specifice.html",
+    "omfp_2634_2015_anexa2_norme_specifice.txt"
+   ],
+   "randuri": 329,
+   "text": "artefacte/strat_text/omfp_2634_2015_anexa2_norme_specifice.text"
+  },
+  "omfp_2634_2015_anexa3_modele": {
+   "caractere": 108130,
+   "din": "omfp_2634_2015_anexa3_modele.txt",
+   "forme_disponibile": [
+    "omfp_2634_2015_anexa3_modele.html",
+    "omfp_2634_2015_anexa3_modele.txt"
+   ],
+   "randuri": 291,
+   "text": "artefacte/strat_text/omfp_2634_2015_anexa3_modele.text"
+  },
+  "omfp_2861_2009": {
+   "caractere": 47588,
+   "din": "omfp_2861_2009.txt",
+   "forme_disponibile": [
+    "omfp_2861_2009.pdf",
+    "omfp_2861_2009.txt"
+   ],
+   "randuri": 633,
+   "text": "artefacte/strat_text/omfp_2861_2009.text"
+  },
+  "omfp_3067_2018": {
+   "caractere": 9647,
+   "din": "omfp_3067_2018.txt",
+   "forme_disponibile": [
+    "omfp_3067_2018.pdf",
+    "omfp_3067_2018.txt"
+   ],
+   "randuri": 141,
+   "text": "artefacte/strat_text/omfp_3067_2018.text"
+  },
+  "omfp_3103_2017": {
+   "caractere": 828689,
+   "din": "omfp_3103_2017.txt",
+   "forme_disponibile": [
+    "omfp_3103_2017.pdf",
+    "omfp_3103_2017.txt"
+   ],
+   "randuri": 11674,
+   "text": "artefacte/strat_text/omfp_3103_2017.text"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice": {
+   "caractere": 11482,
+   "din": "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.txt",
+   "forme_disponibile": [
+    "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.html",
+    "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.txt"
+   ],
+   "randuri": 163,
+   "text": "artefacte/strat_text/omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.text"
+  },
+  "omfp_660_2017": {
+   "caractere": 72862,
+   "din": "omfp_660_2017.txt",
+   "forme_disponibile": [
+    "omfp_660_2017.pdf",
+    "omfp_660_2017.txt"
+   ],
+   "randuri": 1066,
+   "text": "artefacte/strat_text/omfp_660_2017.text"
+  },
+  "omfp_897_2015": {
+   "caractere": 4562,
+   "din": "omfp_897_2015.txt",
+   "forme_disponibile": [
+    "omfp_897_2015.pdf",
+    "omfp_897_2015.txt"
+   ],
+   "randuri": 78,
+   "text": "artefacte/strat_text/omfp_897_2015.text"
+  },
+  "oms_15_2018_modificare_2025": {
+   "caractere": 9261,
+   "din": "oms_15_2018_modificare_2025.txt",
+   "forme_disponibile": [
+    "oms_15_2018_modificare_2025.pdf",
+    "oms_15_2018_modificare_2025.txt"
+   ],
+   "randuri": 146,
+   "text": "artefacte/strat_text/oms_15_2018_modificare_2025.text"
+  },
+  "oms_15_2018_norme": {
+   "caractere": 142425,
+   "din": "oms_15_2018_norme.txt",
+   "forme_disponibile": [
+    "oms_15_2018_norme.pdf",
+    "oms_15_2018_norme.txt"
+   ],
+   "randuri": 2441,
+   "text": "artefacte/strat_text/oms_15_2018_norme.text"
+  },
+  "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale": {
+   "caractere": 25777,
+   "din": "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.txt",
+   "forme_disponibile": [
+    "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.html",
+    "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.txt"
+   ],
+   "randuri": 303,
+   "text": "artefacte/strat_text/opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.text"
+  },
+  "opanaf_1292_2014_d106_instructiuni": {
+   "caractere": 3637,
+   "din": "opanaf_1292_2014_d106_instructiuni.txt",
+   "forme_disponibile": [
+    "opanaf_1292_2014_d106_instructiuni.pdf",
+    "opanaf_1292_2014_d106_instructiuni.txt"
+   ],
+   "randuri": 46,
+   "text": "artefacte/strat_text/opanaf_1292_2014_d106_instructiuni.text"
+  },
+  "opanaf_146_2018": {
+   "caractere": 146327,
+   "din": "opanaf_146_2018.txt",
+   "forme_disponibile": [
+    "opanaf_146_2018.pdf",
+    "opanaf_146_2018.txt"
+   ],
+   "randuri": 2150,
+   "text": "artefacte/strat_text/opanaf_146_2018.text"
+  },
+  "opanaf_174_2026_d300": {
+   "caractere": 61858,
+   "din": "opanaf_174_2026_d300.txt",
+   "forme_disponibile": [
+    "opanaf_174_2026_d300.pdf",
+    "opanaf_174_2026_d300.txt"
+   ],
+   "randuri": 771,
+   "text": "artefacte/strat_text/opanaf_174_2026_d300.text"
+  },
+  "opanaf_1783_2021_saft_d406": {
+   "caractere": 62992,
+   "din": "opanaf_1783_2021_saft_d406.txt",
+   "forme_disponibile": [
+    "opanaf_1783_2021_saft_d406.pdf",
+    "opanaf_1783_2021_saft_d406.txt"
+   ],
+   "randuri": 922,
+   "text": "artefacte/strat_text/opanaf_1783_2021_saft_d406.text"
+  },
+  "opanaf_179_2022_d205_d207_baza": {
+   "caractere": 50850,
+   "din": "opanaf_179_2022_d205_d207_baza.txt",
+   "forme_disponibile": [
+    "opanaf_179_2022_d205_d207_baza.pdf",
+    "opanaf_179_2022_d205_d207_baza.txt"
+   ],
+   "randuri": 768,
+   "text": "artefacte/strat_text/opanaf_179_2022_d205_d207_baza.text"
+  },
+  "opanaf_184_2013": {
+   "caractere": 51264,
+   "din": "opanaf_184_2013.txt",
+   "forme_disponibile": [
+    "opanaf_184_2013.pdf",
+    "opanaf_184_2013.txt"
+   ],
+   "randuri": 654,
+   "text": "artefacte/strat_text/opanaf_184_2013.text"
+  },
+  "opanaf_1950_2012": {
+   "caractere": 130953,
+   "din": "opanaf_1950_2012.txt",
+   "forme_disponibile": [
+    "opanaf_1950_2012.pdf",
+    "opanaf_1950_2012.txt"
+   ],
+   "randuri": 1842,
+   "text": "artefacte/strat_text/opanaf_1950_2012.text"
+  },
+  "opanaf_1950_2012_130": {
+   "caractere": 555,
+   "din": "opanaf_1950_2012_130.html",
+   "forme_disponibile": [
+    "opanaf_1950_2012_130.html"
+   ],
+   "randuri": 35,
+   "text": "artefacte/strat_text/opanaf_1950_2012_130.text"
+  },
+  "opanaf_1950_2012_decl130": {
+   "caractere": 4083,
+   "din": "opanaf_1950_2012_decl130.txt",
+   "forme_disponibile": [
+    "opanaf_1950_2012_decl130.pdf",
+    "opanaf_1950_2012_decl130.txt"
+   ],
+   "randuri": 88,
+   "text": "artefacte/strat_text/opanaf_1950_2012_decl130.text"
+  },
+  "opanaf_1950_2012_instr_130_1950": {
+   "caractere": 2408,
+   "din": "opanaf_1950_2012_instr_130_1950.txt",
+   "forme_disponibile": [
+    "opanaf_1950_2012_instr_130_1950.pdf",
+    "opanaf_1950_2012_instr_130_1950.txt"
+   ],
+   "randuri": 38,
+   "text": "artefacte/strat_text/opanaf_1950_2012_instr_130_1950.text"
+  },
+  "opanaf_206_2025_d101": {
+   "caractere": 75125,
+   "din": "opanaf_206_2025_d101.txt",
+   "forme_disponibile": [
+    "opanaf_206_2025_d101.pdf",
+    "opanaf_206_2025_d101.txt"
+   ],
+   "randuri": 1325,
+   "text": "artefacte/strat_text/opanaf_206_2025_d101.text"
+  },
+  "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan": {
+   "caractere": 39792,
+   "din": "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.txt",
+   "forme_disponibile": [
+    "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.html",
+    "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.txt"
+   ],
+   "randuri": 564,
+   "text": "artefacte/strat_text/opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.text"
+  },
+  "opanaf_2175_2025_d169n": {
+   "caractere": 8096,
+   "din": "opanaf_2175_2025_d169n.txt",
+   "forme_disponibile": [
+    "opanaf_2175_2025_d169n.pdf",
+    "opanaf_2175_2025_d169n.txt"
+   ],
+   "randuri": 143,
+   "text": "artefacte/strat_text/opanaf_2175_2025_d169n.text"
+  },
+  "opanaf_2194_2025_d394": {
+   "caractere": 85379,
+   "din": "opanaf_2194_2025_d394.txt",
+   "forme_disponibile": [
+    "opanaf_2194_2025_d394.pdf",
+    "opanaf_2194_2025_d394.txt"
+   ],
+   "randuri": 1271,
+   "text": "artefacte/strat_text/opanaf_2194_2025_d394.text"
+  },
+  "opanaf_299_2025": {
+   "caractere": 283474,
+   "din": "opanaf_299_2025.txt",
+   "forme_disponibile": [
+    "opanaf_299_2025.pdf",
+    "opanaf_299_2025.txt"
+   ],
+   "randuri": 3378,
+   "text": "artefacte/strat_text/opanaf_299_2025.text"
+  },
+  "opanaf_303_2026_d205": {
+   "caractere": 5006,
+   "din": "opanaf_303_2026_d205.txt",
+   "forme_disponibile": [
+    "opanaf_303_2026_d205.pdf",
+    "opanaf_303_2026_d205.txt"
+   ],
+   "randuri": 63,
+   "text": "artefacte/strat_text/opanaf_303_2026_d205.text"
+  },
+  "opanaf_355_2024": {
+   "caractere": 14447,
+   "din": "opanaf_355_2024.txt",
+   "forme_disponibile": [
+    "opanaf_355_2024.pdf",
+    "opanaf_355_2024.txt"
+   ],
+   "randuri": 204,
+   "text": "artefacte/strat_text/opanaf_355_2024.text"
+  },
+  "opanaf_3562_2024": {
+   "caractere": 27762,
+   "din": "opanaf_3562_2024.html",
+   "forme_disponibile": [
+    "opanaf_3562_2024.html"
+   ],
+   "randuri": 202,
+   "text": "artefacte/strat_text/opanaf_3562_2024.text"
+  },
+  "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate": {
+   "caractere": 167912,
+   "din": "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.txt",
+   "forme_disponibile": [
+    "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.html",
+    "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.txt"
+   ],
+   "randuri": 2030,
+   "text": "artefacte/strat_text/opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.text"
+  },
+  "opanaf_3769_2015_d394_baza": {
+   "caractere": 101803,
+   "din": "opanaf_3769_2015_d394_baza.txt",
+   "forme_disponibile": [
+    "opanaf_3769_2015_d394_baza.pdf",
+    "opanaf_3769_2015_d394_baza.txt"
+   ],
+   "randuri": 1335,
+   "text": "artefacte/strat_text/opanaf_3769_2015_d394_baza.text"
+  },
+  "opanaf_394_2017_d390_anexa2_instructiuni": {
+   "caractere": 17300,
+   "din": "opanaf_394_2017_d390_anexa2_instructiuni.txt",
+   "forme_disponibile": [
+    "opanaf_394_2017_d390_anexa2_instructiuni.pdf",
+    "opanaf_394_2017_d390_anexa2_instructiuni.txt"
+   ],
+   "randuri": 230,
+   "text": "artefacte/strat_text/opanaf_394_2017_d390_anexa2_instructiuni.text"
+  },
+  "opanaf_407_2025_saft_d406": {
+   "caractere": 13625,
+   "din": "opanaf_407_2025_saft_d406.txt",
+   "forme_disponibile": [
+    "opanaf_407_2025_saft_d406.pdf",
+    "opanaf_407_2025_saft_d406.txt"
+   ],
+   "randuri": 178,
+   "text": "artefacte/strat_text/opanaf_407_2025_saft_d406.text"
+  },
+  "opanaf_57_2026_d100_d710": {
+   "caractere": 11229,
+   "din": "opanaf_57_2026_d100_d710.txt",
+   "forme_disponibile": [
+    "opanaf_57_2026_d100_d710.pdf",
+    "opanaf_57_2026_d100_d710.txt"
+   ],
+   "randuri": 174,
+   "text": "artefacte/strat_text/opanaf_57_2026_d100_d710.text"
+  },
+  "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate": {
+   "caractere": 128277,
+   "din": "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.txt",
+   "forme_disponibile": [
+    "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.html",
+    "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.txt"
+   ],
+   "randuri": 1618,
+   "text": "artefacte/strat_text/opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.text"
+  },
+  "opanaf_592_2016_d301": {
+   "caractere": 29585,
+   "din": "opanaf_592_2016_d301.txt",
+   "forme_disponibile": [
+    "opanaf_592_2016_d301.pdf",
+    "opanaf_592_2016_d301.txt"
+   ],
+   "randuri": 424,
+   "text": "artefacte/strat_text/opanaf_592_2016_d301.text"
+  },
+  "opanaf_602_2026_modificare_opanaf_587_2016_formulare": {
+   "caractere": 8754,
+   "din": "opanaf_602_2026_modificare_opanaf_587_2016_formulare.txt",
+   "forme_disponibile": [
+    "opanaf_602_2026_modificare_opanaf_587_2016_formulare.html",
+    "opanaf_602_2026_modificare_opanaf_587_2016_formulare.txt"
+   ],
+   "randuri": 132,
+   "text": "artefacte/strat_text/opanaf_602_2026_modificare_opanaf_587_2016_formulare.text"
+  },
+  "opanaf_603_2026_recalculare_oficiu_cass": {
+   "caractere": 15724,
+   "din": "opanaf_603_2026_recalculare_oficiu_cass.txt",
+   "forme_disponibile": [
+    "opanaf_603_2026_recalculare_oficiu_cass.html",
+    "opanaf_603_2026_recalculare_oficiu_cass.txt"
+   ],
+   "randuri": 196,
+   "text": "artefacte/strat_text/opanaf_603_2026_recalculare_oficiu_cass.text"
+  },
+  "opanaf_605_2026_d112": {
+   "caractere": 333018,
+   "din": "opanaf_605_2026_d112.txt",
+   "forme_disponibile": [
+    "opanaf_605_2026_d112.pdf",
+    "opanaf_605_2026_d112.txt"
+   ],
+   "randuri": 3933,
+   "text": "artefacte/strat_text/opanaf_605_2026_d112.text"
+  },
+  "opanaf_6073_2024": {
+   "caractere": 4832,
+   "din": "opanaf_6073_2024.html",
+   "forme_disponibile": [
+    "opanaf_6073_2024.html"
+   ],
+   "randuri": 133,
+   "text": "artefacte/strat_text/opanaf_6073_2024.text"
+  },
+  "opanaf_649_2025": {
+   "caractere": 7544,
+   "din": "opanaf_649_2025.html",
+   "forme_disponibile": [
+    "opanaf_649_2025.html"
+   ],
+   "randuri": 141,
+   "text": "artefacte/strat_text/opanaf_649_2025.text"
+  },
+  "opanaf_705_2020_d390": {
+   "caractere": 47772,
+   "din": "opanaf_705_2020_d390.txt",
+   "forme_disponibile": [
+    "opanaf_705_2020_d390.pdf",
+    "opanaf_705_2020_d390.txt"
+   ],
+   "randuri": 693,
+   "text": "artefacte/strat_text/opanaf_705_2020_d390.text"
+  },
+  "opanaf_779_2024": {
+   "caractere": 13262,
+   "din": "opanaf_779_2024.txt",
+   "forme_disponibile": [
+    "opanaf_779_2024.pdf",
+    "opanaf_779_2024.txt"
+   ],
+   "randuri": 171,
+   "text": "artefacte/strat_text/opanaf_779_2024.text"
+  },
+  "opanaf_77_2022": {
+   "caractere": 119595,
+   "din": "opanaf_77_2022.txt",
+   "forme_disponibile": [
+    "opanaf_77_2022.pdf",
+    "opanaf_77_2022.txt"
+   ],
+   "randuri": 1679,
+   "text": "artefacte/strat_text/opanaf_77_2022.text"
+  },
+  "opanaf_793_2016": {
+   "caractere": 24211,
+   "din": "opanaf_793_2016.txt",
+   "forme_disponibile": [
+    "opanaf_793_2016.pdf",
+    "opanaf_793_2016.txt"
+   ],
+   "randuri": 489,
+   "text": "artefacte/strat_text/opanaf_793_2016.text"
+  },
+  "opanaf_888_2018": {
+   "caractere": 237663,
+   "din": "opanaf_888_2018.txt",
+   "forme_disponibile": [
+    "opanaf_888_2018.pdf",
+    "opanaf_888_2018.txt"
+   ],
+   "randuri": 3086,
+   "text": "artefacte/strat_text/opanaf_888_2018.text"
+  },
+  "ordin_1029_2020": {
+   "caractere": 37210,
+   "din": "ordin_1029_2020.html",
+   "forme_disponibile": [
+    "ordin_1029_2020.html"
+   ],
+   "randuri": 166,
+   "text": "artefacte/strat_text/ordin_1029_2020.text"
+  },
+  "ordin_1090_2022": {
+   "caractere": 9208,
+   "din": "ordin_1090_2022.html",
+   "forme_disponibile": [
+    "ordin_1090_2022.html"
+   ],
+   "randuri": 150,
+   "text": "artefacte/strat_text/ordin_1090_2022.text"
+  },
+  "ordin_1094_2016": {
+   "caractere": 16319,
+   "din": "ordin_1094_2016.html",
+   "forme_disponibile": [
+    "ordin_1094_2016.html"
+   ],
+   "randuri": 158,
+   "text": "artefacte/strat_text/ordin_1094_2016.text"
+  },
+  "ordin_1099_2016": {
+   "caractere": 67157,
+   "din": "ordin_1099_2016.html",
+   "forme_disponibile": [
+    "ordin_1099_2016.html"
+   ],
+   "randuri": 285,
+   "text": "artefacte/strat_text/ordin_1099_2016.text"
+  },
+  "ordin_1366_2021": {
+   "caractere": 4068,
+   "din": "ordin_1366_2021.html",
+   "forme_disponibile": [
+    "ordin_1366_2021.html"
+   ],
+   "randuri": 141,
+   "text": "artefacte/strat_text/ordin_1366_2021.text"
+  },
+  "ordin_1517_2017": {
+   "caractere": 30272,
+   "din": "ordin_1517_2017.html",
+   "forme_disponibile": [
+    "ordin_1517_2017.html"
+   ],
+   "randuri": 188,
+   "text": "artefacte/strat_text/ordin_1517_2017.text"
+  },
+  "ordin_1574_3246_2025_cultural": {
+   "caractere": 1747,
+   "din": "ordin_1574_3246_2025_cultural.txt",
+   "forme_disponibile": [
+    "ordin_1574_3246_2025_cultural.pdf",
+    "ordin_1574_3246_2025_cultural.txt"
+   ],
+   "randuri": 32,
+   "text": "artefacte/strat_text/ordin_1574_3246_2025_cultural.text"
+  },
+  "ordin_1604_2025_intrastat": {
+   "caractere": 5373,
+   "din": "ordin_1604_2025_intrastat.txt",
+   "forme_disponibile": [
+    "ordin_1604_2025_intrastat.html",
+    "ordin_1604_2025_intrastat.txt"
+   ],
+   "randuri": 139,
+   "text": "artefacte/strat_text/ordin_1604_2025_intrastat.text"
+  },
+  "ordin_1604_2025_intrastat_mo": {
+   "caractere": 2899,
+   "din": "ordin_1604_2025_intrastat_mo.txt",
+   "forme_disponibile": [
+    "ordin_1604_2025_intrastat_mo.pdf",
+    "ordin_1604_2025_intrastat_mo.txt"
+   ],
+   "randuri": 49,
+   "text": "artefacte/strat_text/ordin_1604_2025_intrastat_mo.text"
+  },
+  "ordin_161_2025": {
+   "caractere": 14961,
+   "din": "ordin_161_2025.html",
+   "forme_disponibile": [
+    "ordin_161_2025.html"
+   ],
+   "randuri": 141,
+   "text": "artefacte/strat_text/ordin_161_2025.text"
+  },
+  "ordin_1699_2021": {
+   "caractere": 19170,
+   "din": "ordin_1699_2021.html",
+   "forme_disponibile": [
+    "ordin_1699_2021.html"
+   ],
+   "randuri": 185,
+   "text": "artefacte/strat_text/ordin_1699_2021.text"
+  },
+  "ordin_1757_2019": {
+   "caractere": 30766,
+   "din": "ordin_1757_2019.html",
+   "forme_disponibile": [
+    "ordin_1757_2019.html"
+   ],
+   "randuri": 247,
+   "text": "artefacte/strat_text/ordin_1757_2019.text"
+  },
+  "ordin_1760_2018": {
+   "caractere": 30286,
+   "din": "ordin_1760_2018.html",
+   "forme_disponibile": [
+    "ordin_1760_2018.html"
+   ],
+   "randuri": 167,
+   "text": "artefacte/strat_text/ordin_1760_2018.text"
+  },
+  "ordin_1767_2021": {
+   "caractere": 6082,
+   "din": "ordin_1767_2021.html",
+   "forme_disponibile": [
+    "ordin_1767_2021.html"
+   ],
+   "randuri": 143,
+   "text": "artefacte/strat_text/ordin_1767_2021.text"
+  },
+  "ordin_187_2018": {
+   "caractere": 15997,
+   "din": "ordin_187_2018.html",
+   "forme_disponibile": [
+    "ordin_187_2018.html"
+   ],
+   "randuri": 193,
+   "text": "artefacte/strat_text/ordin_187_2018.text"
+  },
+  "ordin_188_2018": {
+   "caractere": 35662,
+   "din": "ordin_188_2018.html",
+   "forme_disponibile": [
+    "ordin_188_2018.html"
+   ],
+   "randuri": 237,
+   "text": "artefacte/strat_text/ordin_188_2018.text"
+  },
+  "ordin_1946_2023": {
+   "caractere": 11032,
+   "din": "ordin_1946_2023.html",
+   "forme_disponibile": [
+    "ordin_1946_2023.html"
+   ],
+   "randuri": 154,
+   "text": "artefacte/strat_text/ordin_1946_2023.text"
+  },
+  "ordin_1996_2023": {
+   "caractere": 15433,
+   "din": "ordin_1996_2023.html",
+   "forme_disponibile": [
+    "ordin_1996_2023.html"
+   ],
+   "randuri": 142,
+   "text": "artefacte/strat_text/ordin_1996_2023.text"
+  },
+  "ordin_2026_2023": {
+   "caractere": 11838,
+   "din": "ordin_2026_2023.html",
+   "forme_disponibile": [
+    "ordin_2026_2023.html"
+   ],
+   "randuri": 160,
+   "text": "artefacte/strat_text/ordin_2026_2023.text"
+  },
+  "ordin_2066_2025": {
+   "caractere": 8121,
+   "din": "ordin_2066_2025.html",
+   "forme_disponibile": [
+    "ordin_2066_2025.html"
+   ],
+   "randuri": 156,
+   "text": "artefacte/strat_text/ordin_2066_2025.text"
+  },
+  "ordin_2117_2018": {
+   "caractere": 160022,
+   "din": "ordin_2117_2018.html",
+   "forme_disponibile": [
+    "ordin_2117_2018.html"
+   ],
+   "randuri": 728,
+   "text": "artefacte/strat_text/ordin_2117_2018.text"
+  },
+  "ordin_2229_2025": {
+   "caractere": 14346,
+   "din": "ordin_2229_2025.html",
+   "forme_disponibile": [
+    "ordin_2229_2025.html"
+   ],
+   "randuri": 169,
+   "text": "artefacte/strat_text/ordin_2229_2025.text"
+  },
+  "ordin_2430_2025": {
+   "caractere": 27658,
+   "din": "ordin_2430_2025.html",
+   "forme_disponibile": [
+    "ordin_2430_2025.html"
+   ],
+   "randuri": 222,
+   "text": "artefacte/strat_text/ordin_2430_2025.text"
+  },
+  "ordin_2547_2019": {
+   "caractere": 53978,
+   "din": "ordin_2547_2019.html",
+   "forme_disponibile": [
+    "ordin_2547_2019.html"
+   ],
+   "randuri": 476,
+   "text": "artefacte/strat_text/ordin_2547_2019.text"
+  },
+  "ordin_2594_2015": {
+   "caractere": 46627,
+   "din": "ordin_2594_2015.html",
+   "forme_disponibile": [
+    "ordin_2594_2015.html"
+   ],
+   "randuri": 428,
+   "text": "artefacte/strat_text/ordin_2594_2015.text"
+  },
+  "ordin_2736_2025": {
+   "caractere": 5823,
+   "din": "ordin_2736_2025.html",
+   "forme_disponibile": [
+    "ordin_2736_2025.html"
+   ],
+   "randuri": 147,
+   "text": "artefacte/strat_text/ordin_2736_2025.text"
+  },
+  "ordin_3357_2017": {
+   "caractere": 13542,
+   "din": "ordin_3357_2017.html",
+   "forme_disponibile": [
+    "ordin_3357_2017.html"
+   ],
+   "randuri": 158,
+   "text": "artefacte/strat_text/ordin_3357_2017.text"
+  },
+  "ordin_3391_2017": {
+   "caractere": 10952,
+   "din": "ordin_3391_2017.html",
+   "forme_disponibile": [
+    "ordin_3391_2017.html"
+   ],
+   "randuri": 169,
+   "text": "artefacte/strat_text/ordin_3391_2017.text"
+  },
+  "ordin_352_2022": {
+   "caractere": 11653,
+   "din": "ordin_352_2022.html",
+   "forme_disponibile": [
+    "ordin_352_2022.html"
+   ],
+   "randuri": 183,
+   "text": "artefacte/strat_text/ordin_352_2022.text"
+  },
+  "ordin_361_2680_2025": {
+   "caractere": 4053,
+   "din": "ordin_361_2680_2025.txt",
+   "forme_disponibile": [
+    "ordin_361_2680_2025.html",
+    "ordin_361_2680_2025.txt"
+   ],
+   "randuri": 87,
+   "text": "artefacte/strat_text/ordin_361_2680_2025.text"
+  },
+  "ordin_369_2624_2026": {
+   "caractere": 3996,
+   "din": "ordin_369_2624_2026.txt",
+   "forme_disponibile": [
+    "ordin_369_2624_2026.html",
+    "ordin_369_2624_2026.txt"
+   ],
+   "randuri": 87,
+   "text": "artefacte/strat_text/ordin_369_2624_2026.text"
+  },
+  "ordin_3708_2015": {
+   "caractere": 23154,
+   "din": "ordin_3708_2015.html",
+   "forme_disponibile": [
+    "ordin_3708_2015.html"
+   ],
+   "randuri": 167,
+   "text": "artefacte/strat_text/ordin_3708_2015.text"
+  },
+  "ordin_3711_2015": {
+   "caractere": 67846,
+   "din": "ordin_3711_2015.html",
+   "forme_disponibile": [
+    "ordin_3711_2015.html"
+   ],
+   "randuri": 342,
+   "text": "artefacte/strat_text/ordin_3711_2015.text"
+  },
+  "ordin_3738_2024": {
+   "caractere": 15927,
+   "din": "ordin_3738_2024.html",
+   "forme_disponibile": [
+    "ordin_3738_2024.html"
+   ],
+   "randuri": 177,
+   "text": "artefacte/strat_text/ordin_3738_2024.text"
+  },
+  "ordin_3775_2024": {
+   "caractere": 7128,
+   "din": "ordin_3775_2024.html",
+   "forme_disponibile": [
+    "ordin_3775_2024.html"
+   ],
+   "randuri": 163,
+   "text": "artefacte/strat_text/ordin_3775_2024.text"
+  },
+  "ordin_3780_2017": {
+   "caractere": 99901,
+   "din": "ordin_3780_2017.html",
+   "forme_disponibile": [
+    "ordin_3780_2017.html"
+   ],
+   "randuri": 253,
+   "text": "artefacte/strat_text/ordin_3780_2017.text"
+  },
+  "ordin_3792_2024": {
+   "caractere": 21491,
+   "din": "ordin_3792_2024.html",
+   "forme_disponibile": [
+    "ordin_3792_2024.html"
+   ],
+   "randuri": 183,
+   "text": "artefacte/strat_text/ordin_3792_2024.text"
+  },
+  "ordin_382_2025": {
+   "caractere": 18203,
+   "din": "ordin_382_2025.html",
+   "forme_disponibile": [
+    "ordin_382_2025.html"
+   ],
+   "randuri": 157,
+   "text": "artefacte/strat_text/ordin_382_2025.text"
+  },
+  "ordin_3845_2015": {
+   "caractere": 20363,
+   "din": "ordin_3845_2015.html",
+   "forme_disponibile": [
+    "ordin_3845_2015.html"
+   ],
+   "randuri": 275,
+   "text": "artefacte/strat_text/ordin_3845_2015.text"
+  },
+  "ordin_3846_2015": {
+   "caractere": 48098,
+   "din": "ordin_3846_2015.html",
+   "forme_disponibile": [
+    "ordin_3846_2015.html"
+   ],
+   "randuri": 323,
+   "text": "artefacte/strat_text/ordin_3846_2015.text"
+  },
+  "ordin_396_2025": {
+   "caractere": 15092,
+   "din": "ordin_396_2025.html",
+   "forme_disponibile": [
+    "ordin_396_2025.html"
+   ],
+   "randuri": 155,
+   "text": "artefacte/strat_text/ordin_396_2025.text"
+  },
+  "ordin_4156_2017": {
+   "caractere": 47962,
+   "din": "ordin_4156_2017.html",
+   "forme_disponibile": [
+    "ordin_4156_2017.html"
+   ],
+   "randuri": 338,
+   "text": "artefacte/strat_text/ordin_4156_2017.text"
+  },
+  "ordin_435_2021": {
+   "caractere": 12399,
+   "din": "ordin_435_2021.html",
+   "forme_disponibile": [
+    "ordin_435_2021.html"
+   ],
+   "randuri": 150,
+   "text": "artefacte/strat_text/ordin_435_2021.text"
+  },
+  "ordin_506_1030_2026_norme_oug158": {
+   "caractere": 8340,
+   "din": "ordin_506_1030_2026_norme_oug158.txt",
+   "forme_disponibile": [
+    "ordin_506_1030_2026_norme_oug158.html",
+    "ordin_506_1030_2026_norme_oug158.txt"
+   ],
+   "randuri": 147,
+   "text": "artefacte/strat_text/ordin_506_1030_2026_norme_oug158.text"
+  },
+  "ordin_5521_2024": {
+   "caractere": 3658,
+   "din": "ordin_5521_2024.html",
+   "forme_disponibile": [
+    "ordin_5521_2024.html"
+   ],
+   "randuri": 141,
+   "text": "artefacte/strat_text/ordin_5521_2024.text"
+  },
+  "ordin_608_2026": {
+   "caractere": 7253,
+   "din": "ordin_608_2026.html",
+   "forme_disponibile": [
+    "ordin_608_2026.html"
+   ],
+   "randuri": 72,
+   "text": "artefacte/strat_text/ordin_608_2026.text"
+  },
+  "ordin_63_2017": {
+   "caractere": 17828,
+   "din": "ordin_63_2017.html",
+   "forme_disponibile": [
+    "ordin_63_2017.html"
+   ],
+   "randuri": 239,
+   "text": "artefacte/strat_text/ordin_63_2017.text"
+  },
+  "ordin_802_2022": {
+   "caractere": 6080,
+   "din": "ordin_802_2022.html",
+   "forme_disponibile": [
+    "ordin_802_2022.html"
+   ],
+   "randuri": 141,
+   "text": "artefacte/strat_text/ordin_802_2022.text"
+  },
+  "ordin_878_2022": {
+   "caractere": 38759,
+   "din": "ordin_878_2022.html",
+   "forme_disponibile": [
+    "ordin_878_2022.html"
+   ],
+   "randuri": 257,
+   "text": "artefacte/strat_text/ordin_878_2022.text"
+  },
+  "ordin_90_2016": {
+   "caractere": 24902,
+   "din": "ordin_90_2016.html",
+   "forme_disponibile": [
+    "ordin_90_2016.html"
+   ],
+   "randuri": 254,
+   "text": "artefacte/strat_text/ordin_90_2016.text"
+  },
+  "oug_115_2023_consolidat": {
+   "caractere": 235297,
+   "din": "oug_115_2023_consolidat.txt",
+   "forme_disponibile": [
+    "oug_115_2023_consolidat.html",
+    "oug_115_2023_consolidat.txt"
+   ],
+   "randuri": 2256,
+   "text": "artefacte/strat_text/oug_115_2023_consolidat.text"
+  },
+  "oug_116_2023": {
+   "caractere": 27904,
+   "din": "oug_116_2023.html",
+   "forme_disponibile": [
+    "oug_116_2023.html"
+   ],
+   "randuri": 191,
+   "text": "artefacte/strat_text/oug_116_2023.text"
+  },
+  "oug_120_2021": {
+   "caractere": 51448,
+   "din": "oug_120_2021.txt",
+   "forme_disponibile": [
+    "oug_120_2021.html",
+    "oug_120_2021.pdf",
+    "oug_120_2021.txt"
+   ],
+   "randuri": 825,
+   "text": "artefacte/strat_text/oug_120_2021.text"
+  },
+  "oug_138_2024": {
+   "caractere": 74318,
+   "din": "oug_138_2024.txt",
+   "forme_disponibile": [
+    "oug_138_2024.pdf",
+    "oug_138_2024.txt"
+   ],
+   "randuri": 940,
+   "text": "artefacte/strat_text/oug_138_2024.text"
+  },
+  "oug_153_2020": {
+   "caractere": 28021,
+   "din": "oug_153_2020.html",
+   "forme_disponibile": [
+    "oug_153_2020.html"
+   ],
+   "randuri": 181,
+   "text": "artefacte/strat_text/oug_153_2020.text"
+  },
+  "oug_156_2024": {
+   "caractere": 98782,
+   "din": "oug_156_2024.txt",
+   "forme_disponibile": [
+    "oug_156_2024.pdf",
+    "oug_156_2024.txt"
+   ],
+   "randuri": 1057,
+   "text": "artefacte/strat_text/oug_156_2024.text"
+  },
+  "oug_158_2005_consolidat": {
+   "caractere": 134873,
+   "din": "oug_158_2005_consolidat.txt",
+   "forme_disponibile": [
+    "oug_158_2005_consolidat.html",
+    "oug_158_2005_consolidat.txt"
+   ],
+   "randuri": 1773,
+   "text": "artefacte/strat_text/oug_158_2005_consolidat.text"
+  },
+  "oug_158_2005_pre_L141": {
+   "caractere": 123269,
+   "din": "oug_158_2005_pre_L141.txt",
+   "forme_disponibile": [
+    "oug_158_2005_pre_L141.html",
+    "oug_158_2005_pre_L141.txt"
+   ],
+   "randuri": 1668,
+   "text": "artefacte/strat_text/oug_158_2005_pre_L141.text"
+  },
+  "oug_193_2002": {
+   "caractere": 20680,
+   "din": "oug_193_2002.html",
+   "forme_disponibile": [
+    "oug_193_2002.html"
+   ],
+   "randuri": 317,
+   "text": "artefacte/strat_text/oug_193_2002.text"
+  },
+  "oug_200_2008_modificarea_completarea": {
+   "caractere": 19622,
+   "din": "oug_200_2008_modificarea_completarea.txt",
+   "forme_disponibile": [
+    "oug_200_2008_modificarea_completarea.html",
+    "oug_200_2008_modificarea_completarea.txt"
+   ],
+   "randuri": 183,
+   "text": "artefacte/strat_text/oug_200_2008_modificarea_completarea.text"
+  },
+  "oug_24_2026_contributie_solidaritate": {
+   "caractere": 24157,
+   "din": "oug_24_2026_contributie_solidaritate.txt",
+   "forme_disponibile": [
+    "oug_24_2026_contributie_solidaritate.html",
+    "oug_24_2026_contributie_solidaritate.txt"
+   ],
+   "randuri": 179,
+   "text": "artefacte/strat_text/oug_24_2026_contributie_solidaritate.text"
+  },
+  "oug_25_2018": {
+   "caractere": 65510,
+   "din": "oug_25_2018.txt",
+   "forme_disponibile": [
+    "oug_25_2018.html",
+    "oug_25_2018.pdf",
+    "oug_25_2018.txt"
+   ],
+   "randuri": 849,
+   "text": "artefacte/strat_text/oug_25_2018.text"
+  },
+  "oug_26_2019_modificarea_completarea_acte_normative": {
+   "caractere": 21215,
+   "din": "oug_26_2019_modificarea_completarea_acte_normative.txt",
+   "forme_disponibile": [
+    "oug_26_2019_modificarea_completarea_acte_normative.html",
+    "oug_26_2019_modificarea_completarea_acte_normative.txt"
+   ],
+   "randuri": 310,
+   "text": "artefacte/strat_text/oug_26_2019_modificarea_completarea_acte_normative.text"
+  },
+  "oug_28_1999": {
+   "caractere": 88051,
+   "din": "oug_28_1999.html",
+   "forme_disponibile": [
+    "oug_28_1999.html"
+   ],
+   "randuri": 499,
+   "text": "artefacte/strat_text/oug_28_1999.text"
+  },
+  "oug_34_2024_consolidat": {
+   "caractere": 38345,
+   "din": "oug_34_2024_consolidat.txt",
+   "forme_disponibile": [
+    "oug_34_2024_consolidat.html",
+    "oug_34_2024_consolidat.txt"
+   ],
+   "randuri": 424,
+   "text": "artefacte/strat_text/oug_34_2024_consolidat.text"
+  },
+  "oug_41_2022": {
+   "caractere": 20528,
+   "din": "oug_41_2022.txt",
+   "forme_disponibile": [
+    "oug_41_2022.pdf",
+    "oug_41_2022.txt"
+   ],
+   "randuri": 299,
+   "text": "artefacte/strat_text/oug_41_2022.text"
+  },
+  "oug_44_2008": {
+   "caractere": 72246,
+   "din": "oug_44_2008.html",
+   "forme_disponibile": [
+    "oug_44_2008.html"
+   ],
+   "randuri": 622,
+   "text": "artefacte/strat_text/oug_44_2008.text"
+  },
+  "oug_46_2025": {
+   "caractere": 13225,
+   "din": "oug_46_2025.html",
+   "forme_disponibile": [
+    "oug_46_2025.html"
+   ],
+   "randuri": 147,
+   "text": "artefacte/strat_text/oug_46_2025.text"
+  },
+  "oug_50_2015_consolidat": {
+   "caractere": 82775,
+   "din": "oug_50_2015_consolidat.txt",
+   "forme_disponibile": [
+    "oug_50_2015_consolidat.html",
+    "oug_50_2015_consolidat.txt"
+   ],
+   "randuri": 545,
+   "text": "artefacte/strat_text/oug_50_2015_consolidat.text"
+  },
+  "oug_68_2025": {
+   "caractere": 22859,
+   "din": "oug_68_2025.html",
+   "forme_disponibile": [
+    "oug_68_2025.html"
+   ],
+   "randuri": 156,
+   "text": "artefacte/strat_text/oug_68_2025.text"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat": {
+   "caractere": 33686,
+   "din": "oug_70_2024_ro_etva_decont_precompletat.txt",
+   "forme_disponibile": [
+    "oug_70_2024_ro_etva_decont_precompletat.html",
+    "oug_70_2024_ro_etva_decont_precompletat.txt"
+   ],
+   "randuri": 258,
+   "text": "artefacte/strat_text/oug_70_2024_ro_etva_decont_precompletat.text"
+  },
+  "oug_77_1999_masuri_prevenire_incapacitate_plata": {
+   "caractere": 5929,
+   "din": "oug_77_1999_masuri_prevenire_incapacitate_plata.txt",
+   "forme_disponibile": [
+    "oug_77_1999_masuri_prevenire_incapacitate_plata.html",
+    "oug_77_1999_masuri_prevenire_incapacitate_plata.txt"
+   ],
+   "randuri": 108,
+   "text": "artefacte/strat_text/oug_77_1999_masuri_prevenire_incapacitate_plata.text"
+  },
+  "oug_85_2022": {
+   "caractere": 24406,
+   "din": "oug_85_2022.txt",
+   "forme_disponibile": [
+    "oug_85_2022.pdf",
+    "oug_85_2022.txt"
+   ],
+   "randuri": 346,
+   "text": "artefacte/strat_text/oug_85_2022.text"
+  },
+  "oug_89_2025": {
+   "caractere": 157203,
+   "din": "oug_89_2025.txt",
+   "forme_disponibile": [
+    "oug_89_2025.html",
+    "oug_89_2025.txt"
+   ],
+   "randuri": 1574,
+   "text": "artefacte/strat_text/oug_89_2025.text"
+  },
+  "oug_8_2009_acordarea_tichetelor_vacanta": {
+   "caractere": 22936,
+   "din": "oug_8_2009_acordarea_tichetelor_vacanta.txt",
+   "forme_disponibile": [
+    "oug_8_2009_acordarea_tichetelor_vacanta.html",
+    "oug_8_2009_acordarea_tichetelor_vacanta.txt"
+   ],
+   "randuri": 414,
+   "text": "artefacte/strat_text/oug_8_2009_acordarea_tichetelor_vacanta.text"
+  },
+  "oug_8_2026": {
+   "caractere": 107091,
+   "din": "oug_8_2026.txt",
+   "forme_disponibile": [
+    "oug_8_2026.html",
+    "oug_8_2026.txt"
+   ],
+   "randuri": 985,
+   "text": "artefacte/strat_text/oug_8_2026.text"
+  },
+  "oug_91_2025": {
+   "caractere": 14996,
+   "din": "oug_91_2025.txt",
+   "forme_disponibile": [
+    "oug_91_2025.html",
+    "oug_91_2025.txt"
+   ],
+   "randuri": 188,
+   "text": "artefacte/strat_text/oug_91_2025.text"
+  },
+  "oug_96_2003_protectia_maternitatii_locurile_munca": {
+   "caractere": 34868,
+   "din": "oug_96_2003_protectia_maternitatii_locurile_munca.txt",
+   "forme_disponibile": [
+    "oug_96_2003_protectia_maternitatii_locurile_munca.html",
+    "oug_96_2003_protectia_maternitatii_locurile_munca.txt"
+   ],
+   "randuri": 675,
+   "text": "artefacte/strat_text/oug_96_2003_protectia_maternitatii_locurile_munca.text"
+  },
+  "pdf_original/structura_D100_2026": {
+   "caractere": 57723,
+   "din": "pdf_original/structura_D100_2026.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D100_2026.pdf"
+   ],
+   "randuri": 4775,
+   "text": "artefacte/strat_text/pdf_original/structura_D100_2026.text"
+  },
+  "pdf_original/structura_D100_v200_2014": {
+   "caractere": 37736,
+   "din": "pdf_original/structura_D100_v200_2014.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D100_v200_2014.pdf"
+   ],
+   "randuri": 2862,
+   "text": "artefacte/strat_text/pdf_original/structura_D100_v200_2014.text"
+  },
+  "pdf_original/structura_D101G_2025_260126": {
+   "caractere": 9466,
+   "din": "pdf_original/structura_D101G_2025_260126.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D101G_2025_260126.pdf"
+   ],
+   "randuri": 909,
+   "text": "artefacte/strat_text/pdf_original/structura_D101G_2025_260126.text"
+  },
+  "pdf_original/structura_D101_2024_200225": {
+   "caractere": 20595,
+   "din": "pdf_original/structura_D101_2024_200225.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D101_2024_200225.pdf"
+   ],
+   "randuri": 1727,
+   "text": "artefacte/strat_text/pdf_original/structura_D101_2024_200225.text"
+  },
+  "pdf_original/structura_D112_0126_030226": {
+   "caractere": 177363,
+   "din": "pdf_original/structura_D112_0126_030226.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D112_0126_030226.pdf"
+   ],
+   "randuri": 15158,
+   "text": "artefacte/strat_text/pdf_original/structura_D112_0126_030226.text"
+  },
+  "pdf_original/structura_D205_2025_120226": {
+   "caractere": 16321,
+   "din": "pdf_original/structura_D205_2025_120226.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D205_2025_120226.pdf"
+   ],
+   "randuri": 1461,
+   "text": "artefacte/strat_text/pdf_original/structura_D205_2025_120226.text"
+  },
+  "pdf_original/structura_D300_v12.0.0_10022026": {
+   "caractere": 34067,
+   "din": "pdf_original/structura_D300_v12.0.0_10022026.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D300_v12.0.0_10022026.pdf"
+   ],
+   "randuri": 3654,
+   "text": "artefacte/strat_text/pdf_original/structura_D300_v12.0.0_10022026.text"
+  },
+  "pdf_original/structura_D301_20130327": {
+   "caractere": 5041,
+   "din": "pdf_original/structura_D301_20130327.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D301_20130327.pdf"
+   ],
+   "randuri": 490,
+   "text": "artefacte/strat_text/pdf_original/structura_D301_20130327.text"
+  },
+  "pdf_original/structura_D390_2020_180320": {
+   "caractere": 6846,
+   "din": "pdf_original/structura_D390_2020_180320.pdf",
+   "forme_disponibile": [
+    "pdf_original/structura_D390_2020_180320.pdf"
+   ],
+   "randuri": 694,
+   "text": "artefacte/strat_text/pdf_original/structura_D390_2020_180320.text"
+  },
+  "structuraXML_D402_2022": {
+   "caractere": 12015,
+   "din": "structuraXML_D402_2022.pdf",
+   "forme_disponibile": [
+    "structuraXML_D402_2022.pdf"
+   ],
+   "randuri": 1399,
+   "text": "artefacte/strat_text/structuraXML_D402_2022.text"
+  },
+  "structura_D104_2012_v100_030613": {
+   "caractere": 11242,
+   "din": "structura_D104_2012_v100_030613.txt",
+   "forme_disponibile": [
+    "structura_D104_2012_v100_030613.pdf",
+    "structura_D104_2012_v100_030613.txt"
+   ],
+   "randuri": 106,
+   "text": "artefacte/strat_text/structura_D104_2012_v100_030613.text"
+  },
+  "structura_D107_2024_010726": {
+   "caractere": 22038,
+   "din": "structura_D107_2024_010726.txt",
+   "forme_disponibile": [
+    "structura_D107_2024_010726.pdf",
+    "structura_D107_2024_010726.txt"
+   ],
+   "randuri": 263,
+   "text": "artefacte/strat_text/structura_D107_2024_010726.text"
+  },
+  "structura_D110_2026_240326": {
+   "caractere": 17900,
+   "din": "structura_D110_2026_240326.txt",
+   "forme_disponibile": [
+    "structura_D110_2026_240326.pdf",
+    "structura_D110_2026_240326.txt"
+   ],
+   "randuri": 237,
+   "text": "artefacte/strat_text/structura_D110_2026_240326.text"
+  },
+  "structura_D112_0726_030826": {
+   "caractere": 471179,
+   "din": "structura_D112_0726_030826.txt",
+   "forme_disponibile": [
+    "structura_D112_0726_030826.pdf",
+    "structura_D112_0726_030826.txt"
+   ],
+   "randuri": 5770,
+   "text": "artefacte/strat_text/structura_D112_0726_030826.text"
+  },
+  "structura_D177_2026": {
+   "caractere": 10281,
+   "din": "structura_D177_2026.txt",
+   "forme_disponibile": [
+    "structura_D177_2026.pdf",
+    "structura_D177_2026.txt"
+   ],
+   "randuri": 160,
+   "text": "artefacte/strat_text/structura_D177_2026.text"
+  },
+  "structura_D207_2025": {
+   "caractere": 26872,
+   "din": "structura_D207_2025.txt",
+   "forme_disponibile": [
+    "structura_D207_2025.pdf",
+    "structura_D207_2025.txt"
+   ],
+   "randuri": 523,
+   "text": "artefacte/strat_text/structura_D207_2025.text"
+  },
+  "structura_D220_2017_09012018": {
+   "caractere": 38793,
+   "din": "structura_D220_2017_09012018.txt",
+   "forme_disponibile": [
+    "structura_D220_2017_09012018.pdf",
+    "structura_D220_2017_09012018.txt"
+   ],
+   "randuri": 467,
+   "text": "artefacte/strat_text/structura_D220_2017_09012018.text"
+  },
+  "structura_D221_2017_050118": {
+   "caractere": 17248,
+   "din": "structura_D221_2017_050118.txt",
+   "forme_disponibile": [
+    "structura_D221_2017_050118.pdf",
+    "structura_D221_2017_050118.txt"
+   ],
+   "randuri": 221,
+   "text": "artefacte/strat_text/structura_D221_2017_050118.text"
+  },
+  "structura_D223_2016_050116_13012016": {
+   "caractere": 23207,
+   "din": "structura_D223_2016_050116_13012016.txt",
+   "forme_disponibile": [
+    "structura_D223_2016_050116_13012016.pdf",
+    "structura_D223_2016_050116_13012016.txt"
+   ],
+   "randuri": 367,
+   "text": "artefacte/strat_text/structura_D223_2016_050116_13012016.text"
+  },
+  "structura_D307_2017_071117": {
+   "caractere": 10305,
+   "din": "structura_D307_2017_071117.txt",
+   "forme_disponibile": [
+    "structura_D307_2017_071117.pdf",
+    "structura_D307_2017_071117.txt"
+   ],
+   "randuri": 116,
+   "text": "artefacte/strat_text/structura_D307_2017_071117.text"
+  },
+  "structura_D311_2021_290121": {
+   "caractere": 16542,
+   "din": "structura_D311_2021_290121.txt",
+   "forme_disponibile": [
+    "structura_D311_2021_290121.pdf",
+    "structura_D311_2021_290121.txt"
+   ],
+   "randuri": 206,
+   "text": "artefacte/strat_text/structura_D311_2021_290121.text"
+  }
+ },
+ "facut_la": "2026-09-28T12:40:00",
+ "n_acte_cu_text": 269,
+ "n_neextractibile": 4,
+ "neextractibile": {
+  "D112_XML_2026_0726_050826": {
+   "forme": [
+    "D112_XML_2026_0726_050826.pdf"
+   ],
+   "motiv": "formular XFA: pdftotext a scos numai placeholderul Acrobat, nu corpul formularului (676 caractere)"
+  },
+  "D311_XML_2021_290121": {
+   "forme": [
+    "D311_XML_2021_290121.pdf"
+   ],
+   "motiv": "formular XFA: pdftotext a scos numai placeholderul Acrobat, nu corpul formularului (676 caractere)"
+  },
+  "d402_surse_sha256": {
+   "forme": [
+    "d402_surse_sha256.txt"
+   ],
+   "motiv": "fisier .txt aproape gol (176 caractere)"
+  },
+  "pdf_original/structura_D301": {
+   "forme": [
+    "pdf_original/structura_D301.pdf"
+   ],
+   "motiv": "pdftotext a intors 0 caractere - probabil formular XFA sau scan fara OCR"
+  }
+ }
+}

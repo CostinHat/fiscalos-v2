@@ -1,0 +1,2962 @@
+{
+ "_ce": "OP4 atomizare structurala. `structura=fragmente` = actul NU are articole (pliant ANAF, structura de formular); atomul e paragraful, si se citeaza ca fragment.",
+ "acte": {
+  "D107_XML_2024_010726": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/D107_XML_2024_010726.jsonl",
+   "n": 3,
+   "niveluri": {
+    "fragment": 3
+   },
+   "structura": "fragmente"
+  },
+  "D212_IstoriaVersiunilor": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/D212_IstoriaVersiunilor.jsonl",
+   "n": 29,
+   "niveluri": {
+    "fragment": 29
+   },
+   "structura": "fragmente"
+  },
+  "GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/GRESIT_omfp_394_2017_contract_cadru_derulare_titeiului_petroliere.jsonl",
+   "n": 20,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 3,
+    "litera": 15
+   },
+   "structura": "articole"
+  },
+  "GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/GRESIT_oms_484_2025_modificarea_ordin_ms_444_2019.jsonl",
+   "n": 61,
+   "niveluri": {
+    "alineat": 32,
+    "articol": 11,
+    "litera": 16,
+    "punct": 2
+   },
+   "structura": "articole"
+  },
+  "OPANAF_3562_2024_D177": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/OPANAF_3562_2024_D177.jsonl",
+   "n": 109,
+   "niveluri": {
+    "alineat": 41,
+    "articol": 7,
+    "litera": 27,
+    "punct": 34
+   },
+   "structura": "articole"
+  },
+  "RAPORT_verificare_temeiuri": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/RAPORT_verificare_temeiuri.jsonl",
+   "n": 21,
+   "niveluri": {
+    "fragment": 21
+   },
+   "structura": "fragmente"
+  },
+  "anaf_bilete_de_valoare": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_bilete_de_valoare.jsonl",
+   "n": 18,
+   "niveluri": {
+    "fragment": 18
+   },
+   "structura": "fragmente"
+  },
+  "anaf_cass_concedii_medicale_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_cass_concedii_medicale_2024.jsonl",
+   "n": 5,
+   "niveluri": {
+    "fragment": 5
+   },
+   "structura": "fragmente"
+  },
+  "anaf_concedii_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_concedii_2025.jsonl",
+   "n": 6,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 1,
+    "litera": 3
+   },
+   "structura": "articole"
+  },
+  "anaf_concedii_medicale_contributii": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_concedii_medicale_contributii.jsonl",
+   "n": 23,
+   "niveluri": {
+    "fragment": 23
+   },
+   "structura": "fragmente"
+  },
+  "anaf_limite_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_limite_2025.jsonl",
+   "n": 48,
+   "niveluri": {
+    "fragment": 48
+   },
+   "structura": "fragmente"
+  },
+  "anaf_mo_apr_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_mo_apr_2026.jsonl",
+   "n": 17,
+   "niveluri": {
+    "fragment": 17
+   },
+   "structura": "fragmente"
+  },
+  "anaf_oug_153_2020_capital_propriu": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_oug_153_2020_capital_propriu.jsonl",
+   "n": 7,
+   "niveluri": {
+    "fragment": 7
+   },
+   "structura": "fragmente"
+  },
+  "anaf_oug_153_2020_reduceri_impozit": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/anaf_oug_153_2020_reduceri_impozit.jsonl",
+   "n": 13,
+   "niveluri": {
+    "fragment": 13
+   },
+   "structura": "fragmente"
+  },
+  "cf_2015_forma_initiala": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/cf_2015_forma_initiala.jsonl",
+   "n": 4182,
+   "niveluri": {
+    "alineat": 2093,
+    "articol": 576,
+    "litera": 1432,
+    "punct": 81
+   },
+   "structura": "articole"
+  },
+  "cf_art291_2016_forma_initiala": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/cf_art291_2016_forma_initiala.jsonl",
+   "n": 16,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 1,
+    "litera": 9,
+    "punct": 4
+   },
+   "structura": "articole"
+  },
+  "cf_art56_alin15_istoric_micro_sponsorizare": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/cf_art56_alin15_istoric_micro_sponsorizare.jsonl",
+   "n": 10,
+   "niveluri": {
+    "fragment": 10
+   },
+   "structura": "fragmente"
+  },
+  "cod_civil_287_2009_art_1616_1623_compensare": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/cod_civil_287_2009_art_1616_1623_compensare.jsonl",
+   "n": 13,
+   "niveluri": {
+    "alineat": 4,
+    "articol": 9
+   },
+   "structura": "articole"
+  },
+  "cod_fiscal_227_2015_consolidat": {
+   "abrogati": 311,
+   "cu_valabilitate": 1813,
+   "fisier": "artefacte/atomi/cod_fiscal_227_2015_consolidat.jsonl",
+   "n": 5971,
+   "niveluri": {
+    "alineat": 3173,
+    "articol": 736,
+    "litera": 1992,
+    "punct": 70
+   },
+   "structura": "articole"
+  },
+  "d010_d020_d070_d700_status": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d010_d020_d070_d700_status.jsonl",
+   "n": 9,
+   "niveluri": {
+    "fragment": 9
+   },
+   "structura": "fragmente"
+  },
+  "d100_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d100_struct_anaf.jsonl",
+   "n": 9,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 3,
+    "punct": 4
+   },
+   "structura": "articole"
+  },
+  "d101_scadenta_conflict_lege_validator": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d101_scadenta_conflict_lege_validator.jsonl",
+   "n": 7,
+   "niveluri": {
+    "fragment": 7
+   },
+   "structura": "fragmente"
+  },
+  "d101_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d101_struct_anaf.jsonl",
+   "n": 109,
+   "niveluri": {
+    "fragment": 109
+   },
+   "structura": "fragmente"
+  },
+  "d112_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d112_struct_anaf.jsonl",
+   "n": 1001,
+   "niveluri": {
+    "fragment": 1001
+   },
+   "structura": "fragmente"
+  },
+  "d177_structura_note": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d177_structura_note.jsonl",
+   "n": 3,
+   "niveluri": {
+    "fragment": 3
+   },
+   "structura": "fragmente"
+  },
+  "d205_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d205_struct_anaf.jsonl",
+   "n": 86,
+   "niveluri": {
+    "fragment": 86
+   },
+   "structura": "fragmente"
+  },
+  "d214/d214_static_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d214__d214_static_anaf.jsonl",
+   "n": 1,
+   "niveluri": {
+    "fragment": 1
+   },
+   "structura": "fragmente"
+  },
+  "d230_structura_din_validator": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d230_structura_din_validator.jsonl",
+   "n": 9,
+   "niveluri": {
+    "fragment": 9
+   },
+   "structura": "fragmente"
+  },
+  "d300_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d300_struct_anaf.jsonl",
+   "n": 170,
+   "niveluri": {
+    "fragment": 170
+   },
+   "structura": "fragmente"
+  },
+  "d301_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d301_struct_anaf.jsonl",
+   "n": 18,
+   "niveluri": {
+    "fragment": 18
+   },
+   "structura": "fragmente"
+  },
+  "d318_instructiuni_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d318_instructiuni_anaf.jsonl",
+   "n": 21,
+   "niveluri": {
+    "fragment": 21
+   },
+   "structura": "fragmente"
+  },
+  "d390_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d390_struct_anaf.jsonl",
+   "n": 60,
+   "niveluri": {
+    "fragment": 60
+   },
+   "structura": "fragmente"
+  },
+  "d394_codpr_gaze_naturale": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d394_codpr_gaze_naturale.jsonl",
+   "n": 5,
+   "niveluri": {
+    "fragment": 5
+   },
+   "structura": "fragmente"
+  },
+  "d394_struct_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d394_struct_anaf.jsonl",
+   "n": 386,
+   "niveluri": {
+    "fragment": 386
+   },
+   "structura": "fragmente"
+  },
+  "d402_20160226_xsd_linii": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/d402_20160226_xsd_linii.jsonl",
+   "n": 1,
+   "niveluri": {
+    "fragment": 1
+   },
+   "structura": "fragmente"
+  },
+  "hg518_1995_diurna_externa": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg518_1995_diurna_externa.jsonl",
+   "n": 6,
+   "niveluri": {
+    "fragment": 6
+   },
+   "structura": "fragmente"
+  },
+  "hg714_2018_diurna_interna": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg714_2018_diurna_interna.jsonl",
+   "n": 6,
+   "niveluri": {
+    "fragment": 6
+   },
+   "structura": "fragmente"
+  },
+  "hg_1045_2018_hotarare": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_1045_2018_hotarare.jsonl",
+   "n": 15,
+   "niveluri": {
+    "alineat": 5,
+    "articol": 9,
+    "litera": 1
+   },
+   "structura": "articole"
+  },
+  "hg_1045_2018_norme_consolidat": {
+   "abrogati": 6,
+   "cu_valabilitate": 25,
+   "fisier": "artefacte/atomi/hg_1045_2018_norme_consolidat.jsonl",
+   "n": 168,
+   "niveluri": {
+    "alineat": 87,
+    "articol": 45,
+    "litera": 36
+   },
+   "structura": "articole"
+  },
+  "hg_1074_2021": {
+   "abrogati": 0,
+   "cu_valabilitate": 22,
+   "fisier": "artefacte/atomi/hg_1074_2021.jsonl",
+   "n": 22,
+   "niveluri": {
+    "alineat": 20,
+    "articol": 1,
+    "litera": 1
+   },
+   "structura": "articole"
+  },
+  "hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje": {
+   "abrogati": 0,
+   "cu_valabilitate": 4,
+   "fisier": "artefacte/atomi/hg_1074_2021_stabilirea_sistemului_garantie_returnare_ambalaje.jsonl",
+   "n": 243,
+   "niveluri": {
+    "alineat": 123,
+    "articol": 28,
+    "litera": 92
+   },
+   "structura": "articole"
+  },
+  "hg_1094_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 22,
+   "fisier": "artefacte/atomi/hg_1094_2025.jsonl",
+   "n": 22,
+   "niveluri": {
+    "alineat": 20,
+    "articol": 1,
+    "punct": 1
+   },
+   "structura": "articole"
+  },
+  "hg_145_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_145_2026.jsonl",
+   "n": 2,
+   "niveluri": {
+    "articol": 2
+   },
+   "structura": "articole"
+  },
+  "hg_146_2026_salariu_minim": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_146_2026_salariu_minim.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "hg_1506_2024_salariu_minim": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_1506_2024_salariu_minim.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.jsonl",
+   "n": 6,
+   "niveluri": {
+    "articol": 3,
+    "punct": 3
+   },
+   "structura": "articole"
+  },
+  "hg_1_2016_norme_cod_fiscal": {
+   "abrogati": 56,
+   "cu_valabilitate": 471,
+   "fisier": "artefacte/atomi/hg_1_2016_norme_cod_fiscal.jsonl",
+   "n": 3725,
+   "niveluri": {
+    "alineat": 2283,
+    "articol": 19,
+    "litera": 1155,
+    "punct": 268
+   },
+   "structura": "articole"
+  },
+  "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe": {
+   "abrogati": 0,
+   "cu_valabilitate": 3,
+   "fisier": "artefacte/atomi/hg_2139_2004_catalog_clasificare_durate_mijloace_fixe.jsonl",
+   "n": 684,
+   "niveluri": {
+    "articol": 2,
+    "punct": 682
+   },
+   "structura": "articole"
+  },
+  "hg_276_2013": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_276_2013.jsonl",
+   "n": 8,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 6
+   },
+   "structura": "articole"
+  },
+  "hg_295_2025_reges_online_registru_salariati": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_295_2025_reges_online_registru_salariati.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_423_2020_aprobarea_listei_cuprinzand_urgentele_medico.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "hg_479_2003": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_479_2003.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "hg_518_1995": {
+   "abrogati": 0,
+   "cu_valabilitate": 12,
+   "fisier": "artefacte/atomi/hg_518_1995.jsonl",
+   "n": 13,
+   "niveluri": {
+    "alineat": 11,
+    "articol": 2
+   },
+   "structura": "articole"
+  },
+  "hg_598_2024_stabilirea_salariului_baza_minim_brut": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_598_2024_stabilirea_salariului_baza_minim_brut.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "hg_685_1999_norme_compensare_creante_datorii": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_685_1999_norme_compensare_creante_datorii.jsonl",
+   "n": 46,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 23,
+    "litera": 5,
+    "punct": 16
+   },
+   "structura": "articole"
+  },
+  "hg_773_2019_norme_monitorizare_datorii_nerambursate": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_773_2019_norme_monitorizare_datorii_nerambursate.jsonl",
+   "n": 45,
+   "niveluri": {
+    "fragment": 45
+   },
+   "structura": "fragmente"
+  },
+  "hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_831_2004_aprobarea_normelor_limitele_admisibile_perisabilitate.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "hg_867_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 5,
+   "fisier": "artefacte/atomi/hg_867_2015.jsonl",
+   "n": 12,
+   "niveluri": {
+    "alineat": 4,
+    "articol": 8
+   },
+   "structura": "articole"
+  },
+  "hg_905_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/hg_905_2017.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "impozit_dividende_istoric_cote": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/impozit_dividende_istoric_cote.jsonl",
+   "n": 5,
+   "niveluri": {
+    "fragment": 5
+   },
+   "structura": "fragmente"
+  },
+  "lege_64_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/lege_64_2026.jsonl",
+   "n": 1,
+   "niveluri": {
+    "fragment": 1
+   },
+   "structura": "fragmente"
+  },
+  "legea_125_2006_rambursarea_ratelor_capital_cota_parte": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_125_2006_rambursarea_ratelor_capital_cota_parte.jsonl",
+   "n": 10,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 8
+   },
+   "structura": "articole"
+  },
+  "legea_129_2019": {
+   "abrogati": 0,
+   "cu_valabilitate": 134,
+   "fisier": "artefacte/atomi/legea_129_2019.jsonl",
+   "n": 152,
+   "niveluri": {
+    "alineat": 131,
+    "articol": 16,
+    "litera": 5
+   },
+   "structura": "articole"
+  },
+  "legea_136_2020_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 6,
+   "fisier": "artefacte/atomi/legea_136_2020_consolidat.jsonl",
+   "n": 126,
+   "niveluri": {
+    "alineat": 99,
+    "articol": 23,
+    "litera": 4
+   },
+   "structura": "articole"
+  },
+  "legea_141_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_141_2025.jsonl",
+   "n": 473,
+   "niveluri": {
+    "alineat": 176,
+    "articol": 66,
+    "litera": 83,
+    "punct": 148
+   },
+   "structura": "articole"
+  },
+  "legea_141_2025_consolidat": {
+   "abrogati": 1,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/legea_141_2025_consolidat.jsonl",
+   "n": 401,
+   "niveluri": {
+    "alineat": 180,
+    "articol": 91,
+    "litera": 100,
+    "punct": 30
+   },
+   "structura": "articole"
+  },
+  "legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale": {
+   "abrogati": 1,
+   "cu_valabilitate": 4,
+   "fisier": "artefacte/atomi/legea_15_1994_amortizarea_capitalului_imobilizat_active_corporale.jsonl",
+   "n": 32,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 30,
+    "litera": 1
+   },
+   "structura": "articole"
+  },
+  "legea_160_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_160_2026.jsonl",
+   "n": 2,
+   "niveluri": {
+    "articol": 2
+   },
+   "structura": "articole"
+  },
+  "legea_161_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_161_2026.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "legea_165_2018_anaf": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_165_2018_anaf.jsonl",
+   "n": 191,
+   "niveluri": {
+    "alineat": 106,
+    "articol": 36,
+    "litera": 49
+   },
+   "structura": "articole"
+  },
+  "legea_165_2018_consolidat": {
+   "abrogati": 2,
+   "cu_valabilitate": 28,
+   "fisier": "artefacte/atomi/legea_165_2018_consolidat.jsonl",
+   "n": 144,
+   "niveluri": {
+    "alineat": 89,
+    "articol": 41,
+    "litera": 14
+   },
+   "structura": "articole"
+  },
+  "legea_165_2018_mf_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_165_2018_mf_2024.jsonl",
+   "n": 155,
+   "niveluri": {
+    "alineat": 95,
+    "articol": 34,
+    "litera": 23,
+    "punct": 3
+   },
+   "structura": "articole"
+  },
+  "legea_175_2018_modificarea_completarea_291_2_legea": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_175_2018_modificarea_completarea_291_2_legea.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "legea_1_2020": {
+   "abrogati": 0,
+   "cu_valabilitate": 9,
+   "fisier": "artefacte/atomi/legea_1_2020.jsonl",
+   "n": 20,
+   "niveluri": {
+    "alineat": 8,
+    "articol": 12
+   },
+   "structura": "articole"
+  },
+  "legea_201_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_201_2025.jsonl",
+   "n": 7,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "legea_207_2015_consolidat": {
+   "abrogati": 1,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_207_2015_consolidat.jsonl",
+   "n": 3965,
+   "niveluri": {
+    "alineat": 2035,
+    "articol": 461,
+    "litera": 988,
+    "punct": 481
+   },
+   "structura": "articole"
+  },
+  "legea_226_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 5,
+   "fisier": "artefacte/atomi/legea_226_2023.jsonl",
+   "n": 6,
+   "niveluri": {
+    "alineat": 5,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "legea_230_2007": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/legea_230_2007.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor": {
+   "abrogati": 1,
+   "cu_valabilitate": 12,
+   "fisier": "artefacte/atomi/legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor.jsonl",
+   "n": 565,
+   "niveluri": {
+    "alineat": 310,
+    "articol": 84,
+    "litera": 147,
+    "punct": 24
+   },
+   "structura": "articole"
+  },
+  "legea_241_2005": {
+   "abrogati": 0,
+   "cu_valabilitate": 7,
+   "fisier": "artefacte/atomi/legea_241_2005.jsonl",
+   "n": 25,
+   "niveluri": {
+    "alineat": 4,
+    "articol": 1,
+    "litera": 1,
+    "punct": 19
+   },
+   "structura": "articole"
+  },
+  "legea_265_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 4,
+   "fisier": "artefacte/atomi/legea_265_2022.jsonl",
+   "n": 32,
+   "niveluri": {
+    "alineat": 8,
+    "articol": 24
+   },
+   "structura": "articole"
+  },
+  "legea_26_1990": {
+   "abrogati": 0,
+   "cu_valabilitate": 46,
+   "fisier": "artefacte/atomi/legea_26_1990.jsonl",
+   "n": 46,
+   "niveluri": {
+    "alineat": 43,
+    "articol": 1,
+    "litera": 2
+   },
+   "structura": "articole"
+  },
+  "legea_273_2006_fin_publice_locale": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_273_2006_fin_publice_locale.jsonl",
+   "n": 262,
+   "niveluri": {
+    "fragment": 262
+   },
+   "structura": "fragmente"
+  },
+  "legea_287_2009": {
+   "abrogati": 0,
+   "cu_valabilitate": 40,
+   "fisier": "artefacte/atomi/legea_287_2009.jsonl",
+   "n": 203,
+   "niveluri": {
+    "alineat": 39,
+    "articol": 164
+   },
+   "structura": "articole"
+  },
+  "legea_296_2020_consolidat": {
+   "abrogati": 3,
+   "cu_valabilitate": 5,
+   "fisier": "artefacte/atomi/legea_296_2020_consolidat.jsonl",
+   "n": 223,
+   "niveluri": {
+    "alineat": 104,
+    "articol": 46,
+    "litera": 73
+   },
+   "structura": "articole"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii": {
+   "abrogati": 2,
+   "cu_valabilitate": 55,
+   "fisier": "artefacte/atomi/legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii.jsonl",
+   "n": 774,
+   "niveluri": {
+    "alineat": 429,
+    "articol": 131,
+    "litera": 173,
+    "punct": 41
+   },
+   "structura": "articole"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.jsonl",
+   "n": 74,
+   "niveluri": {
+    "alineat": 44,
+    "articol": 22,
+    "litera": 8
+   },
+   "structura": "articole"
+  },
+  "legea_319_2006_consolidat": {
+   "abrogati": 2,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_319_2006_consolidat.jsonl",
+   "n": 308,
+   "niveluri": {
+    "alineat": 104,
+    "articol": 65,
+    "litera": 139
+   },
+   "structura": "articole"
+  },
+  "legea_31_1990_modif_L222_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_31_1990_modif_L222_2023.jsonl",
+   "n": 13,
+   "niveluri": {
+    "alineat": 5,
+    "articol": 4,
+    "litera": 4
+   },
+   "structura": "articole"
+  },
+  "legea_31_1990_modif_L239_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_31_1990_modif_L239_2025.jsonl",
+   "n": 12,
+   "niveluri": {
+    "fragment": 12
+   },
+   "structura": "fragmente"
+  },
+  "legea_31_1990_societatile": {
+   "abrogati": 91,
+   "cu_valabilitate": 597,
+   "fisier": "artefacte/atomi/legea_31_1990_societatile.jsonl",
+   "n": 1959,
+   "niveluri": {
+    "alineat": 1198,
+    "articol": 473,
+    "litera": 288
+   },
+   "structura": "articole"
+  },
+  "legea_32_1994_sponsorizarea": {
+   "abrogati": 5,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/legea_32_1994_sponsorizarea.jsonl",
+   "n": 46,
+   "niveluri": {
+    "alineat": 22,
+    "articol": 20,
+    "litera": 4
+   },
+   "structura": "articole"
+  },
+  "legea_346_2002_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_346_2002_consolidat.jsonl",
+   "n": 368,
+   "niveluri": {
+    "alineat": 160,
+    "articol": 135,
+    "litera": 73
+   },
+   "structura": "articole"
+  },
+  "legea_358_2015_aprobarea": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_358_2015_aprobarea.jsonl",
+   "n": 1,
+   "niveluri": {
+    "fragment": 1
+   },
+   "structura": "fragmente"
+  },
+  "legea_370_2022_aprobarea_ordonantei_guvernului_16_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.jsonl",
+   "n": 75,
+   "niveluri": {
+    "alineat": 5,
+    "articol": 5,
+    "litera": 4,
+    "punct": 61
+   },
+   "structura": "articole"
+  },
+  "legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_376_2022_modificarea_completarea_ordonantei_urgenta_guvernului.jsonl",
+   "n": 15,
+   "niveluri": {
+    "alineat": 11,
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "legea_399_2006_aprobare_oug158": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_399_2006_aprobare_oug158.jsonl",
+   "n": 17,
+   "niveluri": {
+    "fragment": 17
+   },
+   "structura": "fragmente"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap": {
+   "abrogati": 0,
+   "cu_valabilitate": 124,
+   "fisier": "artefacte/atomi/legea_448_2006_protectia_persoanelor_cu_handicap.jsonl",
+   "n": 154,
+   "niveluri": {
+    "alineat": 120,
+    "articol": 31,
+    "litera": 3
+   },
+   "structura": "articole"
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
+   "abrogati": 0,
+   "cu_valabilitate": 3,
+   "fisier": "artefacte/atomi/legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.jsonl",
+   "n": 98,
+   "niveluri": {
+    "alineat": 35,
+    "articol": 18,
+    "litera": 45
+   },
+   "structura": "articole"
+  },
+  "legea_53_2003_codul_muncii": {
+   "abrogati": 0,
+   "cu_valabilitate": 70,
+   "fisier": "artefacte/atomi/legea_53_2003_codul_muncii.jsonl",
+   "n": 109,
+   "niveluri": {
+    "alineat": 68,
+    "articol": 40,
+    "litera": 1
+   },
+   "structura": "articole"
+  },
+  "legea_56_2021_suplimentele_alimentare": {
+   "abrogati": 2,
+   "cu_valabilitate": 18,
+   "fisier": "artefacte/atomi/legea_56_2021_suplimentele_alimentare.jsonl",
+   "n": 74,
+   "niveluri": {
+    "alineat": 40,
+    "articol": 16,
+    "litera": 18
+   },
+   "structura": "articole"
+  },
+  "legea_70_2015_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/legea_70_2015_consolidat.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "legea_72_2013": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_72_2013.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "legea_82_1991_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 60,
+   "fisier": "artefacte/atomi/legea_82_1991_consolidat.jsonl",
+   "n": 60,
+   "niveluri": {
+    "alineat": 59,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "legea_82_1991_modif_oug115_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_82_1991_modif_oug115_2023.jsonl",
+   "n": 5,
+   "niveluri": {
+    "fragment": 5
+   },
+   "structura": "fragmente"
+  },
+  "legea_82_1991_modif_oug138_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_82_1991_modif_oug138_2024.jsonl",
+   "n": 11,
+   "niveluri": {
+    "fragment": 11
+   },
+   "structura": "fragmente"
+  },
+  "legea_85_2014": {
+   "abrogati": 0,
+   "cu_valabilitate": 90,
+   "fisier": "artefacte/atomi/legea_85_2014.jsonl",
+   "n": 177,
+   "niveluri": {
+    "alineat": 90,
+    "articol": 84,
+    "litera": 3
+   },
+   "structura": "articole"
+  },
+  "legea_98_2016": {
+   "abrogati": 0,
+   "cu_valabilitate": 86,
+   "fisier": "artefacte/atomi/legea_98_2016.jsonl",
+   "n": 176,
+   "niveluri": {
+    "alineat": 100,
+    "articol": 75,
+    "litera": 1
+   },
+   "structura": "articole"
+  },
+  "og_11_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/og_11_2022.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "og_13_2011": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/og_13_2011.jsonl",
+   "n": 4,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "og_16_2022_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/og_16_2022_consolidat.jsonl",
+   "n": 235,
+   "niveluri": {
+    "alineat": 103,
+    "articol": 23,
+    "litera": 44,
+    "punct": 65
+   },
+   "structura": "articole"
+  },
+  "og_22_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/og_22_2025.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "og_26_2000_asociatii_fundatii": {
+   "abrogati": 3,
+   "cu_valabilitate": 132,
+   "fisier": "artefacte/atomi/og_26_2000_asociatii_fundatii.jsonl",
+   "n": 416,
+   "niveluri": {
+    "alineat": 209,
+    "articol": 105,
+    "litera": 102
+   },
+   "structura": "articole"
+  },
+  "og_2_2001": {
+   "abrogati": 0,
+   "cu_valabilitate": 33,
+   "fisier": "artefacte/atomi/og_2_2001.jsonl",
+   "n": 33,
+   "niveluri": {
+    "alineat": 32,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "og_39_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 3,
+   "fisier": "artefacte/atomi/og_39_2015.jsonl",
+   "n": 4,
+   "niveluri": {
+    "alineat": 3,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea": {
+   "abrogati": 14,
+   "cu_valabilitate": 14,
+   "fisier": "artefacte/atomi/omf_107_2025_principalele_aspecte_legate_intocmirea_depunerea.jsonl",
+   "n": 16,
+   "niveluri": {
+    "articol": 16
+   },
+   "structura": "articole"
+  },
+  "omf_1235_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omf_1235_2023.jsonl",
+   "n": 2,
+   "niveluri": {
+    "articol": 2
+   },
+   "structura": "articole"
+  },
+  "omf_1855_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omf_1855_2022.jsonl",
+   "n": 23,
+   "niveluri": {
+    "alineat": 14,
+    "articol": 6,
+    "litera": 2,
+    "punct": 1
+   },
+   "structura": "articole"
+  },
+  "omfp_170_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_170_2015.jsonl",
+   "n": 53,
+   "niveluri": {
+    "alineat": 5,
+    "articol": 8,
+    "punct": 40
+   },
+   "structura": "articole"
+  },
+  "omfp_1802_2014": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_1802_2014.jsonl",
+   "n": 1332,
+   "niveluri": {
+    "alineat": 654,
+    "articol": 24,
+    "litera": 447,
+    "punct": 207
+   },
+   "structura": "articole"
+  },
+  "omfp_1802_2014_ordin_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/omfp_1802_2014_ordin_consolidat.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "omfp_1802_2014_reglementari_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 41,
+   "fisier": "artefacte/atomi/omfp_1802_2014_reglementari_consolidat.jsonl",
+   "n": 145,
+   "niveluri": {
+    "alineat": 38,
+    "articol": 2,
+    "litera": 19,
+    "punct": 86
+   },
+   "structura": "articole"
+  },
+  "omfp_2634_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_2634_2015.jsonl",
+   "n": 74,
+   "niveluri": {
+    "alineat": 3,
+    "articol": 10,
+    "punct": 61
+   },
+   "structura": "articole"
+  },
+  "omfp_2634_2015_anexa1_norme_generale": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_2634_2015_anexa1_norme_generale.jsonl",
+   "n": 64,
+   "niveluri": {
+    "fragment": 64
+   },
+   "structura": "fragmente"
+  },
+  "omfp_2634_2015_anexa2_norme_specifice": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_2634_2015_anexa2_norme_specifice.jsonl",
+   "n": 69,
+   "niveluri": {
+    "fragment": 69
+   },
+   "structura": "fragmente"
+  },
+  "omfp_2634_2015_anexa3_modele": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_2634_2015_anexa3_modele.jsonl",
+   "n": 73,
+   "niveluri": {
+    "fragment": 73
+   },
+   "structura": "fragmente"
+  },
+  "omfp_2861_2009": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_2861_2009.jsonl",
+   "n": 96,
+   "niveluri": {
+    "alineat": 45,
+    "articol": 5,
+    "punct": 46
+   },
+   "structura": "articole"
+  },
+  "omfp_3067_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_3067_2018.jsonl",
+   "n": 22,
+   "niveluri": {
+    "alineat": 8,
+    "articol": 6,
+    "punct": 8
+   },
+   "structura": "articole"
+  },
+  "omfp_3103_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_3103_2017.jsonl",
+   "n": 888,
+   "niveluri": {
+    "alineat": 369,
+    "articol": 10,
+    "litera": 61,
+    "punct": 448
+   },
+   "structura": "articole"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "omfp_660_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_660_2017.jsonl",
+   "n": 347,
+   "niveluri": {
+    "alineat": 157,
+    "articol": 45,
+    "litera": 74,
+    "punct": 71
+   },
+   "structura": "articole"
+  },
+  "omfp_897_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/omfp_897_2015.jsonl",
+   "n": 11,
+   "niveluri": {
+    "alineat": 4,
+    "articol": 6,
+    "punct": 1
+   },
+   "structura": "articole"
+  },
+  "oms_15_2018_modificare_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oms_15_2018_modificare_2025.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "oms_15_2018_norme": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oms_15_2018_norme.jsonl",
+   "n": 274,
+   "niveluri": {
+    "alineat": 121,
+    "articol": 92,
+    "litera": 31,
+    "punct": 30
+   },
+   "structura": "articole"
+  },
+  "opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_102_2025_modificarea_ordinului_presedintelui_agentiei_nationale.jsonl",
+   "n": 7,
+   "niveluri": {
+    "articol": 7
+   },
+   "structura": "articole"
+  },
+  "opanaf_1292_2014_d106_instructiuni": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_1292_2014_d106_instructiuni.jsonl",
+   "n": 3,
+   "niveluri": {
+    "fragment": 3
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_146_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_146_2018.jsonl",
+   "n": 23,
+   "niveluri": {
+    "articol": 6,
+    "punct": 17
+   },
+   "structura": "articole"
+  },
+  "opanaf_174_2026_d300": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_174_2026_d300.jsonl",
+   "n": 25,
+   "niveluri": {
+    "alineat": 4,
+    "articol": 9,
+    "litera": 6,
+    "punct": 6
+   },
+   "structura": "articole"
+  },
+  "opanaf_1783_2021_saft_d406": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_1783_2021_saft_d406.jsonl",
+   "n": 70,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 8,
+    "punct": 60
+   },
+   "structura": "articole"
+  },
+  "opanaf_179_2022_d205_d207_baza": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_179_2022_d205_d207_baza.jsonl",
+   "n": 69,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 7,
+    "litera": 15,
+    "punct": 45
+   },
+   "structura": "articole"
+  },
+  "opanaf_184_2013": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_184_2013.jsonl",
+   "n": 26,
+   "niveluri": {
+    "articol": 1,
+    "punct": 25
+   },
+   "structura": "articole"
+  },
+  "opanaf_1950_2012": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_1950_2012.jsonl",
+   "n": 95,
+   "niveluri": {
+    "alineat": 7,
+    "articol": 2,
+    "litera": 8,
+    "punct": 78
+   },
+   "structura": "articole"
+  },
+  "opanaf_1950_2012_130": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_1950_2012_130.jsonl",
+   "n": 16,
+   "niveluri": {
+    "fragment": 16
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_1950_2012_decl130": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_1950_2012_decl130.jsonl",
+   "n": 15,
+   "niveluri": {
+    "fragment": 15
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_1950_2012_instr_130_1950": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_1950_2012_instr_130_1950.jsonl",
+   "n": 7,
+   "niveluri": {
+    "fragment": 7
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_206_2025_d101": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_206_2025_d101.jsonl",
+   "n": 40,
+   "niveluri": {
+    "alineat": 3,
+    "articol": 6,
+    "punct": 31
+   },
+   "structura": "articole"
+  },
+  "opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_216_2023_formular_213_instrainare_pachet_control_terenuri_agricole_extravilan.jsonl",
+   "n": 254,
+   "niveluri": {
+    "fragment": 254
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_2175_2025_d169n": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_2175_2025_d169n.jsonl",
+   "n": 23,
+   "niveluri": {
+    "fragment": 23
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_2194_2025_d394": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_2194_2025_d394.jsonl",
+   "n": 125,
+   "niveluri": {
+    "articol": 3,
+    "punct": 122
+   },
+   "structura": "articole"
+  },
+  "opanaf_299_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_299_2025.jsonl",
+   "n": 99,
+   "niveluri": {
+    "alineat": 21,
+    "articol": 8,
+    "litera": 17,
+    "punct": 53
+   },
+   "structura": "articole"
+  },
+  "opanaf_303_2026_d205": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_303_2026_d205.jsonl",
+   "n": 6,
+   "niveluri": {
+    "articol": 3,
+    "punct": 3
+   },
+   "structura": "articole"
+  },
+  "opanaf_355_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_355_2024.jsonl",
+   "n": 25,
+   "niveluri": {
+    "articol": 7,
+    "punct": 18
+   },
+   "structura": "articole"
+  },
+  "opanaf_3562_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/opanaf_3562_2024.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_3622_2015_aprobarea_modelului_continutului_formulare_utilizate.jsonl",
+   "n": 190,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 7,
+    "litera": 7,
+    "punct": 174
+   },
+   "structura": "articole"
+  },
+  "opanaf_3769_2015_d394_baza": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_3769_2015_d394_baza.jsonl",
+   "n": 104,
+   "niveluri": {
+    "alineat": 5,
+    "articol": 12,
+    "punct": 87
+   },
+   "structura": "articole"
+  },
+  "opanaf_394_2017_d390_anexa2_instructiuni": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_394_2017_d390_anexa2_instructiuni.jsonl",
+   "n": 11,
+   "niveluri": {
+    "fragment": 11
+   },
+   "structura": "fragmente"
+  },
+  "opanaf_407_2025_saft_d406": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_407_2025_saft_d406.jsonl",
+   "n": 11,
+   "niveluri": {
+    "articol": 2,
+    "punct": 9
+   },
+   "structura": "articole"
+  },
+  "opanaf_57_2026_d100_d710": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_57_2026_d100_d710.jsonl",
+   "n": 16,
+   "niveluri": {
+    "articol": 3,
+    "punct": 13
+   },
+   "structura": "articole"
+  },
+  "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate": {
+   "abrogati": 3,
+   "cu_valabilitate": 17,
+   "fisier": "artefacte/atomi/opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate.jsonl",
+   "n": 51,
+   "niveluri": {
+    "alineat": 14,
+    "articol": 8,
+    "litera": 5,
+    "punct": 24
+   },
+   "structura": "articole"
+  },
+  "opanaf_592_2016_d301": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_592_2016_d301.jsonl",
+   "n": 13,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 7,
+    "litera": 2,
+    "punct": 3
+   },
+   "structura": "articole"
+  },
+  "opanaf_602_2026_modificare_opanaf_587_2016_formulare": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_602_2026_modificare_opanaf_587_2016_formulare.jsonl",
+   "n": 2,
+   "niveluri": {
+    "articol": 2
+   },
+   "structura": "articole"
+  },
+  "opanaf_603_2026_recalculare_oficiu_cass": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_603_2026_recalculare_oficiu_cass.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "opanaf_605_2026_d112": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_605_2026_d112.jsonl",
+   "n": 107,
+   "niveluri": {
+    "alineat": 21,
+    "articol": 8,
+    "litera": 18,
+    "punct": 60
+   },
+   "structura": "articole"
+  },
+  "opanaf_6073_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_6073_2024.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "opanaf_649_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_649_2025.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "opanaf_705_2020_d390": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_705_2020_d390.jsonl",
+   "n": 43,
+   "niveluri": {
+    "alineat": 3,
+    "articol": 10,
+    "punct": 30
+   },
+   "structura": "articole"
+  },
+  "opanaf_779_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_779_2024.jsonl",
+   "n": 32,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 12,
+    "punct": 18
+   },
+   "structura": "articole"
+  },
+  "opanaf_77_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_77_2022.jsonl",
+   "n": 114,
+   "niveluri": {
+    "alineat": 3,
+    "articol": 3,
+    "litera": 1,
+    "punct": 107
+   },
+   "structura": "articole"
+  },
+  "opanaf_793_2016": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_793_2016.jsonl",
+   "n": 21,
+   "niveluri": {
+    "alineat": 4,
+    "articol": 8,
+    "litera": 1,
+    "punct": 8
+   },
+   "structura": "articole"
+  },
+  "opanaf_888_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/opanaf_888_2018.jsonl",
+   "n": 117,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 8,
+    "litera": 4,
+    "punct": 104
+   },
+   "structura": "articole"
+  },
+  "ordin_1029_2020": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_1029_2020.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_1090_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1090_2022.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_1094_2016": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1094_2016.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_1099_2016": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1099_2016.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_1366_2021": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1366_2021.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_1517_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1517_2017.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_1574_3246_2025_cultural": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1574_3246_2025_cultural.jsonl",
+   "n": 4,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 2
+   },
+   "structura": "articole"
+  },
+  "ordin_1604_2025_intrastat": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1604_2025_intrastat.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_1604_2025_intrastat_mo": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1604_2025_intrastat_mo.jsonl",
+   "n": 4,
+   "niveluri": {
+    "fragment": 4
+   },
+   "structura": "fragmente"
+  },
+  "ordin_161_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_161_2025.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "ordin_1699_2021": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_1699_2021.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_1757_2019": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_1757_2019.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "ordin_1760_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1760_2018.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_1767_2021": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1767_2021.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_187_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_187_2018.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_188_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 2,
+   "fisier": "artefacte/atomi/ordin_188_2018.jsonl",
+   "n": 6,
+   "niveluri": {
+    "articol": 1,
+    "punct": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_1946_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1946_2023.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_1996_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_1996_2023.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_2026_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_2026_2023.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_2066_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_2066_2025.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_2117_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_2117_2018.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_2229_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_2229_2025.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_2430_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_2430_2025.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_2547_2019": {
+   "abrogati": 0,
+   "cu_valabilitate": 4,
+   "fisier": "artefacte/atomi/ordin_2547_2019.jsonl",
+   "n": 56,
+   "niveluri": {
+    "articol": 1,
+    "punct": 55
+   },
+   "structura": "articole"
+  },
+  "ordin_2594_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 4,
+   "fisier": "artefacte/atomi/ordin_2594_2015.jsonl",
+   "n": 4,
+   "niveluri": {
+    "alineat": 3,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_2736_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_2736_2025.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_3357_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_3357_2017.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_3391_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_3391_2017.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_352_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_352_2022.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_361_2680_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_361_2680_2025.jsonl",
+   "n": 5,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "ordin_369_2624_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_369_2624_2026.jsonl",
+   "n": 5,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "ordin_3708_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_3708_2015.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_3711_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_3711_2015.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_3738_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_3738_2024.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_3775_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_3775_2024.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_3780_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_3780_2017.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_3792_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_3792_2024.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_382_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_382_2025.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_3845_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/ordin_3845_2015.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_3846_2015": {
+   "abrogati": 0,
+   "cu_valabilitate": 2,
+   "fisier": "artefacte/atomi/ordin_3846_2015.jsonl",
+   "n": 2,
+   "niveluri": {
+    "articol": 1,
+    "punct": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_396_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_396_2025.jsonl",
+   "n": 5,
+   "niveluri": {
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "ordin_4156_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 3,
+   "fisier": "artefacte/atomi/ordin_4156_2017.jsonl",
+   "n": 3,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_435_2021": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_435_2021.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_506_1030_2026_norme_oug158": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_506_1030_2026_norme_oug158.jsonl",
+   "n": 5,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "ordin_5521_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_5521_2024.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "ordin_608_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_608_2026.jsonl",
+   "n": 8,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 6
+   },
+   "structura": "articole"
+  },
+  "ordin_63_2017": {
+   "abrogati": 0,
+   "cu_valabilitate": 2,
+   "fisier": "artefacte/atomi/ordin_63_2017.jsonl",
+   "n": 5,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "ordin_802_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_802_2022.jsonl",
+   "n": 9,
+   "niveluri": {
+    "articol": 1,
+    "punct": 8
+   },
+   "structura": "articole"
+  },
+  "ordin_878_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/ordin_878_2022.jsonl",
+   "n": 7,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 6
+   },
+   "structura": "articole"
+  },
+  "ordin_90_2016": {
+   "abrogati": 0,
+   "cu_valabilitate": 13,
+   "fisier": "artefacte/atomi/ordin_90_2016.jsonl",
+   "n": 17,
+   "niveluri": {
+    "alineat": 12,
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "oug_115_2023_consolidat": {
+   "abrogati": 2,
+   "cu_valabilitate": 12,
+   "fisier": "artefacte/atomi/oug_115_2023_consolidat.jsonl",
+   "n": 374,
+   "niveluri": {
+    "alineat": 210,
+    "articol": 103,
+    "litera": 61
+   },
+   "structura": "articole"
+  },
+  "oug_116_2023": {
+   "abrogati": 0,
+   "cu_valabilitate": 2,
+   "fisier": "artefacte/atomi/oug_116_2023.jsonl",
+   "n": 3,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "oug_120_2021": {
+   "abrogati": 0,
+   "cu_valabilitate": 6,
+   "fisier": "artefacte/atomi/oug_120_2021.jsonl",
+   "n": 21,
+   "niveluri": {
+    "alineat": 7,
+    "articol": 14
+   },
+   "structura": "articole"
+  },
+  "oug_138_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_138_2024.jsonl",
+   "n": 200,
+   "niveluri": {
+    "alineat": 109,
+    "articol": 30,
+    "litera": 14,
+    "punct": 47
+   },
+   "structura": "articole"
+  },
+  "oug_153_2020": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/oug_153_2020.jsonl",
+   "n": 6,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 5
+   },
+   "structura": "articole"
+  },
+  "oug_156_2024": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_156_2024.jsonl",
+   "n": 263,
+   "niveluri": {
+    "alineat": 130,
+    "articol": 75,
+    "litera": 34,
+    "punct": 24
+   },
+   "structura": "articole"
+  },
+  "oug_158_2005_consolidat": {
+   "abrogati": 14,
+   "cu_valabilitate": 129,
+   "fisier": "artefacte/atomi/oug_158_2005_consolidat.jsonl",
+   "n": 341,
+   "niveluri": {
+    "alineat": 234,
+    "articol": 75,
+    "litera": 32
+   },
+   "structura": "articole"
+  },
+  "oug_158_2005_pre_L141": {
+   "abrogati": 14,
+   "cu_valabilitate": 119,
+   "fisier": "artefacte/atomi/oug_158_2005_pre_L141.jsonl",
+   "n": 319,
+   "niveluri": {
+    "alineat": 217,
+    "articol": 75,
+    "litera": 27
+   },
+   "structura": "articole"
+  },
+  "oug_193_2002": {
+   "abrogati": 0,
+   "cu_valabilitate": 16,
+   "fisier": "artefacte/atomi/oug_193_2002.jsonl",
+   "n": 16,
+   "niveluri": {
+    "alineat": 15,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "oug_200_2008_modificarea_completarea": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_200_2008_modificarea_completarea.jsonl",
+   "n": 35,
+   "niveluri": {
+    "alineat": 8,
+    "articol": 8,
+    "punct": 19
+   },
+   "structura": "articole"
+  },
+  "oug_24_2026_contributie_solidaritate": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_24_2026_contributie_solidaritate.jsonl",
+   "n": 2,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "oug_25_2018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_25_2018.jsonl",
+   "n": 158,
+   "niveluri": {
+    "alineat": 71,
+    "articol": 21,
+    "litera": 20,
+    "punct": 46
+   },
+   "structura": "articole"
+  },
+  "oug_26_2019_modificarea_completarea_acte_normative": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/oug_26_2019_modificarea_completarea_acte_normative.jsonl",
+   "n": 43,
+   "niveluri": {
+    "alineat": 18,
+    "articol": 15,
+    "litera": 10
+   },
+   "structura": "articole"
+  },
+  "oug_28_1999": {
+   "abrogati": 0,
+   "cu_valabilitate": 19,
+   "fisier": "artefacte/atomi/oug_28_1999.jsonl",
+   "n": 19,
+   "niveluri": {
+    "alineat": 18,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "oug_34_2024_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_34_2024_consolidat.jsonl",
+   "n": 91,
+   "niveluri": {
+    "alineat": 61,
+    "articol": 19,
+    "litera": 11
+   },
+   "structura": "articole"
+  },
+  "oug_41_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_41_2022.jsonl",
+   "n": 72,
+   "niveluri": {
+    "alineat": 30,
+    "articol": 19,
+    "litera": 11,
+    "punct": 12
+   },
+   "structura": "articole"
+  },
+  "oug_44_2008": {
+   "abrogati": 0,
+   "cu_valabilitate": 26,
+   "fisier": "artefacte/atomi/oug_44_2008.jsonl",
+   "n": 32,
+   "niveluri": {
+    "alineat": 25,
+    "articol": 7
+   },
+   "structura": "articole"
+  },
+  "oug_46_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_46_2025.jsonl",
+   "n": 3,
+   "niveluri": {
+    "articol": 3
+   },
+   "structura": "articole"
+  },
+  "oug_50_2015_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_50_2015_consolidat.jsonl",
+   "n": 118,
+   "niveluri": {
+    "alineat": 39,
+    "articol": 10,
+    "litera": 10,
+    "punct": 59
+   },
+   "structura": "articole"
+  },
+  "oug_68_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_68_2025.jsonl",
+   "n": 4,
+   "niveluri": {
+    "articol": 4
+   },
+   "structura": "articole"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat": {
+   "abrogati": 0,
+   "cu_valabilitate": 2,
+   "fisier": "artefacte/atomi/oug_70_2024_ro_etva_decont_precompletat.jsonl",
+   "n": 2,
+   "niveluri": {
+    "alineat": 1,
+    "articol": 1
+   },
+   "structura": "articole"
+  },
+  "oug_77_1999_masuri_prevenire_incapacitate_plata": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_77_1999_masuri_prevenire_incapacitate_plata.jsonl",
+   "n": 8,
+   "niveluri": {
+    "articol": 8
+   },
+   "structura": "articole"
+  },
+  "oug_85_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_85_2022.jsonl",
+   "n": 40,
+   "niveluri": {
+    "alineat": 10,
+    "articol": 7,
+    "litera": 5,
+    "punct": 18
+   },
+   "structura": "articole"
+  },
+  "oug_89_2025": {
+   "abrogati": 1,
+   "cu_valabilitate": 15,
+   "fisier": "artefacte/atomi/oug_89_2025.jsonl",
+   "n": 309,
+   "niveluri": {
+    "alineat": 171,
+    "articol": 64,
+    "litera": 74
+   },
+   "structura": "articole"
+  },
+  "oug_8_2009_acordarea_tichetelor_vacanta": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_8_2009_acordarea_tichetelor_vacanta.jsonl",
+   "n": 1,
+   "niveluri": {
+    "fragment": 1
+   },
+   "structura": "fragmente"
+  },
+  "oug_8_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_8_2026.jsonl",
+   "n": 191,
+   "niveluri": {
+    "alineat": 99,
+    "articol": 18,
+    "litera": 74
+   },
+   "structura": "articole"
+  },
+  "oug_91_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/oug_91_2025.jsonl",
+   "n": 32,
+   "niveluri": {
+    "alineat": 16,
+    "articol": 13,
+    "litera": 3
+   },
+   "structura": "articole"
+  },
+  "oug_96_2003_protectia_maternitatii_locurile_munca": {
+   "abrogati": 1,
+   "cu_valabilitate": 25,
+   "fisier": "artefacte/atomi/oug_96_2003_protectia_maternitatii_locurile_munca.jsonl",
+   "n": 85,
+   "niveluri": {
+    "alineat": 43,
+    "articol": 32,
+    "litera": 10
+   },
+   "structura": "articole"
+  },
+  "pdf_original/structura_D100_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D100_2026.jsonl",
+   "n": 9,
+   "niveluri": {
+    "alineat": 2,
+    "articol": 3,
+    "punct": 4
+   },
+   "structura": "articole"
+  },
+  "pdf_original/structura_D100_v200_2014": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D100_v200_2014.jsonl",
+   "n": 20,
+   "niveluri": {
+    "articol": 2,
+    "punct": 18
+   },
+   "structura": "articole"
+  },
+  "pdf_original/structura_D101G_2025_260126": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D101G_2025_260126.jsonl",
+   "n": 301,
+   "niveluri": {
+    "fragment": 301
+   },
+   "structura": "fragmente"
+  },
+  "pdf_original/structura_D101_2024_200225": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D101_2024_200225.jsonl",
+   "n": 500,
+   "niveluri": {
+    "fragment": 500
+   },
+   "structura": "fragmente"
+  },
+  "pdf_original/structura_D112_0126_030226": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D112_0126_030226.jsonl",
+   "n": 5070,
+   "niveluri": {
+    "fragment": 5070
+   },
+   "structura": "fragmente"
+  },
+  "pdf_original/structura_D205_2025_120226": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D205_2025_120226.jsonl",
+   "n": 302,
+   "niveluri": {
+    "fragment": 302
+   },
+   "structura": "fragmente"
+  },
+  "pdf_original/structura_D300_v12.0.0_10022026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D300_v12.0.0_10022026.jsonl",
+   "n": 940,
+   "niveluri": {
+    "fragment": 940
+   },
+   "structura": "fragmente"
+  },
+  "pdf_original/structura_D301_20130327": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D301_20130327.jsonl",
+   "n": 128,
+   "niveluri": {
+    "fragment": 128
+   },
+   "structura": "fragmente"
+  },
+  "pdf_original/structura_D390_2020_180320": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/pdf_original__structura_D390_2020_180320.jsonl",
+   "n": 222,
+   "niveluri": {
+    "fragment": 222
+   },
+   "structura": "fragmente"
+  },
+  "structuraXML_D402_2022": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structuraXML_D402_2022.jsonl",
+   "n": 245,
+   "niveluri": {
+    "fragment": 245
+   },
+   "structura": "fragmente"
+  },
+  "structura_D104_2012_v100_030613": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D104_2012_v100_030613.jsonl",
+   "n": 6,
+   "niveluri": {
+    "fragment": 6
+   },
+   "structura": "fragmente"
+  },
+  "structura_D107_2024_010726": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D107_2024_010726.jsonl",
+   "n": 14,
+   "niveluri": {
+    "fragment": 14
+   },
+   "structura": "fragmente"
+  },
+  "structura_D110_2026_240326": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D110_2026_240326.jsonl",
+   "n": 30,
+   "niveluri": {
+    "fragment": 30
+   },
+   "structura": "fragmente"
+  },
+  "structura_D112_0726_030826": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D112_0726_030826.jsonl",
+   "n": 579,
+   "niveluri": {
+    "fragment": 579
+   },
+   "structura": "fragmente"
+  },
+  "structura_D177_2026": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D177_2026.jsonl",
+   "n": 18,
+   "niveluri": {
+    "fragment": 18
+   },
+   "structura": "fragmente"
+  },
+  "structura_D207_2025": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D207_2025.jsonl",
+   "n": 24,
+   "niveluri": {
+    "fragment": 24
+   },
+   "structura": "fragmente"
+  },
+  "structura_D220_2017_09012018": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D220_2017_09012018.jsonl",
+   "n": 23,
+   "niveluri": {
+    "fragment": 23
+   },
+   "structura": "fragmente"
+  },
+  "structura_D221_2017_050118": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D221_2017_050118.jsonl",
+   "n": 12,
+   "niveluri": {
+    "fragment": 12
+   },
+   "structura": "fragmente"
+  },
+  "structura_D223_2016_050116_13012016": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D223_2016_050116_13012016.jsonl",
+   "n": 24,
+   "niveluri": {
+    "fragment": 24
+   },
+   "structura": "fragmente"
+  },
+  "structura_D307_2017_071117": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D307_2017_071117.jsonl",
+   "n": 10,
+   "niveluri": {
+    "fragment": 10
+   },
+   "structura": "fragmente"
+  },
+  "structura_D311_2021_290121": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/structura_D311_2021_290121.jsonl",
+   "n": 18,
+   "niveluri": {
+    "fragment": 18
+   },
+   "structura": "fragmente"
+  }
+ },
+ "facut_la": "2026-09-28T12:48:10",
+ "n_acte": 269,
+ "n_acte_pe_articole": 201,
+ "n_acte_pe_fragmente": 68,
+ "n_atomi": 46559
+}

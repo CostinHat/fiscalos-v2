@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+venv/
+# Instantaneul corpusului NU intra in git: 126 MB de acte publice, reproductibile din
+# ~/iconta_nou/anaf_surse. Proba durabila e corpus_manifest.json (SHA256 per fisier), care INTRA.
+corpus/
+# Stratul de text e derivat mecanic din corpus (pdftotext/html->text): se regenereaza, nu se versioneaza.
+artefacte/strat_text/
