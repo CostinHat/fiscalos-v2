@@ -1,0 +1,299 @@
+{
+ "C28": [
+  {
+   "rulare": "navigare v4",
+   "inainte": {
+    "CORECT": 18,
+    "GRESIT": 17,
+    "NU_POT": 15
+   },
+   "dupa": {
+    "CORECT": 20,
+    "GRESIT": 15,
+    "NU_POT": 15
+   },
+   "schimbari": [
+    [
+     "Q-TVA-08",
+     "GRESIT",
+     "CORECT"
+    ],
+    [
+     "Q-PRF-05",
+     "GRESIT",
+     "CORECT"
+    ]
+   ]
+  },
+  {
+   "rulare": "semantic v3",
+   "inainte": {
+    "CORECT": 10,
+    "GRESIT": 8,
+    "NU_POT": 32
+   },
+   "dupa": {
+    "CORECT": 10,
+    "GRESIT": 8,
+    "NU_POT": 32
+   },
+   "schimbari": []
+  },
+  {
+   "rulare": "semantic v2",
+   "inainte": {
+    "CORECT": 11,
+    "GRESIT": 8,
+    "NU_POT": 31
+   },
+   "dupa": {
+    "CORECT": 11,
+    "GRESIT": 8,
+    "NU_POT": 31
+   },
+   "schimbari": []
+  },
+  {
+   "rulare": "lexical v4",
+   "inainte": {
+    "CORECT": 2,
+    "GRESIT": 13,
+    "NU_POT": 35
+   },
+   "dupa": {
+    "CORECT": 2,
+    "GRESIT": 13,
+    "NU_POT": 35
+   },
+   "schimbari": []
+  }
+ ],
+ "C24_goale_v4": [
+  "Q-PRF-02",
+  "Q-PRF-03",
+  "Q-CTB-08"
+ ],
+ "scor_v4_dupa_C28": {
+  "CORECT": 20,
+  "GRESIT": 15,
+  "NU_POT": 15
+ },
+ "scor_v4_dupa_C28_C24": {
+  "CORECT": 20,
+  "GRESIT": 12,
+  "NU_POT": 18
+ },
+ "gresite_fapt_gresit": [
+  "Q-TVA-07",
+  "Q-CPF-09"
+ ],
+ "gresite_articol_diferit": [
+  "Q-SAL-10"
+ ],
+ "greseli_de_fond_lectura": [
+  "Q-TVA-07"
+ ],
+ "calcul_raspunse": [
+  "Q-TVA-08",
+  "Q-PRF-05",
+  "Q-PRF-07",
+  "Q-SAL-03",
+  "Q-CPF-02",
+  "Q-CTB-03",
+  "Q-CTB-07"
+ ],
+ "calcul_corecte": [
+  "Q-TVA-08",
+  "Q-PRF-05",
+  "Q-PRF-07",
+  "Q-SAL-03",
+  "Q-CPF-02",
+  "Q-CTB-03",
+  "Q-CTB-07"
+ ],
+ "C29_la_limita": [],
+ "C23_abtineri": [
+  "Q-TVA-06",
+  "Q-SAL-02"
+ ],
+ "C23_reincercari": [
+  "Q-TVA-03",
+  "Q-TVA-06",
+  "Q-TVA-09",
+  "Q-PRF-06",
+  "Q-PRF-09",
+  "Q-SAL-02",
+  "Q-SAL-03",
+  "Q-CPF-07",
+  "Q-CPF-08",
+  "Q-CTB-04"
+ ],
+ "C27_intrebari_cu_mai_multe_date": [
+  [
+   "Q-TVA-04",
+   [
+    "2025-12-31",
+    "2026-09-28"
+   ],
+   "2026-09-28",
+   "RASPUNS"
+  ],
+  [
+   "Q-PRF-04",
+   [
+    "2025-12-31",
+    "2026-09-28"
+   ],
+   "2026-09-28",
+   "RASPUNS"
+  ],
+  [
+   "Q-PRF-06",
+   [
+    "2024-12-31",
+    "2026-09-28"
+   ],
+   "2026-09-28",
+   "NU_POT_RASPUNDE"
+  ],
+  [
+   "Q-PRF-10",
+   [
+    "2025-12-31",
+    "2026-09-28"
+   ],
+   "2026-09-28",
+   "NU_POT_RASPUNDE"
+  ],
+  [
+   "Q-SAL-08",
+   [
+    "2026-09-30",
+    "2026-10-07"
+   ],
+   "2026-10-07",
+   "RASPUNS"
+  ],
+  [
+   "Q-CPF-02",
+   [
+    "2026-03-25",
+    "2026-04-24"
+   ],
+   "2026-04-24",
+   "RASPUNS"
+  ],
+  [
+   "Q-CPF-03",
+   [
+    "2025-07-25",
+    "2026-03-10",
+    "2026-04-03"
+   ],
+   "2026-04-03",
+   "NU_POT_RASPUNDE"
+  ],
+  [
+   "Q-CPF-08",
+   [
+    "2024-03-31",
+    "2026-09-28",
+    "2001-12-31"
+   ],
+   "2026-09-28",
+   "NU_POT_RASPUNDE"
+  ],
+  [
+   "Q-CTB-02",
+   [
+    "2025-12-31",
+    "2024-12-31",
+    "2026-09-28"
+   ],
+   "2026-09-28",
+   "RASPUNS"
+  ],
+  [
+   "Q-CTB-05",
+   [
+    "2026-09-28",
+    "2024-12-31"
+   ],
+   "2026-09-28",
+   "RASPUNS"
+  ],
+  [
+   "Q-CTB-06",
+   [
+    "2026-12-31",
+    "2026-09-28"
+   ],
+   "2026-12-31",
+   "RASPUNS"
+  ],
+  [
+   "Q-CTB-08",
+   [
+    "2025-12-31",
+    "2026-09-28"
+   ],
+   "2026-09-28",
+   "RASPUNS"
+  ]
+ ],
+ "anexe_citate": [
+  [
+   "Q-CTB-04",
+   "omfp_1802_2014#anexa/pct238/alin2"
+  ],
+  [
+   "Q-CTB-05",
+   "omfp_1802_2014#anexa/pct54/alin3"
+  ],
+  [
+   "Q-CTB-05",
+   "omfp_1802_2014#anexa/pct67/alin2"
+  ],
+  [
+   "Q-CTB-05",
+   "omfp_1802_2014#anexa/pct67/alin3"
+  ],
+  [
+   "Q-CTB-06",
+   "omfp_1802_2014#anexa/pct372/alin1"
+  ],
+  [
+   "Q-CTB-06",
+   "omfp_1802_2014#anexa/pct372/alin2"
+  ],
+  [
+   "Q-PRF-01",
+   "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate#anexa3"
+  ],
+  [
+   "Q-PRF-01",
+   "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate#anexa3/pct5"
+  ],
+  [
+   "Q-PRF-09",
+   "opanaf_587_2016_aprobarea_modelului_continutului_formularelor_utilizate#anexa4/pct3"
+  ],
+  [
+   "Q-TVA-04",
+   "hg_1_2016_norme_cod_fiscal#anexa/pct103/alin2"
+  ],
+  [
+   "Q-TVA-07",
+   "opanaf_2194_2025_d394#anexa2/pct1/lita"
+  ],
+  [
+   "Q-TVA-07",
+   "opanaf_2194_2025_d394#anexa2/pct2"
+  ]
+ ],
+ "unelte": {
+  "cauta": 95,
+  "cuprins": 78,
+  "deschide": 241
+ }
+}

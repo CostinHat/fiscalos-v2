@@ -1,0 +1,5 @@
+{
+ "Q-TVA-07": {"fel": "fond", "de_ce": "Răspunsul dă termenul nominal (28 februarie 2026) și regula corectă (D394 se depune și fără operațiuni), dar nu aplică amânarea pentru zi nelucrătoare: 28.02.2026 cade sâmbătă, termenul efectiv e luni, 02.03.2026 (CPF art. 75 → Codul de procedură civilă). Un contabil care urmează răspunsul depune corect, dar i se spune un termen mai scurt decât cel legal; răspunsul e incomplet pe fond."},
+ "Q-SAL-10": {"fel": "articol, nu fond", "de_ce": "Faptele coincid cu cheia (90 de zile calendaristice, spor de minimum 75%). Citatul e verbatim din Codul muncii din instantaneul iConta, unde textul art. 122 apare atomizat sub `art281/alin7~6`: structura instantaneului Codului muncii e greșită, nu răspunsul (vezi C31)."},
+ "Q-CPF-09": {"fel": "comparator, nu fond", "de_ce": "Răspunsul spune „Nu datorează nimic”, cu temeiul exact al cheii (CPF art. 173 alin. (2)). Comparatorul caută faptul „0 lei” și nu recunoaște „nimic” ca zero (vezi C30)."}
+}

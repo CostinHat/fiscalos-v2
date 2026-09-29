@@ -174,7 +174,7 @@ def construieste():
     A("")
     A("## Cifra principală: greșelile de fond rămase (decizia 8)")
     A("")
-    A("**%d** răspunsuri greșite pe fond, din %d GREȘIT ale comparatorului (lectura mea, întrebare cu "
+    A("Greșeli de fond: **%d**, din %d GREȘIT ale comparatorului (lectura mea, întrebare cu "
       "întrebare, de verificat de om; lista completă mai jos). Separarea mecanică a celor %d GREȘIT: "
       "faptul principal al cheii lipsește/e altul — %d (%s); faptul e corect, articolul diferă — %d (%s)."
       % (len(de_fond), sn["GRESIT"], sn["GRESIT"], len(fapt_gresit), ", ".join(fapt_gresit) or "—",
@@ -283,6 +283,10 @@ def construieste():
         p = _j(prob)
         A("| Proba de cost: %d întrebări (%s) | %.1f s | $%.4f |"
           % (p["n"], ", ".join(r["id"] for r in p["raspunsuri"]), p["secunde_total"], p["cost_usd"]))
+    A("| Prima rulare, oprită de creditul API epuizat după 14 întrebări (răspunsuri pierdute: se salvau "
+      "numai la final; de atunci rularea e reluabilă) | — | $2.6603 |")
+    A("| Două apeluri de control al creditului (unul refuzat, unul de 8+5 tokeni) | — | ~$0.0002 |")
+    A("| Măsurarea C33, fără apel (`masoara_C33.py`) | — | $0 |")
     for k, v in json.load(open(os.path.join(_RAD, "fiscalos", "durate_v5.json"), encoding="utf-8")).items():
         A("| %s | %.1f s | $0 |" % (k, v))
     A("| Motorul lexical, referință (index + 50 de întrebări) | %.1f s | $0 |" % lex.get("secunde_total", 0))

@@ -1,41 +1,51 @@
-Q-TVA-01  RASPUNS          pasi=3  $0.0508 Cota standard de TVA este 21%, aplicată asupra bazei de impozitare pen
-Q-TVA-02  RASPUNS          pasi=4  $0.0888 Plafonul este de 395.000 lei cifră de afaceri anuală, declarată sau re
-Q-TVA-03  RASPUNS          pasi=4  $0.1649 Trebuie să solicite înregistrarea în scopuri de TVA cel târziu la data
-Q-TVA-04  RASPUNS          pasi=14 $0.3902 Perioada fiscală în 2026 este trimestrul calendaristic: persoana nu a 
-Q-TVA-05  RASPUNS          pasi=4  $0.1244 Nu. Livrarea utilajului (activ fix corporal) nu se include în cifra de
-Q-TVA-06  RASPUNS          pasi=7  $0.1347 Nu. Declarația recapitulativă (D390) se depune lunar, până la data de 
-Q-TVA-07  NU_POT_RASPUNDE  pasi=10 $0.2363 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
-Q-TVA-08  RASPUNS          pasi=6  $0.1369 Dreptul de deducere este limitat la 50% din TVA aferentă achiziției: l
-Q-TVA-09  RASPUNS          pasi=6  $0.1274 TVA colectată în total: 130 lei, adică 88 lei pentru mâncare (cota red
-Q-TVA-10  NU_POT_RASPUNDE  pasi=4  $0.0966 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: dacă ve
-Q-PRF-01  NU_POT_RASPUNDE  pasi=15 $0.3409 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
-Q-PRF-02  NU_POT_RASPUNDE  pasi=9  $0.1576 VERIFICAREA MECANICA a respins propunerea modelului: cifra '31' din ra
-Q-PRF-03  RASPUNS          pasi=12 $0.3315 Declarația anuală privind impozitul pe profit (formularul 101) pentru 
-Q-PRF-04  RASPUNS          pasi=10 $0.2793 Societatea datorează impozit pe profit la nivelul impozitului minim pe
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/costin/fiscalos/fiscalos/navigare.py", line 651, in <module>
-    r = ruleaza(dest, ids or None)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/fiscalos/navigare.py", line 621, in ruleaza
-    r = raspunde(q, idx, rel, client, sis)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/fiscalos/navigare.py", line 510, in raspunde
-    r = _apel(client, sis or sistem(idx), messages)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/fiscalos/navigare.py", line 487, in _apel
-    return client.beta.messages.create(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
-    return self._post(
-           ^^^^^^^^^^^
-  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
-    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
-    raise self._make_status_error_from_response(response) from None
-anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfWLSzWA3JYek28htRAxd'}
+Q-TVA-01  RASPUNS          pasi=3  $0.0937 Cota standard de TVA este 21%, aplicabilă bazei de impozitare pentru o
+Q-TVA-02  RASPUNS          pasi=4  $0.0840 Plafonul este de 395.000 lei cifră de afaceri anuală, declarată sau re
+Q-TVA-03  RASPUNS          pasi=4  $0.1579 Trebuie să solicite înregistrarea în scopuri de TVA cel târziu la data
+Q-TVA-04  RASPUNS          pasi=12 $0.3676 Perioada fiscală în 2026 este trimestrul calendaristic, atât timp cât 
+Q-TVA-05  RASPUNS          pasi=6  $0.1358 Nu. Livrarea utilajului (activ corporal fix) nu se cuprinde în cifra d
+Q-TVA-06  NU_POT_RASPUNDE  pasi=6  $0.1828 C23: structura răspunsului final a fost invalidă de două ori (marcaj d
+Q-TVA-07  RASPUNS          pasi=7  $0.1595 Da, declarația 394 se depune și pentru o lună fără operațiuni (se bife
+Q-TVA-08  RASPUNS          pasi=4  $0.1396 Dreptul de deducere este limitat la 50% din TVA aferentă achiziției. T
+Q-TVA-09  NU_POT_RASPUNDE  pasi=6  $0.1948 VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verb
+Q-TVA-10  NU_POT_RASPUNDE  pasi=4  $0.1060 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: dacă ve
+Q-PRF-01  RASPUNS          pasi=15 $0.3284 Cota este de 1% — Codul fiscal prevede o cotă unică pentru veniturile 
+Q-PRF-02  RASPUNS          pasi=14 $0.2389 Plafonul este echivalentul în lei a 100.000 euro. Se verifică pe baza 
+Q-PRF-03  RASPUNS          pasi=8  $0.1958 Declarația anuală privind impozitul pe profit (D101) pentru anul fisca
+Q-PRF-04  RASPUNS          pasi=10 $0.2945 Societatea datorează impozit pe profit la nivelul impozitului minim pe
+Q-PRF-05  RASPUNS          pasi=10 $0.2189 Din veniturile trimestrului I se scad dividendele primite de la o pers
+Q-PRF-06  NU_POT_RASPUNDE  pasi=6  $0.2172 VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verb
+Q-PRF-07  RASPUNS          pasi=3  $0.0849 Cheltuielile de protocol sunt deductibile în limita a 2% aplicată asup
+Q-PRF-08  RASPUNS          pasi=8  $0.1496 Condiția de a avea cel puțin un salariat trebuie îndeplinită în termen
+Q-PRF-09  RASPUNS          pasi=16 $0.4844 Pentru trimestrul I 2026 nu se aplică regula generală a pătrimii din i
+Q-PRF-10  NU_POT_RASPUNDE  pasi=9  $0.2028 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
+Q-SAL-01  RASPUNS          pasi=5  $0.0882 Cota contribuției asiguratorii pentru muncă (CAM) este de 2,25%, aplic
+Q-SAL-02  NU_POT_RASPUNDE  pasi=10 $0.3253 C23: structura răspunsului final a fost invalidă de două ori (marcaj d
+Q-SAL-03  RASPUNS          pasi=19 $0.6563 CAS reținut salariatului = 2.500 lei; CASS reținută = 1.000 lei; baza 
+Q-SAL-04  NU_POT_RASPUNDE  pasi=19 $0.4588 VERIFICAREA CALCULULUI a respins propunerea: operand nenumeric: '200 l
+Q-SAL-05  RASPUNS          pasi=13 $0.2499 Nu. Tichetele de masă nu se iau în calcul la verificarea plafonului de
+Q-SAL-06  RASPUNS          pasi=12 $0.3057 CAS datorat pentru septembrie 2026 este 1.031,25 lei (înainte de rotun
+Q-SAL-07  RASPUNS          pasi=12 $0.2345 Se aplică procentul de 65% asupra bazei de calcul, întrucât certificat
+Q-SAL-08  RASPUNS          pasi=4  $0.1227 Procentul se stabilește pe total episod de boală: zilele din certifica
+Q-SAL-09  NU_POT_RASPUNDE  pasi=10 $0.2286 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Numărul
+Q-SAL-10  RASPUNS          pasi=15 $0.2715 Munca suplimentară trebuie compensată prin ore libere plătite în următ
+Q-CPF-01  RASPUNS          pasi=4  $0.0854 Dobânda este de 0,02% pentru fiecare zi de întârziere, iar penalitatea
+Q-CPF-02  RASPUNS          pasi=10 $0.1815 Se datorează dobânzi de întârziere de 0,02% pentru fiecare zi de întâr
+Q-CPF-03  NU_POT_RASPUNDE  pasi=15 $0.3095 VERIFICAREA MECANICA a respins propunerea modelului: cifra '26.07.2025
+Q-CPF-04  RASPUNS          pasi=4  $0.0896 Termenul de prescripție a dreptului organului fiscal de a stabili crea
+Q-CPF-05  RASPUNS          pasi=6  $0.0909 Contestația se depune în termen de 45 de zile de la data comunicării d
+Q-CPF-06  RASPUNS          pasi=9  $0.1514 Regula generală: cererea (decontul cu opțiune de rambursare) se soluți
+Q-CPF-07  RASPUNS          pasi=7  $0.2177 Durata inspecției fiscale se stabilește de organul de inspecție în fun
+Q-CPF-08  NU_POT_RASPUNDE  pasi=8  $0.2352 VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verb
+Q-CPF-09  RASPUNS          pasi=5  $0.0909 Nu datorează nimic: pentru sumele datorate cu titlu de amenzi de orice
+Q-CPF-10  RASPUNS          pasi=11 $0.2249 Depunerea cu întârziere a decontului de TVA (formularul 300) este cont
+Q-CTB-01  RASPUNS          pasi=5  $0.0915 Valoarea fiscală la data intrării în patrimoniu trebuie să fie egală s
+Q-CTB-02  RASPUNS          pasi=6  $0.1213 Nu. Pentru mijloacele fixe cu valoare fiscală de intrare cuprinsă într
+Q-CTB-03  RASPUNS          pasi=4  $0.1035 Pentru primul an de utilizare, amortizarea fiscală nu poate depăși 65%
+Q-CTB-04  NU_POT_RASPUNDE  pasi=3  $0.0824 VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verb
+Q-CTB-05  RASPUNS          pasi=5  $0.0914 Eroarea fiind aferentă unui exercițiu financiar precedent (2024), core
+Q-CTB-06  RASPUNS          pasi=3  $0.0599 Nu. Pentru pierderile viitoare din exploatare estimate pentru 2027 nu 
+Q-CTB-07  RASPUNS          pasi=5  $0.1186 Cota de impozit pe dividende este 16%, deci se reține un impozit de 8.
+Q-CTB-08  RASPUNS          pasi=4  $0.0821 Nu. Pentru dividendele distribuite în baza situațiilor financiare inte
+Q-CTB-09  NU_POT_RASPUNDE  pasi=19 $0.3482 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
+Q-CTB-10  NU_POT_RASPUNDE  pasi=7  $0.1246 VERIFICAREA MECANICA a respins propunerea modelului: C17: atomul legea
+navigare: 37/50 raspunse | respinse 9 | incomplete 2 | pasi medii 8.3 | {'intrare': 630, 'iesire': 200974, 'cache_scriere': 474478, 'cache_citire': 3772373} | $9.8792 | 2938 s

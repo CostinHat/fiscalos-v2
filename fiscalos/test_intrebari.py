@@ -116,7 +116,8 @@ def _verifica_semantic(r, c):
             assert x["verificare"]["trece"], x["id"]
             for a in x["argument"]:
                 assert " ".join(a["verbatim"].split()) in " ".join(c.dupa_id[a["atom"]]["text"].split())
-        assert x.get("declaratie"), x["id"]            # C5
+        # C5; o abtinere C23/C29 nu are declaratie: iesirea modelului a fost respinsa sau n-a existat
+        assert x.get("declaratie") or x.get("tip_abtinere") in ("C23", "C29"), x["id"]
     assert n > 0
 
 
@@ -162,3 +163,18 @@ def test_C28_bucata_fara_act_continua_actul_anterior():
     from fiscalos import comparatie
     t = comparatie._temeiuri_cheie("Cod fiscal art. 291 alin. (1); art. 298 alin. (1)-(3)")
     assert ("cf", "298") in t and (None, "298") not in t
+
+
+def test_raspunsurile_navigarii_au_trecut_verificarea_pe_corpusul_lor():
+    """v4 pe atomizarea de la d35c21a (inainte de C26), v5 pe corpusul de acum."""
+    from fiscalos import potrivire
+    f = os.path.join(_RAD, "intrebari", "v4", "raspunsuri_navigare.json")
+    _verifica_semantic(json.load(open(f, encoding="utf-8")), _corpus_la_commit("d35c21a"))
+    f = os.path.join(_RAD, "intrebari", "v5", "raspunsuri_navigare.json")
+    r = json.load(open(f, encoding="utf-8"))
+    _verifica_semantic(r, potrivire.Corpus())
+    for x in r["raspunsuri"]:
+        if x["stare"] == "RASPUNS":                      # C24 + C23: niciun raspuns gol
+            assert len(x["raspuns"].split("  [")[0].strip()) >= 2, x["id"]
+            assert x["data_referinta"] in [d[0] for d in x["date_din_intrebare"]] or \
+                (not x["date_din_intrebare"] and x["data_referinta"] == "2026-09-28"), x["id"]   # C27

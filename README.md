@@ -118,6 +118,25 @@ venv/bin/python -m fiscalos.navigare [Q-ID ...]   # stratul de navigare (apeluri
 python3 -m fiscalos.raport_intrebari_v4
 ```
 
+## Pasul 6 — deciziile C23–C29 (`intrebari/v5/`, `propuneri/v6/`)
+
+Structura răspunsului final validată (C23), „răspuns gol" verificat întotdeauna (C24), operanzi
+FAPT_CAZ / VALOARE_LEGALĂ (C25), anexele ca structură proprie în atomizare (C26), data de referință
+pentru faptul întrebat (C27), comparatorul reparat și calculul afișat pas cu pas (C28), 20 de pași (C29).
+
+| Motor (scor INDICATIV) | CORECT | GREȘIT | NU POT | Greșeli de fond | Cost |
+|---|---|---|---|---|---|
+| Navigare v5 | 34 | 3 | 13 | 1 | $9,88 |
+| Navigare v4 (C28 + C24) | 20 | 12 | 18 | — | $7,86 |
+
+Deciziile deschise (C30–C33) sunt în `intrebari/v5/RAPORT.md`, secțiunea 0.
+
+```sh
+venv/bin/python -m fiscalos.navigare          # reluabil: fiecare raspuns se salveaza imediat
+python3 -m fiscalos.raport_intrebari_v5
+python3 -m fiscalos.masoara_C33               # efectul C33, fara apel
+```
+
 ## Cum se rulează
 
 ```sh

@@ -1,0 +1,27 @@
+{
+ "afectate": [
+  "Q-TVA-09",
+  "Q-CPF-08",
+  "Q-CTB-04"
+ ],
+ "inainte": {
+  "CORECT": 34,
+  "GRESIT": 3,
+  "NU_POT": 13
+ },
+ "dupa": {
+  "CORECT": 36,
+  "GRESIT": 3,
+  "NU_POT": 11
+ },
+ "verdict_dupa": {
+  "Q-TVA-09": "CORECT",
+  "Q-CPF-08": "NU_POT",
+  "Q-CTB-04": "CORECT"
+ },
+ "motiv_dupa": {
+  "Q-TVA-09": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+  "Q-CPF-08": "VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '6' nu apare in niciun citat (C13: o valoare legala se dovedeste din atom, chiar daca e si in intrebare); valoarea legala '2024' nu",
+  "Q-CTB-04": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+ }
+}
