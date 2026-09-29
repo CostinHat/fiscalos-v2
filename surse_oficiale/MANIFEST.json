@@ -1438,11 +1438,145 @@
    "forma_de_baza": true,
    "articole_total": 52,
    "secunde": 0.4
+  },
+  "legea_196_2018_asociatii_proprietari_consolidat": {
+   "id_portal": "203233",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "legea_196_2018_asociatii_proprietari_consolidat__203233.html",
+     "id_portal": "203233",
+     "id_forma": "305357",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/203233",
+     "titlu": "LEGE 196 20/07/2018 - Portal Legislativ",
+     "consolidare": "19.12.2025",
+     "e_forma_curenta": true,
+     "articole": 222,
+     "octeti": 551029,
+     "sha256": "d136dd5a6f35f13a2cb7809b1303a40805a15b0f3728866420555cb3be2f90ed"
+    }
+   ],
+   "data_formei_consolidate": "19.12.2025",
+   "forma_de_baza": false,
+   "articole_total": 222,
+   "secunde": 1.0
+  },
+  "legea_273_2006_fin_publice_locale": {
+   "id_portal": "73527",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "legea_273_2006_fin_publice_locale__73527.html",
+     "id_portal": "73527",
+     "id_forma": "307021",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/73527",
+     "titlu": "LEGE 273 29/06/2006 - Portal Legislativ",
+     "consolidare": "25.02.2026",
+     "e_forma_curenta": true,
+     "articole": 227,
+     "octeti": 989704,
+     "sha256": "81319c48cf282c397d2e3f57bb243065e819064fb02382561359e9fb6a93eaa5"
+    }
+   ],
+   "data_formei_consolidate": "25.02.2026",
+   "forma_de_baza": false,
+   "articole_total": 227,
+   "secunde": 3.4
+  },
+  "legea_319_2006_consolidat": {
+   "id_portal": "73772",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "legea_319_2006_consolidat__73772.html",
+     "id_portal": "73772",
+     "id_forma": "244539",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/73772",
+     "titlu": "LEGE 319 14/07/2006 - Portal Legislativ",
+     "consolidare": "25.07.2021",
+     "e_forma_curenta": true,
+     "articole": 111,
+     "octeti": 326170,
+     "sha256": "159bc8c51f4951f0135fedee36e8579f6e57ce0116076a695f9e6111046236fe"
+    }
+   ],
+   "data_formei_consolidate": "25.07.2021",
+   "forma_de_baza": false,
+   "articole_total": 111,
+   "secunde": 2.9
+  },
+  "oug_41_2022": {
+   "id_portal": "253801",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "oug_41_2022__253801.html",
+     "id_portal": "253801",
+     "id_forma": "296233",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/253801",
+     "titlu": "ORD DE URGENTA 41 08/04/2022 - Portal Legislativ",
+     "consolidare": "24.04.2025",
+     "e_forma_curenta": true,
+     "articole": 115,
+     "octeti": 216227,
+     "sha256": "be1ab8da4bb0f0f22be5f61c2c087eaf658753c63c4a8d6b19f7ec2292ef2efb"
+    }
+   ],
+   "data_formei_consolidate": "24.04.2025",
+   "forma_de_baza": false,
+   "articole_total": 115,
+   "secunde": 3.1
+  },
+  "legea_114_1996_locuinte_consolidat": {
+   "id_portal": "8597",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "legea_114_1996_locuinte_consolidat__8597.html",
+     "id_portal": "8597",
+     "id_forma": "257270",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/8597",
+     "titlu": "LEGE 114 11/10/1996 - Portal Legislativ",
+     "consolidare": "30.07.2022",
+     "e_forma_curenta": true,
+     "articole": 182,
+     "octeti": 315502,
+     "sha256": "c4110d22fa197432193ef16d1a9b0828877a940fa04eab373b1cafc5ff367ac5"
+    }
+   ],
+   "data_formei_consolidate": "30.07.2022",
+   "forma_de_baza": false,
+   "articole_total": 182,
+   "secunde": 1.5
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
+   "id_portal": "127831",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate__127831.html",
+     "id_portal": "127831",
+     "id_forma": "254082",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/127831",
+     "titlu": "LEGE 52 15/04/2011 - Portal Legislativ",
+     "consolidare": "02.05.2022",
+     "e_forma_curenta": true,
+     "articole": 109,
+     "octeti": 261258,
+     "sha256": "41ec025e7504c5d7f9fd72ffcfb97960b26e1b785a2af7461243a9e78e31f189"
+    }
+   ],
+   "data_formei_consolidate": "02.05.2022",
+   "forma_de_baza": false,
+   "articole_total": 109,
+   "secunde": 2.9
   }
  },
  "adaugiri": [
   "2026-09-29T09:06:46",
   "2026-09-29T09:23:15",
-  "2026-09-29T10:55:24"
+  "2026-09-29T10:55:24",
+  "2026-09-29T23:03:01",
+  "2026-09-29T23:03:48"
  ]
 }

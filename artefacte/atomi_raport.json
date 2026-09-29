@@ -508,16 +508,15 @@
    "structura": "articole"
   },
   "hg_1_2016_norme_cod_fiscal": {
-   "abrogati": 61,
-   "cu_valabilitate": 481,
+   "abrogati": 1,
+   "cu_valabilitate": 428,
    "fisier": "artefacte/atomi/hg_1_2016_norme_cod_fiscal.jsonl",
-   "n": 4205,
+   "n": 637,
    "niveluri": {
-    "alineat": 2283,
-    "anexa": 55,
-    "articol": 19,
-    "litera": 1148,
-    "punct": 700
+    "alineat": 448,
+    "articol": 20,
+    "litera": 15,
+    "punct": 154
    },
    "structura": "articole"
   },
@@ -678,6 +677,16 @@
    },
    "structura": "fragmente"
   },
+  "legea_114_1996_locuinte_consolidat": {
+   "abrogati": 1,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/legea_114_1996_locuinte_consolidat.jsonl",
+   "n": 1,
+   "niveluri": {
+    "articol": 1
+   },
+   "structura": "articole"
+  },
   "legea_125_2006_rambursarea_ratelor_capital_cota_parte": {
    "abrogati": 0,
    "cu_valabilitate": 0,
@@ -820,6 +829,26 @@
    },
    "structura": "articole"
   },
+  "legea_180_2002_aprobare_og_2_2001_contraventii_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 0,
+   "fisier": "artefacte/atomi/legea_180_2002_aprobare_og_2_2001_contraventii_consolidat.jsonl",
+   "n": 58,
+   "niveluri": {
+    "fragment": 58
+   },
+   "structura": "fragmente"
+  },
+  "legea_196_2018_asociatii_proprietari_consolidat": {
+   "abrogati": 0,
+   "cu_valabilitate": 1,
+   "fisier": "artefacte/atomi/legea_196_2018_asociatii_proprietari_consolidat.jsonl",
+   "n": 18,
+   "niveluri": {
+    "articol": 18
+   },
+   "structura": "articole"
+  },
   "legea_1_2020": {
    "abrogati": 0,
    "cu_valabilitate": 9,
@@ -930,13 +959,14 @@
   },
   "legea_273_2006_fin_publice_locale": {
    "abrogati": 0,
-   "cu_valabilitate": 0,
+   "cu_valabilitate": 100,
    "fisier": "artefacte/atomi/legea_273_2006_fin_publice_locale.jsonl",
-   "n": 170,
+   "n": 126,
    "niveluri": {
+    "alineat": 105,
     "anexa": 2,
-    "litera": 132,
-    "punct": 36
+    "articol": 10,
+    "litera": 9
    },
    "structura": "articole"
   },
@@ -990,14 +1020,13 @@
    "structura": "articole"
   },
   "legea_319_2006_consolidat": {
-   "abrogati": 2,
-   "cu_valabilitate": 0,
+   "abrogati": 0,
+   "cu_valabilitate": 3,
    "fisier": "artefacte/atomi/legea_319_2006_consolidat.jsonl",
-   "n": 308,
+   "n": 16,
    "niveluri": {
-    "alineat": 104,
-    "articol": 65,
-    "litera": 139
+    "alineat": 4,
+    "articol": 12
    },
    "structura": "articole"
   },
@@ -1049,13 +1078,13 @@
   },
   "legea_346_2002_consolidat": {
    "abrogati": 0,
-   "cu_valabilitate": 0,
+   "cu_valabilitate": 44,
    "fisier": "artefacte/atomi/legea_346_2002_consolidat.jsonl",
-   "n": 368,
+   "n": 57,
    "niveluri": {
-    "alineat": 160,
-    "articol": 135,
-    "litera": 73
+    "alineat": 35,
+    "articol": 14,
+    "litera": 8
    },
    "structura": "articole"
   },
@@ -1118,15 +1147,15 @@
   },
   "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
    "abrogati": 0,
-   "cu_valabilitate": 3,
+   "cu_valabilitate": 16,
    "fisier": "artefacte/atomi/legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.jsonl",
-   "n": 116,
+   "n": 16,
    "niveluri": {
-    "alineat": 35,
-    "anexa": 2,
-    "articol": 18,
-    "litera": 45,
-    "punct": 16
+    "alineat": 12,
+    "anexa": 1,
+    "articol": 1,
+    "litera": 1,
+    "punct": 1
    },
    "structura": "articole"
   },
@@ -2716,14 +2745,12 @@
   },
   "oug_41_2022": {
    "abrogati": 0,
-   "cu_valabilitate": 0,
+   "cu_valabilitate": 13,
    "fisier": "artefacte/atomi/oug_41_2022.jsonl",
-   "n": 72,
+   "n": 13,
    "niveluri": {
-    "alineat": 30,
-    "articol": 19,
-    "litera": 11,
-    "punct": 12
+    "alineat": 12,
+    "articol": 1
    },
    "structura": "articole"
   },
@@ -3079,9 +3106,9 @@
    "structura": "fragmente"
   }
  },
- "facut_la": "2026-09-29T11:03:32",
- "n_acte": 269,
- "n_acte_pe_articole": 207,
- "n_acte_pe_fragmente": 62,
- "n_atomi": 49587
+ "facut_la": "2026-09-29T22:49:22",
+ "n_acte": 272,
+ "n_acte_pe_articole": 209,
+ "n_acte_pe_fragmente": 63,
+ "n_atomi": 45290
 }

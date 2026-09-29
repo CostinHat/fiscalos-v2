@@ -1,7 +1,7 @@
 {
  "_ce": "C31: rezolvarea actelor stricate spre sursa oficiala.",
- "facut_la": "2026-09-29T09:10:29",
- "secunde": 496.8,
+ "facut_la": "2026-09-29T23:03:53",
+ "secunde": 17.2,
  "acte": {
   "hg_1045_2018_norme_consolidat": {
    "stare": "adus",
@@ -306,6 +306,127 @@
    "id_portal": "305817",
    "titlu": "1. ORD DE URGENTA 89 23/12/2025",
    "motiv": "cautare tip 18, nr. 89, an 2025 -> 1. ORD DE URGENTA 89 23/12/2025"
+  },
+  "legea_114_1996_locuinte_consolidat": {
+   "stare": "adus",
+   "id_portal": "8597",
+   "titlu": "LEGE 114 11/10/1996 - Portal Legislativ",
+   "motiv": "C31, instantaneul de pe HEAD-ul iConta (85a811f6): C31: structura stricata in instantaneu (detector_structura)"
+  },
+  "legea_196_2018_asociatii_proprietari_consolidat": {
+   "stare": "adus",
+   "id_portal": "203233",
+   "titlu": "LEGE 196 20/07/2018 - Portal Legislativ",
+   "motiv": "C31, instantaneul de pe HEAD-ul iConta (85a811f6): C31: structura stricata in instantaneu (detector_structura)"
+  },
+  "legea_273_2006_fin_publice_locale": {
+   "stare": "adus",
+   "id_portal": "73527",
+   "titlu": "LEGE 273 29/06/2006 - Portal Legislativ",
+   "motiv": "C31, instantaneul de pe HEAD-ul iConta (85a811f6): C31: structura stricata in instantaneu (detector_structura)"
+  },
+  "legea_319_2006_consolidat": {
+   "stare": "adus",
+   "id_portal": "73772",
+   "titlu": "LEGE 319 14/07/2006 - Portal Legislativ",
+   "motiv": "C31, instantaneul de pe HEAD-ul iConta (85a811f6): C31: structura stricata in instantaneu (detector_structura)"
+  },
+  "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
+   "stare": "adus",
+   "id_portal": "127831",
+   "titlu": "LEGE 52 15/04/2011 - Portal Legislativ",
+   "motiv": "C31, instantaneul de pe HEAD-ul iConta (85a811f6): C31: structura stricata in instantaneu (detector_structura)"
+  },
+  "oug_41_2022": {
+   "stare": "adus",
+   "id_portal": "253801",
+   "titlu": "ORD DE URGENTA 41 08/04/2022 - Portal Legislativ",
+   "motiv": "C31, instantaneul de pe HEAD-ul iConta (85a811f6): C31: structura stricata in instantaneu (detector_structura)"
   }
- }
+ },
+ "rulari": [
+  {
+   "facut_la": "2026-09-29T09:10:29",
+   "secunde": 496.8,
+   "acte": [
+    "hg_1045_2018_norme_consolidat",
+    "hg_1074_2021",
+    "hg_1094_2025",
+    "hg_295_2025_reges_online_registru_salariati",
+    "hg_518_1995",
+    "hg_867_2015",
+    "hg_905_2017",
+    "legea_129_2019",
+    "legea_136_2020_consolidat",
+    "legea_141_2025_consolidat",
+    "legea_165_2018_anaf",
+    "legea_165_2018_mf_2024",
+    "legea_1_2020",
+    "legea_226_2023",
+    "legea_230_2007",
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor",
+    "legea_241_2005",
+    "legea_265_2022",
+    "legea_26_1990",
+    "legea_287_2009",
+    "legea_296_2020_consolidat",
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25",
+    "legea_31_1990_modif_L222_2023",
+    "legea_31_1990_societatile",
+    "legea_346_2002_consolidat",
+    "legea_448_2006_protectia_persoanelor_cu_handicap",
+    "legea_53_2003_codul_muncii",
+    "legea_72_2013",
+    "legea_82_1991_consolidat",
+    "legea_85_2014",
+    "legea_98_2016",
+    "og_13_2011",
+    "og_2_2001",
+    "og_39_2015",
+    "omfp_1802_2014_ordin_consolidat",
+    "omfp_1802_2014_reglementari_consolidat",
+    "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice",
+    "oms_15_2018_norme",
+    "ordin_1099_2016",
+    "ordin_2594_2015",
+    "ordin_3845_2015",
+    "ordin_3846_2015",
+    "ordin_878_2022",
+    "oug_115_2023_consolidat",
+    "oug_116_2023",
+    "oug_120_2021",
+    "oug_158_2005_consolidat",
+    "oug_28_1999",
+    "oug_44_2008",
+    "oug_70_2024_ro_etva_decont_precompletat",
+    "oug_89_2025"
+   ]
+  },
+  {
+   "facut_la": "2026-09-29T23:03:11",
+   "secunde": 42.7,
+   "acte": [
+    "legea_114_1996_locuinte_consolidat",
+    "legea_196_2018_asociatii_proprietari_consolidat",
+    "legea_273_2006_fin_publice_locale",
+    "legea_319_2006_consolidat",
+    "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate",
+    "oug_41_2022"
+   ]
+  },
+  {
+   "facut_la": "2026-09-29T23:03:53",
+   "secunde": 17.2,
+   "acte": [
+    "legea_114_1996_locuinte_consolidat",
+    "legea_196_2018_asociatii_proprietari_consolidat",
+    "legea_273_2006_fin_publice_locale",
+    "legea_319_2006_consolidat",
+    "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate",
+    "oug_41_2022"
+   ],
+   "nota": "a doua rulare a marcat gresit cele 4 acte abia aduse (\"exista deja\", cu trimitere la ele insele); inregistrarile au fost refacute din MANIFEST"
+  }
+ ]
 }

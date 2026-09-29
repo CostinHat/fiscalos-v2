@@ -475,6 +475,10 @@ def test_C41_deschide_arata_geamanul_din_acelasi_act():
     out = nav.deschide("cod_fiscal_227_2015_consolidat#art320/alin3")
     ids = [x["id"] for x in out["atomi_cu_text_aproape_identic"]]
     assert "cod_fiscal_227_2015_consolidat#art319/alin3" in ids, ids
+    # C54: numai id + temei, fara text; geamanul nu devine "vazut" (deci citabil) pana nu e deschis
+    assert all(set(x) == {"id", "temei"} for x in out["atomi_cu_text_aproape_identic"])
+    assert "cod_fiscal_227_2015_consolidat#art319/alin3" not in nav.vazuti
+    nav.deschide("cod_fiscal_227_2015_consolidat#art319/alin3")
     assert "cod_fiscal_227_2015_consolidat#art319/alin3" in nav.vazuti
 
 
@@ -573,3 +577,59 @@ def test_C52_o_tura_de_reparatie_arata_cifrele_si_reverifica_totul():
     assert r["reparatie_C52"]["cifre"] == ["2.100"] and len(cl.cereri) == 4
     assert any(m["role"] == "user" and isinstance(m["content"], str) and "„2.100”" in m["content"]
                for m in cl.cereri[3]["messages"])
+
+
+# ── C41 ca avertisment (decizia dupa setul 3) ───────────────────────────────────────────────────
+def test_C41_geamanul_nejustificat_al_atomului_decisiv_e_avertisment_nu_respingere():
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    nav = navigare.Navigator(idx, idx.rel, "2026-09-28")
+    nav.deschide("cod_fiscal_227_2015_consolidat#art320/alin3")
+    a = idx.corp.dupa_id["cod_fiscal_227_2015_consolidat#art320/alin3"]
+    frag = "trebuie să emită o autofactură în vederea ajustării bazei de impozitare și a taxei deductibile"
+    assert frag in a["text"]
+    final = {"stare": "RASPUNS", "declaratie": "La data de referință 28.09.2026.",
+             "raspuns": "Beneficiarul emite o autofactură.", "citate": [{"atom": a["id"], "fragment": frag}],
+             "lipsa": [], "motiv": "", "derogari_tratate": [], "calcule": [], "alegeri_temei": [],
+             "data_referinta": "2026-09-28", "data_referinta_motiv": "ziua întrebării"}
+    baza = {"id": "Q", "tip": "REGULA", "intrebare": "Ce face beneficiarul?", "date_din_intrebare": [], "strat": "t"}
+    rez = navigare.verifica_propunerea(final, baza, {"intrebare": baza["intrebare"]}, nav, ["2026-09-28"],
+                                       "2026-09-28", {}, "")
+    assert rez["stare"] == "RASPUNS", rez.get("motiv")
+    assert any("art319/alin3" in g for g in rez["avertismente"]) and "avertisment C41" in rez["raspuns"]
+
+
+# ── C55: valabilitatea operandului legal ────────────────────────────────────────────────────────
+def _hg146():
+    from fiscalos import potrivire
+    a = potrivire.Corpus().dupa_id["hg_146_2026_salariu_minim#art1"]
+    return a, [{"nume": "sal", "formula": "s * 1", "operanzi": [
+        {"nume": "s", "valoare": "4.325", "eticheta": "VALOARE_LEGALA", "atom": a["id"],
+         "fragment": "la suma de 4.325 lei lunar", "data_aplicarii": ""}]}]
+
+
+def test_C55_valabilitatea_se_citeste_din_textul_atomului():
+    import datetime
+    a, _c = _hg146()
+    din, pana = navigare.valabilitate_valoare(a, "4.325")
+    assert din == datetime.date(2026, 7, 1) and pana is None
+
+
+def test_C55_Q3_SAL_07_salariul_de_4325_aplicat_inainte_de_1_iulie_e_respins():
+    a, c = _hg146()
+    c[0]["operanzi"][0]["data_aplicarii"] = "2026-01-01"
+    gr = navigare.evalueaza_calcule(c, {a["id"]: a}, "CASS pe 2026?")[1]
+    assert any(g.startswith("C55") and "01.07.2026" in g for g in gr), gr
+
+
+def test_C55_valoarea_in_vigoare_la_data_aplicarii_trece():
+    a, c = _hg146()
+    assert navigare.evalueaza_calcule(c, {a["id"]: a}, "Q", data_faptului="2026-09-28")[1] == []
+    assert any(g.startswith("C55") for g in navigare.evalueaza_calcule(c, {a["id"]: a}, "Q",
+                                                                       data_faptului="2026-03-31")[1])
+
+
+def test_C55_perioada_din_text():
+    import datetime
+    a = {"id": "x", "text": "plafonul de 5.000.000 lei, în perioada 1 martie 2026-31 decembrie 2026, iar de la 1 ianuarie 2027 ..."}
+    assert navigare.valabilitate_valoare(a, "5.000.000") == (datetime.date(2026, 3, 1), datetime.date(2026, 12, 31))

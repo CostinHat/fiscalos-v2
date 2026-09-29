@@ -438,13 +438,13 @@
    "text": "artefacte/strat_text/hg_1510_2024_actualizarea_denumirii_descrierii_tehnice_adresei.text"
   },
   "hg_1_2016_norme_cod_fiscal": {
-   "caractere": 2164902,
+   "caractere": 2335946,
    "din": "hg_1_2016_norme_cod_fiscal.txt",
    "forme_disponibile": [
     "hg_1_2016_norme_cod_fiscal.html",
     "hg_1_2016_norme_cod_fiscal.txt"
    ],
-   "randuri": 21772,
+   "randuri": 5874,
    "text": "artefacte/strat_text/hg_1_2016_norme_cod_fiscal.text"
   },
   "hg_2139_2004_catalog_clasificare_durate_mijloace_fixe": {
@@ -582,6 +582,16 @@
    "randuri": 102,
    "text": "artefacte/strat_text/lege_64_2026.text"
   },
+  "legea_114_1996_locuinte_consolidat": {
+   "caractere": 79289,
+   "din": "legea_114_1996_locuinte_consolidat.txt",
+   "forme_disponibile": [
+    "legea_114_1996_locuinte_consolidat.html",
+    "legea_114_1996_locuinte_consolidat.txt"
+   ],
+   "randuri": 743,
+   "text": "artefacte/strat_text/legea_114_1996_locuinte_consolidat.text"
+  },
   "legea_125_2006_rambursarea_ratelor_capital_cota_parte": {
    "caractere": 4274,
    "din": "legea_125_2006_rambursarea_ratelor_capital_cota_parte.txt",
@@ -699,6 +709,26 @@
    "randuri": 92,
    "text": "artefacte/strat_text/legea_175_2018_modificarea_completarea_291_2_legea.text"
   },
+  "legea_180_2002_aprobare_og_2_2001_contraventii_consolidat": {
+   "caractere": 9381,
+   "din": "legea_180_2002_aprobare_og_2_2001_contraventii_consolidat.txt",
+   "forme_disponibile": [
+    "legea_180_2002_aprobare_og_2_2001_contraventii_consolidat.html",
+    "legea_180_2002_aprobare_og_2_2001_contraventii_consolidat.txt"
+   ],
+   "randuri": 121,
+   "text": "artefacte/strat_text/legea_180_2002_aprobare_og_2_2001_contraventii_consolidat.text"
+  },
+  "legea_196_2018_asociatii_proprietari_consolidat": {
+   "caractere": 151462,
+   "din": "legea_196_2018_asociatii_proprietari_consolidat.txt",
+   "forme_disponibile": [
+    "legea_196_2018_asociatii_proprietari_consolidat.html",
+    "legea_196_2018_asociatii_proprietari_consolidat.txt"
+   ],
+   "randuri": 568,
+   "text": "artefacte/strat_text/legea_196_2018_asociatii_proprietari_consolidat.text"
+  },
   "legea_1_2020": {
    "caractere": 216914,
    "din": "legea_1_2020.html",
@@ -784,13 +814,13 @@
    "text": "artefacte/strat_text/legea_26_1990.text"
   },
   "legea_273_2006_fin_publice_locale": {
-   "caractere": 190923,
+   "caractere": 285202,
    "din": "legea_273_2006_fin_publice_locale.txt",
    "forme_disponibile": [
-    "legea_273_2006_fin_publice_locale.pdf",
+    "legea_273_2006_fin_publice_locale.html",
     "legea_273_2006_fin_publice_locale.txt"
    ],
-   "randuri": 2527,
+   "randuri": 1271,
    "text": "artefacte/strat_text/legea_273_2006_fin_publice_locale.text"
   },
   "legea_287_2009": {
@@ -833,13 +863,13 @@
    "text": "artefacte/strat_text/legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25.text"
   },
   "legea_319_2006_consolidat": {
-   "caractere": 60217,
+   "caractere": 64772,
    "din": "legea_319_2006_consolidat.txt",
    "forme_disponibile": [
     "legea_319_2006_consolidat.html",
     "legea_319_2006_consolidat.txt"
    ],
-   "randuri": 912,
+   "randuri": 390,
    "text": "artefacte/strat_text/legea_319_2006_consolidat.text"
   },
   "legea_31_1990_modif_L222_2023": {
@@ -883,13 +913,13 @@
    "text": "artefacte/strat_text/legea_32_1994_sponsorizarea.text"
   },
   "legea_346_2002_consolidat": {
-   "caractere": 81324,
+   "caractere": 94872,
    "din": "legea_346_2002_consolidat.txt",
    "forme_disponibile": [
     "legea_346_2002_consolidat.html",
     "legea_346_2002_consolidat.txt"
    ],
-   "randuri": 1226,
+   "randuri": 1018,
    "text": "artefacte/strat_text/legea_346_2002_consolidat.text"
   },
   "legea_358_2015_aprobarea": {
@@ -943,13 +973,13 @@
    "text": "artefacte/strat_text/legea_448_2006_protectia_persoanelor_cu_handicap.text"
   },
   "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
-   "caractere": 27096,
+   "caractere": 65587,
    "din": "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.txt",
    "forme_disponibile": [
     "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.html",
     "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.txt"
    ],
-   "randuri": 516,
+   "randuri": 702,
    "text": "artefacte/strat_text/legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate.text"
   },
   "legea_53_2003_codul_muncii": {
@@ -2255,13 +2285,13 @@
    "text": "artefacte/strat_text/oug_34_2024_consolidat.text"
   },
   "oug_41_2022": {
-   "caractere": 20528,
+   "caractere": 54212,
    "din": "oug_41_2022.txt",
    "forme_disponibile": [
-    "oug_41_2022.pdf",
+    "oug_41_2022.html",
     "oug_41_2022.txt"
    ],
-   "randuri": 299,
+   "randuri": 471,
    "text": "artefacte/strat_text/oug_41_2022.text"
   },
   "oug_44_2008": {
@@ -2582,8 +2612,8 @@
    "text": "artefacte/strat_text/structura_D311_2021_290121.text"
   }
  },
- "facut_la": "2026-09-28T17:47:26",
- "n_acte_cu_text": 269,
+ "facut_la": "2026-09-29T22:49:19",
+ "n_acte_cu_text": 272,
  "n_neextractibile": 4,
  "neextractibile": {
   "D112_XML_2026_0726_050826": {

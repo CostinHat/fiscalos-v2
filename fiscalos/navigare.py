@@ -84,7 +84,8 @@ face ceva) se calculează cu termen_efectiv și intră în răspuns ca {nume} �
 TEMEIUL ALĂTURAT (C41). Dacă printre atomii pe care i-ai văzut există unul cu text aproape identic cu \\
 un atom pe care îl citezi (altă condiție, același final), scrie în `alegeri_temei` de ce l-ai ales pe \\
 al tău: `atom` (cel citat), `alternativa` (celălalt), `conditie` = fragmentul literal din atomul tău care \\
-îi descrie subiectul/condiția și care NU e în alternativă. Fără această justificare, răspunsul e respins.
+îi descrie subiectul/condiția și care NU e în alternativă. `deschide` îți arată geamenii ca id + temei; \\
+deschide-i dacă ai nevoie de text. Un geamăn nejustificat al atomului decisiv apare ca avertisment.
 
 CONSECINȚA CUANTIFICATĂ (C43). Când legea cuantifică consecința faptului întrebat (cauțiune, amendă, \\
 prag, penalitate), răspunsul o dă — calculată, cu temeiul ei citat — chiar dacă întrebarea e de tip \\
@@ -108,15 +109,19 @@ chiar dacă întrebarea o repetă. Singurele constante permise fără sursă sun
 rezultatul unui calcul ca {nume}; codul îl evaluează, îl înlocuiește și afișează calculul pas cu pas. \\
 Un număr scris în litere în atom („cinci ani”, „o cincime”, „jumătate”) e operand valid cu `valoare` \\
 exact ca în atom („cinci”, „cincime”); la fel un ordinal („15-a”) sau o cifră cu unitate („60 de zile”) \\
-(C51). Un operand scris cu „%%” valorează deja fracțiunea (21%% = 0,21): nu-l mai împărți la 100 (C50).""" % MAX_PASI
+(C51). Un operand scris cu „%%” valorează deja fracțiunea (21%% = 0,21): nu-l mai împărți la 100 (C50). \\
+Fiecare VALOARE_LEGALA are `data_aplicarii` (AAAA-LL-ZZ): data la care legea cere valoarea pentru \\
+faptul întrebat (de ex. „salariul minim în vigoare la 1 ianuarie”), sau "" dacă e data de referință. \\
+Codul respinge o valoare care nu era în vigoare la acea dată (C55).""" % MAX_PASI
 
 _CALC = {"type": "array", "items": {"type": "object", "properties": {
     "nume": {"type": "string"}, "formula": {"type": "string"},
     "operanzi": {"type": "array", "items": {"type": "object", "properties": {
         "nume": {"type": "string"}, "valoare": {"type": "string"},
         "eticheta": {"type": "string", "enum": ["FAPT_CAZ", "VALOARE_LEGALA"]},
-        "atom": {"type": "string"}, "fragment": {"type": "string"}},
-        "required": ["nume", "valoare", "eticheta", "atom", "fragment"], "additionalProperties": False}}},
+        "atom": {"type": "string"}, "fragment": {"type": "string"}, "data_aplicarii": {"type": "string"}},
+        "required": ["nume", "valoare", "eticheta", "atom", "fragment", "data_aplicarii"],
+        "additionalProperties": False}}},
     "required": ["nume", "formula", "operanzi"], "additionalProperties": False}}
 SCHEMA = json.loads(json.dumps(semantic.SCHEMA))
 SCHEMA["properties"]["calcule"] = _CALC
@@ -244,9 +249,9 @@ class Navigator(object):
         iesiri = [e for e in self.rel.muchii if e["sursa"] == aid]
         # C41: GEMENII din acelasi act (text aproape identic, alt articol) se arata aici, ca modelul sa-i
         # vada si sa-si justifice alegerea; verificarea cere justificarea pentru orice geaman vazut
+        # C54: geamenii se arata NUMAI ca id + temei, fara text, si nu devin "vazuti": textul lor il
+        # primeste modelul doar daca il cere explicit (`deschide` pe id), ca sa-l poata cita
         gem = self.gemeni_in_act(a)
-        for y in gem:
-            self._vede(y)
         return {"id": aid, "temei": intrebari.temei_uman(a),
                 "valabil_din": a.get("valabil_din") or "nedovedit",
                 "sursa": self.corp.sursa_act.get(a["act"], {}).get("sursa"),
@@ -256,9 +261,7 @@ class Navigator(object):
                 "copii": [{"id": x["id"], "inceput": " ".join(x["text"].split())[:90]} for x in copii[:40]],
                 "deroga_sau_modifica_acest_atom": [
                     {"id": e["sursa"], "fel": e["fel"], "fragment": e["fragment"][:200]} for e in intrari],
-                "atomi_cu_text_aproape_identic": [
-                    {"id": y["id"], "temei": intrebari.temei_uman(y), "inceput": " ".join(y["text"].split())[:200]}
-                    for y in gem],
+                "atomi_cu_text_aproape_identic": [{"id": y["id"], "temei": intrebari.temei_uman(y)} for y in gem],
                 "acest_atom_deroga_de_la": [
                     {"tinta": "%s#art%s%s" % (e["tinta_act"], e["tinta_art"],
                                               "/alin%s" % e["tinta_alin"] if e["tinta_alin"] else ""),
@@ -577,7 +580,40 @@ class Calendar(object):
         return x, expl + ("; " + "; ".join(decl + decl2) if decl else "")
 
 
-def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
+# ── C55: valabilitatea unei valori legale, din nota atomului si din textul lui ────────────────────
+_LUNI_V = {"ianuarie": 1, "februarie": 2, "martie": 3, "aprilie": 4, "mai": 5, "iunie": 6, "iulie": 7,
+           "august": 8, "septembrie": 9, "octombrie": 10, "noiembrie": 11, "decembrie": 12}
+_DATA_TEXT = r"(?:(\d{1,2})\s+(%s)\s+(\d{4})|(\d{1,2})\.(\d{1,2})\.(\d{4}))" % "|".join(_LUNI_V)
+
+
+def _data_din(m, k=0):
+    g = m.groups()[k:k + 6]
+    if g[0]:
+        return datetime.date(int(g[2]), _LUNI_V[g[1]], int(g[0]))
+    return datetime.date(int(g[5]), int(g[4]), int(g[3]))
+
+
+def valabilitate_valoare(atom, valoare, fragment=""):
+    """(valabil_din, valabil_pana) pentru o valoare legala: nota de consolidare a atomului ("(la
+    DD-MM-YYYY, ...)") si textul din jurul valorii: "incepand cu (data de) D", "in perioada D1-D2" /
+    "pentru perioada D1-D2". Ce nu se gaseste ramane None (nu se inventeaza)."""
+    din = datetime.date.fromisoformat(atom["valabil_din"]) if atom.get("valabil_din") else None
+    pana = datetime.date.fromisoformat(atom["valabil_pana"]) if atom.get("valabil_pana") else None
+    t = potrivire.norm(atom["text"].split("⟦NOTĂ⟧")[0])
+    p = t.find(potrivire.norm(valoare)) if valoare else -1
+    # intai in jurul valorii; apoi la inceputul atomului, unde o fraza de valabilitate guverneaza tot atomul
+    # ("Incepand cu data de 1 iulie 2026, salariul ... la suma de 4.325 lei")
+    for zona in ([t[max(0, p - 220):p + 220]] if p >= 0 else []) + [t[:250]]:
+        m = re.search(r"(?:perioada|intervalul)\s+" + _DATA_TEXT + r"\s*[-–]\s*" + _DATA_TEXT, zona)
+        if m:
+            return max(filter(None, [din, _data_din(m, 0)])), _data_din(m, 6)
+        m = re.search(r"incepand cu(?: data de)?\s+" + _DATA_TEXT, zona)
+        if m:
+            return max(filter(None, [din, _data_din(m, 0)])), pana
+    return din, pana
+
+
+def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None, data_faptului=None):
     """(valori, incalcari, detalii). Fara model: sursa fiecarui operand verificata literal.
 
     C25: eticheta operandului decide sursa ceruta. FAPT_CAZ - valoarea trebuie sa apara LITERAL in
@@ -596,6 +632,21 @@ def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
             val = o["valoare"].strip()
             if o["eticheta"] == "VALOARE_LEGALA":
                 a = dupa_id.get(o["atom"])
+                # C55: valabilitatea valorii trebuie sa acopere data la care se aplica (declarata pe
+                # operand; altfel data de referinta a raspunsului)
+                if a is not None:
+                    din, pana = valabilitate_valoare(a, val, o.get("fragment", ""))
+                    try:
+                        cand = datetime.date.fromisoformat((o.get("data_aplicarii") or "").strip() or
+                                                           (data_faptului or ""))
+                    except ValueError:
+                        cand = None
+                    o["valabil_din"], o["valabil_pana"] = (din.isoformat() if din else None,
+                                                           pana.isoformat() if pana else None)
+                    if cand and ((din and cand < din) or (pana and cand > pana)):
+                        greseli.append("C55: operandul %s=%s (din %s) e valabil %s-%s, iar se aplica la %s"
+                                       % (o["nume"], val, o["atom"], din.strftime("%d.%m.%Y") if din else "…",
+                                          pana.strftime("%d.%m.%Y") if pana else "…", cand.strftime("%d.%m.%Y")))
                 if not o["atom"]:
                     greseli.append("operandul %s=%s e VALOARE_LEGALA fara atom" % (o["nume"], val))
                 elif a is None:
@@ -824,7 +875,7 @@ def geaman_relevant(a, y, ancora):
     return any(b.size >= 40 and b.a - 60 <= p <= b.a + b.size + 60 for b in sm.get_matching_blocks())
 
 
-def verifica_alegeri_temei(final, vazuti, decisivi=None):
+def verifica_alegeri_temei(final, vazuti, decisivi=None, gemeni_fn=None):
     """C41: pentru fiecare atom citat care are un geaman printre atomii vazuti, `alegeri_temei` trebuie sa
     contina justificarea: un fragment literal din atomul citat care NU e in geaman (conditia care ii
     deosebeste). Fara ea - abtinere."""
@@ -836,7 +887,7 @@ def verifica_alegeri_temei(final, vazuti, decisivi=None):
         a = vazuti.get(c)
         if a is None:
             continue
-        for y in gemeni(a, vazuti):
+        for y in (gemeni_fn(a) if gemeni_fn else gemeni(a, vazuti)):
             # un geaman citat si el e folosit, nu inlocuit (CAS art. 138 si CASS art. 156 in acelasi calcul)
             if y["id"] in citati or (decisivi is not None and not geaman_relevant(a, y, ancora)):
                 continue
@@ -846,7 +897,7 @@ def verifica_alegeri_temei(final, vazuti, decisivi=None):
                     f = semantic._n(al["conditie"])
                     ok = len(f) >= 15 and f in semantic._n(a["text"]) and f not in semantic._n(y["text"])
             if not ok:
-                gr.append("C41: atomul citat %s are un geaman printre atomii vazuti (%s) si alegerea nu e "
+                gr.append("C41: atomul citat %s are un geaman (%s) si alegerea nu e "
                           "justificata printr-o conditie literala care ii deosebeste" % (c, y["id"]))
     return gr
 
@@ -1096,7 +1147,8 @@ def verifica_propunerea(final, baza, q, nav, admise, vizibil, apel, traseu):
     # calculul, evaluat de cod
     if final.get("calcule") and final["stare"] == "RASPUNS":
         valori, greseli, detalii = evalueaza_calcule(final["calcule"], nav.vazuti, q["intrebare"],
-                                                     citati=[c["atom"] for c in final.get("citate") or []])
+                                                     citati=[c["atom"] for c in final.get("citate") or []],
+                                                     data_faptului=data_ref if data_ref in admise else None)
         rez["calcule"] = detalii
         if greseli:
             return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None,
@@ -1113,12 +1165,19 @@ def verifica_propunerea(final, baza, q, nav, admise, vizibil, apel, traseu):
         termene_ok = {d["rezultat"] for d in rez.get("calcule") or [] if "termen_efectiv" in d["formula"]}
         decisivi = atomi_decisivi(final, corp_raspuns, q["intrebare"], rez.get("calcule"))
         rez["atomi_decisivi"] = decisivi
-        gr = verifica_termene(corp_raspuns, q["intrebare"], termene_ok) + \
-            verifica_alegeri_temei(final, nav.vazuti, decisivi)
+        gr = verifica_termene(corp_raspuns, q["intrebare"], termene_ok)
         if gr:
             return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None,
                         verificare={"trece": False, "incalcari": rez["verificare"]["incalcari"] + gr},
-                        motiv="VERIFICAREA (C40/C41) a respins propunerea: " + "; ".join(gr))
+                        motiv="VERIFICAREA (C40) a respins propunerea: " + "; ".join(gr))
+        # C41 -> AVERTISMENT (decizia arhitectului, pe masurare: setul 3 - 0 greseli de fond prevenite,
+        # 9 raspunsuri corecte pierdute). Geamenii atomului decisiv, din tot actul lui, nejustificati: se
+        # scriu in raspuns si in raport; raspunsul nu se respinge.
+        av = verifica_alegeri_temei(final, nav.vazuti, decisivi, gemeni_fn=nav.gemeni_in_act)
+        if av:
+            rez["avertismente"] = [g.replace("C41: ", "C41 (avertisment): ", 1) for g in av]
+            rez["raspuns"] += "  [avertisment C41: temei cu geamăn nejustificat — %s]" % "; ".join(
+                sorted({re.search(r"\(([^)]+)\)", g).group(1) for g in av if re.search(r"\(([^)]+)\)", g)}))
     if rez["stare"] == "RASPUNS":
         d = datetime.date.fromisoformat(data_ref).strftime("%d.%m.%Y")
         rez["raspuns"] += "  [data de referință: %s — %s]" % (d, final.get("data_referinta_motiv") or "")

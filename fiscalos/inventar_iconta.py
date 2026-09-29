@@ -33,6 +33,8 @@ import re
 import time
 from collections import OrderedDict
 
+from fiscalos import iconta_head  # noqa: E402
+
 ICONTA = "/home/costin/iconta_nou"
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -112,10 +114,15 @@ def _nume_apel(f):
 
 
 def _arbore(rel):
-    cale = os.path.join(ICONTA, rel)
-    with open(cale, encoding="utf-8") as f:            # "r": citire, niciodata scriere
-        src = f.read()
+    # numai starea COMISA (git HEAD) - niciodata copia de lucru (decizia dupa pasul 10)
+    src = iconta_head.citeste(rel)
     return ast.parse(src), src.splitlines()
+
+
+def _module_core():
+    """Modulele .py din core/, asa cum sunt COMISE la HEAD: [(nume, sursa)]."""
+    return [(rel, iconta_head.citeste("core/" + rel)) for rel, _sha, _o in iconta_head.fisiere("core")
+            if "/" not in rel and rel.endswith(".py")]
 
 
 def _atribuiri_modul(rel):
@@ -308,15 +315,12 @@ def din_conturi():
     propunere; intra ca CERINTA pentru iConta (`conturi_nemarcate`), cu numarul lor.
     """
     folos, nemarcate = {}, {}
-    rad = os.path.join(ICONTA, "core")
-    for nume in sorted(os.listdir(rad)):
+    for nume, src_mod in sorted(_module_core()):
         if not nume.endswith(".py") or nume.startswith("test_") or nume.startswith("proba"):
             continue
-        cale = os.path.join(rad, nume)
         try:
-            with open(cale, encoding="utf-8") as f:
-                arb = ast.parse(f.read())
-        except (SyntaxError, OSError):
+            arb = ast.parse(src_mod)
+        except SyntaxError:
             continue
         marcate_aici = set()
         for n in ast.walk(arb):
@@ -427,18 +431,15 @@ def din_constante_nesursate():
     numerele de structura (0/1/-1/2/100), si tot ce nu sta pe o POZITIE DE VALOARE (vezi
     `_valori_literale`). Ce rămâne intra cu `temei_declarat = None`.
     """
-    rad = os.path.join(ICONTA, "core")
     structura = {0, 1, -1, 2, 100}
     par = []
-    for nume in sorted(os.listdir(rad)):
+    for nume, src in sorted(_module_core()):
         if not nume.endswith(".py") or nume.startswith("test_") or nume in ("common.py",
                                                                             "scan_constante.py"):
             continue
         try:
-            with open(os.path.join(rad, nume), encoding="utf-8") as f:
-                src = f.read()
             arb = ast.parse(src)
-        except (SyntaxError, OSError):
+        except SyntaxError:
             continue
         if "Temei(" in src:
             pass                      # modulul poate avea si sursate si nesursate: se filtreaza per nod
@@ -496,6 +497,7 @@ def inventariaza():
         "_ce": "OP5 inventarul parametrilor fiscali ai iConta, prin CITIRE (AST, fara import - un "
                "import ar scrie __pycache__ in arborele iConta, deci ar incalca CLAUDE.md §1).",
         "iconta": ICONTA,
+        "iconta_commit_git": iconta_head.commit(),
         "facut_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "n_parametri": len(unic), "pe_clasa": pe_clasa,
         "cu_temei_declarat": sum(1 for p in unic if p["temei_declarat"]),

@@ -64,6 +64,15 @@ def rezolva(p, act):
         hit = buni
         if not hit:
             return None, "niciun ordin %s/%s al emitentului asteptat" % (nr, an)
+    # o REPUBLICARE ("LEGE (R) 53 24/01/2003") e acelasi act ca forma initiala cu acelasi numar si aceeasi
+    # data - portalul duce ambele id-uri la aceeasi forma consolidata (masurat la Codul muncii: 41625 si
+    # 128646 -> forma 309239). Nu e ambiguitate: se pastreaza forma initiala.
+    if len(hit) > 1:
+        baza = [(i, t) for i, t in hit if "(R)" not in t]
+        if len(baza) == 1 and all(re.sub(r"\s*\(R\)", "", re.sub(r"^\d+\.\s*", "", t)) ==
+                                  re.sub(r"^\d+\.\s*", "", baza[0][1]) for _i, t in hit):
+            return baza[0], ("cautare tip %s, nr. %s, an %s -> %s (republicarea %s e acelasi act)"
+                             % (cod, nr, an, baza[0][1], [t for _i, t in hit if "(R)" in t]))
     if len({i for i, _t in hit}) > 1:
         # C37: nu se ghiceste - se identifica dupa CONTEXT. Antetul actului, asa cum il are instantaneul
         # ("ORDIN nr. 1.099 din 12 iulie 2016 pentru ... EMITENT MINISTERUL FINANTELOR PUBLICE"), da data
@@ -96,6 +105,10 @@ def ruleaza():
             continue
         if k in oficiale:
             for a in nume:
+                if a == oficiale[k]:
+                    # adus deja sub ACELASI nume: nu e o varianta; ramane semnalat numai daca atomizarea
+                    # oficiala nu l-a reparat - se raporteaza, nu se suprascrie rezolvarea lui
+                    continue
                 rez[a] = {"stare": "acelasi act exista deja in stratul oficial", "ca": oficiale[k]}
             continue
         canonic = sorted(nume, key=lambda a: ("consolidat" not in a, len(a)))[0]
@@ -109,11 +122,18 @@ def ruleaza():
         rez[canonic] = {"stare": "adus", "id_portal": hit[0], "titlu": hit[1], "motiv": motiv}
         acte.append((canonic, hit[0], "C31: structura stricata in instantaneu (detector_structura)"))
     surse_oficiale.aduce(acte, incremental=True)
+    # rezolvarile anterioare se PASTREAZA (actele aduse atunci nu mai sunt semnalate azi, tocmai pentru
+    # ca au fost aduse); rularea de acum le adauga pe ale ei
+    f_rez = os.path.join(surse_oficiale.DIR, "C31_rezolvare.json")
+    vechi = json.load(open(f_rez, encoding="utf-8")) if os.path.exists(f_rez) else {"acte": {}, "rulari": []}
+    toate = dict(vechi["acte"], **rez)
+    rulari = vechi.get("rulari", []) + [{"facut_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                                          "secunde": round(time.time() - t0, 1), "acte": sorted(rez)}]
     out = {"_ce": "C31: rezolvarea actelor stricate spre sursa oficiala.", "facut_la": time.strftime(
-        "%Y-%m-%dT%H:%M:%S"), "secunde": round(time.time() - t0, 1), "acte": rez}
+        "%Y-%m-%dT%H:%M:%S"), "secunde": round(time.time() - t0, 1), "acte": toate, "rulari": rulari}
     json.dump(out, open(os.path.join(surse_oficiale.DIR, "C31_rezolvare.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
-    return out
+    return dict(out, acte=rez)
 
 
 if __name__ == "__main__":

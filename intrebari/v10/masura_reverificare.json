@@ -1,0 +1,133 @@
+{
+ "set2": {
+  "inainte": {
+   "CORECT": 30,
+   "GRESIT": 5,
+   "NU_POT": 15
+  },
+  "dupa": {
+   "CORECT": 28,
+   "GRESIT": 4,
+   "NU_POT": 18
+  },
+  "schimbari": [
+   [
+    "Q2-PRF-05",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40) a respins propunerea: C40: termenul '25 iunie' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ],
+   [
+    "Q2-SAL-05",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40) a respins propunerea: C40: termenul '14.07.2026' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ],
+   [
+    "Q2-CTB-05",
+    "GRESIT",
+    "NU_POT",
+    "VERIFICAREA (C40) a respins propunerea: C40: termenul '31 mai' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie); C40: termenul '31 mai' nu vine din termen_efectiv (un termen calendaristic s"
+   ]
+  ]
+ },
+ "set3": {
+  "inainte": {
+   "CORECT": 18,
+   "GRESIT": 1,
+   "NU_POT": 31
+  },
+  "dupa": {
+   "CORECT": 28,
+   "GRESIT": 3,
+   "NU_POT": 19
+  },
+  "schimbari": [
+   [
+    "Q3-TVA-01",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-TVA-02",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-TVA-05",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-TVA-09",
+    "GRESIT",
+    "NU_POT",
+    "VERIFICAREA CALCULULUI a respins propunerea: C50: calculul tva imparte la 100 un operand scris cu % (cota), care valoreaza deja fractiunea"
+   ],
+   [
+    "Q3-PRF-02",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-PRF-04",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-SAL-02",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-SAL-07",
+    "NU_POT",
+    "GRESIT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-SAL-08",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CPF-03",
+    "NU_POT",
+    "GRESIT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CPF-08",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CTB-01",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CTB-03",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CTB-09",
+    "NU_POT",
+    "GRESIT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ]
+  ]
+ },
+ "secunde": 99.2
+}

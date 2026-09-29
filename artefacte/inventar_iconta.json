@@ -32,9 +32,10 @@
   "n_simboluri": 364
  },
  "cu_temei_declarat": 42,
- "facut_la": "2026-09-28T17:47:29",
+ "facut_la": "2026-09-29T22:49:38",
  "fara_temei_declarat": 105,
  "iconta": "/home/costin/iconta_nou",
+ "iconta_commit_git": "85a811f6fe23430224079d472d0db1f1b386523b",
  "n_parametri": 147,
  "parametri": [
   {
@@ -2228,5 +2229,5 @@
   "termen": 5
  },
  "probleme": [],
- "secunde": 1.55
+ "secunde": 8.84
 }

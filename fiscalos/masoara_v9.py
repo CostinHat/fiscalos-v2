@@ -12,6 +12,7 @@ import time
 from fiscalos import comparatie, intrebari, navigare
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOSAR = os.environ.get("FISCALOS_DOSAR", "v9")
 SETURI = {"set2": ("intrebari/final/raspunsuri_set2.json", "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"),
           "set3": ("intrebari/set3/raspunsuri_set3.json", "/home/costin/ghid_incoming/FiscalOS_intrebari_set3_50.csv")}
 
@@ -36,13 +37,13 @@ def reverifica(nume, idx):
         baza = {k: r[k] for k in ("id", "tip", "intrebare", "date_din_intrebare", "strat")}
         ies.append(navigare.verifica_propunerea(p, baza, Q[r["id"]], nav, admise, max(admise), r["apel"],
                                                 r.get("traseu", "")))
-    dest = os.path.join(_RAD, "intrebari", "v9", "reverificat_%s.json" % nume)
+    dest = os.path.join(_RAD, "intrebari", DOSAR, "reverificat_%s.json" % nume)
     json.dump(dict(d, raspunsuri=ies), open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
     return d, ies, dest, csv
 
 
 def masoara():
-    os.makedirs(os.path.join(_RAD, "intrebari", "v9"), exist_ok=True)
+    os.makedirs(os.path.join(_RAD, "intrebari", DOSAR), exist_ok=True)
     t0 = time.time()
     idx = intrebari.Index()
     rez = {}
@@ -56,7 +57,7 @@ def masoara():
         rez[nume] = {"inainte": inainte["scor_referinta_pe_fond"], "dupa": dupa["scor_referinta_pe_fond"],
                      "schimbari": [(i, A[i], B[i], (R[i].get("motiv") or "")[:220]) for i in A if A[i] != B[i]]}
     rez["secunde"] = round(time.time() - t0, 1)
-    json.dump(rez, open(os.path.join(_RAD, "intrebari", "v9", "masura_C49_C51.json"), "w", encoding="utf-8"),
+    json.dump(rez, open(os.path.join(_RAD, "intrebari", DOSAR, "masura_reverificare.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
     return rez
 

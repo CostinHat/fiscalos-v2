@@ -189,6 +189,13 @@ pentru cifrele respinse. Pe propunerile salvate ale setului 3: re-notare 24/1/25
 cele 9 răspunsuri corecte pierdute trec, Q3-TVA-09 e prins de C50. Corecție: la Q3-SAL-07, C41 nu prinsese
 greșeala. De decis: C54, C55, instantaneul iConta (modificat după inventar).
 
+## Pasul 11 — C41 ca avertisment, C54, C55, iConta din starea comisă (`intrebari/v10/`)
+
+FiscalOS citește iConta numai din git HEAD (`iconta_head.py`); instantaneul și inventarul refăcute de pe HEAD
+(propunerea v9: aceleași clasificări). Geamănul nejustificat e avertisment, nu respingere; `deschide` arată
+geamenii ca id + temei; operanzii legali poartă valabilitatea, iar una care nu acoperă data aplicării e
+respinsă. Re-notarea setului 3 pe propunerile salvate: 28/3/19 (oficial 18/1/31). De decis: C56.
+
 ## Cum se rulează
 
 ```sh

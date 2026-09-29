@@ -44,7 +44,7 @@
   "S3_articole_imbricate": 0,
   "S3_exemple": [],
   "sursa": "instantaneu iConta",
-  "categorie": "de adus din sursa oficiala",
+  "categorie": "varianta stricata, inlocuita de legea_165_2018_anaf (oficial) - pastrata numai pentru potrivirea iConta, scoasa din indexul motorului de intrebari",
   "modificator": false
  },
  "legea_31_1990_modif_L222_2023": {
@@ -60,7 +60,7 @@
   "S3_articole_imbricate": 0,
   "S3_exemple": [],
   "sursa": "instantaneu iConta",
-  "categorie": "de adus din sursa oficiala",
+  "categorie": "varianta stricata, inlocuita de legea_31_1990_societatile (oficial) - pastrata numai pentru potrivirea iConta, scoasa din indexul motorului de intrebari",
   "modificator": false
  },
  "omfp_1802_2014_ordin_consolidat": {
@@ -74,7 +74,7 @@
   "S3_articole_imbricate": 0,
   "S3_exemple": [],
   "sursa": "instantaneu iConta",
-  "categorie": "de adus din sursa oficiala",
+  "categorie": "varianta stricata, inlocuita de omfp_1802_2014 (oficial) - pastrata numai pentru potrivirea iConta, scoasa din indexul motorului de intrebari",
   "modificator": false
  },
  "omfp_1802_2014_reglementari_consolidat": {
@@ -94,22 +94,8 @@
   "S3_articole_imbricate": 0,
   "S3_exemple": [],
   "sursa": "instantaneu iConta",
-  "categorie": "de adus din sursa oficiala",
+  "categorie": "varianta stricata, inlocuita de omfp_1802_2014 (oficial) - pastrata numai pentru potrivirea iConta, scoasa din indexul motorului de intrebari",
   "modificator": true
- },
- "ordin_1099_2016": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 0,
-  "S1_exemple": [],
-  "S2_articole_recunoscute": 5,
-  "S2_cel_mai_mare_articol": 26,
-  "S2_acoperire": 0.192,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "instantaneu iConta",
-  "categorie": "de adus din sursa oficiala",
-  "modificator": false
  },
  "oug_158_2005_pre_L141": {
   "S4_articole_in_nota": 0,

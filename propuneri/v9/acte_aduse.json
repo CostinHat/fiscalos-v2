@@ -1,0 +1,1496 @@
+{
+ "_ce": "Consolidatele la zi aduse de FiscalOS din legislatie.just.ro (C12), cu provenienta, data formei consolidate si SHA256. Livrabil pentru iConta: le poate prelua in anaf_surse. Fisierele sunt in surse_oficiale/.",
+ "sursa": "https://legislatie.just.ro",
+ "adus_la": "2026-09-28T18:45:40",
+ "cum_se_ajunge_la_text": "Pentru actele mari, pagina actului de aprobare e un ciot cu o trimitere S_REF catre documentul care conţine codul/normele (DetaliiDocumentAfis/<id>). Raspunde limitei notate in PORTAL_IDS.json.",
+ "acte": [
+  {
+   "act_in_anaf_surse": "cod_fiscal_227_2015_consolidat",
+   "id_portal": "171280",
+   "de_ce": "C12",
+   "data_formei_consolidate": "08.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 6635,
+   "atomi_instantaneu": 6116,
+   "fisiere": [
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__171280.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/171280",
+     "id_portal": "171280",
+     "consolidare": "08.08.2026",
+     "sha256": "68f754b7cbfedf91387cd9c2c5a49b7f236de70cd5cde2577fca11ccc5212983",
+     "octeti": 74637,
+     "articole": 0
+    },
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__312601.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312601",
+     "id_portal": "312601",
+     "consolidare": "08.08.2026",
+     "sha256": "2393786755c97dc5af3274e832e27082bed0b6119dae0d47a6201756a1b765e0",
+     "octeti": 7625635,
+     "articole": 3137
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_70_2015_consolidat",
+   "id_portal": "167088",
+   "de_ce": "C12",
+   "data_formei_consolidate": "01.01.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 73,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "legea_70_2015_consolidat__167088.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/167088",
+     "id_portal": "167088",
+     "consolidare": "01.01.2026",
+     "sha256": "661b016484f74b5268da3172b1311754cb759ee5051f45a48479e7b808b6c49b",
+     "octeti": 156710,
+     "articole": 71
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "opanaf_3769_2015_d394_baza",
+   "id_portal": "174685",
+   "de_ce": "C12",
+   "data_formei_consolidate": "17.09.2025",
+   "folosit_de_FiscalOS": false,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 135,
+   "atomi_instantaneu": 118,
+   "fisiere": [
+    {
+     "fisier": "opanaf_3769_2015_d394_baza__174685.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174685",
+     "id_portal": "174685",
+     "consolidare": "17.09.2025",
+     "sha256": "1f65c2437853588890b7f092b8ce56ab6ea78d3f80337e476e139b9f8fae8d66",
+     "octeti": 266995,
+     "articole": 24
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_207_2015_consolidat",
+   "id_portal": "170005",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "data_formei_consolidate": "08.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 4470,
+   "atomi_instantaneu": 4242,
+   "fisiere": [
+    {
+     "fisier": "legea_207_2015_consolidat__170005.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/170005",
+     "id_portal": "170005",
+     "consolidare": "08.08.2026",
+     "sha256": "b8fe60746247260a6fac441551d9f78abb32030809e68c5599d7b644a46c0031",
+     "octeti": 60899,
+     "articole": 0
+    },
+    {
+     "fisier": "legea_207_2015_consolidat__312603.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/312603",
+     "id_portal": "312603",
+     "consolidare": "08.08.2026",
+     "sha256": "44e0c401e6b66ac962f8a413418eec7194130ec3d62972baf4ef9cab19eb9166",
+     "octeti": 4939890,
+     "articole": 1577
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_1_2016_norme_cod_fiscal",
+   "id_portal": "174822",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "data_formei_consolidate": "31.03.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 5843,
+   "atomi_instantaneu": 637,
+   "fisiere": [
+    {
+     "fisier": "hg_1_2016_norme_cod_fiscal__174822.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174822",
+     "id_portal": "174822",
+     "consolidare": "31.03.2026",
+     "sha256": "32b2634d6b380861ca6bf993b8c3b149cff84558ecc15ef4130e30d0756a3b2e",
+     "octeti": 64162,
+     "articole": 4
+    },
+    {
+     "fisier": "hg_1_2016_norme_cod_fiscal__307847.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/307847",
+     "id_portal": "307847",
+     "consolidare": "31.03.2026",
+     "sha256": "114e36ac8c52dae4a8d701c68f3c1a6bc8f8d0b3d9af1c76fc333a516e9d7cff",
+     "octeti": 6703467,
+     "articole": 0
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "omfp_1802_2014",
+   "id_portal": "164320",
+   "de_ce": "act de baza mare, fara consolidare la zi in corpus",
+   "data_formei_consolidate": "19.11.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 2649,
+   "atomi_instantaneu": 1899,
+   "fisiere": [
+    {
+     "fisier": "omfp_1802_2014__164320.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/164320",
+     "id_portal": "164320",
+     "consolidare": "19.11.2025",
+     "sha256": "0a4cd2b2d294708c306ae76943a42875f8c9ec1797302a25c7f472e75304881b",
+     "octeti": 88977,
+     "articole": 25
+    },
+    {
+     "fisier": "omfp_1802_2014__303279.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/303279",
+     "id_portal": "303279",
+     "consolidare": "19.11.2025",
+     "sha256": "8e1cc194188b278951b8acfd5e416b1bd0ca9a17508d9beb97e404725e1c533c",
+     "octeti": 4748261,
+     "articole": 53
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_1045_2018_norme_consolidat",
+   "id_portal": "209698",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "15.09.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 193,
+   "atomi_instantaneu": 182,
+   "fisiere": [
+    {
+     "fisier": "hg_1045_2018_norme_consolidat__209698.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/209698",
+     "id_portal": "209698",
+     "consolidare": "15.09.2026",
+     "sha256": "bd8e8212d39d25ef49c11409ed63faa0047d33fb64f21fee4037972dd54dc019",
+     "octeti": 70304,
+     "articole": 11
+    },
+    {
+     "fisier": "hg_1045_2018_norme_consolidat__314143.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/314143",
+     "id_portal": "314143",
+     "consolidare": "15.09.2026",
+     "sha256": "764463fd8d91f80439b94d09f887c627d9b3330a5a595ec6d6af941265016c55",
+     "octeti": 309967,
+     "articole": 120
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_1074_2021",
+   "id_portal": "247209",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "18.08.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 289,
+   "atomi_instantaneu": 24,
+   "fisiere": [
+    {
+     "fisier": "hg_1074_2021__247209.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/247209",
+     "id_portal": "247209",
+     "consolidare": "18.08.2025",
+     "sha256": "0ac7bafc0d1477e52b8e4928cd508031617ba711ee7ffd1a0484331c9253d470",
+     "octeti": 334029,
+     "articole": 105
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_1094_2025",
+   "id_portal": "305236",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "03.09.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 190,
+   "atomi_instantaneu": 25,
+   "fisiere": [
+    {
+     "fisier": "hg_1094_2025__305236.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/305236",
+     "id_portal": "305236",
+     "consolidare": "03.09.2026",
+     "sha256": "f61343fffedee5a3476fa632b0d20a111b7c160d647242a7ea82dee542f2643d",
+     "octeti": 283486,
+     "articole": 55
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_295_2025_reges_online_registru_salariati",
+   "id_portal": "295995",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "19.09.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 104,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "hg_295_2025_reges_online_registru_salariati__295995.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/295995",
+     "id_portal": "295995",
+     "consolidare": "19.09.2025",
+     "sha256": "0637cf8223df5172d2f43290ff4f82e890557a030952d6d232ed28b8a9f1637c",
+     "octeti": 138416,
+     "articole": 30
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_518_1995",
+   "id_portal": "7037",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "14.10.2024",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 115,
+   "atomi_instantaneu": 13,
+   "fisiere": [
+    {
+     "fisier": "hg_518_1995__7037.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/7037",
+     "id_portal": "7037",
+     "consolidare": "14.10.2024",
+     "sha256": "7333cc04b44a361af8fe68335b59beb8c61eec4cf0c38a903e43da575ae30a6b",
+     "octeti": 405272,
+     "articole": 57
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_867_2015",
+   "id_portal": "172757",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "07.12.2022",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 624,
+   "atomi_instantaneu": 13,
+   "fisiere": [
+    {
+     "fisier": "hg_867_2015__172757.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/172757",
+     "id_portal": "172757",
+     "consolidare": "07.12.2022",
+     "sha256": "b514a4e18206bb33b2bd1285903b8682bdc7ea39d712ea7f1fd3b3870ac411ad",
+     "octeti": 778480,
+     "articole": 115
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "hg_905_2017",
+   "id_portal": "195770",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "24.08.2018",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 104,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "hg_905_2017__195770.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/195770",
+     "id_portal": "195770",
+     "consolidare": "24.08.2018",
+     "sha256": "a5bff94aecd27c85feec8eaf8f5c8e4310cd7dad438c73d8c495583fa7abd1e7",
+     "octeti": 133899,
+     "articole": 28
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_1_2020",
+   "id_portal": "221917",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "16.01.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 1165,
+   "atomi_instantaneu": 20,
+   "fisiere": [
+    {
+     "fisier": "legea_1_2020__221917.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/221917",
+     "id_portal": "221917",
+     "consolidare": "16.01.2026",
+     "sha256": "2de598a7b474c1c5f49b594428db0ace7acc9cf0114adfa265ad3efa1c7a05be",
+     "octeti": 1029603,
+     "articole": 353
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_129_2019",
+   "id_portal": "216157",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "19.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 938,
+   "atomi_instantaneu": 152,
+   "fisiere": [
+    {
+     "fisier": "legea_129_2019__216157.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/216157",
+     "id_portal": "216157",
+     "consolidare": "19.12.2025",
+     "sha256": "77177abb3264cbb8db52c51fc3d4f1ea5118b3f5f9b4e702d6b6ea9afc978a89",
+     "octeti": 978414,
+     "articole": 401
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_136_2020_consolidat",
+   "id_portal": "227953",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "24.10.2023",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 136,
+   "atomi_instantaneu": 126,
+   "fisiere": [
+    {
+     "fisier": "legea_136_2020_consolidat__227953.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/227953",
+     "id_portal": "227953",
+     "consolidare": "24.10.2023",
+     "sha256": "45a79f0dddf8edd99bdb3965e127372156bcb1c2f7170b412f44bd93ce32c955",
+     "octeti": 196640,
+     "articole": 69
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_141_2025_consolidat",
+   "id_portal": "300022",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "31.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 591,
+   "atomi_instantaneu": 413,
+   "fisiere": [
+    {
+     "fisier": "legea_141_2025_consolidat__300022.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/300022",
+     "id_portal": "300022",
+     "consolidare": "31.08.2026",
+     "sha256": "4ae949dc4bbc1acfef815a9f9467b18886394e7015ac3fc46e32c2b9db38bb21",
+     "octeti": 658936,
+     "articole": 31
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_165_2018_anaf",
+   "id_portal": "202623",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "01.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 145,
+   "atomi_instantaneu": 191,
+   "fisiere": [
+    {
+     "fisier": "legea_165_2018_anaf__202623.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/202623",
+     "id_portal": "202623",
+     "consolidare": "01.12.2025",
+     "sha256": "09dbf02f6fe1eec4f746db25ee311c4938be5b273edfde4cb12f96a88cf3d798",
+     "octeti": 200346,
+     "articole": 108
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_226_2023",
+   "id_portal": "272230",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "08.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 229,
+   "atomi_instantaneu": 6,
+   "fisiere": [
+    {
+     "fisier": "legea_226_2023__272230.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/272230",
+     "id_portal": "272230",
+     "consolidare": "08.08.2026",
+     "sha256": "b857632d35837cea1c01323e27d650b336cf2cff4fea095eb885588c8e061a26",
+     "octeti": 278610,
+     "articole": 64
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_230_2007",
+   "id_portal": "83753",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "22.04.2017",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 198,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "legea_230_2007__83753.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/83753",
+     "id_portal": "83753",
+     "consolidare": "22.04.2017",
+     "sha256": "fe2cb606dda04d379adeae97f19cfc19da5752651e1a6b9de4de8844eb87f095",
+     "octeti": 230824,
+     "articole": 125
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor",
+   "id_portal": "305208",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "09.03.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 839,
+   "atomi_instantaneu": 568,
+   "fisiere": [
+    {
+     "fisier": "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor__305208.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/305208",
+     "id_portal": "305208",
+     "consolidare": "09.03.2026",
+     "sha256": "48d70d883fd4dec32725dcb9312d526a1c92feb623398b0a689b12614b502f62",
+     "octeti": 798109,
+     "articole": 51
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_241_2005",
+   "id_portal": "63590",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "16.05.2024",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 167,
+   "atomi_instantaneu": 34,
+   "fisiere": [
+    {
+     "fisier": "legea_241_2005__63590.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/63590",
+     "id_portal": "63590",
+     "consolidare": "16.05.2024",
+     "sha256": "1a1e66735d804247cc9c7933de10b6acea6651a857b7d96db39a7b2af458ae56",
+     "octeti": 237807,
+     "articole": 57
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_26_1990",
+   "id_portal": "783",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "26.09.2020",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 248,
+   "atomi_instantaneu": 46,
+   "fisiere": [
+    {
+     "fisier": "legea_26_1990__783.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/783",
+     "id_portal": "783",
+     "consolidare": "26.09.2020",
+     "sha256": "fdc8f04010061fb8eb4b3576106bd34d0bfbf65aad42fb9e3c499e18bcdbe234",
+     "octeti": 274205,
+     "articole": 125
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_265_2022",
+   "id_portal": "257835",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "12.09.2024",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 939,
+   "atomi_instantaneu": 33,
+   "fisiere": [
+    {
+     "fisier": "legea_265_2022__257835.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+     "id_portal": "257835",
+     "consolidare": "12.09.2024",
+     "sha256": "cfd529f7a4a05ec4bc191a3f9858257463e6fa82feb4c2cb8ecf3554eff76770",
+     "octeti": 759566,
+     "articole": 333
+    },
+    {
+     "fisier": "legea_265_2022__268267.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/268267",
+     "id_portal": "268267",
+     "consolidare": "12.09.2024",
+     "sha256": "dfcfe2c28c7d125c73393adae1589bc25a564c63b218dedd41459e1d641c3cb8",
+     "octeti": 101407,
+     "articole": 22
+    },
+    {
+     "fisier": "legea_265_2022__268268.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/268268",
+     "id_portal": "268268",
+     "consolidare": "12.09.2024",
+     "sha256": "27d005598befa1ce30889fde673abb7b923ebecaf1fabcee7b099332fdcd99e6",
+     "octeti": 82606,
+     "articole": 14
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_287_2009",
+   "id_portal": "109883",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "03.05.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 7345,
+   "atomi_instantaneu": 438,
+   "fisiere": [
+    {
+     "fisier": "legea_287_2009__109883.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/109883",
+     "id_portal": "109883",
+     "consolidare": "03.05.2026",
+     "sha256": "957b4c936b0c2458b742a23b0074c9e5c4a32149825620612c47213db2e876b4",
+     "octeti": 52361,
+     "articole": 0
+    },
+    {
+     "fisier": "legea_287_2009__309285.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/309285",
+     "id_portal": "309285",
+     "consolidare": "03.05.2026",
+     "sha256": "5342e9bd3868b29169c4896200be37ff4c521968836a779af539b945c4fcf1be",
+     "octeti": 6265867,
+     "articole": 5540
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_296_2020_consolidat",
+   "id_portal": "235513",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "01.01.2022",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 598,
+   "atomi_instantaneu": 223,
+   "fisiere": [
+    {
+     "fisier": "legea_296_2020_consolidat__235513.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/235513",
+     "id_portal": "235513",
+     "consolidare": "01.01.2022",
+     "sha256": "57e3bf1605979264e5b526d9eab3561acbaccd9ca0ea945841beb2bd7c057cab",
+     "octeti": 670781,
+     "articole": 48
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
+   "id_portal": "275745",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "25.02.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 956,
+   "atomi_instantaneu": 775,
+   "fisiere": [
+    {
+     "fisier": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii__275745.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/275745",
+     "id_portal": "275745",
+     "consolidare": "25.02.2026",
+     "sha256": "99b984791ba22c6e344523a013555d37ec2f630f8c7a816e7cb0d6e70a496103",
+     "octeti": 1006479,
+     "articole": 58
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25",
+   "id_portal": "210007",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "forma de baza 10.01.2019",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 159,
+   "atomi_instantaneu": 74,
+   "fisiere": [
+    {
+     "fisier": "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25__210007.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/210007",
+     "id_portal": "210007",
+     "consolidare": null,
+     "sha256": "bab72dc7f962e4c4f0c191551ed04ef27a8cb53f9428a1f947151b835b3f59fc",
+     "octeti": 193752,
+     "articole": 12
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_31_1990_societatile",
+   "id_portal": "798",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "18.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 2002,
+   "atomi_instantaneu": 1963,
+   "fisiere": [
+    {
+     "fisier": "legea_31_1990_societatile__798.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/798",
+     "id_portal": "798",
+     "consolidare": "18.12.2025",
+     "sha256": "efa3a9fa0e8a01a27f196c55aa77ed8b0877371b3d3082528ef407836e948611",
+     "octeti": 2018187,
+     "articole": 1215
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_346_2002_consolidat",
+   "id_portal": "36905",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "11.11.2024",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 327,
+   "atomi_instantaneu": 57,
+   "fisiere": [
+    {
+     "fisier": "legea_346_2002_consolidat__36905.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/36905",
+     "id_portal": "36905",
+     "consolidare": "11.11.2024",
+     "sha256": "4041185843dd5a15023366686427b895882aa4e19e3e23f0c61c8889a76c6bb7",
+     "octeti": 410832,
+     "articole": 352
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_448_2006_protectia_persoanelor_cu_handicap",
+   "id_portal": "77815",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "31.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 825,
+   "atomi_instantaneu": 154,
+   "fisiere": [
+    {
+     "fisier": "legea_448_2006_protectia_persoanelor_cu_handicap__77815.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/77815",
+     "id_portal": "77815",
+     "consolidare": "31.08.2026",
+     "sha256": "fd3c3f78521be1bc1b295d2cfb767e5781f12bf1a18826c73146ad3ef6ca8465",
+     "octeti": 941773,
+     "articole": 472
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_53_2003_codul_muncii",
+   "id_portal": "41625",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "27.04.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 1236,
+   "atomi_instantaneu": 109,
+   "fisiere": [
+    {
+     "fisier": "legea_53_2003_codul_muncii__41625.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/41625",
+     "id_portal": "41625",
+     "consolidare": "27.04.2026",
+     "sha256": "21e2e8b15df4e7bccf42d3868affacc7f2b332b707fcf27de845bfefda797938",
+     "octeti": 60995,
+     "articole": 0
+    },
+    {
+     "fisier": "legea_53_2003_codul_muncii__309240.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/309240",
+     "id_portal": "309240",
+     "consolidare": "27.04.2026",
+     "sha256": "73c8251e946ca58e6c44f1c9a06c8e46559f5b57de5e763d21d1d28dc2278e7f",
+     "octeti": 1309309,
+     "articole": 760
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_72_2013",
+   "id_portal": "146555",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "01.02.2016",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 63,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "legea_72_2013__146555.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/146555",
+     "id_portal": "146555",
+     "consolidare": "01.02.2016",
+     "sha256": "d740d9c93f931dc5964d4dfa2d831f1bdc785c187930ae841a29221dede915ea",
+     "octeti": 130709,
+     "articole": 48
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_82_1991_consolidat",
+   "id_portal": "1576",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "04.02.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 257,
+   "atomi_instantaneu": 60,
+   "fisiere": [
+    {
+     "fisier": "legea_82_1991_consolidat__1576.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/1576",
+     "id_portal": "1576",
+     "consolidare": "04.02.2025",
+     "sha256": "d8d36b17040795f4f3eb1f85b984ef91a5624752cf510ea61dcc11516c281df0",
+     "octeti": 345486,
+     "articole": 151
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_85_2014",
+   "id_portal": "159286",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "18.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 2052,
+   "atomi_instantaneu": 177,
+   "fisiere": [
+    {
+     "fisier": "legea_85_2014__159286.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/159286",
+     "id_portal": "159286",
+     "consolidare": "18.12.2025",
+     "sha256": "71dce113a8b2e89683a6102b0c5e44c99f980b459a8b676dbdf5fe01711919ef",
+     "octeti": 2194796,
+     "articole": 1052
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_98_2016",
+   "id_portal": "178667",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "17.11.2024",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 1350,
+   "atomi_instantaneu": 177,
+   "fisiere": [
+    {
+     "fisier": "legea_98_2016__178667.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/178667",
+     "id_portal": "178667",
+     "consolidare": "17.11.2024",
+     "sha256": "8470d71aab8c463241e3b7ef19acad005db1ff540d0e816e6c75a6c5b03ffc63",
+     "octeti": 1675546,
+     "articole": 671
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "og_13_2011",
+   "id_portal": "131085",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "07.08.2024",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 276,
+   "atomi_instantaneu": 4,
+   "fisiere": [
+    {
+     "fisier": "og_13_2011__131085.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/131085",
+     "id_portal": "131085",
+     "consolidare": "07.08.2024",
+     "sha256": "65539ba5660da800cad7199f1620fef9e3969f5d70ac788d0c6dcfba686918df",
+     "octeti": 329890,
+     "articole": 84
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "og_2_2001",
+   "id_portal": "29779",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "27.03.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 193,
+   "atomi_instantaneu": 33,
+   "fisiere": [
+    {
+     "fisier": "og_2_2001__29779.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/29779",
+     "id_portal": "29779",
+     "consolidare": "27.03.2026",
+     "sha256": "998984f6df5b70323b20e1ba2bba8c199863db52cf216ca3f2de457d7db97d03",
+     "octeti": 233823,
+     "articole": 144
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "og_39_2015",
+   "id_portal": "170982",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "08.11.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 92,
+   "atomi_instantaneu": 4,
+   "fisiere": [
+    {
+     "fisier": "og_39_2015__170982.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/170982",
+     "id_portal": "170982",
+     "consolidare": "08.11.2025",
+     "sha256": "036a813bfaf7af5b95b3ad093cfef97641bfd657f34b7d650783d8b8fc05affd",
+     "octeti": 128634,
+     "articole": 35
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice",
+   "id_portal": "196396",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "forma de baza 19.12.2017",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 43,
+   "atomi_instantaneu": 3,
+   "fisiere": [
+    {
+     "fisier": "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice__196396.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/196396",
+     "id_portal": "196396",
+     "consolidare": null,
+     "sha256": "c3811be8247e86fa75079a5cd2c6ba7af1a8163a2223c723edc83061d212d42e",
+     "octeti": 84538,
+     "articole": 20
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oms_15_2018_norme",
+   "id_portal": "196682",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "24.07.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 459,
+   "atomi_instantaneu": 292,
+   "fisiere": [
+    {
+     "fisier": "oms_15_2018_norme__196682.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/196682",
+     "id_portal": "196682",
+     "consolidare": "24.07.2026",
+     "sha256": "ec052fb4e71fbdebd739a36a5ab65aea445d573b32a8d69b1e0d4d0377a355cd",
+     "octeti": 62295,
+     "articole": 6
+    },
+    {
+     "fisier": "oms_15_2018_norme__311827.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/311827",
+     "id_portal": "311827",
+     "consolidare": "24.07.2026",
+     "sha256": "e06310a4469c2c4efcd689b0deab4129378ed6363b6e7ecb37e2627a19b53923",
+     "octeti": 840822,
+     "articole": 296
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "ordin_2594_2015",
+   "id_portal": "171984",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "28.12.2023",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 287,
+   "atomi_instantaneu": 7,
+   "fisiere": [
+    {
+     "fisier": "ordin_2594_2015__171984.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/171984",
+     "id_portal": "171984",
+     "consolidare": "28.12.2023",
+     "sha256": "e769e5748b64d2708a9ea2a77ce1124471f03d3efed011570f47ecece1fa2854",
+     "octeti": 251479,
+     "articole": 22
+    },
+    {
+     "fisier": "ordin_2594_2015__269686.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/269686",
+     "id_portal": "269686",
+     "consolidare": "28.12.2023",
+     "sha256": "ebf2758ff1066d086e5929bc603c4389153191ec726209a2ae3647b757cde6dd",
+     "octeti": 288517,
+     "articole": 0
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "ordin_3845_2015",
+   "id_portal": "174717",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "13.05.2022",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 193,
+   "atomi_instantaneu": 9,
+   "fisiere": [
+    {
+     "fisier": "ordin_3845_2015__174717.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174717",
+     "id_portal": "174717",
+     "consolidare": "13.05.2022",
+     "sha256": "01ad7f9ad0bbd7128adf63a88490e113021ae06b6f8840a52f5a7e92a4014702",
+     "octeti": 134349,
+     "articole": 29
+    },
+    {
+     "fisier": "ordin_3845_2015__255114.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/255114",
+     "id_portal": "255114",
+     "consolidare": "13.05.2022",
+     "sha256": "56fbc7242e6fcc8d89ddc5849ddf32f435205c12b5fe3332b452ffeb1acfc356",
+     "octeti": 87679,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3845_2015__255115.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/255115",
+     "id_portal": "255115",
+     "consolidare": "13.05.2022",
+     "sha256": "9c41e96efca86ce03c87c0bec49b830c52985559ae5639dcbda9232a9c380390",
+     "octeti": 72079,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3845_2015__255116.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/255116",
+     "id_portal": "255116",
+     "consolidare": "13.05.2022",
+     "sha256": "4e94ba317bdd25d82e917432eeeb7bab6a5006c3e8bcde97ac778005e5058864",
+     "octeti": 92602,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3845_2015__255435.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/255435",
+     "id_portal": "255435",
+     "consolidare": "13.05.2022",
+     "sha256": "904b762485c6a37f4480076756250889ca1b57e771c8d7463e283619ff057996",
+     "octeti": 70649,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3845_2015__255117.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/255117",
+     "id_portal": "255117",
+     "consolidare": "13.05.2022",
+     "sha256": "a746a58354f75945ed1910f05ae3de780313bb3c274ec0d2b1c1491744184628",
+     "octeti": 69891,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3845_2015__255118.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/255118",
+     "id_portal": "255118",
+     "consolidare": "13.05.2022",
+     "sha256": "554410630b590dcd6c6ac560988b54b3fd60949f68480d0a6be859b27bad78ad",
+     "octeti": 71335,
+     "articole": 0
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "ordin_3846_2015",
+   "id_portal": "174706",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "27.11.2017",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 337,
+   "atomi_instantaneu": 8,
+   "fisiere": [
+    {
+     "fisier": "ordin_3846_2015__174706.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/174706",
+     "id_portal": "174706",
+     "consolidare": "27.11.2017",
+     "sha256": "58b4f515e2f17aa9e428a82ff186b93cb1fbda48986108620cd82d11988c808c",
+     "octeti": 276417,
+     "articole": 44
+    },
+    {
+     "fisier": "ordin_3846_2015__194831.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/194831",
+     "id_portal": "194831",
+     "consolidare": "27.11.2017",
+     "sha256": "eb949d5f9fc7bf76463676a86a8a643e64001f3e1d27f0ca8117884b0bfaf6a3",
+     "octeti": 188735,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3846_2015__194832.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/194832",
+     "id_portal": "194832",
+     "consolidare": "27.11.2017",
+     "sha256": "3e7322ab06ebc8a69962dcffa3a0b0688a781cfeb9a32c7f7019a2e53cf76d70",
+     "octeti": 127124,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3846_2015__194833.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/194833",
+     "id_portal": "194833",
+     "consolidare": "27.11.2017",
+     "sha256": "5e9da792562f26b11b0ea9fb61361e1fcb3b878248d349e053bb8a3381651b83",
+     "octeti": 110644,
+     "articole": 0
+    },
+    {
+     "fisier": "ordin_3846_2015__174710.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/174710",
+     "id_portal": "174710",
+     "consolidare": "27.11.2017",
+     "sha256": "e8f67f10f607eb13b1b1df426380297c55a0dc7acc00140dd31629f9b9096f27",
+     "octeti": 66237,
+     "articole": 0
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "ordin_878_2022",
+   "id_portal": "254993",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "09.05.2023",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 121,
+   "atomi_instantaneu": 11,
+   "fisiere": [
+    {
+     "fisier": "ordin_878_2022__254993.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/254993",
+     "id_portal": "254993",
+     "consolidare": "09.05.2023",
+     "sha256": "f729b8c3f4542d7642273798242f0ccb289412ab8ea68509a3800e2b21b87f68",
+     "octeti": 162280,
+     "articole": 39
+    },
+    {
+     "fisier": "ordin_878_2022__267018.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/267018",
+     "id_portal": "267018",
+     "consolidare": "09.05.2023",
+     "sha256": "6a92fd7d6d1db939d5e426688fc8ddfe8cd67f300eb552961e20472a92345ff1",
+     "octeti": 180662,
+     "articole": 0
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_115_2023_consolidat",
+   "id_portal": "277404",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "21.02.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 698,
+   "atomi_instantaneu": 374,
+   "fisiere": [
+    {
+     "fisier": "oug_115_2023_consolidat__277404.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/277404",
+     "id_portal": "277404",
+     "consolidare": "21.02.2025",
+     "sha256": "b7332cb7436fc675a9f3975a2046920668ad75a69e3ca40f9c0f64227fd3e39b",
+     "octeti": 803076,
+     "articole": 41
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_116_2023",
+   "id_portal": "277398",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "18.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 83,
+   "atomi_instantaneu": 3,
+   "fisiere": [
+    {
+     "fisier": "oug_116_2023__277398.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/277398",
+     "id_portal": "277398",
+     "consolidare": "18.12.2025",
+     "sha256": "549365a1262d9e9a442464f433cbe8d557be8377a8b9f3756f280fecb1b07fb3",
+     "octeti": 132074,
+     "articole": 26
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_120_2021",
+   "id_portal": "247243",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "01.06.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 167,
+   "atomi_instantaneu": 21,
+   "fisiere": [
+    {
+     "fisier": "oug_120_2021__247243.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/247243",
+     "id_portal": "247243",
+     "consolidare": "01.06.2026",
+     "sha256": "68975f8441c77192489417878fc3fe6844cc413bb16c01e827913e969a7908c7",
+     "octeti": 269256,
+     "articole": 109
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_158_2005_consolidat",
+   "id_portal": "66305",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "01.07.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 333,
+   "atomi_instantaneu": 341,
+   "fisiere": [
+    {
+     "fisier": "oug_158_2005_consolidat__66305.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/66305",
+     "id_portal": "66305",
+     "consolidare": "01.07.2026",
+     "sha256": "e02a77a739eb98eb02f96172748c71fdc3a2ce7e1e8c2a37c404e8fa3bf5253e",
+     "octeti": 440961,
+     "articole": 251
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_28_1999",
+   "id_portal": "17431",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "02.02.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 153,
+   "atomi_instantaneu": 19,
+   "fisiere": [
+    {
+     "fisier": "oug_28_1999__17431.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/17431",
+     "id_portal": "17431",
+     "consolidare": "02.02.2026",
+     "sha256": "922c950d1c9ae81aa384cf1a7d270fad4f11f1314e81b039c93f65bf4d1c1f94",
+     "octeti": 287033,
+     "articole": 69
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_44_2008",
+   "id_portal": "91808",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "26.11.2022",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 203,
+   "atomi_instantaneu": 32,
+   "fisiere": [
+    {
+     "fisier": "oug_44_2008__91808.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/91808",
+     "id_portal": "91808",
+     "consolidare": "26.11.2022",
+     "sha256": "b6c78fc921da207c57bca7fdc0d9fd8bb67d5061020e598c2820be20188c27b3",
+     "octeti": 268920,
+     "articole": 159
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_70_2024_ro_etva_decont_precompletat",
+   "id_portal": "284214",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "09.03.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 84,
+   "atomi_instantaneu": 2,
+   "fisiere": [
+    {
+     "fisier": "oug_70_2024_ro_etva_decont_precompletat__284214.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/284214",
+     "id_portal": "284214",
+     "consolidare": "09.03.2026",
+     "sha256": "f996dc86fb7f9d74521352918748cc51041a532da7d00b830cbdcfd103904c9e",
+     "octeti": 149128,
+     "articole": 52
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_89_2025",
+   "id_portal": "305817",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "16.08.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 489,
+   "atomi_instantaneu": 306,
+   "fisiere": [
+    {
+     "fisier": "oug_89_2025__305817.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/305817",
+     "id_portal": "305817",
+     "consolidare": "16.08.2026",
+     "sha256": "0e09476ca7542da3fa8401f33271b1f8d96c9e10853d1bd5b2fe8a1c3e16d194",
+     "octeti": 518412,
+     "articole": 23
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_134_2010_codul_de_procedura_civila",
+   "id_portal": "120644",
+   "de_ce": "C32: regula calculului termenelor (CPF art. 75 trimite la Codul de procedura civila, absent din instantaneu)",
+   "data_formei_consolidate": "14.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 4290,
+   "atomi_instantaneu": 0,
+   "fisiere": [
+    {
+     "fisier": "legea_134_2010_codul_de_procedura_civila__120644.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/120644",
+     "id_portal": "120644",
+     "consolidare": "14.12.2025",
+     "sha256": "f19d435614425c92eae2efcb5096b1e96eb8285a52312c4ccc8c1f5ed2fbf4a6",
+     "octeti": 56633,
+     "articole": 0
+    },
+    {
+     "fisier": "legea_134_2010_codul_de_procedura_civila__304485.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/304485",
+     "id_portal": "304485",
+     "consolidare": "14.12.2025",
+     "sha256": "06b91110ca2dc7b4c2cc2c80e8d3501f1bacb7b35d5600e296dbded0db9e6690",
+     "octeti": 3730877,
+     "articole": 2480
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "ordin_1099_2016",
+   "id_portal": "180514",
+   "de_ce": "C31/C37: identificat dupa antetul din textul instantaneului: \"ORDIN nr. 1.099 din 12 iulie 2016 pentru reglementarea unor aspecte privind rezidența în România a persoanelor fizice EMITENT MINISTERUL FIN\" (data 12/07/2016, emitent MINISTERUL FINANȚELOR PUBLICE) -> ORDIN 1099 12/07/2016; pagina adusa contine acelasi obiect (\"reglementarea unor aspecte privind rezidenta in Romania a persoanelor fizice\")",
+   "data_formei_consolidate": "forma de baza 12.07.2016",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 60,
+   "atomi_instantaneu": 5,
+   "fisiere": [
+    {
+     "fisier": "ordin_1099_2016__180514.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/180514",
+     "id_portal": "180514",
+     "consolidare": null,
+     "sha256": "9197f6502c488aed86be2ab536aff0b43faa88123144e7a47f0193af378cacb7",
+     "octeti": 264860,
+     "articole": 52
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_196_2018_asociatii_proprietari_consolidat",
+   "id_portal": "203233",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "19.12.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 553,
+   "atomi_instantaneu": 18,
+   "fisiere": [
+    {
+     "fisier": "legea_196_2018_asociatii_proprietari_consolidat__203233.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/203233",
+     "id_portal": "203233",
+     "consolidare": "19.12.2025",
+     "sha256": "d136dd5a6f35f13a2cb7809b1303a40805a15b0f3728866420555cb3be2f90ed",
+     "octeti": 551029,
+     "articole": 222
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_273_2006_fin_publice_locale",
+   "id_portal": "73527",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "25.02.2026",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 906,
+   "atomi_instantaneu": 126,
+   "fisiere": [
+    {
+     "fisier": "legea_273_2006_fin_publice_locale__73527.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/73527",
+     "id_portal": "73527",
+     "consolidare": "25.02.2026",
+     "sha256": "81319c48cf282c397d2e3f57bb243065e819064fb02382561359e9fb6a93eaa5",
+     "octeti": 989704,
+     "articole": 227
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_319_2006_consolidat",
+   "id_portal": "73772",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "25.07.2021",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 298,
+   "atomi_instantaneu": 16,
+   "fisiere": [
+    {
+     "fisier": "legea_319_2006_consolidat__73772.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/73772",
+     "id_portal": "73772",
+     "consolidare": "25.07.2021",
+     "sha256": "159bc8c51f4951f0135fedee36e8579f6e57ce0116076a695f9e6111046236fe",
+     "octeti": 326170,
+     "articole": 111
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "oug_41_2022",
+   "id_portal": "253801",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "24.04.2025",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 114,
+   "atomi_instantaneu": 13,
+   "fisiere": [
+    {
+     "fisier": "oug_41_2022__253801.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/253801",
+     "id_portal": "253801",
+     "consolidare": "24.04.2025",
+     "sha256": "be1ab8da4bb0f0f22be5f61c2c087eaf658753c63c4a8d6b19f7ec2292ef2efb",
+     "octeti": 216227,
+     "articole": 115
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_114_1996_locuinte_consolidat",
+   "id_portal": "8597",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "30.07.2022",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 119,
+   "atomi_instantaneu": 1,
+   "fisiere": [
+    {
+     "fisier": "legea_114_1996_locuinte_consolidat__8597.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/8597",
+     "id_portal": "8597",
+     "consolidare": "30.07.2022",
+     "sha256": "c4110d22fa197432193ef16d1a9b0828877a940fa04eab373b1cafc5ff367ac5",
+     "octeti": 315502,
+     "articole": 182
+    }
+   ]
+  },
+  {
+   "act_in_anaf_surse": "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate",
+   "id_portal": "127831",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "data_formei_consolidate": "02.05.2022",
+   "folosit_de_FiscalOS": true,
+   "motiv_nefolosire": null,
+   "atomi_oficial": 160,
+   "atomi_instantaneu": 16,
+   "fisiere": [
+    {
+     "fisier": "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate__127831.html",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/127831",
+     "id_portal": "127831",
+     "consolidare": "02.05.2022",
+     "sha256": "41ec025e7504c5d7f9fd72ffcfb97960b26e1b785a2af7461243a9e78e31f189",
+     "octeti": 261258,
+     "articole": 109
+    }
+   ]
+  }
+ ]
+}

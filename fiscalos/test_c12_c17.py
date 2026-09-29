@@ -3,6 +3,7 @@
 import hashlib
 import json
 import os
+import re
 import subprocess
 
 _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,9 +26,10 @@ def test_C12_instantaneul_iconta_ramane_neatins():
     Manifestul corpusului e neschimbat de la d7efc18. Atomii instantaneului (`artefacte/atomi/`) sunt
     DERIVATI: se schimba cand se schimba atomizatorul (C26, anexele), dar numai prin el - fiecare
     fisier e exact re-atomizarea textului instantaneului, fara nicio mana si fara stratul oficial."""
-    d = subprocess.run(["git", "diff", "--stat", "d7efc18", "--", "corpus_manifest.json"],
-                       cwd=_RAD, capture_output=True, text=True).stdout
-    assert d == "", d
+    # Decizia dupa pasul 10: instantaneul se reface din starea COMISA a iConta (git HEAD); manifestul
+    # inregistreaza commitul, iar fiecare fisier e obiectul git de la acel commit (test_read_only).
+    man = json.load(open(os.path.join(_RAD, "corpus_manifest.json"), encoding="utf-8"))
+    assert re.match(r"^[0-9a-f]{40}$", man["sursa_commit_git"]) and "COMISA" in man["sursa_mod"]
     from fiscalos import atomizare
     strat = json.load(open(os.path.join(_RAD, "artefacte", "strat_text.json"), encoding="utf-8"))
     for baza in ("cod_fiscal_227_2015_consolidat", "omfp_1802_2014", "opanaf_3769_2015_d394_baza",
@@ -330,5 +332,11 @@ def test_C37_ordinul_1099_identificat_dupa_antet():
 
 def test_propunerea_v7_si_intrebari_v6_raman_neatinse():
     d = subprocess.run(["git", "diff", "529765c", "--", "propuneri/v7/", "intrebari/v6/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]
+
+
+def test_propunerea_v8_ramane_neatinsa():
+    d = subprocess.run(["git", "diff", "1c9cbf9", "--", "propuneri/v8/", "intrebari/v9/"], cwd=_RAD,
                        capture_output=True, text=True).stdout
     assert d == "", d[:300]

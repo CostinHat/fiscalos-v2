@@ -383,5 +383,47 @@
   "cu_valabilitate": 0,
   "ultima_nota": null,
   "data_formei_consolidate": "forma de baza 12.07.2016"
+ },
+ "legea_196_2018_asociatii_proprietari_consolidat": {
+  "n": 553,
+  "structura": "articole",
+  "cu_valabilitate": 1,
+  "ultima_nota": "2025-12-19",
+  "data_formei_consolidate": "19.12.2025"
+ },
+ "legea_273_2006_fin_publice_locale": {
+  "n": 906,
+  "structura": "articole",
+  "cu_valabilitate": 163,
+  "ultima_nota": "2026-02-25",
+  "data_formei_consolidate": "25.02.2026"
+ },
+ "legea_319_2006_consolidat": {
+  "n": 298,
+  "structura": "articole",
+  "cu_valabilitate": 4,
+  "ultima_nota": "2021-07-25",
+  "data_formei_consolidate": "25.07.2021"
+ },
+ "oug_41_2022": {
+  "n": 114,
+  "structura": "articole",
+  "cu_valabilitate": 61,
+  "ultima_nota": "2024-11-21",
+  "data_formei_consolidate": "24.04.2025"
+ },
+ "legea_114_1996_locuinte_consolidat": {
+  "n": 119,
+  "structura": "articole",
+  "cu_valabilitate": 53,
+  "ultima_nota": "2022-07-30",
+  "data_formei_consolidate": "30.07.2022"
+ },
+ "legea_52_2011_exercitarea_activitati_caracter_ocazional_desfasurate": {
+  "n": 160,
+  "structura": "articole",
+  "cu_valabilitate": 80,
+  "ultima_nota": "2022-05-02",
+  "data_formei_consolidate": "02.05.2022"
  }
 }

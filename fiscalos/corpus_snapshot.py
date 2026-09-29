@@ -42,40 +42,36 @@ def sha256(cale, buf=1 << 20):
 
 
 def instantaneu(sursa=SURSA, dest=None, manifest=None):
-    """Copiaza sursa -> dest si scrie manifestul. Intoarce dict-ul manifest."""
+    """Scrie instantaneul corpusului din starea COMISA a iConta (git HEAD) in dest si manifestul.
+
+    Decizia arhitectului dupa pasul 10: FiscalOS citeste numai starea comisa - o modificare necomisa din
+    copia de lucru nu e starea iConta. Fisierele se iau ca obiecte git (`ls-tree` + `cat-file`), nu din
+    arborele de lucru; manifestul inregistreaza commitul si, pentru fiecare fisier, blob-ul git."""
+    from fiscalos import iconta_head
     rad = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     dest = dest or os.path.join(rad, "corpus")
     manifest = manifest or os.path.join(rad, "corpus_manifest.json")
     _refuza_scrierea(dest)
     _refuza_scrierea(manifest)
-
+    prefix = os.path.relpath(sursa, iconta_head.ICONTA)
+    la = iconta_head.commit()
+    if os.path.isdir(dest):
+        shutil.rmtree(dest)                          # propriul nostru director, nu iConta
     fisiere = {}
-    n_copiate = 0
-    for dirpath, _dirnames, filenames in os.walk(sursa):
-        rel_dir = os.path.relpath(dirpath, sursa)
-        for nume in sorted(filenames):
-            src = os.path.join(dirpath, nume)
-            if not os.path.isfile(src):
-                continue
-            rel = nume if rel_dir == "." else os.path.join(rel_dir, nume)
-            dst = os.path.join(dest, rel)
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
-            shutil.copy2(src, dst)
-            n_copiate += 1
-            st = os.stat(src)
-            fisiere[rel] = {
-                "sha256": sha256(dst),
-                "octeti": st.st_size,
-                "mtime_sursa": time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(st.st_mtime)),
-            }
-
+    for rel, sha_git, octeti in iconta_head.fisiere(prefix, la):
+        dst = os.path.join(dest, rel)
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with open(dst, "wb") as f:
+            f.write(iconta_head.blob(sha_git))
+        fisiere[rel] = {"sha256": sha256(dst), "octeti": octeti, "blob_git": sha_git}
     man = {
         "_ce": "Manifestul instantaneului de corpus FiscalOS v2. Leaga fiecare id de atom de octetii "
                "din care a fost extras.",
         "sursa": sursa,
-        "sursa_mod": "DOAR CITIRE (CLAUDE.md §1)",
+        "sursa_mod": "DOAR CITIRE (CLAUDE.md §1), numai starea COMISA (git HEAD)",
+        "sursa_commit_git": la,
         "luat_la": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "n_fisiere": n_copiate,
+        "n_fisiere": len(fisiere),
         "octeti_total": sum(v["octeti"] for v in fisiere.values()),
         "fisiere": fisiere,
     }

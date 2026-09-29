@@ -63,17 +63,32 @@ def test_inventarul_nu_importa_cod_iconta():
 
 
 def test_fisierele_citite_din_iconta_sunt_neatinse():
-    """Ele au mtime de dinaintea acestei lucrari; daca vreunul e atins, proba trebuie sa cada."""
+    """Decizia dupa pasul 10: FiscalOS citeste NUMAI starea COMISA a iConta (git HEAD). Copia de lucru
+    poate avea modificari necomise (e lucrul lor in curs), deci mtime-ul ei nu mai e proba. Proba e:
+    inventarul si corpusul inregistreaza commitul din care au citit, iar fiecare fisier citit e exact
+    obiectul git de la acel commit - FiscalOS n-a citit (si n-a scris) nimic in afara lui."""
     import json
+    from fiscalos import iconta_head
     rad = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    man = json.load(open(os.path.join(rad, "corpus_manifest.json"), encoding="utf-8"))
-    luat = man["luat_la"]                       # momentul instantaneului
+    inv = json.load(open(os.path.join(rad, "artefacte", "inventar_iconta.json"), encoding="utf-8"))
+    la = inv["iconta_commit_git"]
     for rel in CITITE:
-        cale = os.path.join(cs.SURSA, "..", rel)
-        assert os.path.isfile(cale), cale
-        import time
-        mt = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(os.stat(cale).st_mtime))
-        assert mt < luat, (rel, mt, luat)
+        assert iconta_head.citeste(rel, la)                   # obiectul exista la commitul inregistrat
+    man = json.load(open(os.path.join(rad, "corpus_manifest.json"), encoding="utf-8"))
+    obiecte = {r: sha for r, sha, _o in iconta_head.fisiere("anaf_surse", man["sursa_commit_git"])}
+    assert {r: v["blob_git"] for r, v in man["fisiere"].items()} == obiecte
+
+
+def test_inventarul_citeste_numai_prin_git_head():
+    """Nicio citire directa din copia de lucru iConta: fara open()/listdir pe calea ICONTA."""
+    import ast
+    rad = os.path.dirname(os.path.abspath(__file__))
+    for nume in ("inventar_iconta.py", "corpus_snapshot.py"):
+        arb = ast.parse(open(os.path.join(rad, nume), encoding="utf-8").read())
+        for n in ast.walk(arb):
+            if isinstance(n, ast.Call) and getattr(n.func, "attr", getattr(n.func, "id", "")) in ("open", "listdir", "walk", "copy2"):
+                txt = ast.dump(n)
+                assert "ICONTA" not in txt and "SURSA" not in txt and "sursa" not in txt, (nume, txt[:120])
 
 
 def test_corpusul_sursa_are_aceleasi_amprente_ca_instantaneul():
@@ -84,6 +99,9 @@ def test_corpusul_sursa_are_aceleasi_amprente_ca_instantaneul():
     man = json.load(open(os.path.join(rad, "corpus_manifest.json"), encoding="utf-8"))
     nume = sorted(man["fisiere"])
     random.seed(7)
+    # sursa = obiectul git de la commitul inregistrat (starea comisa), nu copia de lucru
+    import hashlib
+    from fiscalos import iconta_head
     for rel in random.sample(nume, 25):
-        cale = os.path.join(cs.SURSA, rel)
-        assert cs.sha256(cale) == man["fisiere"][rel]["sha256"], rel
+        octeti = iconta_head.blob(man["fisiere"][rel]["blob_git"])
+        assert hashlib.sha256(octeti).hexdigest() == man["fisiere"][rel]["sha256"], rel
