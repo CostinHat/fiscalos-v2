@@ -174,6 +174,13 @@ oficial rămâne 28/7/15); consecința cuantificată în prompt (C43); răspunsu
 tură fără unelte (C44); numeralele în litere (C45). Pe propunerile salvate ale setului 2, verificarea nouă
 prinde ambele greșeli de fond. De decis: C47, C48.
 
+## Măsurătoarea pe setul 3 (`intrebari/set3/`)
+
+Versiunea b6a2d04 (C40–C48), neschimbată; răspunsurile comise (024fab8) înainte de citirea cheii. Scor pe
+fond: **18/1/31**; **1 greșeală de fond** (Q3-TVA-09: procentul împărțit de două ori). C47: 12 abțineri din
+C40/C41 — 9 ar fi fost corecte, 1 a prevenit o greșeală (Q3-SAL-07). Cost $0,310/întrebare (setul 2:
+$0,175). De decis: C49–C53.
+
 ## Cum se rulează
 
 ```sh

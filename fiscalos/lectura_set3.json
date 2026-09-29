@@ -1,0 +1,19 @@
+{
+ "gresit": {
+  "Q3-TVA-09": {"clasa": "procentul împărțit de două ori la 100", "de_ce": "Concluzia e corectă (terenul construibil nu e scutit, livrarea e taxabilă cu 21%, pe temeiul cheii — CF art. 292 alin. (2) lit. f) pct. 1, art. 291 alin. (1)), dar suma e greșită: formula modelului `baza * cota / 100`, cu operandul `cota` = „21%” (deja 0,21), împarte a doua oară la 100 — TVA 1.050 lei în loc de 105.000 lei. Codul a evaluat corect o formulă greșită; verificarea nu are o regulă pentru asta."}
+ },
+ "c40_c41": {
+  "Q3-TVA-01": ["C41", "ar fi fost CORECT", "plafonul 5.000.000 lei; modelul a justificat lit. a) față de lit. b) (perioada), dar nu și geamenii din alte articole arătați de `deschide` (art. 319, 324, 297, OUG 8/2026)"],
+  "Q3-TVA-05": ["C41", "ar fi fost CORECT", "termenul (ultimul decont) prin termen_efectiv; justificare dată pentru art. 310/315^1, dar nu în forma cerută pentru geamănul art. 315^1 alin. (16)"],
+  "Q3-PRF-02": ["C41", "ar fi fost CORECT", "cota de 4%; geamenii nejustificați sunt art. 26 și art. 41 (text de procedură comun)"],
+  "Q3-PRF-04": ["C41", "ar fi fost CORECT", "venit neimpozabil; art. 23 are 11 geameni arătați (definiții cu text comun), justificat unul"],
+  "Q3-PRF-09": ["C40 + C41", "ar fi fost CORECT", "termenul T4: modelul a scris „25 decembrie 2026 … zi nelucrătoare” și a mutat singur termenul, fără termen_efectiv (C40); plus trei geameni nejustificați"],
+  "Q3-SAL-02": ["C41", "ar fi fost CORECT", "85% / 126 de zile; geamănul din Normele OMS 15/2018 justificat pentru alt atom citat decât cel verificat"],
+  "Q3-SAL-07": ["C41", "C41 a prevenit o greșeală de fond", "modelul a luat salariul minim de 4.325 lei (HG 146/2026 art. 2, de la 01.07.2026) în loc de 4.050 lei, în vigoare la 01.01.2026 (art. 1): CASS 5.190 lei în loc de 4.860. Geamănul nejustificat era exact perechea art. 1 / art. 2"],
+  "Q3-SAL-08": ["C41", "ar fi fost CORECT", "impozitul de 780 lei; geamenii art. 138/156/147 (cotele CAS/CASS) și art. 68/76/142"],
+  "Q3-CPF-03": ["C41", "corect pe fond, notat GREȘIT de comparator", "„un an de la 10.02.2026” fără data 10.02.2027 — faptul cheii; C40 nu-l prinde (nu e dată în context de termen)"],
+  "Q3-CTB-01": ["C41", "ar fi fost CORECT", "500 lei; geamănul e textul Legii 31/1990 reprodus de modificare (legea_31_1990_modif_L239_2025)"],
+  "Q3-CTB-03": ["C41", "ar fi fost CORECT", "evenimentul ulterior care conduce la ajustare; geamănul OMFP 3103/2017 (reglementările pentru alte entități) justificat pentru alt atom citat"],
+  "Q3-CTB-09": ["C41", "corect pe fond, alt temei decât cheia", "leasing financiar, amortizarea la utilizator — concluzia cheii, pe CF art. 29 în loc de OMFP 1802/2014 pct. 213-214"]
+ }
+}
