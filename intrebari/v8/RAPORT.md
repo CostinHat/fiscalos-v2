@@ -66,3 +66,10 @@ Costul, ca **limită superioară**: 12 răspunsuri CORECTE vechi ar fi respinse 
 | C40/C41 pe propunerile salvate ale setului 2 (reluarea navigării, 35 de răspunsuri) | 37,3 s | $0 |
 | Verificarea formei cererii C44 pe API (exemplu sintetic, 666+21 tokeni) | — | $0,0039 |
 | Probe: 175 | — | $0 |
+
+## 0. CERINȚE — decizii ulterioare ale arhitectului (după raportul acestui pas)
+
+| | Decizia | Efect |
+|---|---|---|
+| **C47** | pe setul 3, respingerea C40/C41 rămâne cum e; se decide pe cifrele setului 3 — câte abțineri noi vin din C40/C41 și câte dintre ele erau răspunsuri corecte. Nu se relaxează dinainte | niciun cod schimbat; raportul setului 3 va număra separat abținerile C40 și C41 și le va citi pe fond |
+| **C48** | C43 rămâne regulă de prompt; relația „sancțiune pentru art. X” nu se construiește: o amendă lipsă face răspunsul incomplet, nu greșit | niciun cod schimbat |
