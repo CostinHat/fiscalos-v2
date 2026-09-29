@@ -229,3 +229,13 @@ def test_C42_data_cu_an_relativ_fata_de_data_de_referinta():
     assert "25.06.2027" in comparatie._fapte_raspuns(t, "2026")
     assert "25.06.2026" not in comparatie._fapte_raspuns(t, "2026")
     assert "25.06.2027" not in comparatie._fapte_raspuns(t)                              # fara an de referinta
+
+
+def test_setul_3_se_incarca_orb():
+    """Aceeasi orbire pe setul 3; fara fisier, proba PICA."""
+    from fiscalos import intrebari
+    f = "/home/costin/ghid_incoming/FiscalOS_intrebari_set3_50.csv"
+    assert os.path.exists(f), "setul 3 lipseste: %s" % f
+    qs = intrebari.incarca_intrebari(f)
+    assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
+    assert all(q["id"].startswith("Q3-") for q in qs)

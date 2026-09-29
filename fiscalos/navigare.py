@@ -1028,13 +1028,14 @@ def ruleaza(dest, intrebari_id=None, csv_intrebari=None):
 
 if __name__ == "__main__":
     import sys
-    # --set2: masuratoarea finala. Motorul citeste din CSV numai COLOANE_PERMISE (id, tip, intrebare).
-    SET2 = "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"
-    set2 = "--set2" in sys.argv
+    # --set2 / --set3: masuratorile pe seturi noi. Motorul citeste din CSV numai COLOANE_PERMISE.
+    SETURI = {"--set2": ("set2", "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"),
+              "--set3": ("set3", "/home/costin/ghid_incoming/FiscalOS_intrebari_set3_50.csv")}
+    ales = next((SETURI[a] for a in sys.argv[1:] if a in SETURI), None)
     ids = [a for a in sys.argv[1:] if a.startswith("Q")]
     dest = os.path.join(_RAD, "artefacte", "intrebari", "raspunsuri_navigare_%s%s.json"
-                        % ("set2" if set2 else "v5", "_proba" if ids else ""))
-    r = ruleaza(dest, ids or None, SET2 if set2 else None)
+                        % (ales[0] if ales else "v5", "_proba" if ids else ""))
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
     print("navigare: %d/%d raspunse | respinse %d | incomplete %d | pasi medii %.1f | %s | $%.4f | %.0f s"
           % (r["raspunse"], r["n"], r["respinse_de_verificare"], r["incomplete_detectate"],
              r["pasi_medii"], r["tokeni"], r["cost_usd"], r["secunde_total"]))
