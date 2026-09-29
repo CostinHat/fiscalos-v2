@@ -254,25 +254,48 @@ def test_C32_pastele_ortodox_calculat():
     assert navigare.pastele_ortodox(2027) == datetime.date(2027, 5, 2)
 
 
-def test_C32_sambata_se_prelungeste_la_luni_Q_TVA_07():
+def _lista_datata(dupa):
+    """Un atom-lista SINTETIC, cu toate sarbatorile datate - ca sa se probeze mecanismul (C32) separat de
+    lipsa datelor din textul oficial (C34)."""
+    s = dict(dupa["legea_53_2003_codul_muncii#art139/alin1"])
+    s["id"] = "sintetic#lista_datata"
+    s["text"] = s["text"].replace("Adormirea Maicii Domnului", "15 august - Adormirea Maicii Domnului") \
+        .replace("prima și a doua zi de Crăciun", "25 și 26 decembrie - Crăciunul")
+    return s
+
+
+def test_C34_textul_oficial_numeste_sarbatori_fara_data_calculul_se_abtine():
     dupa, cit = _atomi_calendar()
-    val, gr, det = _termen("28.02.2026", cit, dupa)
+    assert "Adormirea Maicii Domnului;" in dupa["legea_53_2003_codul_muncii#art139/alin1"]["text"]
+    gr = _termen("28.02.2026", cit, dupa)[1]
+    assert any("C34" in g and "fara data" in g and "Adormirea" in g for g in gr), gr
+
+
+def test_C32_mecanismul_sambata_se_prelungeste_la_luni_Q_TVA_07():
+    dupa, cit = _atomi_calendar()
+    s = _lista_datata(dupa)
+    dupa[s["id"]] = s
+    val, gr, det = _termen("28.02.2026", [cit[0], s["id"]], dupa)
     assert gr == [] and val == {"t": "02.03.2026"}, (gr, val)
     txt = " ".join(navigare.pas_cu_pas(det))
     assert "28.02.2026 sâmbătă" in txt and "01.03.2026 duminică" in txt and "art181/alin2" in txt, txt
 
 
-def test_C32_vinerea_mare_si_pastele_din_calcul_declarat():
+def test_C32_mecanismul_vinerea_mare_si_pastele_din_calcul_declarat():
     dupa, cit = _atomi_calendar()
-    val, gr, det = _termen("10.04.2026", cit, dupa)
+    s = _lista_datata(dupa)
+    dupa[s["id"]] = s
+    val, gr, det = _termen("10.04.2026", [cit[0], s["id"]], dupa)
     assert val == {"t": "14.04.2026"}, (gr, val)
     txt = " ".join(navigare.pas_cu_pas(det))
     assert "Paștele ortodox = 12.04.2026" in txt and "Meeus" in txt, txt
 
 
-def test_C32_zi_lucratoare_ramane_neschimbata():
+def test_C32_mecanismul_zi_lucratoare_ramane_neschimbata():
     dupa, cit = _atomi_calendar()
-    assert _termen("25.03.2026", cit, dupa)[0] == {"t": "25.03.2026"}
+    s = _lista_datata(dupa)
+    dupa[s["id"]] = s
+    assert _termen("25.03.2026", [cit[0], s["id"]], dupa)[0] == {"t": "25.03.2026"}
 
 
 def test_C32_fara_atomii_citati_termen_efectiv_e_respins():

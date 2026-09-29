@@ -1,13 +1,13 @@
 {
  "cod_fiscal_227_2015_consolidat": {
-  "n": 6612,
+  "n": 6635,
   "structura": "articole",
-  "cu_valabilitate": 1862,
+  "cu_valabilitate": 1879,
   "ultima_nota": "2026-08-08",
   "data_formei_consolidate": "08.08.2026"
  },
  "legea_70_2015_consolidat": {
-  "n": 70,
+  "n": 73,
   "structura": "articole",
   "cu_valabilitate": 22,
   "ultima_nota": "2026-01-01",
@@ -21,23 +21,23 @@
   "data_formei_consolidate": "17.09.2025"
  },
  "legea_207_2015_consolidat": {
-  "n": 4464,
+  "n": 4470,
   "structura": "articole",
-  "cu_valabilitate": 822,
+  "cu_valabilitate": 825,
   "ultima_nota": "2026-08-08",
   "data_formei_consolidate": "08.08.2026"
  },
  "hg_1_2016_norme_cod_fiscal": {
-  "n": 5825,
+  "n": 5843,
   "structura": "articole",
-  "cu_valabilitate": 733,
+  "cu_valabilitate": 738,
   "ultima_nota": "2026-03-31",
   "data_formei_consolidate": "31.03.2026"
  },
  "omfp_1802_2014": {
-  "n": 2631,
+  "n": 2649,
   "structura": "articole",
-  "cu_valabilitate": 205,
+  "cu_valabilitate": 221,
   "ultima_nota": "2025-11-19",
   "data_formei_consolidate": "19.11.2025"
  },
@@ -98,9 +98,9 @@
   "data_formei_consolidate": "16.01.2026"
  },
  "legea_129_2019": {
-  "n": 911,
+  "n": 938,
   "structura": "articole",
-  "cu_valabilitate": 220,
+  "cu_valabilitate": 222,
   "ultima_nota": "2025-12-19",
   "data_formei_consolidate": "19.12.2025"
  },
@@ -140,7 +140,7 @@
   "data_formei_consolidate": "22.04.2017"
  },
  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor": {
-  "n": 834,
+  "n": 839,
   "structura": "articole",
   "cu_valabilitate": 13,
   "ultima_nota": "2026-03-09",
@@ -161,44 +161,44 @@
   "data_formei_consolidate": "26.09.2020"
  },
  "legea_265_2022": {
-  "n": 866,
+  "n": 939,
   "structura": "articole",
   "cu_valabilitate": 6,
   "ultima_nota": "2023-07-23",
   "data_formei_consolidate": "12.09.2024"
  },
  "legea_287_2009": {
-  "n": 7404,
+  "n": 7345,
   "structura": "articole",
   "cu_valabilitate": 120,
   "ultima_nota": "2026-05-03",
   "data_formei_consolidate": "03.05.2026"
  },
  "legea_296_2020_consolidat": {
-  "n": 590,
+  "n": 598,
   "structura": "articole",
   "cu_valabilitate": 5,
   "ultima_nota": "2022-01-01",
   "data_formei_consolidate": "01.01.2022"
  },
  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii": {
-  "n": 951,
+  "n": 956,
   "structura": "articole",
   "cu_valabilitate": 56,
   "ultima_nota": "2026-02-25",
   "data_formei_consolidate": "25.02.2026"
  },
  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
-  "n": 128,
+  "n": 159,
   "structura": "articole",
   "cu_valabilitate": 0,
   "ultima_nota": null,
   "data_formei_consolidate": "forma de baza 10.01.2019"
  },
  "legea_31_1990_societatile": {
-  "n": 1997,
+  "n": 2002,
   "structura": "articole",
-  "cu_valabilitate": 596,
+  "cu_valabilitate": 597,
   "ultima_nota": "2025-12-18",
   "data_formei_consolidate": "18.12.2025"
  },
@@ -210,7 +210,7 @@
   "data_formei_consolidate": "11.11.2024"
  },
  "legea_448_2006_protectia_persoanelor_cu_handicap": {
-  "n": 823,
+  "n": 825,
   "structura": "articole",
   "cu_valabilitate": 268,
   "ultima_nota": "2026-08-31",
@@ -231,16 +231,16 @@
   "data_formei_consolidate": "01.02.2016"
  },
  "legea_82_1991_consolidat": {
-  "n": 256,
+  "n": 257,
   "structura": "articole",
   "cu_valabilitate": 101,
   "ultima_nota": "2025-02-04",
   "data_formei_consolidate": "04.02.2025"
  },
  "legea_85_2014": {
-  "n": 2035,
+  "n": 2052,
   "structura": "articole",
-  "cu_valabilitate": 321,
+  "cu_valabilitate": 327,
   "ultima_nota": "2025-12-18",
   "data_formei_consolidate": "18.12.2025"
  },
@@ -252,7 +252,7 @@
   "data_formei_consolidate": "17.11.2024"
  },
  "og_13_2011": {
-  "n": 197,
+  "n": 276,
   "structura": "articole",
   "cu_valabilitate": 1,
   "ultima_nota": "2013-04-05",
@@ -287,9 +287,9 @@
   "data_formei_consolidate": "24.07.2026"
  },
  "ordin_2594_2015": {
-  "n": 283,
+  "n": 287,
   "structura": "articole",
-  "cu_valabilitate": 57,
+  "cu_valabilitate": 59,
   "ultima_nota": "2023-12-28",
   "data_formei_consolidate": "28.12.2023"
  },
@@ -315,7 +315,7 @@
   "data_formei_consolidate": "09.05.2023"
  },
  "oug_115_2023_consolidat": {
-  "n": 682,
+  "n": 698,
   "structura": "articole",
   "cu_valabilitate": 18,
   "ultima_nota": "2024-12-05",
@@ -329,7 +329,7 @@
   "data_formei_consolidate": "18.12.2025"
  },
  "oug_120_2021": {
-  "n": 166,
+  "n": 167,
   "structura": "articole",
   "cu_valabilitate": 47,
   "ultima_nota": "2026-06-01",
@@ -357,24 +357,31 @@
   "data_formei_consolidate": "26.11.2022"
  },
  "oug_70_2024_ro_etva_decont_precompletat": {
-  "n": 83,
+  "n": 84,
   "structura": "articole",
   "cu_valabilitate": 12,
   "ultima_nota": "2026-03-09",
   "data_formei_consolidate": "09.03.2026"
  },
  "oug_89_2025": {
-  "n": 475,
+  "n": 489,
   "structura": "articole",
-  "cu_valabilitate": 23,
+  "cu_valabilitate": 25,
   "ultima_nota": "2026-08-16",
   "data_formei_consolidate": "16.08.2026"
  },
  "legea_134_2010_codul_de_procedura_civila": {
-  "n": 4312,
+  "n": 4290,
   "structura": "articole",
-  "cu_valabilitate": 172,
+  "cu_valabilitate": 169,
   "ultima_nota": "2025-12-14",
   "data_formei_consolidate": "14.12.2025"
+ },
+ "ordin_1099_2016": {
+  "n": 60,
+  "structura": "articole",
+  "cu_valabilitate": 0,
+  "ultima_nota": null,
+  "data_formei_consolidate": "forma de baza 12.07.2016"
  }
 }

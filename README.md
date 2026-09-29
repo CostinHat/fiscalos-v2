@@ -152,6 +152,14 @@ venv/bin/python -m fiscalos.surse_oficiale_c31   # rezolvarea in portal + aducer
 python3 -m fiscalos.raport_v6
 ```
 
+## Pasul 8 — deciziile C34–C37 (`intrebari/v7/`, `propuneri/v8/`)
+
+Fără apel la model. Art. 139 din Codul muncii, verificat în textul oficial: două sărbători chiar nu au
+dată, deci `termen_efectiv` se abține (C34); „...” din liste era forma restrânsă ascunsă a portalului,
+scoasă ca clasă. Conversia oficială reparată pe șase clase (textul citat după `S_CIT`, cu adâncimea
+citării; exponenți și litere în numere; text reprodus din alt act → notă), iar detectorul iese curat pe
+stratul oficial (C36). Ordinul 1099/2016 identificat după antetul lui (C37). De decis: C38, C39.
+
 ## Cum se rulează
 
 ```sh

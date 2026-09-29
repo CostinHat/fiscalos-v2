@@ -72,6 +72,9 @@ def detecteaza(corp=None):
         sursa = corp.sursa_act.get(act, {}).get("sursa", "")
         if not normativ:
             categ = "nenormativ - numai raportat"
+        elif act in getattr(corp, "inlocuit", {}):
+            categ = ("varianta stricata, inlocuita de %s (oficial) - pastrata numai pentru potrivirea iConta, "
+                     "scoasa din indexul motorului de intrebari" % corp.inlocuit[act])
         elif _ISTORIC.search(act):
             categ = "redare istorica - nu se inlocuieste cu consolidatul curent"
         elif sursa.startswith(("oficial", "compus")):

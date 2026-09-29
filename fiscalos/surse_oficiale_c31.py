@@ -30,6 +30,21 @@ def cheie(act):
         if m and m.group(1) in TIP else None
 
 
+def antet(act):
+    """Antetul actului din textul instantaneului: {antet, data "zz/ll/aaaa", emitent} sau None."""
+    from fiscalos import intrebari
+    strat = json.load(open(os.path.join(_RAD, "artefacte", "strat_text.json"), encoding="utf-8"))["acte"]
+    if act not in strat:
+        return None
+    t = " ".join(open(os.path.join(_RAD, strat[act]["text"]), encoding="utf-8").read().split())
+    m = re.search(r"(ORDIN|HOTĂRÂRE|ORDONANȚĂ|LEGE)\s+nr\.\s*[\d.]+\s+din\s+(\d{1,2})\s+(%s)\s+(\d{4})(.{0,300}?)"
+                  r"EMITENT\s+([A-ZĂÂÎȘȚŞŢ ,\-]{5,120})" % "|".join(intrebari._LUNI), t, re.I)
+    if not m:
+        return None
+    return {"antet": m.group(0)[:300], "emitent": re.split(r"\s+Publicat", m.group(6))[0].strip(),
+            "data": "%02d/%02d/%s" % (int(m.group(2)), intrebari._LUNI[m.group(3).lower()], m.group(4))}
+
+
 def rezolva(p, act):
     k = cheie(act)
     if k is None:
@@ -49,8 +64,17 @@ def rezolva(p, act):
         hit = buni
         if not hit:
             return None, "niciun ordin %s/%s al emitentului asteptat" % (nr, an)
-    if len({i for i, _t in hit}) > 1 and tip in ("omfp", "omf", "opanaf", "oms", "ordin"):
-        return None, "ambiguu: %s" % hit[:4]
+    if len({i for i, _t in hit}) > 1:
+        # C37: nu se ghiceste - se identifica dupa CONTEXT. Antetul actului, asa cum il are instantaneul
+        # ("ORDIN nr. 1.099 din 12 iulie 2016 pentru ... EMITENT MINISTERUL FINANTELOR PUBLICE"), da data
+        # si emitentul; se pastreaza numai rezultatul portalului cu aceeasi data.
+        ctx = antet(act)
+        if ctx:
+            buni = [(i, t) for i, t in hit if ctx["data"] in t]
+            if len({i for i, _t in buni}) == 1:
+                return buni[0], ("identificat dupa antetul din textul instantaneului: \"%s\" (data %s, emitent "
+                                 "%s) -> %s" % (ctx["antet"][:160], ctx["data"], ctx["emitent"], buni[0][1]))
+        return None, "ambiguu, iar contextul nu decide: %s" % hit[:4]
     return hit[0], "cautare tip %s, nr. %s, an %s -> %s" % (cod, nr, an, hit[0][1])
 
 

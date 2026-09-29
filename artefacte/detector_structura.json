@@ -27,25 +27,6 @@
   "categorie": "nenormativ - numai raportat",
   "modificator": false
  },
- "legea_129_2019": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 4,
-  "S1_exemple": [
-   "legea_129_2019#art53/alin4~2",
-   "legea_129_2019#art53/alin2^1~2",
-   "legea_129_2019#art53/alin2^1~3",
-   "legea_129_2019#art53/alin3~2"
-  ],
-  "S2_articole_recunoscute": 74,
-  "S2_cel_mai_mare_articol": 270,
-  "S2_acoperire": 0.274,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 19.12.2025",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": false
- },
  "legea_165_2018_mf_2024": {
   "S4_articole_in_nota": 0,
   "S4_exemple": [],
@@ -66,66 +47,6 @@
   "categorie": "de adus din sursa oficiala",
   "modificator": false
  },
- "legea_265_2022": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 5,
-  "S1_exemple": [
-   "legea_265_2022#art72~2/alin4~2",
-   "legea_265_2022#art72~2/alin5~2",
-   "legea_265_2022#art237^2/alin2~2",
-   "legea_265_2022#art248/alin2~2",
-   "legea_265_2022#art266/alin2~2"
-  ],
-  "S2_articole_recunoscute": 153,
-  "S2_cel_mai_mare_articol": 293,
-  "S2_acoperire": 0.522,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 12.09.2024",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": false
- },
- "legea_287_2009": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 13,
-  "S1_exemple": [
-   "legea_287_2009#art2664/alin2~2",
-   "legea_287_2009#art2664/alin2~3",
-   "legea_287_2009#art2664/alin3~2",
-   "legea_287_2009#art2664/alin2~4",
-   "legea_287_2009#art2664/alin2~5"
-  ],
-  "S2_articole_recunoscute": 2664,
-  "S2_cel_mai_mare_articol": 2664,
-  "S2_acoperire": 1.0,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 03.05.2026",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": false
- },
- "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 8,
-  "S1_exemple": [
-   "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct1/art40^2/alin4~2",
-   "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct1/art40^2/alin7~2",
-   "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct19/art123^1/alin7~2",
-   "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct19/art123^1/alin8~2",
-   "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct19/art123^1/alin9~2"
-  ],
-  "S2_articole_recunoscute": 1,
-  "S2_cel_mai_mare_articol": 9,
-  "S2_acoperire": null,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din forma de baza 10.01.2019",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": true
- },
  "legea_31_1990_modif_L222_2023": {
   "S4_articole_in_nota": 0,
   "S4_exemple": [],
@@ -140,46 +61,6 @@
   "S3_exemple": [],
   "sursa": "instantaneu iConta",
   "categorie": "de adus din sursa oficiala",
-  "modificator": false
- },
- "legea_31_1990_societatile": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 8,
-  "S1_exemple": [
-   "legea_31_1990_societatile#art270^2/alin1~2",
-   "legea_31_1990_societatile#art270^2/alin2~2",
-   "legea_31_1990_societatile#art270^2/alin3~2",
-   "legea_31_1990_societatile#art270^2/alin1~3",
-   "legea_31_1990_societatile#art270^2/alin2~3"
-  ],
-  "S2_articole_recunoscute": 294,
-  "S2_cel_mai_mare_articol": 294,
-  "S2_acoperire": 1.0,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 18.12.2025",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": false
- },
- "og_13_2011": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 10,
-  "S1_exemple": [
-   "og_13_2011#art84/alin2~2",
-   "og_13_2011#art84/alin2~3",
-   "og_13_2011#art185/alin3~2",
-   "og_13_2011#art185/alin3~3",
-   "og_13_2011#art185/alin4~2"
-  ],
-  "S2_articole_recunoscute": 32,
-  "S2_cel_mai_mare_articol": 404,
-  "S2_acoperire": 0.079,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 07.08.2024",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
   "modificator": false
  },
  "omfp_1802_2014_ordin_consolidat": {
@@ -249,38 +130,6 @@
   "sursa": "instantaneu iConta",
   "categorie": "redare istorica - nu se inlocuieste cu consolidatul curent",
   "modificator": false
- },
- "oug_70_2024_ro_etva_decont_precompletat": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 0,
-  "S1_exemple": [],
-  "S2_articole_recunoscute": 20,
-  "S2_cel_mai_mare_articol": 325,
-  "S2_acoperire": 0.062,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 09.03.2026",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": false
- },
- "oug_89_2025": {
-  "S4_articole_in_nota": 0,
-  "S4_exemple": [],
-  "S1_alineate_duplicate": 3,
-  "S1_exemple": [
-   "oug_89_2025#artV/alin1~2",
-   "oug_89_2025#artV/alin2~2",
-   "oug_89_2025#artV/alin3~2"
-  ],
-  "S2_articole_recunoscute": 1,
-  "S2_cel_mai_mare_articol": 25,
-  "S2_acoperire": null,
-  "S3_articole_imbricate": 0,
-  "S3_exemple": [],
-  "sursa": "oficial: legislatie.just.ro, forma consolidata din 16.08.2026",
-  "categorie": "deja din sursa oficiala - defect al conversiei portalului",
-  "modificator": true
  },
  "pdf_original/structura_D100_2026": {
   "S4_articole_in_nota": 0,

@@ -163,9 +163,50 @@ def _aplatizeaza_note(h):
 _CUPRINS_PORTAL = re.compile(r'<a href="#id_[^"]*"[^>]*pozitioneaza[^>]*>.*?</a>', re.I | re.S)
 
 
+# C34 (defect de conversie gasit la verificarea art. 139 din Codul muncii): portalul pune dupa fiecare
+# liniuta, litera, punct si nota un <span class="S_*_SHORT" style="display:none"> ... </span> - forma
+# RESTRANSA a elementului, ascunsa in pagina. Convertita in text, ea lasa " ... " intre elementele
+# listelor ("– 1 și 2 ianuarie; ... – 6 ianuarie"). Nu e text al actului: se scoate. Masurat: 24.930 de
+# asemenea span-uri in cele 54 de acte oficiale, toate cu continutul "..." si nimic altceva.
+_FORMA_RESTRANSA = re.compile(r'<span[^>]*class="S_[A-Z]+_SHORT"[^>]*>\s*(?:\.\.\.)?\s*</span>', re.I)
+
+
+# C36: portalul marcheaza TEXTUL CITAT (continutul unui punct de interventie: "Articolul 72 se modifica
+# si va avea urmatorul cuprins: ...") cu <span class="S_CIT">. Un titlu de articol/alineat/litera/punct
+# aflat INAUNTRUL unui S_CIT e citat din alt act; unul din afara e al actului. Informatia e a portalului,
+# nu ghicita: inlocuieste, in stratul oficial, euristicile pe numerotare (OG 13/2011 art. 14 propriu vs
+# art. 14 citat din OG 9/2004 nu se pot deosebi dupa numar).
+_TOKEN_SPAN = re.compile(r"<span\b([^>]*?)(/?)>|</span\s*>", re.I)
+_TTL_STRUCT = ("S_ART_TTL", "S_ALN_TTL", "S_LIT_TTL", "S_PCT_TTL")
+
+
+def _marcheaza_citate(h):
+    ies, poz, stiva = [], 0, []
+    for t in _TOKEN_SPAN.finditer(h):
+        if t.group(0).startswith("</"):
+            if stiva:
+                stiva.pop()
+            continue
+        if t.group(2) == "/":
+            continue
+        m = re.search(r'class="([^"]+)"', t.group(1))
+        cls = m.group(1) if m else ""
+        if cls in _TTL_STRUCT and "S_CIT" in stiva:
+            # adancimea citarii: o lege de aprobare citeaza puncte ale unei ordonante care, la randul
+            # lor, citeaza articole din Codul fiscal (Legea 30/2019) - gradul 2
+            ies.append(h[poz:t.end()])
+            ies.append(atomizare.CITAT_MARCAJ * stiva.count("S_CIT"))
+            poz = t.end()
+        stiva.append(cls)
+    ies.append(h[poz:])
+    return "".join(ies)
+
+
 def html_portal_in_text(h):
     h = _CUPRINS_PORTAL.sub("", h)
+    h = _FORMA_RESTRANSA.sub("", h)
     h = _aplatizeaza_note(h)
+    h = _marcheaza_citate(h)
     return strat_text.html_in_text(_SPAN_STRUCT.sub(lambda m: "<br/>" + m.group(1), h))
 
 
@@ -180,7 +221,8 @@ def atomizeaza():
             b = open(os.path.join(DIR, x["fisier"]), "rb").read()
             assert _sha(b) == x["sha256"], ("fisier modificat dupa aducere", x["fisier"])
             texte.append(html_portal_in_text(b.decode("utf-8", "replace")))
-        atomi, structura = atomizare.atomizeaza_text(act, "\n\n".join(texte))
+        atomi, structura = atomizare.atomizeaza_text(act, ("\n%s\n" % atomizare.DOC_MARCAJ).join(texte),
+                                                     oficial=True)
         for a in atomi:
             a["sursa"] = "oficial"
         with open(os.path.join(DIR_ATOMI, act + ".jsonl"), "w", encoding="utf-8") as f:

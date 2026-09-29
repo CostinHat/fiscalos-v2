@@ -64,7 +64,9 @@ _RUN_CUPRINS = 6            # atatea marcaje consecutive fara text = cuprins, nu
 # ── F1: "Articolul 291" / "Articolul 18^1" / "ART. 291." — numarul SINGUR pe rand ───────────────
 # C31: numerele de articol peste 999 apar in forma portalului cu separator de mii ("Articolul 1.000",
 # Codul civil); nerecunoscute, tot ce urma se lipea ca alineate de art. 999. Numarul se normalizeaza.
-_NR_ART = r"(\d{1,3}(?:\.\d{3})+(?:\^\d+)?|\d+(?:\^\d+)?|[IVXLCDM]+)"
+# C36: si "Articolul V^1" (roman cu exponent, OUG 89/2025) si "Articolul 270^2 a)" (numar cu litera,
+# Legea 31/1990) - nerecunoscute, corpul lor se lipea ca alineate duplicate de articolul dinainte
+_NR_ART = r"(\d{1,3}(?:\.\d{3})+(?:\^\d+)?|\d+(?:\^\d+)?(?:\s+[a-z]\))?|[IVXLCDM]+(?:\^\d+)?)"
 _ART = re.compile(r"^\s*(?:Articolul|ARTICOLUL|Art\.|ART\.|Art|ART)\s*" + _NR_ART + r"\s*\.?\s*$")
 # ── F2: "Art. I - (1) text" / "Art. 1577 - Baza lunară..." — liniuta separa numarul de corp ─────
 _ART_INLINE = re.compile(r"^\s*(?:Articolul|ARTICOLUL|Art\.|ART\.)\s*" + _NR_ART +
@@ -86,7 +88,7 @@ _ABROGAT = re.compile(r"^\s*Abrogat[ăa]?\.?\s*$", re.I)
 _TITLU = re.compile(r"^\s*(Titlul|TITLUL|Capitolul|CAPITOLUL|Secțiunea|SECȚIUNEA|Sectiunea|"
                     r"SECTIUNEA|Subsecțiunea|Subsectiunea|Partea|PARTEA|Anexa|ANEXA)\s+"
                     r"([IVXLCDM0-9]+.*)$")
-_ROMAN = re.compile(r"^[IVXLCDM]+$")
+_ROMAN = re.compile(r"^[IVXLCDM]+(?:\^\d+)?$")
 # C26: inceputul unei ANEXE - rand de sine statator: "ANEXA", "ANEXĂ", "Anexa nr. 2", "ANEXA 1 *1)",
 # "Anexa Nr. 1*)", "ANEXĂ^1)", optional urmat de un titlu cu majuscule ("ANEXĂ REGLEMENTĂRI
 # CONTABILE ...", "ANEXA 1 - PROCEDURI ..."). NU: "Anexa nr. 1 a fost modificată", "Anexa face parte
@@ -111,12 +113,13 @@ def _valoare_art(cheie):
     """Ordinea unui numar de articol: 18^1 -> (18, 1); roman -> valoarea lui."""
     c = str(cheie)
     if _ROMAN.match(c):
+        c, _s, exp = c.partition("^")
         v, prev = 0, 0
         for ch in reversed(c):
             x = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}[ch]
             v = v - x if x < prev else v + x
             prev = max(prev, x)
-        return (v, 0)
+        return (v, int(exp or 0))
     b, _s, e = c.partition("^")
     try:
         return (int(b), int(e or 0))
@@ -198,6 +201,31 @@ def _randuri_de_cuprins(randuri):
 
 
 _RANG = {"anexa": -1, "articol": 0, "alineat": 1, "litera": 2, "punct": 3}
+_REPRODUCERE = re.compile(r"^(NOTĂ:\s*)?Reproducem mai jos", re.I)
+DOC_MARCAJ = "⟦DOCUMENT⟧"
+CITAT_MARCAJ = "⟦CITAT⟧"
+
+
+# C36: un punct e de INTERVENTIE si intr-un articol ARAB, daca textul lui o spune ("1. La articolul 6
+# alineatul (2), literele a) si c) se modifica si vor avea urmatorul cuprins:"). Legea 129/2019 art. 53,
+# OG 13/2011, OUG 70/2024 modifica alte legi din articole arabe; alineatele citate se lipeau ca alineate
+# duplicate ale articolului-gazda. Textul punctului vine pe randul URMATOR in forma portalului, deci
+# decizia se ia cand sosesc alineatele, nu la deschiderea punctului.
+_TEXT_INTERVENTIE = re.compile(r"(se modific[ăa]|se complet(?:ează|eaza)|se introduc[e]?|se înlocuiește|"
+                               r"se inlocuieste|va avea|vor avea|se adaug[ăa])\b[^.]{0,200}"
+                               r"\b(urm[ăa]torul cuprins|următoarea formă)", re.I)
+
+
+def _e_interventie(nod):
+    if nod.get("interventie"):
+        return True
+    if nod.get("citat"):
+        return False                     # un punct din textul citat nu e interventia actului
+    if nod["nivel"] == "punct" and _TEXT_INTERVENTIE.search(" ".join(nod["text"]) if isinstance(
+            nod["text"], list) else nod["text"]):
+        nod["interventie"] = True
+        return True
+    return False
 
 
 class _Culegator:
@@ -232,6 +260,8 @@ class _Culegator:
         self.ultim_art_propriu = None
         self.anexa_principala = None
         self.titlul = None      # ultimul "Titlul X" (capitolele nu il sterg): numeste titlul in norme
+        self.oficial = False
+        self.citat = 0          # adancimea S_CIT a randului curent (0 = text propriu; stratul oficial)
 
     # ── ierarhie ────────────────────────────────────────────────────────────────────────────────
     @property
@@ -249,7 +279,7 @@ class _Culegator:
         """Urca in stiva pana la un parinte valid pentru `nivel` (si o taie acolo)."""
         while self.stiva:
             top = self.stiva[-1]
-            if top["nivel"] == "punct" and top.get("interventie") and nivel in ("alineat", "litera"):
+            if top["nivel"] == "punct" and _e_interventie(top) and nivel in ("alineat", "litera"):
                 return top                      # citat verbatim in actul modificator
             if top["nivel"] == "punct" and top.get("punct_de_anexa") and nivel in ("alineat", "litera"):
                 return top                      # C26: punctul unei anexe e unitatea ei, ca un articol
@@ -273,7 +303,7 @@ class _Culegator:
         return None
 
     _PREFIX = {"articol": "art", "alineat": "alin", "litera": "lit", "punct": "pct",
-               "fragment": "frag", "anexa": "anexa"}
+               "fragment": "frag", "anexa": "anexa", "nota": "nota"}
 
     def deschide(self, nivel, cheie, text, linie, parinte=None):
         if nivel == "articol" and parinte is None:
@@ -287,11 +317,28 @@ class _Culegator:
             # (Art. I, Art. II), cele citate din Codul fiscal sunt arabe. Deci `Art. III` inchide
             # art. II, iar `Art. 1577` se cuibareste.
             gazda = None
-            if not _ROMAN.match(str(cheie)):
+            if self.oficial:
+                # stratul oficial: portalul spune ce e citat (S_CIT) - articolul citat se cuibareste sub
+                # punctul care il introduce, cel propriu inchide tot
+                if self.citat:
+                    gazda = next((nod for nod in reversed(self.stiva) if nod["nivel"] == "punct"
+                                  and nod.get("citat", 0) < self.citat), None)
+            elif not _ROMAN.match(str(cheie)):
                 for nod in reversed(self.stiva):
-                    if nod["nivel"] == "punct" and nod.get("interventie"):
+                    if nod["nivel"] == "punct" and _e_interventie(nod):
                         gazda = nod
                         break
+            # C36: intr-un act de baza ARAB care modifica alte acte (OG 13/2011 art. 12), articolul care
+            # urmeaza imediat ultimului articol propriu (13 dupa 12) e al actului, nu citat - altfel
+            # art. 13-17 se cuibareau sub punctul de interventie al art. 12
+            # ... afara de cazul in care punctul de interventie numeste chiar acel articol ("30. Articolul
+            # 72 se modifica ..." in Legea 265/2022, al carei articol-gazda e chiar art. 71)
+            if gazda is not None and not self.oficial and self.ultim_art_propriu is not None and \
+                    not _ROMAN.match(str(self.ultim_art_propriu)) and \
+                    _valoare_art(cheie)[0] == _valoare_art(self.ultim_art_propriu)[0] + 1 and \
+                    not re.search(r"\barticolul\s+%s\b" % re.escape(str(cheie)),
+                                  " ".join(gazda["text"]) if isinstance(gazda["text"], list) else gazda["text"], re.I):
+                gazda = None
             anexa = self._nod("anexa")
             if gazda is None and anexa is not None:
                 # C26: un articol dintr-o anexa (norme, regulament aprobat prin anexa) e al anexei,
@@ -320,7 +367,7 @@ class _Culegator:
             else:
                 self.stiva = []
                 parinte = None
-        elif nivel == "fragment":
+        elif nivel in ("fragment", "nota"):
             self.stiva = []
             parinte = None
         else:
@@ -329,7 +376,7 @@ class _Culegator:
             else:
                 while self.stiva and self.stiva[-1] is not parinte:
                     self.stiva.pop()
-            if parinte is None and nivel != "fragment":
+            if parinte is None and nivel not in ("fragment", "nota"):
                 return None                     # unitate fara articol-gazda: nu se inventeaza una
         if nivel == "articol" and parinte is None:
             self.ultim_art_propriu = cheie
@@ -352,6 +399,8 @@ class _Culegator:
              "titlu_structural": self.titlu, "linie": linie,
              "text": [text] if text else [],
              "valabil_din": None, "valabil_pana": None, "modificat_de": [], "abrogat": False}
+        if self.citat:
+            a["citat"] = self.citat
         anexa = self._nod("anexa") if nivel != "anexa" else a
         if anexa is not None:
             a["anexa"] = anexa["cheie"]
@@ -363,11 +412,13 @@ class _Culegator:
             if parinte is not None and parinte["nivel"] == "anexa":
                 a["punct_de_anexa"] = True
             self.secv[parinte["id"]] = int(cheie) if str(cheie).isdigit() else 0
+        if nivel == "nota":
+            a["nota_tranzitorie"] = True     # C36: text reprodus din ALT act, nu articol al actului
         if nivel == "anexa" and parinte is None and self.anexa_principala is None:
             self.anexa_principala = a
         self.atomi.append(a)
         self.index[aid] = a
-        if nivel != "fragment":
+        if nivel not in ("fragment", "nota"):
             self.stiva.append(a)
         return a
 
@@ -380,11 +431,12 @@ class _Culegator:
             a["text"].append(linie)
 
 
-def atomizeaza_text(act, text):
+def atomizeaza_text(act, text, oficial=False):
     """(atomi, structura) pentru un act. `structura` = 'articole' sau 'fragmente'."""
     randuri = text.split("\n")
     cuprins = _randuri_de_cuprins(randuri)
     c = _Culegator(act)
+    c.oficial = oficial
     n = len(randuri)
     i = 0
     while i < n:
@@ -393,6 +445,20 @@ def atomizeaza_text(act, text):
         i += 1
         if not linie or idx in cuprins:
             continue
+        c.citat = 0
+        while linie.startswith(CITAT_MARCAJ):          # adancimea citarii (gradul 1, 2, ...)
+            c.citat += 1
+            linie = linie[len(CITAT_MARCAJ):]
+        if c.citat:
+            # un alineat/litera/punct CITAT: punctul care il cuprinde e, prin definitie, de interventie
+            linie = linie.strip()
+            # gazda = cel mai apropiat punct de adancime MAI MICA: o enumerare "1. 2. 3." din acelasi text
+            # citat nu e punctul de interventie (Legea 141/2025 art. II pct. 42: lit. c) ajungea sub
+            # lit. b) pct. 4)
+            gazda = next((nod for nod in reversed(c.stiva) if nod["nivel"] == "punct"
+                          and nod.get("citat", 0) < c.citat), None)
+            if gazda is not None:
+                gazda["interventie"] = True
 
         # ── nota de valabilitate: se ataseaza la atomul CURENT si se consuma pana la ")" ────────
         m = _NOTA_DIN.match(linie)
@@ -415,6 +481,32 @@ def atomizeaza_text(act, text):
                     tinta["valabil_din"] = d
                 if nota:
                     tinta["modificat_de"].append({"din": d, "nota": nota})
+            continue
+
+        # C36: "NOTĂ: Reproducem mai jos: - prevederile art. 74-77 ... din Legea nr. 76/2012" - ce urmeaza
+        # sunt articole ALTUI act, reproduse la finalul consolidatului (Codul civil: Legea 71/2011; Codul de
+        # procedura civila: Legea 76/2012). Parsate ca structura, ele dadeau un al doilea "art. 74" si
+        # alineate duplicate sub ultimul articol. Devin un atom NOTA al actului, pana la sfarsitul
+        # documentului (separatorul DOC_MARCAJ, pus de stratul oficial intre documente).
+        # numai in forma PORTALULUI (stratul oficial): in textul liber al instantaneului, aceeasi fraza
+        # apare si in mijlocul actului, fara o granita sigura - masurat, regula muta acolo continut real
+        if oficial and (_REPRODUCERE.match(linie) or (linie.startswith("NOTĂ:") and i < n and
+                                                      _REPRODUCERE.match(randuri[i].strip()))):
+            corp = [linie]
+            while i < n and randuri[i].strip() != DOC_MARCAJ:
+                r = randuri[i].strip()
+                # zona se incheie la primul articol care CONTINUA numerotarea proprie a actului: in
+                # instantaneu nota apare si in mijlocul actului (Codul fiscal), nu doar la final
+                fel_r, nr_r, _rest = _marcaj(r) if r else (None, None, None)
+                if fel_r == "articol" and c.ultim_art_propriu is not None and \
+                        _valoare_art(nr_r.replace(".", "")) > _valoare_art(c.ultim_art_propriu):
+                    break
+                if r:
+                    corp.append(r)
+                i += 1
+            c.deschide("nota", str(sum(1 for a in c.atomi if a["nivel"] == "nota") + 1), " ".join(corp), idx + 1)
+            continue
+        if linie == DOC_MARCAJ:
             continue
 
         nr_anexa = _e_anexa(linie)
@@ -456,7 +548,7 @@ def atomizeaza_text(act, text):
                 c.stiva = [c.anexa_principala]
             continue
         if fel == "articol":
-            c.deschide("articol", numar.replace(" ", "").replace(".", ""), "", idx + 1)
+            c.deschide("articol", numar.replace(" ", "").replace(".", "").replace(")", ""), "", idx + 1)
             if rest:
                 ma = _ALIN.match(rest)          # F2: `Art. I - (1) text`
                 if ma:
@@ -493,6 +585,35 @@ def atomizeaza_text(act, text):
             # "- ..." (Reglementarile contabile) sau "(1)" (Normele Codului fiscal: "40^1." / "(1)")
             if urm[:1] in "-–" or re.match(r"^\(1\)", urm):
                 c.deschide("punct", m.group(1), "", idx + 1, parinte=c._nod("anexa"))
+                continue
+
+        # C36: un PUNCT CITAT (stratul oficial, adancime d) are parintele in acelasi text citat (secventa,
+        # noduri de adancime d) sau, altfel, punctul care il introduce (cel mai apropiat de adancime < d).
+        # Legea 30/2019: punctele 1^1-1^6 ale OUG 25/2018, introduse de pct. 1 al legii de aprobare, se
+        # legau prin secventa de art. I, ca frati ai pct. 1.
+        m = re.match(r"^(\d{1,3})(?:\^(\d+))?\.\s*(\S.*)?$", linie) if c.citat else None
+        if m and c._nod("articol") is not None:
+            v, exp = int(m.group(1)), m.group(2)
+            par = next((nod for nod in reversed(c.stiva) if nod.get("citat", 0) == c.citat and (
+                c.secv.get(nod["id"], 0) == v if exp else c.secv.get(nod["id"], 0) + 1 == v)), None)
+            if par is None:
+                par = next((nod for nod in reversed(c.stiva) if nod["nivel"] == "punct"
+                            and nod.get("citat", 0) < c.citat), None)
+            if par is not None:
+                c.deschide("punct", "%s^%s" % (v, exp) if exp else str(v), (m.group(3) or "").strip(),
+                           idx + 1, parinte=par)
+                if exp:
+                    c.secv[par["id"]] = v
+                continue
+
+        # C36: punct cu exponent ("1^5.", Legea 30/2019) - il asteapta nodul al carui ultim punct e 1
+        m = re.match(r"^(\d{1,3})\^(\d+)\.\s*(\S.*)?$", linie)
+        if m:
+            par = next((nod for nod in reversed(c.stiva) if c.secv.get(nod["id"]) == int(m.group(1))), None)
+            if par is not None:
+                c.deschide("punct", "%s^%s" % (m.group(1), m.group(2)), (m.group(3) or "").strip(), idx + 1,
+                           parinte=par)
+                c.secv[par["id"]] = int(m.group(1))
                 continue
 
         m = _PCT.match(linie)

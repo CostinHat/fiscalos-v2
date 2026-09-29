@@ -390,9 +390,9 @@ class Calendar(object):
 
     Datele: cele scrise in atom ("1 și 2 ianuarie", "24 ianuarie", "1 mai") se citesc din text; cele
     MOBILE (Vinerea Mare, Pastele, Rusaliile) se CALCULEAZA, iar calculul se declara; cele NUMITE fara
-    data in atom (Adormirea Maicii Domnului, Craciunul) primesc data fixa a sarbatorii, DECLARATA ca
-    atare (de decis, C34). Sarbatorile cultelor necrestine "pentru persoanele apartinand acestora" nu
-    sunt zile nelucratoare generale si nu intra."""
+    data in atom (Adormirea Maicii Domnului, Craciunul) NU primesc data (decizia C34): calculul se abtine.
+    Sarbatorile cultelor necrestine "pentru persoanele apartinand acestora" nu sunt zile nelucratoare
+    generale si nu intra."""
 
     def __init__(self, regula, lista):
         self.regula, self.lista = regula, lista
@@ -428,20 +428,25 @@ class Calendar(object):
         if mobile:
             decl.append("date mobile calculate pentru %d (Paștele ortodox: algoritmul Meeus pentru "
                         "calendarul iulian + 13 zile): %s" % (an, "; ".join(mobile)))
-        fixe = []
-        if "adormirea maicii domnului" in t:
-            ies[datetime.date(an, 8, 15)] = "Adormirea Maicii Domnului"
-            fixe.append("Adormirea Maicii Domnului = 15.08")
-        if re.search(r"prima si a doua zi de craciun", t):
-            ies[datetime.date(an, 12, 25)], ies[datetime.date(an, 12, 26)] = "Crăciunul", "a doua zi de Crăciun"
-            fixe.append("Crăciunul = 25-26.12")
-        if fixe:
-            decl.append("sărbători numite în atom fără dată, cu data lor fixă (declarată, C34): %s"
-                        % "; ".join(fixe))
+        # C34: o sarbatoare NUMITA in atom fara data ("Adormirea Maicii Domnului", "prima si a doua zi de
+        # Craciun" - textul oficial al art. 139 chiar nu le scrie data, verificat in HTML-ul portalului)
+        # nu primeste data de mana. Ramane fara data, iar calculul se abtine (vezi `termen_efectiv`).
+        self.fara_data = []
+        data_in = re.compile(r"\d{1,2}(?:\s*si\s*\d{1,2})?\s+(%s)\b" % luni)
+        for element in re.split(r";", t):                   # elementele listei, fiecare cu data lui
+            for nume, eticheta in (("adormirea maicii domnului", "Adormirea Maicii Domnului"),
+                                   ("zi de craciun", "prima și a doua zi de Crăciun")):
+                if nume in element and not data_in.search(element):
+                    self.fara_data.append(eticheta)
         return ies, decl
 
     def termen_efectiv(self, d):
         s, decl = self.sarbatori(d.year)
+        if self.fara_data:
+            # oricare zi examinata (inclusiv prima zi "lucratoare") ar putea fi sarbatoarea fara data
+            raise ValueError("C34: atomul listei sarbatorilor legale (%s) numeste fara data: %s - ziua "
+                             "lucratoare nu se poate stabili din atomi; calculul se abtine"
+                             % (self.lista["id"], ", ".join(self.fara_data)))
         s2, decl2 = self.sarbatori(d.year + 1) if d.month == 12 else ({}, [])
         s.update(s2)
         motive, x = [], d

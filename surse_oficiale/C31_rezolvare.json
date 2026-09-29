@@ -230,8 +230,10 @@
    "motiv": "cautare tip 5, nr. 15, an 2018 -> 2. ORDIN 15 05/01/2018"
   },
   "ordin_1099_2016": {
-   "stare": "nerezolvat",
-   "motiv": "ambiguu: [('177075', '1. ORDIN 1099 29/03/2016'), ('179451', '2. ORDIN 1099 23/06/2016'), ('180514', '3. ORDIN 1099 12/07/2016')]"
+   "stare": "adus",
+   "id_portal": "180514",
+   "titlu": "3. ORDIN 1099 12/07/2016",
+   "motiv": "identificat dupa antetul din textul instantaneului: \"ORDIN nr. 1.099 din 12 iulie 2016 pentru reglementarea unor aspecte privind rezidența în România a persoanelor fizice EMITENT MINISTERUL FIN\" (data 12/07/2016, emitent MINISTERUL FINANȚELOR PUBLICE) -> ORDIN 1099 12/07/2016; pagina adusa contine acelasi obiect (\"reglementarea unor aspecte privind rezidenta in Romania a persoanelor fizice\")"
   },
   "ordin_2594_2015": {
    "stare": "adus",

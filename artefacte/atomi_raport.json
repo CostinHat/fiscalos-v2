@@ -204,15 +204,15 @@
   },
   "cod_fiscal_227_2015_consolidat": {
    "abrogati": 315,
-   "cu_valabilitate": 1844,
+   "cu_valabilitate": 1858,
    "fisier": "artefacte/atomi/cod_fiscal_227_2015_consolidat.jsonl",
-   "n": 6098,
+   "n": 6116,
    "niveluri": {
     "alineat": 3173,
     "anexa": 9,
     "articol": 736,
     "litera": 1984,
-    "punct": 196
+    "punct": 214
    },
    "structura": "articole"
   },
@@ -511,13 +511,13 @@
    "abrogati": 61,
    "cu_valabilitate": 481,
    "fisier": "artefacte/atomi/hg_1_2016_norme_cod_fiscal.jsonl",
-   "n": 4203,
+   "n": 4205,
    "niveluri": {
     "alineat": 2283,
     "anexa": 55,
     "articol": 19,
     "litera": 1148,
-    "punct": 698
+    "punct": 700
    },
    "structura": "articole"
   },
@@ -1025,12 +1025,12 @@
   },
   "legea_31_1990_societatile": {
    "abrogati": 91,
-   "cu_valabilitate": 597,
+   "cu_valabilitate": 598,
    "fisier": "artefacte/atomi/legea_31_1990_societatile.jsonl",
-   "n": 1959,
+   "n": 1963,
    "niveluri": {
     "alineat": 1198,
-    "articol": 473,
+    "articol": 477,
     "litera": 288
    },
    "structura": "articole"
@@ -1073,11 +1073,11 @@
    "abrogati": 0,
    "cu_valabilitate": 0,
    "fisier": "artefacte/atomi/legea_370_2022_aprobarea_ordonantei_guvernului_16_2022.jsonl",
-   "n": 68,
+   "n": 70,
    "niveluri": {
     "alineat": 5,
     "anexa": 1,
-    "articol": 5,
+    "articol": 7,
     "litera": 4,
     "punct": 53
    },
@@ -2647,11 +2647,11 @@
    "abrogati": 0,
    "cu_valabilitate": 0,
    "fisier": "artefacte/atomi/oug_200_2008_modificarea_completarea.jsonl",
-   "n": 35,
+   "n": 36,
    "niveluri": {
     "alineat": 8,
     "articol": 8,
-    "punct": 19
+    "punct": 20
    },
    "structura": "articole"
   },
@@ -2752,12 +2752,12 @@
    "abrogati": 0,
    "cu_valabilitate": 0,
    "fisier": "artefacte/atomi/oug_50_2015_consolidat.jsonl",
-   "n": 118,
+   "n": 156,
    "niveluri": {
     "alineat": 39,
     "articol": 10,
     "litera": 10,
-    "punct": 59
+    "punct": 97
    },
    "structura": "articole"
   },
@@ -2809,10 +2809,10 @@
    "abrogati": 1,
    "cu_valabilitate": 15,
    "fisier": "artefacte/atomi/oug_89_2025.jsonl",
-   "n": 309,
+   "n": 306,
    "niveluri": {
     "alineat": 171,
-    "articol": 64,
+    "articol": 61,
     "litera": 74
    },
    "structura": "articole"
@@ -3079,9 +3079,9 @@
    "structura": "fragmente"
   }
  },
- "facut_la": "2026-09-29T09:27:44",
+ "facut_la": "2026-09-29T11:03:32",
  "n_acte": 269,
  "n_acte_pe_articole": 207,
  "n_acte_pe_fragmente": 62,
- "n_atomi": 49525
+ "n_atomi": 49587
 }

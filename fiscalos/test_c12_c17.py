@@ -179,8 +179,13 @@ def test_C26_anexa_citata_intr_un_punct_de_interventie_nu_e_anexa():
 def test_C26_normele_numesc_titlul():
     from fiscalos import potrivire, intrebari
     c = potrivire.Corpus()
+    # punctele normelor se renumeroteaza pe titluri: pct. 1 din Titlul I si pct. 1 din Titlul II sunt
+    # atomi diferiti, iar temeiul uman numeste titlul
     a = c.dupa_id["hg_1_2016_norme_cod_fiscal#anexa/pct1/alin1"]
-    assert "anexa, Titlul II, pct. 1 alin. (1)" in intrebari.temei_uman(a)
+    assert "anexa, Titlul I, pct. 1 alin. (1)" in intrebari.temei_uman(a), intrebari.temei_uman(a)
+    t2 = [x for x in c.pe_act["hg_1_2016_norme_cod_fiscal"] if x["id"].startswith("hg_1_2016_norme_cod_fiscal#anexa/pct1~")
+          and x.get("titlul") == "Titlul II"]
+    assert t2 and "Titlul II, pct. 1" in intrebari.temei_uman(t2[0])
     assert c.dupa_id["omfp_1802_2014#anexa/pct238/alin2"]["text"].startswith("Amortizarea")
 
 
@@ -262,5 +267,68 @@ def test_C31_S4_prinde_articolul_inghitit_intr_o_nota():
 
 def test_propunerea_v6_ramane_neatinsa():
     d = subprocess.run(["git", "diff", "778e826", "--", "propuneri/v6/", "intrebari/v5/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]
+
+
+# ── C36: conversia oficiala, reparata ca clasa; detectorul iese curat pe stratul oficial ─────────
+def test_C36_articolul_citat_S_CIT_se_cuibareste_sub_punct_cel_propriu_nu():
+    from fiscalos import atomizare, surse_oficiale
+    h = ('<span class="S_ART"><span class="S_ART_TTL">Articolul 12</span><span class="S_ART_BDY">Legea X se modifică:'
+         '<span class="S_PCT"><span class="S_PCT_TTL">1.</span><span class="S_PCT_BDY">Articolul 14 va avea următorul cuprins:'
+         '<span class="S_CIT"><span class="S_ART"><span class="S_ART_TTL">Articolul 14</span><span class="S_ART_BDY">'
+         '<span class="S_ALN"><span class="S_ALN_TTL">(1)</span><span class="S_ALN_BDY">Text citat.</span></span>'
+         '</span></span></span></span></span></span></span>'
+         '<span class="S_ART"><span class="S_ART_TTL">Articolul 13</span><span class="S_ART_BDY">'
+         '<span class="S_ALN"><span class="S_ALN_TTL">(1)</span><span class="S_ALN_BDY">Text propriu.</span></span></span></span>')
+    atomi, _s = atomizare.atomizeaza_text("og_x_2011", surse_oficiale.html_portal_in_text(h), oficial=True)
+    ids = {a["id"] for a in atomi}
+    assert "og_x_2011#art12/pct1/art14/alin1" in ids and "og_x_2011#art13/alin1" in ids, sorted(ids)
+
+
+def test_C36_numere_de_articol_si_de_punct_cu_exponent_sau_litera():
+    from fiscalos import atomizare
+    t = "\n".join(["Articolul V", "(1) Text.", "Articolul V^1", "(1) Alt text.", "Articolul 270^2", "(1) A.",
+                   "Articolul 270^2 a)", "(1) B."])
+    ids = {a["id"] for a in atomizare.atomizeaza_text("x", t)[0]}
+    assert {"x#artV^1/alin1", "x#art270^2a/alin1"} <= ids and not any("~" in i for i in ids), sorted(ids)
+
+
+def test_C36_textul_reprodus_din_alt_act_e_nota_nu_articole():
+    from fiscalos import atomizare
+    t = "\n".join(["Articolul 1134", "(1) Intră în vigoare.", "(2) Guvernul.", "NOTĂ:",
+                   "Reproducem mai jos: - prevederile art. 74-77 din Legea nr. 76/2012", "Articolul 74",
+                   "(2) Textul altei legi."])
+    atomi = atomizare.atomizeaza_text("cpc", t, oficial=True)[0]
+    ids = {a["id"] for a in atomi}
+    assert "cpc#nota1" in ids and "cpc#art74" not in ids and "cpc#art1134/alin2~2" not in ids, sorted(ids)
+    assert next(a for a in atomi if a["id"] == "cpc#nota1")["nota_tranzitorie"]
+
+
+def test_C36_forma_restransa_ascunsa_nu_intra_in_text():
+    from fiscalos import surse_oficiale
+    h = ('<span class="S_LIN_BDY">1 și 2 ianuarie;</span><span style="display:none" class="S_LIN_SHORT"> ... </span>'
+         '<span class="S_LIN_BDY">6 ianuarie;</span>')
+    assert "..." not in surse_oficiale.html_portal_in_text(h)
+
+
+def test_C36_detectorul_iese_curat_pe_stratul_oficial_si_cu_motiv_pe_rest():
+    from fiscalos import detector_structura, potrivire
+    d = detector_structura.detecteaza(potrivire.Corpus())
+    assert not any(v["categorie"].startswith("deja din sursa oficiala") for v in d.values()), \
+        [a for a, v in d.items() if v["categorie"].startswith("deja")]
+    assert not any(v["categorie"] == "de adus din sursa oficiala" for v in d.values()), \
+        [a for a, v in d.items() if v["categorie"] == "de adus din sursa oficiala"]
+
+
+def test_C37_ordinul_1099_identificat_dupa_antet():
+    import json as _j
+    r = _j.load(open(os.path.join(_RAD, "surse_oficiale", "C31_rezolvare.json"), encoding="utf-8"))["acte"]
+    assert r["ordin_1099_2016"]["stare"] == "adus" and r["ordin_1099_2016"]["id_portal"] == "180514"
+    assert "12 iulie 2016" in r["ordin_1099_2016"]["motiv"] and "FINANȚELOR" in r["ordin_1099_2016"]["motiv"]
+
+
+def test_propunerea_v7_si_intrebari_v6_raman_neatinse():
+    d = subprocess.run(["git", "diff", "529765c", "--", "propuneri/v7/", "intrebari/v6/"], cwd=_RAD,
                        capture_output=True, text=True).stdout
     assert d == "", d[:300]
