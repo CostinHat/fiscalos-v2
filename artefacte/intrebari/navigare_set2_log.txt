@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 831, in <module>
+    r = ruleaza(dest, ids or None, SET2 if set2 else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 780, in ruleaza
+    qs = [q for q in (intrebari.incarca_intrebari(csv_intrebari) if csv_intrebari else intrebari.incarca_intrebari())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/intrebari.py", line 62, in incarca_intrebari
+    with open(cale, encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv'

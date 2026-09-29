@@ -199,8 +199,9 @@ def test_setul_2_se_incarca_orb():
     """Masuratoarea finala: aceeasi orbire pe setul 2 - motorul primeste numai id, tip, intrebare."""
     from fiscalos import intrebari
     f = "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"
-    if not os.path.exists(f):
-        return
+    # fara fisier, proba PICA (nu trece pe tacute): prima versiune facea `return` si a raportat PASS
+    # fara sa verifice nimic
+    assert os.path.exists(f), "setul 2 lipseste: %s" % f
     qs = intrebari.incarca_intrebari(f)
     assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
     assert all(q["id"].startswith("Q2-") for q in qs)
