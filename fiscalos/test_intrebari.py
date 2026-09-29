@@ -213,3 +213,19 @@ def test_setul_2_se_incarca_orb():
     importuri = {a.name for n in ast.walk(arb) if isinstance(n, (ast.Import, ast.ImportFrom)) for a in n.names}
     assert "csv" not in importuri and "comparatie" not in importuri
     assert "raspuns_asteptat" not in src and "DictReader" not in src
+
+
+# ── C42: zero in alte cuvinte si data cu an relativ ─────────────────────────────────────────────
+def test_C42_zero_in_alte_cuvinte():
+    from fiscalos import comparatie
+    for t in ("Casarea nu implică efectuarea de ajustări; firma nu restituie TVA.", "Nu se restituie nimic."):
+        assert "0 lei" in comparatie._fapte_raspuns(t), t
+    assert "0 lei" not in comparatie._fapte_raspuns("Se restituie 15.200 lei.")          # cealalta directie
+
+
+def test_C42_data_cu_an_relativ_fata_de_data_de_referinta():
+    from fiscalos import comparatie
+    t = "până la data de 25 iunie inclusiv a anului următor"
+    assert "25.06.2027" in comparatie._fapte_raspuns(t, "2026")
+    assert "25.06.2026" not in comparatie._fapte_raspuns(t, "2026")
+    assert "25.06.2027" not in comparatie._fapte_raspuns(t)                              # fara an de referinta

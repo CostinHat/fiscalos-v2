@@ -166,6 +166,14 @@ Versiunea 485ffc3, neschimbată; răspunsurile comise (8b3269f) înainte de citi
 neschimbat; nicio reparație după comparație. Scor pe fond: **28/7/15**; **2 greșeli de fond** (Q2-TVA-05
 temei alăturat; Q2-CTB-05 termen efectiv necalculat). Cost $8,76. Defectele, ca cerințe: C40–C46.
 
+## Pasul 9 — deciziile C40–C46 (`intrebari/v8/`)
+
+Fără rulare plătită. Termenele prin `termen_efectiv` (C40); temeiul alăturat justificat, cu geamenii
+arătați de `deschide` (C41); comparatorul pentru zero și an relativ (C42: setul 2 re-notat 30/5/15, scorul
+oficial rămâne 28/7/15); consecința cuantificată în prompt (C43); răspunsul final pe ieșire structurată, într-o
+tură fără unelte (C44); numeralele în litere (C45). Pe propunerile salvate ale setului 2, verificarea nouă
+prinde ambele greșeli de fond. De decis: C47, C48.
+
 ## Cum se rulează
 
 ```sh

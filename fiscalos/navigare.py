@@ -52,7 +52,7 @@ SISTEM = semantic.SISTEM.replace(
     "răspunsul. Atomii (fragmente de acte normative, fiecare cu un id) NU îi primești gata aleși: îi "
     "găsești singur, navigând.") + """
 
-NAVIGARE. Ai patru unelte:
+NAVIGARE. Ai trei unelte:
 - `cauta(interogare)` — căutare lexicală; e doar un PUNCT DE INTRARE, nu răspunsul.
 - `cuprins(act, filtru)` — structura unui act: titlurile/capitolele, articolele și ANEXELE lui; cu \\
 `filtru`, numai articolele (cu denumirea marginală) și punctele de anexă care conțin cuvintele date. \\
@@ -60,7 +60,6 @@ Anexele (norme metodologice, reglementări contabile, instrucțiuni de formular)
 (`act#anexa/pct238/alin2`) și se citează ca atare.
 - `deschide(id)` — textul unui atom, părintele, copiii (alineate, litere, puncte) și RELAȚIILE lui: \\
 atomii care derogă de la el, fac excepție de la el sau îl modifică, și cei de la care derogă el.
-- `raspunde(...)` — răspunsul final, o singură dată.
 Ai cel mult %d pași de navigare; fiecare rezultat îți spune câți au rămas. O cerere peste limită \\
 încheie întrebarea cu abținere. Navighează ca un contabil: găsește actul și articolul potrivit prin \\
 structură, deschide-l, urmează relațiile lui de derogare, apoi răspunde. Poți cita numai atomi pe care \\
@@ -74,9 +73,25 @@ cele primite), cu motivul în `data_referinta_motiv`. Dacă nu reiese la care da
 răspunzi INCOMPLET — nu alegi data cea mai veche. Unealtele îți arată atomii în vigoare la cea mai \\
 recentă dintre date; citezi numai atomi în vigoare la data aleasă.
 
-RĂSPUNSUL FINAL (C23). Fiecare câmp al lui `raspunde` își conține numai propriul text: răspunsul \\
-complet în `raspuns` (niciodată gol, niciodată „x" sau „-"), declarația în `declaratie`. Nu scrie \\
-marcaj de parametri în valori.
+RĂSPUNSUL FINAL (C44). Când ai terminat navigarea, NU mai apela unelte: scrie un rând scurt („Gata.”). \\
+Tura următoare îți cere răspunsul final, în format structurat; acolo fiecare câmp își conține numai \\
+propriul text (răspunsul complet în `raspuns`, niciodată gol).
+
+TERMENE (C40). Orice termen calendaristic din răspuns (o dată până la care se depune, se plătește, se \\
+face ceva) se calculează cu termen_efectiv și intră în răspuns ca {nume} — un termen scris direct \\
+(„31 mai”, „25 iunie a anului următor”, „15.06.2026”) e respins.
+
+TEMEIUL ALĂTURAT (C41). Dacă printre atomii pe care i-ai văzut există unul cu text aproape identic cu \\
+un atom pe care îl citezi (altă condiție, același final), scrie în `alegeri_temei` de ce l-ai ales pe \\
+al tău: `atom` (cel citat), `alternativa` (celălalt), `conditie` = fragmentul literal din atomul tău care \\
+îi descrie subiectul/condiția și care NU e în alternativă. Fără această justificare, răspunsul e respins.
+
+CONSECINȚA CUANTIFICATĂ (C43). Când legea cuantifică consecința faptului întrebat (cauțiune, amendă, \\
+prag, penalitate), răspunsul o dă — calculată, cu temeiul ei citat — chiar dacă întrebarea e de tip \\
+„are dreptate?” / „este legal?”.
+
+CIFRELE (C46). Orice cifră din răspuns e fie citată literal (dintr-un atom sau din întrebare), fie \\
+rezultatul unui calcul, pus ca {nume}.
 
 CALCUL. Nu calculezi. Dacă răspunsul cere un calcul, îl descrii în `calcule`: fiecare calcul are un \\
 `nume`, o `formula` (numai numele operanzilor și ale calculelor anterioare, + - * / paranteze, \\
@@ -90,7 +105,9 @@ Fiecare operand are `valoare` scrisă exact ca în sursă (ex. "21%%", "100.000"
 din întrebare care o conține); sau VALOARE_LEGALA — o cotă, un plafon, un termen, o limită, luată dintr-un \\
 atom (`atom` = id-ul, `fragment` = bucata literală din atom). O valoare legală nu e niciodată FAPT_CAZ, \\
 chiar dacă întrebarea o repetă. Singurele constante permise fără sursă sunt 1 și 100. În `raspuns` pui \\
-rezultatul unui calcul ca {nume}; codul îl evaluează, îl înlocuiește și afișează calculul pas cu pas.""" % MAX_PASI
+rezultatul unui calcul ca {nume}; codul îl evaluează, îl înlocuiește și afișează calculul pas cu pas. \\
+Un număr scris în litere în atom („cinci ani”, „o cincime”, „jumătate”) e operand valid cu `valoare` \\
+exact ca în atom („cinci”, „cincime”); codul îl convertește și declară conversia (C45).""" % MAX_PASI
 
 _CALC = {"type": "array", "items": {"type": "object", "properties": {
     "nume": {"type": "string"}, "formula": {"type": "string"},
@@ -102,9 +119,12 @@ _CALC = {"type": "array", "items": {"type": "object", "properties": {
     "required": ["nume", "formula", "operanzi"], "additionalProperties": False}}
 SCHEMA = json.loads(json.dumps(semantic.SCHEMA))
 SCHEMA["properties"]["calcule"] = _CALC
+SCHEMA["properties"]["alegeri_temei"] = {"type": "array", "items": {"type": "object", "properties": {
+    "atom": {"type": "string"}, "alternativa": {"type": "string"}, "conditie": {"type": "string"}},
+    "required": ["atom", "alternativa", "conditie"], "additionalProperties": False}}
 SCHEMA["properties"]["data_referinta"] = {"type": "string"}
 SCHEMA["properties"]["data_referinta_motiv"] = {"type": "string"}
-SCHEMA["required"] = SCHEMA["required"] + ["calcule", "data_referinta", "data_referinta_motiv"]
+SCHEMA["required"] = SCHEMA["required"] + ["calcule", "alegeri_temei", "data_referinta", "data_referinta_motiv"]
 
 UNELTE = [
     {"name": "cauta", "strict": True,
@@ -123,9 +143,6 @@ UNELTE = [
                     "exceptie/modificare (in ambele sensuri), valabile la data de referinta.",
      "input_schema": {"type": "object", "properties": {"id": {"type": "string"}},
                       "required": ["id"], "additionalProperties": False}},
-    {"name": "raspunde", "strict": True,
-     "description": "Raspunsul final. Se apeleaza o singura data, la sfarsit.",
-     "input_schema": SCHEMA},
 ]
 
 
@@ -137,6 +154,7 @@ class Navigator(object):
         self.vazuti = {}                      # id -> atom: tot ce i s-a aratat modelului
         self.relatie = {}                     # sursa -> [(fel, tinta)] aratate modelului (C17 b)
         self.pasi = []
+        self._schinduri_act = {}
 
     def _valid(self, a):
         return not (self.data_ref and a.get("valabil_din") and a["valabil_din"] > self.data_ref) \
@@ -223,6 +241,11 @@ class Navigator(object):
                 self._vede(x)
                 self.relatie.setdefault(e["sursa"], []).append((e["fel"], aid))
         iesiri = [e for e in self.rel.muchii if e["sursa"] == aid]
+        # C41: GEMENII din acelasi act (text aproape identic, alt articol) se arata aici, ca modelul sa-i
+        # vada si sa-si justifice alegerea; verificarea cere justificarea pentru orice geaman vazut
+        gem = self.gemeni_in_act(a)
+        for y in gem:
+            self._vede(y)
         return {"id": aid, "temei": intrebari.temei_uman(a),
                 "valabil_din": a.get("valabil_din") or "nedovedit",
                 "sursa": self.corp.sursa_act.get(a["act"], {}).get("sursa"),
@@ -232,10 +255,37 @@ class Navigator(object):
                 "copii": [{"id": x["id"], "inceput": " ".join(x["text"].split())[:90]} for x in copii[:40]],
                 "deroga_sau_modifica_acest_atom": [
                     {"id": e["sursa"], "fel": e["fel"], "fragment": e["fragment"][:200]} for e in intrari],
+                "atomi_cu_text_aproape_identic": [
+                    {"id": y["id"], "temei": intrebari.temei_uman(y), "inceput": " ".join(y["text"].split())[:200]}
+                    for y in gem],
                 "acest_atom_deroga_de_la": [
                     {"tinta": "%s#art%s%s" % (e["tinta_act"], e["tinta_art"],
                                               "/alin%s" % e["tinta_alin"] if e["tinta_alin"] else ""),
                      "fel": e["fel"]} for e in iesiri]}
+
+    def gemeni_in_act(self, a):
+        """Atomii din acelasi act cu un fragment identic de >= PRAG_COMUN caractere, din alt articol."""
+        if len(a["text"]) < PRAG_COMUN:
+            return []
+        if a["act"] not in self._schinduri_act:
+            ix = {}
+            for y in self.corp.pe_act[a["act"]]:
+                if len(y["text"]) >= PRAG_COMUN and self._valid(y) and not y.get("nota_tranzitorie"):
+                    for sh in _schinduri(potrivire.norm(y["text"].split("⟦NOTĂ⟧")[0])):
+                        ix.setdefault(sh, set()).add(y["id"])
+            self._schinduri_act[a["act"]] = ix
+        ix = self._schinduri_act[a["act"]]
+        x = potrivire.norm(a["text"].split("⟦NOTĂ⟧")[0])
+        cand = set().union(*[ix.get(sh, set()) for sh in _schinduri(x)]) if x else set()
+        art = a["id"].split("/")[0]
+        ies = []
+        for yid in sorted(cand):
+            y = self.corp.dupa_id[yid]
+            if yid == a["id"] or yid.split("/")[0] == art:
+                continue
+            if _fragment_comun(x, potrivire.norm(y["text"].split("⟦NOTĂ⟧")[0])) >= PRAG_COMUN:
+                ies.append(y)
+        return ies[:5]
 
     def executa(self, nume, inp):
         self.pasi.append({"unealta": nume, "intrare": inp})
@@ -252,9 +302,44 @@ class Navigator(object):
 _MII = re.compile(r"\d\.\d{3}(?!\d)")
 
 
+# C45: numerele scrise in litere in lege. Operandul poarta forma LITERALA din atom ("cinci", "cincime");
+# conversia o face codul si o declara in calcul.
+_UNITATI = {"zero": 0, "unu": 1, "una": 1, "un": 1, "o": 1, "doi": 2, "doua": 2, "trei": 3, "patru": 4,
+            "cinci": 5, "sase": 6, "sapte": 7, "opt": 8, "noua": 9, "zece": 10, "unsprezece": 11,
+            "doisprezece": 12, "douasprezece": 12, "treisprezece": 13, "paisprezece": 14,
+            "cincisprezece": 15, "saisprezece": 16, "saptesprezece": 17, "optsprezece": 18,
+            "nouasprezece": 19}
+_ZECI = {"douazeci": 20, "treizeci": 30, "patruzeci": 40, "cincizeci": 50, "saizeci": 60,
+         "saptezeci": 70, "optzeci": 80, "nouazeci": 90}
+_FRACTII = {"jumatate": Decimal(1) / 2, "treime": Decimal(1) / 3, "patrime": Decimal(1) / 4,
+            "cincime": Decimal(1) / 5, "zecime": Decimal(1) / 10}
+
+
+def numar_din_litere(v):
+    """Decimal pentru un numeral romanesc scris in litere, sau None."""
+    t = potrivire.norm(v).strip()
+    t = re.sub(r"^(o|un|una)\s+(?=\w*(ime|jumatate))", "", t)
+    if t in _FRACTII:
+        return _FRACTII[t]
+    t = re.sub(r"\s+(de\s+)?(ani|luni|zile|lei|euro|salarii)$", "", t)
+    if t in _UNITATI:
+        return Decimal(_UNITATI[t])
+    m = re.match(r"^(\w+)(?:\s+si\s+(\w+))?$", t)
+    if m and m.group(1) in _ZECI and (not m.group(2) or m.group(2) in _UNITATI):
+        return Decimal(_ZECI[m.group(1)] + (_UNITATI[m.group(2)] if m.group(2) else 0))
+    m = re.match(r"^(o|doua|trei|patru|cinci|sase|sapte|opt|noua)?\s*(suta|sute)$", t)
+    if m:
+        return Decimal(100 * (_UNITATI.get(m.group(1) or "o", 1)))
+    return None
+
+
 def _numar(v):
     """"100.000" -> 100000; "2,25%" -> 0.0225; "25.03.2026" -> date. Intoarce (valoare, e_procent)."""
     t = potrivire.norm(v.strip())
+    lit = numar_din_litere(v) if re.search(r"[a-z]", t) and not re.search(r"\d", t) and \
+        t not in intrebari._LUNI else None
+    if lit is not None:
+        return lit, False
     m = re.match(r"^(\d{1,2})\s+(%s)\s+(\d{4})$" % "|".join(intrebari._LUNI), t)
     if m:                                               # "28 februarie 2026" -> data
         return datetime.date(int(m.group(3)), intrebari._LUNI[m.group(2)], int(m.group(1))), False
@@ -479,7 +564,7 @@ def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
     C25: eticheta operandului decide sursa ceruta. FAPT_CAZ - valoarea trebuie sa apara LITERAL in
     intrebare (altfel e o valoare fara sursa). VALOARE_LEGALA - atom aratat modelului, fragment verbatim
     in el, valoarea literal in fragment."""
-    env, greseli, detalii, procente = {}, [], [], {}
+    env, greseli, detalii, procente, conversii = {}, [], [], {}, []
     # C28: stilul numerelor urmeaza sursa - cu separator de mii daca operanzii il au ("10.000"),
     # fara daca nu ("2026" + 1 = 2027, nu "2.027")
     fmt = {"mii": any(_MII.search(o["valoare"]) for c in calcule for o in c["operanzi"])}
@@ -508,6 +593,9 @@ def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
                 env[o["nume"]], proc = _numar(val)
                 if proc:
                     procente[o["nume"]] = val
+                lit = numar_din_litere(val) if re.search(r"[a-zA-ZăâîșțĂÂÎȘȚ]", val) else None
+                if lit is not None:
+                    conversii.append("„%s” (în litere în atom) = %s" % (val, _format(lit)))
             except ValueError as e:
                 greseli.append(str(e))
         try:
@@ -515,6 +603,9 @@ def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
             zile = []
             v = _eval(arb, env, zile, fmt)
             env[c["nume"]] = v
+            if conversii:
+                zile = ["conversie C45: " + x for x in conversii] + zile
+                conversii = []
             detalii.append({"nume": c["nume"], "formula": c["formula"],
                             "cu_valori": _cu_valori(arb, env, fmt, procente),
                             "zile": zile, "rezultat": _arata(v, fmt), "operanzi": c["operanzi"]})
@@ -575,6 +666,92 @@ def date_din_intrebare(text):
             vazut.add(x[0])
             unice.append(x)
     return unice
+
+
+# ── C40: orice termen calendaristic din raspuns vine din termen_efectiv ──────────────────────────
+_LUNI_RX = "|".join(["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august",
+                     "septembrie", "octombrie", "noiembrie", "decembrie"])
+_DATA_RASPUNS = re.compile(r"\b(\d{1,2}\.\d{1,2}\.\d{4}|\d{1,2}\s+(?:%s)(?:\s+\d{4})?)\b" % _LUNI_RX, re.I)
+_CONTEXT_TERMEN = re.compile(r"p[aâ]n[aă] (la|[iî]n)|cel t[aâ]rziu|termen|scaden|se depun|se pl[aă]t|expir[aă]"
+                             r"|ultima zi|inclusiv", re.I)
+
+
+_INCEPUT = re.compile(r"(\bde la|[iî]ncep[aâ]nd cu|curge de la|s[aă] curg[aă] (de )?la|\bdin)\s+(data de\s+)?$", re.I)
+
+
+def verifica_termene(raspuns, intrebare, termene_ok):
+    """C40: o data aflata intr-un context de termen ("pana la", "cel tarziu", "termenul", "inclusiv") e un
+    termen calendaristic; trece numai daca e rezultatul unui termen_efectiv evaluat de cod sau un fapt
+    al cazului, literal in intrebare. Regulile recurente fara luna ("pana la 25 a lunii urmatoare") nu
+    sunt termene calendaristice si nu se ating."""
+    gr = []
+    q = potrivire.norm(intrebare)
+    raspuns = raspuns.split("  [data de referință")[0]      # sufixul declarativ nu e raspuns
+    for m in _DATA_RASPUNS.finditer(raspuns):
+        d = m.group(1)
+        inainte = raspuns[max(0, m.start() - 120):m.start()]
+        # o data de INCEPUT ("curge de la 1 ianuarie", "incepand cu", "de la") nu e un termen
+        if _INCEPUT.search(inainte[-30:]):
+            continue
+        if not _CONTEXT_TERMEN.search(inainte + raspuns[m.end():m.end() + 25]):
+            continue
+        if d in termene_ok or potrivire.norm(d) in q:
+            continue
+        gr.append("C40: termenul %r nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu "
+                  "se scrie)" % d)
+    return gr
+
+
+# ── C41: temeiul alaturat, cu text aproape identic ───────────────────────────────────────────────
+PRAG_COMUN = 100          # caractere identice consecutive; masurat: perechea CF art. 319(3)/320(3) are
+#                           162, iar din 11.165 de perechi aleatoare de alineate niciuna nu ajunge la 80
+
+
+def _fragment_comun(x, y):
+    import difflib
+    return difflib.SequenceMatcher(None, x, y, autojunk=False).find_longest_match(0, len(x), 0, len(y)).size
+
+
+def _schinduri(t, n=8):
+    w = t.split()
+    return {" ".join(w[i:i + n]) for i in range(0, max(0, len(w) - n + 1))}
+
+
+def gemeni(atom, vazuti):
+    """Atomii vazuti cu text aproape identic cu `atom` (fragment comun >= PRAG_COMUN), din alt articol."""
+    x = potrivire.norm(atom["text"].split("⟦NOTĂ⟧")[0])
+    sx = _schinduri(x)
+    art = atom["id"].split("/")[0]
+    ies = []
+    for y in vazuti.values():
+        if y["id"] == atom["id"] or y["id"].split("/")[0] == art or len(y["text"]) < PRAG_COMUN:
+            continue
+        ty = potrivire.norm(y["text"].split("⟦NOTĂ⟧")[0])
+        if sx & _schinduri(ty) and _fragment_comun(x, ty) >= PRAG_COMUN:
+            ies.append(y)
+    return ies
+
+
+def verifica_alegeri_temei(final, vazuti):
+    """C41: pentru fiecare atom citat care are un geaman printre atomii vazuti, `alegeri_temei` trebuie sa
+    contina justificarea: un fragment literal din atomul citat care NU e in geaman (conditia care ii
+    deosebeste). Fara ea - abtinere."""
+    gr = []
+    alegeri = final.get("alegeri_temei") or []
+    for c in {c["atom"] for c in final.get("citate") or []}:
+        a = vazuti.get(c)
+        if a is None:
+            continue
+        for y in gemeni(a, vazuti):
+            ok = False
+            for al in alegeri:
+                if al["atom"] == c and al["alternativa"] == y["id"]:
+                    f = semantic._n(al["conditie"])
+                    ok = len(f) >= 15 and f in semantic._n(a["text"]) and f not in semantic._n(y["text"])
+            if not ok:
+                gr.append("C41: atomul citat %s are un geaman printre atomii vazuti (%s) si alegerea nu e "
+                          "justificata printr-o conditie literala care ii deosebeste" % (c, y["id"]))
+    return gr
 
 
 # ── C23: validarea structurala a raspunsului final ──────────────────────────────────────────────
@@ -643,12 +820,15 @@ def sistem(idx):
     return SISTEM + "\n\nACTELE NORMATIVE din corpus (id-urile folosite de `cuprins`):\n" + ", ".join(acte)
 
 
-def _apel(client, sis, messages):
+def _apel(client, sis, messages, final=False):
+    # uneltele raman declarate si in tura finala (istoricul contine tool_use), dar nu se pot folosi
+    extra = {"tool_choice": {"type": "none"},
+             "output_config": {"format": {"type": "json_schema", "schema": SCHEMA}}} if final else {}
     return client.beta.messages.create(
         model=MODEL, max_tokens=16000, betas=["server-side-fallback-2026-07-01"],
         fallbacks="default", thinking={"type": "adaptive"},
         system=[{"type": "text", "text": sis, "cache_control": {"type": "ephemeral"}}],
-        tools=UNELTE, messages=messages, cache_control={"type": "ephemeral"})
+        tools=UNELTE, messages=messages, cache_control={"type": "ephemeral"}, **extra)
 
 
 def raspunde(q, idx, rel, client, sis=None):
@@ -666,8 +846,8 @@ def raspunde(q, idx, rel, client, sis=None):
                                             "</date_din_intrebare>" % (q["intrebare"], descriere)}]
     apeluri, final, t0, reincercari, oprit = [], None, time.time(), 0, None
     probleme_c23 = []
-    while True:
-        r = _apel(client, sis or sistem(idx), messages)
+
+    def inregistreaza(r):
         u = r.usage
         iteratii = getattr(u, "iterations", None) or []
         apeluri.append({"model": r.model, "stop_reason": r.stop_reason,
@@ -677,33 +857,19 @@ def raspunde(q, idx, rel, client, sis=None):
                         "cost_usd": semantic._cost(u, r.model),
                         "fallback": bool(r.model != MODEL or any(
                             getattr(x, "type", "") == "fallback_message" for x in iteratii))})
+
+    # 1. NAVIGAREA: numai uneltele de citire, pana cand modelul nu mai cere niciuna
+    while True:
+        r = _apel(client, sis or sistem(idx), messages)
+        inregistreaza(r)
         if r.stop_reason == "refusal" or len(apeluri) > MAX_PASI + 6:
             oprit = "stop_reason=%s" % r.stop_reason
             break
         messages.append({"role": "assistant", "content": r.content})
         uses = [b for b in r.content if b.type == "tool_use"]
-        fin = [b for b in uses if b.name == "raspunde"]
-        if fin:
-            intrare = decodeaza_transport(fin[0].input)             # C33
-            probleme = valideaza_structura(intrare)
-            if not probleme:
-                final = intrare
-                break
-            probleme_c23.append(probleme)
-            if reincercari >= 1:                       # C23: o singura reincercare
-                oprit = "C23"
-                break
-            reincercari += 1
-            rezultate = [{"type": "tool_result", "tool_use_id": b.id, "is_error": True,
-                          "content": ("Structura răspunsului e invalidă: %s. Apelează din nou `raspunde`, "
-                                      "cu fiecare câmp conținând numai textul lui." % "; ".join(probleme))
-                          if b is fin[0] else "ignorat"} for b in uses]
-            messages.append({"role": "user", "content": rezultate})
-            continue
         if not uses:
-            messages.append({"role": "user", "content": "Încheie apelând unealta `raspunde`."})
-            continue
-        if len(nav.pasi) + len(uses) > MAX_PASI:        # C29: peste limita = abtinere cu traseu
+            break                                          # "Gata." - urmeaza tura finala
+        if len(nav.pasi) + len(uses) > MAX_PASI:           # C29: peste limita = abtinere cu traseu
             oprit = "C29"
             break
         rezultate = []
@@ -713,6 +879,36 @@ def raspunde(q, idx, rel, client, sis=None):
             rezultate.append({"type": "tool_result", "tool_use_id": b.id,
                               "content": json.dumps(out, ensure_ascii=False)})
         messages.append({"role": "user", "content": rezultate})
+
+    # 2. C44: RASPUNSUL FINAL pe iesire structurata, intr-o tura FARA unelte (tool_choice none). In v4-v5,
+    # raspunsul dat ca argument al unei unelte isi scurgea campurile unele in altele (C23) si, la
+    # reincercare, strica diacriticele (C33, C44). O singura reincercare daca structura e tot invalida.
+    cerere = ("Navigarea s-a încheiat. Dă acum răspunsul final, în formatul cerut, numai din atomii pe care "
+              "i-ai văzut.")
+    while oprit is None:
+        messages.append({"role": "user", "content": cerere})
+        r = _apel(client, sis or sistem(idx), messages, final=True)
+        inregistreaza(r)
+        if r.stop_reason == "refusal":
+            oprit = "stop_reason=refusal"
+            break
+        text = next((b.text for b in r.content if b.type == "text"), "")
+        messages.append({"role": "assistant", "content": r.content})
+        try:
+            intrare = decodeaza_transport(json.loads(text))        # C33 ramane plasa
+            probleme = valideaza_structura(intrare)
+        except ValueError:
+            intrare, probleme = None, ["iesirea finala nu e JSON valid (stop_reason=%s)" % r.stop_reason]
+        if not probleme:
+            final = intrare
+            break
+        probleme_c23.append(probleme)
+        if reincercari >= 1:
+            oprit = "C23"
+            break
+        reincercari += 1
+        cerere = ("Structura răspunsului e invalidă: %s. Dă din nou răspunsul final, fiecare câmp cu "
+                  "numai textul lui." % "; ".join(probleme))
     apel = {"model": apeluri[-1]["model"] if apeluri else MODEL, "tururi": len(apeluri),
             "pasi_navigare": len(nav.pasi), "pasi": nav.pasi, "reincercari_C23": reincercari,
             "probleme_C23": probleme_c23,
@@ -730,7 +926,7 @@ def raspunde(q, idx, rel, client, sis=None):
             motiv = ("C23: structura răspunsului final a fost invalidă de două ori (%s)"
                      % " / ".join("; ".join(p) for p in probleme_c23))
         else:
-            motiv = "modelul nu a apelat `raspunde` (%s)" % oprit
+            motiv = "fara raspuns final (%s)" % oprit
         return dict(baza, data_referinta=None, stare="NU_POT_RASPUNDE", tip_abtinere=oprit,
                     raspuns=None, argument=[], apel=apel, traseu=traseu, motiv=motiv)
     # C27: data aleasa trebuie sa fie una dintre datele intrebarii
@@ -764,6 +960,16 @@ def raspunde(q, idx, rel, client, sis=None):
             for k, v in valori.items():
                 txt = txt.replace("{%s}" % k, v)
             rez["raspuns"] = txt + "  [calcul: " + "; ".join(pas_cu_pas(detalii)) + "]"
+    if rez["stare"] == "RASPUNS":
+        # C40 (termenele) si C41 (temeiul alaturat) - dupa verificarea mecanica si calcul
+        corp_raspuns = rez["raspuns"].split("  [calcul:")[0]
+        termene_ok = {d["rezultat"] for d in rez.get("calcule") or [] if "termen_efectiv" in d["formula"]}
+        gr = verifica_termene(corp_raspuns, q["intrebare"], termene_ok) + \
+            verifica_alegeri_temei(final, nav.vazuti)
+        if gr:
+            return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None,
+                        verificare={"trece": False, "incalcari": rez["verificare"]["incalcari"] + gr},
+                        motiv="VERIFICAREA (C40/C41) a respins propunerea: " + "; ".join(gr))
     if rez["stare"] == "RASPUNS":
         d = datetime.date.fromisoformat(data_ref).strftime("%d.%m.%Y")
         rez["raspuns"] += "  [data de referință: %s — %s]" % (d, final.get("data_referinta_motiv") or "")

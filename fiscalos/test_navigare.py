@@ -7,6 +7,7 @@ in fragment, fragment parafrazat, cota luata din intrebare, constanta ascunsa in
 functie nepermis.
 """
 import ast
+import json
 import os
 
 from fiscalos import navigare
@@ -135,7 +136,9 @@ def test_formatul_romanesc():
 
 def test_schema_raspunsului_contine_calculele():
     assert "calcule" in navigare.SCHEMA["required"] and "data_referinta" in navigare.SCHEMA["required"]
-    assert [u["name"] for u in navigare.UNELTE] == ["cauta", "cuprins", "deschide", "raspunde"]
+    # C44: raspunsul final nu mai e o unealta, ci iesirea structurata a turei finale
+    assert [u["name"] for u in navigare.UNELTE] == ["cauta", "cuprins", "deschide"]
+    assert "alegeri_temei" in navigare.SCHEMA["required"]
 
 
 def test_navigarea_e_oarba_la_cheie():
@@ -329,3 +332,153 @@ def test_C32_data_din_luna_in_litere_si_zile_adunate():
     c[0]["formula"] = "data(z, l, a) + z"
     val, gr, _d = navigare.evalueaza_calcule(c, {a["id"]: a}, q)
     assert gr == [] and val == {"nominal": "19.02.2026"}, (gr, val)
+
+
+# ── C40: termenul calendaristic vine din termen_efectiv ─────────────────────────────────────────
+def test_C40_termenul_scris_direct_e_respins():
+    for r in ("Situațiile se depun până la data de 31 mai inclusiv a anului următor.",
+              "Termenul este 15.06.2026.", "Cel târziu la 25 iunie 2027 se depune declarația."):
+        assert navigare.verifica_termene(r, "Până când se depun?", set()), r
+
+
+def test_C40_termenul_calculat_si_faptele_cazului_trec():
+    assert navigare.verifica_termene("Se depun până la 02.06.2026.", "Până când?", {"02.06.2026"}) == []
+    assert navigare.verifica_termene("Factura emisă la 12.05.2026 se corectează.", "La 12.05.2026 ...", set()) == []
+    # regula recurenta fara luna numita nu e un termen calendaristic
+    assert navigare.verifica_termene("până la data de 25 inclusiv a lunii următoare", "Când?", set()) == []
+    # o data care nu e termen (fara context de termen) nu se atinge
+    assert navigare.verifica_termene("Cota se aplică începând cu 01.08.2025.", "Ce cotă?", set()) == []
+
+
+# ── C41: temeiul alaturat, pe perechea reala CF art. 319 alin. (3) / art. 320 alin. (3) ─────────
+def _gemeni():
+    from fiscalos import potrivire
+    c = potrivire.Corpus()
+    a = c.dupa_id["cod_fiscal_227_2015_consolidat#art320/alin3"]
+    b = c.dupa_id["cod_fiscal_227_2015_consolidat#art319/alin3"]
+    return a, b, {a["id"]: a, b["id"]: b}
+
+
+def test_C41_perechea_319_320_e_recunoscuta_ca_gemeni():
+    a, b, v = _gemeni()
+    assert [y["id"] for y in navigare.gemeni(a, v)] == [b["id"]]
+
+
+def test_C41_fara_justificare_abtinere():
+    a, b, v = _gemeni()
+    final = {"citate": [{"atom": a["id"], "fragment": "x"}], "alegeri_temei": []}
+    assert any("C41" in g for g in navigare.verifica_alegeri_temei(final, v))
+
+
+def test_C41_justificarea_cu_conditia_care_ii_deosebeste_trece():
+    a, b, v = _gemeni()
+    ok = {"citate": [{"atom": b["id"], "fragment": "x"}], "alegeri_temei": [
+        {"atom": b["id"], "alternativa": a["id"],
+         "conditie": "beneficiarul trebuie să emită o autofactură în vederea ajustării taxei deductibile"}]}
+    assert navigare.verifica_alegeri_temei(ok, v) == []
+    # o "conditie" care e si in geaman nu deosebeste nimic
+    rau = {"citate": [{"atom": b["id"], "fragment": "x"}], "alegeri_temei": [
+        {"atom": b["id"], "alternativa": a["id"],
+         "conditie": "dacă furnizorul de bunuri/prestatorul de servicii nu emite factura de corecție"}]}
+    assert any("C41" in g for g in navigare.verifica_alegeri_temei(rau, v))
+
+
+def test_C41_atomii_fara_geaman_nu_cer_justificare():
+    v = {ATOM["id"]: ATOM}
+    fin = {"citate": [{"atom": ATOM["id"], "fragment": "x"}], "alegeri_temei": []}
+    assert navigare.verifica_alegeri_temei(fin, v) == []
+
+
+# ── C45: numerele scrise in litere ──────────────────────────────────────────────────────────────
+def test_C45_numeralul_in_litere_din_atom_e_operand_si_conversia_se_declara():
+    a = {"id": "cf#art28/alin4", "text": "valoarea se recuperează într-o perioadă de cinci ani, câte o cincime pe an"}
+    q = "Valoarea fiscală de 10.000 lei."
+    c = [{"nume": "anual", "formula": "v * f", "operanzi": [
+        _op("v", "10.000", "intrebare", "Valoarea fiscală de 10.000 lei"),
+        _op("f", "cincime", "atom", "câte o cincime pe an", a["id"])]}]
+    val, gr, det = navigare.evalueaza_calcule(c, {a["id"]: a}, q)
+    assert gr == [] and val == {"anual": "2.000"}, (gr, val)
+    assert "conversie C45: „cincime” (în litere în atom) = 0,20" in " ".join(navigare.pas_cu_pas(det))
+
+
+def test_C45_cifra_care_nu_e_in_atom_ramane_respinsa():
+    a = {"id": "cf#art28/alin4", "text": "într-o perioadă de cinci ani"}
+    c = [{"nume": "n", "formula": "x + 1", "operanzi": [_op("x", "5", "atom", "cinci ani", a["id"])]}]
+    assert any("nu apare literal" in g for g in navigare.evalueaza_calcule(c, {a["id"]: a}, "Q")[1])
+
+
+# ── C46: cifra din raspuns e citata sau calculata ───────────────────────────────────────────────
+def test_C46_cifra_calculata_scrisa_direct_e_respinsa():
+    from fiscalos import semantic
+    atom = {"id": "cf#a", "text": "Cota standard este de 21% din baza de impozitare, pentru livrări.",
+            "valabil_din": None}
+    out = {"stare": "RASPUNS", "declaratie": "d", "raspuns": "TVA este 2.100 lei (21%).", "lipsa": [],
+           "motiv": "", "citate": [{"atom": "cf#a", "fragment": "Cota standard este de 21% din baza de impozitare"}]}
+    gr = semantic.verifica(out, [atom], "Baza e 10.000 lei.", "2026-09-28")
+    assert any("2.100" in g for g in gr), gr
+
+
+# ── C44: bucla, cu un client simulat - navigare, apoi tura finala structurata fara unelte ────────
+class _Bloc(object):
+    def __init__(self, **k):
+        self.__dict__.update(k)
+
+
+class _Uz(object):
+    input_tokens, output_tokens, cache_creation_input_tokens, cache_read_input_tokens = 10, 10, 0, 0
+
+
+class _ClientSimulat(object):
+    """Primul apel cere o unealta; al doilea spune Gata; al treilea (tura finala) intoarce JSON."""
+
+    def __init__(self, final):
+        self.cereri, self.final = [], final
+        self.beta = self
+        self.messages = self
+
+    def create(self, **k):
+        self.cereri.append(k)
+        n = len(self.cereri)
+        if n == 1:
+            c = [_Bloc(type="tool_use", id="t1", name="cauta", input={"interogare": "cota standard TVA"})]
+            return _Bloc(content=c, stop_reason="tool_use", usage=_Uz(), model=navigare.MODEL)
+        if n == 2:
+            return _Bloc(content=[_Bloc(type="text", text="Gata.")], stop_reason="end_turn", usage=_Uz(),
+                         model=navigare.MODEL)
+        return _Bloc(content=[_Bloc(type="text", text=json.dumps(self.final, ensure_ascii=False))],
+                     stop_reason="end_turn", usage=_Uz(), model=navigare.MODEL)
+
+
+def test_C44_raspunsul_final_vine_pe_iesire_structurata_intr_o_tura_fara_unelte():
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    hit = idx.cauta("cota standard TVA", "2026-09-28", k=8)
+    a = next(x for _s, x in hit if "21%" in x["text"])
+    i = a["text"].index("21%")
+    final = {"stare": "RASPUNS", "declaratie": "La data de referință 28.09.2026.",
+             "raspuns": "Cota standard este 21%.", "citate": [{"atom": a["id"], "fragment": a["text"][i - 40:i + 3]}],
+             "lipsa": [], "motiv": "", "derogari_tratate": [], "calcule": [], "alegeri_temei": [],
+             "data_referinta": "2026-09-28", "data_referinta_motiv": "ziua întrebării"}
+    cl = _ClientSimulat(final)
+    r = navigare.raspunde({"id": "Q", "tip": "PARAMETRU", "intrebare": "Care este cota standard de TVA?"},
+                          idx, idx.rel, cl, sis="S")
+    assert r["stare"] == "RASPUNS", r.get("motiv")
+    assert "tool_choice" not in cl.cereri[0] and cl.cereri[2]["tool_choice"] == {"type": "none"}
+    assert cl.cereri[2]["output_config"]["format"]["type"] == "json_schema"
+
+
+def test_C41_deschide_arata_geamanul_din_acelasi_act():
+    """Q2-TVA-05: modelul a deschis CF art. 320 alin. (3) si n-a vazut art. 319 alin. (3). Acum il vede."""
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    nav = navigare.Navigator(idx, idx.rel, "2026-09-28")
+    out = nav.deschide("cod_fiscal_227_2015_consolidat#art320/alin3")
+    ids = [x["id"] for x in out["atomi_cu_text_aproape_identic"]]
+    assert "cod_fiscal_227_2015_consolidat#art319/alin3" in ids, ids
+    assert "cod_fiscal_227_2015_consolidat#art319/alin3" in nav.vazuti
+
+
+def test_C40_data_de_inceput_si_sufixul_nu_sunt_termene():
+    r = ("Termenul de prescripție curge de la 1 ianuarie a anului următor.  "
+         "[data de referință: 30.09.2026 — motiv]")
+    assert navigare.verifica_termene(r, "Q", set()) == []

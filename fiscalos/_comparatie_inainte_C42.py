@@ -100,25 +100,13 @@ def _fapte(text, fara_negate=False):
 
 # C30: zero spus in cuvinte. O cheie al carei fapt principal e ZERO ("0 lei") e satisfacuta de un
 # raspuns care spune explicit ca nu se datoreaza nimic.
-# C42 (setul 2): si "nu restituie", "nu implica (efectuarea de) ajustari", "nicio ajustare" spun zero.
-_ZERO = re.compile(r"\bnimic\b|\bzero\b|\bnu (se )?datoreaz[aă]\b|\bnu are de plat|\bnu (se )?restitui"
-                   r"|\bnu (se )?(implica|efectueaza|face)\b[^.]{0,40}\bajust|\bnicio (ajustare|suma)\b")
-# C42: data zi + luna cu AN RELATIV ("25 iunie inclusiv a anului urmator") - anul se ia fata de anul datei
-# de referinta a raspunsului (declarata, C27); "anului urmator" = +1, "anului curent" = 0.
-_AN_RELATIV = re.compile(r"(\d{1,2})\s+(%s)\b[^.;]{0,60}?\ban(?:ul|ului)\s+(urmator|curent)" % "|".join(
-    ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie",
-     "octombrie", "noiembrie", "decembrie"]))
+_ZERO = re.compile(r"\bnimic\b|\bzero\b|\bnu (se )?datoreaz[aă]\b|\bnu are de plat")
 
 
-def _fapte_raspuns(text, an_ref=None):
+def _fapte_raspuns(text):
     ies = _fapte(text)
-    t = potrivire.norm(text or "")
-    if _ZERO.search(t):
+    if _ZERO.search(potrivire.norm(text or "")):
         ies += ["0 lei", "0%"]
-    if an_ref:
-        for m in _AN_RELATIV.finditer(t):
-            an = int(an_ref) + (1 if m.group(3) == "urmator" else 0)
-            ies.append("%02d.%02d.%d" % (int(m.group(1)), _LUNI[m.group(2)], an))
     return ies
 
 
@@ -250,7 +238,7 @@ def compara(fis_raspunsuri=None, corp=None, csv_cheie=None):
             continue
         noi = _temei_nostru(r, corp)
         text_nostru = (r.get("raspuns") or "") + " " + json.dumps(r.get("calcul") or {})
-        fapte_noi = _fapte_raspuns(text_nostru, (r.get("data_referinta") or "")[:4] or None)
+        fapte_noi = _fapte_raspuns(text_nostru)
         valoare_ok = (not fapte_cheie) or (potrivire.norm(fapte_cheie[0]).replace(" ", "")
                                            in [potrivire.norm(x).replace(" ", "") for x in fapte_noi])
         # DEFECT DE COMPARATOR, reparat dupa prima rulare si raportat ca atare: cand temeiul cheii

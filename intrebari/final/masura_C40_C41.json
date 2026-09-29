@@ -1,0 +1,133 @@
+{
+ "_ce": "Efectul verificarilor C40 (termene) si C41 (temeiul alaturat) pe propunerile SALVATE ale setului 2 -\nfara niciun apel. Navigarea se reia determinist din pasii salvati (corpusul e acelasi ca la 485ffc3), ca\nverificarea sa vada exact atomii aratati modelului. LIMITA SUPERIOARA a abtinerilor noi: propunerile vechi\nnu aveau campul `alegeri_temei`, iar promptul nu cerea termen_efectiv - un model care stie regulile ar\nraspunde altfel. Scorul oficial al setului 2 nu se schimba.",
+ "respinse": {
+  "Q2-TVA-05": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art320/alin3 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art319/alin3) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-PRF-03": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/litl are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art68/alin7/litk) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/litl/pct5 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art53/alin1/liti) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/litl/pct5 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art53/alin2/litb) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/litl/pct5 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art68/alin7/litk/pct5) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-PRF-04": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art26/alin9^1 are un geaman printre atomii vazuti (oug_8_2026#art20^1/alin15) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-PRF-05": {
+   "C40": [
+    "C40: termenul '25 iunie' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art42/alin4 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art18^1/alin11) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art42/alin4 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art25/alin3/litt) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-PRF-07": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/liti~2/pct1 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art18^1/alin10/lita) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/liti~2/pct2 are un geaman printre atomii vazuti (oug_115_2023_consolidat#artLX/alin2) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/liti~2/pct2 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art18^1/alin11) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/liti~2 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art18^1/alin10) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-PRF-09": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art56/alin2^5 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art45/alin16) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-SAL-02": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art170/alin1 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art174/alin1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art170/alin1 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art174/alin5) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-SAL-05": {
+   "C40": [
+    "C40: termenul '14.07.2026' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ],
+   "C41": []
+  },
+  "Q2-SAL-06": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art76/alin4^1/liti are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art142/pct7/pct9) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art76/alin4^1 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art142/pct7/pct10) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art76/alin12 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art142/pct7/pct9) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat cod_fiscal_227_2015_consolidat#art76/alin4^2 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art142/pct7/pct10) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-SAL-09": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat hg_146_2026_salariu_minim#art1 are un geaman printre atomii vazuti (hg_598_2024_stabilirea_salariului_baza_minim_brut#art1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat hg_146_2026_salariu_minim#art1 are un geaman printre atomii vazuti (hg_146_2026_salariu_minim#art2) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-CPF-02": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat legea_207_2015_consolidat#art215/alin1 are un geaman printre atomii vazuti (legea_207_2015_consolidat#art219/alin1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-CPF-05": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat legea_207_2015_consolidat#art219/alin1 are un geaman printre atomii vazuti (legea_207_2015_consolidat#art215/alin1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-CPF-09": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat legea_207_2015_consolidat#art219/alin1 are un geaman printre atomii vazuti (legea_207_2015_consolidat#art215/alin1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-CTB-04": {
+   "C40": [],
+   "C41": [
+    "C41: atomul citat legea_31_1990_societatile#art67/alin2^6 are un geaman printre atomii vazuti (legea_31_1990_societatile#art153^24/alin4^1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat legea_31_1990_societatile#art67/alin2^6 are un geaman printre atomii vazuti (legea_31_1990_societatile#art153^24/alin4^3) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat legea_31_1990_societatile#art67/alin2^6 are un geaman printre atomii vazuti (legea_31_1990_societatile#art153^24/alin4^6) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat legea_31_1990_societatile#art67/alin2^6 are un geaman printre atomii vazuti (legea_31_1990_societatile#art270^3/alin4) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  },
+  "Q2-CTB-05": {
+   "C40": [
+    "C40: termenul '31 mai' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)",
+    "C40: termenul '31 mai' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ],
+   "C41": [
+    "C41: atomul citat legea_82_1991_consolidat#art36/alin1/lita are un geaman printre atomii vazuti (legea_82_1991_consolidat#art1/alin1) si alegerea nu e justificata printr-o conditie literala care ii deosebeste",
+    "C41: atomul citat legea_82_1991_consolidat#art36/alin1/lita are un geaman printre atomii vazuti (legea_82_1991_consolidat#art1/alin3) si alegerea nu e justificata printr-o conditie literala care ii deosebeste"
+   ]
+  }
+ },
+ "verdict_oficial": {
+  "Q2-TVA-05": "GRESIT",
+  "Q2-PRF-03": "CORECT",
+  "Q2-PRF-04": "CORECT",
+  "Q2-PRF-05": "GRESIT",
+  "Q2-PRF-07": "CORECT",
+  "Q2-PRF-09": "CORECT",
+  "Q2-SAL-02": "CORECT",
+  "Q2-SAL-05": "CORECT",
+  "Q2-SAL-06": "CORECT",
+  "Q2-SAL-09": "CORECT",
+  "Q2-CPF-02": "CORECT",
+  "Q2-CPF-05": "CORECT",
+  "Q2-CPF-09": "CORECT",
+  "Q2-CTB-04": "CORECT",
+  "Q2-CTB-05": "GRESIT"
+ }
+}
