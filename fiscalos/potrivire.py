@@ -329,7 +329,10 @@ class Corpus(object):
                                                            % v["data_formei_consolidate"],
                                                anexe_din_instantaneu=len(anexe))
                     continue
-                if len(atomi) < 0.9 * vechi:
+                # C31: un act adus PENTRU CA instantaneul lui e stricat (detectorul de structura) nu se
+                # masoara cu numarul de atomi al instantaneului - acela e umflat tocmai de continutul
+                # inghitit si dublat (Legea 346/2002: 368 de atomi stricati fata de 327 oficiali)
+                if len(atomi) < 0.9 * vechi and not man[act].get("de_ce", "").startswith("C31"):
                     self.sursa_act[act] = dict(info, sursa="instantaneu iConta",
                                                oficial_neaplicat="versiunea oficiala e mai saraca "
                                                "(%d atomi fata de %d)" % (len(atomi), vechi))
@@ -340,6 +343,16 @@ class Corpus(object):
                 self.structura[act] = v["structura"]
                 self.sursa_act[act] = dict(info, sursa="oficial: legislatie.just.ro, forma "
                                                        "consolidata din %s" % v["data_formei_consolidate"])
+        # C31: o redare STRICATA din instantaneu a unui act care exista in stratul oficial sub alt nume
+        # (varianta: legea_165_2018_mf_2024 -> legea_165_2018_anaf) ramane in corpus, dar e marcata;
+        # motorul de intrebari nu o mai indexeaza, ca sa nu concureze cu textul oficial
+        self.inlocuit = {}
+        f_c31 = os.path.join(_RAD, "surse_oficiale", "C31_rezolvare.json")
+        if oficiale and os.path.exists(f_c31):
+            for act, v in json.load(open(f_c31, encoding="utf-8"))["acte"].items():
+                if v.get("ca") and v["ca"] in self.sursa_act and \
+                        self.sursa_act[v["ca"]].get("sursa", "").startswith(("oficial", "compus")):
+                    self.inlocuit[act] = v["ca"]
         self.toti = [a for ats in self.pe_act.values() for a in ats]
         self.dupa_id = {a["id"]: a for a in self.toti}
         self.modificatoare = surse.acte_modificatoare(self)

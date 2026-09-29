@@ -17,20 +17,20 @@
    "valoare_injectata": "0.10",
    "original": {
     "clasificare": "CONCORDA",
-    "atom": "legea_141_2025_consolidat#artII",
+    "atom": "legea_141_2025_consolidat#artII/pct1/alin2",
     "valoare_lege": "16%",
     "citare_rezolvata": true
    },
    "mutant": {
     "clasificare": "DIFERA",
-    "atom": "legea_141_2025_consolidat#artII",
+    "atom": "legea_141_2025_consolidat#artII/pct1/alin2",
     "valoare_lege": "16",
     "doar_in_cod": null,
     "doar_in_act": null,
     "citare_rezolvata": true,
     "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
     "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.10 vs 16) - la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
-    "verbatim": "Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului "
+    "verbatim": "Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul. ..."
    }
   },
   {
@@ -47,19 +47,19 @@
    "valoare_injectata": "0.19",
    "original": {
     "clasificare": "CONCORDA",
-    "atom": "legea_141_2025_consolidat#art291/alin1",
+    "atom": "legea_141_2025_consolidat#artII/pct42/art291/alin1",
     "valoare_lege": "21%",
     "citare_rezolvata": true
    },
    "mutant": {
     "clasificare": "DIFERA",
-    "atom": "legea_141_2025_consolidat#art291/alin1",
+    "atom": "legea_141_2025_consolidat#artII/pct42/art291/alin1",
     "valoare_lege": "21",
     "doar_in_cod": null,
     "doar_in_act": null,
     "citare_rezolvata": true,
-    "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
-    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.19 vs 21) - la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+    "ancora": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
+    "motiv": "atomul din actul declarat de iConta poarta un numar de aceeasi forma, dar NU pe cel din cod (0.19 vs 21) - la nivelul: indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
     "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
    }
   },

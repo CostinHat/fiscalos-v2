@@ -213,3 +213,85 @@ def test_C27_fara_data_nu_e_nicio_data():
 
 def test_C29_limita_e_20_de_pasi():
     assert navigare.MAX_PASI == 20
+
+
+# ── C33: decodarea artefactului de transport, in ambele directii ────────────────────────────────
+def test_C33_secventele_reale_se_decodeaza():
+    x = {"citate": [{"fragment": "Amortizarea imobiliz\\u0103rilor corporale \\u00eencep\\u00e2nd"}],
+         "raspuns": "Da, \\u0219i \\u021Aara"}
+    y = navigare.decodeaza_transport(x)
+    assert y["citate"][0]["fragment"] == "Amortizarea imobilizărilor corporale începând"
+    assert y["raspuns"] == "Da, și Țara"
+
+
+def test_C33_textul_legitim_nu_se_atinge():
+    for t in ("Cota standard este 21%.", "imobilizărilor corporale (deja cu diacritice)",
+              "cale C:\\users\\nume", "\\u00 incomplet", "\\uZZZZ nu e hexa", "\\u0007 control",
+              "\\ud800 surogat", "art. 18^1 alin. (1)"):
+        assert navigare.decodeaza_transport(t) == t, t
+    assert navigare.decodeaza_transport({"n": 3, "l": [True, None]}) == {"n": 3, "l": [True, None]}
+
+
+# ── C32: termen_efectiv, din atomii citati ──────────────────────────────────────────────────────
+def _atomi_calendar():
+    from fiscalos import potrivire
+    c = potrivire.Corpus()
+    r = c.dupa_id["legea_134_2010_codul_de_procedura_civila#art181/alin2"]
+    s = c.dupa_id["legea_53_2003_codul_muncii#art139/alin1"]
+    return {r["id"]: r, s["id"]: s, ATOM["id"]: ATOM}, [r["id"], s["id"]]
+
+
+def _termen(d, citati, dupa):
+    q = "Termenul nominal este %s." % d
+    c = [{"nume": "t", "formula": "termen_efectiv(d)", "operanzi": [_op("d", d, "intrebare", "este %s" % d)]}]
+    return navigare.evalueaza_calcule(c, dupa, q, citati=citati)
+
+
+def test_C32_pastele_ortodox_calculat():
+    import datetime
+    assert navigare.pastele_ortodox(2026) == datetime.date(2026, 4, 12)
+    assert navigare.pastele_ortodox(2025) == datetime.date(2025, 4, 20)
+    assert navigare.pastele_ortodox(2027) == datetime.date(2027, 5, 2)
+
+
+def test_C32_sambata_se_prelungeste_la_luni_Q_TVA_07():
+    dupa, cit = _atomi_calendar()
+    val, gr, det = _termen("28.02.2026", cit, dupa)
+    assert gr == [] and val == {"t": "02.03.2026"}, (gr, val)
+    txt = " ".join(navigare.pas_cu_pas(det))
+    assert "28.02.2026 sâmbătă" in txt and "01.03.2026 duminică" in txt and "art181/alin2" in txt, txt
+
+
+def test_C32_vinerea_mare_si_pastele_din_calcul_declarat():
+    dupa, cit = _atomi_calendar()
+    val, gr, det = _termen("10.04.2026", cit, dupa)
+    assert val == {"t": "14.04.2026"}, (gr, val)
+    txt = " ".join(navigare.pas_cu_pas(det))
+    assert "Paștele ortodox = 12.04.2026" in txt and "Meeus" in txt, txt
+
+
+def test_C32_zi_lucratoare_ramane_neschimbata():
+    dupa, cit = _atomi_calendar()
+    assert _termen("25.03.2026", cit, dupa)[0] == {"t": "25.03.2026"}
+
+
+def test_C32_fara_atomii_citati_termen_efectiv_e_respins():
+    dupa, cit = _atomi_calendar()
+    gr = _termen("28.02.2026", cit[:1], dupa)[1]           # numai regula, fara lista sarbatorilor
+    assert any("termen_efectiv cere" in g for g in gr), gr
+    gr = _termen("28.02.2026", [], dupa)[1]
+    assert any("termen_efectiv cere" in g for g in gr), gr
+
+
+def test_C32_data_din_luna_in_litere_si_zile_adunate():
+    a = {"id": "opanaf#anexa2/pct2", "text": "se depune până la data de 25 inclusiv a lunii următoare"}
+    q = "Pentru luna ianuarie 2026, cu operațiuni în ianuarie."
+    c = [{"nume": "nominal", "formula": "data(z, l, a) + 0", "operanzi": [
+        _op("z", "25", "atom", "până la data de 25 inclusiv", a["id"]),
+        _op("l", "ianuarie", "intrebare", "luna ianuarie 2026"),
+        _op("a", "2026", "intrebare", "ianuarie 2026")]}]
+    # "+ 0" nu e permis (constanta fara sursa) - cealalta directie
+    assert any("constanta" in g for g in navigare.evalueaza_calcule(c, {a["id"]: a}, q)[1])
+    c[0]["formula"] = "data(z, l, a) + z"
+    val, gr, _d = navigare.evalueaza_calcule(c, {a["id"]: a}, q)
+    assert gr == [] and val == {"nominal": "19.02.2026"}, (gr, val)

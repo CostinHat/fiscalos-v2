@@ -59,7 +59,9 @@ def test_tva_standard_concorda_pe_atomul_legii():
     assert t["clasificare"] == "CONCORDA", t
     assert t["valoare_lege"] == "21%", t["valoare_lege"]
     assert "21%" in t["atom_verbatim"]
-    assert t["atom"].startswith("legea_141_2025_consolidat#art291/alin1"), t["atom"]
+    # C31: Legea 141/2025 vine acum din sursa oficiala; art. 291 citat sta, corect, sub punctul de
+    # interventie care il modifica (art. II pct. 42), nu ca articol propriu al legii
+    assert t["atom"].startswith("legea_141_2025_consolidat#artII/pct42/art291/alin1"), t["atom"]
     assert t["valabil_din_cod"] == "2025-08-01"
 
 

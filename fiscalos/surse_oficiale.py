@@ -50,14 +50,22 @@ def _sha(b):
     return hashlib.sha256(b).hexdigest()
 
 
-def aduce(acte=ACTE):
+def aduce(acte=ACTE, incremental=False):
+    """Aduce actele din portal. `incremental=True` (C31): actele deja in manifest NU se aduc din nou -
+    fisierele lor raman exact cele cu SHA-ul inregistrat; cele noi se adauga la manifest."""
     os.makedirs(DIR, exist_ok=True)
     p = portal.Portal()
     manifest = {"_ce": "Consolidatele la zi aduse de FiscalOS din sursa oficiala (C12). Separate de "
                        "instantaneul iConta, care rămâne neatins.",
                 "sursa": portal.BAZA, "user_agent": portal.UA, "adus_la": time.strftime(
                     "%Y-%m-%dT%H:%M:%S"), "acte": {}}
+    f_man = os.path.join(DIR, "MANIFEST.json")
+    if incremental and os.path.exists(f_man):
+        manifest = json.load(open(f_man, encoding="utf-8"))
+        manifest.setdefault("adaugiri", []).append(time.strftime("%Y-%m-%dT%H:%M:%S"))
     for act, id_portal, de_ce in acte:
+        if incremental and act in manifest["acte"]:
+            continue
         t0 = time.time()
         corp, info = p.act(id_portal)
         documente = [(id_portal, corp, info)]
@@ -80,7 +88,12 @@ def aduce(acte=ACTE):
         cons = [x["consolidare"] for x in fisiere if x["consolidare"]]
         manifest["acte"][act] = {
             "id_portal": id_portal, "de_ce": de_ce, "fisiere": fisiere,
-            "data_formei_consolidate": max(cons, key=lambda d: d[6:] + d[3:5] + d[:2]) if cons else None,
+            # un act fara nicio consolidare e in FORMA DE BAZA: data lui e data actului, din titlu
+            "data_formei_consolidate": max(cons, key=lambda d: d[6:] + d[3:5] + d[:2]) if cons else (
+                "forma de baza %s" % re.search(r"(\d{2})/(\d{2})/(\d{4})", fisiere[0]["titlu"] or "")
+                .group(0).replace("/", ".") if re.search(r"\d{2}/\d{2}/\d{4}", fisiere[0]["titlu"] or "")
+                else None),
+            "forma_de_baza": not cons,
             "articole_total": sum(x["articole"] for x in fisiere),
             "secunde": round(time.time() - t0, 1)}
         print("%-36s %s | %d documente | %d articole | consolidare %s | %.1f s"
@@ -128,7 +141,11 @@ def _aplatizeaza_note(h):
                 i = len(h)
                 break
             if d is not None and d.start() < z.start():
-                adanc, i = adanc + 1, d.end()
+                # C31: `<span id="..._lung"/>` (nota goala) se inchide singur - nu deschide nimic. Numarat
+                # ca deschis, nota nu se mai inchidea si inghitea articolele urmatoare (Codul muncii,
+                # art. 122-124, lipite de nota de dupa art. 121)
+                sf = h.find(">", d.end())
+                adanc, i = (adanc if h[sf - 1] == "/" else adanc + 1), sf + 1
             else:
                 adanc, i = adanc - 1, z.end()
         text = strat_text.html_in_text(h[m.end():i])
@@ -138,7 +155,16 @@ def _aplatizeaza_note(h):
     return "".join(ies)
 
 
+# C31: CUPRINSUL portalului e un meniu de linkuri de navigare in pagina (`<a href="#id_artA136_ttl"
+# onclick="pozitioneaza(...)">Articolul 24</a>`). Convertit in text, el da serii de marcaje de articol
+# fara corp; detectorul de cuprins le taia, dar pastra ULTIMUL marcaj al fiecarei serii ca inceput de
+# corp (regula potrivita pentru instantaneu) - de aici, in Codul civil, "art. 24" fals si 2.455 de
+# alineate duplicate. Linkurile de navigare nu sunt text al actului: se scot inainte de conversie.
+_CUPRINS_PORTAL = re.compile(r'<a href="#id_[^"]*"[^>]*pozitioneaza[^>]*>.*?</a>', re.I | re.S)
+
+
 def html_portal_in_text(h):
+    h = _CUPRINS_PORTAL.sub("", h)
     h = _aplatizeaza_note(h)
     return strat_text.html_in_text(_SPAN_STRUCT.sub(lambda m: "<br/>" + m.group(1), h))
 

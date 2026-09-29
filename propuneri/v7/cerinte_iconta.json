@@ -1,0 +1,111 @@
+{
+ "_ce": "Cerinte pentru iConta, rezultate din propunerea v7. Nu se aplica nimic automat.",
+ "cerinte": [
+  {
+   "id": "R-CONT-1",
+   "decizie": "C3",
+   "ce": "Marcarea explicita a simbolurilor de cont.",
+   "de_ce": "364 simboluri de 3-4 cifre, in 66 module din core/, nu stau in niciun container numit CONT. Multe sunt conturi reale folosite ca literale directe (`startswith(\"401\")`, tuple pozitionale), dar nu se pot distinge de un an sau de un rand de formular fara o modificare in iConta. De aceea NU sunt in propunere.",
+   "propunere": "Un container sau un tip numit (ca `Temei`) pentru conturi - de ex. `CONTURI_<scop> = (...)` sau `Cont(\"4426\")` -, ca inventarul sa le culeaga mecanic, fara euristica.",
+   "exemple": [
+    "100",
+    "1001",
+    "1002",
+    "1003",
+    "1004",
+    "1005",
+    "101",
+    "1011",
+    "1012",
+    "1015",
+    "1016",
+    "1017",
+    "1018",
+    "102",
+    "103"
+   ]
+  },
+  {
+   "id": "R-CONT-412",
+   "decizie": "C3",
+   "ce": "Contul 412 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 412 ca CONT (core/ in 2 locuri: control_incrucisat.py:397 COD_CONT_D112, salarii_contare.py:5), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:397 COD_CONT_D112, salarii_contare.py:57 CONT_D112",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan."
+  },
+  {
+   "id": "R-CONT-432",
+   "decizie": "C3",
+   "ce": "Contul 432 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 432 ca CONT (core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:5), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:58 CONT_D112",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan."
+  },
+  {
+   "id": "R-CONT-459",
+   "decizie": "C3",
+   "ce": "Contul 459 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 459 ca CONT (core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:6), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:398 COD_CONT_D112, salarii_contare.py:61 CONT_D112",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan."
+  },
+  {
+   "id": "R-CONT-480",
+   "decizie": "C3",
+   "ce": "Contul 480 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 480 ca CONT (core/ in 2 locuri: control_incrucisat.py:399 COD_CONT_D112, salarii_contare.py:5), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "unde": "core/ in 2 locuri: control_incrucisat.py:399 COD_CONT_D112, salarii_contare.py:59 CONT_D112",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan."
+  },
+  {
+   "id": "R-CONT-739",
+   "decizie": "C3",
+   "ce": "Contul 739 nu exista in niciun plan de conturi din corpus.",
+   "de_ce": "iConta foloseste 739 ca CONT (core/ in 1 locuri: ong.py:22 CONT_VENIT), dar simbolul nu apare in niciun plan de conturi din corpus (OMFP 1802/2014, OMFP 3103/2017; 655 simboluri citite). De clarificat de iConta: alt nomenclator (ex. cod de cont bugetar), sau cont inexistent.",
+   "unde": "core/ in 1 locuri: ong.py:22 CONT_VENIT",
+   "propunere": "De clarificat: alt nomenclator (cod de cont bugetar?) sau cont inexistent in plan."
+  },
+  {
+   "id": "R-TEMEI-1",
+   "decizie": "C2",
+   "ce": "Temei structurat (`Temei(...)`) pentru constantele nesursate.",
+   "de_ce": "Pentru 19 constante fara temei, FiscalOS propune un TEMEI CANDIDAT din act normativ (temeiuri_candidate.json). E o propunere de aprobat uman, nu o verificare.",
+   "propunere": "Dupa aprobare, iConta scrie temeiul in cod, ca obiect `Temei`."
+  },
+  {
+   "id": "R-UNIT",
+   "decizie": "C11",
+   "ce": "Unitatea declarata explicit pentru constantele-rata nesursate.",
+   "de_ce": "Registrul COTE tine ratele ca fractii (0.21 = 21%), dar 2 constante nesursate sunt procente literale (0.3 = 0,3%) - FiscalOS le-a dedus unitatea din folosire (`NUME / 100`): nesursat/bacsis.COTA_IMPOZIT=10, nesursat/d216.COTA_IMPOZIT=0.3.",
+   "propunere": "Un tip sau o conventie declarata (ex. `Procent(\"0.3\")` fata de `Fractie(\"0.003\")`), ca unitatea sa nu mai fie dedusa."
+  },
+  {
+   "id": "R-SURSA-tva_redusa_9@2016-01-01",
+   "decizie": "C2",
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tva_redusa_9@2016-01-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (nota redactata de iConta (PROVENIENTA: SCRIS - nota proprie despre forma initiala a CF art. 291 la 01.01.2016, cu sursa si observatiile c), nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  },
+  {
+   "id": "R-SURSA-tva_redusa_5@2016-01-01",
+   "decizie": "C2",
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tva_redusa_5@2016-01-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (nota redactata de iConta (PROVENIENTA: SCRIS - nota proprie despre forma initiala a CF art. 291 la 01.01.2016, cu sursa si observatiile c), nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  },
+  {
+   "id": "R-SURSA-tichet_masa_plafon@2025-04-01",
+   "decizie": "C2",
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tichet_masa_plafon@2025-04-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (pliant sau ghid ANAF - material de informare, nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  },
+  {
+   "id": "R-SURSA-tichet_masa_plafon@2025-01-01",
+   "decizie": "C2",
+   "ce": "Temei declarat pe o sursa care nu e act normativ: cote/tichet_masa_plafon@2025-01-01.",
+   "de_ce": "CONCORDA pe o sursa care NU e act normativ (pliant sau ghid ANAF - material de informare, nu act normativ). Decizia C2: un temei se ia numai din act normativ. Rezultatul initial (CONCORDA) se pastreaza in `clasificare_initiala`.",
+   "propunere": "Inlocuirea citarii cu actul normativ (MO) care stabileste valoarea."
+  }
+ ]
+}

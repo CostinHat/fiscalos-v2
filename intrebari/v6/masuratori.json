@@ -1,0 +1,1860 @@
+{
+ "C30": [
+  {
+   "rulare": "semantic v2",
+   "corpus": "b0a02c6",
+   "inainte": {
+    "CORECT": 12,
+    "GRESIT": 7,
+    "NU_POT": 31
+   },
+   "dupa": {
+    "CORECT": 13,
+    "GRESIT": 6,
+    "NU_POT": 31
+   },
+   "schimbari": [
+    [
+     "Q-CPF-09",
+     "GRESIT",
+     "CORECT"
+    ]
+   ]
+  },
+  {
+   "rulare": "semantic v3",
+   "corpus": "7eb6fa0",
+   "inainte": {
+    "CORECT": 10,
+    "GRESIT": 8,
+    "NU_POT": 32
+   },
+   "dupa": {
+    "CORECT": 11,
+    "GRESIT": 7,
+    "NU_POT": 32
+   },
+   "schimbari": [
+    [
+     "Q-CPF-09",
+     "GRESIT",
+     "CORECT"
+    ]
+   ]
+  },
+  {
+   "rulare": "navigare v4",
+   "corpus": "d35c21a",
+   "inainte": {
+    "CORECT": 20,
+    "GRESIT": 15,
+    "NU_POT": 15
+   },
+   "dupa": {
+    "CORECT": 20,
+    "GRESIT": 15,
+    "NU_POT": 15
+   },
+   "schimbari": []
+  },
+  {
+   "rulare": "navigare v5",
+   "corpus": "778e826",
+   "inainte": {
+    "CORECT": 34,
+    "GRESIT": 3,
+    "NU_POT": 13
+   },
+   "dupa": {
+    "CORECT": 35,
+    "GRESIT": 2,
+    "NU_POT": 13
+   },
+   "schimbari": [
+    [
+     "Q-CPF-09",
+     "GRESIT",
+     "CORECT"
+    ]
+   ]
+  },
+  {
+   "rulare": "navigare v5 + C33 (propunerile salvate, decodate)",
+   "corpus": "778e826",
+   "inainte": {
+    "CORECT": 36,
+    "GRESIT": 3,
+    "NU_POT": 11
+   },
+   "dupa": {
+    "CORECT": 37,
+    "GRESIT": 2,
+    "NU_POT": 11
+   },
+   "schimbari": [
+    [
+     "Q-CPF-09",
+     "GRESIT",
+     "CORECT"
+    ]
+   ]
+  },
+  {
+   "rulare": "lexical v5",
+   "corpus": "778e826",
+   "inainte": {
+    "CORECT": 3,
+    "GRESIT": 13,
+    "NU_POT": 34
+   },
+   "dupa": {
+    "CORECT": 3,
+    "GRESIT": 13,
+    "NU_POT": 34
+   },
+   "schimbari": []
+  }
+ ],
+ "C33": {
+  "afectate": [
+   "Q-TVA-09",
+   "Q-CPF-08",
+   "Q-CTB-04"
+  ],
+  "inainte": {
+   "CORECT": 34,
+   "GRESIT": 3,
+   "NU_POT": 13
+  },
+  "dupa": {
+   "CORECT": 36,
+   "GRESIT": 3,
+   "NU_POT": 11
+  },
+  "verdict_dupa": {
+   "Q-TVA-09": "CORECT",
+   "Q-CPF-08": "NU_POT",
+   "Q-CTB-04": "CORECT"
+  },
+  "motiv_dupa": {
+   "Q-TVA-09": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+   "Q-CPF-08": "VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '6' nu apare in niciun citat (C13: o valoare legala se dovedeste din atom, chiar daca e si in intrebare); valoarea legala '2024' nu",
+   "Q-CTB-04": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+  }
+ },
+ "scor_final_fara_apel": {
+  "CORECT": 37,
+  "GRESIT": 2,
+  "NU_POT": 11
+ },
+ "gresit_ramase": [
+  [
+   "Q-TVA-07",
+   "articolul citat [('opanaf_2194_2025', 'pct2')] nu e printre cele ale cheii [('opanaf_3769_2015', 'pct2'), ('cpf', '75')]"
+  ],
+  [
+   "Q-SAL-10",
+   "articolul citat [('cm', '281')] nu e printre cele ale cheii [('cm', '122'), ('cm', '123')]"
+  ]
+ ],
+ "C31_detector_inainte": {
+  "anaf_concedii_2025": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 17,
+   "S2_acoperire": 0.059,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  },
+  "cod_fiscal_227_2015_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 125,
+   "S1_exemple": [
+    "cod_fiscal_227_2015_consolidat#art503/alin2~2",
+    "cod_fiscal_227_2015_consolidat#art18^1/alin1~2",
+    "cod_fiscal_227_2015_consolidat#art18^1/alin2~2",
+    "cod_fiscal_227_2015_consolidat#art18^1/alin3~2",
+    "cod_fiscal_227_2015_consolidat#art18^1/alin4~2"
+   ],
+   "S2_articole_recunoscute": 503,
+   "S2_cel_mai_mare_articol": 503,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "d100_struct_anaf": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 53,
+   "S2_acoperire": 0.038,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  },
+  "hg_1045_2018_norme_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "hg_1045_2018_norme_consolidat#art2~3/alin2~2",
+    "hg_1045_2018_norme_consolidat#art2~3/alin3~2",
+    "hg_1045_2018_norme_consolidat#art2~5/alin2~2"
+   ],
+   "S2_articole_recunoscute": 35,
+   "S2_cel_mai_mare_articol": 35,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_1074_2021": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 13,
+   "S1_exemple": [
+    "hg_1074_2021#art28/alin2~2",
+    "hg_1074_2021#art28/alin2~3",
+    "hg_1074_2021#art28/alin2~4",
+    "hg_1074_2021#art28/alin2~5",
+    "hg_1074_2021#art28/alin4~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 28,
+   "S2_acoperire": 0.036,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_1094_2025": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 13,
+   "S1_exemple": [
+    "hg_1094_2025#art23/alin2~2",
+    "hg_1094_2025#art23/alin2~3",
+    "hg_1094_2025#art23/alin2~4",
+    "hg_1094_2025#art23/alin3~2",
+    "hg_1094_2025#art23/alin4~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 23,
+   "S2_acoperire": 0.043,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_1_2016_norme_cod_fiscal": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 976,
+   "S1_exemple": [
+    "hg_1_2016_norme_cod_fiscal#artV/alin1~2",
+    "hg_1_2016_norme_cod_fiscal#artV/alin2~2",
+    "hg_1_2016_norme_cod_fiscal#artV/alin3~2",
+    "hg_1_2016_norme_cod_fiscal#artV/alin4~2",
+    "hg_1_2016_norme_cod_fiscal#artV/alin5~2"
+   ],
+   "S2_articole_recunoscute": 0,
+   "S2_cel_mai_mare_articol": 0,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_295_2025_reges_online_registru_salariati": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 15,
+   "S2_acoperire": 0.067,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_518_1995": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 5,
+   "S1_exemple": [
+    "hg_518_1995#art20/alin4~2",
+    "hg_518_1995#art20/alin2~2",
+    "hg_518_1995#art20/alin3~2",
+    "hg_518_1995#art20/alin2~3",
+    "hg_518_1995#art20/alin3~3"
+   ],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 20,
+   "S2_acoperire": 0.1,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_867_2015": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 7,
+   "S2_cel_mai_mare_articol": 13,
+   "S2_acoperire": 0.538,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "hg_905_2017": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 14,
+   "S2_acoperire": 0.071,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_129_2019": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 75,
+   "S1_exemple": [
+    "legea_129_2019#art2/alin2~2",
+    "legea_129_2019#art2/alin4~2",
+    "legea_129_2019#art2/alin3~2",
+    "legea_129_2019#art2/alin2~3",
+    "legea_129_2019#art2/alin3~3"
+   ],
+   "S2_articole_recunoscute": 11,
+   "S2_cel_mai_mare_articol": 65,
+   "S2_acoperire": 0.169,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_136_2020_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 6,
+   "S1_exemple": [
+    "legea_136_2020_consolidat#art8/alin1~2",
+    "legea_136_2020_consolidat#art8/alin2~2",
+    "legea_136_2020_consolidat#art8/alin3~2",
+    "legea_136_2020_consolidat#art8/alin4~2",
+    "legea_136_2020_consolidat#art8/alin5~2"
+   ],
+   "S2_articole_recunoscute": 21,
+   "S2_cel_mai_mare_articol": 21,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_141_2025_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "legea_141_2025_consolidat#art108^1/alin3~2",
+    "legea_141_2025_consolidat#art7^1/alin3~2",
+    "legea_141_2025_consolidat#art17^1/alin3~2"
+   ],
+   "S2_articole_recunoscute": 16,
+   "S2_cel_mai_mare_articol": 291,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "legea_165_2018_anaf": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 4,
+   "S1_exemple": [
+    "legea_165_2018_anaf#art16/alin1~2",
+    "legea_165_2018_anaf#art16/alin2~2",
+    "legea_165_2018_anaf#art23/alin2~2",
+    "legea_165_2018_anaf#art28/alin1~2"
+   ],
+   "S2_articole_recunoscute": 36,
+   "S2_cel_mai_mare_articol": 36,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_165_2018_mf_2024": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 7,
+   "S1_exemple": [
+    "legea_165_2018_mf_2024#art4/alin1~2",
+    "legea_165_2018_mf_2024#art8/alin5~2",
+    "legea_165_2018_mf_2024#art12/alin1~2",
+    "legea_165_2018_mf_2024#art12/alin2~2",
+    "legea_165_2018_mf_2024#art12/alin2~3"
+   ],
+   "S2_articole_recunoscute": 33,
+   "S2_cel_mai_mare_articol": 36,
+   "S2_acoperire": 0.917,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_1_2020": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "legea_1_2020#art160/alin2~2",
+    "legea_1_2020#art160/alin2~3",
+    "legea_1_2020#art160/alin2~4"
+   ],
+   "S2_articole_recunoscute": 12,
+   "S2_cel_mai_mare_articol": 160,
+   "S2_acoperire": 0.075,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_207_2015_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 252,
+   "S1_exemple": [
+    "legea_207_2015_consolidat#art13/alin5~2",
+    "legea_207_2015_consolidat#art60~2/alin1~2",
+    "legea_207_2015_consolidat#art60~2/alin2~2",
+    "legea_207_2015_consolidat#art60~2/alin3~2",
+    "legea_207_2015_consolidat#art60~2/alin4~2"
+   ],
+   "S2_articole_recunoscute": 341,
+   "S2_cel_mai_mare_articol": 354,
+   "S2_acoperire": 0.963,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_226_2023": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 2,
+   "S1_exemple": [
+    "legea_226_2023#art29/alin2~2",
+    "legea_226_2023#art29/alin3~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 29,
+   "S2_acoperire": 0.034,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_230_2007": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 61,
+   "S2_acoperire": 0.016,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 9,
+   "S1_exemple": [
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor#art83/alin3~2",
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor#art85/alin2~2",
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor#art85/alin5~2",
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor#art85/alin11~2",
+    "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor#art85/alin6~2"
+   ],
+   "S2_articole_recunoscute": 34,
+   "S2_cel_mai_mare_articol": 491,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "legea_241_2005": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 2,
+   "S1_exemple": [
+    "legea_241_2005#art16/alin2~2",
+    "legea_241_2005#art16/alin3~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 16,
+   "S2_acoperire": 0.062,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_265_2022": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 23,
+   "S2_cel_mai_mare_articol": 142,
+   "S2_acoperire": 0.162,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_26_1990": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 30,
+   "S1_exemple": [
+    "legea_26_1990#art53/alin3~2",
+    "legea_26_1990#art53/alin3~3",
+    "legea_26_1990#art53/alin2~2",
+    "legea_26_1990#art53/alin2~3",
+    "legea_26_1990#art53/alin3~4"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 53,
+   "S2_acoperire": 0.019,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_287_2009": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 33,
+   "S1_exemple": [
+    "legea_287_2009#art2664/alin3~2",
+    "legea_287_2009#art2664/alin2~2",
+    "legea_287_2009#art2664/alin1~2",
+    "legea_287_2009#art2664/alin1~3",
+    "legea_287_2009#art2664/alin4~2"
+   ],
+   "S2_articole_recunoscute": 399,
+   "S2_cel_mai_mare_articol": 2664,
+   "S2_acoperire": 0.15,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_296_2020_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "legea_296_2020_consolidat#art8^1/alin4~2",
+    "legea_296_2020_consolidat#art8^1/alin5~2",
+    "legea_296_2020_consolidat#art8^1/alin5~3"
+   ],
+   "S2_articole_recunoscute": 27,
+   "S2_cel_mai_mare_articol": 495,
+   "S2_acoperire": 0.055,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 4,
+   "S1_exemple": [
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art174^1/alin2~2",
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art174^1/alin3~2",
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art391/alin2~2",
+    "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artXLVII/alin2~2"
+   ],
+   "S2_articole_recunoscute": 22,
+   "S2_cel_mai_mare_articol": 500,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#art123^1/alin8~2",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#art123^1/alin9~2",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#art123^1/alin10~2"
+   ],
+   "S2_articole_recunoscute": 10,
+   "S2_cel_mai_mare_articol": 348,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "legea_31_1990_modif_L222_2023": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 1,
+   "S1_exemple": [
+    "legea_31_1990_modif_L222_2023#art235/alin2~2"
+   ],
+   "S2_articole_recunoscute": 3,
+   "S2_cel_mai_mare_articol": 235,
+   "S2_acoperire": 0.013,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_31_1990_societatile": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 30,
+   "S1_exemple": [
+    "legea_31_1990_societatile#art11/alin2~2",
+    "legea_31_1990_societatile#art111/alin1~2",
+    "legea_31_1990_societatile#art111/alin2~2",
+    "legea_31_1990_societatile#art237/alin2~2",
+    "legea_31_1990_societatile#art237/alin3~2"
+   ],
+   "S2_articole_recunoscute": 294,
+   "S2_cel_mai_mare_articol": 294,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_346_2002_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "legea_346_2002_consolidat#art113/alin1~2",
+    "legea_346_2002_consolidat#art113/alin2~2",
+    "legea_346_2002_consolidat#art113/alin3~2"
+   ],
+   "S2_articole_recunoscute": 116,
+   "S2_cel_mai_mare_articol": 119,
+   "S2_acoperire": 0.975,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 77,
+   "S1_exemple": [
+    "legea_448_2006_protectia_persoanelor_cu_handicap#art104/alin2~2",
+    "legea_448_2006_protectia_persoanelor_cu_handicap#art104/alin3~2",
+    "legea_448_2006_protectia_persoanelor_cu_handicap#art104/alin2~3",
+    "legea_448_2006_protectia_persoanelor_cu_handicap#art104/alin4~2",
+    "legea_448_2006_protectia_persoanelor_cu_handicap#art104/alin6~2"
+   ],
+   "S2_articole_recunoscute": 24,
+   "S2_cel_mai_mare_articol": 104,
+   "S2_acoperire": 0.231,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_53_2003_codul_muncii": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 46,
+   "S1_exemple": [
+    "legea_53_2003_codul_muncii#art281/alin4~2",
+    "legea_53_2003_codul_muncii#art281/alin5~2",
+    "legea_53_2003_codul_muncii#art281/alin5~3",
+    "legea_53_2003_codul_muncii#art281/alin3~2",
+    "legea_53_2003_codul_muncii#art281/alin5~4"
+   ],
+   "S2_articole_recunoscute": 40,
+   "S2_cel_mai_mare_articol": 281,
+   "S2_acoperire": 0.142,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_70_2015_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 18,
+   "S2_acoperire": 0.056,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_72_2013": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 24,
+   "S2_acoperire": 0.042,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_82_1991_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 37,
+   "S1_exemple": [
+    "legea_82_1991_consolidat#art49/alin2~2",
+    "legea_82_1991_consolidat#art49/alin1^1~2",
+    "legea_82_1991_consolidat#art49/alin2~3",
+    "legea_82_1991_consolidat#art49/alin3~2",
+    "legea_82_1991_consolidat#art49/alin4~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 49,
+   "S2_acoperire": 0.02,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_85_2014": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 52,
+   "S1_exemple": [
+    "legea_85_2014#art344/alin2~2",
+    "legea_85_2014#art344/alin3~2",
+    "legea_85_2014#art344/alin7~2",
+    "legea_85_2014#art344/alin2~3",
+    "legea_85_2014#art344/alin5~2"
+   ],
+   "S2_articole_recunoscute": 83,
+   "S2_cel_mai_mare_articol": 344,
+   "S2_acoperire": 0.241,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_98_2016": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 69,
+   "S1_exemple": [
+    "legea_98_2016#artIII/alin2~2",
+    "legea_98_2016#artIII/alin2~3",
+    "legea_98_2016#artIII/alin2~4",
+    "legea_98_2016#artIII/alin3~2",
+    "legea_98_2016#artIII/alin4~2"
+   ],
+   "S2_articole_recunoscute": 68,
+   "S2_cel_mai_mare_articol": 240,
+   "S2_acoperire": 0.283,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "og_13_2011": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 3,
+   "S2_cel_mai_mare_articol": 19,
+   "S2_acoperire": 0.158,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "og_2_2001": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 21,
+   "S1_exemple": [
+    "og_2_2001#art51/alin4~2",
+    "og_2_2001#art51/alin4~3",
+    "og_2_2001#art51/alin5~2",
+    "og_2_2001#art51/alin6~2",
+    "og_2_2001#art51/alin3~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 51,
+   "S2_acoperire": 0.02,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "og_39_2015": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 14,
+   "S2_acoperire": 0.071,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "omfp_1802_2014_ordin_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 12,
+   "S2_acoperire": 0.083,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "omfp_1802_2014_reglementari_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 21,
+   "S1_exemple": [
+    "omfp_1802_2014_reglementari_consolidat#artII/alin2~2",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin2~3",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin3~2",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin2~4",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin3~3"
+   ],
+   "S2_articole_recunoscute": 0,
+   "S2_cel_mai_mare_articol": 0,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 10,
+   "S2_acoperire": 0.1,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oms_15_2018_norme": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "oms_15_2018_norme#art58/alin1~2",
+    "oms_15_2018_norme#art58/alin1~3",
+    "oms_15_2018_norme#art61/alin3~2"
+   ],
+   "S2_articole_recunoscute": 79,
+   "S2_cel_mai_mare_articol": 79,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "ordin_1099_2016": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 5,
+   "S2_cel_mai_mare_articol": 26,
+   "S2_acoperire": 0.192,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "ordin_2594_2015": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 10,
+   "S2_acoperire": 0.1,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "ordin_3845_2015": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 12,
+   "S2_acoperire": 0.083,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "ordin_3846_2015": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 19,
+   "S2_acoperire": 0.053,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "ordin_878_2022": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 6,
+   "S2_cel_mai_mare_articol": 13,
+   "S2_acoperire": 0.462,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_115_2023_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 7,
+   "S1_exemple": [
+    "oug_115_2023_consolidat#artI/alin1~2",
+    "oug_115_2023_consolidat#artI/alin2~2",
+    "oug_115_2023_consolidat#art60^1/alin10~2",
+    "oug_115_2023_consolidat#art101^1/alin4~2",
+    "oug_115_2023_consolidat#art101^1/alin3~2"
+   ],
+   "S2_articole_recunoscute": 18,
+   "S2_cel_mai_mare_articol": 342,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "oug_116_2023": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 11,
+   "S2_acoperire": 0.091,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_120_2021": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 1,
+   "S1_exemple": [
+    "oug_120_2021#artII/alin7~2"
+   ],
+   "S2_articole_recunoscute": 13,
+   "S2_cel_mai_mare_articol": 19,
+   "S2_acoperire": 0.684,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_158_2005_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 15,
+   "S1_exemple": [
+    "oug_158_2005_consolidat#art1/alin2~2",
+    "oug_158_2005_consolidat#art1/alin2~3",
+    "oug_158_2005_consolidat#art1/alin3~2",
+    "oug_158_2005_consolidat#art1/alin3~3",
+    "oug_158_2005_consolidat#art1/alin4~2"
+   ],
+   "S2_articole_recunoscute": 62,
+   "S2_cel_mai_mare_articol": 62,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_158_2005_pre_L141": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 7,
+   "S1_exemple": [
+    "oug_158_2005_pre_L141#art1/alin2~2",
+    "oug_158_2005_pre_L141#art1/alin2~3",
+    "oug_158_2005_pre_L141#art1/alin3~2",
+    "oug_158_2005_pre_L141#art1/alin3~3",
+    "oug_158_2005_pre_L141#art1/alin4~2"
+   ],
+   "S2_articole_recunoscute": 62,
+   "S2_cel_mai_mare_articol": 62,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "redare istorica - nu se inlocuieste cu consolidatul curent",
+   "modificator": false
+  },
+  "oug_28_1999": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 4,
+   "S1_exemple": [
+    "oug_28_1999#art15/alin3~2",
+    "oug_28_1999#art15/alin2^1~2",
+    "oug_28_1999#art15/alin9~2",
+    "oug_28_1999#art15/alin5~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 15,
+   "S2_acoperire": 0.067,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_44_2008": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 19,
+   "S1_exemple": [
+    "oug_44_2008#art44/alin2~2",
+    "oug_44_2008#art44/alin4~2",
+    "oug_44_2008#art44/alin3~2",
+    "oug_44_2008#art44/alin4~3",
+    "oug_44_2008#art44/alin3~3"
+   ],
+   "S2_articole_recunoscute": 7,
+   "S2_cel_mai_mare_articol": 44,
+   "S2_acoperire": 0.159,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_70_2024_ro_etva_decont_precompletat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 19,
+   "S2_acoperire": 0.053,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_89_2025": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 8,
+   "S1_exemple": [
+    "oug_89_2025#art359^1/alin1^4~2",
+    "oug_89_2025#art389/alin5~2",
+    "oug_89_2025#art389/alin6~2",
+    "oug_89_2025#art389/alin7~2",
+    "oug_89_2025#art389/alin3~2"
+   ],
+   "S2_articole_recunoscute": 9,
+   "S2_cel_mai_mare_articol": 393,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "pdf_original/structura_D100_2026": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 53,
+   "S2_acoperire": 0.038,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  },
+  "pdf_original/structura_D100_v200_2014": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 296,
+   "S2_acoperire": 0.007,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  }
+ },
+ "C31_detector_dupa": {
+  "anaf_concedii_2025": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 17,
+   "S2_acoperire": 0.059,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  },
+  "d100_struct_anaf": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 53,
+   "S2_acoperire": 0.038,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  },
+  "legea_129_2019": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 4,
+   "S1_exemple": [
+    "legea_129_2019#art53/alin4~2",
+    "legea_129_2019#art53/alin2^1~2",
+    "legea_129_2019#art53/alin2^1~3",
+    "legea_129_2019#art53/alin3~2"
+   ],
+   "S2_articole_recunoscute": 74,
+   "S2_cel_mai_mare_articol": 270,
+   "S2_acoperire": 0.274,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 19.12.2025",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "legea_134_2010_codul_de_procedura_civila": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 8,
+   "S1_exemple": [
+    "legea_134_2010_codul_de_procedura_civila#art74~2/alin2~2",
+    "legea_134_2010_codul_de_procedura_civila#art74~2/alin2~3",
+    "legea_134_2010_codul_de_procedura_civila#art74~2/alin3~2",
+    "legea_134_2010_codul_de_procedura_civila#art74~2/alin4~2",
+    "legea_134_2010_codul_de_procedura_civila#art74~2/alin2~4"
+   ],
+   "S2_articole_recunoscute": 1134,
+   "S2_cel_mai_mare_articol": 1134,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 14.12.2025",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "legea_165_2018_mf_2024": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 7,
+   "S1_exemple": [
+    "legea_165_2018_mf_2024#art4/alin1~2",
+    "legea_165_2018_mf_2024#art8/alin5~2",
+    "legea_165_2018_mf_2024#art12/alin1~2",
+    "legea_165_2018_mf_2024#art12/alin2~2",
+    "legea_165_2018_mf_2024#art12/alin2~3"
+   ],
+   "S2_articole_recunoscute": 33,
+   "S2_cel_mai_mare_articol": 36,
+   "S2_acoperire": 0.917,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_265_2022": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 5,
+   "S1_exemple": [
+    "legea_265_2022#art72~2/alin4~2",
+    "legea_265_2022#art72~2/alin5~2",
+    "legea_265_2022#art237^2/alin2~2",
+    "legea_265_2022#art248/alin2~2",
+    "legea_265_2022#art266/alin2~2"
+   ],
+   "S2_articole_recunoscute": 153,
+   "S2_cel_mai_mare_articol": 293,
+   "S2_acoperire": 0.522,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 12.09.2024",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "legea_287_2009": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 13,
+   "S1_exemple": [
+    "legea_287_2009#art2664/alin2~2",
+    "legea_287_2009#art2664/alin2~3",
+    "legea_287_2009#art2664/alin3~2",
+    "legea_287_2009#art2664/alin2~4",
+    "legea_287_2009#art2664/alin2~5"
+   ],
+   "S2_articole_recunoscute": 2664,
+   "S2_cel_mai_mare_articol": 2664,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 03.05.2026",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 8,
+   "S1_exemple": [
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct1/art40^2/alin4~2",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct1/art40^2/alin7~2",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct19/art123^1/alin7~2",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct19/art123^1/alin8~2",
+    "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25#artI/pct19/art123^1/alin9~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 9,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din forma de baza 10.01.2019",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": true
+  },
+  "legea_31_1990_modif_L222_2023": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 1,
+   "S1_exemple": [
+    "legea_31_1990_modif_L222_2023#art235/alin2~2"
+   ],
+   "S2_articole_recunoscute": 3,
+   "S2_cel_mai_mare_articol": 235,
+   "S2_acoperire": 0.013,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "legea_31_1990_societatile": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 8,
+   "S1_exemple": [
+    "legea_31_1990_societatile#art270^2/alin1~2",
+    "legea_31_1990_societatile#art270^2/alin2~2",
+    "legea_31_1990_societatile#art270^2/alin3~2",
+    "legea_31_1990_societatile#art270^2/alin1~3",
+    "legea_31_1990_societatile#art270^2/alin2~3"
+   ],
+   "S2_articole_recunoscute": 294,
+   "S2_cel_mai_mare_articol": 294,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 18.12.2025",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "og_13_2011": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 10,
+   "S1_exemple": [
+    "og_13_2011#art84/alin2~2",
+    "og_13_2011#art84/alin2~3",
+    "og_13_2011#art185/alin3~2",
+    "og_13_2011#art185/alin3~3",
+    "og_13_2011#art185/alin4~2"
+   ],
+   "S2_articole_recunoscute": 32,
+   "S2_cel_mai_mare_articol": 404,
+   "S2_acoperire": 0.079,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 07.08.2024",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "omfp_1802_2014_ordin_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 12,
+   "S2_acoperire": 0.083,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "omfp_1802_2014_reglementari_consolidat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 21,
+   "S1_exemple": [
+    "omfp_1802_2014_reglementari_consolidat#artII/alin2~2",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin2~3",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin3~2",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin2~4",
+    "omfp_1802_2014_reglementari_consolidat#artII/alin3~3"
+   ],
+   "S2_articole_recunoscute": 0,
+   "S2_cel_mai_mare_articol": 0,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": true
+  },
+  "ordin_1099_2016": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 5,
+   "S2_cel_mai_mare_articol": 26,
+   "S2_acoperire": 0.192,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "de adus din sursa oficiala",
+   "modificator": false
+  },
+  "oug_158_2005_pre_L141": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 7,
+   "S1_exemple": [
+    "oug_158_2005_pre_L141#art1/alin2~2",
+    "oug_158_2005_pre_L141#art1/alin2~3",
+    "oug_158_2005_pre_L141#art1/alin3~2",
+    "oug_158_2005_pre_L141#art1/alin3~3",
+    "oug_158_2005_pre_L141#art1/alin4~2"
+   ],
+   "S2_articole_recunoscute": 62,
+   "S2_cel_mai_mare_articol": 62,
+   "S2_acoperire": 1.0,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "redare istorica - nu se inlocuieste cu consolidatul curent",
+   "modificator": false
+  },
+  "oug_70_2024_ro_etva_decont_precompletat": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 20,
+   "S2_cel_mai_mare_articol": 325,
+   "S2_acoperire": 0.062,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 09.03.2026",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": false
+  },
+  "oug_89_2025": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 3,
+   "S1_exemple": [
+    "oug_89_2025#artV/alin1~2",
+    "oug_89_2025#artV/alin2~2",
+    "oug_89_2025#artV/alin3~2"
+   ],
+   "S2_articole_recunoscute": 1,
+   "S2_cel_mai_mare_articol": 25,
+   "S2_acoperire": null,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "oficial: legislatie.just.ro, forma consolidata din 16.08.2026",
+   "categorie": "deja din sursa oficiala - defect al conversiei portalului",
+   "modificator": true
+  },
+  "pdf_original/structura_D100_2026": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 53,
+   "S2_acoperire": 0.038,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  },
+  "pdf_original/structura_D100_v200_2014": {
+   "S4_articole_in_nota": 0,
+   "S4_exemple": [],
+   "S1_alineate_duplicate": 0,
+   "S1_exemple": [],
+   "S2_articole_recunoscute": 2,
+   "S2_cel_mai_mare_articol": 296,
+   "S2_acoperire": 0.007,
+   "S3_articole_imbricate": 0,
+   "S3_exemple": [],
+   "sursa": "instantaneu iConta",
+   "categorie": "nenormativ - numai raportat",
+   "modificator": false
+  }
+ },
+ "C31_rezolvare": {
+  "hg_1045_2018_norme_consolidat": {
+   "stare": "adus",
+   "id_portal": "209698",
+   "titlu": "1. HOTARARE 1045 28/12/2018",
+   "motiv": "cautare tip 2, nr. 1045, an 2018 -> 1. HOTARARE 1045 28/12/2018"
+  },
+  "hg_1074_2021": {
+   "stare": "adus",
+   "id_portal": "247209",
+   "titlu": "1. HOTARARE 1074 04/10/2021",
+   "motiv": "cautare tip 2, nr. 1074, an 2021 -> 1. HOTARARE 1074 04/10/2021"
+  },
+  "hg_1094_2025": {
+   "stare": "adus",
+   "id_portal": "305236",
+   "titlu": "1. HOTARARE 1094 11/12/2025",
+   "motiv": "cautare tip 2, nr. 1094, an 2025 -> 1. HOTARARE 1094 11/12/2025"
+  },
+  "hg_295_2025_reges_online_registru_salariati": {
+   "stare": "adus",
+   "id_portal": "295995",
+   "titlu": "1. HOTARARE 295 27/03/2025",
+   "motiv": "cautare tip 2, nr. 295, an 2025 -> 1. HOTARARE 295 27/03/2025"
+  },
+  "hg_518_1995": {
+   "stare": "adus",
+   "id_portal": "7037",
+   "titlu": "1. HG 518 10/07/1995",
+   "motiv": "cautare tip 2, nr. 518, an 1995 -> 1. HG 518 10/07/1995"
+  },
+  "hg_867_2015": {
+   "stare": "adus",
+   "id_portal": "172757",
+   "titlu": "1. HG 867 14/10/2015",
+   "motiv": "cautare tip 2, nr. 867, an 2015 -> 1. HG 867 14/10/2015"
+  },
+  "hg_905_2017": {
+   "stare": "adus",
+   "id_portal": "195770",
+   "titlu": "1. HOTARARE 905 14/12/2017",
+   "motiv": "cautare tip 2, nr. 905, an 2017 -> 1. HOTARARE 905 14/12/2017"
+  },
+  "legea_1_2020": {
+   "stare": "adus",
+   "id_portal": "221917",
+   "titlu": "1. LEGE 1 06/01/2020",
+   "motiv": "cautare tip 1, nr. 1, an 2020 -> 1. LEGE 1 06/01/2020"
+  },
+  "legea_129_2019": {
+   "stare": "adus",
+   "id_portal": "216157",
+   "titlu": "1. LEGE 129 11/07/2019",
+   "motiv": "cautare tip 1, nr. 129, an 2019 -> 1. LEGE 129 11/07/2019"
+  },
+  "legea_136_2020_consolidat": {
+   "stare": "adus",
+   "id_portal": "227953",
+   "titlu": "1. LEGE 136 18/07/2020",
+   "motiv": "cautare tip 1, nr. 136, an 2020 -> 1. LEGE 136 18/07/2020"
+  },
+  "legea_141_2025_consolidat": {
+   "stare": "adus",
+   "id_portal": "300022",
+   "titlu": "1. LEGE 141 25/07/2025",
+   "motiv": "cautare tip 1, nr. 141, an 2025 -> 1. LEGE 141 25/07/2025"
+  },
+  "legea_165_2018_mf_2024": {
+   "stare": "varianta a aceluiasi act",
+   "ca": "legea_165_2018_anaf"
+  },
+  "legea_165_2018_anaf": {
+   "stare": "adus",
+   "id_portal": "202623",
+   "titlu": "1. LEGE 165 10/07/2018",
+   "motiv": "cautare tip 1, nr. 165, an 2018 -> 1. LEGE 165 10/07/2018"
+  },
+  "legea_226_2023": {
+   "stare": "adus",
+   "id_portal": "272230",
+   "titlu": "1. LEGE 226 14/07/2023",
+   "motiv": "cautare tip 1, nr. 226, an 2023 -> 1. LEGE 226 14/07/2023"
+  },
+  "legea_230_2007": {
+   "stare": "adus",
+   "id_portal": "83753",
+   "titlu": "1. LEGE 230 06/07/2007",
+   "motiv": "cautare tip 1, nr. 230, an 2007 -> 1. LEGE 230 06/07/2007"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor": {
+   "stare": "adus",
+   "id_portal": "305208",
+   "titlu": "1. LEGE 239 15/12/2025",
+   "motiv": "cautare tip 1, nr. 239, an 2025 -> 1. LEGE 239 15/12/2025"
+  },
+  "legea_241_2005": {
+   "stare": "adus",
+   "id_portal": "63590",
+   "titlu": "1. LEGE 241 15/07/2005",
+   "motiv": "cautare tip 1, nr. 241, an 2005 -> 1. LEGE 241 15/07/2005"
+  },
+  "legea_26_1990": {
+   "stare": "adus",
+   "id_portal": "783",
+   "titlu": "1. LEGE 26 05/11/1990",
+   "motiv": "cautare tip 1, nr. 26, an 1990 -> 1. LEGE 26 05/11/1990"
+  },
+  "legea_265_2022": {
+   "stare": "adus",
+   "id_portal": "257835",
+   "titlu": "1. LEGE 265 22/07/2022",
+   "motiv": "cautare tip 1, nr. 265, an 2022 -> 1. LEGE 265 22/07/2022"
+  },
+  "legea_287_2009": {
+   "stare": "adus",
+   "id_portal": "109883",
+   "titlu": "1. LEGE 287 17/07/2009",
+   "motiv": "cautare tip 1, nr. 287, an 2009 -> 1. LEGE 287 17/07/2009"
+  },
+  "legea_296_2020_consolidat": {
+   "stare": "adus",
+   "id_portal": "235513",
+   "titlu": "1. LEGE 296 18/12/2020",
+   "motiv": "cautare tip 1, nr. 296, an 2020 -> 1. LEGE 296 18/12/2020"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii": {
+   "stare": "adus",
+   "id_portal": "275745",
+   "titlu": "1. LEGE 296 26/10/2023",
+   "motiv": "cautare tip 1, nr. 296, an 2023 -> 1. LEGE 296 26/10/2023"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
+   "stare": "adus",
+   "id_portal": "210007",
+   "titlu": "1. LEGE 30 10/01/2019",
+   "motiv": "cautare tip 1, nr. 30, an 2019 -> 1. LEGE 30 10/01/2019"
+  },
+  "legea_31_1990_modif_L222_2023": {
+   "stare": "varianta a aceluiasi act",
+   "ca": "legea_31_1990_societatile"
+  },
+  "legea_31_1990_societatile": {
+   "stare": "adus",
+   "id_portal": "798",
+   "titlu": "1. LEGE 31 16/11/1990",
+   "motiv": "cautare tip 1, nr. 31, an 1990 -> 1. LEGE 31 16/11/1990"
+  },
+  "legea_346_2002_consolidat": {
+   "stare": "adus",
+   "id_portal": "36905",
+   "titlu": "1. LEGE 346 05/06/2002",
+   "motiv": "cautare tip 1, nr. 346, an 2002 -> 1. LEGE 346 05/06/2002"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap": {
+   "stare": "adus",
+   "id_portal": "77815",
+   "titlu": "1. LEGE 448 06/12/2006",
+   "motiv": "cautare tip 1, nr. 448, an 2006 -> 1. LEGE 448 06/12/2006"
+  },
+  "legea_53_2003_codul_muncii": {
+   "stare": "adus",
+   "id_portal": "41625",
+   "titlu": "1. LEGE 53 24/01/2003",
+   "motiv": "cautare tip 1, nr. 53, an 2003 -> 1. LEGE 53 24/01/2003"
+  },
+  "legea_72_2013": {
+   "stare": "adus",
+   "id_portal": "146555",
+   "titlu": "1. LEGE 72 28/03/2013",
+   "motiv": "cautare tip 1, nr. 72, an 2013 -> 1. LEGE 72 28/03/2013"
+  },
+  "legea_82_1991_consolidat": {
+   "stare": "adus",
+   "id_portal": "1576",
+   "titlu": "1. LEGE 82 24/12/1991",
+   "motiv": "cautare tip 1, nr. 82, an 1991 -> 1. LEGE 82 24/12/1991"
+  },
+  "legea_85_2014": {
+   "stare": "adus",
+   "id_portal": "159286",
+   "titlu": "1. LEGE 85 25/06/2014",
+   "motiv": "cautare tip 1, nr. 85, an 2014 -> 1. LEGE 85 25/06/2014"
+  },
+  "legea_98_2016": {
+   "stare": "adus",
+   "id_portal": "178667",
+   "titlu": "1. LEGE 98 19/05/2016",
+   "motiv": "cautare tip 1, nr. 98, an 2016 -> 1. LEGE 98 19/05/2016"
+  },
+  "og_13_2011": {
+   "stare": "adus",
+   "id_portal": "131085",
+   "titlu": "1. OG 13 24/08/2011",
+   "motiv": "cautare tip 13, nr. 13, an 2011 -> 1. OG 13 24/08/2011"
+  },
+  "og_2_2001": {
+   "stare": "adus",
+   "id_portal": "29779",
+   "titlu": "1. OG 2 12/07/2001",
+   "motiv": "cautare tip 13, nr. 2, an 2001 -> 1. OG 2 12/07/2001"
+  },
+  "og_39_2015": {
+   "stare": "adus",
+   "id_portal": "170982",
+   "titlu": "1. OG 39 26/08/2015",
+   "motiv": "cautare tip 13, nr. 39, an 2015 -> 1. OG 39 26/08/2015"
+  },
+  "omfp_1802_2014_ordin_consolidat": {
+   "stare": "acelasi act exista deja in stratul oficial",
+   "ca": "omfp_1802_2014"
+  },
+  "omfp_1802_2014_reglementari_consolidat": {
+   "stare": "acelasi act exista deja in stratul oficial",
+   "ca": "omfp_1802_2014"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice": {
+   "stare": "adus",
+   "id_portal": "196396",
+   "titlu": "1. ORDIN 3254 19/12/2017",
+   "motiv": "cautare tip 5, nr. 3254, an 2017 -> 1. ORDIN 3254 19/12/2017"
+  },
+  "oms_15_2018_norme": {
+   "stare": "adus",
+   "id_portal": "196682",
+   "titlu": "2. ORDIN 15 05/01/2018",
+   "motiv": "cautare tip 5, nr. 15, an 2018 -> 2. ORDIN 15 05/01/2018"
+  },
+  "ordin_1099_2016": {
+   "stare": "nerezolvat",
+   "motiv": "ambiguu: [('177075', '1. ORDIN 1099 29/03/2016'), ('179451', '2. ORDIN 1099 23/06/2016'), ('180514', '3. ORDIN 1099 12/07/2016')]"
+  },
+  "ordin_2594_2015": {
+   "stare": "adus",
+   "id_portal": "171984",
+   "titlu": "1. ORDIN 2594 05/10/2015",
+   "motiv": "cautare tip 5, nr. 2594, an 2015 -> 1. ORDIN 2594 05/10/2015"
+  },
+  "ordin_3845_2015": {
+   "stare": "adus",
+   "id_portal": "174717",
+   "titlu": "1. ORDIN 3845 30/12/2015",
+   "motiv": "cautare tip 5, nr. 3845, an 2015 -> 1. ORDIN 3845 30/12/2015"
+  },
+  "ordin_3846_2015": {
+   "stare": "adus",
+   "id_portal": "174706",
+   "titlu": "1. ORDIN 3846 30/12/2015",
+   "motiv": "cautare tip 5, nr. 3846, an 2015 -> 1. ORDIN 3846 30/12/2015"
+  },
+  "ordin_878_2022": {
+   "stare": "adus",
+   "id_portal": "254993",
+   "titlu": "1. ORDIN 878 03/05/2022",
+   "motiv": "cautare tip 5, nr. 878, an 2022 -> 1. ORDIN 878 03/05/2022"
+  },
+  "oug_115_2023_consolidat": {
+   "stare": "adus",
+   "id_portal": "277404",
+   "titlu": "1. ORD DE URGENTA 115 14/12/2023",
+   "motiv": "cautare tip 18, nr. 115, an 2023 -> 1. ORD DE URGENTA 115 14/12/2023"
+  },
+  "oug_116_2023": {
+   "stare": "adus",
+   "id_portal": "277398",
+   "titlu": "1. ORD DE URGENTA 116 14/12/2023",
+   "motiv": "cautare tip 18, nr. 116, an 2023 -> 1. ORD DE URGENTA 116 14/12/2023"
+  },
+  "oug_120_2021": {
+   "stare": "adus",
+   "id_portal": "247243",
+   "titlu": "1. ORD DE URGENTA 120 04/10/2021",
+   "motiv": "cautare tip 18, nr. 120, an 2021 -> 1. ORD DE URGENTA 120 04/10/2021"
+  },
+  "oug_158_2005_consolidat": {
+   "stare": "adus",
+   "id_portal": "66305",
+   "titlu": "1. OUG 158 17/11/2005",
+   "motiv": "cautare tip 18, nr. 158, an 2005 -> 1. OUG 158 17/11/2005"
+  },
+  "oug_28_1999": {
+   "stare": "adus",
+   "id_portal": "17431",
+   "titlu": "1. OUG 28 25/03/1999",
+   "motiv": "cautare tip 18, nr. 28, an 1999 -> 1. OUG 28 25/03/1999"
+  },
+  "oug_44_2008": {
+   "stare": "adus",
+   "id_portal": "91808",
+   "titlu": "1. OUG 44 16/04/2008",
+   "motiv": "cautare tip 18, nr. 44, an 2008 -> 1. OUG 44 16/04/2008"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat": {
+   "stare": "adus",
+   "id_portal": "284214",
+   "titlu": "1. ORD DE URGENTA 70 21/06/2024",
+   "motiv": "cautare tip 18, nr. 70, an 2024 -> 1. ORD DE URGENTA 70 21/06/2024"
+  },
+  "oug_89_2025": {
+   "stare": "adus",
+   "id_portal": "305817",
+   "titlu": "1. ORD DE URGENTA 89 23/12/2025",
+   "motiv": "cautare tip 18, nr. 89, an 2025 -> 1. ORD DE URGENTA 89 23/12/2025"
+  }
+ },
+ "C32_demonstratie": [
+  "termen_efectiv(28.02.2026) = 02.03.2026: 28.02.2026 sâmbătă, 01.03.2026 duminică → prima zi lucrătoare, 02.03.2026 (luni). Regula: `legea_134_2010_codul_de_procedura_civila#art181/alin2`; sărbătorile: `legea_53_2003_codul_muncii#art139/alin1`; date mobile calculate pentru 2026 (Paștele ortodox: algoritmul Meeus pentru calendarul iulian + 13 zile): Vinerea Mare = 10.04.2026; Paștele ortodox = 12.04.2026; Rusaliile = Paștele + 49 de zile = 31.05.2026; sărbători numite în atom fără dată, cu data lor fixă (declarată, C34): Adormirea Maicii Domnului = 15.08; Crăciunul = 25-26.12",
+  "termen = termen_efectiv(d) = termen_efectiv(28.02.2026) = 02.03.2026"
+ ]
+}

@@ -47,8 +47,8 @@ class Portal(object):
         jeton = re.search(r'name="__RequestVerificationToken"[^>]*value="([^"]+)"', t).group(1)
         date = {"__RequestVerificationToken": jeton, "TitleText": titlu or "",
                 "DocumentType": tip or "", "DocumentNumber": numar or "",
-                "DataSemnariiTextFrom": "01.01.%s" % an if an else "",
-                "DataSemnariiTextTo": "31.12.%s" % an if an else "", "actiontype": "Căutare"}
+                "DataSemnariiTextFrom": "%s/01/01" % an if an else "",
+                "DataSemnariiTextTo": "%s/12/31" % an if an else "", "actiontype": "Căutare"}
         for k in ("ContentText_First", "opContentText_Second", "ContentText_Second",
                   "opContentText_Third", "ContentText_Third", "opContentText_Fourth",
                   "ContentText_Fourth", "PublishedInName", "PublishedInNumber",

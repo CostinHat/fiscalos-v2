@@ -137,6 +137,21 @@ python3 -m fiscalos.raport_intrebari_v5
 python3 -m fiscalos.masoara_C33               # efectul C33, fara apel
 ```
 
+## Pasul 7 — deciziile C30–C33 (`intrebari/v6/`, `propuneri/v7/`)
+
+Fără rulare plătită (decizia 5). Comparatorul reparat (C30) și decodarea `\uXXXX` (C33), măsurate pe
+ieșirile salvate: navigare v5 34/3/13 → **37/2/11**. Codul muncii și alte 46 de acte găsite stricate de
+detectorul de structură (`detector_structura.py`) aduse din sursa oficială (C31), cu trei defecte de
+conversie a portalului reparate; propunerea v7 (aceleași clasificări, atomi la locul lor). `termen_efectiv`
+în calcul, din atomii citați (C32), cu Codul de procedură civilă adus pentru regula prelungirii.
+Efectul lui C31 și C32 se măsoară pe setul nou. De decis: C34–C37.
+
+```sh
+python3 -m fiscalos.detector_structura        # clasa "articole atomizate sub alt articol", pe tot corpusul
+venv/bin/python -m fiscalos.surse_oficiale_c31   # rezolvarea in portal + aducere incrementala (retea)
+python3 -m fiscalos.raport_v6
+```
+
 ## Cum se rulează
 
 ```sh

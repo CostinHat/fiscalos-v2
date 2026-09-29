@@ -46,6 +46,8 @@ _FAPT = re.compile(
 # 25 martie). Nota: validatorul ... testat la 03.08.2026", deci "faptul principal" devenea data
 # NOTEI, 03.08.2026 - iar un raspuns corect ("25 iunie ... a anului urmator") iesea GRESIT. Faptul
 # de tip data in litere se compara pe zi + luna (anul poate fi dat relativ: "anul urmator").
+_LUNI = {"ianuarie": 1, "februarie": 2, "martie": 3, "aprilie": 4, "mai": 5, "iunie": 6, "iulie": 7,
+         "august": 8, "septembrie": 9, "octombrie": 10, "noiembrie": 11, "decembrie": 12}
 _LIPSA = re.compile(r"depinde|lipse|nu se poate (stabili|raspunde|determina)|insuficient|"
                     r"trebuie (precizat|stiut|cunoscut)|necesar(a|e)? (informati|date)|"
                     r"nu rezulta|incomplet|neprecizat", re.I)
@@ -84,9 +86,27 @@ def _fapte(text, fara_negate=False):
         elif m.group(4):
             ies.append("%s %s" % (m.group(4), m.group(5)))
         elif m.group(6):
-            ies.append(m.group(6))
+            z, l, a = m.group(6).split(".")
+            ies.append("%02d.%02d.%s" % (int(z), int(l), a))       # C30: 1.3.2026 = 01.03.2026
         elif m.group(7):
-            ies.append(" ".join(m.group(7).split()[:2]))          # zi + luna
+            p = m.group(7).split()
+            ies.append(" ".join(p[:2]))                            # zi + luna
+            if len(p) == 3:
+                # C30: "28 februarie 2026" e ACEEASI data cu "28.02.2026" - se adauga si forma
+                # numerica, ca alias; faptul principal ramane zi + luna (anul poate fi relativ)
+                ies.append("%02d.%02d.%s" % (int(p[0]), _LUNI[p[1]], p[2]))
+    return ies
+
+
+# C30: zero spus in cuvinte. O cheie al carei fapt principal e ZERO ("0 lei") e satisfacuta de un
+# raspuns care spune explicit ca nu se datoreaza nimic.
+_ZERO = re.compile(r"\bnimic\b|\bzero\b|\bnu (se )?datoreaz[aă]\b|\bnu are de plat")
+
+
+def _fapte_raspuns(text):
+    ies = _fapte(text)
+    if _ZERO.search(potrivire.norm(text or "")):
+        ies += ["0 lei", "0%"]
     return ies
 
 
@@ -169,11 +189,34 @@ def _temei_nostru(r, corp):
     return ies
 
 
-def compara(fis_raspunsuri=None):
+class _CorpusIstoric(object):
+    def __init__(self, dupa_id):
+        self.dupa_id = dupa_id
+
+
+def corpus_la_commit(commit):
+    """Atomii (instantaneu + oficiali) asa cum erau la `commit`, din git - ca o rulare sa fie comparata
+    pe corpusul EI: dupa C31, id-urile unor atomi s-au schimbat (cuprinsul portalului), iar un temei
+    citat de o rulare veche nu s-ar mai rezolva pe corpusul de acum."""
+    import subprocess
+    d = {}
+    lista = subprocess.run(["git", "ls-tree", "--name-only", commit, "artefacte/atomi/",
+                            "artefacte/atomi_oficiale/"], cwd=_RAD, capture_output=True, text=True).stdout.split()
+    for cale in lista:
+        if cale.endswith(".jsonl"):
+            txt = subprocess.run(["git", "show", "%s:%s" % (commit, cale)], cwd=_RAD,
+                                 capture_output=True, text=True).stdout
+            for l in txt.splitlines():
+                a = json.loads(l)
+                d[a["id"]] = a
+    return _CorpusIstoric(d)
+
+
+def compara(fis_raspunsuri=None, corp=None):
     fis_raspunsuri = fis_raspunsuri or os.path.join(_RAD, "artefacte", "intrebari",
                                                     "raspunsuri.json")
     R = {r["id"]: r for r in json.load(open(fis_raspunsuri, encoding="utf-8"))["raspunsuri"]}
-    corp = potrivire.Corpus()
+    corp = corp or potrivire.Corpus()
     rez = []
     with open(CSV, encoding="utf-8") as f:
         cheie = list(csv.DictReader(f))
@@ -195,7 +238,7 @@ def compara(fis_raspunsuri=None):
             continue
         noi = _temei_nostru(r, corp)
         text_nostru = (r.get("raspuns") or "") + " " + json.dumps(r.get("calcul") or {})
-        fapte_noi = _fapte(text_nostru)
+        fapte_noi = _fapte_raspuns(text_nostru)
         valoare_ok = (not fapte_cheie) or (potrivire.norm(fapte_cheie[0]).replace(" ", "")
                                            in [potrivire.norm(x).replace(" ", "") for x in fapte_noi])
         # DEFECT DE COMPARATOR, reparat dupa prima rulare si raportat ca atare: cand temeiul cheii

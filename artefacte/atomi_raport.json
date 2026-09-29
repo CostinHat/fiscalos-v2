@@ -944,10 +944,10 @@
    "abrogati": 0,
    "cu_valabilitate": 40,
    "fisier": "artefacte/atomi/legea_287_2009.jsonl",
-   "n": 203,
+   "n": 438,
    "niveluri": {
     "alineat": 39,
-    "articol": 164
+    "articol": 399
    },
    "structura": "articole"
   },
@@ -3079,9 +3079,9 @@
    "structura": "fragmente"
   }
  },
- "facut_la": "2026-09-28T21:35:51",
+ "facut_la": "2026-09-29T09:27:44",
  "n_acte": 269,
  "n_acte_pe_articole": 207,
  "n_acte_pe_fragmente": 62,
- "n_atomi": 49290
+ "n_atomi": 49525
 }

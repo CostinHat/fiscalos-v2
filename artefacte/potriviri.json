@@ -2,19 +2,19 @@
  "_ce": "OP6+OP7 potrivire si clasificare. Fiecare CONCORDA/DIFERA citeaza id-ul atomului si fragmentul verbatim (CLAUDE.md §2).",
  "citari_declarate": 40,
  "citari_rezolvate": 40,
- "facut_la": "2026-09-28T21:35:59",
+ "facut_la": "2026-09-29T09:27:01",
  "n_acte_nenormative": 57,
- "n_acte_normative": 212,
- "n_atomi_corpus": 52485,
+ "n_acte_normative": 213,
+ "n_atomi_corpus": 77524,
  "n_conturi_in_plan_din_corpus": 655,
  "n_parametri": 147,
  "potriviri": [
   {
    "act_modificator": null,
-   "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
-   "atom": "legea_141_2025_consolidat#art291/alin1",
+   "ancora": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
+   "atom": "legea_141_2025_consolidat#artII/pct42/art291/alin1",
    "atom_abrogat": false,
-   "atom_linie": 463,
+   "atom_linie": 546,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -27,11 +27,11 @@
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+   "cum_gasit": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
    "indicii": [
     "cota standard"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin1)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
    "nume": "tva_standard",
    "parametru": "cote/tva_standard@2025-08-01",
    "temei_declarat_de_iconta": "Legea 141 2025",
@@ -75,21 +75,21 @@
   },
   {
    "act_modificator": null,
-   "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin2)",
-   "atom": "legea_141_2025_consolidat#art291/alin2",
+   "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
+   "atom": "legea_141_2025_consolidat#artII/pct42/art291/alin2",
    "atom_abrogat": false,
-   "atom_linie": 465,
+   "atom_linie": 549,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
-   "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri: a) livrarea de medicamente de uz uman; ...",
+   "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin2)",
+   "cum_gasit": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "indicii": [
     "cota redusa"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin2)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, gasit verbatim in actul declarat",
    "nume": "tva_redusa",
    "parametru": "cote/tva_redusa@2025-08-01",
    "temei_declarat_de_iconta": "Legea 141 2025",
@@ -102,21 +102,21 @@
   },
   {
    "act_modificator": null,
-   "ancora": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin2)",
-   "atom": "legea_141_2025_consolidat#art291/alin2",
+   "ancora": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
+   "atom": "legea_141_2025_consolidat#artII/pct42/art291/alin2",
    "atom_abrogat": false,
-   "atom_linie": 465,
+   "atom_linie": 549,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
-   "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri: a) livrarea de medicamente de uz uman; ...",
+   "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
-   "cum_gasit": "ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin2)",
+   "cum_gasit": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
    "indicii": [
     "cota redusa"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: ancora pe articolul din Temei (legea_141_2025_consolidat#art291/alin2)",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
    "nume": "tva_redusa_9",
    "parametru": "cote/tva_redusa_9@2025-08-01",
    "temei_declarat_de_iconta": "Legea 141 2025",
@@ -158,12 +158,12 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, in actul declarat (legea_141_2025_consolidat)",
-   "atom": "legea_141_2025_consolidat#art291/alin2",
+   "atom": "legea_141_2025_consolidat#artII/pct42/art291/alin2",
    "atom_abrogat": false,
-   "atom_linie": 465,
+   "atom_linie": 549,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
-   "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri: a) livrarea de medicamente de uz uman; ...",
+   "atom_verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -213,12 +213,12 @@
   {
    "act_modificator": null,
    "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (4 cuvinte, fara cifre) in actul declarat",
-   "atom": "legea_141_2025_consolidat#artII",
+   "atom": "legea_141_2025_consolidat#artII/pct1/alin2",
    "atom_abrogat": false,
-   "atom_linie": 159,
-   "atom_nivel": "articol",
+   "atom_linie": 144,
+   "atom_nivel": "alineat",
    "atom_valabilitate": null,
-   "atom_verbatim": "Legea nr. 227/2015 privind Codul fiscal , publicată în Monitorul Oficial al României, Partea I, nr. 688 din 10 septembrie 2015, cu modificările și completările ulterioare, se modifică și se completează după cum urmează: 1. La articolul 43, alineatul (2) se modifică și va avea următorul cuprins: (2) Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul. ... 2. La articolul 46^1, alineatul (1) se modifică și va avea următorul cuprins: +",
+   "atom_verbatim": "Impozitul pe dividende se stabilește prin aplicarea unei cote de impozit de 16% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară și se plătește la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plătește dividendul. ...",
    "citare_rezolvata": true,
    "clasa": "cota",
    "clasificare": "CONCORDA",
@@ -387,21 +387,14 @@
    "valoare_lege": "5.000.000"
   },
   {
-   "act_modificator": "Punctul 160. din Articolul I a fost abrogat de Litera a), Alineatul (1), Articolul XLVIII din ORDONANȚA DE URGENȚĂ nr. 130 din 17 decembrie 2021, publicată în MONITORUL OFICIAL nr. 1202 din 18 decembrie 2021",
+   "act_modificator": null,
    "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
-   "atom": "legea_296_2020_consolidat#art231/alin1",
-   "atom_abrogat": true,
-   "atom_linie": 1341,
-   "atom_nivel": "alineat",
-   "atom_valabilitate": {
-    "acelasi_cu_atomul_valorii": true,
-    "act_modificator": "Punctul 160. din Articolul I a fost abrogat de Litera a), Alineatul (1), Articolul XLVIII din ORDONANȚA DE URGENȚĂ nr. 130 din 17 decembrie 2021, publicată în MONITORUL OFICIAL nr. 1202 din 18 decembrie 2021",
-    "atom": "legea_296_2020_consolidat#art231/alin1",
-    "nota_data": "codul dateaza valoarea din 2021-01-01; corpusul arata 2022-01-01. O nota de consolidare e data ultimei modificari a TEXTULUI, nu neaparat a valorii - de citit, nu de clasificat.",
-    "sursa_datei": "nota de consolidare",
-    "valabil_din": "2022-01-01"
-   },
-   "atom_verbatim": "…eea ce privește ajustarea dreptului de deducere prevăzută de lege. ... 158. La articolul 282 alineatul (3), litera a) se modifică și va avea următorul cuprins: a) persoanele impozabile înregistrate în scopuri de TVA conform art. 316, care au sediul activității economice în România conform art. 266 alin. (2) lit. a), a căror cifră de afaceri în anul calendaristic precedent nu a depășit plafonul de 4.500.000 lei. Persoana impozabilă care în anul precedent nu a aplicat sistemul TVA la încasare, dar a cărei cifră de afaceri pentru anul respectiv este inferioară plafonului de 4.500.000 lei și care optează pentru aplicarea sistemului TVA la încasare, aplică sistemul TVA la încasare începând cu prima zi a perioadei fiscale următoare celei în care persoana impozabilă și-a exercitat opțiunea, cu condiția ca la data exercitării opțiunii să nu fi depășit plafonul pentru anul în curs. Cifra de afaceri pentru calculul plafonului de 4.500.000 lei este constituită din valoarea totală a livrărilor de bunuri și a prestărilor de servicii taxabile și/sau scutite de TVA, precum și a operațiunilor rezultate din activități economice pentru care locul livrării/prestării se consideră ca fiind în străinăta…",
+   "atom": "legea_296_2020_consolidat#artI/pct158",
+   "atom_abrogat": false,
+   "atom_linie": 1814,
+   "atom_nivel": "punct",
+   "atom_valabilitate": null,
+   "atom_verbatim": "La articolul 282 alineatul (3), litera a) se modifică și va avea următorul cuprins: a) persoanele impozabile înregistrate în scopuri de TVA conform art. 316, care au sediul activității economice în România conform art. 266 alin. (2) lit. a), a căror cifră de afaceri în anul calendaristic precedent nu a depășit plafonul de 4.500.000 lei. Persoana impozabilă care în anul precedent nu a aplicat sistemul TVA la încasare, dar a cărei cifră de afaceri pentru anul respectiv este inferioară plafonului de 4.500.000 lei și care optează pentru aplicarea sistemului TVA la încasare, aplică sistemul TVA la încasare începând cu prima zi a perioadei fiscale următoare celei în care persoana impozabilă și-a exercitat opțiunea, cu condiția ca la data exercitării opțiunii să nu fi depășit plafonul pentru anul în curs. Cifra de afaceri pentru calculul plafonului de 4.500.000 lei este constituită din valoarea totală a livrărilor de bunuri și a prestărilor de servicii taxabile și/sau scutite de TVA, precum și a operațiunilor rezultate din activități economice pentru care locul livrării/prestării se consideră ca fiind în străinătate, conform art. 275 și 278, realizate în cursul anului calendaristic; ... .…",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -417,7 +410,8 @@
    "temei_declarat_de_iconta": "Legea 296 2020",
    "unde_in_cod": "core/common.py:625 (registrul COTE)",
    "valabil_din_cod": "2021-01-01",
-   "valabil_din_corpus": "2022-01-01",
+   "valabil_din_corpus": null,
+   "valabilitate_lipsa": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea",
    "valoare_cod": "4500000",
    "valoare_lege": "4.500.000"
   },
@@ -512,7 +506,7 @@
    "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
    "atom": "legea_70_2015_consolidat#art10",
    "atom_abrogat": false,
-   "atom_linie": 395,
+   "atom_linie": 373,
    "atom_nivel": "articol",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
@@ -544,12 +538,12 @@
   {
    "act_modificator": null,
    "ancora": "citatul declarat de iConta, gasit verbatim in actul declarat",
-   "atom": "oug_115_2023_consolidat#artLXIV",
+   "atom": "oug_115_2023_consolidat#artLXIV/pct2",
    "atom_abrogat": false,
-   "atom_linie": 1686,
-   "atom_nivel": "articol",
+   "atom_linie": 2228,
+   "atom_nivel": "punct",
    "atom_valabilitate": null,
-   "atom_verbatim": "…publicată, cu modificările și completările ulterioare; ... e) hipermagazin - structură de vânzare, astfel cum este definit la art. 4 lit. s) din Ordonanța Guvernului nr. 99/2000, republicată , cu modificările și completările ulterioare. ... ... 2. La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ... 3. La articolul 4, alineatele (1) și (4) se modifică și vor avea următorul cuprins: (1) Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)…",
+   "atom_verbatim": "La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ...",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -574,7 +568,7 @@
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art51/alin1)",
    "atom": "cod_fiscal_227_2015_consolidat#art51/alin1",
    "atom_abrogat": false,
-   "atom_linie": 6994,
+   "atom_linie": 6214,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
@@ -607,7 +601,7 @@
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art17)",
    "atom": "cod_fiscal_227_2015_consolidat#art17",
    "atom_abrogat": false,
-   "atom_linie": 2431,
+   "atom_linie": 1651,
    "atom_nivel": "articol",
    "atom_valabilitate": null,
    "atom_verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
@@ -635,7 +629,7 @@
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art138)",
    "atom": "cod_fiscal_227_2015_consolidat#art138",
    "atom_abrogat": false,
-   "atom_linie": 13248,
+   "atom_linie": 12468,
    "atom_nivel": "articol",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
@@ -665,14 +659,14 @@
   {
    "act_modificator": "Articolul 156 din Sectiunea a 2-a , Capitolul III , Titlul V a fost modificat de Punctul 69, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noiembrie 2017, publicată în MONITORUL OFICIAL nr. 885 din 10 noiembrie 2017",
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art156)",
-   "atom": "cod_fiscal_227_2015_consolidat#art156~2",
+   "atom": "cod_fiscal_227_2015_consolidat#art156",
    "atom_abrogat": false,
-   "atom_linie": 14998,
+   "atom_linie": 14218,
    "atom_nivel": "articol",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
     "act_modificator": "Articolul 156 din Sectiunea a 2-a , Capitolul III , Titlul V a fost modificat de Punctul 69, Articolul I din ORDONANȚA DE URGENȚĂ nr. 79 din 8 noiembrie 2017, publicată în MONITORUL OFICIAL nr. 885 din 10 noiembrie 2017",
-    "atom": "cod_fiscal_227_2015_consolidat#art156~2",
+    "atom": "cod_fiscal_227_2015_consolidat#art156",
     "nota_data": "codul dateaza valoarea din 2018-01-01; corpusul arata 2021-12-18. O nota de consolidare e data ultimei modificari a TEXTULUI, nu neaparat a valorii - de citit, nu de clasificat.",
     "sursa_datei": "nota de consolidare",
     "valabil_din": "2021-12-18"
@@ -700,7 +694,7 @@
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art78)",
    "atom": "cod_fiscal_227_2015_consolidat#art78/alin2/lita",
    "atom_abrogat": false,
-   "atom_linie": 9713,
+   "atom_linie": 8933,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
@@ -733,7 +727,7 @@
    "ancora": "ancora pe articolul din Temei (cod_fiscal_227_2015_consolidat#art220^3/alin1)",
    "atom": "cod_fiscal_227_2015_consolidat#art220^3/alin1",
    "atom_abrogat": false,
-   "atom_linie": 16879,
+   "atom_linie": 16099,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
    "atom_verbatim": "Cota contribuției asiguratorii pentru muncă este de 2,25%. ⟦NOTĂ⟧ Notă ... Reproducem mai jos prevederile art. 19 din LEGEA nr. 369 din 19 decembrie 2022, publicată în MONITORUL OFICIAL nr. 1215 din 19 decembrie 2022: Articolul 19 În anul 2023, cota contribuției pentru persoanele prevăzute la art. 20 alin. (1) din Legea nr. 76/2002 privind sistemul asigurărilor pentru șomaj și stimularea ocupării forței de muncă, cu modificările și completările ulterioare, este de 17% din contribuția asiguratorie pentru muncă prevăzută la art. 220^3 alin. (1) din Legea nr. 227/2015 privind Codul fiscal, cu modificările și completările ulterioare.",
@@ -825,12 +819,12 @@
   {
    "act_modificator": null,
    "ancora": "ancora pe articolul din Temei (oug_89_2025#artIII)",
-   "atom": "oug_89_2025#artIII~2/alin1",
+   "atom": "oug_89_2025#artIII/alin1",
    "atom_abrogat": false,
-   "atom_linie": 789,
+   "atom_linie": 1004,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
-   "atom_verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, pentru suma de 300 lei/lună din veniturile din salarii și asimilate salariilor aferente perioadei 1 ianuarie-30 iunie 2026, respectiv pentru suma de 200 lei/lună, din veniturile din salarii și asimilate salariilor aferente perioadei 1 iulie-31 decembrie 2026, nu se datorează impozit pe venit și contribuții sociale obligatorii dacă sunt îndeplinite cumulativ următoarele condiții: a) nivelul salariului de bază brut lunar stabilit potrivit contractului individual de muncă, fără a include sporuri și alte adaosuri, este egal cu nivelul salariului minim brut pe țară garantat în plată stabilit prin act normativ, în vigoare în luna căreia îi sunt aferente veniturile; ...",
+   "atom_verbatim": "Prin derogare de la prevederile art. 78 , art. 139 alin. (1) , art. 140 , art. 157 alin. (1) și ale art. 220^4 alin. (1) din Legea nr. 227/2015 , cu modificările și completările ulterioare, în cazul salariaților care desfășoară activitate în baza contractului individual de muncă, încadrați cu normă întreagă, la locul unde se află funcția de bază, pentru suma de 300 lei/lună din veniturile din salarii și asimilate salariilor aferente perioadei 1 ianuarie-30 iunie 2026, respectiv pentru suma de 200 lei/lună, din veniturile din salarii și asimilate salariilor aferente perioadei 1 iulie-31 decembrie 2026, nu se datorează impozit pe venit și contribuții sociale obligatorii dacă sunt îndeplinite cumulativ următoarele condiții:",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
@@ -885,22 +879,22 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
-   "atom": "oug_89_2025#artIII~2/alin1/litb",
+   "ancora": "ancora pe articolul din Temei (oug_89_2025#artIII/alin1)",
+   "atom": "oug_89_2025#artIII/alin1/litb",
    "atom_abrogat": false,
-   "atom_linie": 793,
+   "atom_linie": 1010,
    "atom_nivel": "litera",
    "atom_valabilitate": null,
    "atom_verbatim": "venitul brut realizat din salarii și asimilate salariilor, astfel cum este definit la art. 76 alin. (1 )-( 3) din Legea nr. 227/2015 , cu modificările și completările ulterioare, fără a include contravaloarea tichetelor de masă, voucherelor de vacanță, respectiv indemnizația de hrană, după caz, acordate potrivit legii, în baza aceluiași contract individual de muncă, pentru aceeași lună, nu depășește nivelul de 4.300 lei inclusiv în perioada cuprinsă între 1 ianuarie 2026-30 iunie 2026, respectiv nivelul de 4.600 lei inclusiv în perioada cuprinsă între 1 iulie 2026-31 decembrie 2026. ...",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
+   "cum_gasit": "ancora pe articolul din Temei (oug_89_2025#artIII/alin1)",
    "indicii": [
     "venitul brut",
     "nu depaseste nivelul de"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: ancora pe articolul din Temei (oug_89_2025#artIII/alin1)",
    "nume": "plafon_facilitate_salariu_minim",
    "parametru": "cote/plafon_facilitate_salariu_minim@2026-07-01",
    "temei_declarat_de_iconta": "OUG 89 2025",
@@ -913,22 +907,22 @@
   },
   {
    "act_modificator": null,
-   "ancora": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
-   "atom": "oug_89_2025#artIII~2/alin1/litb",
+   "ancora": "ancora pe articolul din Temei (oug_89_2025#artIII/alin1)",
+   "atom": "oug_89_2025#artIII/alin1/litb",
    "atom_abrogat": false,
-   "atom_linie": 793,
+   "atom_linie": 1010,
    "atom_nivel": "litera",
    "atom_valabilitate": null,
    "atom_verbatim": "venitul brut realizat din salarii și asimilate salariilor, astfel cum este definit la art. 76 alin. (1 )-( 3) din Legea nr. 227/2015 , cu modificările și completările ulterioare, fără a include contravaloarea tichetelor de masă, voucherelor de vacanță, respectiv indemnizația de hrană, după caz, acordate potrivit legii, în baza aceluiași contract individual de muncă, pentru aceeași lună, nu depășește nivelul de 4.300 lei inclusiv în perioada cuprinsă între 1 ianuarie 2026-30 iunie 2026, respectiv nivelul de 4.600 lei inclusiv în perioada cuprinsă între 1 iulie 2026-31 decembrie 2026. ...",
    "citare_rezolvata": true,
    "clasa": "plafon",
    "clasificare": "CONCORDA",
-   "cum_gasit": "citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
+   "cum_gasit": "ancora pe articolul din Temei (oug_89_2025#artIII/alin1)",
    "indicii": [
     "venitul brut",
     "nu depaseste nivelul de"
    ],
-   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: citatul declarat de iConta, potrivit pe cuvintele lui de conţinut (16 cuvinte, fara cifre) in actul declarat",
+   "motiv": "atomul poarta valoarea din cod, in forma legii, la nivelul: ancora pe articolul din Temei (oug_89_2025#artIII/alin1)",
    "nume": "plafon_facilitate_salariu_minim",
    "parametru": "cote/plafon_facilitate_salariu_minim@2026-01-01",
    "temei_declarat_de_iconta": "OUG 89 2025",
@@ -1065,7 +1059,7 @@
    "ancora": "numele declaratiei + depunere, in cod_fiscal_227_2015_consolidat",
    "atom": "cod_fiscal_227_2015_consolidat#art323/alin1",
    "atom_abrogat": false,
-   "atom_linie": 23912,
+   "atom_linie": 23132,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
    "atom_verbatim": "Persoanele înregistrate conform art. 316 trebuie să depună la organele fiscale competente, pentru fiecare perioadă fiscală, un decont de taxă, până la data de 25 inclusiv a lunii următoare celei în care se încheie perioada fiscală respectivă.",
@@ -1096,7 +1090,7 @@
    "ancora": "numele declaratiei + depunere, in cod_fiscal_227_2015_consolidat",
    "atom": "cod_fiscal_227_2015_consolidat#art324/alin2",
    "atom_abrogat": false,
-   "atom_linie": 23952,
+   "atom_linie": 23172,
    "atom_nivel": "alineat",
    "atom_valabilitate": null,
    "atom_verbatim": "Decontul special de taxă trebuie întocmit potrivit modelului stabilit prin ordin al președintelui A.N.A.F. și se depune până la data de 25 inclusiv a lunii următoare celei în care ia naștere exigibilitatea operațiunilor menționate la alin. (1) . Decontul special de taxă trebuie depus numai pentru perioadele în care ia naștere exigibilitatea taxei. Prin excepție, persoanele care nu sunt înregistrate în scopuri de TVA, conform art. 316 , indiferent dacă sunt sau nu înregistrate conform art. 317 , sunt obligate să depună decontul special de taxă pentru achizițiile intracomunitare de mijloace de transport noi, înainte de înmatricularea acestora în România, dar nu mai târziu de data de 25 a lunii următoare celei în care ia naștere exigibilitatea taxei aferente respectivei achiziții intracomunitare. De asemenea, persoanele care sunt înregistrate în scopuri de TVA, conform art. 317 , și care au obligația plății taxei pentru achizițiile intracomunitare de mijloace de transport care nu sunt considerate noi, conform art. 266 alin. (3) , au obligația să depună decontul special de taxă pentru respectivele achiziții intracomunitare înainte de înmatricularea mijloacelor de transport în România, …",
@@ -3237,7 +3231,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
    "atom_abrogat": false,
-   "atom_linie": 7855,
+   "atom_linie": 7075,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -3273,13 +3267,13 @@
    "valoare_lege": "10%"
   },
   {
-   "act_modificator": null,
+   "act_modificator": "Articolul 16 din Capitolul III a fost modificat de Punctul 9, Articolul XXX din ORDONANȚA DE URGENȚĂ nr. 130 din 17 decembrie 2021, publicată în MONITORUL OFICIAL nr. 1202 din 18 decembrie 2021",
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "legea_165_2018_anaf#art14",
+   "atom": "legea_165_2018_anaf#art16/alin2",
    "atom_abrogat": false,
-   "atom_linie": 218,
-   "atom_nivel": "articol",
-   "atom_verbatim": "Valoarea nominală a unui tichet de masă nu poate depăşi suma de 15,18 lei. Tichetele cadou",
+   "atom_linie": 384,
+   "atom_nivel": "alineat",
+   "atom_verbatim": "Valoarea nominală a unui tichet cadou acordat potrivit art. 15 alin. (1) este de 10 lei sau un multiplu de 10, dar nu mai mare de 50 lei. +",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "NEGASIT",
@@ -3287,24 +3281,24 @@
     "cadouri",
     "cadou"
    ],
-   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (15,18) decat cea din cod (300). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
+   "motiv": "s-a gasit un atom pe subiect, dar numai prin indiciu de cuvinte in tot corpusul, fara temei declarat de iConta, si el poarta alta valoare (10) decat cea din cod (300). O astfel de potrivire e prea slaba ca sa susţina un verdict: se raporteaza NEGASIT, nu DIFERA.",
    "nume": "PLAFON_CADOU",
    "parametru": "nesursat/beneficii_api.PLAFON_CADOU=300",
    "temei_declarat_de_iconta": null,
    "unde_in_cod": "core/beneficii_api.py:22",
    "valabil_din_cod": null,
-   "valabil_din_corpus": null,
+   "valabil_din_corpus": "2021-12-18",
    "valoare_cod": "300",
    "valoare_lege": null
   },
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "legea_70_2015_consolidat#art3/alin1/lita",
+   "atom": "legea_98_2016#art154/alin4/litc",
    "atom_abrogat": false,
-   "atom_linie": 212,
+   "atom_linie": 3586,
    "atom_nivel": "litera",
-   "atom_verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
+   "atom_verbatim": "depunerea la casierie a unor sume în numerar dacă valoarea este mai mică de 5.000 lei; ...",
    "citare_rezolvata": null,
    "clasa": "plafon",
    "clasificare": "NEGASIT",
@@ -3327,15 +3321,15 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "legea_70_2015_consolidat#art3/alin1/lita",
    "atom_abrogat": false,
-   "atom_linie": 212,
+   "atom_linie": 190,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "oug_115_2023_consolidat",
-    "atom": "oug_115_2023_consolidat#artLXIV",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct2",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "…publicată, cu modificările și completările ulterioare; ... e) hipermagazin - structură de vânzare, astfel cum este definit la art. 4 lit. s) din Ordonanța Guvernului nr. 99/2000, republicată , cu modificările și completările ulterioare. ... ... 2. La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ... 3. La articolul 4, alineatele (1) și (4) se modifică și vor avea următorul cuprins: (1) Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)…"
+    "verbatim": "La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ..."
    },
    "atom_verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
    "citare_rezolvata": null,
@@ -3391,15 +3385,15 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "legea_70_2015_consolidat#art3/alin1/litc",
    "atom_abrogat": false,
-   "atom_linie": 218,
+   "atom_linie": 196,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
-    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art4~2/alin1",
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct3/alin1",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi și primiri ori restituiri de împrumuturi sau alte finanțări, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană."
+    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)"
    },
    "atom_verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ...",
    "citare_rezolvata": null,
@@ -3455,15 +3449,15 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "legea_70_2015_consolidat#art3/alin1/lita",
    "atom_abrogat": false,
-   "atom_linie": 212,
+   "atom_linie": 190,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "oug_115_2023_consolidat",
-    "atom": "oug_115_2023_consolidat#artLXIV",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct2",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "…publicată, cu modificările și completările ulterioare; ... e) hipermagazin - structură de vânzare, astfel cum este definit la art. 4 lit. s) din Ordonanța Guvernului nr. 99/2000, republicată , cu modificările și completările ulterioare. ... ... 2. La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ... 3. La articolul 4, alineatele (1) și (4) se modifică și vor avea următorul cuprins: (1) Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)…"
+    "verbatim": "La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ..."
    },
    "atom_verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
    "citare_rezolvata": null,
@@ -3519,15 +3513,15 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "legea_70_2015_consolidat#art3/alin1/litc",
    "atom_abrogat": false,
-   "atom_linie": 218,
+   "atom_linie": 196,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
-    "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
-    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art4~2/alin1",
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct3/alin1",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
-    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi și primiri ori restituiri de împrumuturi sau alte finanțări, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană."
+    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)"
    },
    "atom_verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ...",
    "citare_rezolvata": null,
@@ -3583,7 +3577,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "legea_70_2015_consolidat#art3/alin2",
    "atom_abrogat": false,
-   "atom_linie": 236,
+   "atom_linie": 214,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
@@ -3664,7 +3658,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
    "atom_abrogat": false,
-   "atom_linie": 20146,
+   "atom_linie": 19366,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -3704,7 +3698,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art291/alin2",
    "atom_abrogat": false,
-   "atom_linie": 20153,
+   "atom_linie": 19373,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -3795,7 +3789,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art17",
    "atom_abrogat": false,
-   "atom_linie": 2431,
+   "atom_linie": 1651,
    "atom_nivel": "articol",
    "atom_valabilitate": null,
    "atom_verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
@@ -3829,12 +3823,12 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin8",
    "atom_abrogat": false,
-   "atom_linie": 2516,
+   "atom_linie": 1736,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
-    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art18^1/alin8",
+    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artIII/pct2/art18^1/alin8",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": "2024-01-01",
     "verbatim": "În cazul grupului fiscal, cifra de afaceri de peste 50.000.000 euro prevăzută la alin. (1) se calculează de persoana juridică responsabilă prin însumarea cifrei de afaceri a membrilor grupului fiscal. Celelalte prevederi ale alin. (1), precum și prevederile alin. (2)-(7), (9) și (10) se aplică în mod corespunzător de către membrii/persoana juridică responsabilă având în vedere și următoarele reguli:"
@@ -3880,7 +3874,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art17",
    "atom_abrogat": false,
-   "atom_linie": 2431,
+   "atom_linie": 1651,
    "atom_nivel": "articol",
    "atom_valabilitate": null,
    "atom_verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
@@ -3940,14 +3934,14 @@
    },
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art500^2",
+   "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artIII/pct65/art500^2",
    "atom_abrogat": false,
-   "atom_linie": 1073,
+   "atom_linie": 1282,
    "atom_nivel": "articol",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
     "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
-    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#art500^2",
+    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artIII/pct65/art500^2",
     "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
     "valabil_din": null,
     "verbatim": "Cota de impozitare Impozitul special pe bunurile imobile și mobile de valoare mare se calculează în funcție de încadrarea într-una dintre situațiile prevăzute la art. 500^1, după cum urmează: a) în cazul proprietăților reprezentând clădiri rezidențiale, prin aplicarea unei cote de 0,3% asupra diferenței dintre valoarea impozabilă a clădirii comunicată de către organul fiscal local prin decizia de impunere și plafonul de 2.500.000 lei; ... b) în cazul proprietăților reprezentând autoturisme, prin aplicarea unei cote de 0,3% asupra diferenței dintre valoarea de achiziție și plafonul de 375.000 lei. ... +"
@@ -3978,7 +3972,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art291/alin3^5/litb",
    "atom_abrogat": false,
-   "atom_linie": 20273,
+   "atom_linie": 19493,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -4120,9 +4114,9 @@
   {
    "act_modificator": "Partea introductivă a alineatului (8) Punctul 37. , Capitolul VIII , Titlul VII a fost modificată de Punctul 6. , Articolul I din HOTĂRÂREA nr. 602 din 31 iulie 2025, publicată în MONITORUL OFICIAL nr. 715 din 31 iulie 2025",
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin8",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin8",
    "atom_abrogat": false,
-   "atom_linie": 9202,
+   "atom_linie": 9140,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -4147,48 +4141,48 @@
    "temei_candidat": {
     "act": "hg_1_2016_norme_cod_fiscal",
     "ambiguu": true,
-    "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3",
+    "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4",
     "de_aprobat": true,
-    "nota": "10 atomi ai aceluiasi articol poarta valoarea 11%; se propune anexa/pct37~3, cu optiunile de mai jos, de ales la aprobare (C18)",
+    "nota": "10 atomi ai aceluiasi articol poarta valoarea 11%; se propune anexa/pct37~4, cu optiunile de mai jos, de ales la aprobare (C18)",
     "optiuni": [
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin4/litt",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin4/litt",
       "verbatim": "băuturi, oțet comestibil și înlocuitori de oțet comestibil obținuți din acid acetic, care se încadrează la codurile NC 2201 și 2209 00; ... ț) reziduuri și deșeuri ale industriei alimentare, alimente preparate pentru animale, care se încadrează la codurile NC 2301, 2302, 2304-2306, 2308 și 2309. ... Exemplul nr. 1: Un producător agricol vinde caise care se încadrează la codul NC 0809 10 00 către un comerciant. Pentru livrarea efectuată producătorul agricol aplică cota de TVA de 11%. La rândul său, comerciantul vinde caisele cu cota de 11%, indiferent ce destinație ulterioară vor avea fructele livrate: alimente, materie primă pentru dulceață, compoturi sau producția de alcool. Exemplul nr. 2: Un producător de miere livrează mierea, care se încadrează la codul NC 0409 00 00, atât către magazine de vânzare cu amănuntul, cât și către fabrici de produse cosmetice sau către producători de hidromel. În toate situațiile va aplica cota redusă de 11% la livrarea mierii. Exemplul nr. 3: O persoană impozabilă importă ulei de soia, care se încadrează la codul NC 1507, pentru producerea de biodiesel. Cota de TVA aplicabilă pentru importul de ulei de soia este cota redusă de 11%."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin4^1",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin4^1",
       "verbatim": "Conform art. 291 alin. (2) lit. b) pct. 3 din Codul fiscal, cota redusă de TVA de 11% se aplică pentru laptele praf pentru nou-născuți, sugari și copii de vârstă mică, respectiv formulele de lapte praf de început, de continuare și de creștere, care se încadrează la codurile NC 0402 și NC 1901 10."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin5",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin5",
       "verbatim": "Pentru livrarea următoarelor bunuri, cu excepția alimentelor cu zahăr adăugat, al căror conținut total de zahăr este de minimum 10 g/100 g produs, datorită naturii lor, cota redusă de TVA de 11% se aplică de orice furnizor numai dacă acesta poate face dovada că sunt utilizate ca alimente destinate consumului uman sau animal:"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin8",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin8",
       "verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin9",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin9",
       "verbatim": "Dacă persoana impozabilă care importă, achiziționează intracomunitar sau livrează în țară bunurile prevăzute la alin. (5) nu poate face dovada aplicării cotei reduse de TVA de 11% în condițiile prevăzute la alin. (6)-(8) , se aplică cota standard de TVA, chiar dacă pentru o livrare ulterioară se aplică cota redusă de 11% pentru același bun."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin13",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin13",
       "verbatim": "În aplicarea art. 291 alin. (2) lit. d) din Codul fiscal, se aplică cota redusă de TVA de 11% de orice persoană care livrează apă de irigații care este transportată prin infrastructura principală și/sau secundară de irigații. În categoria persoanelor care livrează apă destinată irigațiilor se cuprind inclusiv furnizorii de apă din Dunăre, din râuri interioare, izvoare, lacuri de acumulare sau alte surse de apă, care alimentează sistemele de irigații."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin14",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin14",
       "verbatim": "…otelier sau al sectoarelor cu funcție similară se înțelege cazarea în structurile de primire turistică cu funcțiuni de cazare turistică prevăzute la art. 2 lit. d) din Ordonanța Guvernului nr. 58/1998 privind organizarea și desfășurarea activității de turism în România, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare. Cota redusă de taxă de 11% prevăzută la art. 291 alin. (2) lit. m) din Codul fiscal se aplică pentru tipurile de cazare în structurile de primire turistică cu funcțiune de cazare, prevăzute la art. 2^1 din Ordonanța Guvernului nr. 58/1998, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare. În cazul cazării cu mic dejun, cu demipensiune, cu pensiune completă sau cu «all inclusive», astfel cum sunt definite la art. 2^1 din Ordonanța Guvernului nr. 58/1998, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare, cota redusă de TVA se aplică asupra prețului total al cazării, care poate include și băuturi alcoolice, băuturi nealcoolice care se încadrează la codul NC 2202, precum și alimente cu zahăr adăugat, al că…"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin16",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin16",
       "verbatim": "Cota redusă de taxă de 11% prevăzută la art. 291 alin. (2) lit. l) din Codul fiscal se aplică numai pentru livrarea, astfel cum este definită la art. 270 alin. (1) din Codul fiscal, a locuințelor ca parte a politicii sociale, respectiv pentru transferul dreptului de a dispune ca un proprietar de bunurile prevăzute la art. 291 alin. (2) lit. l) din Codul fiscal."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin19",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin19",
       "verbatim": "Persoanele impozabile care livrează locuințe vor aplica cota de 11%, inclusiv pentru avansurile aferente acestor livrări, dacă din contractele încheiate rezultă că la momentul livrării vor fi îndeplinite condițiile impuse de art. 291 alin. (2) lit. l) din Codul fiscal. În situația în care avansurile au fost facturate prin aplicarea cotei standard de TVA, la livrarea bunului imobil se efectuează regularizările prevăzute la art. 291 alin. (6) din Codul fiscal în vederea aplicării cotei de 11%, dacă condițiile impuse de art. 291 alin. (2) lit. l) din Codul fiscal sunt îndeplinite la data livrării."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~3/alin20",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin20",
       "verbatim": "Pentru clădirile prevăzute la art. 291 alin. (2) lit. l) din Codul fiscal, cumpărătorul va pune la dispoziția vânzătorului o declarație pe propria răspundere, autentificată de un notar, din care să rezulte că va utiliza aceste clădiri conform destinației prevăzute de lege, care se păstrează de vânzător pentru justificarea aplicării cotei reduse de TVA de 11%. Declarația trebuie prezentată cel mai târziu până la momentul livrării clădirii respective. Prevederile art. 291 alin. (2) lit. l) din Codul fiscal se aplică și în cazul livrării de părți dintr-o clădire destinate scopurilor respective."
      }
     ],
@@ -4370,9 +4364,9 @@
   {
    "act_modificator": null,
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
-   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~3/alin2/lita",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~4/alin2/lita",
    "atom_abrogat": false,
-   "atom_linie": 9351,
+   "atom_linie": 9289,
    "atom_nivel": "litera",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -4410,15 +4404,15 @@
       "verbatim": "… imobil pe care-l deține în proprietate. Societatea X are încheiate contracte cu furnizorii de utilități, respectiv cu furnizorii de energie electrică, energie termică și apă. Conform contractelor încheiate, societatea X refacturează către chiriași aceste utilități, care sunt considerate distincte de închiriere. În luna decembrie 2015 furnizorii de utilități emit facturi către societatea X cu TVA 24%. Faptul generator pentru aceste livrări intervine conform prevederilor art. 281 alin. (8) din Codul fiscal la data emiterii facturilor, respectiv în luna decembrie 2015. În luna ianuarie 2016, societatea X refacturează utilitățile către chiriași. Exigibilitatea taxei pentru operațiunile refacturate intervine la data emiterii facturii de către societatea X către chiriași. Întrucât faptul generator pentru operațiunile refacturate rămâne neschimbat și a intervenit în luna decembrie 2015, cota aplicabilă la refacturare este cota în vigoare la data faptului generator de taxă, respectiv 24%.…"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct35~3/alin2",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct35~4/alin2",
       "verbatim": "…l țării a unui utilaj către clientul său B. Livrarea utilajului are loc în cursul lunii ianuarie la prețul de 6.000 euro. A va emite o factură pentru avansul de 2.000 euro către B la cursul de 4,45 lei/euro, valabil la data încasării avansului în luna decembrie. Baza de impozitare a TVA pentru avans: 2.000 euro x 4,45 lei/euro = 8.900 lei. Taxa pe valoarea adăugată aferentă avansului: 8.900 lei x 24% = 2.136 lei. În ianuarie 2016, la livrarea utilajului se regularizează avansul facturat, inclusiv cota de taxă pe valoarea adăugată ca urmare a modificării cotei standard la 1 ianuarie 2016. Cursul din data livrării bunului este de 4,5 lei/euro. Regularizările efectuate, inclusiv regularizarea cotei de TVA: Stornarea avansului, inclusiv a taxei pe valoarea adăugată aferente acestuia, respectiv 8.900 lei și 2.136 lei, cu semnul minus. Baza de impozitare a livrării: [(2.000 euro x 4,45 lei/euro) + (4.000 euro x 4,5 lei/euro)] = 8.900 lei + 18.000 lei = 26.900 lei. Taxa pe valoarea adăugată aferentă livrării: 26.900 lei x 20% = 5.380 lei. Exemplul nr. 3: Compania A livrează bunuri în valoare de 7.000 euro către compania B, la data de 20 februarie 2016. Compania A aplică sistemul TVA la în…"
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~3/alin2/lita",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~4/alin2/lita",
       "verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ..."
      },
      {
-      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~3/alin2/litb",
+      "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~4/alin2/litb",
       "verbatim": "…rării de bunuri care are loc la sfârșitul contractului de leasing. Pentru ratele facturate s-a aplicat cota în vigoare la data faptului generator de taxă (fiecare dată prevăzută în contract pentru plata ratei) și nu se mai fac regularizări la data transferului dreptului de proprietate asupra clădirii. Întrucât valoarea reziduală a fost încasată în avans față de data livrării, aplicându-se cota de 24%, dacă livrarea clădirii are loc după data de 1 ianuarie 2016, se va proceda la regularizarea sumelor încasate în avans pentru a aplica cota de TVA de 20% în vigoare la data faptului generator de taxă. ... + Operațiuni scutite de taxă + Secţiunea 1 Scutiri pentru anumite activități de interes general și scutiri pentru alte activități…"
      },
      {
@@ -4494,7 +4488,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art478/alin2/lita",
    "atom_abrogat": false,
-   "atom_linie": 34826,
+   "atom_linie": 34046,
    "atom_nivel": "litera",
    "atom_verbatim": "în cazul unui afișaj situat în locul în care persoana derulează o activitate economică, suma este de până la 32 lei, inclusiv; ...",
    "citare_rezolvata": null,
@@ -4680,7 +4674,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
    "atom_abrogat": false,
-   "atom_linie": 9304,
+   "atom_linie": 8524,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": false,
@@ -4786,7 +4780,7 @@
    "ancora": "indiciu de subiect, CAUTAT IN TOT CORPUSUL",
    "atom": "cod_fiscal_227_2015_consolidat#art331/alin7",
    "atom_abrogat": false,
-   "atom_linie": 24467,
+   "atom_linie": 23687,
    "atom_nivel": "alineat",
    "atom_valabilitate": {
     "acelasi_cu_atomul_valorii": true,
@@ -4822,7 +4816,7 @@
    "valoare_lege": "22.500"
   }
  ],
- "secunde": 6.73,
+ "secunde": 8.07,
  "sumar": {
   "CONCORDA": 94,
   "DIFERA": 1,

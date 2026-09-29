@@ -194,3 +194,73 @@ def test_intrebari_v4_ramane_neatins():
     d = subprocess.run(["git", "diff", "d35c21a", "--", "intrebari/v4/"], cwd=_RAD,
                        capture_output=True, text=True).stdout
     assert d == "", d[:300]
+
+
+# ── C31: detectorul de structura si actele aduse din sursa oficiala ──────────────────────────────
+def test_C31_detectorul_prinde_codul_muncii_din_instantaneu_si_nu_pe_cel_oficial():
+    from fiscalos import detector_structura, potrivire
+    vechi = detector_structura.detecteaza(potrivire.Corpus(oficiale=False))
+    assert "legea_53_2003_codul_muncii" in vechi
+    assert vechi["legea_53_2003_codul_muncii"]["S1_alineate_duplicate"] >= 3
+    nou = detector_structura.detecteaza(potrivire.Corpus())
+    assert "legea_53_2003_codul_muncii" not in nou
+    c = potrivire.Corpus()
+    assert c.sursa_act["legea_53_2003_codul_muncii"]["sursa"].startswith("oficial")
+    assert "90 de zile calendaristice" in c.dupa_id["legea_53_2003_codul_muncii#art122/alin1"]["text"]
+
+
+def test_C31_detectorul_nu_semnaleaza_un_act_sanatos():
+    from fiscalos import detector_structura
+    ats = [{"id": "x#art%d" % i, "nivel": "articol", "cheie": str(i), "parinte": None, "text": ""} for i in range(1, 30)]
+    ats += [{"id": "x#art%d/alin%d" % (i, j), "nivel": "alineat", "cheie": str(j), "parinte": "x#art%d" % i, "text": ""}
+            for i in range(1, 30) for j in (1, 2)]
+    assert not detector_structura.e_stricat(detector_structura.semnale(ats, False))
+    ats.append({"id": "x#art29/alin1~2", "nivel": "alineat", "cheie": "1", "parinte": "x#art29", "text": ""})
+    ats.append({"id": "x#art29/alin2~2", "nivel": "alineat", "cheie": "2", "parinte": "x#art29", "text": ""})
+    ats.append({"id": "x#art29/alin1~3", "nivel": "alineat", "cheie": "1", "parinte": "x#art29", "text": ""})
+    assert detector_structura.e_stricat(detector_structura.semnale(ats, False))
+
+
+def test_C31_cuprinsul_portalului_nu_intra_in_text_si_articolul_1000_se_recunoaste():
+    from fiscalos import atomizare, surse_oficiale
+    h = ('<ul><li><a href="#id_artA136_ttl" onclick="pozitioneaza(\'id_artA136_ttl\')">Articolul 24</a></li></ul>'
+         '<span class="S_ART_TTL">Articolul 24</span><span class="S_ALN_TTL">(1)</span>Text 24.'
+         '<span class="S_ART_TTL">Articolul 1.000</span><span class="S_ALN_TTL">(1)</span>Text 1000.')
+    t = surse_oficiale.html_portal_in_text(h)
+    assert t.count("Articolul 24") == 1, t
+    atomi, _s = atomizare.atomizeaza_text("cc", t)
+    ids = {a["id"] for a in atomi}
+    assert "cc#art1000/alin1" in ids and not any("~" in i for i in ids), ids
+
+
+def test_C31_varianta_stricata_a_unui_act_oficial_nu_e_indexata():
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    assert idx.corp.inlocuit.get("legea_165_2018_mf_2024") == "legea_165_2018_anaf"
+    assert not idx.normativ["legea_165_2018_mf_2024"] and idx.normativ["legea_165_2018_anaf"]
+
+
+def test_C31_nota_goala_care_se_inchide_singura_nu_inghite_articolele_urmatoare():
+    from fiscalos import surse_oficiale
+    h = ('<span class="S_NTA" id="n1"><span class="S_NTA_TTL">Notă </span>'
+         '<span id="n1_lung"/></span>'
+         '<span class="S_ART_TTL">Articolul 122</span><span class="S_ALN_TTL">(1)</span>Munca suplimentară.')
+    t = surse_oficiale.html_portal_in_text(h)
+    linie_nota = [l for l in t.split("\n") if "⟦NOTĂ⟧" in l]
+    assert linie_nota and "Articolul 122" not in linie_nota[0], t
+    assert "Articolul 122" in t
+
+
+def test_C31_S4_prinde_articolul_inghitit_intr_o_nota():
+    from fiscalos import detector_structura
+    ats = [{"id": "cm#art%d" % i, "nivel": "articol", "cheie": str(i), "parinte": None, "text": ""}
+           for i in range(1, 30)]
+    ats[20]["text"] = "Text. ⟦NOTĂ⟧ Notă ... + Articolul 122 (1) Munca suplimentară se compensează"
+    s = detector_structura.semnale(ats, False)
+    assert s["S4_articole_in_nota"] == 1 and detector_structura.e_stricat(s)
+
+
+def test_propunerea_v6_ramane_neatinsa():
+    d = subprocess.run(["git", "diff", "778e826", "--", "propuneri/v6/", "intrebari/v5/"], cwd=_RAD,
+                       capture_output=True, text=True).stdout
+    assert d == "", d[:300]

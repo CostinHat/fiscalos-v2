@@ -80,7 +80,11 @@ marcaj de parametri în valori.
 
 CALCUL. Nu calculezi. Dacă răspunsul cere un calcul, îl descrii în `calcule`: fiecare calcul are un \\
 `nume`, o `formula` (numai numele operanzilor și ale calculelor anterioare, + - * / paranteze, \\
-min(), max(), zile(data1, data2) = numărul de zile de la data1 la data2) și lista de `operanzi`. \\
+min(), max(), zile(data1, data2) = numărul de zile de la data1 la data2, data(zi, lună, an), data + N \\
+zile, termen_efectiv(data) = ziua în care expiră efectiv un termen care cade într-o zi nelucrătoare) și \\
+lista de `operanzi`. termen_efectiv cere să CITEZI atomul regulii prelungirii termenului (Codul de \\
+procedură civilă art. 181 alin. (2), la care trimite CPF art. 75) și atomul listei sărbătorilor legale \\
+(Codul muncii art. 139 alin. (1)); codul calculează zilele nelucrătoare numai din ele. \\
 Fiecare operand are `valoare` scrisă exact ca în sursă (ex. "21%%", "100.000", "25.03.2026") și o \\
 `eticheta` (C25): FAPT_CAZ — o valoare a cazului, luată din întrebare (`atom` gol, `fragment` = bucata \\
 din întrebare care o conține); sau VALOARE_LEGALA — o cotă, un plafon, un termen, o limită, luată dintr-un \\
@@ -250,6 +254,12 @@ _MII = re.compile(r"\d\.\d{3}(?!\d)")
 
 def _numar(v):
     """"100.000" -> 100000; "2,25%" -> 0.0225; "25.03.2026" -> date. Intoarce (valoare, e_procent)."""
+    t = potrivire.norm(v.strip())
+    m = re.match(r"^(\d{1,2})\s+(%s)\s+(\d{4})$" % "|".join(intrebari._LUNI), t)
+    if m:                                               # "28 februarie 2026" -> data
+        return datetime.date(int(m.group(3)), intrebari._LUNI[m.group(2)], int(m.group(1))), False
+    if t in intrebari._LUNI:                            # "februarie" -> 2 (luna, pentru data(z, l, a))
+        return Decimal(intrebari._LUNI[t]), False
     s = v.strip().replace(" ", "").replace("lei", "").replace("euro", "")
     if re.match(r"^\d{1,2}\.\d{1,2}\.\d{4}$", s):
         z, l, a = s.split(".")
@@ -273,6 +283,12 @@ def _eval(nod, env, pasi=None, fmt=None):
         return _eval(nod.body, env, pasi, fmt)
     if isinstance(nod, ast.BinOp) and type(nod.op) in _OP:
         a, b = _eval(nod.left, env, pasi, fmt), _eval(nod.right, env, pasi, fmt)
+        # o data +/- un numar intreg de zile e o data (C32: termenul nominal = data + N zile)
+        if isinstance(a, datetime.date) and isinstance(b, Decimal) and type(nod.op) in (ast.Add, ast.Sub):
+            if b != b.to_integral_value():
+                raise ValueError("o data se aduna numai cu un numar intreg de zile")
+            zi = datetime.timedelta(days=int(b))
+            return a + zi if isinstance(nod.op, ast.Add) else a - zi
         if isinstance(nod.op, ast.Add):
             return a + b
         if isinstance(nod.op, ast.Sub):
@@ -296,6 +312,16 @@ def _eval(nod, env, pasi=None, fmt=None):
             return min(args)
         if nod.func.id == "max" and args:
             return max(args)
+        if nod.func.id == "data" and len(args) == 3:
+            return datetime.date(int(args[2]), int(args[1]), int(args[0]))
+        if nod.func.id == "termen_efectiv" and len(args) == 1 and isinstance(args[0], datetime.date):
+            if not (fmt or {}).get("calendar"):
+                raise ValueError("termen_efectiv cere, CITATE in raspuns, atomul regulii prelungirii "
+                                 "termenului si atomul listei sarbatorilor legale (C32)")
+            v, explicatie = fmt["calendar"].termen_efectiv(args[0])
+            if pasi is not None:
+                pasi.append(explicatie)
+            return v
         if nod.func.id == "zile" and len(args) == 2:
             v = Decimal((args[1] - args[0]).days)
             if pasi is not None:
@@ -341,7 +367,99 @@ def _cu_valori(nod, env, fmt, procente):
     return "?"
 
 
-def evalueaza_calcule(calcule, dupa_id, intrebare):
+# ── C32: termenul efectiv - regula prelungirii si sarbatorile legale, din atomi ─────────────────
+_REGULA_PRELUNGIRE = re.compile(r"zi nelucr[aă]toare.{0,120}prelunge|prelunge.{0,120}zi nelucr[aă]toare"
+                                r"|sfar[sș]esc.{0,60}zi de s[aă]rb[aă]toare.{0,120}prelunge", re.I | re.S)
+_LISTA_SARBATORI = re.compile(r"s[aă]rb[aă]toare legal[aă] [iî]n care nu se lucreaz[aă]", re.I)
+_ZILE_SAPT = ["luni", "marți", "miercuri", "joi", "vineri", "sâmbătă", "duminică"]
+
+
+def pastele_ortodox(an):
+    """Pastele ortodox: algoritmul Meeus pentru calendarul iulian, + 13 zile (valabil 1900-2099)."""
+    a, b, c = an % 4, an % 7, an % 19
+    d = (19 * c + 15) % 30
+    e = (2 * a + 4 * b - d + 34) % 7
+    luna, zi = (d + e + 114) // 31, (d + e + 114) % 31 + 1
+    return datetime.date(an, luna, zi) + datetime.timedelta(days=13)
+
+
+class Calendar(object):
+    """Zilele nelucratoare, construite din DOI atomi citati: regula prelungirii (Codul de procedura
+    civila art. 181 alin. (2), la care trimite CPF art. 75) si lista sarbatorilor legale (Codul muncii
+    art. 139 alin. (1)). Nimic din memorie: o sarbatoare intra numai daca atomul o numeste.
+
+    Datele: cele scrise in atom ("1 și 2 ianuarie", "24 ianuarie", "1 mai") se citesc din text; cele
+    MOBILE (Vinerea Mare, Pastele, Rusaliile) se CALCULEAZA, iar calculul se declara; cele NUMITE fara
+    data in atom (Adormirea Maicii Domnului, Craciunul) primesc data fixa a sarbatorii, DECLARATA ca
+    atare (de decis, C34). Sarbatorile cultelor necrestine "pentru persoanele apartinand acestora" nu
+    sunt zile nelucratoare generale si nu intra."""
+
+    def __init__(self, regula, lista):
+        self.regula, self.lista = regula, lista
+        self.weekend = bool(re.search(r"nelucr[aă]toare|s[aâ]mb[aă]t|duminic", regula["text"], re.I))
+        self.text = potrivire.norm(lista["text"])
+
+    @classmethod
+    def din_atomi(cls, atomi):
+        regula = next((a for a in atomi if _REGULA_PRELUNGIRE.search(a["text"].split("⟦NOTĂ⟧")[0])), None)
+        lista = next((a for a in atomi if _LISTA_SARBATORI.search(a["text"])), None)
+        return cls(regula, lista) if regula and lista else None
+
+    def sarbatori(self, an):
+        """{data: denumire} si lista declaratiilor (calcule si date declarate) pentru anul dat."""
+        t, ies, decl = self.text, {}, []
+        luni = "|".join(intrebari._LUNI)
+        for m in re.finditer(r"(\d{1,2})(?:\s*si\s*(\d{1,2}))?\s+(%s)\b" % luni, t):
+            for z in (m.group(1), m.group(2)):
+                if z:
+                    ies[datetime.date(an, intrebari._LUNI[m.group(3)], int(z))] = "%s %s" % (z, m.group(3))
+        p = pastele_ortodox(an)
+        mobile = []
+        if "vinerea mare" in t:
+            ies[p - datetime.timedelta(days=2)] = "Vinerea Mare"
+            mobile.append("Vinerea Mare = %s" % (p - datetime.timedelta(days=2)).strftime("%d.%m.%Y"))
+        if re.search(r"prima si a doua zi de pasti", t):
+            ies[p], ies[p + datetime.timedelta(days=1)] = "Paștele", "a doua zi de Paști"
+            mobile.append("Paștele ortodox = %s" % p.strftime("%d.%m.%Y"))
+        if re.search(r"prima si a doua zi de rusalii", t):
+            r = p + datetime.timedelta(days=49)
+            ies[r], ies[r + datetime.timedelta(days=1)] = "Rusaliile", "a doua zi de Rusalii"
+            mobile.append("Rusaliile = Paștele + 49 de zile = %s" % r.strftime("%d.%m.%Y"))
+        if mobile:
+            decl.append("date mobile calculate pentru %d (Paștele ortodox: algoritmul Meeus pentru "
+                        "calendarul iulian + 13 zile): %s" % (an, "; ".join(mobile)))
+        fixe = []
+        if "adormirea maicii domnului" in t:
+            ies[datetime.date(an, 8, 15)] = "Adormirea Maicii Domnului"
+            fixe.append("Adormirea Maicii Domnului = 15.08")
+        if re.search(r"prima si a doua zi de craciun", t):
+            ies[datetime.date(an, 12, 25)], ies[datetime.date(an, 12, 26)] = "Crăciunul", "a doua zi de Crăciun"
+            fixe.append("Crăciunul = 25-26.12")
+        if fixe:
+            decl.append("sărbători numite în atom fără dată, cu data lor fixă (declarată, C34): %s"
+                        % "; ".join(fixe))
+        return ies, decl
+
+    def termen_efectiv(self, d):
+        s, decl = self.sarbatori(d.year)
+        s2, decl2 = self.sarbatori(d.year + 1) if d.month == 12 else ({}, [])
+        s.update(s2)
+        motive, x = [], d
+        while (self.weekend and x.weekday() >= 5) or x in s:
+            motive.append("%s %s" % (x.strftime("%d.%m.%Y"), s.get(x) or _ZILE_SAPT[x.weekday()]))
+            x += datetime.timedelta(days=1)
+        if not motive:
+            expl = "termen_efectiv(%s) = %s (zi lucrătoare: %s)" % (
+                d.strftime("%d.%m.%Y"), d.strftime("%d.%m.%Y"), _ZILE_SAPT[d.weekday()])
+        else:
+            expl = ("termen_efectiv(%s) = %s: %s → prima zi lucrătoare, %s (%s). Regula: `%s`; sărbătorile: "
+                    "`%s`" % (d.strftime("%d.%m.%Y"), x.strftime("%d.%m.%Y"), ", ".join(motive),
+                              x.strftime("%d.%m.%Y"), _ZILE_SAPT[x.weekday()], self.regula["id"],
+                              self.lista["id"]))
+        return x, expl + ("; " + "; ".join(decl + decl2) if decl else "")
+
+
+def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
     """(valori, incalcari, detalii). Fara model: sursa fiecarui operand verificata literal.
 
     C25: eticheta operandului decide sursa ceruta. FAPT_CAZ - valoarea trebuie sa apara LITERAL in
@@ -351,6 +469,9 @@ def evalueaza_calcule(calcule, dupa_id, intrebare):
     # C28: stilul numerelor urmeaza sursa - cu separator de mii daca operanzii il au ("10.000"),
     # fara daca nu ("2026" + 1 = 2027, nu "2.027")
     fmt = {"mii": any(_MII.search(o["valoare"]) for c in calcule for o in c["operanzi"])}
+    # C32: calendarul termenelor se construieste NUMAI din atomii citati in raspuns
+    if any("termen_efectiv" in c["formula"] for c in calcule):
+        fmt["calendar"] = Calendar.din_atomi([dupa_id[i] for i in (citati or []) if i in dupa_id])
     q = semantic._n(intrebare)
     for c in calcule:
         for o in c["operanzi"]:
@@ -447,6 +568,31 @@ _MARCAJ = re.compile(r"</?\s*(parameter|declaratie|raspuns|citate|lipsa|motiv|ca
                      r"data_referinta)\b|<parameter\b", re.I)
 
 
+# ── C33: secventele \uXXXX scrise ca TEXT sunt un artefact de transport, nu de continut ─────────
+# La reemiterea ceruta de C23, modelul a scris diacriticele ca "imobiliz\u0103rilor". Se decodeaza numai
+# secventa completa \u + 4 cifre hexa care da un caracter tiparibil (nu un surogat, nu un caracter de
+# control); orice alt backslash ramane neatins.
+_ESC_U = re.compile(r"\\u([0-9a-fA-F]{4})")
+
+
+def _caracter(m):
+    c = chr(int(m.group(1), 16))
+    if 0xD800 <= ord(c) <= 0xDFFF or not c.isprintable():
+        return m.group(0)
+    return c
+
+
+def decodeaza_transport(x):
+    """Aceeasi structura, cu secventele backslash-u-XXXX din texte decodate; restul, neatins."""
+    if isinstance(x, str):
+        return _ESC_U.sub(_caracter, x)
+    if isinstance(x, dict):
+        return {k: decodeaza_transport(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [decodeaza_transport(v) for v in x]
+    return x
+
+
 def valideaza_structura(inp):
     """Lista de probleme; goala = structura e buna. Fara model."""
     probleme = []
@@ -524,9 +670,10 @@ def raspunde(q, idx, rel, client, sis=None):
         uses = [b for b in r.content if b.type == "tool_use"]
         fin = [b for b in uses if b.name == "raspunde"]
         if fin:
-            probleme = valideaza_structura(fin[0].input)
+            intrare = decodeaza_transport(fin[0].input)             # C33
+            probleme = valideaza_structura(intrare)
             if not probleme:
-                final = fin[0].input
+                final = intrare
                 break
             probleme_c23.append(probleme)
             if reincercari >= 1:                       # C23: o singura reincercare
@@ -591,7 +738,8 @@ def raspunde(q, idx, rel, client, sis=None):
                     motiv="VERIFICAREA DATEI a respins propunerea: " + "; ".join(greseli_data))
     # calculul, evaluat de cod
     if final.get("calcule") and final["stare"] == "RASPUNS":
-        valori, greseli, detalii = evalueaza_calcule(final["calcule"], nav.vazuti, q["intrebare"])
+        valori, greseli, detalii = evalueaza_calcule(final["calcule"], nav.vazuti, q["intrebare"],
+                                                     citati=[c["atom"] for c in final.get("citate") or []])
         rez["calcule"] = detalii
         if greseli:
             return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None,

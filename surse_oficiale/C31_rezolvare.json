@@ -1,0 +1,309 @@
+{
+ "_ce": "C31: rezolvarea actelor stricate spre sursa oficiala.",
+ "facut_la": "2026-09-29T09:10:29",
+ "secunde": 496.8,
+ "acte": {
+  "hg_1045_2018_norme_consolidat": {
+   "stare": "adus",
+   "id_portal": "209698",
+   "titlu": "1. HOTARARE 1045 28/12/2018",
+   "motiv": "cautare tip 2, nr. 1045, an 2018 -> 1. HOTARARE 1045 28/12/2018"
+  },
+  "hg_1074_2021": {
+   "stare": "adus",
+   "id_portal": "247209",
+   "titlu": "1. HOTARARE 1074 04/10/2021",
+   "motiv": "cautare tip 2, nr. 1074, an 2021 -> 1. HOTARARE 1074 04/10/2021"
+  },
+  "hg_1094_2025": {
+   "stare": "adus",
+   "id_portal": "305236",
+   "titlu": "1. HOTARARE 1094 11/12/2025",
+   "motiv": "cautare tip 2, nr. 1094, an 2025 -> 1. HOTARARE 1094 11/12/2025"
+  },
+  "hg_295_2025_reges_online_registru_salariati": {
+   "stare": "adus",
+   "id_portal": "295995",
+   "titlu": "1. HOTARARE 295 27/03/2025",
+   "motiv": "cautare tip 2, nr. 295, an 2025 -> 1. HOTARARE 295 27/03/2025"
+  },
+  "hg_518_1995": {
+   "stare": "adus",
+   "id_portal": "7037",
+   "titlu": "1. HG 518 10/07/1995",
+   "motiv": "cautare tip 2, nr. 518, an 1995 -> 1. HG 518 10/07/1995"
+  },
+  "hg_867_2015": {
+   "stare": "adus",
+   "id_portal": "172757",
+   "titlu": "1. HG 867 14/10/2015",
+   "motiv": "cautare tip 2, nr. 867, an 2015 -> 1. HG 867 14/10/2015"
+  },
+  "hg_905_2017": {
+   "stare": "adus",
+   "id_portal": "195770",
+   "titlu": "1. HOTARARE 905 14/12/2017",
+   "motiv": "cautare tip 2, nr. 905, an 2017 -> 1. HOTARARE 905 14/12/2017"
+  },
+  "legea_1_2020": {
+   "stare": "adus",
+   "id_portal": "221917",
+   "titlu": "1. LEGE 1 06/01/2020",
+   "motiv": "cautare tip 1, nr. 1, an 2020 -> 1. LEGE 1 06/01/2020"
+  },
+  "legea_129_2019": {
+   "stare": "adus",
+   "id_portal": "216157",
+   "titlu": "1. LEGE 129 11/07/2019",
+   "motiv": "cautare tip 1, nr. 129, an 2019 -> 1. LEGE 129 11/07/2019"
+  },
+  "legea_136_2020_consolidat": {
+   "stare": "adus",
+   "id_portal": "227953",
+   "titlu": "1. LEGE 136 18/07/2020",
+   "motiv": "cautare tip 1, nr. 136, an 2020 -> 1. LEGE 136 18/07/2020"
+  },
+  "legea_141_2025_consolidat": {
+   "stare": "adus",
+   "id_portal": "300022",
+   "titlu": "1. LEGE 141 25/07/2025",
+   "motiv": "cautare tip 1, nr. 141, an 2025 -> 1. LEGE 141 25/07/2025"
+  },
+  "legea_165_2018_mf_2024": {
+   "stare": "varianta a aceluiasi act",
+   "ca": "legea_165_2018_anaf"
+  },
+  "legea_165_2018_anaf": {
+   "stare": "adus",
+   "id_portal": "202623",
+   "titlu": "1. LEGE 165 10/07/2018",
+   "motiv": "cautare tip 1, nr. 165, an 2018 -> 1. LEGE 165 10/07/2018"
+  },
+  "legea_226_2023": {
+   "stare": "adus",
+   "id_portal": "272230",
+   "titlu": "1. LEGE 226 14/07/2023",
+   "motiv": "cautare tip 1, nr. 226, an 2023 -> 1. LEGE 226 14/07/2023"
+  },
+  "legea_230_2007": {
+   "stare": "adus",
+   "id_portal": "83753",
+   "titlu": "1. LEGE 230 06/07/2007",
+   "motiv": "cautare tip 1, nr. 230, an 2007 -> 1. LEGE 230 06/07/2007"
+  },
+  "legea_239_2025_stabilirea_masuri_redresare_eficientizare_resurselor": {
+   "stare": "adus",
+   "id_portal": "305208",
+   "titlu": "1. LEGE 239 15/12/2025",
+   "motiv": "cautare tip 1, nr. 239, an 2025 -> 1. LEGE 239 15/12/2025"
+  },
+  "legea_241_2005": {
+   "stare": "adus",
+   "id_portal": "63590",
+   "titlu": "1. LEGE 241 15/07/2005",
+   "motiv": "cautare tip 1, nr. 241, an 2005 -> 1. LEGE 241 15/07/2005"
+  },
+  "legea_26_1990": {
+   "stare": "adus",
+   "id_portal": "783",
+   "titlu": "1. LEGE 26 05/11/1990",
+   "motiv": "cautare tip 1, nr. 26, an 1990 -> 1. LEGE 26 05/11/1990"
+  },
+  "legea_265_2022": {
+   "stare": "adus",
+   "id_portal": "257835",
+   "titlu": "1. LEGE 265 22/07/2022",
+   "motiv": "cautare tip 1, nr. 265, an 2022 -> 1. LEGE 265 22/07/2022"
+  },
+  "legea_287_2009": {
+   "stare": "adus",
+   "id_portal": "109883",
+   "titlu": "1. LEGE 287 17/07/2009",
+   "motiv": "cautare tip 1, nr. 287, an 2009 -> 1. LEGE 287 17/07/2009"
+  },
+  "legea_296_2020_consolidat": {
+   "stare": "adus",
+   "id_portal": "235513",
+   "titlu": "1. LEGE 296 18/12/2020",
+   "motiv": "cautare tip 1, nr. 296, an 2020 -> 1. LEGE 296 18/12/2020"
+  },
+  "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii": {
+   "stare": "adus",
+   "id_portal": "275745",
+   "titlu": "1. LEGE 296 26/10/2023",
+   "motiv": "cautare tip 1, nr. 296, an 2023 -> 1. LEGE 296 26/10/2023"
+  },
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": {
+   "stare": "adus",
+   "id_portal": "210007",
+   "titlu": "1. LEGE 30 10/01/2019",
+   "motiv": "cautare tip 1, nr. 30, an 2019 -> 1. LEGE 30 10/01/2019"
+  },
+  "legea_31_1990_modif_L222_2023": {
+   "stare": "varianta a aceluiasi act",
+   "ca": "legea_31_1990_societatile"
+  },
+  "legea_31_1990_societatile": {
+   "stare": "adus",
+   "id_portal": "798",
+   "titlu": "1. LEGE 31 16/11/1990",
+   "motiv": "cautare tip 1, nr. 31, an 1990 -> 1. LEGE 31 16/11/1990"
+  },
+  "legea_346_2002_consolidat": {
+   "stare": "adus",
+   "id_portal": "36905",
+   "titlu": "1. LEGE 346 05/06/2002",
+   "motiv": "cautare tip 1, nr. 346, an 2002 -> 1. LEGE 346 05/06/2002"
+  },
+  "legea_448_2006_protectia_persoanelor_cu_handicap": {
+   "stare": "adus",
+   "id_portal": "77815",
+   "titlu": "1. LEGE 448 06/12/2006",
+   "motiv": "cautare tip 1, nr. 448, an 2006 -> 1. LEGE 448 06/12/2006"
+  },
+  "legea_53_2003_codul_muncii": {
+   "stare": "adus",
+   "id_portal": "41625",
+   "titlu": "1. LEGE 53 24/01/2003",
+   "motiv": "cautare tip 1, nr. 53, an 2003 -> 1. LEGE 53 24/01/2003"
+  },
+  "legea_72_2013": {
+   "stare": "adus",
+   "id_portal": "146555",
+   "titlu": "1. LEGE 72 28/03/2013",
+   "motiv": "cautare tip 1, nr. 72, an 2013 -> 1. LEGE 72 28/03/2013"
+  },
+  "legea_82_1991_consolidat": {
+   "stare": "adus",
+   "id_portal": "1576",
+   "titlu": "1. LEGE 82 24/12/1991",
+   "motiv": "cautare tip 1, nr. 82, an 1991 -> 1. LEGE 82 24/12/1991"
+  },
+  "legea_85_2014": {
+   "stare": "adus",
+   "id_portal": "159286",
+   "titlu": "1. LEGE 85 25/06/2014",
+   "motiv": "cautare tip 1, nr. 85, an 2014 -> 1. LEGE 85 25/06/2014"
+  },
+  "legea_98_2016": {
+   "stare": "adus",
+   "id_portal": "178667",
+   "titlu": "1. LEGE 98 19/05/2016",
+   "motiv": "cautare tip 1, nr. 98, an 2016 -> 1. LEGE 98 19/05/2016"
+  },
+  "og_13_2011": {
+   "stare": "adus",
+   "id_portal": "131085",
+   "titlu": "1. OG 13 24/08/2011",
+   "motiv": "cautare tip 13, nr. 13, an 2011 -> 1. OG 13 24/08/2011"
+  },
+  "og_2_2001": {
+   "stare": "adus",
+   "id_portal": "29779",
+   "titlu": "1. OG 2 12/07/2001",
+   "motiv": "cautare tip 13, nr. 2, an 2001 -> 1. OG 2 12/07/2001"
+  },
+  "og_39_2015": {
+   "stare": "adus",
+   "id_portal": "170982",
+   "titlu": "1. OG 39 26/08/2015",
+   "motiv": "cautare tip 13, nr. 39, an 2015 -> 1. OG 39 26/08/2015"
+  },
+  "omfp_1802_2014_ordin_consolidat": {
+   "stare": "acelasi act exista deja in stratul oficial",
+   "ca": "omfp_1802_2014"
+  },
+  "omfp_1802_2014_reglementari_consolidat": {
+   "stare": "acelasi act exista deja in stratul oficial",
+   "ca": "omfp_1802_2014"
+  },
+  "omfp_3254_2017_registru_evidenta_fiscala_persoane_fizice": {
+   "stare": "adus",
+   "id_portal": "196396",
+   "titlu": "1. ORDIN 3254 19/12/2017",
+   "motiv": "cautare tip 5, nr. 3254, an 2017 -> 1. ORDIN 3254 19/12/2017"
+  },
+  "oms_15_2018_norme": {
+   "stare": "adus",
+   "id_portal": "196682",
+   "titlu": "2. ORDIN 15 05/01/2018",
+   "motiv": "cautare tip 5, nr. 15, an 2018 -> 2. ORDIN 15 05/01/2018"
+  },
+  "ordin_1099_2016": {
+   "stare": "nerezolvat",
+   "motiv": "ambiguu: [('177075', '1. ORDIN 1099 29/03/2016'), ('179451', '2. ORDIN 1099 23/06/2016'), ('180514', '3. ORDIN 1099 12/07/2016')]"
+  },
+  "ordin_2594_2015": {
+   "stare": "adus",
+   "id_portal": "171984",
+   "titlu": "1. ORDIN 2594 05/10/2015",
+   "motiv": "cautare tip 5, nr. 2594, an 2015 -> 1. ORDIN 2594 05/10/2015"
+  },
+  "ordin_3845_2015": {
+   "stare": "adus",
+   "id_portal": "174717",
+   "titlu": "1. ORDIN 3845 30/12/2015",
+   "motiv": "cautare tip 5, nr. 3845, an 2015 -> 1. ORDIN 3845 30/12/2015"
+  },
+  "ordin_3846_2015": {
+   "stare": "adus",
+   "id_portal": "174706",
+   "titlu": "1. ORDIN 3846 30/12/2015",
+   "motiv": "cautare tip 5, nr. 3846, an 2015 -> 1. ORDIN 3846 30/12/2015"
+  },
+  "ordin_878_2022": {
+   "stare": "adus",
+   "id_portal": "254993",
+   "titlu": "1. ORDIN 878 03/05/2022",
+   "motiv": "cautare tip 5, nr. 878, an 2022 -> 1. ORDIN 878 03/05/2022"
+  },
+  "oug_115_2023_consolidat": {
+   "stare": "adus",
+   "id_portal": "277404",
+   "titlu": "1. ORD DE URGENTA 115 14/12/2023",
+   "motiv": "cautare tip 18, nr. 115, an 2023 -> 1. ORD DE URGENTA 115 14/12/2023"
+  },
+  "oug_116_2023": {
+   "stare": "adus",
+   "id_portal": "277398",
+   "titlu": "1. ORD DE URGENTA 116 14/12/2023",
+   "motiv": "cautare tip 18, nr. 116, an 2023 -> 1. ORD DE URGENTA 116 14/12/2023"
+  },
+  "oug_120_2021": {
+   "stare": "adus",
+   "id_portal": "247243",
+   "titlu": "1. ORD DE URGENTA 120 04/10/2021",
+   "motiv": "cautare tip 18, nr. 120, an 2021 -> 1. ORD DE URGENTA 120 04/10/2021"
+  },
+  "oug_158_2005_consolidat": {
+   "stare": "adus",
+   "id_portal": "66305",
+   "titlu": "1. OUG 158 17/11/2005",
+   "motiv": "cautare tip 18, nr. 158, an 2005 -> 1. OUG 158 17/11/2005"
+  },
+  "oug_28_1999": {
+   "stare": "adus",
+   "id_portal": "17431",
+   "titlu": "1. OUG 28 25/03/1999",
+   "motiv": "cautare tip 18, nr. 28, an 1999 -> 1. OUG 28 25/03/1999"
+  },
+  "oug_44_2008": {
+   "stare": "adus",
+   "id_portal": "91808",
+   "titlu": "1. OUG 44 16/04/2008",
+   "motiv": "cautare tip 18, nr. 44, an 2008 -> 1. OUG 44 16/04/2008"
+  },
+  "oug_70_2024_ro_etva_decont_precompletat": {
+   "stare": "adus",
+   "id_portal": "284214",
+   "titlu": "1. ORD DE URGENTA 70 21/06/2024",
+   "motiv": "cautare tip 18, nr. 70, an 2024 -> 1. ORD DE URGENTA 70 21/06/2024"
+  },
+  "oug_89_2025": {
+   "stare": "adus",
+   "id_portal": "305817",
+   "titlu": "1. ORD DE URGENTA 89 23/12/2025",
+   "motiv": "cautare tip 18, nr. 89, an 2025 -> 1. ORD DE URGENTA 89 23/12/2025"
+  }
+ }
+}

@@ -62,11 +62,13 @@ _RAD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _RUN_CUPRINS = 6            # atatea marcaje consecutive fara text = cuprins, nu corp
 
 # ── F1: "Articolul 291" / "Articolul 18^1" / "ART. 291." — numarul SINGUR pe rand ───────────────
-_ART = re.compile(r"^\s*(?:Articolul|ARTICOLUL|Art\.|ART\.|Art|ART)\s*"
-                  r"(\d+(?:\^\d+)?|[IVXLCDM]+)\s*\.?\s*$")
+# C31: numerele de articol peste 999 apar in forma portalului cu separator de mii ("Articolul 1.000",
+# Codul civil); nerecunoscute, tot ce urma se lipea ca alineate de art. 999. Numarul se normalizeaza.
+_NR_ART = r"(\d{1,3}(?:\.\d{3})+(?:\^\d+)?|\d+(?:\^\d+)?|[IVXLCDM]+)"
+_ART = re.compile(r"^\s*(?:Articolul|ARTICOLUL|Art\.|ART\.|Art|ART)\s*" + _NR_ART + r"\s*\.?\s*$")
 # ── F2: "Art. I - (1) text" / "Art. 1577 - Baza lunară..." — liniuta separa numarul de corp ─────
-_ART_INLINE = re.compile(r"^\s*(?:Articolul|ARTICOLUL|Art\.|ART\.)\s*"
-                         r"(\d+(?:\^\d+)?|[IVXLCDM]+)\s*[-–—]\s*(\S.*)$")
+_ART_INLINE = re.compile(r"^\s*(?:Articolul|ARTICOLUL|Art\.|ART\.)\s*" + _NR_ART +
+                         r"\s*[-–—]\s*(\S.*)$")
 # ── F3: "ART. 1 Definiții" — numar + titlu scurt, fara punct final ──────────────────────────────
 _ART_TITLU = re.compile(r"^\s*(?:ART|Art)\.?\s*(\d+(?:\^\d+)?)\s+(\S[^.]{0,118})$")
 # Vocabularul notelor de modificare: "Articolul 502 , Titlul XI a fost completat de..." NU e titlu
@@ -454,7 +456,7 @@ def atomizeaza_text(act, text):
                 c.stiva = [c.anexa_principala]
             continue
         if fel == "articol":
-            c.deschide("articol", numar.replace(" ", ""), "", idx + 1)
+            c.deschide("articol", numar.replace(" ", "").replace(".", ""), "", idx + 1)
             if rest:
                 ma = _ALIN.match(rest)          # F2: `Art. I - (1) text`
                 if ma:

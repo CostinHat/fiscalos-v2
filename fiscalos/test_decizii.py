@@ -81,7 +81,7 @@ def test_C4_fiecare_verdict_pe_valoare_are_pereche_de_valabilitate_sau_o_declara
 def test_C4_TVA_valoarea_si_data_vin_din_atomi_diferiti():
     P = {p["parametru"]: p for p in _pot()}
     t = P["cote/tva_standard@2025-08-01"]
-    assert t["atom"].startswith("legea_141_2025_consolidat#art291/alin1")
+    assert t["atom"].startswith("legea_141_2025_consolidat#artII/pct42/art291/alin1")   # C31, oficial
     v = t["atom_valabilitate"]
     assert v["atom"] == "cod_fiscal_227_2015_consolidat#art291/alin1", v
     assert v["valabil_din"] == "2025-08-01"

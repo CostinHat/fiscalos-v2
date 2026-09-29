@@ -186,7 +186,8 @@ class Index(object):
         self.rel = relatii.Relatii(self.corp) if relatii_c17 else None
         self.normativ = {}
         for act in self.corp.pe_act:
-            self.normativ[act] = surse.e_act_normativ(act)[0]
+            self.normativ[act] = surse.e_act_normativ(act)[0] and \
+                act not in getattr(self.corp, "inlocuit", {})          # C31: varianta stricata
         self.atomi = [a for a in self.corp.toti
                       if self.normativ.get(a["act"]) and not a["abrogat"] and len(a["text"]) >= 30]
         self.tf = []

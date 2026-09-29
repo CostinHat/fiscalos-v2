@@ -166,15 +166,30 @@ def test_C28_bucata_fara_act_continua_actul_anterior():
 
 
 def test_raspunsurile_navigarii_au_trecut_verificarea_pe_corpusul_lor():
-    """v4 pe atomizarea de la d35c21a (inainte de C26), v5 pe corpusul de acum."""
-    from fiscalos import potrivire
+    """v4 pe atomizarea de la d35c21a (inainte de C26), v5 pe cea de la 778e826 (inainte de C31)."""
     f = os.path.join(_RAD, "intrebari", "v4", "raspunsuri_navigare.json")
     _verifica_semantic(json.load(open(f, encoding="utf-8")), _corpus_la_commit("d35c21a"))
+    # v5 pe corpusul commit-ului lui (778e826): C31 a schimbat apoi id-urile (cuprinsul portalului)
     f = os.path.join(_RAD, "intrebari", "v5", "raspunsuri_navigare.json")
     r = json.load(open(f, encoding="utf-8"))
-    _verifica_semantic(r, potrivire.Corpus())
+    _verifica_semantic(r, _corpus_la_commit("778e826"))
     for x in r["raspunsuri"]:
         if x["stare"] == "RASPUNS":                      # C24 + C23: niciun raspuns gol
             assert len(x["raspuns"].split("  [")[0].strip()) >= 2, x["id"]
             assert x["data_referinta"] in [d[0] for d in x["date_din_intrebare"]] or \
                 (not x["date_din_intrebare"] and x["data_referinta"] == "2026-09-28"), x["id"]   # C27
+
+
+# ── C30: formulari echivalente pentru zero si date in litere ────────────────────────────────────
+def test_C30_zero_spus_in_cuvinte():
+    from fiscalos import comparatie
+    assert "0 lei" in comparatie._fapte_raspuns("Nu datorează nimic: pentru amenzi nu se datorează accesorii.")
+    assert "0 lei" not in comparatie._fapte_raspuns("Datorează dobânzi de 1.008 lei.")     # cealalta directie
+
+
+def test_C30_data_in_litere_cu_an_e_aceeasi_cu_data_numerica():
+    from fiscalos import comparatie
+    assert "28.02.2026" in comparatie._fapte("până la 28 februarie 2026")
+    assert comparatie._fapte("până la 28 februarie 2026")[0] == "28 februarie"   # faptul principal, neschimbat
+    assert comparatie._fapte("1.3.2026") == ["01.03.2026"]
+    assert "28.02.2027" not in comparatie._fapte("până la 28 februarie 2026")     # alt an nu se potriveste

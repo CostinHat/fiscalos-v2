@@ -1,0 +1,637 @@
+{
+ "_ce": "TEMEIURI CANDIDATE pentru constantele pe care iConta nu le sursează. Livrabil pentru iConta, DE APROBAT UMAN. NU se aplica. Fiecare candidat vine dintr-un act normativ (decizia C2: un formular, o structura de declaratie sau un pliant ANAF nu poate fi temei), si e gasit prin potrivire pe fraza-subiect, nu verificat.",
+ "versiune": "v7",
+ "aprobare": "NEAPROBAT",
+ "candidati": [
+  {
+   "parametru": "nesursat/bacsis.COTA_IMPOZIT=10",
+   "valoare_cod": "10",
+   "unde_in_cod": "core/bacsis.py:13",
+   "atom": "cod_fiscal_227_2015_consolidat#art64/alin1",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "10%",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Cota de impozit este de 10% și se aplică asupra venitului impozabil corespunzător fiecărei surse din fiecare categorie pentru determinarea impozitului pe veniturile din:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_156_2024",
+    "atom": "oug_156_2024#artLXIV/pct1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "La articolul 43, alineatul (2) se modifică şi va avea următorul cuprins: \"(2) Impozitul pe dividende se stabileşte prin aplicarea unei cote de impozit de 10% asupra dividendului brut plătit unei persoane juridice române. Impozitul pe dividende se declară şi se plăteşte la bugetul de stat, până la data de 25 inclusiv a lunii următoare celei în care se plăteşte dividendul.\""
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_INCASARE_PJ=5000",
+   "valoare_cod": "5000",
+   "unde_in_cod": "core/casa.py:22",
+   "atom": "legea_70_2015_consolidat#art3",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "5.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/lita",
+     "verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+     "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/lite",
+     "verbatim": "plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin2",
+     "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin3",
+     "verbatim": "Sunt interzise plățile fragmentate în numerar către furnizorii de bunuri și servicii pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, către magazinele de tipul cash and carry. Persoanele prevăzute la art. 1 alin. (1) pot achita facturile cu valori care depășesc plafonul de 5.000 lei, către furnizorii de bunuri și servicii, respectiv de 10.000 lei, către magazinele de tipul cash and carry, astfel: 5.000 lei/10.000 lei în numerar, suma care depășește acest plafon putând fi achitată numai prin instrumente de plată fără numerar."
+    }
+   ],
+   "verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct2",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ..."
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_INCASARE_PJ_CC=10000",
+   "valoare_cod": "10000",
+   "unde_in_cod": "core/casa.py:23",
+   "atom": "legea_70_2015_consolidat#art3",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "10.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litb",
+     "verbatim": "încasări efectuate de către magazinele de tipul cash and carry, care sunt organizate și funcționează în baza legislației în vigoare, de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 10.000 lei de la o persoană; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+     "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litd",
+     "verbatim": "plăți către magazinele de tipul cash and carry, care sunt organizate și funcționează în baza legislației în vigoare, în limita unui plafon zilnic total de 10.000 lei; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin2",
+     "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin3",
+     "verbatim": "Sunt interzise plățile fragmentate în numerar către furnizorii de bunuri și servicii pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, către magazinele de tipul cash and carry. Persoanele prevăzute la art. 1 alin. (1) pot achita facturile cu valori care depășesc plafonul de 5.000 lei, către furnizorii de bunuri și servicii, respectiv de 10.000 lei, către magazinele de tipul cash and carry, astfel: 5.000 lei/10.000 lei în numerar, suma care depășește acest plafon putând fi achitată numai prin instrumente de plată fără numerar."
+    }
+   ],
+   "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct3/alin1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)"
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_PLATA_PJ=5000",
+   "valoare_cod": "5000",
+   "unde_in_cod": "core/casa.py:24",
+   "atom": "legea_70_2015_consolidat#art3",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "5.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/lita",
+     "verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+     "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/lite",
+     "verbatim": "plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin2",
+     "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin3",
+     "verbatim": "Sunt interzise plățile fragmentate în numerar către furnizorii de bunuri și servicii pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, către magazinele de tipul cash and carry. Persoanele prevăzute la art. 1 alin. (1) pot achita facturile cu valori care depășesc plafonul de 5.000 lei, către furnizorii de bunuri și servicii, respectiv de 10.000 lei, către magazinele de tipul cash and carry, astfel: 5.000 lei/10.000 lei în numerar, suma care depășește acest plafon putând fi achitată numai prin instrumente de plată fără numerar."
+    }
+   ],
+   "verbatim": "încasări de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei de la o persoană; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct2",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "La articolul 3 alineatul (1), litera e) se modifică și va avea următorul cuprins: e) plăți din avansuri spre decontare, în limita unui plafon zilnic de 5.000 lei, stabilit pentru fiecare persoană care a primit avansuri spre decontare. ... ..."
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_PLATA_PJ_TOTAL=10000",
+   "valoare_cod": "10000",
+   "unde_in_cod": "core/casa.py:25",
+   "atom": "legea_70_2015_consolidat#art3",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "10.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litb",
+     "verbatim": "încasări efectuate de către magazinele de tipul cash and carry, care sunt organizate și funcționează în baza legislației în vigoare, de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 10.000 lei de la o persoană; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+     "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litd",
+     "verbatim": "plăți către magazinele de tipul cash and carry, care sunt organizate și funcționează în baza legislației în vigoare, în limita unui plafon zilnic total de 10.000 lei; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin2",
+     "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin3",
+     "verbatim": "Sunt interzise plățile fragmentate în numerar către furnizorii de bunuri și servicii pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, către magazinele de tipul cash and carry. Persoanele prevăzute la art. 1 alin. (1) pot achita facturile cu valori care depășesc plafonul de 5.000 lei, către furnizorii de bunuri și servicii, respectiv de 10.000 lei, către magazinele de tipul cash and carry, astfel: 5.000 lei/10.000 lei în numerar, suma care depășește acest plafon putând fi achitată numai prin instrumente de plată fără numerar."
+    }
+   ],
+   "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "oug_115_2023_consolidat",
+    "atom": "oug_115_2023_consolidat#artLXIV/pct3/alin1",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Operațiunile de încasări și plăți în numerar efectuate între persoanele prevăzute la art. 1 alin. (1) și persoane fizice, reprezentând contravaloarea unor livrări ori achiziții de bunuri sau a unor prestări de servicii, dividende, cesiuni de creanțe sau alte drepturi, se efectuează cu încadrarea în plafonul zilnic de 10.000 lei către/de la o persoană. (...)"
+   }
+  },
+  {
+   "parametru": "nesursat/casa.PLAFON_PF=10000",
+   "valoare_cod": "10000",
+   "unde_in_cod": "core/casa.py:26",
+   "atom": "legea_70_2015_consolidat#art3",
+   "act": "legea_70_2015_consolidat",
+   "valoare_in_text": "10.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litb",
+     "verbatim": "încasări efectuate de către magazinele de tipul cash and carry, care sunt organizate și funcționează în baza legislației în vigoare, de la persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 10.000 lei de la o persoană; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litc",
+     "verbatim": "plăți către persoanele prevăzute la art. 1 alin. (1) , în limita unui plafon zilnic de 5.000 lei/persoană, dar nu mai mult de un plafon total de 10.000 lei/zi; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin1/litd",
+     "verbatim": "plăți către magazinele de tipul cash and carry, care sunt organizate și funcționează în baza legislației în vigoare, în limita unui plafon zilnic total de 10.000 lei; ..."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin2",
+     "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei."
+    },
+    {
+     "atom": "legea_70_2015_consolidat#art3/alin3",
+     "verbatim": "Sunt interzise plățile fragmentate în numerar către furnizorii de bunuri și servicii pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, către magazinele de tipul cash and carry. Persoanele prevăzute la art. 1 alin. (1) pot achita facturile cu valori care depășesc plafonul de 5.000 lei, către furnizorii de bunuri și servicii, respectiv de 10.000 lei, către magazinele de tipul cash and carry, astfel: 5.000 lei/10.000 lei în numerar, suma care depășește acest plafon putând fi achitată numai prin instrumente de plată fără numerar."
+    }
+   ],
+   "verbatim": "Sunt interzise încasările fragmentate în numerar de la beneficiari pentru facturile a căror valoare este mai mare de 5.000 lei și, respectiv, de 10.000 lei, în cazul magazinelor de tipul cash and carry, precum și fragmentarea facturilor pentru o livrare de bunuri sau o prestare de servicii a căror valoare este mai mare de 5.000 lei, respectiv de 10.000 lei.",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": true,
+    "act_modificator": "Alineatul (2), Articolul 3, Capitolul I a fost modificat ca urmare a modificării integrale a de Punctului 1., Articolul LXIV, Sectiunea a 3-a, Capitolul IV din LEGEA nr. 296 din 26 octombrie 2023, publicată în MONITORUL OFICIAL nr. 977 din 27 octombrie 2023 prin Punctul 1., Articolul I din ORDONANȚA DE URGENȚĂ nr. 98 din 9 noiembrie 2023, publicată în MONITORUL OFICIAL nr. 1.026 din 10 noiembrie 2023.",
+    "atom": "legea_70_2015_consolidat#art3/alin2",
+    "sursa_datei": "nota de consolidare",
+    "valabil_din": "2023-11-11"
+   }
+  },
+  {
+   "parametru": "nesursat/cote_tva.COTA_STANDARD=21",
+   "valoare_cod": "21",
+   "unde_in_cod": "core/cote_tva.py:19",
+   "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "21%",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%.",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litb~3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "cu cota standard de TVA 21%"
+   }
+  },
+  {
+   "parametru": "nesursat/cote_tva.COTA_REDUSA=11",
+   "valoare_cod": "11",
+   "unde_in_cod": "core/cote_tva.py:20",
+   "atom": "cod_fiscal_227_2015_consolidat#art291/alin2",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "11%",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lite~2",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "cu cota redusa de TVA 11%"
+   }
+  },
+  {
+   "parametru": "nesursat/d100_pozitia_116.PRAG_BRENT_USD=70",
+   "valoare_cod": "70",
+   "unde_in_cod": "core/d100_pozitia_116.py:109",
+   "atom": "oug_24_2026_contributie_solidaritate#art9/alin6",
+   "act": "oug_24_2026_contributie_solidaritate",
+   "valoare_in_text": "70",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Pentru aplicarea prevederilor alin. (5) , cota se stabilește în funcție de intervalul în care se încadrează prețul mediu lunar al țițeiului sortiment/clasă Brent, calculat conform alin. (2) . În cazul în care prețul mediu lunar al țițeiului sortimentul/clasa Brent nu depășește pragul de 70 USD/baril, contribuția de solidaritate nu se datorează pentru luna respectivă. (7) Cursul de schimb valutar utilizat pentru determinarea echivalentului în lei a cotației de 70 USD, prevăzută la alin. (4) lit. a) , este cel valabil în ultima zi a lunii pentru care se datorează contribuția de solidaritate. (8) În aplicarea prevederilor alin. (1) , teritoriul României reprezintă teritoriul delimitat de frontiera de stat a României, în conformitate cu prevederile capitolului II al Ordonanței de urgență a Guvernului nr. 105/2001 privind frontiera de stat a României, aprobată cu modificări prin Legea nr. 243/2002 , cu modificările și completările ulterioare. Nu intră sub incidența prevederilor prezentului capitol țițeiul extras din marea teritorială a României, astfel cum este definită de capitolul I din Legea nr. 17/1990 privind regimul juridic al apelor maritime interioare, al mării teritoriale, al z…",
+   "valabilitate": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea"
+  },
+  {
+   "parametru": "nesursat/d101.COTA_STANDARD=16",
+   "valoare_cod": "16",
+   "unde_in_cod": "core/d101.py:46",
+   "atom": "cod_fiscal_227_2015_consolidat#art17",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "16%",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valabilitate": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea"
+  },
+  {
+   "parametru": "nesursat/d101.PRAG_IMCA_EUR=50000000",
+   "valoare_cod": "50000000",
+   "unde_in_cod": "core/d101.py:54",
+   "atom": "cod_fiscal_227_2015_consolidat#art18^1",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "50.000.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin1",
+     "verbatim": "Contribuabilii, alții decât cei prevăzuți la art. 15 , care înregistrează în anul precedent o cifră de afaceri de peste 50.000.000 euro și care în anul de calcul determină un impozit pe profit, cumulat de la începutul anului fiscal/anului fiscal modificat până la sfârșitul trimestrului/anului de calcul, mai mic decât impozitul minim pe cifra de afaceri stabilit potrivit prevederilor alin. (3) , sunt obligați la plata impozitului pe profit la nivelul impozitului minim pe cifra de afaceri. Cursul de schimb pentru determinarea echivalentului în euro a cifrei de afaceri este cel valabil la închiderea exercițiului financiar în care s-au înregistrat veniturile. În sensul prezentului alineat, cifra de afaceri a anului precedent reprezintă diferența dintre veniturile totale (VT) și veniturile care se scad din veniturile totale (Vs), astfel cum sunt definite la alin. (3) ."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art18^1/alin8",
+     "verbatim": "În cazul grupului fiscal, cifra de afaceri de peste 50.000.000 euro prevăzută la alin. (1) se calculează de persoana juridică responsabilă prin însumarea cifrei de afaceri a membrilor grupului fiscal. Celelalte prevederi ale alin. (1) , precum și prevederile alin. (2)-(7) , (9) și (10) se aplică în mod corespunzător de către membrii/persoana juridică responsabilă având în vedere și următoarele reguli:"
+    }
+   ],
+   "verbatim": "În cazul grupului fiscal, cifra de afaceri de peste 50.000.000 euro prevăzută la alin. (1) se calculează de persoana juridică responsabilă prin însumarea cifrei de afaceri a membrilor grupului fiscal. Celelalte prevederi ale alin. (1) , precum și prevederile alin. (2)-(7) , (9) și (10) se aplică în mod corespunzător de către membrii/persoana juridică responsabilă având în vedere și următoarele reguli:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii",
+    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artIII/pct2/art18^1/alin8",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": "2024-01-01",
+    "verbatim": "În cazul grupului fiscal, cifra de afaceri de peste 50.000.000 euro prevăzută la alin. (1) se calculează de persoana juridică responsabilă prin însumarea cifrei de afaceri a membrilor grupului fiscal. Celelalte prevederi ale alin. (1), precum și prevederile alin. (2)-(7), (9) și (10) se aplică în mod corespunzător de către membrii/persoana juridică responsabilă având în vedere și următoarele reguli:"
+   }
+  },
+  {
+   "parametru": "nesursat/d101g.COTA_STANDARD=16",
+   "valoare_cod": "16",
+   "unde_in_cod": "core/d101g.py:68",
+   "atom": "cod_fiscal_227_2015_consolidat#art17",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "16%",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valabilitate": "niciun atom din corpus nu poarta data de intrare in vigoare pentru aceasta valoare pe acelasi articol si alineat - valabilitatea NU e dovedita, doar valoarea"
+  },
+  {
+   "parametru": "nesursat/d394.COTE=5",
+   "valoare_cod": "5",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "cod_fiscal_227_2015_consolidat#art291",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "5%",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin3^5/lita",
+     "verbatim": "să verifice îndeplinirea condiției referitoare la achiziția unei singure locuințe a cărei valoare nu depășește suma de 600.000 lei, exclusiv TVA, cu cota redusă de TVA de 5%, prin consultarea «Registrului achizițiilor de locuințe cu cota redusă de TVA de 5%, începând cu 1 ianuarie 2023», înainte de autentificarea actelor juridice între vii care au ca obiect transferul dreptului de proprietate sau plata în avans pentru achiziția unei astfel de locuințe și, în situația în care constată că nu este îndeplinită această condiție, să le autentifice doar dacă livrarea se efectuează cu cota standard de TVA; ..."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin3^5/litb",
+     "verbatim": "să completeze «Registrul achizițiilor de locuințe cu cota redusă de TVA de 5%, începând cu 1 ianuarie 2023» la data autentificării actelor juridice între vii care au ca obiect transferul dreptului de proprietate pentru locuințele prevăzute la alin. (3) lit. c) pct. 3 ; ..."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin3^8",
+     "verbatim": "Se organizează «Registrul achizițiilor de locuințe cu cota redusă de TVA», în format electronic, pe baza informațiilor din actele juridice între vii care au ca obiect transferul dreptului de proprietate pentru locuințele prevăzute la alin. (2) lit. m) pct. 3 , autentificate începând cu data de 1 ianuarie 2024, și a informațiilor din «Registrul achizițiilor de locuințe cu cota redusă de TVA de 5%, începând cu 1 ianuarie 2023». Procedura privind organizarea «Registrului achizițiilor de locuințe cu cota redusă de TVA» se stabilește prin ordin al președintelui Agenției Naționale de Administrare Fiscală, cu consultarea Uniunii Naționale a Notarilor Publici din România. Notarii publici au obligația:"
+    }
+   ],
+   "verbatim": "să completeze «Registrul achizițiilor de locuințe cu cota redusă de TVA de 5%, începând cu 1 ianuarie 2023» la data autentificării actelor juridice între vii care au ca obiect transferul dreptului de proprietate pentru locuințele prevăzute la alin. (3) lit. c) pct. 3 ; ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lita~3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "cu cota de TVA 24%                                      g) cu cota redusă de TVA 5%"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=9",
+   "valoare_cod": "9",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21",
+   "act": "opanaf_3769_2015_d394_baza",
+   "valoare_in_text": "9%",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct2",
+     "verbatim": "valoarea totală a bazei impozabile aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct3",
+     "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct4",
+     "verbatim": "valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă, precum şi cele pentru care se aplică TVA la încasare defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct1/pct1/pct1/pct1/pct1",
+     "verbatim": "5. valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii pentru care s-au primit bonuri fiscale care îndeplinesc condiţiile unei facturi simplificate şi care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct2",
+     "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct4",
+     "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul normal de TVA: 4.1. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct5",
+     "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul de TVA la încasare: 5.1. valoarea totală a TVA colectate aferentă facturilor încasate în perioada de raportare indiferent de data la care acestea au fost emise de către persoana impozabilă care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.2. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul normal de TVA defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.3. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct6",
+     "verbatim": "Coloana \"Baza impozabilă\" de la lit. C, D, E, F - se înscriu valoarea bazei impozabile, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi valoarea bazei impozabile aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). În cazul în care baza impozabilă este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct7",
+     "verbatim": "Coloana \"Taxă pe valoarea adăugată\" de la lit. C, D, E, F - se înscriu valoarea TVA, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi TVA aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). Dacă taxa pe valoarea adăugată este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct14",
+     "verbatim": "Coloana \"Total bază impozabilă\" de la lit. G - se înscrie valoarea bazei impozabile, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea bazei impozabile aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct15",
+     "verbatim": "Coloana \"Taxa pe valoarea adăugată\" de la lit. G - se înscrie valoarea TVA, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea taxei pe valoarea adăugată aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
+    }
+   ],
+   "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litf",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "cu cota redusă de TVA 9%"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=11",
+   "valoare_cod": "11",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4",
+   "act": "hg_1_2016_norme_cod_fiscal",
+   "valoare_in_text": "11%",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin4/litt",
+     "verbatim": "băuturi, oțet comestibil și înlocuitori de oțet comestibil obținuți din acid acetic, care se încadrează la codurile NC 2201 și 2209 00; ... ț) reziduuri și deșeuri ale industriei alimentare, alimente preparate pentru animale, care se încadrează la codurile NC 2301, 2302, 2304-2306, 2308 și 2309. ... Exemplul nr. 1: Un producător agricol vinde caise care se încadrează la codul NC 0809 10 00 către un comerciant. Pentru livrarea efectuată producătorul agricol aplică cota de TVA de 11%. La rândul său, comerciantul vinde caisele cu cota de 11%, indiferent ce destinație ulterioară vor avea fructele livrate: alimente, materie primă pentru dulceață, compoturi sau producția de alcool. Exemplul nr. 2: Un producător de miere livrează mierea, care se încadrează la codul NC 0409 00 00, atât către magazine de vânzare cu amănuntul, cât și către fabrici de produse cosmetice sau către producători de hidromel. În toate situațiile va aplica cota redusă de 11% la livrarea mierii. Exemplul nr. 3: O persoană impozabilă importă ulei de soia, care se încadrează la codul NC 1507, pentru producerea de biodiesel. Cota de TVA aplicabilă pentru importul de ulei de soia este cota redusă de 11%."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin4^1",
+     "verbatim": "Conform art. 291 alin. (2) lit. b) pct. 3 din Codul fiscal, cota redusă de TVA de 11% se aplică pentru laptele praf pentru nou-născuți, sugari și copii de vârstă mică, respectiv formulele de lapte praf de început, de continuare și de creștere, care se încadrează la codurile NC 0402 și NC 1901 10."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin5",
+     "verbatim": "Pentru livrarea următoarelor bunuri, cu excepția alimentelor cu zahăr adăugat, al căror conținut total de zahăr este de minimum 10 g/100 g produs, datorită naturii lor, cota redusă de TVA de 11% se aplică de orice furnizor numai dacă acesta poate face dovada că sunt utilizate ca alimente destinate consumului uman sau animal:"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin8",
+     "verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin9",
+     "verbatim": "Dacă persoana impozabilă care importă, achiziționează intracomunitar sau livrează în țară bunurile prevăzute la alin. (5) nu poate face dovada aplicării cotei reduse de TVA de 11% în condițiile prevăzute la alin. (6)-(8) , se aplică cota standard de TVA, chiar dacă pentru o livrare ulterioară se aplică cota redusă de 11% pentru același bun."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin13",
+     "verbatim": "În aplicarea art. 291 alin. (2) lit. d) din Codul fiscal, se aplică cota redusă de TVA de 11% de orice persoană care livrează apă de irigații care este transportată prin infrastructura principală și/sau secundară de irigații. În categoria persoanelor care livrează apă destinată irigațiilor se cuprind inclusiv furnizorii de apă din Dunăre, din râuri interioare, izvoare, lacuri de acumulare sau alte surse de apă, care alimentează sistemele de irigații."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin14",
+     "verbatim": "…otelier sau al sectoarelor cu funcție similară se înțelege cazarea în structurile de primire turistică cu funcțiuni de cazare turistică prevăzute la art. 2 lit. d) din Ordonanța Guvernului nr. 58/1998 privind organizarea și desfășurarea activității de turism în România, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare. Cota redusă de taxă de 11% prevăzută la art. 291 alin. (2) lit. m) din Codul fiscal se aplică pentru tipurile de cazare în structurile de primire turistică cu funcțiune de cazare, prevăzute la art. 2^1 din Ordonanța Guvernului nr. 58/1998, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare. În cazul cazării cu mic dejun, cu demipensiune, cu pensiune completă sau cu «all inclusive», astfel cum sunt definite la art. 2^1 din Ordonanța Guvernului nr. 58/1998, aprobată cu modificări și completări prin Legea nr. 755/2001, cu modificările și completările ulterioare, cota redusă de TVA se aplică asupra prețului total al cazării, care poate include și băuturi alcoolice, băuturi nealcoolice care se încadrează la codul NC 2202, precum și alimente cu zahăr adăugat, al că…"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin16",
+     "verbatim": "Cota redusă de taxă de 11% prevăzută la art. 291 alin. (2) lit. l) din Codul fiscal se aplică numai pentru livrarea, astfel cum este definită la art. 270 alin. (1) din Codul fiscal, a locuințelor ca parte a politicii sociale, respectiv pentru transferul dreptului de a dispune ca un proprietar de bunurile prevăzute la art. 291 alin. (2) lit. l) din Codul fiscal."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin19",
+     "verbatim": "Persoanele impozabile care livrează locuințe vor aplica cota de 11%, inclusiv pentru avansurile aferente acestor livrări, dacă din contractele încheiate rezultă că la momentul livrării vor fi îndeplinite condițiile impuse de art. 291 alin. (2) lit. l) din Codul fiscal. În situația în care avansurile au fost facturate prin aplicarea cotei standard de TVA, la livrarea bunului imobil se efectuează regularizările prevăzute la art. 291 alin. (6) din Codul fiscal în vederea aplicării cotei de 11%, dacă condițiile impuse de art. 291 alin. (2) lit. l) din Codul fiscal sunt îndeplinite la data livrării."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct37~4/alin20",
+     "verbatim": "Pentru clădirile prevăzute la art. 291 alin. (2) lit. l) din Codul fiscal, cumpărătorul va pune la dispoziția vânzătorului o declarație pe propria răspundere, autentificată de un notar, din care să rezulte că va utiliza aceste clădiri conform destinației prevăzute de lege, care se păstrează de vânzător pentru justificarea aplicării cotei reduse de TVA de 11%. Declarația trebuie prezentată cel mai târziu până la momentul livrării clădirii respective. Prevederile art. 291 alin. (2) lit. l) din Codul fiscal se aplică și în cazul livrării de părți dintr-o clădire destinate scopurilor respective."
+    }
+   ],
+   "verbatim": "În cazul achiziției intracomunitare de bunuri prevăzute la alin. (5) , cota redusă de TVA de 11% se aplică numai dacă persoana impozabilă poate face dovada:",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lite~2",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "cu cota redusa de TVA 11%"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=20",
+   "valoare_cod": "20",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21",
+   "act": "opanaf_3769_2015_d394_baza",
+   "valoare_in_text": "20%",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct2",
+     "verbatim": "valoarea totală a bazei impozabile aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct3",
+     "verbatim": "valoarea totală a TVA aferentă livrărilor de bunuri/prestărilor de servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct4",
+     "verbatim": "valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii taxabile efectuate, inclusiv cele pentru care se aplică taxarea inversă, precum şi cele pentru care se aplică TVA la încasare defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct1/pct1/pct1/pct1/pct1",
+     "verbatim": "5. valoarea totală a bazei impozabile aferentă achiziţiilor de bunuri şi servicii pentru care s-au primit bonuri fiscale care îndeplinesc condiţiile unei facturi simplificate şi care au înscris codul de înregistrare în scopuri de TVA al beneficiarului, defalcată pe cote de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct2",
+     "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct4",
+     "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul normal de TVA: 4.1. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct5",
+     "verbatim": "date aferente operaţiunilor desfăşurate de către persoana impozabilă care aplică sistemul de TVA la încasare: 5.1. valoarea totală a TVA colectate aferentă facturilor încasate în perioada de raportare indiferent de data la care acestea au fost emise de către persoana impozabilă care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.2. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul normal de TVA defalcate pe fiecare cotă de TVA (20%, 9%, 5%); 5.3. valoarea totală a TVA deductibile aferentă facturilor achitate în perioada de raportare indiferent de data în care acestea au fost primite de la persoane impozabile care aplică sistemul de TVA la încasare defalcate pe fiecare cotă de TVA (20%, 9%, 5%);"
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct6",
+     "verbatim": "Coloana \"Baza impozabilă\" de la lit. C, D, E, F - se înscriu valoarea bazei impozabile, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi valoarea bazei impozabile aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). În cazul în care baza impozabilă este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct7",
+     "verbatim": "Coloana \"Taxă pe valoarea adăugată\" de la lit. C, D, E, F - se înscriu valoarea TVA, în lei, aferentă livrărilor/prestărilor/achiziţiilor, inclusiv cele pentru care se aplică taxarea inversă, precum şi TVA aferentă facturilor de stornare, defalcată pe cote de TVA (20%, 9%, 5%). Dacă taxa pe valoarea adăugată este negativă, valoarea totală a acesteia se înscrie cu semnul (-)."
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct14",
+     "verbatim": "Coloana \"Total bază impozabilă\" de la lit. G - se înscrie valoarea bazei impozabile, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea bazei impozabile aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
+    },
+    {
+     "atom": "opanaf_3769_2015_d394_baza#anexa2/pct5/alin21/pct5/pct6/pct15",
+     "verbatim": "Coloana \"Taxa pe valoarea adăugată\" de la lit. G - se înscrie valoarea TVA, în lei, din perioada de raportare aferentă încasărilor, inclusiv valoarea taxei pe valoarea adăugată aferentă stornărilor, defalcată pe cote de TVA (20%, 9%, 5%)."
+    }
+   ],
+   "verbatim": "2.3. seria şi numărul facturilor emise prin autofacturare, inclusiv baza impozabilă şi TVA aferente, defalcată pe fiecare cotă (20%, 9%, 5%);",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/litc~2",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "cu cota de TVA 20%"
+   }
+  },
+  {
+   "parametru": "nesursat/d394.COTE=24",
+   "valoare_cod": "24",
+   "unde_in_cod": "core/d394.py:84",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa",
+   "act": "hg_1_2016_norme_cod_fiscal",
+   "valoare_in_text": "24%",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct25~6/alin3/pct1",
+     "verbatim": "000 euro x 10% x 4,41 lei/euro x 24% = 105,84 lei 5.000 euro x 10% x 4,45 lei/euro x 20% = 445 lei"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct31~4/alin6",
+     "verbatim": "… imobil pe care-l deține în proprietate. Societatea X are încheiate contracte cu furnizorii de utilități, respectiv cu furnizorii de energie electrică, energie termică și apă. Conform contractelor încheiate, societatea X refacturează către chiriași aceste utilități, care sunt considerate distincte de închiriere. În luna decembrie 2015 furnizorii de utilități emit facturi către societatea X cu TVA 24%. Faptul generator pentru aceste livrări intervine conform prevederilor art. 281 alin. (8) din Codul fiscal la data emiterii facturilor, respectiv în luna decembrie 2015. În luna ianuarie 2016, societatea X refacturează utilitățile către chiriași. Exigibilitatea taxei pentru operațiunile refacturate intervine la data emiterii facturii de către societatea X către chiriași. Întrucât faptul generator pentru operațiunile refacturate rămâne neschimbat și a intervenit în luna decembrie 2015, cota aplicabilă la refacturare este cota în vigoare la data faptului generator de taxă, respectiv 24%.…"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct35~4/alin2",
+     "verbatim": "…l țării a unui utilaj către clientul său B. Livrarea utilajului are loc în cursul lunii ianuarie la prețul de 6.000 euro. A va emite o factură pentru avansul de 2.000 euro către B la cursul de 4,45 lei/euro, valabil la data încasării avansului în luna decembrie. Baza de impozitare a TVA pentru avans: 2.000 euro x 4,45 lei/euro = 8.900 lei. Taxa pe valoarea adăugată aferentă avansului: 8.900 lei x 24% = 2.136 lei. În ianuarie 2016, la livrarea utilajului se regularizează avansul facturat, inclusiv cota de taxă pe valoarea adăugată ca urmare a modificării cotei standard la 1 ianuarie 2016. Cursul din data livrării bunului este de 4,5 lei/euro. Regularizările efectuate, inclusiv regularizarea cotei de TVA: Stornarea avansului, inclusiv a taxei pe valoarea adăugată aferente acestuia, respectiv 8.900 lei și 2.136 lei, cu semnul minus. Baza de impozitare a livrării: [(2.000 euro x 4,45 lei/euro) + (4.000 euro x 4,5 lei/euro)] = 8.900 lei + 18.000 lei = 26.900 lei. Taxa pe valoarea adăugată aferentă livrării: 26.900 lei x 20% = 5.380 lei. Exemplul nr. 3: Compania A livrează bunuri în valoare de 7.000 euro către compania B, la data de 20 februarie 2016. Compania A aplică sistemul TVA la în…"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~4/alin2/lita",
+     "verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ..."
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct39~4/alin2/litb",
+     "verbatim": "…rării de bunuri care are loc la sfârșitul contractului de leasing. Pentru ratele facturate s-a aplicat cota în vigoare la data faptului generator de taxă (fiecare dată prevăzută în contract pentru plata ratei) și nu se mai fac regularizări la data transferului dreptului de proprietate asupra clădirii. Întrucât valoarea reziduală a fost încasată în avans față de data livrării, aplicându-se cota de 24%, dacă livrarea clădirii are loc după data de 1 ianuarie 2016, se va proceda la regularizarea sumelor încasate în avans pentru a aplica cota de TVA de 20% în vigoare la data faptului generator de taxă. ... + Operațiuni scutite de taxă + Secţiunea 1 Scutiri pentru anumite activități de interes general și scutiri pentru alte activități…"
+    },
+    {
+     "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct109/alin17",
+     "verbatim": "…m art. 281 alin. (6) din Codul fiscal. Valoarea clădirii este de 20 milioane lei și TVA de 4.800.000 lei aferentă vor fi plătite de cumpărător în rate lunare egale timp de 8 ani. Ambele persoane sunt înregistrate normal în scopuri de TVA conform art. 316 din Codul fiscal. Factura se emite pe data de 10 ianuarie 2016, dar nu se aplică regimul de taxare inversă. De asemenea, cota aplicabilă este de 24%, de la data faptului generator de taxă. Chiar dacă factura ar fi fost emisă cu întârziere în altă lună din anul 2016, tratamentul fiscal ar fi același.…"
+    }
+   ],
+   "verbatim": "Dacă casa de expediție facturează un singur serviciu, nu un complex de servicii, cum ar fi numai serviciul de transport, faptul generator de taxă intervine la data finalizării serviciului respectiv potrivit prevederilor art. 281 alin. (12) din Codul fiscal. Astfel, dacă din documentele de transport emise de transportator rezultă că transportul s-a finalizat în luna decembrie 2015, acesta va fi facturat cu cota de TVA de 24%, chiar dacă casa de expediție va factura cu întârziere acest transport către client, de exemplu doar în luna februarie 2016. ...",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "opanaf_2194_2025_d394",
+    "atom": "opanaf_2194_2025_d394#anexa1/pct1/lita",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "parcuri eoliene                                         a) cu cota de TVA 24%"
+   }
+  },
+  {
+   "parametru": "nesursat/salarizare.PRAG_VENIT_DEDUCERE=2000",
+   "valoare_cod": "2000",
+   "unde_in_cod": "core/salarizare.py:29",
+   "atom": "cod_fiscal_227_2015_consolidat#art77",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "2.000",
+   "ambiguu": true,
+   "optiuni": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art77/alin3",
+     "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art77/alin4",
+     "verbatim": "… 27,50% salariul minim + 1.751 lei salariul minim + 1.800 lei 2,00% 7.00% 12,00% 17,00% 27,00% salariul minim + 1.801 lei salariul minim + 1.850 lei 1,50% 6,50% 11,50% 16,50% 26,50% salariul minim + 1.851 lei salariul minim + 1.900 lei 1,00% 6,00% 11,00% 16,00% 26,00% salariul minim + 1.901 lei salariul minim + 1.950 lei 0,50% 5,50% 10,50% 15,50% 25,50% salariul minim + 1.951 lei salariul minim + 2.000 lei 0,00% 5,00% 10,00% 15,00% 25,00% Pentru contribuabilii care realizează venituri brute lunare din salarii de peste nivelul prevăzut la alin. (3) nu se acordă deducerea personală de bază.…"
+    }
+   ],
+   "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară.",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": false,
+    "act_modificator": "og_16_2022_consolidat",
+    "atom": "og_16_2022_consolidat#artI/pct40/art77/alin3",
+    "sursa_datei": "actul MODIFICATOR care introduce valoarea (decizia C10)",
+    "valabil_din": null,
+    "verbatim": "Deducerea personală de bază se acordă pentru persoanele fizice care au un venit lunar brut de până la 2.000 de lei peste nivelul salariului de bază minim brut pe țară garantat în plată aprobat prin hotărâre a Guvernului, în vigoare în luna de realizare a venitului. În situația în care, în cursul aceleiași luni, se utilizează mai multe valori ale salariului minim brut pe țară, se ia în calcul valoarea cea mai mică a salariului minim brut pe țară."
+   }
+  },
+  {
+   "parametru": "nesursat/taxare_inversa.PRAG_ELECTRONICE=22500",
+   "valoare_cod": "22500",
+   "unde_in_cod": "core/taxare_inversa.py:15",
+   "atom": "cod_fiscal_227_2015_consolidat#art331/alin7",
+   "act": "cod_fiscal_227_2015_consolidat",
+   "valoare_in_text": "22.500",
+   "ambiguu": false,
+   "optiuni": [],
+   "verbatim": "Pentru livrarea bunurilor prevăzute la alin. (2) lit. i)-k) se aplică taxarea inversă numai dacă valoarea bunurilor livrate, exclusiv TVA, înscrise într-o factură, este mai mare sau egală cu 22.500 lei. + Dispoziții tranzitorii +",
+   "valabilitate": {
+    "acelasi_cu_atomul_valorii": true,
+    "act_modificator": "Alin. (7) al art. 331 a fost introdus de pct. 8 al art. unic din LEGEA nr. 358 din 31 decembrie 2015, publicată în MONITORUL OFICIAL nr. 988 din 31 decembrie 2015, care completează art. I din ORDONANȚA DE URGENȚĂ nr. 50 din 27 octombrie 2015, publicată în MONITORUL OFICIAL nr. 817 din 3 noiembrie 2015, cu pct. 36^3.",
+    "atom": "cod_fiscal_227_2015_consolidat#art331/alin7",
+    "sursa_datei": "nota de consolidare",
+    "valabil_din": "2016-01-03"
+   }
+  }
+ ]
+}
