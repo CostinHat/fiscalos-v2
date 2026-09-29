@@ -1,13 +1,51 @@
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/costin/fiscalos/fiscalos/navigare.py", line 831, in <module>
-    r = ruleaza(dest, ids or None, SET2 if set2 else None)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/fiscalos/navigare.py", line 780, in ruleaza
-    qs = [q for q in (intrebari.incarca_intrebari(csv_intrebari) if csv_intrebari else intrebari.incarca_intrebari())
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/costin/fiscalos/fiscalos/intrebari.py", line 62, in incarca_intrebari
-    with open(cale, encoding="utf-8") as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv'
+Q2-TVA-01 RASPUNS          pasi=13 $0.2953 Pragul este de 10.000 euro pe an calendaristic, echivalent în lei 46.3
+Q2-TVA-02 RASPUNS          pasi=5  $0.1047 Poate emite factură simplificată atunci când valoarea facturii nu este
+Q2-TVA-03 RASPUNS          pasi=8  $0.1486 Nu. Locul prestării serviciilor de consultanță către o persoană impoza
+Q2-TVA-04 RASPUNS          pasi=8  $0.1756 TVA aferentă avansului devine exigibilă la data încasării avansului, a
+Q2-TVA-05 RASPUNS          pasi=17 $0.5577 Clientul trebuie să ajusteze (în sensul reducerii) TVA dedusă inițial 
+Q2-TVA-06 NU_POT_RASPUNDE  pasi=12 $0.3446 VERIFICAREA MECANICA a respins propunerea modelului: cifra '1.01.2019'
+Q2-TVA-07 NU_POT_RASPUNDE  pasi=5  $0.1404 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
+Q2-TVA-08 NU_POT_RASPUNDE  pasi=4  $0.1376 C23: structura răspunsului final a fost invalidă de două ori (marcaj d
+Q2-TVA-09 RASPUNS          pasi=14 $0.4139 Nu. Casarea utilajului — scoaterea din funcțiune urmată de dezmembrare
+Q2-TVA-10 NU_POT_RASPUNDE  pasi=5  $0.1192 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Calitat
+Q2-PRF-01 RASPUNS          pasi=5  $0.1128 Costurile excedentare ale îndatorării sunt deductibile, într-o perioad
+Q2-PRF-02 RASPUNS          pasi=6  $0.1185 Sunt cheltuieli sociale cu deductibilitate limitată: se deduc în limit
+Q2-PRF-03 RASPUNS          pasi=5  $0.1322 Cheltuielile de exploatare (combustibil, reparații, asigurare) sunt de
+Q2-PRF-04 RASPUNS          pasi=7  $0.2091 Nu. Rezerva fiscală constituită din profitul scutit aferent anului fis
+Q2-PRF-05 RASPUNS          pasi=9  $0.1848 Poate dispune redirecționarea impozitului pe profit, în limita sumei n
+Q2-PRF-06 NU_POT_RASPUNDE  pasi=4  $0.1963 VERIFICAREA CALCULULUI a respins propunerea: operandul cincime='5' nu 
+Q2-PRF-07 RASPUNS          pasi=8  $0.2541 Impozitul pe profit datorat pentru 2026 este 40.000 lei: impozit pe pr
+Q2-PRF-08 NU_POT_RASPUNDE  pasi=10 $0.2828 VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verb
+Q2-PRF-09 RASPUNS          pasi=9  $0.1994 Nu. Sponsorizarea nu se mai scade din impozitul pe veniturile microînt
+Q2-PRF-10 NU_POT_RASPUNDE  pasi=5  $0.1397 VERIFICAREA MECANICA a respins propunerea modelului: citat prea scurt 
+Q2-SAL-01 RASPUNS          pasi=3  $0.0534 Termenul de preaviz la demisie este cel convenit în contractul individ
+Q2-SAL-02 RASPUNS          pasi=6  $0.1510 Baza anuală de calcul a CASS pentru veniturile din activități independ
+Q2-SAL-03 RASPUNS          pasi=5  $0.0821 Perioada de probă poate fi de cel mult 120 de zile calendaristice, fii
+Q2-SAL-04 RASPUNS          pasi=7  $0.1029 Munca prestată se compensează, în primul rând, cu timp liber corespunz
+Q2-SAL-05 RASPUNS          pasi=7  $0.1608 Datele contractului (identificare angajator/salariat, funcție, tip și 
+Q2-SAL-06 RASPUNS          pasi=7  $0.2284 Neimpozabilă este suma de 1.485 lei (plafonul cel mai mic dintre limit
+Q2-SAL-07 NU_POT_RASPUNDE  pasi=3  $0.1405 VERIFICAREA CALCULULUI a respins propunerea: calculul total_impozabil:
+Q2-SAL-08 RASPUNS          pasi=5  $0.0947 Nu. Cât timp contractul individual de muncă continuă, zilele de conced
+Q2-SAL-09 RASPUNS          pasi=11 $0.2569 Nu. Salariul de bază minim brut pe țară garantat în plată poate fi aco
+Q2-SAL-10 NU_POT_RASPUNDE  pasi=4  $0.1002 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Gradul 
+Q2-CPF-01 RASPUNS          pasi=4  $0.0926 Creanțele fiscale restante administrate de ANAF, aflate în sold la 31 
+Q2-CPF-02 RASPUNS          pasi=3  $0.0921 Termenul de prescripție al dreptului organului de executare silită de 
+Q2-CPF-03 RASPUNS          pasi=6  $0.1118 Nu. Declarația rectificativă D101 pentru 2024, depusă în timpul inspec
+Q2-CPF-04 RASPUNS          pasi=4  $0.0762 Nu. Fiind o diferență de impozit pe venit de restituit mai mică de 10 
+Q2-CPF-05 RASPUNS          pasi=14 $0.2348 Suma plătită în plus se recuperează prin cerere de restituire depusă l
+Q2-CPF-06 NU_POT_RASPUNDE  pasi=6  $0.1780 VERIFICAREA MECANICA a respins propunerea modelului: cifra '1.000.000'
+Q2-CPF-07 RASPUNS          pasi=5  $0.0843 Firma primește efectiv în cont 8.800 lei: restituirea se face numai du
+Q2-CPF-08 RASPUNS          pasi=4  $0.0931 Nu, administratorul nu are dreptate. Simpla depunere a contestației pe
+Q2-CPF-09 RASPUNS          pasi=6  $0.1387 Nu, contabilul nu are dreptate. Termenul de prescripție de 5 ani nu cu
+Q2-CPF-10 NU_POT_RASPUNDE  pasi=5  $0.1864 VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verb
+Q2-CTB-01 RASPUNS          pasi=4  $0.0750 Plafonul este de 50.000 lei numerar în casierie la sfârșitul fiecărei 
+Q2-CTB-02 RASPUNS          pasi=18 $0.4256 Sunt microentități entitățile care, la data bilanțului, nu depășesc li
+Q2-CTB-03 RASPUNS          pasi=10 $0.2653 Da. Societatea a depășit, la data bilanțului, limitele a două dintre c
+Q2-CTB-04 RASPUNS          pasi=11 $0.2104 Nu. Societatea care a distribuit trimestrial dividende nu poate acorda
+Q2-CTB-05 RASPUNS          pasi=6  $0.2606 Situațiile financiare anuale se depun la organul fiscal competent din 
+Q2-CTB-06 NU_POT_RASPUNDE  pasi=5  $0.1693 VERIFICAREA MECANICA a respins propunerea modelului: cifra '150' din r
+Q2-CTB-07 NU_POT_RASPUNDE  pasi=4  $0.1248 VERIFICAREA CALCULULUI a respins propunerea: operandul parte_capital='
+Q2-CTB-08 NU_POT_RASPUNDE  pasi=3  $0.0835 VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '
+Q2-CTB-09 RASPUNS          pasi=6  $0.1159 Nu. Primirea unui împrumut de la o persoană fizică nu poate fi făcută 
+Q2-CTB-10 NU_POT_RASPUNDE  pasi=5  $0.1055 INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Natura 
+navigare: 35/50 raspunse | respinse 11 | incomplete 3 | pasi medii 6.9 | {'intrare': 578, 'iesire': 183393, 'cache_scriere': 407525, 'cache_citire': 3255123} | $8.7623 | 2780 s
