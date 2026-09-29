@@ -390,7 +390,8 @@ class Calendar(object):
 
     Datele: cele scrise in atom ("1 și 2 ianuarie", "24 ianuarie", "1 mai") se citesc din text; cele
     MOBILE (Vinerea Mare, Pastele, Rusaliile) se CALCULEAZA, iar calculul se declara; cele NUMITE fara
-    data in atom (Adormirea Maicii Domnului, Craciunul) NU primesc data (decizia C34): calculul se abtine.
+    data in atom (Adormirea Maicii Domnului, Craciunul) primesc data de calendar liturgic fix, DECLARATA ca
+    "data de calendar, nescrisa in lege" (decizia C38, dupa C34).
     Sarbatorile cultelor necrestine "pentru persoanele apartinand acestora" nu sunt zile nelucratoare
     generale si nu intra."""
 
@@ -431,22 +432,30 @@ class Calendar(object):
         # C34: o sarbatoare NUMITA in atom fara data ("Adormirea Maicii Domnului", "prima si a doua zi de
         # Craciun" - textul oficial al art. 139 chiar nu le scrie data, verificat in HTML-ul portalului)
         # nu primeste data de mana. Ramane fara data, iar calculul se abtine (vezi `termen_efectiv`).
+        # C38 (decizia arhitectului, dupa C34): o sarbatoare NUMITA in atom fara data (textul oficial al
+        # art. 139 chiar nu o scrie) primeste data ei de CALENDAR LITURGIC FIX, tratata ca Pastele (C32):
+        # declarata explicit in raspuns ca "data de calendar, nescrisa in lege"; atomul art. 139 ramane
+        # citat pentru caracterul de sarbatoare legala. Numai aceste doua, numai cand atomul le numeste.
         self.fara_data = []
         data_in = re.compile(r"\d{1,2}(?:\s*si\s*\d{1,2})?\s+(%s)\b" % luni)
+        calendar_fix = []
         for element in re.split(r";", t):                   # elementele listei, fiecare cu data lui
-            for nume, eticheta in (("adormirea maicii domnului", "Adormirea Maicii Domnului"),
-                                   ("zi de craciun", "prima și a doua zi de Crăciun")):
-                if nume in element and not data_in.search(element):
-                    self.fara_data.append(eticheta)
+            if data_in.search(element):
+                continue
+            if "adormirea maicii domnului" in element:
+                ies[datetime.date(an, 8, 15)] = "Adormirea Maicii Domnului"
+                calendar_fix.append("Adormirea Maicii Domnului = 15.08.%d" % an)
+            elif "zi de craciun" in element:
+                ies[datetime.date(an, 12, 25)], ies[datetime.date(an, 12, 26)] = \
+                    "Crăciunul", "a doua zi de Crăciun"
+                calendar_fix.append("Crăciunul = 25-26.12.%d" % an)
+        if calendar_fix:
+            decl.append("sărbători numite în art. 139 fără dată, cu data de calendar liturgic fix (dată de "
+                        "calendar, nescrisă în lege): %s" % "; ".join(calendar_fix))
         return ies, decl
 
     def termen_efectiv(self, d):
         s, decl = self.sarbatori(d.year)
-        if self.fara_data:
-            # oricare zi examinata (inclusiv prima zi "lucratoare") ar putea fi sarbatoarea fara data
-            raise ValueError("C34: atomul listei sarbatorilor legale (%s) numeste fara data: %s - ziua "
-                             "lucratoare nu se poate stabili din atomi; calculul se abtine"
-                             % (self.lista["id"], ", ".join(self.fara_data)))
         s2, decl2 = self.sarbatori(d.year + 1) if d.month == 12 else ({}, [])
         s.update(s2)
         motive, x = [], d
@@ -761,14 +770,15 @@ def raspunde(q, idx, rel, client, sis=None):
     return rez
 
 
-def ruleaza(dest, intrebari_id=None):
+def ruleaza(dest, intrebari_id=None, csv_intrebari=None):
     import anthropic
     t0 = time.time()
     idx = intrebari.Index()
     rel = idx.rel
     sis = sistem(idx)
     client = anthropic.Anthropic(api_key=semantic.cheie())
-    qs = [q for q in intrebari.incarca_intrebari() if not intrebari_id or q["id"] in intrebari_id]
+    qs = [q for q in (intrebari.incarca_intrebari(csv_intrebari) if csv_intrebari else intrebari.incarca_intrebari())
+          if not intrebari_id or q["id"] in intrebari_id]
     # fiecare raspuns se scrie IMEDIAT (o rulare intrerupta - retea, credit - nu pierde ce a platit);
     # la repornire, intrebarile deja raspunse se iau din fisierul partial, fara apel nou
     partial = dest + ".partial.jsonl"
@@ -812,10 +822,13 @@ def ruleaza(dest, intrebari_id=None):
 
 if __name__ == "__main__":
     import sys
-    ids = [a for a in sys.argv[1:] if a.startswith("Q-")]
-    dest = os.path.join(_RAD, "artefacte", "intrebari",
-                        "raspunsuri_navigare_v5%s.json" % ("_proba" if ids else ""))
-    r = ruleaza(dest, ids or None)
+    # --set2: masuratoarea finala. Motorul citeste din CSV numai COLOANE_PERMISE (id, tip, intrebare).
+    SET2 = "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"
+    set2 = "--set2" in sys.argv
+    ids = [a for a in sys.argv[1:] if a.startswith("Q")]
+    dest = os.path.join(_RAD, "artefacte", "intrebari", "raspunsuri_navigare_%s%s.json"
+                        % ("set2" if set2 else "v5", "_proba" if ids else ""))
+    r = ruleaza(dest, ids or None, SET2 if set2 else None)
     print("navigare: %d/%d raspunse | respinse %d | incomplete %d | pasi medii %.1f | %s | $%.4f | %.0f s"
           % (r["raspunse"], r["n"], r["respinse_de_verificare"], r["incomplete_detectate"],
              r["pasi_medii"], r["tokeni"], r["cost_usd"], r["secunde_total"]))

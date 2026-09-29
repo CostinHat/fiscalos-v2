@@ -264,11 +264,22 @@ def _lista_datata(dupa):
     return s
 
 
-def test_C34_textul_oficial_numeste_sarbatori_fara_data_calculul_se_abtine():
+def test_C38_pe_textul_oficial_Q_TVA_07_da_din_nou_02_03_2026():
     dupa, cit = _atomi_calendar()
-    assert "Adormirea Maicii Domnului;" in dupa["legea_53_2003_codul_muncii#art139/alin1"]["text"]
-    gr = _termen("28.02.2026", cit, dupa)[1]
-    assert any("C34" in g and "fara data" in g and "Adormirea" in g for g in gr), gr
+    assert "Adormirea Maicii Domnului;" in dupa["legea_53_2003_codul_muncii#art139/alin1"]["text"]  # fara data
+    val, gr, det = _termen("28.02.2026", cit, dupa)
+    assert gr == [] and val == {"t": "02.03.2026"}, (gr, val)
+    txt = " ".join(navigare.pas_cu_pas(det))
+    assert "dată de calendar, nescrisă în lege" in txt and "15.08.2026" in txt and "art139/alin1" in txt, txt
+
+
+def test_C38_termenul_care_cade_pe_15_august_se_muta():
+    """15.08.2025 e vineri (Adormirea), 16-17 weekend -> luni 18.08.2025; 15.08.2026 e sambata -> luni 17."""
+    dupa, cit = _atomi_calendar()
+    val, gr, det = _termen("15.08.2025", cit, dupa)
+    assert gr == [] and val == {"t": "18.08.2025"}, (gr, val)
+    assert "15.08.2025 Adormirea Maicii Domnului" in " ".join(navigare.pas_cu_pas(det))
+    assert _termen("25.12.2026", cit, dupa)[0] == {"t": "28.12.2026"}      # vineri, sambata-26, duminica
 
 
 def test_C32_mecanismul_sambata_se_prelungeste_la_luni_Q_TVA_07():

@@ -193,3 +193,17 @@ def test_C30_data_in_litere_cu_an_e_aceeasi_cu_data_numerica():
     assert comparatie._fapte("până la 28 februarie 2026")[0] == "28 februarie"   # faptul principal, neschimbat
     assert comparatie._fapte("1.3.2026") == ["01.03.2026"]
     assert "28.02.2027" not in comparatie._fapte("până la 28 februarie 2026")     # alt an nu se potriveste
+
+
+def test_setul_2_se_incarca_orb():
+    """Masuratoarea finala: aceeasi orbire pe setul 2 - motorul primeste numai id, tip, intrebare."""
+    from fiscalos import intrebari
+    f = "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"
+    if not os.path.exists(f):
+        return
+    qs = intrebari.incarca_intrebari(f)
+    assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
+    assert all(q["id"].startswith("Q2-") for q in qs)
+    src = open(os.path.join(_RAD, "fiscalos", "navigare.py"), encoding="utf-8").read()
+    for c in _INTERZISE:
+        assert c not in src, c

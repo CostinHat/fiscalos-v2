@@ -212,13 +212,13 @@ def corpus_la_commit(commit):
     return _CorpusIstoric(d)
 
 
-def compara(fis_raspunsuri=None, corp=None):
+def compara(fis_raspunsuri=None, corp=None, csv_cheie=None):
     fis_raspunsuri = fis_raspunsuri or os.path.join(_RAD, "artefacte", "intrebari",
                                                     "raspunsuri.json")
     R = {r["id"]: r for r in json.load(open(fis_raspunsuri, encoding="utf-8"))["raspunsuri"]}
     corp = corp or potrivire.Corpus()
     rez = []
-    with open(CSV, encoding="utf-8") as f:
+    with open(csv_cheie or CSV, encoding="utf-8") as f:
         cheie = list(csv.DictReader(f))
     for k in cheie:
         r = R[k["id"]]
