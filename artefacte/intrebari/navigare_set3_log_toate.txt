@@ -1,0 +1,407 @@
+Q3-TVA-02 NU_POT_RASPUNDE  pasi=9  $0.2593 VERIFICAREA CALCULULUI a respins propunerea: operand nenumeric: '15-a'
+Q3-TVA-03 RASPUNS          pasi=10 $0.4788 Da. Poate reduce baza de impozitare cu 700 lei și, corespunzător, TVA 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 890, in raspunde
+    r = _apel(client, sis or sistem(idx), messages, final=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY2GusEQn5M1mEinWptg'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY2YmXPBnyvGEsmSRXa5'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY2o9XbpRcwqaTLGgCVv'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY33XhEmzXWxBEQf3Cvr'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY3Hu5W5hF2AjL3GUPEQ'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY3YHABVxhYPaxAvHgam'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY3ngnso1x4o8gcW7F63'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY437hE3TFzuDrQBoxVC'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY4HVbjuoiVHZjPGZpNT'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY4XsgB4ATgrb21jJSrZ'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY4nFagv6TeFc7Q8zsTb'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY52f1yfj8hFQvUoNkRK'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5H2vyx68Ri1TZvf6eo'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5XR8N2txeTpqMhCKqG'}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1038, in <module>
+    r = ruleaza(dest, ids or None, ales[1] if ales else None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 1001, in ruleaza
+    r = raspunde(q, idx, rel, client, sis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 863, in raspunde
+    r = _apel(client, sis or sistem(idx), messages)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/fiscalos/navigare.py", line 827, in _apel
+    return client.beta.messages.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_utils/_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/resources/beta/messages/messages.py", line 1187, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1543, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/costin/fiscalos/venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1208, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfY5moXtQXPD19BoXUK9R'}
