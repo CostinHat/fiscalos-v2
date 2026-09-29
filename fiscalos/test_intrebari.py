@@ -205,6 +205,11 @@ def test_setul_2_se_incarca_orb():
     qs = intrebari.incarca_intrebari(f)
     assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
     assert all(q["id"].startswith("Q2-") for q in qs)
+    # navigarea nu citeste singura CSV-ul si nu numeste coloana cheii. "verificare" NU se cauta ca sir: e
+    # si vocabularul propriu al motorului (rez["verificare"] = verificarea mecanica), ca "temei" la setul 1;
+    # coloanele cheii sunt excluse pe dict-ul incarcat (mai sus), nu pe cuvinte.
     src = open(os.path.join(_RAD, "fiscalos", "navigare.py"), encoding="utf-8").read()
-    for c in _INTERZISE:
-        assert c not in src, c
+    arb = ast.parse(src)
+    importuri = {a.name for n in ast.walk(arb) if isinstance(n, (ast.Import, ast.ImportFrom)) for a in n.names}
+    assert "csv" not in importuri and "comparatie" not in importuri
+    assert "raspuns_asteptat" not in src and "DictReader" not in src
