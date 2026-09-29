@@ -1,0 +1,163 @@
+{
+ "set2": {
+  "inainte": {
+   "CORECT": 30,
+   "GRESIT": 5,
+   "NU_POT": 15
+  },
+  "dupa": {
+   "CORECT": 18,
+   "GRESIT": 3,
+   "NU_POT": 29
+  },
+  "schimbari": [
+   [
+    "Q2-TVA-05",
+    "GRESIT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art320/alin3 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art319/alin3) si alegerea nu e justificata pri"
+   ],
+   [
+    "Q2-PRF-03",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/litl are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art68/alin7/litk) si alegerea nu e justifi"
+   ],
+   [
+    "Q2-PRF-04",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art26/alin9^1 are un geaman printre atomii vazuti (oug_8_2026#art20^1/alin15) si alegerea nu e justificata printr-o conditie li"
+   ],
+   [
+    "Q2-PRF-05",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C40: termenul '25 iunie' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie); C41: atomul citat cod_fiscal_227_2015_consolidat#art42/alin4 are un ge"
+   ],
+   [
+    "Q2-PRF-07",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art25/alin3/liti~2/pct2 are un geaman printre atomii vazuti (oug_115_2023_consolidat#artLX/alin2) si alegerea nu e justificata "
+   ],
+   [
+    "Q2-PRF-09",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art56/alin2^5 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art45/alin16) si alegerea nu e justificata pr"
+   ],
+   [
+    "Q2-SAL-02",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art170/alin1 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art174/alin1) si alegerea nu e justificata pri"
+   ],
+   [
+    "Q2-SAL-05",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C40: termenul '14.07.2026' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ],
+   [
+    "Q2-SAL-06",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat cod_fiscal_227_2015_consolidat#art76/alin4^1 are un geaman printre atomii vazuti (cod_fiscal_227_2015_consolidat#art142/pct7/pct10) si alegerea nu e justifica"
+   ],
+   [
+    "Q2-CPF-02",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat legea_207_2015_consolidat#art215/alin1 are un geaman printre atomii vazuti (legea_207_2015_consolidat#art219/alin1) si alegerea nu e justificata printr-o cond"
+   ],
+   [
+    "Q2-CPF-05",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat legea_207_2015_consolidat#art219/alin1 are un geaman printre atomii vazuti (legea_207_2015_consolidat#art215/alin1) si alegerea nu e justificata printr-o cond"
+   ],
+   [
+    "Q2-CPF-09",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat legea_207_2015_consolidat#art219/alin1 are un geaman printre atomii vazuti (legea_207_2015_consolidat#art215/alin1) si alegerea nu e justificata printr-o cond"
+   ],
+   [
+    "Q2-CTB-04",
+    "CORECT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C41: atomul citat legea_31_1990_societatile#art67/alin2^6 are un geaman printre atomii vazuti (legea_31_1990_societatile#art153^24/alin4^1) si alegerea nu e justificata printr-"
+   ],
+   [
+    "Q2-CTB-05",
+    "GRESIT",
+    "NU_POT",
+    "VERIFICAREA (C40/C41) a respins propunerea: C40: termenul '31 mai' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie); C40: termenul '31 mai' nu vine din termen_efectiv (un termen calendarist"
+   ]
+  ]
+ },
+ "set3": {
+  "inainte": {
+   "CORECT": 18,
+   "GRESIT": 1,
+   "NU_POT": 31
+  },
+  "dupa": {
+   "CORECT": 24,
+   "GRESIT": 1,
+   "NU_POT": 25
+  },
+  "schimbari": [
+   [
+    "Q3-TVA-01",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-TVA-02",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-TVA-09",
+    "GRESIT",
+    "NU_POT",
+    "VERIFICAREA CALCULULUI a respins propunerea: C50: calculul tva imparte la 100 un operand scris cu % (cota), care valoreaza deja fractiunea"
+   ],
+   [
+    "Q3-PRF-02",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-SAL-02",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CTB-01",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CTB-03",
+    "NU_POT",
+    "CORECT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ],
+   [
+    "Q3-CTB-09",
+    "NU_POT",
+    "GRESIT",
+    "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale"
+   ]
+  ]
+ },
+ "secunde": 105.8
+}

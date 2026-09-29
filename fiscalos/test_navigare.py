@@ -398,7 +398,7 @@ def test_C45_numeralul_in_litere_din_atom_e_operand_si_conversia_se_declara():
         _op("f", "cincime", "atom", "câte o cincime pe an", a["id"])]}]
     val, gr, det = navigare.evalueaza_calcule(c, {a["id"]: a}, q)
     assert gr == [] and val == {"anual": "2.000"}, (gr, val)
-    assert "conversie C45: „cincime” (în litere în atom) = 0,20" in " ".join(navigare.pas_cu_pas(det))
+    assert "conversie C45/C51: „cincime” (în litere în atom) = 0,20" in " ".join(navigare.pas_cu_pas(det))
 
 
 def test_C45_cifra_care_nu_e_in_atom_ramane_respinsa():
@@ -482,3 +482,94 @@ def test_C40_data_de_inceput_si_sufixul_nu_sunt_termene():
     r = ("Termenul de prescripție curge de la 1 ianuarie a anului următor.  "
          "[data de referință: 30.09.2026 — motiv]")
     assert navigare.verifica_termene(r, "Q", set()) == []
+
+
+# ── C49: justificarea geamanului numai pentru atomul decisiv ────────────────────────────────────
+def test_C49_faptul_principal_si_atomul_decisiv():
+    assert navigare.fapt_principal("Cota este de 4%, declarată până la data de 25.", "Ce cotă?") == "4%"
+    assert navigare.fapt_principal("Venitul de 30.000 lei este neimpozabil.", "Venit de 30.000 lei?") is None
+    fin = {"citate": [{"atom": "a#1", "fragment": "procedura, până la data de 25"},
+                      {"atom": "a#2", "fragment": "4%, pentru perioada 2026"}], "calcule": []}
+    assert navigare.atomi_decisivi(fin, "Cota este de 4%.", "Ce cotă?", []) == {"a#2": "4%"}
+    assert navigare.atomi_decisivi(fin, "Da, se aplică.", "Se aplică?", []) == {"a#1": None}
+
+
+def test_C49_geamanul_neciteaza_la_atomul_nedecisiv_nu_mai_respinge():
+    a, b, v = _gemeni()
+    fin = {"citate": [{"atom": a["id"], "fragment": "x"}], "alegeri_temei": []}
+    assert navigare.verifica_alegeri_temei(fin, v, {}) == []                   # a nu e decisiv
+    assert navigare.verifica_alegeri_temei(fin, v, {a["id"]: None})            # a e decisiv: Q2-TVA-05 prins
+
+
+def test_C49_geamanul_citat_si_el_nu_e_alternativa():
+    a, b, v = _gemeni()
+    fin = {"citate": [{"atom": a["id"], "fragment": "x"}, {"atom": b["id"], "fragment": "y"}], "alegeri_temei": []}
+    assert navigare.verifica_alegeri_temei(fin, v, {a["id"]: None}) == []
+
+
+# ── C50: procentul impartit la 100, pe propunerea salvata Q3-TVA-09 ─────────────────────────────
+def test_C50_Q3_TVA_09_e_respins():
+    r = {x["id"]: x for x in json.load(open(os.path.join(_RAD, "intrebari", "set3", "raspunsuri_set3.json"),
+                                            encoding="utf-8"))["raspunsuri"]}["Q3-TVA-09"]
+    p = r["propunerea_modelului"]
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    nav = navigare.Navigator(idx, idx.rel, "2026-07-31")
+    for s in r["apel"]["pasi"]:
+        nav.executa(s["unealta"], s["intrare"])
+    gr = navigare.evalueaza_calcule(p["calcule"], nav.vazuti, r["intrebare"], [c["atom"] for c in p["citate"]])[1]
+    assert any(g.startswith("C50") for g in gr), gr
+
+
+def test_C50_procentul_folosit_corect_trece():
+    c = _tva("baza * cota", cota=_op("cota", "21%", "atom", "nivelul acesteia este 21%", ATOM["id"]))
+    assert navigare.evalueaza_calcule(c, V, Q)[1] == []
+
+
+# ── C51: ordinale si cifra + unitate ────────────────────────────────────────────────────────────
+def test_C51_ordinalul_si_cifra_cu_unitate_sunt_operanzi():
+    a = {"id": "cf#art1", "text": "până în cea de-a 15-a zi a lunii, iar termenul este de 60 de zile"}
+    c = [{"nume": "n", "formula": "z + t", "operanzi": [
+        _op("z", "15-a", "atom", "cea de-a 15-a zi", a["id"]), _op("t", "60 de zile", "atom", "este de 60 de zile", a["id"])]}]
+    val, gr, det = navigare.evalueaza_calcule(c, {a["id"]: a}, "Q")
+    assert gr == [] and val == {"n": "75"}, (gr, val)
+    txt = " ".join(navigare.pas_cu_pas(det))
+    assert "„15-a” (ordinal / cifră cu unitate) = 15" in txt and "„60 de zile”" in txt, txt
+
+
+# ── C52: tura de reparatie, cu client simulat ───────────────────────────────────────────────────
+class _ClientReparatie(_ClientSimulat):
+    """Tura finala 1: raspuns cu o cifra necitata; tura 2 (reparatia): aceeasi cifra pusa printr-un calcul."""
+
+    def __init__(self, gresit, bun):
+        _ClientSimulat.__init__(self, gresit)
+        self.bun = bun
+
+    def create(self, **k):
+        if len(self.cereri) >= 3:
+            self.cereri.append(k)
+            return _Bloc(content=[_Bloc(type="text", text=json.dumps(self.bun, ensure_ascii=False))],
+                         stop_reason="end_turn", usage=_Uz(), model=navigare.MODEL)
+        return _ClientSimulat.create(self, **k)
+
+
+def test_C52_o_tura_de_reparatie_arata_cifrele_si_reverifica_totul():
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    hit = idx.cauta("cota standard TVA", "2026-09-28", k=8)
+    a = next(x for _s, x in hit if "21%" in x["text"])
+    i = a["text"].index("21%")
+    baza = {"stare": "RASPUNS", "declaratie": "La data de referință 28.09.2026.", "citate": [
+        {"atom": a["id"], "fragment": a["text"][i - 40:i + 3]}], "lipsa": [], "motiv": "", "derogari_tratate": [],
+        "alegeri_temei": [], "data_referinta": "2026-09-28", "data_referinta_motiv": "ziua întrebării"}
+    gresit = dict(baza, raspuns="TVA este 2.100 lei.", calcule=[])
+    bun = dict(baza, raspuns="TVA este {tva} lei.", calcule=[{"nume": "tva", "formula": "b * c", "operanzi": [
+        {"nume": "b", "valoare": "10.000", "eticheta": "FAPT_CAZ", "atom": "", "fragment": "baza de 10.000 lei"},
+        {"nume": "c", "valoare": "21%", "eticheta": "VALOARE_LEGALA", "atom": a["id"], "fragment": a["text"][i - 40:i + 3]}]}])
+    cl = _ClientReparatie(gresit, bun)
+    r = navigare.raspunde({"id": "Q", "tip": "CALCUL", "intrebare": "Cât TVA pe o bază de 10.000 lei?"},
+                          idx, idx.rel, cl, sis="S")
+    assert r["stare"] == "RASPUNS" and "2.100" in r["raspuns"], r.get("motiv")
+    assert r["reparatie_C52"]["cifre"] == ["2.100"] and len(cl.cereri) == 4
+    assert any(m["role"] == "user" and isinstance(m["content"], str) and "„2.100”" in m["content"]
+               for m in cl.cereri[3]["messages"])

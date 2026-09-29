@@ -107,7 +107,8 @@ atom (`atom` = id-ul, `fragment` = bucata literală din atom). O valoare legală
 chiar dacă întrebarea o repetă. Singurele constante permise fără sursă sunt 1 și 100. În `raspuns` pui \\
 rezultatul unui calcul ca {nume}; codul îl evaluează, îl înlocuiește și afișează calculul pas cu pas. \\
 Un număr scris în litere în atom („cinci ani”, „o cincime”, „jumătate”) e operand valid cu `valoare` \\
-exact ca în atom („cinci”, „cincime”); codul îl convertește și declară conversia (C45).""" % MAX_PASI
+exact ca în atom („cinci”, „cincime”); la fel un ordinal („15-a”) sau o cifră cu unitate („60 de zile”) \\
+(C51). Un operand scris cu „%%” valorează deja fracțiunea (21%% = 0,21): nu-l mai împărți la 100 (C50).""" % MAX_PASI
 
 _CALC = {"type": "array", "items": {"type": "object", "properties": {
     "nume": {"type": "string"}, "formula": {"type": "string"},
@@ -333,8 +334,26 @@ def numar_din_litere(v):
     return None
 
 
+# C51: ordinalele ("15-a", "a 15-a", "al 3-lea") si "cifra + unitate" ("60 de zile", "5 ani", "12 luni")
+# sunt operanzi valizi: valoarea e cifra, conversia se declara in calcul.
+_ORDINAL_UNITATE = re.compile(r"^(?:a|al)?\s*(\d+(?:[.,]\d+)?)\s*(?:-a|-lea)?"
+                              r"(?:\s+(?:de\s+)?(?:zile|zi|luni|luna|ani|an|salarii|salariu|ore|saptamani))?$")
+
+
+def forma_ordinal_unitate(v):
+    """Cifra dintr-un ordinal sau dintr-o "cifra + unitate", ori None daca forma e alta (sau e cifra goala)."""
+    t = potrivire.norm(v.strip())
+    if re.match(r"^\d+(?:[.,]\d+)*%?$", t):
+        return None
+    m = _ORDINAL_UNITATE.match(t)
+    return m.group(1) if m else None
+
+
 def _numar(v):
     """"100.000" -> 100000; "2,25%" -> 0.0225; "25.03.2026" -> date. Intoarce (valoare, e_procent)."""
+    ou = forma_ordinal_unitate(v)
+    if ou is not None:
+        v = ou
     t = potrivire.norm(v.strip())
     lit = numar_din_litere(v) if re.search(r"[a-z]", t) and not re.search(r"\d", t) and \
         t not in intrebari._LUNI else None
@@ -593,18 +612,31 @@ def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None):
                 env[o["nume"]], proc = _numar(val)
                 if proc:
                     procente[o["nume"]] = val
-                lit = numar_din_litere(val) if re.search(r"[a-zA-ZăâîșțĂÂÎȘȚ]", val) else None
+                lit = numar_din_litere(val) if re.search(r"[a-zA-ZăâîșțĂÂÎȘȚ]", val) and \
+                    not re.search(r"\d", val) else None
                 if lit is not None:
                     conversii.append("„%s” (în litere în atom) = %s" % (val, _format(lit)))
+                elif forma_ordinal_unitate(val) is not None:
+                    conversii.append("„%s” (ordinal / cifră cu unitate) = %s" % (val, forma_ordinal_unitate(val)))
             except ValueError as e:
                 greseli.append(str(e))
         try:
             arb = ast.parse(c["formula"], mode="eval")
+            # C50: un operand scris cu "%" valoreaza deja fractiunea (21% = 0,21); impartit la 100 inca o
+            # data da o suma de 100 de ori mai mica (Q3-TVA-09: 1.050 lei in loc de 105.000)
+            for n in ast.walk(arb):
+                if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Div) and \
+                        isinstance(n.right, ast.Constant) and n.right.value == 100 and \
+                        {x.id for x in ast.walk(n.left) if isinstance(x, ast.Name)} & set(procente):
+                    greseli.append("C50: calculul %s imparte la 100 un operand scris cu %% (%s), care "
+                                   "valoreaza deja fractiunea" % (c["nume"], ", ".join(
+                                       sorted({x.id for x in ast.walk(n.left) if isinstance(x, ast.Name)}
+                                              & set(procente)))))
             zile = []
             v = _eval(arb, env, zile, fmt)
             env[c["nume"]] = v
             if conversii:
-                zile = ["conversie C45: " + x for x in conversii] + zile
+                zile = ["conversie C45/C51: " + x for x in conversii] + zile
                 conversii = []
             detalii.append({"nume": c["nume"], "formula": c["formula"],
                             "cu_valori": _cu_valori(arb, env, fmt, procente),
@@ -732,17 +764,82 @@ def gemeni(atom, vazuti):
     return ies
 
 
-def verifica_alegeri_temei(final, vazuti):
+_FAPT_UNITATE = re.compile(r"(\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+(?:,\d+)?)\s*(%|lei|euro|zile|luni|ani)"
+                           r"|(\d{1,2}\.\d{1,2}\.\d{4})")
+
+
+def fapt_principal(raspuns, intrebare):
+    """Prima valoare cu unitate din raspuns (procent, suma, durata, data) care NU e un fapt al cazului."""
+    q = potrivire.norm(intrebare)
+    for m in _FAPT_UNITATE.finditer(raspuns or ""):
+        v = (m.group(1) + ("%" if m.group(2) == "%" else "")) if m.group(1) else m.group(3)
+        if potrivire.norm(v) not in q:
+            return v
+    return None
+
+
+def atomi_decisivi(final, raspuns, intrebare="", detalii=None):
+    """C49: {atom: ancora} - atomii din care vine FAPTUL PRINCIPAL al raspunsului.
+
+    Faptul e rezultatul unui calcul -> atomii operanzilor legali din lantul lui, fiecare cu valoarea
+    operandului ca ancora. Faptul e citat -> citatul care il contine, cu faptul ca ancora. Raspuns fara
+    valoare (Da/Nu, regula) -> primul citat (C14), fara ancora."""
+    f = fapt_principal(raspuns, intrebare)
+    if f is None:
+        return {final["citate"][0]["atom"]: None} if final.get("citate") else {}
+    nume = {d["nume"]: d for d in detalii or []}
+    for d in detalii or []:
+        if d["rezultat"] == f.rstrip("%"):
+            ies, stiva, vazut = {}, [d["nume"]], set()
+            while stiva:
+                n = stiva.pop()
+                if n in vazut:
+                    continue
+                vazut.add(n)
+                for o in nume[n]["operanzi"]:
+                    if o.get("eticheta") == "VALOARE_LEGALA" and o.get("atom"):
+                        ies[o["atom"]] = o["valoare"]
+                for x in ast.walk(ast.parse(nume[n]["formula"], mode="eval")):
+                    if isinstance(x, ast.Name) and x.id in nume:
+                        stiva.append(x.id)
+            return ies
+    ies = {c["atom"]: f for c in final.get("citate") or [] if f in (c.get("fragment") or "")}
+    if not ies and final.get("citate"):
+        ies = {final["citate"][0]["atom"]: None}
+    return ies
+
+
+def geaman_relevant(a, y, ancora):
+    """Un geaman conteaza pentru faptul principal numai daca textul comun INCONJOARA ancora (acelasi sablon
+    in jurul valorii); fara ancora, orice fragment comun >= PRAG_COMUN."""
+    import difflib
+    x = potrivire.norm(a["text"].split("⟦NOTĂ⟧")[0])
+    ty = potrivire.norm(y["text"].split("⟦NOTĂ⟧")[0])
+    if _fragment_comun(x, ty) < PRAG_COMUN:
+        return False
+    p = x.find(potrivire.norm(ancora)) if ancora else -1
+    if p < 0:
+        return True
+    sm = difflib.SequenceMatcher(None, x, ty, autojunk=False)
+    return any(b.size >= 40 and b.a - 60 <= p <= b.a + b.size + 60 for b in sm.get_matching_blocks())
+
+
+def verifica_alegeri_temei(final, vazuti, decisivi=None):
     """C41: pentru fiecare atom citat care are un geaman printre atomii vazuti, `alegeri_temei` trebuie sa
     contina justificarea: un fragment literal din atomul citat care NU e in geaman (conditia care ii
     deosebeste). Fara ea - abtinere."""
     gr = []
     alegeri = final.get("alegeri_temei") or []
-    for c in {c["atom"] for c in final.get("citate") or []}:
+    citati = {c["atom"] for c in final.get("citate") or []}
+    tinte = decisivi if decisivi is not None else {c: None for c in citati}
+    for c, ancora in tinte.items():                         # C49: numai atomul decisiv
         a = vazuti.get(c)
         if a is None:
             continue
         for y in gemeni(a, vazuti):
+            # un geaman citat si el e folosit, nu inlocuit (CAS art. 138 si CASS art. 156 in acelasi calcul)
+            if y["id"] in citati or (decisivi is not None and not geaman_relevant(a, y, ancora)):
+                continue
             ok = False
             for al in alegeri:
                 if al["atom"] == c and al["alternativa"] == y["id"]:
@@ -929,6 +1026,56 @@ def raspunde(q, idx, rel, client, sis=None):
             motiv = "fara raspuns final (%s)" % oprit
         return dict(baza, data_referinta=None, stare="NU_POT_RASPUNDE", tip_abtinere=oprit,
                     raspuns=None, argument=[], apel=apel, traseu=traseu, motiv=motiv)
+    rez = verifica_propunerea(final, dict(baza), q, nav, admise, vizibil, apel, traseu)
+    # C52: CEL MULT o tura automata de reparatie, numai pentru cifrele respinse (C13/C46): modelul vede
+    # exact cifrele si le pune prin calcul sau citat. Ce iese trece prin ACEEASI verificare, fara exceptii.
+    cifre = cifre_respinse(rez)
+    if rez["stare"] != "RASPUNS" and cifre and oprit is None:
+        messages.append({"role": "user", "content": (
+            "Verificarea a respins răspunsul pentru aceste cifre, care nu sunt nici citate literal dintr-un "
+            "atom, nici rezultatul unui calcul: %s. Dă din nou răspunsul final: fiecare dintre ele fie vine "
+            "dintr-un citat literal, fie e rezultatul unui calcul pus ca {nume}, fie lipsește. Restul "
+            "regulilor rămân aceleași." % ", ".join("„%s”" % c for c in cifre))})
+        r = _apel(client, sis or sistem(idx), messages, final=True)
+        inregistreaza(r)
+        text = next((b.text for b in r.content if b.type == "text"), "")
+        messages.append({"role": "assistant", "content": r.content})
+        try:
+            final2 = decodeaza_transport(json.loads(text))
+            probleme = valideaza_structura(final2)
+        except ValueError:
+            final2, probleme = None, ["iesirea reparatiei nu e JSON valid"]
+        apel = dict(apel, tururi=len(apeluri),
+                    tokeni={k: sum(x["tokeni"][k] for x in apeluri) for k in
+                            ("intrare", "iesire", "cache_scriere", "cache_citire")},
+                    cost_usd=round(sum(x["cost_usd"] for x in apeluri), 5),
+                    secunde=round(time.time() - t0, 2))
+        prima = {"cifre": cifre, "motiv_initial": rez["motiv"]}
+        if not probleme:
+            rez = verifica_propunerea(final2, dict(baza), q, nav, admise, vizibil, apel, traseu)
+        else:
+            rez = dict(rez, apel=apel)
+        rez["reparatie_C52"] = dict(prima, structura_invalida=probleme or None, rezultat=rez["stare"])
+    return rez
+
+
+_CIFRA_RESPINSA = re.compile(r"(?:cifra|valoarea legala) '([^']+)'")
+
+
+def cifre_respinse(rez):
+    """Cifrele respinse de C13/C46 - singurele pe care tura de reparatie C52 le poate trata."""
+    inc = (rez.get("verificare") or {}).get("incalcari") or []
+    ies = []
+    for g in inc:
+        m = _CIFRA_RESPINSA.search(g)
+        if m and m.group(1) not in ies and ("nu apare" in g):
+            ies.append(m.group(1))
+    return ies
+
+
+def verifica_propunerea(final, baza, q, nav, admise, vizibil, apel, traseu):
+    """Toata verificarea unei propuneri finale: C27, verificarea mecanica, calculul (C25, C45, C50, C51),
+    C40, C41 (C49). Fara model - aceeasi pentru prima propunere si pentru reparatia C52."""
     # C27: data aleasa trebuie sa fie una dintre datele intrebarii
     data_ref = (final.get("data_referinta") or "").strip()
     baza["data_referinta"] = data_ref
@@ -961,11 +1108,13 @@ def raspunde(q, idx, rel, client, sis=None):
                 txt = txt.replace("{%s}" % k, v)
             rez["raspuns"] = txt + "  [calcul: " + "; ".join(pas_cu_pas(detalii)) + "]"
     if rez["stare"] == "RASPUNS":
-        # C40 (termenele) si C41 (temeiul alaturat) - dupa verificarea mecanica si calcul
+        # C40 (termenele) si C41 (temeiul alaturat, numai pentru atomul decisiv - C49)
         corp_raspuns = rez["raspuns"].split("  [calcul:")[0]
         termene_ok = {d["rezultat"] for d in rez.get("calcule") or [] if "termen_efectiv" in d["formula"]}
+        decisivi = atomi_decisivi(final, corp_raspuns, q["intrebare"], rez.get("calcule"))
+        rez["atomi_decisivi"] = decisivi
         gr = verifica_termene(corp_raspuns, q["intrebare"], termene_ok) + \
-            verifica_alegeri_temei(final, nav.vazuti)
+            verifica_alegeri_temei(final, nav.vazuti, decisivi)
         if gr:
             return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None,
                         verificare={"trece": False, "incalcari": rez["verificare"]["incalcari"] + gr},

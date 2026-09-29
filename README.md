@@ -181,6 +181,14 @@ fond: **18/1/31**; **1 greșeală de fond** (Q3-TVA-09: procentul împărțit de
 C40/C41 — 9 ar fi fost corecte, 1 a prevenit o greșeală (Q3-SAL-07). Cost $0,310/întrebare (setul 2:
 $0,175). De decis: C49–C53.
 
+## Pasul 10 — deciziile C49–C53 (`intrebari/v9/`)
+
+Fără rulare plătită. C49 justificarea geamănului numai pentru atomul decisiv (faptul principal, ancora
+valorii); C50 procentul împărțit la 100 respins; C51 ordinale și cifră + unitate; C52 o tură de reparație
+pentru cifrele respinse. Pe propunerile salvate ale setului 3: re-notare 24/1/25 (oficial 18/1/31); 5 din
+cele 9 răspunsuri corecte pierdute trec, Q3-TVA-09 e prins de C50. Corecție: la Q3-SAL-07, C41 nu prinsese
+greșeala. De decis: C54, C55, instantaneul iConta (modificat după inventar).
+
 ## Cum se rulează
 
 ```sh
