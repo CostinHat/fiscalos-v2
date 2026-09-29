@@ -1,0 +1,1881 @@
+{
+ "scor": {
+  "CORECT": 33,
+  "GRESIT": 7,
+  "NU_POT": 10
+ },
+ "scor_referinta_pe_fond": {
+  "CORECT": 28,
+  "GRESIT": 7,
+  "NU_POT": 15
+ },
+ "abtineri_pe_INCOMPLETA": [
+  {
+   "id": "Q2-TVA-10",
+   "incompletitudine_detectata": true,
+   "ce_lipseste_dupa_motor": [
+    "Calitatea clientului din Italia: persoană impozabilă care acționează ca atare (cu cod valabil de TVA) sau persoană neimpozabilă",
+    "Natura concretă a serviciului prestat (pentru a verifica dacă intră în excepțiile de la regulile generale: servicii legate de bunuri imobile, transport, restaurant/catering, închiriere mijloace de transport etc.)",
+    "Locul unde clientul are stabilit sediul activității economice sau un sediu fix către care se prestează serviciul"
+   ],
+   "cheia_spune_ca_lipsesc_date": true,
+   "motivul_motorului": "INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Calitatea clientului din Italia: persoană impozabilă care acționează ca atare (cu cod valabil de TVA) sau persoană neimpozabilă; Natura c"
+  },
+  {
+   "id": "Q2-PRF-10",
+   "incompletitudine_detectata": false,
+   "ce_lipseste_dupa_motor": [],
+   "cheia_spune_ca_lipsesc_date": true,
+   "motivul_motorului": "VERIFICAREA MECANICA a respins propunerea modelului: citat prea scurt ca sa fie proba (cod_fiscal_227_2015_consolidat#art26/alin1/litc)"
+  },
+  {
+   "id": "Q2-SAL-10",
+   "incompletitudine_detectata": true,
+   "ce_lipseste_dupa_motor": [
+    "Gradul de handicap înscris în certificat (scutirea se aplică numai pentru handicap grav sau accentuat, nu pentru mediu sau ușor)",
+    "Perioada de valabilitate a certificatului de încadrare în grad de handicap (dacă acoperă luna august 2026) și data de la care a fost pus la dispoziția angajatorului"
+   ],
+   "cheia_spune_ca_lipsesc_date": true,
+   "motivul_motorului": "INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Gradul de handicap înscris în certificat (scutirea se aplică numai pentru handicap grav sau accentuat, nu pentru mediu sau ușor); Perioad"
+  },
+  {
+   "id": "Q2-CPF-10",
+   "incompletitudine_detectata": false,
+   "ce_lipseste_dupa_motor": [],
+   "cheia_spune_ca_lipsesc_date": true,
+   "motivul_motorului": "VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verbatim in atomul legea_207_2015_consolidat#art122/alin2/litb; citatul NU e verbatim in atomul legea_207_2015_consolidat#art122/alin2"
+  },
+  {
+   "id": "Q2-CTB-10",
+   "incompletitudine_detectata": true,
+   "ce_lipseste_dupa_motor": [
+    "Natura elementului: element monetar în valută (disponibilități, creanțe, datorii în valută) sau element nemonetar (imobilizări, stocuri) — de aceasta depinde dacă se reevaluează la cursul de închidere sau se menține cursul tranzacției",
+    "Cursul de schimb comunicat de Banca Națională a României valabil la data încheierii exercițiului financiar (31.12.2026) pentru euro",
+    "Dacă este vorba de o creanță/datorie exprimată în lei cu decontare în funcție de cursul unei valute (situație tratată distinct)"
+   ],
+   "cheia_spune_ca_lipsesc_date": true,
+   "motivul_motorului": "INCOMPLET: intrebarea nu da faptele de care depinde raspunsul: Natura elementului: element monetar în valută (disponibilități, creanțe, datorii în valută) sau element nemonetar (imobilizări, stocuri) "
+  }
+ ],
+ "fapt_corect_articol_diferit": [],
+ "comparatii": [
+  {
+   "id": "Q2-TVA-01",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Pragul este de 10.000 euro pe an calendaristic, echivalent în lei 46.337 lei. Cât timp nu este depășit, regula locului la beneficiar nu se aplică, iar locul prestării rămâne acolo unde prestatorul și-a stabilit sediul activității economice (România), cu TVA românesc. Modul de calcul: se însumează, pe an calendaristic, valoarea totală fără TVA a serviciilor electronice (de telecomunicații, radiodifuziune/TV și electronice) prestate către persoane neimpozabile din alte state membre, la care se adaugă vânzările intracomunitare de bunuri la distanță expediate în alte state membre — cumulat pentru toate statele membre, nu pe fiecare stat. Condiția trebuie îndeplinită atât în anul calendaristic curent, cât și în anul calendaristic precedent, iar prestatorul să fie stabilit într-un singur stat membru. Din momentul depășirii pragului în cursul anului, locul prestării devine statul beneficiarului. Firma poate opta și înainte de depășire pentru taxarea la beneficiar, opțiunea aplicându-se cel puțin doi ani calendaristici.  [data de referință: 28.09.2026 — Singura dată din întrebare; faptul întrebat este regimul locului prestării pentru vânzările efectuate în 2026.]",
+   "raspuns_asteptat": "10.000 euro (echivalent 46.337 lei), valoare totală fără TVA a serviciilor TBE către persoane neimpozabile din alte state membre (și a vânzărilor la distanță intracomunitare), cumulat pe toate statele. Condiția: să nu fie depășit nici în anul calendaristic curent (2026), nici în cel precedent (2025). La depășirea pragului în cursul anului, locul prestării devine statul membru al clientului de la momentul depășirii. Firma poate opta și sub prag pentru locul din statul clientului, opțiune valabilă cel puțin doi ani calendaristici.",
+   "temei_asteptat": "Cod fiscal art. 278^1 alin. (1) lit. c); art. 278^1 alin. (5); art. 278^1 alin. (2); art. 278^1 alin. (3)",
+   "fapt_principal_cheie": [
+    "10000 euro"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "278^1"
+    ],
+    [
+     "cf",
+     "278^1"
+    ],
+    [
+     "cf",
+     "278^1"
+    ],
+    [
+     "cf",
+     "278^1"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "278^1"
+    ]
+   ],
+   "fapte_motor": [
+    "10000 euro",
+    "46337 lei",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-TVA-02",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Poate emite factură simplificată atunci când valoarea facturii nu este mai mare de 100 euro, iar valoarea se compară inclusiv TVA (echivalentul în euro se determină la cursul prevăzut la art. 290). Peste acest plafon, facturarea simplificată este posibilă doar pentru facturi mai mari de 100 euro, dar mai mici de 400 euro, inclusiv TVA, și numai dacă se aprobă prin ordin al ministrului finanțelor publice, după consultarea Comitetului TVA.  [data de referință: 28.09.2026 — Singura dată din întrebare, corespunzând anului 2026 pentru care se cere regula facturii simplificate.]",
+   "raspuns_asteptat": "100 euro, valoarea facturii INCLUSIV TVA (nu mai mare de 100 euro). Conversia în euro se face la cursul prevăzut la art. 290 din Codul fiscal. Factura simplificată mai poate fi emisă pentru documentele care modifică factura inițială (art. 319 alin. 2) și de persoanele în regim special de scutire (art. 310/310^2); nu se poate folosi pentru vânzări la distanță impozabile în România și livrări intracomunitare scutite (alin. 6 lit. b-c).",
+   "temei_asteptat": "Cod fiscal art. 319 alin. (12) lit. a); art. 319 alin. (14)",
+   "fapt_principal_cheie": [
+    "100 euro"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "319"
+    ],
+    [
+     "cf",
+     "319"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "319"
+    ]
+   ],
+   "fapte_motor": [
+    "100 euro",
+    "100 euro",
+    "400 euro",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-TVA-03",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Locul prestării serviciilor de consultanță către o persoană impozabilă care acționează ca atare este locul unde beneficiarul are stabilit sediul activității sale economice, adică Germania; operațiunea nu este impozabilă în România, așa că factura se emite fără TVA românesc (taxa se datorează de beneficiarul german).  [data de referință: 31.03.2026 — Faptul întrebat este tratamentul TVA al prestării efectuate în martie 2026, singura dată din întrebare.]",
+   "raspuns_asteptat": "Nu. Locul prestării serviciilor către o persoană impozabilă care acționează ca atare este locul unde beneficiarul își are stabilit sediul activității economice, adică Germania; operațiunea nu este impozabilă în România. Factura se emite după regulile românești (prestator stabilit în România, beneficiarul din alt stat membru e obligat la plata TVA) fără TVA românesc și cu mențiunea „taxare inversă”; TVA se datorează de client în Germania.",
+   "temei_asteptat": "Cod fiscal art. 278 alin. (2); art. 319 alin. (5) lit. b) pct. 1; art. 319 alin. (20) lit. m)",
+   "fapt_principal_cheie": [],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "278"
+    ],
+    [
+     "cf",
+     "319"
+    ],
+    [
+     "cf",
+     "319"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "278"
+    ]
+   ],
+   "fapte_motor": [
+    "31.03.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-TVA-04",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "TVA aferentă avansului devine exigibilă la data încasării avansului, adică la 18.03.2026 (prin excepție de la regula exigibilității la data faptului generator), pentru suma încasată în avans. Factura de avans trebuie emisă cel târziu până în cea de-a 15-a zi a lunii următoare celei în care a fost încasat avansul (adică luna următoare lunii încasării din 18.03.2026), cu excepția cazului în care factura a fost deja emisă.  [data de referință: 18.03.2026 — Faptul întrebat este exigibilitatea TVA aferentă avansului și termenul de facturare al acestuia, ambele legate de data încasării avansului (18.03.2026), nu de data livrării din mai 2026.]",
+   "raspuns_asteptat": "18.03.2026 — exigibilitatea TVA pentru avans intervine la data încasării avansului (înainte de faptul generator). Factura pentru avans trebuie emisă cel târziu până la 15.04.2026 (a 15-a zi a lunii următoare celei în care s-a încasat avansul), cu excepția cazului în care a fost deja emisă. TVA aferentă avansului se declară în decontul perioadei fiscale care include 18.03.2026.",
+   "temei_asteptat": "Cod fiscal art. 282 alin. (2) lit. b); art. 319 alin. (16); art. 319 alin. (6) lit. d)",
+   "fapt_principal_cheie": [
+    "18.03.2026"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "282"
+    ],
+    [
+     "cf",
+     "319"
+    ],
+    [
+     "cf",
+     "319"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "282"
+    ]
+   ],
+   "fapte_motor": [
+    "18.03.2026",
+    "18.03.2026",
+    "18.03.2026",
+    "18.03.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-TVA-05",
+   "tip": "PROCEDURA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Clientul trebuie să ajusteze (în sensul reducerii) TVA dedusă inițial pentru achiziția respectivă, iar pentru că furnizorul nu a emis factura de corecție cu semnul minus, trebuie să emită el o autofactură în vederea ajustării bazei de impozitare și a taxei deductibile — cel târziu până în cea de-a 15-a zi a lunii următoare celei în care a intervenit reducerea de preț (deci în luna următoare lunii mai 2026).  [data de referință: 12.05.2026 — Faptul întrebat este obligația clientului declanșată de acordarea reducerii de preț, eveniment intervenit la 12.05.2026; data livrărilor (aprilie 2026) este doar contextul operațiunii inițiale.]",
+   "raspuns_asteptat": "15.06.2026 — clientul (beneficiarul) trebuie să emită o autofactură pentru ajustarea (diminuarea) taxei deductibile cel târziu până în a 15-a zi a lunii următoare celei în care a intervenit reducerea de preț. Evenimentul se consideră intervenit la data la care clientul beneficiază de reducere (12.05.2026). Dacă ulterior primește factura de corecție a furnizorului pentru aceeași ajustare și aceeași valoare, face referire la autofactură, fără o nouă ajustare a deducerii.",
+   "temei_asteptat": "Cod fiscal art. 319 alin. (3); art. 287 lit. c); art. 330 alin. (2); HG 1/2016 (Norme metodologice), Titlul VII pct. 92 alin. (1)",
+   "fapt_principal_cheie": [
+    "15.06.2026"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "319"
+    ],
+    [
+     "cf",
+     "287"
+    ],
+    [
+     "cf",
+     "330"
+    ],
+    [
+     "norme",
+     "pct92"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "320"
+    ]
+   ],
+   "fapte_motor": [
+    "12.05.2026",
+    "12.05.2026"
+   ],
+   "valoare_ok": false,
+   "temei_ok": false,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['15.06.2026']) nu e in raspuns; articolul citat [('cf', '320')] nu e printre cele ale cheii [('cf', '319'), ('cf', '287'), ('cf', '330'), ('norme', 'pct92')]",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-TVA-06",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "247.000 lei ajustare negativă (TVA de restituit), făcută o singură dată în decontul perioadei în care are loc livrarea. Calcul: perioada de ajustare pentru bunuri imobile = 20 de ani, începând cu 01.01.2019 → 2019–2038; ani rămași, incluzând anul livrării 2026: 2026–2038 = 13 ani; ajustare = 380.000 / 20 × 13 = 19.000 × 13 = 247.000 lei.",
+   "temei_asteptat": "Cod fiscal art. 305 alin. (2) lit. b); art. 305 alin. (3) lit. c); art. 305 alin. (4) lit. a) pct. 2; art. 305 alin. (5) lit. a); HG 1/2016 (Norme metodologice), Titlul VII pct. 58 alin. (6)",
+   "fapt_principal_cheie": [
+    "247000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "305"
+    ],
+    [
+     "cf",
+     "305"
+    ],
+    [
+     "cf",
+     "305"
+    ],
+    [
+     "cf",
+     "305"
+    ],
+    [
+     "norme",
+     "pct58"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA MECANICA a respins propunerea modelului: cifra '1.01.2019' din raspuns nu apare literal in citate sau in intrebare",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-TVA-07",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "315 lei TVA colectată. Calcul: cadourile de până la 100 lei (fără TVA) nu sunt livrări; pentru cele peste plafon se însumează doar depășirile: 10 × (250 − 100) = 1.500 lei bază impozabilă; TVA = 1.500 × 21% = 315 lei. Livrarea se consideră efectuată în ultima zi lucrătoare a lunii aprilie 2026 (30.04.2026); baza și TVA se înscriu în autofactura prevăzută la art. 319 alin. (8), inclusă în decontul pentru aprilie 2026.",
+   "temei_asteptat": "HG 1/2016 (Norme metodologice), Titlul VII pct. 7 alin. (12) lit. a); Cod fiscal art. 270 alin. (8) lit. c); art. 291 alin. (1)",
+   "fapt_principal_cheie": [
+    "315 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "norme",
+     "pct7"
+    ],
+    [
+     "cf",
+     "270"
+    ],
+    [
+     "cf",
+     "291"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '2026' nu apare in niciun citat (C13: o valoare legala se dovedeste din atom, chiar daca e si in intrebare)",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-TVA-08",
+   "tip": "CAPCANA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Nu. 5.250 lei TVA colectată de furnizor, în regim normal, pe toată factura (25.000 × 21%). Pragul de 22.500 lei se compară numai cu valoarea bunurilor din categoriile telefoane mobile / dispozitive cu circuite integrate / console, tablete PC și laptopuri înscrise în factură, nu cu totalul facturii: telefoanele au 15.000 lei, sub prag, deci nu se aplică taxarea inversă (imprimantele oricum nu intră în taxare inversă).",
+   "temei_asteptat": "Cod fiscal art. 331 alin. (7); art. 331 alin. (2) lit. i); art. 331 alin. (6); HG 1/2016 (Norme metodologice), Titlul VII pct. 109 alin. (19)",
+   "fapt_principal_cheie": [
+    "5250 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "331"
+    ],
+    [
+     "cf",
+     "331"
+    ],
+    [
+     "cf",
+     "331"
+    ],
+    [
+     "norme",
+     "pct109"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "C23: structura răspunsului final a fost invalidă de două ori (marcaj de parametri scurs in raspunde.declaratie; campul raspuns e gol sau un substituent ('-') / marcaj de parametri scurs in raspunde.de",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-TVA-09",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Casarea utilajului — scoaterea din funcțiune urmată de dezmembrare — nu implică efectuarea de ajustări ale taxei deduse, indiferent dacă părțile componente rezultate sunt sau nu valorificate. Casarea este expres exceptată de la ajustarea datorată încetării existenței bunului de capital, deci firma nu restituie TVA pentru perioada rămasă din perioada de ajustare; trebuie doar documentată casarea efectivă (proces-verbal de scoatere din funcțiune și dezmembrare) și ținută situația bunurilor de capital.  [data de referință: 30.04.2026 — Faptul întrebat este tratamentul TVA al casării, eveniment care are loc în aprilie 2026; anul achiziției (2023) și anul 2027 sunt doar repere ale perioadei de ajustare invocate de contabil.]",
+   "raspuns_asteptat": "Nu. 0 lei de ajustat — casarea unui bun de capital este exceptată expres de la ajustarea TVA pentru încetarea existenței bunului; TVA dedusă de 38.000 lei rămâne dedusă integral. Prin casare, în sensul TVA, se înțelege scoaterea din funcțiune urmată de dezmembrare, indiferent dacă piesele rezultate se valorifică. (Ajustarea pentru perioada rămasă s-ar aplica doar dacă bunul ar înceta să existe în alt mod, de ex. lipsă din gestiune nedovedită.)",
+   "temei_asteptat": "Cod fiscal art. 305 alin. (4) lit. d) pct. 4; HG 1/2016 (Norme metodologice), Titlul VII pct. 79 alin. (17)",
+   "fapt_principal_cheie": [
+    "0 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "305"
+    ],
+    [
+     "norme",
+     "pct79"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "norme",
+     "pct79"
+    ]
+   ],
+   "fapte_motor": [
+    "30.04.2026"
+   ],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['0 lei']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-TVA-10",
+   "tip": "INCOMPLETA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Depinde — trebuie clarificat: (1) dacă clientul italian este persoană impozabilă care acționează ca atare (are cod de TVA valid și cumpără pentru activitatea economică) sau persoană neimpozabilă; (2) natura serviciului. Regula generală B2B: locul prestării este la sediul beneficiarului (Italia) → fără TVA românesc, cu mențiunea „taxare inversă”. Regula generală B2C: locul este la sediul prestatorului (România) → TVA românesc. Excepțiile schimbă răspunsul: servicii legate de bunuri imobile (locul imobilului), transport de călători, restaurant/catering (locul prestării efective), închiriere pe termen scurt a mijloacelor de transport; iar la B2C, servicii de telecomunicații/radiodifuziune/electronice (statul clientului, sub rezerva pragului de 10.000 euro) etc.",
+   "temei_asteptat": "Cod fiscal art. 278 alin. (2); art. 278 alin. (3); art. 278 alin. (4); art. 278 alin. (5); art. 278^1 alin. (1)",
+   "fapt_principal_cheie": [
+    "10000 euro"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "278"
+    ],
+    [
+     "cf",
+     "278"
+    ],
+    [
+     "cf",
+     "278"
+    ],
+    [
+     "cf",
+     "278"
+    ],
+    [
+     "cf",
+     "278^1"
+    ]
+   ],
+   "verdict": "CORECT",
+   "de_ce": "INCOMPLETA: motorul s-a abţinut, iar cheia spune si ea ca lipsesc date",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-PRF-01",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Costurile excedentare ale îndatorării sunt deductibile, într-o perioadă fiscală, până la plafonul fix reprezentat de echivalentul în lei al sumei de 1.000.000 euro (peste acest plafon, diferența se deduce limitat, până la 30% din baza de calcul). Pentru costurile excedentare ale îndatorării rezultate din tranzacții/operațiuni cu persoane afiliate care nu finanțează achiziția/producția imobilizărilor în curs de execuție/activelor prevăzute de lege, plafonul special este echivalentul în lei al sumei de 500.000 euro, iar totalul costurilor excedentare deduse (afiliate + neafiliate) nu poate depăși 1.000.000 euro. Echivalentul în lei se determină la cursul BNR pentru ultima zi a trimestrului/anului fiscal. Plafonul de 500.000 euro nu se aplică instituțiilor de credit, sucursalelor din România ale instituțiilor de credit străine, instituțiilor financiare nebancare și sucursalelor acestora, precum și întreprinderilor de investiții.  [data de referință: 28.09.2026 — Singura dată din întrebare, corespunzătoare anului fiscal 2026 pentru care se cere regimul deductibilității.]",
+   "raspuns_asteptat": "1.000.000 euro — echivalentul în lei al sumei de 1.000.000 euro este plafonul deductibil într-o perioadă fiscală. Pentru costurile excedentare din tranzacții/operațiuni cu persoane afiliate care nu finanțează achiziția/producția imobilizărilor în curs/activelor prevăzute de lege, plafonul este 500.000 euro, iar totalul (afiliate + neafiliate) nu poate depăși 1.000.000 euro. Cursul folosit este cel comunicat de BNR pentru ultima zi a trimestrului/anului fiscal. Diferența peste plafon se deduce limitat, până la 30% din baza de calcul (tip EBITDA fiscal), iar partea nededusă se reportează fără limită de timp.",
+   "temei_asteptat": "Cod fiscal art. 40^2 alin. (4); art. 40^2 alin. (1); art. 40^2 alin. (7)",
+   "fapt_principal_cheie": [
+    "1000000 euro"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "40^2"
+    ],
+    [
+     "cf",
+     "40^2"
+    ],
+    [
+     "cf",
+     "40^2"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "40^2"
+    ]
+   ],
+   "fapte_motor": [
+    "1000000 euro",
+    "30%",
+    "500000 euro",
+    "1000000 euro",
+    "500000 euro",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-PRF-02",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Sunt cheltuieli sociale cu deductibilitate limitată: se deduc în limita unei cote de până la 5%, aplicată asupra valorii cheltuielilor cu salariile personalului, potrivit Codului muncii. În această limită intră atât ajutoarele pentru naștere, cât și cadourile în bani sau în natură, inclusiv tichetele cadou oferite salariaților și copiilor minori ai acestora. Partea care depășește limita este nedeductibilă la calculul rezultatului fiscal.  [data de referință: 28.09.2026 — Singura dată din întrebare; faptul întrebat este deductibilitatea cheltuielilor sociale în anul 2026.]",
+   "raspuns_asteptat": "5% — cheltuielile sociale sunt deductibile în limita unei cote de până la 5% aplicate asupra valorii cheltuielilor cu salariile personalului, potrivit Codului muncii. În această limită intră, printre altele, ajutoarele de naștere, de înmormântare, pentru boli grave, cadourile în bani sau în natură (inclusiv tichete cadou) oferite salariaților și copiilor minori ai acestora, tichetele culturale și de creșă, serviciile turistice/de tratament acordate salariaților. Partea care depășește limita este nedeductibilă.",
+   "temei_asteptat": "Cod fiscal art. 25 alin. (3) lit. b)",
+   "fapt_principal_cheie": [
+    "5%"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "25"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "25"
+    ]
+   ],
+   "fapte_motor": [
+    "5%",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-PRF-03",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Cheltuielile de exploatare (combustibil, reparații, asigurare) sunt deductibile la calculul rezultatului fiscal în proporție de 50%, restul fiind nedeductibil, pentru că vehiculul nu este utilizat exclusiv în scopul activității economice, are masa sub 3.500 kg și cel mult 9 scaune și nu se încadrează în categoriile exceptate. Amortizarea nu intră sub incidența limitării de 50%; ea este deductibilă separat, pentru fiecare astfel de vehicul din categoria M1, în limita a 1.500 lei/lună, deci din amortizarea lunară de 2.400 lei rămân nedeductibili 900 lei/lună.  [calcul: amortizare_nedeductibila = amortizare_lunara - limita_amortizare = (2.400 − 1.500) = 900]  [data de referință: 28.09.2026 — Singura dată din întrebare; faptul întrebat (regimul de deducere al cheltuielilor cu autoturismul) privește anul fiscal 2026.]",
+   "raspuns_asteptat": "50% din cheltuielile de funcționare (combustibil, reparații, întreținere, asigurare) sunt deductibile, deoarece vehiculul nu e folosit exclusiv în scopul activității economice. Amortizarea nu intră sub limita de 50%: pentru autoturismele M1 cu cel mult 9 scaune, amortizarea este deductibilă în limita a 1.500 lei/lună pe fiecare autoturism. Din amortizarea lunară de 2.400 lei se deduc 1.500 lei, iar 900 lei sunt nedeductibili.",
+   "temei_asteptat": "Cod fiscal art. 25 alin. (3) lit. l); art. 28 alin. (14)",
+   "fapt_principal_cheie": [
+    "50%"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "25"
+    ],
+    [
+     "cf",
+     "28"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "25"
+    ]
+   ],
+   "fapte_motor": [
+    "50%",
+    "50%",
+    "1500 lei",
+    "2400 lei",
+    "900 lei",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-PRF-04",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Rezerva fiscală constituită din profitul scutit aferent anului fiscal 2026 nu poate fi utilizată pentru majorarea capitalului social, pentru distribuire sau pentru acoperirea pierderilor o perioadă de 5 ani, începând cu anul următor celui pentru care se constituie, deci până în anul 2031 inclusiv. Utilizarea ei în 2029 (în interiorul acestei perioade) atrage impozitarea integrală a sumelor respective, ca elemente similare veniturilor, în perioada fiscală în care sunt utilizate. Numai după expirarea perioadei de 5 ani tratamentul devine mai favorabil: la distribuire se impozitează 50% din valoarea rezervei, iar la majorarea capitalului social sau acoperirea pierderilor valoarea nu se impozitează.  [calcul: an_final_interdictie = an_constituire + perioada_interdictie = (2026 + 5) = 2031]  [data de referință: 28.09.2026 — Singura dată purtată de întrebare este 2026-09-28 (anul fiscal 2026 pentru care se aplică scutirea și se constituie rezerva), moment de la care se determină regimul rezervei și perioada de indisponibilizare.]",
+   "raspuns_asteptat": "Nu. 5 ani — rezervele fiscale constituite din profitul reinvestit începând cu anul fiscal 2026 nu pot fi utilizate pentru majorarea capitalului social, pentru distribuire sau pentru acoperirea pierderilor timp de 5 ani, începând cu anul următor celui pentru care se constituie (deci 2027–2031). Dacă sunt folosite în 2029, sumele se impozitează integral, ca elemente similare veniturilor, în perioada fiscală în care sunt utilizate. După cei 5 ani: la distribuire se impozitează 50% din valoare; la majorarea capitalului social sau acoperirea pierderilor nu se impozitează.",
+   "temei_asteptat": "Cod fiscal art. 26 alin. (9^1); art. 22 alin. (5)",
+   "fapt_principal_cheie": [
+    "5 ani"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "26"
+    ],
+    [
+     "cf",
+     "22"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "26"
+    ]
+   ],
+   "fapte_motor": [
+    "5 ani",
+    "5 ani",
+    "50%",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-PRF-05",
+   "tip": "PROCEDURA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Poate dispune redirecționarea impozitului pe profit, în limita sumei neutilizate (diminuată cu sumele reportate), prin completarea și depunerea formularului 177 „Cerere privind redirecţionarea impozitului pe profit“; plata sumei redirecționate către asociație o face organul fiscal competent, iar asociația trebuie să fie înscrisă, la data plății, în Registrul entităților/unităților de cult pentru care se acordă deduceri fiscale. Termenul de depunere a cererii este termenul de depunere a declarației anuale de impozit pe profit pentru anul 2026, respectiv până la data de 25 iunie inclusiv a anului următor.  [data de referință: 28.09.2026 — Singura dată purtată de întrebare; faptul întrebat privește limita de sponsorizare aferentă anului fiscal 2026 și regimul de redirecționare în vigoare la această dată.]",
+   "raspuns_asteptat": "25.06.2027 — până la termenul de depunere a declarației anuale de impozit pe profit pentru 2026 (25 iunie inclusiv a anului următor), societatea poate dispune redirecționarea impozitului pe profit, în limita valorii nefolosite (limita de la art. 25 alin. (4) lit. i), diminuată cu sumele reportate), prin depunerea formularului/formularelor de redirecționare. Plata sumei redirecționate o face organul fiscal. Pentru o entitate fără scop lucrativ, beneficiarul trebuie să fie înscris în Registrul entităților/unităților de cult pentru care se acordă deduceri fiscale la data plății de către organul fiscal. Separat, pentru sponsorizările efectuate se depune declarația informativă privind beneficiarii sponsorizărilor până la același termen.",
+   "temei_asteptat": "Cod fiscal art. 42 alin. (4); art. 42 alin. (1); art. 42 alin. (3); art. 25 alin. (4^1)",
+   "fapt_principal_cheie": [
+    "25.06.2027"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "42"
+    ],
+    [
+     "cf",
+     "42"
+    ],
+    [
+     "cf",
+     "42"
+    ],
+    [
+     "cf",
+     "25"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "42"
+    ]
+   ],
+   "fapte_motor": [
+    "25 iunie",
+    "28.09.2026"
+   ],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['25.06.2027']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-PRF-06",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "3.000 lei. Pas 1: baza = profit contabil + cheltuiala cu impozitul pe profit = 84.000 + 16.000 = 100.000 lei. Pas 2: 5% × 100.000 = 5.000 lei. Pas 3: plafonul total al rezervei = a cincea parte din capitalul social subscris și vărsat = 40.000 / 5 = 8.000 lei; spațiu disponibil = 8.000 − 5.000 = 3.000 lei. Pas 4: deductibil = min(5.000; 3.000) = 3.000 lei. Rezerva se calculează cumulat de la începutul anului.",
+   "temei_asteptat": "Cod fiscal art. 26 alin. (1) lit. a); HG 1/2016 (Norme metodologice), Titlul II pct. 19 alin. (1)",
+   "fapt_principal_cheie": [
+    "3000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "26"
+    ],
+    [
+     "norme",
+     "pct19"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA CALCULULUI a respins propunerea: operandul cincime='5' nu apare literal in fragmentul lui",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-PRF-07",
+   "tip": "CALCUL",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Impozitul pe profit datorat pentru 2026 este 40.000 lei: impozit pe profit brut 50.000 lei (16% aplicat profitului impozabil), din care se scade sponsorizarea în limita minimului dintre 0,75% din cifra de afaceri (15.000 lei) și 20% din impozitul pe profit datorat (10.000 lei), adică 10.000 lei; diferența de sponsorizare nescăzută (12.000 lei acordați minus creditul folosit) nu reduce impozitul anului.  [calcul: impozit_brut = profit_impozabil * cota_impozit_profit = (312.500 × 16%) = 50.000; plafon_cifra_afaceri = cifra_de_afaceri * cota_sponsorizare_ca = (2.000.000 × 0,75%) = 15.000; plafon_impozit = impozit_brut * cota_sponsorizare_impozit = (50.000 × 20%) = 10.000; credit_sponsorizare = min(sponsorizare_acordata, min(plafon_cifra_afaceri, plafon_impozit)) = min(12.000, min(15.000, 10.000)) = 10.000; impozit_datorat = impozit_brut - credit_sponsorizare = (50.000 − 10.000) = 40.000]  [data de referință: 28.09.2026 — Faptul întrebat este impozitul pe profit datorat pentru anul fiscal 2026; cifra de afaceri 2025 este doar criteriu de încadrare, astfel că se aplică legea în vigoare în 2026.]",
+   "raspuns_asteptat": "40.000 lei. Pas 1: impozit pe profit = 312.500 × 16% = 50.000 lei. Pas 2: limitele pentru sponsorizare: 0,75% × 2.000.000 = 15.000 lei; 20% × 50.000 = 10.000 lei; se aplică minimul = 10.000 lei. Pas 3: sponsorizarea de 12.000 lei se scade doar în limita de 10.000 lei; impozit datorat = 50.000 − 10.000 = 40.000 lei. Diferența de 2.000 lei de sponsorizare nu se scade din impozitul anului 2026. Impozitul minim pe cifra de afaceri nu e aplicabil (cifra de afaceri sub 50 mil. euro).",
+   "temei_asteptat": "Cod fiscal art. 25 alin. (4) lit. i); art. 17; art. 18^1 alin. (1)",
+   "fapt_principal_cheie": [
+    "40000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "25"
+    ],
+    [
+     "cf",
+     "17"
+    ],
+    [
+     "cf",
+     "18^1"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "25"
+    ]
+   ],
+   "fapte_motor": [
+    "40000 lei",
+    "50000 lei",
+    "16%",
+    "0,75%",
+    "15000 lei",
+    "20%"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-PRF-08",
+   "tip": "CAPCANA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Nu. B trebuie să rețină 16.000 lei impozit pe dividende (16% × 100.000 lei, cotă aplicabilă dividendelor distribuite începând cu 01.01.2026) și să îl declare și plătească până la 27.07.2026 (termenul de 25 a lunii următoare plății cade sâmbătă, 25.07.2026, și se prelungește la prima zi lucrătoare). Scutirea de la reținere se aplică doar dacă beneficiarul deține minimum 10% din titlurile plătitorului pe o perioadă de un an împlinit la data plății (plus condițiile de formă și plată a impozitului pe profit); A deține doar 5%. Separat, la A dividendul rămâne venit neimpozabil la calculul rezultatului fiscal — neimpozabilitatea la beneficiar nu elimină obligația de reținere la sursă a plătitorului.",
+   "temei_asteptat": "Cod fiscal art. 43 alin. (1), (2) și (4); art. 23 lit. a); Legea 207/2015 art. 75; Legea 134/2010 (Codul de procedură civilă) art. 181 alin. (2)",
+   "fapt_principal_cheie": [
+    "16000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "43"
+    ],
+    [
+     "cf",
+     "23"
+    ],
+    [
+     "cpf",
+     "75"
+    ],
+    [
+     "lege_134_2010",
+     "181"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA MECANICA a respins propunerea modelului: citatul NU e verbatim in atomul cod_fiscal_227_2015_consolidat#art43/alin4/lita; valoarea legala '5' nu apare in niciun citat (C13: o valoare legal",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-PRF-09",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Sponsorizarea nu se mai scade din impozitul pe veniturile microîntreprinderilor: ultimul an fiscal în care sumele reprezentând sponsorizări se scădeau din acest impozit a fost anul fiscal 2023. Prin urmare, pentru trimestrul II 2026 microîntreprinderea datorează și plătește integral impozitul calculat (3.000 lei), până la data de 25 inclusiv a lunii următoare trimestrului, adică până la 25.07.2026; sponsorizarea rămâne doar cheltuială, fără credit fiscal.  [data de referință: 25.07.2026 — Singura dată din întrebare; este termenul de plată a impozitului pentru trimestrul II 2026, faptul întrebat.]",
+   "raspuns_asteptat": "Nu. 3.000 lei este impozitul datorat integral pentru T2 2026: microîntreprinderile nu mai pot scădea sponsorizările din impozit — prevederea care permitea scăderea (art. 56 alin. (1^1)) este abrogată din 01.01.2024, iar ultimul an fiscal în care sumele de sponsorizare rămase de reportat se mai scădeau a fost 2023. Termenul de plată și de depunere a declarației pentru T2 2026 este 27.07.2026 (25.07.2026 cade sâmbătă, iar termenul se prelungește la prima zi lucrătoare).",
+   "temei_asteptat": "Cod fiscal art. 56 alin. (1^1); art. 56 alin. (2^5); art. 56 alin. (1) și (2); Legea 207/2015 art. 75; Legea 134/2010 (Codul de procedură civilă) art. 181 alin. (2)",
+   "fapt_principal_cheie": [
+    "3000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "56"
+    ],
+    [
+     "cf",
+     "56"
+    ],
+    [
+     "cf",
+     "56"
+    ],
+    [
+     "cpf",
+     "75"
+    ],
+    [
+     "lege_134_2010",
+     "181"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "56"
+    ]
+   ],
+   "fapte_motor": [
+    "3000 lei",
+    "25.07.2026",
+    "25.07.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-PRF-10",
+   "tip": "INCOMPLETA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Depinde — trebuie clarificat: (1) de când e scadentă creanța și dacă e neîncasată de peste 270 de zile de la scadență; (2) dacă e garantată de altă persoană; (3) dacă clientul e persoană afiliată; (4) dacă asupra clientului s-a deschis procedura falimentului (sau insolvența, pentru persoane fizice), pe baza hotărârii judecătorești; (5) când a fost înregistrată creanța. Dacă clientul e în faliment, creanța e negarantată și clientul neafiliat: deductibil 100% (50.000 lei). Dacă nu e faliment, dar creanța e neîncasată peste 270 de zile de la scadență, negarantată, datorată de un neafiliat și înregistrată începând cu 01.01.2024: deductibil 30% (15.000 lei). Dacă nicio variantă nu e îndeplinită (ex. sub 270 de zile, garantată sau client afiliat): 0 lei deductibil.",
+   "temei_asteptat": "Cod fiscal art. 26 alin. (1) lit. c) și lit. j); art. 26 alin. (12)",
+   "fapt_principal_cheie": [
+    "270 zile"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "26"
+    ],
+    [
+     "cf",
+     "26"
+    ]
+   ],
+   "verdict": "CORECT",
+   "de_ce": "INCOMPLETA: motorul s-a abţinut, iar cheia spune si ea ca lipsesc date",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-SAL-01",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Termenul de preaviz la demisie este cel convenit în contractul individual de muncă sau prevăzut în contractul colectiv de muncă aplicabil, dar nu poate depăși 45 de zile lucrătoare pentru salariații care ocupă funcții de conducere, respectiv 20 de zile lucrătoare pentru salariații cu funcții de execuție.  [data de referință: 28.09.2026 — Întrebarea vizează regula aplicabilă în anul 2026, singura dată furnizată fiind 28.09.2026.]",
+   "raspuns_asteptat": "45 de zile lucrătoare pentru salariații cu funcții de conducere (maximum); pentru funcțiile de execuție, maximum 20 de zile lucrătoare. Termenul concret este cel convenit în CIM sau prevăzut în CCM aplicabil, dar nu poate depăși aceste limite. Pe durata preavizului CIM își produce toate efectele; dacă CIM se suspendă în preaviz, termenul de preaviz se suspendă corespunzător.",
+   "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 81 alin. (4); art. 81 alin. (5), (6)",
+   "fapt_principal_cheie": [
+    "45 zile"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cm",
+     "81"
+    ],
+    [
+     "cm",
+     "81"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cm",
+     "81"
+    ]
+   ],
+   "fapte_motor": [
+    "45 zile",
+    "20 zile",
+    "28.09.2026",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-02",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Baza anuală de calcul a CASS pentru veniturile din activități independente realizate în 2026 nu poate depăși nivelul de 72 de salarii minime brute pe țară (plafonul maxim al bazei anuale de calcul), baza fiind venitul net anual realizat, cumulat din una sau mai multe surse, fără luarea în considerare a pierderilor fiscale anuale.  [data de referință: 28.09.2026 — Singura dată din întrebare; faptul întrebat este plafonul aplicabil veniturilor din anul 2026.]",
+   "raspuns_asteptat": "72 de salarii minime brute pe țară. Pentru veniturile anului 2026, baza anuală CASS este venitul net anual (fără a lua în considerare pierderile fiscale anuale), dar nu mai mult decât baza corespunzătoare a 72 de salarii minime brute pe țară (forma art. 170 alin. (1) introdusă prin Legea 239/2025, aplicabilă începând cu veniturile aferente anului 2026). Dacă baza este sub 6 salarii minime, se datorează CASS (diferență) până la nivelul a 6 salarii minime, cu excepțiile de la art. 174 alin. (7).",
+   "temei_asteptat": "Cod fiscal art. 170 alin. (1); art. 174 alin. (6)",
+   "fapt_principal_cheie": [],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "170"
+    ],
+    [
+     "cf",
+     "174"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "170"
+    ]
+   ],
+   "fapte_motor": [
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-03",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Perioada de probă poate fi de cel mult 120 de zile calendaristice, fiind vorba de o funcție de conducere. Pe durata sau la sfârșitul perioadei de probă, contractul individual de muncă poate înceta exclusiv printr-o notificare scrisă, fără preaviz, la inițiativa oricăreia dintre părți (angajator sau salariat), fără a fi necesară motivarea acesteia.  [data de referință: 31.05.2026 — Singura dată din întrebare; angajarea și stabilirea perioadei de probă au loc în mai 2026.]",
+   "raspuns_asteptat": "120 de zile calendaristice (maximum, pentru funcții de conducere; pentru funcții de execuție maximum 90 de zile calendaristice, iar la încadrarea persoanelor cu handicap maximum 30 de zile calendaristice). Pe durata sau la sfârșitul perioadei de probă, CIM poate înceta exclusiv prin notificare scrisă, fără preaviz, la inițiativa oricăreia dintre părți, fără a fi necesară motivarea.",
+   "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 31 alin. (1); art. 31 alin. (3)",
+   "fapt_principal_cheie": [
+    "120 zile"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cm",
+     "31"
+    ],
+    [
+     "cm",
+     "31"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cm",
+     "31"
+    ]
+   ],
+   "fapte_motor": [
+    "120 zile",
+    "31.05.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-04",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Munca prestată se compensează, în primul rând, cu timp liber corespunzător acordat în următoarele 30 de zile. Numai dacă, din motive justificate, nu se acordă zile libere, salariatul are dreptul la un spor la salariul de bază care nu poate fi mai mic de 100% din salariul de bază corespunzător muncii prestate în programul normal de lucru.  [data de referință: 01.05.2026 — Singura dată din întrebare; este ziua în care s-a prestat munca ce trebuie compensată.]",
+   "raspuns_asteptat": "30 de zile: salariatului i se asigură compensarea cu timp liber corespunzător în următoarele 30 de zile. Numai dacă, din motive justificate, nu se acordă zile libere, salariatul beneficiază pentru munca prestată în ziua de sărbătoare legală de un spor la salariul de bază de cel puțin 100% din salariul de bază corespunzător muncii prestate în programul normal de lucru. 1 mai este zi de sărbătoare legală, iar art. 139 nu se aplică locurilor de muncă unde activitatea nu poate fi întreruptă.",
+   "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 142 alin. (1), (2); art. 141; art. 139 alin. (1)",
+   "fapt_principal_cheie": [
+    "30 zile"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cm",
+     "142"
+    ],
+    [
+     "cm",
+     "141"
+    ],
+    [
+     "cm",
+     "139"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cm",
+     "142"
+    ]
+   ],
+   "fapte_motor": [
+    "30 zile",
+    "100%",
+    "01.05.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-05",
+   "tip": "PROCEDURA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Datele contractului (identificare angajator/salariat, funcție, tip și durată contract, timp de muncă, salariu etc.) se transmit în REGES-ONLINE cel târziu în ziua anterioară începerii activității, adică până la 14.07.2026 inclusiv. Majorarea salariului de bază lunar brut prin act adițional se transmite în Registru în termen de 20 de zile lucrătoare de la data producerii modificării (termenul de 10 zile lucrătoare se aplică doar dacă modificarea rezultă dintr-o hotărâre judecătorească).  [calcul: termen_transmitere = data_incepere_activitate - 1 = (15.07.2026 − 1) = 14.07.2026]  [data de referință: 15.07.2026 — Singura dată din întrebare; este data începerii activității, față de care se calculează termenul de transmitere în REGES-ONLINE.]",
+   "raspuns_asteptat": "14.07.2026 — datele CIM (art. 4 alin. (2) lit. a)–k) din HG 295/2025) se transmit în Registru cel târziu în ziua anterioară începerii activității. Modificarea salariului de bază (lit. j)) se transmite în termen de 20 de zile lucrătoare de la data producerii modificării (10 zile lucrătoare de la luarea la cunoștință, dacă modificarea rezultă dintr-o hotărâre judecătorească). Netransmiterea la începerea activității, cu dovada prestării muncii și plății salariului declarate la ANAF, se sancționează cu amendă de la 3.000 lei la 5.000 lei pentru fiecare persoană.",
+   "temei_asteptat": "HG 295/2025 art. 3 alin. (1); art. 5 alin. (1) lit. a); art. 5 alin. (4); art. 4 alin. (2) lit. j); art. 9 alin. (2) lit. a)",
+   "fapt_principal_cheie": [
+    "14.07.2026"
+   ],
+   "temeiuri_cheie": [
+    [
+     "hg_295_2025",
+     "3"
+    ],
+    [
+     "hg_295_2025",
+     "5"
+    ],
+    [
+     "hg_295_2025",
+     "5"
+    ],
+    [
+     "hg_295_2025",
+     "4"
+    ],
+    [
+     "hg_295_2025",
+     "9"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "hg_295_2025",
+     "5"
+    ]
+   ],
+   "fapte_motor": [
+    "14.07.2026",
+    "20 zile",
+    "10 zile",
+    "15.07.2026",
+    "14.07.2026",
+    "15.07.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-06",
+   "tip": "CALCUL",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Neimpozabilă este suma de 1.485 lei (plafonul cel mai mic dintre limita de 1.500 lei/lună pe copil și plafonul lunar de 33% din salariul de bază), iar diferența de 315 lei se include în venitul din salarii al lunii iunie 2026 (impozabilă și cu contribuții sociale).  [calcul: plafon_33_la_suta = salariu_de_baza * procent_plafon = (4.500 × 33%) = 1.485; suma_neimpozabila = min(min(plafon_33_la_suta, limita_pe_copil), suma_platita) = min(min(1.485, 1.500), 1.800) = 1.485; suma_impozabila = suma_platita - suma_neimpozabila = (1.800 − 1.485) = 315]  [data de referință: 30.06.2026 — Faptul întrebat este tratamentul fiscal al sumei acordate în luna iunie 2026, singura dată din întrebare.]",
+   "raspuns_asteptat": "315 lei se include în venitul din salarii (impozabil și în baza CAS/CASS); neimpozabil 1.485 lei. Calcul: limita specifică pentru educație timpurie = 1.500 lei/lună/copil, deci din 1.800 lei, maximum 1.500 lei pot fi neimpozabili; aceste sume intră însă în plafonul lunar cumulat de cel mult 33% din salariul de bază: 33% × 4.500 = 1.485 lei < 1.500 lei, deci neimpozabil = 1.485 lei; impozabil = 1.800 − 1.485 = 315 lei. Aceeași limită se aplică pentru excluderea din baza CAS, iar sumele excluse din baza CAS la art. 142 nu intră nici în baza CASS.",
+   "temei_asteptat": "Cod fiscal art. 76 alin. (4^1) lit. i); art. 76 alin. (4^1); art. 142 lit. aa^1) pct. 9; art. 157 alin. (2)",
+   "fapt_principal_cheie": [
+    "315 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "76"
+    ],
+    [
+     "cf",
+     "76"
+    ],
+    [
+     "cf",
+     "142"
+    ],
+    [
+     "cf",
+     "157"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cf",
+     "76"
+    ]
+   ],
+   "fapte_motor": [
+    "1485 lei",
+    "1500 lei",
+    "33%",
+    "315 lei",
+    "33%",
+    "30.06.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-07",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "150 lei. Plafonul neimpozabil de 300 lei se aplică pentru fiecare persoană în parte și cu fiecare ocazie: 8 martie: 350 − 300 = 50 lei impozabil; Paște, salariata: 400 − 300 = 100 lei impozabil; Paște, copilul minor: 300 lei, neimpozabil (nu depășește plafonul); 1 iunie, copilul minor: 250 lei, neimpozabil. Total impozabil = 50 + 100 = 150 lei; neimpozabil = 1.150 lei. Aceeași limită de 300 lei/persoană/ocazie operează și pentru excluderea din baza CAS (și CASS).",
+   "temei_asteptat": "Cod fiscal art. 76 alin. (4) lit. a); art. 142 lit. b); art. 157 alin. (2)",
+   "fapt_principal_cheie": [
+    "150 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "76"
+    ],
+    [
+     "cf",
+     "142"
+    ],
+    [
+     "cf",
+     "157"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA CALCULULUI a respins propunerea: calculul total_impozabil: constanta fara sursa in formula: 0 (permise numai 1 si 100)",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-SAL-08",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Cât timp contractul individual de muncă continuă, zilele de concediu de odihnă neefectuate nu pot fi plătite în bani: compensarea în bani a concediului de odihnă neefectuat este permisă numai în cazul încetării contractului individual de muncă. Faptul că a trecut anul în care s-a născut dreptul nu schimbă soluția: angajatorul este obligat să acorde în natură concediul neefectuat într-o perioadă de 18 luni începând cu anul următor celui în care s-a născut dreptul. Soldul se „închide” doar prin efectuarea efectivă a zilelor, nu prin plată alături de salariu.  [data de referință: 31.07.2026 — Faptul întrebat este posibilitatea plății compensatorii în iulie 2026; anul 2025 apare doar ca an de naștere a dreptului la cele 8 zile.]",
+   "raspuns_asteptat": "Nu. Compensarea în bani a concediului de odihnă neefectuat este permisă numai în cazul încetării contractului individual de muncă. Concediul neefectuat din motive justificate se acordă în natură, cu acordul salariatului, într-o perioadă de 18 luni începând cu anul următor celui în care s-a născut dreptul — pentru 2025, adică între 01.01.2026 și 30.06.2027.",
+   "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 146 alin. (3); art. 146 alin. (2)",
+   "fapt_principal_cheie": [
+    "18 luni"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cm",
+     "146"
+    ],
+    [
+     "cm",
+     "146"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cm",
+     "146"
+    ]
+   ],
+   "fapte_motor": [
+    "18 luni",
+    "31.07.2026",
+    "8 zile"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-09",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Salariul de bază minim brut pe țară garantat în plată poate fi acordat unui salariat pentru o perioadă de maximum 24 de luni de la data încheierii contractului individual de muncă, iar acest interval, calculat de la 01.03.2024, era deja epuizat înainte de 01.07.2026. Prin urmare, nu este suficientă majorarea la nivelul noului minim de 4.325 lei: angajatorul trebuie să îi acorde un salariu de bază superior salariului de bază minim brut pe țară garantat în plată.  [data de referință: 01.07.2026 — Faptul întrebat este obligația angajatorului privind nivelul salariului de bază de la 01.07.2026, data majorării salariului minim; 01.03.2024 este doar data de la care curge termenul de 24 de luni.]",
+   "raspuns_asteptat": "Nu. 24 de luni este perioada maximă pentru care salariul de bază minim brut pe țară poate fi acordat unui salariat, de la data încheierii CIM; după expirare trebuie acordat un salariu de bază superior minimului. Termenul s-a împlinit la 01.03.2026, deci de atunci salariul de bază trebuia să fie peste minimul în vigoare (4.050 lei până la 30.06.2026) și, de la 01.07.2026, peste 4.325 lei — alinierea exact la 4.325 lei nu este suficientă.",
+   "temei_asteptat": "Legea 53/2003 (Codul muncii) art. 164 alin. (8); HG 146/2026 art. 1; HG 1506/2024 art. 1",
+   "fapt_principal_cheie": [
+    "24 luni"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cm",
+     "164"
+    ],
+    [
+     "hg_146_2026",
+     "1"
+    ],
+    [
+     "hg_1506_2024",
+     "1"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cm",
+     "164"
+    ]
+   ],
+   "fapte_motor": [
+    "24 luni",
+    "01.03.2024",
+    "01.07.2026",
+    "4325 lei",
+    "01.07.2026",
+    "01.07.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-SAL-10",
+   "tip": "INCOMPLETA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Depinde — trebuie clarificat: gradul de handicap din certificat. Persoanele cu handicap grav sau accentuat sunt scutite de impozitul pe venit pentru veniturile din salarii (impozit 0); persoanele cu handicap mediu sau ușor nu beneficiază de această scutire, iar impozitul se calculează după regulile generale (pentru care ar mai trebui cunoscute funcția de bază și persoanele în întreținere, pentru deducerea personală). Scutirea din art. 60 privește impozitul pe venit. Gradul, tipul și durata certificatului se transmit și în REGES-ONLINE.",
+   "temei_asteptat": "Cod fiscal art. 60 pct. 1 lit. b); HG 295/2025 art. 4 alin. (2) lit. c)",
+   "fapt_principal_cheie": [],
+   "temeiuri_cheie": [
+    [
+     "cf",
+     "60"
+    ],
+    [
+     "hg_295_2025",
+     "4"
+    ]
+   ],
+   "verdict": "CORECT",
+   "de_ce": "INCOMPLETA: motorul s-a abţinut, iar cheia spune si ea ca lipsesc date",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-CPF-01",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Creanțele fiscale restante administrate de ANAF, aflate în sold la 31 decembrie, mai mici de 40 lei, se anulează. Plafonul nu se aplică pe fiecare creanță în parte, ci totalului creanțelor fiscale datorate și neachitate de debitor.  [data de referință: 31.12.2026 — Singura dată din întrebare; este data la care creanțele se află în sold și la care se verifică plafonul de anulare.]",
+   "raspuns_asteptat": "40 lei — se anulează creanțele fiscale restante aflate în sold la 31 decembrie mai mici de 40 lei. Plafonul se aplică totalului creanțelor fiscale datorate și neachitate de debitor, nu fiecărei creanțe în parte.",
+   "temei_asteptat": "Legea 207/2015 art. 266 alin. (5)",
+   "fapt_principal_cheie": [
+    "40 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "266"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "266"
+    ]
+   ],
+   "fapte_motor": [
+    "31 decembrie",
+    "40 lei",
+    "31.12.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-02",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Termenul de prescripție al dreptului organului de executare silită de a cere executarea silită a creanței fiscale este de 5 ani și curge de la data de 1 ianuarie a anului următor celui în care a luat naștere acest drept, adică de la 1 ianuarie 2027.  [calcul: an_inceput_prescriptie = an_nastere_drept + 1 = (2026 + 1) = 2027]  [data de referință: 28.09.2026 — Singura dată din întrebare; faptul întrebat (nașterea dreptului de a cere executarea silită) este plasat în anul 2026.]",
+   "raspuns_asteptat": "5 ani, care încep să curgă de la 01.01.2027 (data de 1 ianuarie a anului următor celui în care a luat naștere dreptul de a cere executarea silită). Același termen se aplică și creanțelor din amenzi contravenționale.",
+   "temei_asteptat": "Legea 207/2015 art. 215 alin. (1); art. 215 alin. (2)",
+   "fapt_principal_cheie": [
+    "5 ani"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "215"
+    ],
+    [
+     "cpf",
+     "215"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "215"
+    ]
+   ],
+   "fapte_motor": [
+    "5 ani",
+    "1 ianuarie",
+    "1 ianuarie",
+    "01.01.2027",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-03",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Declarația rectificativă D101 pentru 2024, depusă în timpul inspecției fiscale și aferentă perioadei și creanței fiscale ce fac obiectul inspecției, nu va fi luată în considerare de organul fiscal (corectarea era posibilă doar până la data începerii inspecției fiscale).  [data de referință: 20.05.2026 — Faptul întrebat este tratamentul declarației rectificative depuse la 20.05.2026, în timpul inspecției.]",
+   "raspuns_asteptat": "Nu. Declarația de impunere depusă sau corectată în timpul inspecției fiscale pentru perioadele și creanțele care fac obiectul inspecției nu este luată în considerare de organul fiscal. Corectarea era posibilă doar până la data începerii inspecției (posibilitate menționată în avizul de inspecție); diferențele se stabilesc de inspecție prin decizie de impunere.",
+   "temei_asteptat": "Legea 207/2015 art. 105 alin. (8); art. 122 alin. (7) lit. e)",
+   "fapt_principal_cheie": [],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "105"
+    ],
+    [
+     "cpf",
+     "122"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "105"
+    ]
+   ],
+   "fapte_motor": [
+    "20.05.2026",
+    "20.05.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-04",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Fiind o diferență de impozit pe venit de restituit mai mică de 10 lei, suma nu se restituie automat: rămâne în evidența fiscală spre a fi compensată cu datorii viitoare și se restituie atunci când suma cumulată depășește această limită; în numerar se restituie numai la solicitarea contribuabilului.  [data de referință: 28.09.2026 — Faptul întrebat este restituirea de către ANAF în 2026 a diferenței rezultate din regularizarea anuală, deci se aplică legea în vigoare în 2026, nu anul de realizare a venitului (2025).]",
+   "raspuns_asteptat": "Nu. Diferențele de impozit pe venit și/sau contribuții sociale de restituit mai mici de 10 lei rămân în evidența fiscală spre a fi compensate cu datorii viitoare și se restituie când suma cumulată depășește această limită; în numerar se restituie numai la solicitarea contribuabilului.",
+   "temei_asteptat": "Legea 207/2015 art. 168 alin. (5); art. 168 alin. (6)",
+   "fapt_principal_cheie": [
+    "10 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "168"
+    ],
+    [
+     "cpf",
+     "168"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "168"
+    ]
+   ],
+   "fapte_motor": [
+    "10 lei",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-05",
+   "tip": "PROCEDURA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Suma plătită în plus se recuperează prin cerere de restituire depusă la organul fiscal competent: se restituie, la cerere, orice sumă plătită fără a fi datorată. Organul fiscal trebuie să soluționeze cererea în termen de 45 de zile de la înregistrarea acesteia. Dacă firma înregistrează obligații fiscale restante, restituirea se face numai după efectuarea compensării — creanța de restituit se stinge prin compensare cu obligațiile datorate bugetului general consolidat, până la concurența celei mai mici sume, iar doar eventuala diferență rămasă se restituie efectiv. Dreptul de a cere restituirea se prescrie în termen de 5 ani de la data de 1 ianuarie a anului următor celui în care a luat naștere dreptul la restituire (deci termenul pentru plata eronată din aprilie 2026 curge de la 1 ianuarie a anului următor).  [data de referință: 30.04.2026 — Singura dată din întrebare: luna aprilie 2026, când s-a efectuat plata dublă și de la care se apreciază procedura de restituire.]",
+   "raspuns_asteptat": "45 de zile de la înregistrarea cererii este termenul general de soluționare. Suma plătită fără a fi datorată se restituie la cerere (cerere de restituire depusă la organul fiscal); dacă firma are obligații restante, restituirea se face numai după compensarea cu acestea, restituindu-se doar diferența. Dreptul de a cere restituirea se prescrie în 5 ani de la 1 ianuarie a anului următor celui în care a luat naștere dreptul (plata din 2026 → termenul curge de la 01.01.2027). Dacă ANAF întârzie peste termen, firma are dreptul, la cerere, la dobândă de 0,02% pe zi.",
+   "temei_asteptat": "Legea 207/2015 art. 77 alin. (1); art. 168 alin. (1); art. 168 alin. (8); art. 219 alin. (1); art. 182 alin. (1); art. 174 alin. (5)",
+   "fapt_principal_cheie": [
+    "45 zile"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "77"
+    ],
+    [
+     "cpf",
+     "168"
+    ],
+    [
+     "cpf",
+     "168"
+    ],
+    [
+     "cpf",
+     "219"
+    ],
+    [
+     "cpf",
+     "182"
+    ],
+    [
+     "cpf",
+     "174"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "168"
+    ]
+   ],
+   "fapte_motor": [
+    "45 zile",
+    "5 ani",
+    "1 ianuarie",
+    "1 ianuarie",
+    "30.04.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-06",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "7.000 lei. Pentru valori peste 100.000 lei (și până la 1.000.000 lei) cauțiunea este 5.500 lei plus 1% din ce depășește 100.000 lei: 5.500 + 1% × (250.000 − 100.000) = 5.500 + 1.500 = 7.000 lei.",
+   "temei_asteptat": "Legea 207/2015 art. 278 alin. (2) lit. c)",
+   "fapt_principal_cheie": [
+    "7000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "278"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA MECANICA a respins propunerea modelului: cifra '1.000.000' din raspuns nu apare literal in citate sau in intrebare",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-CPF-07",
+   "tip": "CALCUL",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Firma primește efectiv în cont 8.800 lei: restituirea se face numai după compensarea cu obligațiile restante (impozit micro și accesorii), iar diferența rămasă se virează contribuabilului.  [calcul: suma_incasata = suma_aprobata - obligatii_restante = (15.000 − 6.200) = 8.800]  [data de referință: 30.06.2026 — Singura dată din întrebare: momentul aprobării cererii de restituire și al existenței obligațiilor restante (iunie 2026).]",
+   "raspuns_asteptat": "8.800 lei. Suma de restituit fiind mai mare decât obligațiile restante, compensarea se face până la concurența obligațiilor restante (6.200 lei), iar diferența se restituie: 15.000 − 6.200 = 8.800 lei.",
+   "temei_asteptat": "Legea 207/2015 art. 168 alin. (8); art. 168 alin. (10); art. 167 alin. (1)",
+   "fapt_principal_cheie": [
+    "8800 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "168"
+    ],
+    [
+     "cpf",
+     "168"
+    ],
+    [
+     "cpf",
+     "167"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "168"
+    ]
+   ],
+   "fapte_motor": [
+    "8800 lei",
+    "30.06.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-08",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu, administratorul nu are dreptate. Simpla depunere a contestației pe calea administrativă de atac nu suspendă executarea deciziei de impunere, astfel că obligația de 80.000 lei rămâne executorie și pe durata soluționării contestației. Societatea poate obține suspendarea numai dacă o cere instanței de contencios administrativ, cu plata unei cauțiuni.  [data de referință: 28.09.2026 — Singura dată purtată de întrebare; contestația a fost depusă în 2026, iar faptul întrebat (efectul contestației asupra executării) se apreciază la această dată.]",
+   "raspuns_asteptat": "Nu. Introducerea contestației pe cale administrativă nu suspendă executarea actului administrativ fiscal. Suspendarea poate fi obținută doar de la instanța de contencios administrativ, cu depunerea unei cauțiuni de 4.500 lei (1.000 lei + 5% din ce depășește 10.000 lei, pentru o valoare contestată de 80.000 lei: 1.000 + 5% × 70.000). Pe perioada suspendării dispuse de instanță nu se datorează penalități de întârziere sau de nedeclarare.",
+   "temei_asteptat": "Legea 207/2015 art. 278 alin. (1); art. 278 alin. (2) lit. b); art. 278 alin. (4)",
+   "fapt_principal_cheie": [
+    "4500 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "278"
+    ],
+    [
+     "cpf",
+     "278"
+    ],
+    [
+     "cpf",
+     "278"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "278"
+    ]
+   ],
+   "fapte_motor": [
+    "80000 lei",
+    "28.09.2026"
+   ],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['4500 lei']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-CPF-09",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu, contabilul nu are dreptate. Termenul de prescripție de 5 ani nu curge de la data plății, ci de la data de 1 ianuarie a anului următor celui în care a luat naștere dreptul la restituire; prin urmare, pentru o plată făcută în cursul anului 2021 termenul începe să curgă la 1 ianuarie al anului următor, astfel că la 15.05.2026 dreptul nu era prescris, iar cererea de restituire depusă în septembrie 2026 este încă în termen.  [data de referință: 30.09.2026 — Faptul întrebat este dacă dreptul la restituire mai poate fi exercitat la momentul depunerii cererii, în septembrie 2026.]",
+   "raspuns_asteptat": "Nu. Termenul de prescripție de 5 ani nu curge de la data plății, ci de la 1 ianuarie a anului următor celui în care a luat naștere dreptul la restituire: dreptul s-a născut la data plății (15.05.2021), deci termenul curge de la 01.01.2022 și nu era împlinit în septembrie 2026 — cererea de restituire poate fi depusă.",
+   "temei_asteptat": "Legea 207/2015 art. 219 alin. (1); art. 167 alin. (5) lit. h) pct. 1",
+   "fapt_principal_cheie": [
+    "1 ianuarie"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "219"
+    ],
+    [
+     "cpf",
+     "167"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "cpf",
+     "219"
+    ]
+   ],
+   "fapte_motor": [
+    "5 ani",
+    "1 ianuarie",
+    "1 ianuarie",
+    "15.05.2026",
+    "30.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CPF-10",
+   "tip": "INCOMPLETA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Depinde — trebuie clarificat: (1) dacă firma este mare contribuabil — avizul se comunică cu 30 de zile înainte pentru marii contribuabili și cu 15 zile pentru ceilalți contribuabili; (2) tipul inspecției — avizul se comunică chiar la începerea inspecției dacă firma e în insolvență, dacă inspecția urmează unui control inopinat, la extinderea inspecției la alte perioade/creanțe, la refacerea inspecției după o decizie de soluționare a contestației sau la inspecția pentru soluționarea unei cereri a contribuabilului (analiză de risc). Firma poate renunța la beneficiul acestui termen și poate cere o singură dată, motivat, amânarea începerii.",
+   "temei_asteptat": "Legea 207/2015 art. 122 alin. (2) lit. a) și b); art. 122 alin. (4); art. 122 alin. (3); art. 122 alin. (5)",
+   "fapt_principal_cheie": [
+    "30 zile"
+   ],
+   "temeiuri_cheie": [
+    [
+     "cpf",
+     "122"
+    ],
+    [
+     "cpf",
+     "122"
+    ],
+    [
+     "cpf",
+     "122"
+    ],
+    [
+     "cpf",
+     "122"
+    ]
+   ],
+   "verdict": "CORECT",
+   "de_ce": "INCOMPLETA: motorul s-a abţinut, iar cheia spune si ea ca lipsesc date",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-CTB-01",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Plafonul este de 50.000 lei numerar în casierie la sfârșitul fiecărei zile, iar sumele care depășesc acest plafon trebuie depuse în conturile bancare în termen de două zile lucrătoare. (Prin excepție, plafonul poate fi depășit cu sumele aferente plății salariilor și altor drepturi de personal, precum și a altor operațiuni cu persoane fizice, pentru o perioadă de 3 zile lucrătoare de la data prevăzută pentru plata acestora.)  [data de referință: 28.09.2026 — Singura dată din întrebare, corespunzătoare anului 2026 pentru care se cere plafonul.]",
+   "raspuns_asteptat": "50.000 lei la sfârșitul fiecărei zile. Numerarul care depășește plafonul se depune în contul bancar al firmei în termen de două zile lucrătoare. Excepție: depășirea este admisă doar cu sumele pentru plata salariilor și a altor drepturi de personal (și alte operațiuni cu persoane fizice), pentru 3 zile lucrătoare de la data prevăzută pentru plată. Plafonul de 500.000 lei este doar pentru cash and carry, supermagazine și hipermagazine.",
+   "temei_asteptat": "Legea 70/2015 art. 4^2 alin. (1); art. 4^2 alin. (2)",
+   "fapt_principal_cheie": [
+    "50000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "lege_70_2015",
+     "4^2"
+    ],
+    [
+     "lege_70_2015",
+     "4^2"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "lege_70_2015",
+     "4^2"
+    ]
+   ],
+   "fapte_motor": [
+    "50000 lei",
+    "3 zile",
+    "28.09.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CTB-02",
+   "tip": "PARAMETRU",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Sunt microentități entitățile care, la data bilanțului, nu depășesc limitele a cel puțin două dintre următoarele trei criterii: totalul activelor 2.250.000 lei; cifra de afaceri netă 4.500.000 lei; numărul mediu de salariați în cursul exercițiului financiar: 10. Așadar, este suficient ca cel puțin două dintre cele trei limite să nu fie depășite (depășirea uneia singure nu scoate entitatea din categoria microentităților).  [calcul: limita_total_active = valoare_total_active = 2.250.000 = 2.250.000; limita_cifra_afaceri = valoare_cifra_afaceri = 4.500.000 = 4.500.000]  [data de referință: 31.12.2025 — Faptul întrebat este încadrarea ca microentitate la data bilanțului 31.12.2025; anul 2014 apare doar în denumirea actului normativ.]",
+   "raspuns_asteptat": "2.250.000 lei totalul activelor, 4.500.000 lei cifra de afaceri netă și 10 salariați (numărul mediu în cursul exercițiului). Entitatea este microentitate dacă, la data bilanțului, nu depășește limitele a cel puțin două dintre cele trei criterii. Trecerea într-o altă categorie produce efecte asupra derogărilor numai dacă depășirea (sau încetarea depășirii) are loc în două exerciții financiare consecutive.",
+   "temei_asteptat": "OMFP 1802/2014, Reglementări contabile, pct. 9 alin. (2); pct. 12 alin. (1)",
+   "fapt_principal_cheie": [
+    "2250000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "omfp_1802_2014",
+     "pct9"
+    ],
+    [
+     "omfp_1802_2014",
+     "pct12"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "omfp_1802_2014",
+     "pct9"
+    ]
+   ],
+   "fapte_motor": [
+    "2250000 lei",
+    "4500000 lei",
+    "31.12.2025",
+    "31.12.2025"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CTB-03",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Da. Societatea a depășit, la data bilanțului, limitele a două dintre cele trei criterii (totalul activelor și cifra de afaceri netă), iar depășirea s-a produs în două exerciții financiare consecutive (2024 și 2025), astfel că situațiile financiare anuale aferente exercițiului 2025 sunt supuse auditului statutar, deși societatea nu se încadrează în categoria entităților mijlocii și mari.  [data de referință: 31.12.2025 — Faptul întrebat este obligația de auditare a situațiilor financiare ale exercițiului 2025, apreciată la data bilanțului 31.12.2025.]",
+   "raspuns_asteptat": "Da. Depășește două dintre cele trei limite de audit (16.000.000 lei total active și 32.000.000 lei cifră de afaceri netă; numărul de 50 de salariați nu e depășit) în două exerciții financiare consecutive (2024 și 2025), deci situațiile financiare 2025 se auditează de un auditor statutar sau firmă de audit, deși entitatea rămâne entitate mică (sub 25.000.000 lei active și 50.000.000 lei cifră de afaceri).",
+   "temei_asteptat": "OMFP 1802/2014, Reglementări contabile, pct. 563 alin. (2)",
+   "fapt_principal_cheie": [
+    "16000000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "omfp_1802_2014",
+     "pct563"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "omfp_1802_2014",
+     "pct563"
+    ]
+   ],
+   "fapte_motor": [
+    "31.12.2025",
+    "31.12.2025"
+   ],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['16000000 lei']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-CTB-04",
+   "tip": "REGULA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Societatea care a distribuit trimestrial dividende nu poate acorda împrumuturi asociaților (nici altor persoane afiliate) până la regularizarea diferențelor rezultate din distribuirea dividendelor în cursul anului, regularizare care se face prin situațiile financiare anuale; deci, înainte de aprobarea situațiilor financiare anuale 2026, împrumutul către asociatul majoritar este interzis. Încălcarea interdicției constituie contravenție, sancționată cu amendă de la 10.000 lei la 200.000 lei, și atrage răspunderea solidară a societății și a asociatului beneficiar pentru obligațiile bugetare restante, în limita sumelor împrumutate.  [data de referință: 31.08.2026 — Faptul întrebat este posibilitatea acordării împrumutului în august 2026, singura dată din întrebare.]",
+   "raspuns_asteptat": "Nu. Societățile care distribuie trimestrial dividende nu pot acorda împrumuturi asociaților sau altor persoane afiliate până la regularizarea diferențelor din distribuirea dividendelor în cursul anului (regularizare făcută prin situațiile financiare anuale). Încălcarea este contravenție sancționată de ANAF, iar societatea și asociatul răspund solidar pentru obligațiile bugetare restante, în limita împrumutului.",
+   "temei_asteptat": "Legea 31/1990 art. 67 alin. (2^3); art. 67 alin. (2^5); art. 67 alin. (2^6)",
+   "fapt_principal_cheie": [],
+   "temeiuri_cheie": [
+    [
+     "lege_31_1990",
+     "67"
+    ],
+    [
+     "lege_31_1990",
+     "67"
+    ],
+    [
+     "lege_31_1990",
+     "67"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "lege_31_1990",
+     "67"
+    ]
+   ],
+   "fapte_motor": [
+    "10000 lei",
+    "200000 lei",
+    "31.08.2026"
+   ],
+   "valoare_ok": true,
+   "temei_ok": true,
+   "verdict": "CORECT",
+   "de_ce": "faptul principal si articolul coincid",
+   "verdict_pe_fond": "CORECT"
+  },
+  {
+   "id": "Q2-CTB-05",
+   "tip": "PROCEDURA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Situațiile financiare anuale se depun la organul fiscal competent din subordinea ANAF până la data de 31 mai inclusiv a exercițiului financiar următor celui de raportare, adică 31 mai al anului următor exercițiului 2025; dacă această dată este zi nelucrătoare, ultima zi de raportare este prima zi lucrătoare următoare.  [data de referință: 31.12.2025 — Singura dată purtată de întrebare este exercițiul financiar 2025 (an calendaristic, încheiat la 31.12.2025), pentru care se stabilește termenul de depunere.]",
+   "raspuns_asteptat": "02.06.2026. Termenul legal pentru societățile reglementate de Legea 31/1990 este 31 mai inclusiv al anului următor; 31.05.2026 este duminică, iar 01.06.2026 este sărbătoare legală nelucrătoare (1 iunie; în 2026 și a doua zi de Rusalii), deci ultima zi de depunere este prima zi lucrătoare următoare, marți 02.06.2026. Termenul de 150 de zile se aplică doar entităților cu exercițiu financiar diferit de anul calendaristic.",
+   "temei_asteptat": "Legea 82/1991 art. 36 alin. (1) lit. a); art. 36 alin. (1^1); Legea 53/2003 (Codul muncii) art. 139 alin. (1)",
+   "fapt_principal_cheie": [
+    "02.06.2026"
+   ],
+   "temeiuri_cheie": [
+    [
+     "lege_82_1991",
+     "36"
+    ],
+    [
+     "lege_82_1991",
+     "36"
+    ],
+    [
+     "cm",
+     "139"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "lege_82_1991",
+     "36"
+    ]
+   ],
+   "fapte_motor": [
+    "31 mai",
+    "31 mai",
+    "31.12.2025",
+    "31.12.2025"
+   ],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['02.06.2026']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-CTB-06",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "2.800 lei valoarea consumului; stoc rămas 1.900 lei. Calcul FIFO: se epuizează întâi primul lot: 100 kg × 10 = 1.000 lei; restul de 150 kg din lotul următor: 150 × 12 = 1.800 lei; total ieșire 2.800 lei. Stoc rămas: 50 kg × 12 = 600 lei + 100 kg × 13 = 1.300 lei = 1.900 lei (verificare: 1.000 + 2.400 + 1.300 = 4.700 − 2.800 = 1.900).",
+   "temei_asteptat": "OMFP 1802/2014, Reglementări contabile, pct. 96 alin. (1) lit. b); pct. 96 alin. (3)",
+   "fapt_principal_cheie": [
+    "2800 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "omfp_1802_2014",
+     "pct96"
+    ],
+    [
+     "omfp_1802_2014",
+     "pct96"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA MECANICA a respins propunerea modelului: cifra '150' din raspuns nu apare literal in citate sau in intrebare",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-CTB-07",
+   "tip": "CALCUL",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "10.000 lei. Se preia cel puțin 5% din profit până când fondul de rezervă atinge a cincea parte din capitalul social. 5% × 300.000 = 15.000 lei, dar plafonul este 400.000 / 5 = 80.000 lei, iar rezerva existentă e 70.000 lei, deci obligatoriu se completează doar 80.000 − 70.000 = 10.000 lei.",
+   "temei_asteptat": "Legea 31/1990 art. 183 alin. (1)",
+   "fapt_principal_cheie": [
+    "10000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "lege_31_1990",
+     "183"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA CALCULULUI a respins propunerea: operandul parte_capital='5' nu apare literal in fragmentul lui",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-CTB-08",
+   "tip": "CAPCANA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Nu. 5 ani, calculați de la data de 1 iulie a anului următor încheierii exercițiului în care au fost întocmite, adică de la 01.07.2026 până la 01.07.2031; regula se aplică și statelor de salarii. Termenul de 10 ani rămâne doar pentru situațiile financiare anuale (și cele consolidate/interimare), nu pentru registre și documente justificative.",
+   "temei_asteptat": "Legea 82/1991 art. 25; art. 35 alin. (3)",
+   "fapt_principal_cheie": [
+    "5 ani"
+   ],
+   "temeiuri_cheie": [
+    [
+     "lege_82_1991",
+     "25"
+    ],
+    [
+     "lege_82_1991",
+     "35"
+    ]
+   ],
+   "verdict": "NU_POT",
+   "de_ce": "VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '10' nu apare in niciun citat (C13: o valoare legala se dovedeste din atom, chiar daca e si in intrebare)",
+   "verdict_pe_fond": "NU_POT"
+  },
+  {
+   "id": "Q2-CTB-09",
+   "tip": "CAPCANA",
+   "stare_motor": "RASPUNS",
+   "raspuns_motor": "Nu. Primirea unui împrumut de la o persoană fizică nu poate fi făcută în numerar, indiferent de sumă: astfel de operațiuni (primiri ori restituiri de împrumuturi sau alte finanțări) se efectuează numai prin instrumente de plată fără numerar. Plafonul zilnic de 10.000 lei către/de la o persoană fizică vizează doar contravaloarea livrărilor/achizițiilor de bunuri, prestărilor de servicii, dividendelor, cesiunilor de creanțe sau altor drepturi, nu împrumuturile. Depunerea în numerar a celor 8.000 lei în casierie este, deci, nelegală.  [data de referință: 30.04.2026 — Singura dată din întrebare; operațiunea de creditare în numerar are loc în aprilie 2026.]",
+   "raspuns_asteptat": "Nu. Încasarea în numerar a împrumutului este contravenție sancționată cu amendă de 2.000 lei (25% din suma încasată de 8.000 lei, dar nu mai puțin de 500 lei). Primirile și restituirile de împrumuturi între firmă și persoane fizice se fac numai prin instrumente de plată fără numerar, indiferent de sumă; plafonul de 10.000 lei/zi se aplică doar livrărilor, prestărilor, dividendelor, cesiunilor de creanțe.",
+   "temei_asteptat": "Legea 70/2015 art. 4 alin. (4); art. 12 alin. (3)",
+   "fapt_principal_cheie": [
+    "2000 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "lege_70_2015",
+     "4"
+    ],
+    [
+     "lege_70_2015",
+     "12"
+    ]
+   ],
+   "temei_motor": [
+    [
+     "lege_70_2015",
+     "4"
+    ]
+   ],
+   "fapte_motor": [
+    "10000 lei",
+    "8000 lei",
+    "30.04.2026"
+   ],
+   "valoare_ok": false,
+   "temei_ok": true,
+   "verdict": "GRESIT",
+   "de_ce": "faptul principal al cheii (['2000 lei']) nu e in raspuns",
+   "verdict_pe_fond": "GRESIT"
+  },
+  {
+   "id": "Q2-CTB-10",
+   "tip": "INCOMPLETA",
+   "stare_motor": "NU_POT_RASPUNDE",
+   "raspuns_motor": null,
+   "raspuns_asteptat": "Depinde — trebuie clarificat: (1) natura elementului: dacă e element monetar (disponibil în valută, depozit, creanță sau datorie în valută), se reevaluează la cursul BNR valabil la data încheierii exercițiului, iar diferența față de 4,97 lei/euro se înregistrează la venituri sau cheltuieli din diferențe de curs valutar; dacă e element nemonetar la cost istoric (imobilizare, stoc cumpărat cu plata în valută), rămâne la cursul de la data tranzacției, fără diferență de curs; dacă e nemonetar la valoare justă (de ex. imobilizare reevaluată), se prezintă la valoarea justă; (2) cursul BNR comunicat pentru 31.12.2026, care lipsește din întrebare și determină mărimea diferenței.",
+   "temei_asteptat": "OMFP 1802/2014, Reglementări contabile, pct. 94 lit. a); pct. 94 lit. c); pct. 94 lit. d); pct. 90 alin. (2)",
+   "fapt_principal_cheie": [
+    "4,97 lei"
+   ],
+   "temeiuri_cheie": [
+    [
+     "omfp_1802_2014",
+     "pct94"
+    ],
+    [
+     "omfp_1802_2014",
+     "pct94"
+    ],
+    [
+     "omfp_1802_2014",
+     "pct94"
+    ],
+    [
+     "omfp_1802_2014",
+     "pct90"
+    ]
+   ],
+   "verdict": "CORECT",
+   "de_ce": "INCOMPLETA: motorul s-a abţinut, iar cheia spune si ea ca lipsesc date",
+   "verdict_pe_fond": "NU_POT"
+  }
+ ],
+ "comparat_la": "2026-09-29T12:47:58",
+ "fisier_raspunsuri": "intrebari/final/raspunsuri_set2.json"
+}

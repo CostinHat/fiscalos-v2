@@ -160,6 +160,12 @@ scoasă ca clasă. Conversia oficială reparată pe șase clase (textul citat du
 citării; exponenți și litere în numere; text reprodus din alt act → notă), iar detectorul iese curat pe
 stratul oficial (C36). Ordinul 1099/2016 identificat după antetul lui (C37). De decis: C38, C39.
 
+## Măsurătoarea finală — setul 2 (`intrebari/final/`)
+
+Versiunea 485ffc3, neschimbată; răspunsurile comise (8b3269f) înainte de citirea cheii; comparator
+neschimbat; nicio reparație după comparație. Scor pe fond: **28/7/15**; **2 greșeli de fond** (Q2-TVA-05
+temei alăturat; Q2-CTB-05 termen efectiv necalculat). Cost $8,76. Defectele, ca cerințe: C40–C46.
+
 ## Cum se rulează
 
 ```sh
