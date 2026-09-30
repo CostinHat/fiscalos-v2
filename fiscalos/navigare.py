@@ -613,6 +613,37 @@ def valabilitate_valoare(atom, valoare, fragment=""):
     return din, pana
 
 
+# ── C56: data valorii FIXATA de lege ("in vigoare la data de 1 ianuarie a anului de realizare a
+# venitului") castiga asupra declaratiei modelului ─────────────────────────────────────────────────
+_DATA_FIXATA = re.compile(r"(?<!intra )(?<!intră )(?:în vigoare|in vigoare|valabil[ăa]?)\s+la\s+data\s+de\s+"
+                          r"(\d{1,2})\s+(%s)(?:\s+(\d{4})|\s+a\s+anului)" % "|".join(_LUNI_V), re.I)
+_STOP_V = {"de", "pe", "al", "a", "ale", "prin", "si", "sau", "in", "la", "cu", "din", "valoarea", "nivelul",
+           "stabilit", "stabilita", "hotarare", "guvernului", "garantat", "plata"}
+
+
+def data_fixata_de_lege(atomi, atom_valoare, an_fapt):
+    """(data, id_atom, fragment) daca unul dintre `atomi` fixeaza explicit data valorii din `atom_valoare`,
+    altfel None. Legatura regula-valoare: fraza de dinaintea datei numeste acelasi fel de valoare (cel putin
+    trei cuvinte comune cu atomul valorii, de ex. salariu / minim / brut / tara)."""
+    tv = set(re.findall(r"[a-z]{3,}", potrivire.norm(atom_valoare["text"])))
+    tv = {w[:6] for w in tv}
+    for a in atomi:
+        t = a["text"].split("⟦NOTĂ⟧")[0]
+        for m in _DATA_FIXATA.finditer(t):
+            if re.search(r"intr[aă]\s+$", t[max(0, m.start() - 6):m.start()]):
+                continue                              # "intra in vigoare la data de" = intrarea unei prevederi
+            fraza = potrivire.norm(t[max(0, m.start() - 160):m.start()])
+            cuv = {w[:6] for w in re.findall(r"[a-z]{3,}", fraza) if w not in _STOP_V}
+            if len(cuv & tv) < 3:
+                continue
+            an = int(m.group(3)) if m.group(3) else an_fapt
+            if not an:
+                continue
+            return (datetime.date(an, _LUNI_V[m.group(2).lower()], int(m.group(1))), a["id"],
+                    " ".join(t[max(0, m.start() - 120):m.end() + 40].split()))
+    return None
+
+
 def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None, data_faptului=None):
     """(valori, incalcari, detalii). Fara model: sursa fiecarui operand verificata literal.
 
@@ -641,6 +672,14 @@ def evalueaza_calcule(calcule, dupa_id, intrebare, citati=None, data_faptului=No
                                                            (data_faptului or ""))
                     except ValueError:
                         cand = None
+                    # C56: daca un atom citat (sau atomul valorii) fixeaza data valorii, data se ia din
+                    # text, nu din declaratia modelului; la diferenta, castiga textul
+                    an_fapt = int(data_faptului[:4]) if data_faptului else (cand.year if cand else None)
+                    fix = data_fixata_de_lege([dupa_id[i] for i in (citati or []) if i in dupa_id] + [a], a, an_fapt)
+                    if fix:
+                        o["data_aplicarii_din_lege"] = {"data": fix[0].isoformat(), "atom": fix[1], "fragment": fix[2],
+                                                        "declarata_de_model": (o.get("data_aplicarii") or "") or None}
+                        cand = fix[0]
                     o["valabil_din"], o["valabil_pana"] = (din.isoformat() if din else None,
                                                            pana.isoformat() if pana else None)
                     if cand and ((din and cand < din) or (pana and cand > pana)):
@@ -1238,7 +1277,8 @@ if __name__ == "__main__":
     import sys
     # --set2 / --set3: masuratorile pe seturi noi. Motorul citeste din CSV numai COLOANE_PERMISE.
     SETURI = {"--set2": ("set2", "/home/costin/ghid_incoming/FiscalOS_intrebari_set2_50.csv"),
-              "--set3": ("set3", "/home/costin/ghid_incoming/FiscalOS_intrebari_set3_50.csv")}
+              "--set3": ("set3", "/home/costin/ghid_incoming/FiscalOS_intrebari_set3_50.csv"),
+              "--set4": ("set4", "/home/costin/ghid_incoming/FiscalOS_intrebari_set4_50.csv")}
     ales = next((SETURI[a] for a in sys.argv[1:] if a in SETURI), None)
     ids = [a for a in sys.argv[1:] if a.startswith("Q")]
     dest = os.path.join(_RAD, "artefacte", "intrebari", "raspunsuri_navigare_%s%s.json"

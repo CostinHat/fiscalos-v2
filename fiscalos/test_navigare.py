@@ -633,3 +633,38 @@ def test_C55_perioada_din_text():
     import datetime
     a = {"id": "x", "text": "plafonul de 5.000.000 lei, în perioada 1 martie 2026-31 decembrie 2026, iar de la 1 ianuarie 2027 ..."}
     assert navigare.valabilitate_valoare(a, "5.000.000") == (datetime.date(2026, 3, 1), datetime.date(2026, 12, 31))
+
+
+# ── C56: data valorii fixata de lege castiga asupra declaratiei modelului ────────────────────────
+def _c56(data_aplicarii, regula_id, data_faptului):
+    from fiscalos import potrivire
+    c = potrivire.Corpus()
+    a, reg = c.dupa_id["hg_146_2026_salariu_minim#art1"], c.dupa_id[regula_id]
+    calc = [{"nume": "sal", "formula": "s * 1", "operanzi": [
+        {"nume": "s", "valoare": "4.325", "eticheta": "VALOARE_LEGALA", "atom": a["id"],
+         "fragment": "la suma de 4.325 lei lunar", "data_aplicarii": data_aplicarii}]}]
+    return navigare.evalueaza_calcule(calc, {a["id"]: a, reg["id"]: reg}, "CASS pe 2026?",
+                                      citati=[reg["id"], a["id"]], data_faptului=data_faptului)
+
+
+def test_C56_regula_la_1_ianuarie_respinge_4325_chiar_daca_modelul_declara_septembrie():
+    """Q3-SAL-07: CF art. 135^1 alin. (3) - salariul minim "in vigoare la data de 1 ianuarie a anului de
+    realizare a venitului"; 4.325 lei e valabil de la 01.07.2026 -> respins; textul castiga asupra
+    declaratiei modelului (2026-09-28)."""
+    _v, gr, det = _c56("2026-09-28", "cod_fiscal_227_2015_consolidat#art135^1/alin3", "2026-09-28")
+    assert any(g.startswith("C55") and "01.01.2026" in g for g in gr), gr
+    op = det[0]["operanzi"][0] if det else None
+    assert op is None or op["data_aplicarii_din_lege"]["data"] == "2026-01-01"
+
+
+def test_C56_aceeasi_valoare_pe_o_regula_fara_data_fixa_in_iulie_decembrie_e_acceptata():
+    for d in ("2026-07-15", "2026-12-31"):
+        _v, gr, _det = _c56("", "cod_fiscal_227_2015_consolidat#art170/alin3/litb", d)
+        assert gr == [], (d, gr)
+
+
+def test_C56_intrarea_in_vigoare_a_unei_prevederi_nu_e_data_valorii():
+    a = {"id": "hg#1", "text": "salariul de bază minim brut pe țară garantat în plată la suma de 4.325 lei lunar",
+         "valabil_din": None}
+    r = {"id": "cf#x", "text": "Prevederile privind salariul minim brut pe țară intră în vigoare la data de 1 ianuarie 2025."}
+    assert navigare.data_fixata_de_lege([r], a, 2026) is None

@@ -239,3 +239,13 @@ def test_setul_3_se_incarca_orb():
     qs = intrebari.incarca_intrebari(f)
     assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
     assert all(q["id"].startswith("Q3-") for q in qs)
+
+
+def test_setul_4_se_incarca_orb():
+    """Testul de acceptare: aceeasi orbire pe setul 4; fara fisier, proba PICA."""
+    from fiscalos import intrebari
+    f = "/home/costin/ghid_incoming/FiscalOS_intrebari_set4_50.csv"
+    assert os.path.exists(f), "setul 4 lipseste: %s" % f
+    qs = intrebari.incarca_intrebari(f)
+    assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
+    assert all(q["id"].startswith("Q4-") for q in qs)
