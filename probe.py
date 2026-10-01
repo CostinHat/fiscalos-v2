@@ -13,10 +13,16 @@ MODULE = ["fiscalos.test_read_only", "fiscalos.test_atomizare", "fiscalos.test_p
           "fiscalos.test_semantic", "fiscalos.test_c12_c17",
           "fiscalos.test_navigare", "fiscalos.test_pagina", "fiscalos.test_urmarire"]
 
+# Probele modulului predat catre iConta (INTEGRARE_ICONTA.md): fara motorul de intrebari si fara pagina.
+MODULE_INTEGRARE = ["fiscalos.test_read_only", "fiscalos.test_atomizare", "fiscalos.test_potrivire",
+                    "fiscalos.test_banc", "fiscalos.test_decizii", "fiscalos.test_c12_c17",
+                    "fiscalos.test_urmarire", "fiscalos.test_integrare"]
+MODULE = MODULE + ["fiscalos.test_integrare"]
 
-def ruleaza():
+
+def ruleaza(module=None):
     ok = fail = 0
-    for nume in MODULE:
+    for nume in module or MODULE:
         try:
             m = importlib.import_module(nume)
         except ImportError:
@@ -37,4 +43,4 @@ def ruleaza():
 
 
 if __name__ == "__main__":
-    sys.exit(ruleaza())
+    sys.exit(ruleaza(MODULE_INTEGRARE if "--integrare" in sys.argv else None))

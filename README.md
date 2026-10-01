@@ -251,6 +251,11 @@ Expunerea publică: `pagina_nginx.conf`, pentru administrator. Proba și pașii 
 Rezultatele (`urmarire/rezultate/`) apar pe pagina de întrebări, cu data verificării. Proba, într-o copie de
 test: `python -m fiscalos.urmarire_proba <dir>`. Raportul: `urmarire/RAPORT.md`.
 
+## Predarea către iConta
+
+Vezi `INTEGRARE_ICONTA.md`: ce intră în modul, ce rămâne înghețat (motorul de întrebări, pagina), dependențe,
+probe (`python3 probe.py --integrare`), fluxul de aprobare. Pagina de întrebări e oprită și nu mai pornește din cron.
+
 ## Ce nu face
 
 Nu scrie nimic în iConta și nu are cale spre el. Aplicarea oricărui rând din propunere e un pas
