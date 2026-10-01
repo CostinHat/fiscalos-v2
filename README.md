@@ -229,6 +229,16 @@ Fără dependențe în afara bibliotecii standard, plus `pdftotext` (poppler-uti
 Corpusul (`corpus/`, 130 MB de acte publice) **nu e versionat aici**: e reproductibil din sursă,
 iar proba durabilă e `corpus_manifest.json`. Vezi cerința C1 din raport.
 
+## Pagina de întrebări (punctul 7)
+
+`fiscalos/pagina.py` — numai biblioteca standard, pe `127.0.0.1:8030`, separată de iConta (alt proces,
+alt port, alte date). Fluxul: întrebarea → faptele care lipsesc → întrebarea reformulată, confirmată →
+răspunsul ca poveste (data de referință, perimetrul, textele de lege verbatim cu forma consolidată,
+calculul pas cu pas, avertismentele, abținerea cu motiv). Întrebările lui Costin stau în `pagina_date/`
+(în afara git-ului) și **nu se folosesc la reglaj**. Pornire/repornire: `./pagina_porneste.sh` (din cron).
+Expunerea publică: `pagina_nginx.conf`, pentru administrator. Proba și pașii de intrare:
+`intrebari/pagina_proba/RAPORT.md`.
+
 ## Ce nu face
 
 Nu scrie nimic în iConta și nu are cale spre el. Aplicarea oricărui rând din propunere e un pas

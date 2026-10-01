@@ -1,0 +1,483 @@
+{
+ "id": "20261001-171636-990dce",
+ "creat": "2026-10-01 17:16:36",
+ "intrebare": "Până când trebuie depusă declarația unică pentru chiria încasată în 2025?",
+ "stare": "raspuns",
+ "dialog": [
+  {
+   "cand": "2026-10-01 17:16:36",
+   "cine": "Costin",
+   "ce": "Până când trebuie depusă declarația unică pentru chiria încasată în 2025?"
+  },
+  {
+   "cand": "2026-10-01 17:16:47",
+   "cine": "motor",
+   "ce": {
+    "date_lipsa": [
+     {
+      "intrebare": "Contractul de închiriere este înregistrat/declarat și chiriașul este persoană fizică sau persoană juridică (care reține impozit la sursă)?",
+      "de_ce_conteaza": "Dacă plătitorul are obligația de reținere la sursă, proprietarul poate să nu mai aibă obligația depunerii declarației unice pentru acel venit; termenul și obligația declarativă diferă."
+     },
+     {
+      "intrebare": "Este vorba de închiriere de bunuri imobile din patrimoniul personal, de camere în scop turistic sau de arendă?",
+      "de_ce_conteaza": "Regulile de stabilire a venitului și obligațiile declarative diferă în funcție de tipul de închiriere."
+     },
+     {
+      "intrebare": "Ați optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pe baza normei/venitului brut?",
+      "de_ce_conteaza": "Regimul de impunere influențează ce se declară și dacă există obligații suplimentare de declarare/regularizare."
+     },
+     {
+      "intrebare": "Nivelul total al veniturilor din chirii și alte venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuții sociale (CASS)?",
+      "de_ce_conteaza": "Dacă apar obligații de contribuții, declarația unică trebuie depusă și pentru acestea, chiar dacă impozitul este reținut la sursă."
+     }
+    ],
+    "presupuneri": [
+     "Utilizatorul este persoană fizică rezidentă în România, proprietar al imobilului închiriat.",
+     "Este vorba de venituri din cedarea folosinței bunurilor (imobil din patrimoniul personal), nu închiriere în scop turistic sau arendă.",
+     "Chiriașul este persoană fizică, deci nu există reținere la sursă, iar proprietarul are obligația declarării venitului realizat în 2025.",
+     "Se discută despre declarația unică de regularizare pentru venitul realizat în anul fiscal 2025, depusă în anul următor.",
+     "Nu se aplică impunerea în sistem real (nu există opțiune exprimată în acest sens)."
+    ],
+    "cifre_nesursate": []
+   }
+  },
+  {
+   "cand": "2026-10-01 17:17:18",
+   "cine": "Costin",
+   "ce": [
+    [
+     "Contractul de închiriere este înregistrat/declarat și chiriașul este persoană fizică sau persoană juridică (care reține impozit la sursă)?",
+     "chiriașul este persoană fizică"
+    ],
+    [
+     "Este vorba de închiriere de bunuri imobile din patrimoniul personal, de camere în scop turistic sau de arendă?",
+     "apartament din patrimoniul personal, închiriat pentru locuit"
+    ],
+    [
+     "Ați optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pe baza normei/venitului brut?",
+     ""
+    ],
+    [
+     "Nivelul total al veniturilor din chirii și alte venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuții sociale (CASS)?",
+     ""
+    ]
+   ]
+  },
+  {
+   "cand": "2026-10-01 17:17:23",
+   "cine": "motor",
+   "ce": "Până când trebuie depusă declarația unică pentru venitul din chirie încasat în anul 2025, în situația în care este vorba despre închirierea unui apartament din patrimoniul personal, închiriat pentru locuit, iar chiriașul este persoană fizică (deci nu reține impozit la sursă)? Nu se precizează dacă am optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pentru impunerea pe baza venitului brut/normei de venit, și nici dacă nivelul total al veniturilor din chirii și al altor venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuția de asigurări sociale de sănătate (CASS). Vă rog să îmi precizați termenul de depunere a declarației unice în acest caz și, dacă este relevant, cum diferă acesta în funcție de aspectele rămase nespecificate."
+  },
+  {
+   "cand": "2026-10-01 17:17:37",
+   "cine": "Costin",
+   "ce": "confirmat: Până când trebuie depusă declarația unică pentru venitul din chirie încasat în anul 2025, în situația în care este vorba despre închirierea unui apartament din patrimoniul personal, închiriat pentru locuit, iar chiriașul este persoană fizică (deci nu reține impozit la sursă)? Nu se precizează dacă am optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pentru impunerea pe baza venitului brut/normei de venit, și nici dacă nivelul total al veniturilor din chirii și al altor venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuția de asigurări sociale de sănătate (CASS). Vă rog să îmi precizați termenul de depunere a declarației unice în acest caz și, dacă este relevant, cum diferă acesta în funcție de aspectele rămase nespecificate."
+  },
+  {
+   "cand": "2026-10-01 17:19:27",
+   "cine": "motor",
+   "ce": "raspuns"
+  }
+ ],
+ "cost": {
+  "date_lipsa": 0.02266,
+  "reformulare": 0.01172,
+  "raspuns": 0.51433
+ },
+ "folosire": "NU se foloseste la reglaj; material pentru un set viitor, dupa verificare independenta",
+ "date_lipsa": [
+  {
+   "intrebare": "Contractul de închiriere este înregistrat/declarat și chiriașul este persoană fizică sau persoană juridică (care reține impozit la sursă)?",
+   "de_ce_conteaza": "Dacă plătitorul are obligația de reținere la sursă, proprietarul poate să nu mai aibă obligația depunerii declarației unice pentru acel venit; termenul și obligația declarativă diferă."
+  },
+  {
+   "intrebare": "Este vorba de închiriere de bunuri imobile din patrimoniul personal, de camere în scop turistic sau de arendă?",
+   "de_ce_conteaza": "Regulile de stabilire a venitului și obligațiile declarative diferă în funcție de tipul de închiriere."
+  },
+  {
+   "intrebare": "Ați optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pe baza normei/venitului brut?",
+   "de_ce_conteaza": "Regimul de impunere influențează ce se declară și dacă există obligații suplimentare de declarare/regularizare."
+  },
+  {
+   "intrebare": "Nivelul total al veniturilor din chirii și alte venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuții sociale (CASS)?",
+   "de_ce_conteaza": "Dacă apar obligații de contribuții, declarația unică trebuie depusă și pentru acestea, chiar dacă impozitul este reținut la sursă."
+  }
+ ],
+ "presupuneri": [
+  "Utilizatorul este persoană fizică rezidentă în România, proprietar al imobilului închiriat.",
+  "Este vorba de venituri din cedarea folosinței bunurilor (imobil din patrimoniul personal), nu închiriere în scop turistic sau arendă.",
+  "Chiriașul este persoană fizică, deci nu există reținere la sursă, iar proprietarul are obligația declarării venitului realizat în 2025.",
+  "Se discută despre declarația unică de regularizare pentru venitul realizat în anul fiscal 2025, depusă în anul următor.",
+  "Nu se aplică impunerea în sistem real (nu există opțiune exprimată în acest sens)."
+ ],
+ "cifre_nesursate_la_pregatire": [],
+ "completari": [
+  [
+   "Contractul de închiriere este înregistrat/declarat și chiriașul este persoană fizică sau persoană juridică (care reține impozit la sursă)?",
+   "chiriașul este persoană fizică"
+  ],
+  [
+   "Este vorba de închiriere de bunuri imobile din patrimoniul personal, de camere în scop turistic sau de arendă?",
+   "apartament din patrimoniul personal, închiriat pentru locuit"
+  ],
+  [
+   "Ați optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pe baza normei/venitului brut?",
+   ""
+  ],
+  [
+   "Nivelul total al veniturilor din chirii și alte venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuții sociale (CASS)?",
+   ""
+  ]
+ ],
+ "intrebare_reformulata": "Până când trebuie depusă declarația unică pentru venitul din chirie încasat în anul 2025, în situația în care este vorba despre închirierea unui apartament din patrimoniul personal, închiriat pentru locuit, iar chiriașul este persoană fizică (deci nu reține impozit la sursă)? Nu se precizează dacă am optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pentru impunerea pe baza venitului brut/normei de venit, și nici dacă nivelul total al veniturilor din chirii și al altor venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuția de asigurări sociale de sănătate (CASS). Vă rog să îmi precizați termenul de depunere a declarației unice în acest caz și, dacă este relevant, cum diferă acesta în funcție de aspectele rămase nespecificate.",
+ "intrebare_confirmata": "Până când trebuie depusă declarația unică pentru venitul din chirie încasat în anul 2025, în situația în care este vorba despre închirierea unui apartament din patrimoniul personal, închiriat pentru locuit, iar chiriașul este persoană fizică (deci nu reține impozit la sursă)? Nu se precizează dacă am optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pentru impunerea pe baza venitului brut/normei de venit, și nici dacă nivelul total al veniturilor din chirii și al altor venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuția de asigurări sociale de sănătate (CASS). Vă rog să îmi precizați termenul de depunere a declarației unice în acest caz și, dacă este relevant, cum diferă acesta în funcție de aspectele rămase nespecificate.",
+ "raspuns": {
+  "id": "20261001-171636-990dce",
+  "tip": "PAGINA",
+  "intrebare": "Până când trebuie depusă declarația unică pentru venitul din chirie încasat în anul 2025, în situația în care este vorba despre închirierea unui apartament din patrimoniul personal, închiriat pentru locuit, iar chiriașul este persoană fizică (deci nu reține impozit la sursă)? Nu se precizează dacă am optat pentru impunerea în sistem real (contabilitate în partidă simplă) sau pentru impunerea pe baza venitului brut/normei de venit, și nici dacă nivelul total al veniturilor din chirii și al altor venituri extrasalariale obținute în 2025 depășește plafoanele pentru contribuția de asigurări sociale de sănătate (CASS). Vă rog să îmi precizați termenul de depunere a declarației unice în acest caz și, dacă este relevant, cum diferă acesta în funcție de aspectele rămase nespecificate.",
+  "date_din_intrebare": [
+   [
+    "2025-12-31",
+    "an",
+    "2025"
+   ]
+  ],
+  "strat": "navigare v5",
+  "data_referinta": "2025-12-31",
+  "data_referinta_motiv": "Singura dată purtată de întrebare este anul 2025, anul de realizare a venitului din chirie pentru care se stabileşte obligaţia declarativă; termenul de depunere se raportează la acest an fiscal.",
+  "declaratie": "La data de referinţă 31.12.2025, presupun o persoană fizică rezidentă care a obţinut în anul 2025 venituri din cedarea folosinţei bunurilor (închirierea în scop de locuinţă a unui apartament din patrimoniul personal) de la un chiriaş persoană fizică, deci fără reţinere la sursă, şi care are obligaţia de a-şi declara singură venitul realizat prin Declaraţia unică; presupun, acolo unde întrebarea tace, că nu se încadrează în vreo situaţie de exceptare de la depunere şi că eventuala CASS datorată se declară prin aceeaşi declaraţie.",
+  "propunerea_modelului": {
+   "stare": "RASPUNS",
+   "declaratie": "La data de referinţă 31.12.2025, presupun o persoană fizică rezidentă care a obţinut în anul 2025 venituri din cedarea folosinţei bunurilor (închirierea în scop de locuinţă a unui apartament din patrimoniul personal) de la un chiriaş persoană fizică, deci fără reţinere la sursă, şi care are obligaţia de a-şi declara singură venitul realizat prin Declaraţia unică; presupun, acolo unde întrebarea tace, că nu se încadrează în vreo situaţie de exceptare de la depunere şi că eventuala CASS datorată se declară prin aceeaşi declaraţie.",
+   "raspuns": "Termenul de depunere a Declaraţiei unice pentru venitul din chirii realizat în anul 2025 este {termen}. Termenul este acelaşi indiferent de aspectele nespecificate: nu depinde de modul de determinare a venitului net (sistem real, pe baza venitului brut sau normă de venit), întrucât legea fixează un singur termen anual pentru declararea veniturilor realizate, şi nici de depăşirea sau nu a plafoanelor pentru CASS, deoarece contribuţia de asigurări sociale de sănătate aferentă veniturilor din cedarea folosinţei bunurilor se stabileşte şi se declară prin aceeaşi Declaraţie unică, la aceleaşi termene prevăzute la titlul IV - Impozitul pe venit. Dacă plafoanele CASS nu sunt depăşite, se depune oricum declaraţia pentru impozitul pe venit, la acelaşi termen; dacă sunt depăşite, CASS se completează în aceeaşi declaraţie, fără un termen distinct.",
+   "citate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+     "fragment": "Declarația unică privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice se completează și se depune la organul fiscal competent, pentru fiecare an fiscal, până la data de 25 mai inclusiv a anului următor celui de realizare a veniturilor."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art122/alin1",
+     "fragment": "Contribuabilii au obligația depunerii Declarației unice privind impozitul pe venit și contribuțiile sociale la organul fiscal competent, pentru fiecare an fiscal, în cazul în care realizează, individual sau într-o formă de asociere, venituri/pierderi, după caz, din următoarele categorii de venit:"
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art174/alin3",
+     "fragment": "stabilesc și declară contribuția, depun Declarația unică privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice la termenele și în condițiile prevăzute la titlul IV - Impozitul pe venit"
+    },
+    {
+     "atom": "legea_134_2010_codul_de_procedura_civila#art181/alin2",
+     "fragment": "Când ultima zi a unui termen cade într-o zi nelucrătoare, termenul se prelungește până în prima zi lucrătoare care urmează."
+    },
+    {
+     "atom": "legea_53_2003_codul_muncii#art139/alin1",
+     "fragment": "Zilele de sărbătoare legală în care nu se lucrează sunt: – 1 și 2 ianuarie; – 6 ianuarie - Botezul Domnului - Boboteaza; – 7 ianuarie - Soborul Sfântului Proroc Ioan Botezătorul; – 24 ianuarie – Ziua Unirii Principatelor Române; – Vinerea Mare, ultima zi de vineri înaintea Paștelui; – prima și a doua zi de Paști; – 1 mai; – 1 iunie; – prima și a doua zi de Rusalii;"
+    }
+   ],
+   "lipsa": [],
+   "derogari_tratate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art174",
+     "cum": "Derogările din OUG 115/2023 art. LXI vizează expres art. 174 alin. (3^2), (5), (6), (6^1), (7) şi (17) din Codul fiscal, nu alin. (3), textul pe care îl citez pentru termenul de declarare a CASS; prin urmare nu afectează termenul de depunere a Declaraţiei unice."
+    }
+   ],
+   "motiv": "",
+   "calcule": [
+    {
+     "nume": "an_depunere",
+     "formula": "an_venit + 1",
+     "operanzi": [
+      {
+       "nume": "an_venit",
+       "valoare": "2025",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "venitul din chirie încasat în anul 2025",
+       "data_aplicarii": ""
+      }
+     ]
+    },
+    {
+     "nume": "termen",
+     "formula": "termen_efectiv(data(zi_termen, luna_termen, an_depunere))",
+     "operanzi": [
+      {
+       "nume": "zi_termen",
+       "valoare": "25",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+       "fragment": "până la data de 25 mai inclusiv a anului următor celui de realizare a veniturilor",
+       "data_aplicarii": "",
+       "valabil_din": null,
+       "valabil_pana": null
+      },
+      {
+       "nume": "luna_termen",
+       "valoare": "mai",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+       "fragment": "se depune la organul fiscal competent, pentru fiecare an fiscal, până la data de 25 mai inclusiv",
+       "data_aplicarii": "",
+       "valabil_din": null,
+       "valabil_pana": null
+      }
+     ]
+    }
+   ],
+   "alegeri_temei": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+     "alternativa": "cod_fiscal_227_2015_consolidat#art119/alin2",
+     "conditie": "se completează și se depune la organul fiscal competent, pentru fiecare an fiscal, până la data de 25 mai inclusiv a anului următor celui de realizare a veniturilor"
+    }
+   ],
+   "data_referinta": "2025-12-31",
+   "data_referinta_motiv": "Singura dată purtată de întrebare este anul 2025, anul de realizare a venitului din chirie pentru care se stabileşte obligaţia declarativă; termenul de depunere se raportează la acest an fiscal."
+  },
+  "apel": {
+   "model": "claude-opus-5",
+   "tururi": 10,
+   "pasi_navigare": 12,
+   "pasi": [
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "Declaraţia unică privind impozitul pe venit şi contribuţiile sociale datorate se depune până la data de 25 mai inclusiv a anului următor"
+     }
+    },
+    {
+     "unealta": "cuprins",
+     "intrare": {
+      "act": "cod_fiscal_227_2015_consolidat",
+      "filtru": "Declaraţia unică privind impozitul pe venit şi contribuţiile sociale"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art122/alin3"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art119/alin2"
+     }
+    },
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "termenul care se sfârșește într-o zi de sărbătoare legală sau când serviciul este suspendat se va prelungi până la sfârșitul primei zile de lucru următoare"
+     }
+    },
+    {
+     "unealta": "cuprins",
+     "intrare": {
+      "act": "legea_134_2010_codul_de_procedura_civila",
+      "filtru": "termen"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_53_2003_codul_muncii#art139/alin1"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_134_2010_codul_de_procedura_civila#art181"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_134_2010_codul_de_procedura_civila#art181/alin2"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art122/alin1"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art174"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art174/alin3"
+     }
+    }
+   ],
+   "reincercari_C23": 0,
+   "probleme_C23": [],
+   "tokeni": {
+    "intrare": 20,
+    "iesire": 6222,
+    "cache_scriere": 45536,
+    "cache_citire": 148154
+   },
+   "cost_usd": 0.51433,
+   "fallback": false,
+   "secunde": 110.19
+  },
+  "verificare": {
+   "trece": true,
+   "incalcari": []
+  },
+  "relatii_in_context": {
+   "oug_115_2023_consolidat#artLXI/alin1": [
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art174"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art174"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art174"
+    ]
+   ],
+   "oug_115_2023_consolidat#artLXI/alin2": [
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art174"
+    ]
+   ],
+   "oug_115_2023_consolidat#artLXI/alin3": [
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art174"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art174"
+    ]
+   ]
+  },
+  "derogari_tratate": [
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art174",
+    "cum": "Derogările din OUG 115/2023 art. LXI vizează expres art. 174 alin. (3^2), (5), (6), (6^1), (7) şi (17) din Codul fiscal, nu alin. (3), textul pe care îl citez pentru termenul de declarare a CASS; prin urmare nu afectează termenul de depunere a Declaraţiei unice."
+   }
+  ],
+  "stare": "RASPUNS",
+  "raspuns": "Termenul de depunere a Declaraţiei unice pentru venitul din chirii realizat în anul 2025 este 25.05.2026. Termenul este acelaşi indiferent de aspectele nespecificate: nu depinde de modul de determinare a venitului net (sistem real, pe baza venitului brut sau normă de venit), întrucât legea fixează un singur termen anual pentru declararea veniturilor realizate, şi nici de depăşirea sau nu a plafoanelor pentru CASS, deoarece contribuţia de asigurări sociale de sănătate aferentă veniturilor din cedarea folosinţei bunurilor se stabileşte şi se declară prin aceeaşi Declaraţie unică, la aceleaşi termene prevăzute la titlul IV - Impozitul pe venit. Dacă plafoanele CASS nu sunt depăşite, se depune oricum declaraţia pentru impozitul pe venit, la acelaşi termen; dacă sunt depăşite, CASS se completează în aceeaşi declaraţie, fără un termen distinct.  [calcul: an_depunere = an_venit + 1 = (2025 + 1) = 2026; termen_efectiv(25.05.2026) = 25.05.2026 (zi lucrătoare: luni); date mobile calculate pentru 2026 (Paștele ortodox: algoritmul Meeus pentru calendarul iulian + 13 zile): Vinerea Mare = 10.04.2026; Paștele ortodox = 12.04.2026; Rusaliile = Paștele + 49 de zile = 31.05.2026; sărbători numite în art. 139 fără dată, cu data de calendar liturgic fix (dată de calendar, nescrisă în lege): Adormirea Maicii Domnului = 15.08.2026; Crăciunul = 25-26.12.2026; termen = termen_efectiv(data(zi_termen, luna_termen, an_depunere)) = termen_efectiv(data(25, 5, 2026)) = 25.05.2026]  [data de referință: 31.12.2025 — Singura dată purtată de întrebare este anul 2025, anul de realizare a venitului din chirie pentru care se stabileşte obligaţia declarativă; termenul de depunere se raportează la acest an fiscal.]",
+  "argument": [
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+    "temei": "Codul fiscal (Legea 227/2015) art. 122 alin. (3)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Declarația unică privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice se completează și se depune la organul fiscal competent, pentru fiecare an fiscal, până la data de 25 mai inclusiv a anului următor celui de realizare a veniturilor.",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art122/alin1",
+    "temei": "Codul fiscal (Legea 227/2015) art. 122 alin. (1)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Contribuabilii au obligația depunerii Declarației unice privind impozitul pe venit și contribuțiile sociale la organul fiscal competent, pentru fiecare an fiscal, în cazul în care realizează, individual sau într-o formă de asociere, venituri/pierderi, după caz, din următoarele categorii de venit:",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art174/alin3",
+    "temei": "Codul fiscal (Legea 227/2015) art. 174 alin. (3)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "stabilesc și declară contribuția, depun Declarația unică privind impozitul pe venit și contribuțiile sociale datorate de persoanele fizice la termenele și în condițiile prevăzute la titlul IV - Impozitul pe venit",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "legea_134_2010_codul_de_procedura_civila#art181/alin2",
+    "temei": "Legea 134/2010 art. 181 alin. (2)",
+    "act": "legea_134_2010_codul_de_procedura_civila",
+    "verbatim": "Când ultima zi a unui termen cade într-o zi nelucrătoare, termenul se prelungește până în prima zi lucrătoare care urmează.",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "legea_53_2003_codul_muncii#art139/alin1",
+    "temei": "Codul muncii (Legea 53/2003) art. 139 alin. (1)",
+    "act": "legea_53_2003_codul_muncii",
+    "verbatim": "Zilele de sărbătoare legală în care nu se lucrează sunt: – 1 și 2 ianuarie; – 6 ianuarie - Botezul Domnului - Boboteaza; – 7 ianuarie - Soborul Sfântului Proroc Ioan Botezătorul; – 24 ianuarie – Ziua Unirii Principatelor Române; – Vinerea Mare, ultima zi de vineri înaintea Paștelui; – prima și a doua zi de Paști; – 1 mai; – 1 iunie; – prima și a doua zi de Rusalii;",
+    "valabilitate": {
+     "valabil_din": "2023-03-09",
+     "la_data_intrebarii": true
+    }
+   }
+  ],
+  "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+  "traseu": "cauta(Declaraţia unică privind impozitul pe venit şi contribuţiile sociale datorate se depune până la data de 25 mai inclusiv a anului următor) → cuprins(cod_fiscal_227_2015_consolidat, Declaraţia unică privind impozitul pe venit şi contribuţiile sociale) → deschide(cod_fiscal_227_2015_consolidat#art122/alin3) → deschide(cod_fiscal_227_2015_consolidat#art119/alin2) → cauta(termenul care se sfârșește într-o zi de sărbătoare legală sau când serviciul este suspendat se va prelungi până la sfârșitul primei zile de lucru următoare) → cuprins(legea_134_2010_codul_de_procedura_civila, termen) → deschide(legea_53_2003_codul_muncii#art139/alin1) → deschide(legea_134_2010_codul_de_procedura_civila#art181) → deschide(legea_134_2010_codul_de_procedura_civila#art181/alin2) → deschide(cod_fiscal_227_2015_consolidat#art122/alin1) → deschide(cod_fiscal_227_2015_consolidat#art174) → deschide(cod_fiscal_227_2015_consolidat#art174/alin3)",
+  "calcule": [
+   {
+    "nume": "an_depunere",
+    "formula": "an_venit + 1",
+    "cu_valori": "(2025 + 1)",
+    "zile": [],
+    "rezultat": "2026",
+    "operanzi": [
+     {
+      "nume": "an_venit",
+      "valoare": "2025",
+      "eticheta": "FAPT_CAZ",
+      "atom": "",
+      "fragment": "venitul din chirie încasat în anul 2025",
+      "data_aplicarii": ""
+     }
+    ]
+   },
+   {
+    "nume": "termen",
+    "formula": "termen_efectiv(data(zi_termen, luna_termen, an_depunere))",
+    "cu_valori": "termen_efectiv(data(25, 5, 2026))",
+    "zile": [
+     "termen_efectiv(25.05.2026) = 25.05.2026 (zi lucrătoare: luni); date mobile calculate pentru 2026 (Paștele ortodox: algoritmul Meeus pentru calendarul iulian + 13 zile): Vinerea Mare = 10.04.2026; Paștele ortodox = 12.04.2026; Rusaliile = Paștele + 49 de zile = 31.05.2026; sărbători numite în art. 139 fără dată, cu data de calendar liturgic fix (dată de calendar, nescrisă în lege): Adormirea Maicii Domnului = 15.08.2026; Crăciunul = 25-26.12.2026"
+    ],
+    "rezultat": "25.05.2026",
+    "operanzi": [
+     {
+      "nume": "zi_termen",
+      "valoare": "25",
+      "eticheta": "VALOARE_LEGALA",
+      "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+      "fragment": "până la data de 25 mai inclusiv a anului următor celui de realizare a veniturilor",
+      "data_aplicarii": "",
+      "valabil_din": null,
+      "valabil_pana": null
+     },
+     {
+      "nume": "luna_termen",
+      "valoare": "mai",
+      "eticheta": "VALOARE_LEGALA",
+      "atom": "cod_fiscal_227_2015_consolidat#art122/alin3",
+      "fragment": "se depune la organul fiscal competent, pentru fiecare an fiscal, până la data de 25 mai inclusiv",
+      "data_aplicarii": "",
+      "valabil_din": null,
+      "valabil_pana": null
+     }
+    ]
+   }
+  ],
+  "atomi_decisivi": {
+   "cod_fiscal_227_2015_consolidat#art122/alin3": "mai"
+  }
+ }
+}

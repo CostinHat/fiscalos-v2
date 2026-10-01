@@ -6,3 +6,5 @@ venv/
 corpus/
 # Stratul de text e derivat mecanic din corpus (pdftotext/html->text): se regenereaza, nu se versioneaza.
 artefacte/strat_text/
+# Intrebarile lui Costin de pe pagina: date personale de lucru, NU intra in git si NU se folosesc la reglaj.
+pagina_date/

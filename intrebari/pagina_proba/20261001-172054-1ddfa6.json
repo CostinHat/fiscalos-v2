@@ -1,0 +1,517 @@
+{
+ "id": "20261001-172054-1ddfa6",
+ "creat": "2026-10-01 17:20:54",
+ "intrebare": "Cât impozit pe dividende reține o firmă din România la o distribuire de dividende cu plata efectuată la data de 10.03.2026, dacă beneficiarul este o persoană fizică rezidentă fiscal în România, iar suma de 10.000 lei reprezintă dividendul brut repartizat? Vă rog să precizați impozitul pe dividende de reținut la sursă, suma netă rămasă de plată către asociat, precum și termenul și modalitatea de declarare și plată a impozitului. Menționez că nu am specificat alte elemente (de exemplu, dacă dividendele provin din profitul unui anumit exercițiu financiar sau dacă sunt dividende interimare), deci acestea rămân nespecificate.",
+ "continua": "20261001-171647-7b923c",
+ "stare": "raspuns",
+ "cost": {
+  "reformulare": 0.01328,
+  "raspuns": 0.62662
+ },
+ "folosire": "NU se foloseste la reglaj; material pentru un set viitor, dupa verificare independenta",
+ "date_lipsa": [
+  {
+   "intrebare": "Data distribuirii (repartizării) dividendelor – dacă distribuirea a fost aprobată/efectuată înainte de 1 ianuarie 2026 sau începând cu 1 ianuarie 2026",
+   "de_ce_conteaza": "cerut de motor după citirea legii (întrebarea 20261001-171647-7b923c)"
+  },
+  {
+   "intrebare": "Dacă este vorba de dividende interimare repartizate în cursul anului 2025 ori de dividende din profitul unui exercițiu financiar aprobat în 2026",
+   "de_ce_conteaza": "cerut de motor după citirea legii (întrebarea 20261001-171647-7b923c)"
+  }
+ ],
+ "presupuneri": [],
+ "cifre_nesursate_la_pregatire": [],
+ "dialog": [
+  {
+   "cand": "2026-10-01 17:20:54",
+   "cine": "Costin",
+   "ce": "continuare a 20261001-171647-7b923c"
+  },
+  {
+   "cand": "2026-10-01 17:20:54",
+   "cine": "Costin",
+   "ce": [
+    [
+     "Data distribuirii (repartizării) dividendelor – dacă distribuirea a fost aprobată/efectuată înainte de 1 ianuarie 2026 sau începând cu 1 ianuarie 2026",
+     "distribuirea a fost aprobată de adunarea generală pe 20.02.2026"
+    ],
+    [
+     "Dacă este vorba de dividende interimare repartizate în cursul anului 2025 ori de dividende din profitul unui exercițiu financiar aprobat în 2026",
+     "dividende anuale din profitul exercițiului financiar 2025, aprobat în 2026; nu sunt interimare"
+    ]
+   ]
+  },
+  {
+   "cand": "2026-10-01 17:21:00",
+   "cine": "motor",
+   "ce": "Cât impozit pe dividende reține o firmă din România la o distribuire de dividende către o persoană fizică rezidentă fiscal în România, în următoarea situație: dividendele sunt dividende anuale din profitul exercițiului financiar 2025 (nu sunt dividende interimare), distribuirea a fost aprobată de adunarea generală a asociaților la data de 20.02.2026, iar plata efectivă către asociat se face la data de 10.03.2026, suma de 10.000 lei reprezentând dividendul brut repartizat? Vă rog să precizați: (1) impozitul pe dividende de reținut la sursă, (2) suma netă rămasă de plată către asociat și (3) termenul și modalitatea de declarare și de plată a impozitului reținut. Alte elemente nu au fost specificate și rămân nespecificate."
+  },
+  {
+   "cand": "2026-10-01 17:21:00",
+   "cine": "Costin",
+   "ce": "confirmat: Cât impozit pe dividende reține o firmă din România la o distribuire de dividende către o persoană fizică rezidentă fiscal în România, în următoarea situație: dividendele sunt dividende anuale din profitul exercițiului financiar 2025 (nu sunt dividende interimare), distribuirea a fost aprobată de adunarea generală a asociaților la data de 20.02.2026, iar plata efectivă către asociat se face la data de 10.03.2026, suma de 10.000 lei reprezentând dividendul brut repartizat? Vă rog să precizați: (1) impozitul pe dividende de reținut la sursă, (2) suma netă rămasă de plată către asociat și (3) termenul și modalitatea de declarare și de plată a impozitului reținut. Alte elemente nu au fost specificate și rămân nespecificate."
+  },
+  {
+   "cand": "2026-10-01 17:23:28",
+   "cine": "motor",
+   "ce": "raspuns"
+  }
+ ],
+ "completari": [
+  [
+   "Data distribuirii (repartizării) dividendelor – dacă distribuirea a fost aprobată/efectuată înainte de 1 ianuarie 2026 sau începând cu 1 ianuarie 2026",
+   "distribuirea a fost aprobată de adunarea generală pe 20.02.2026"
+  ],
+  [
+   "Dacă este vorba de dividende interimare repartizate în cursul anului 2025 ori de dividende din profitul unui exercițiu financiar aprobat în 2026",
+   "dividende anuale din profitul exercițiului financiar 2025, aprobat în 2026; nu sunt interimare"
+  ]
+ ],
+ "intrebare_reformulata": "Cât impozit pe dividende reține o firmă din România la o distribuire de dividende către o persoană fizică rezidentă fiscal în România, în următoarea situație: dividendele sunt dividende anuale din profitul exercițiului financiar 2025 (nu sunt dividende interimare), distribuirea a fost aprobată de adunarea generală a asociaților la data de 20.02.2026, iar plata efectivă către asociat se face la data de 10.03.2026, suma de 10.000 lei reprezentând dividendul brut repartizat? Vă rog să precizați: (1) impozitul pe dividende de reținut la sursă, (2) suma netă rămasă de plată către asociat și (3) termenul și modalitatea de declarare și de plată a impozitului reținut. Alte elemente nu au fost specificate și rămân nespecificate.",
+ "intrebare_confirmata": "Cât impozit pe dividende reține o firmă din România la o distribuire de dividende către o persoană fizică rezidentă fiscal în România, în următoarea situație: dividendele sunt dividende anuale din profitul exercițiului financiar 2025 (nu sunt dividende interimare), distribuirea a fost aprobată de adunarea generală a asociaților la data de 20.02.2026, iar plata efectivă către asociat se face la data de 10.03.2026, suma de 10.000 lei reprezentând dividendul brut repartizat? Vă rog să precizați: (1) impozitul pe dividende de reținut la sursă, (2) suma netă rămasă de plată către asociat și (3) termenul și modalitatea de declarare și de plată a impozitului reținut. Alte elemente nu au fost specificate și rămân nespecificate.",
+ "raspuns": {
+  "id": "20261001-172054-1ddfa6",
+  "tip": "PAGINA",
+  "intrebare": "Cât impozit pe dividende reține o firmă din România la o distribuire de dividende către o persoană fizică rezidentă fiscal în România, în următoarea situație: dividendele sunt dividende anuale din profitul exercițiului financiar 2025 (nu sunt dividende interimare), distribuirea a fost aprobată de adunarea generală a asociaților la data de 20.02.2026, iar plata efectivă către asociat se face la data de 10.03.2026, suma de 10.000 lei reprezentând dividendul brut repartizat? Vă rog să precizați: (1) impozitul pe dividende de reținut la sursă, (2) suma netă rămasă de plată către asociat și (3) termenul și modalitatea de declarare și de plată a impozitului reținut. Alte elemente nu au fost specificate și rămân nespecificate.",
+  "date_din_intrebare": [
+   [
+    "2026-02-20",
+    "zi",
+    "20.02.2026"
+   ],
+   [
+    "2026-03-10",
+    "zi",
+    "10.03.2026"
+   ],
+   [
+    "2025-12-31",
+    "an",
+    "2025"
+   ]
+  ],
+  "strat": "navigare v5",
+  "data_referinta": "2026-03-10",
+  "data_referinta_motiv": "Faptul întrebat este impozitul reținut la sursă odată cu plata dividendelor și termenul de virare, care se raportează la data plății efective, 10.03.2026.",
+  "declaratie": "La data de referință 10.03.2026 presupun o societate română plătitoare de dividende care distribuie, în baza situațiilor financiare anuale aferente exercițiului 2025 (nu dividende interimare), dividende aprobate de AGA la 20.02.2026 și plătite la 10.03.2026 către o persoană fizică rezidentă fiscal în România, impozitul fiind reținut la sursă, cu reguli de drept comun (nespecificate: scutiri, convenții de evitare a dublei impuneri, alte venituri ale asociatului, care nu influențează impozitul pe dividende reținut).",
+  "propunerea_modelului": {
+   "stare": "RASPUNS",
+   "declaratie": "La data de referință 10.03.2026 presupun o societate română plătitoare de dividende care distribuie, în baza situațiilor financiare anuale aferente exercițiului 2025 (nu dividende interimare), dividende aprobate de AGA la 20.02.2026 și plătite la 10.03.2026 către o persoană fizică rezidentă fiscal în România, impozitul fiind reținut la sursă, cu reguli de drept comun (nespecificate: scutiri, convenții de evitare a dublei impuneri, alte venituri ale asociatului, care nu influențează impozitul pe dividende reținut).",
+   "raspuns": "(1) Cota aplicabilă este 16% (dividende distribuite începând cu 1 ianuarie 2026, distribuire aprobată la 20.02.2026), deci impozitul pe dividende reținut la sursă din dividendul brut de 10.000 lei este {impozit} lei. (2) Suma netă rămasă de plată către asociat este {net} lei. (3) Societatea calculează și reține impozitul odată cu plata dividendelor (10.03.2026), iar impozitul se declară și se virează integral la bugetul de stat până la {termen_plata} (termenul legal fiind ziua de 25 inclusiv a lunii următoare celei în care s-a făcut plata, prelungit fiind că ziua de 25 cade într-o zi nelucrătoare); modalitatea: reținere la sursă de către plătitorul de venit, declarare prin declarația privind obligațiile de plată la bugetul de stat depusă până la termenul de plată inclusiv și virare prin plată la bugetul de stat. Suplimentar, pentru anul expirat, plătitorul depune și declarația privind calcularea și reținerea impozitului pentru fiecare beneficiar de venit. Impozitul este final.",
+   "citate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+     "fragment": "Veniturile sub formă de dividende, inclusiv câștigul obținut ca urmare a deținerii de titluri de participare definite de legislația în materie la organisme de plasament colectiv, se impozitează cu o cotă de 16% din suma acestora, impozitul fiind final."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+     "fragment": "Obligația calculării și reținerii impozitului pe veniturile sub formă de dividende revine persoanelor juridice, odată cu plata dividendelor/sumelor reprezentând câștigul obținut ca urmare a deținerii de titluri de participare de către acționari/ asociați/investitori. Termenul de virare a impozitului este până la data de 25 inclusiv a lunii următoare celei în care se face plata."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art132/alin1",
+     "fragment": "Plătitorii de venituri, cu regim de reținere la sursă a impozitelor, sunt obligați să calculeze, să rețină, să plătească și să declare impozitul reținut la sursă, până la termenul de plată a acestuia inclusiv."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art132/alin2",
+     "fragment": "Plătitorii de venituri cu regim de reținere la sursă a impozitelor au obligația să depună o declarație privind calcularea și reținerea impozitului pentru fiecare beneficiar de venit la organul fiscal competent"
+    },
+    {
+     "atom": "legea_134_2010_codul_de_procedura_civila#art181/alin2",
+     "fragment": "Când ultima zi a unui termen cade într-o zi nelucrătoare, termenul se prelungește până în prima zi lucrătoare care urmează."
+    },
+    {
+     "atom": "legea_53_2003_codul_muncii#art139/alin1",
+     "fragment": "Zilele de sărbătoare legală în care nu se lucrează sunt: – 1 și 2 ianuarie; – 6 ianuarie - Botezul Domnului - Boboteaza; – 7 ianuarie - Soborul Sfântului Proroc Ioan Botezătorul; – 24 ianuarie – Ziua Unirii Principatelor Române; – Vinerea Mare, ultima zi de vineri înaintea Paștelui; – prima și a doua zi de Paști; – 1 mai; – 1 iunie;"
+    }
+   ],
+   "lipsa": [],
+   "derogari_tratate": [
+    {
+     "atom": "legea_141_2025_consolidat#artVII/alin2",
+     "cum": "Regula de 10% vizează exclusiv dividendele distribuite în baza situațiilor financiare interimare întocmite în cursul anului 2025; în cazul din întrebare nu sunt dividende interimare, ci dividende anuale din profitul exercițiului 2025 distribuite prin hotărâre AGA din 20.02.2026, deci se aplică cota de 16%."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art43/alin3",
+     "cum": "Excepția privind dividendele distribuite și neplătite până la sfârșitul anului în care s-a aprobat distribuirea (plată a impozitului până la 25 ianuarie a anului următor) nu se aplică: dividendele au fost plătite efectiv la 10.03.2026, în același an în care s-a aprobat distribuirea; de altfel art. 43 reglementează dividendele către persoane juridice române."
+    }
+   ],
+   "motiv": "",
+   "calcule": [
+    {
+     "nume": "impozit",
+     "formula": "dividend_brut * cota",
+     "operanzi": [
+      {
+       "nume": "dividend_brut",
+       "valoare": "10.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "suma de 10.000 lei reprezentând dividendul brut repartizat",
+       "data_aplicarii": ""
+      },
+      {
+       "nume": "cota",
+       "valoare": "16%",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+       "fragment": "se impozitează cu o cotă de 16% din suma acestora, impozitul fiind final",
+       "data_aplicarii": "",
+       "valabil_din": "2025-08-01",
+       "valabil_pana": null
+      }
+     ]
+    },
+    {
+     "nume": "net",
+     "formula": "dividend_brut - impozit",
+     "operanzi": [
+      {
+       "nume": "dividend_brut",
+       "valoare": "10.000",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "suma de 10.000 lei reprezentând dividendul brut repartizat",
+       "data_aplicarii": ""
+      }
+     ]
+    },
+    {
+     "nume": "luna_termen",
+     "formula": "luna_plata + 1",
+     "operanzi": [
+      {
+       "nume": "luna_plata",
+       "valoare": "03",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "plata efectivă către asociat se face la data de 10.03.2026",
+       "data_aplicarii": ""
+      }
+     ]
+    },
+    {
+     "nume": "termen_plata",
+     "formula": "termen_efectiv(data(zi_termen, luna_termen, an_plata))",
+     "operanzi": [
+      {
+       "nume": "zi_termen",
+       "valoare": "25",
+       "eticheta": "VALOARE_LEGALA",
+       "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+       "fragment": "Termenul de virare a impozitului este până la data de 25 inclusiv a lunii următoare celei în care se face plata.",
+       "data_aplicarii": "",
+       "valabil_din": "2025-08-01",
+       "valabil_pana": null
+      },
+      {
+       "nume": "an_plata",
+       "valoare": "2026",
+       "eticheta": "FAPT_CAZ",
+       "atom": "",
+       "fragment": "plata efectivă către asociat se face la data de 10.03.2026",
+       "data_aplicarii": ""
+      }
+     ]
+    }
+   ],
+   "alegeri_temei": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+     "alternativa": "cod_fiscal_227_2015_consolidat#art43/alin2",
+     "conditie": "Veniturile sub formă de dividende, inclusiv câștigul obținut ca urmare a deținerii de titluri de participare definite de legislația în materie la organisme de plasament colectiv, se impozitează cu o cotă de 16% din suma acestora, impozitul fiind final."
+    }
+   ],
+   "data_referinta": "2026-03-10",
+   "data_referinta_motiv": "Faptul întrebat este impozitul reținut la sursă odată cu plata dividendelor și termenul de virare, care se raportează la data plății efective, 10.03.2026."
+  },
+  "apel": {
+   "model": "claude-opus-5",
+   "tururi": 12,
+   "pasi_navigare": 15,
+   "pasi": [
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "impozitul pe dividende se stabileste prin aplicarea unei cote de impozit asupra dividendului brut"
+     }
+    },
+    {
+     "unealta": "cuprins",
+     "intrare": {
+      "act": "cod_fiscal_227_2015_consolidat",
+      "filtru": "dividende"
+     }
+    },
+    {
+     "unealta": "cuprins",
+     "intrare": {
+      "act": "cod_fiscal_227_2015_consolidat",
+      "filtru": "investiții"
+     }
+    },
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "venituri din dividende obligația calculării și reținerii impozitului la data plății dividendelor persoană fizică"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art97/alin7"
+     }
+    },
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "dividende distribuite situații financiare interimare 2025 cota de 10% regularizare"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art132"
+     }
+    },
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "formular 100 declaraţie privind obligaţiile de plată la bugetul de stat impozit pe dividende distribuite persoanelor fizice"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art132/alin2"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_141_2025_consolidat#artVII/alin2"
+     }
+    },
+    {
+     "unealta": "cuprins",
+     "intrare": {
+      "act": "opanaf_57_2026_d100_d710",
+      "filtru": "dividende"
+     }
+    },
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "Impozit pe veniturile din dividende distribuite persoanelor fizice nomenclatorul obligaţiilor de plată"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_134_2010_codul_de_procedura_civila#art181/alin2"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_53_2003_codul_muncii#art139/alin1"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art132/alin1"
+     }
+    }
+   ],
+   "reincercari_C23": 0,
+   "probleme_C23": [],
+   "tokeni": {
+    "intrare": 24,
+    "iesire": 11499,
+    "cache_scriere": 39918,
+    "cache_citire": 179068
+   },
+   "cost_usd": 0.62662,
+   "fallback": false,
+   "secunde": 147.31
+  },
+  "verificare": {
+   "trece": true,
+   "incalcari": []
+  },
+  "relatii_in_context": {},
+  "derogari_tratate": [
+   {
+    "atom": "legea_141_2025_consolidat#artVII/alin2",
+    "cum": "Regula de 10% vizează exclusiv dividendele distribuite în baza situațiilor financiare interimare întocmite în cursul anului 2025; în cazul din întrebare nu sunt dividende interimare, ci dividende anuale din profitul exercițiului 2025 distribuite prin hotărâre AGA din 20.02.2026, deci se aplică cota de 16%."
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art43/alin3",
+    "cum": "Excepția privind dividendele distribuite și neplătite până la sfârșitul anului în care s-a aprobat distribuirea (plată a impozitului până la 25 ianuarie a anului următor) nu se aplică: dividendele au fost plătite efectiv la 10.03.2026, în același an în care s-a aprobat distribuirea; de altfel art. 43 reglementează dividendele către persoane juridice române."
+   }
+  ],
+  "stare": "RASPUNS",
+  "raspuns": "(1) Cota aplicabilă este 16% (dividende distribuite începând cu 1 ianuarie 2026, distribuire aprobată la 20.02.2026), deci impozitul pe dividende reținut la sursă din dividendul brut de 10.000 lei este 1.600 lei. (2) Suma netă rămasă de plată către asociat este 8.400 lei. (3) Societatea calculează și reține impozitul odată cu plata dividendelor (10.03.2026), iar impozitul se declară și se virează integral la bugetul de stat până la 27.04.2026 (termenul legal fiind ziua de 25 inclusiv a lunii următoare celei în care s-a făcut plata, prelungit fiind că ziua de 25 cade într-o zi nelucrătoare); modalitatea: reținere la sursă de către plătitorul de venit, declarare prin declarația privind obligațiile de plată la bugetul de stat depusă până la termenul de plată inclusiv și virare prin plată la bugetul de stat. Suplimentar, pentru anul expirat, plătitorul depune și declarația privind calcularea și reținerea impozitului pentru fiecare beneficiar de venit. Impozitul este final.  [calcul: impozit = dividend_brut * cota = (10.000 × 16%) = 1.600; net = dividend_brut - impozit = (10.000 − 1.600) = 8.400; luna_termen = luna_plata + 1 = (3 + 1) = 4; termen_efectiv(25.04.2026) = 27.04.2026: 25.04.2026 sâmbătă, 26.04.2026 duminică → prima zi lucrătoare, 27.04.2026 (luni). Regula: `legea_134_2010_codul_de_procedura_civila#art181/alin2`; sărbătorile: `legea_53_2003_codul_muncii#art139/alin1`; date mobile calculate pentru 2026 (Paștele ortodox: algoritmul Meeus pentru calendarul iulian + 13 zile): Vinerea Mare = 10.04.2026; Paștele ortodox = 12.04.2026; Rusaliile = Paștele + 49 de zile = 31.05.2026; sărbători numite în art. 139 fără dată, cu data de calendar liturgic fix (dată de calendar, nescrisă în lege): Adormirea Maicii Domnului = 15.08.2026; Crăciunul = 25-26.12.2026; termen_plata = termen_efectiv(data(zi_termen, luna_termen, an_plata)) = termen_efectiv(data(25, 4, 2.026)) = 27.04.2026]  [data de referință: 10.03.2026 — Faptul întrebat este impozitul reținut la sursă odată cu plata dividendelor și termenul de virare, care se raportează la data plății efective, 10.03.2026.]",
+  "argument": [
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+    "temei": "Codul fiscal (Legea 227/2015) art. 97 alin. (7)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Veniturile sub formă de dividende, inclusiv câștigul obținut ca urmare a deținerii de titluri de participare definite de legislația în materie la organisme de plasament colectiv, se impozitează cu o cotă de 16% din suma acestora, impozitul fiind final.",
+    "valabilitate": {
+     "valabil_din": "2025-08-01",
+     "la_data_intrebarii": true
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+    "temei": "Codul fiscal (Legea 227/2015) art. 97 alin. (7)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Obligația calculării și reținerii impozitului pe veniturile sub formă de dividende revine persoanelor juridice, odată cu plata dividendelor/sumelor reprezentând câștigul obținut ca urmare a deținerii de titluri de participare de către acționari/ asociați/investitori. Termenul de virare a impozitului este până la data de 25 inclusiv a lunii următoare celei în care se face plata.",
+    "valabilitate": {
+     "valabil_din": "2025-08-01",
+     "la_data_intrebarii": true
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art132/alin1",
+    "temei": "Codul fiscal (Legea 227/2015) art. 132 alin. (1)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Plătitorii de venituri, cu regim de reținere la sursă a impozitelor, sunt obligați să calculeze, să rețină, să plătească și să declare impozitul reținut la sursă, până la termenul de plată a acestuia inclusiv.",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art132/alin2",
+    "temei": "Codul fiscal (Legea 227/2015) art. 132 alin. (2)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Plătitorii de venituri cu regim de reținere la sursă a impozitelor au obligația să depună o declarație privind calcularea și reținerea impozitului pentru fiecare beneficiar de venit la organul fiscal competent",
+    "valabilitate": {
+     "valabil_din": "2021-12-18",
+     "la_data_intrebarii": true
+    }
+   },
+   {
+    "atom": "legea_134_2010_codul_de_procedura_civila#art181/alin2",
+    "temei": "Legea 134/2010 art. 181 alin. (2)",
+    "act": "legea_134_2010_codul_de_procedura_civila",
+    "verbatim": "Când ultima zi a unui termen cade într-o zi nelucrătoare, termenul se prelungește până în prima zi lucrătoare care urmează.",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "legea_53_2003_codul_muncii#art139/alin1",
+    "temei": "Codul muncii (Legea 53/2003) art. 139 alin. (1)",
+    "act": "legea_53_2003_codul_muncii",
+    "verbatim": "Zilele de sărbătoare legală în care nu se lucrează sunt: – 1 și 2 ianuarie; – 6 ianuarie - Botezul Domnului - Boboteaza; – 7 ianuarie - Soborul Sfântului Proroc Ioan Botezătorul; – 24 ianuarie – Ziua Unirii Principatelor Române; – Vinerea Mare, ultima zi de vineri înaintea Paștelui; – prima și a doua zi de Paști; – 1 mai; – 1 iunie;",
+    "valabilitate": {
+     "valabil_din": "2023-03-09",
+     "la_data_intrebarii": true
+    }
+   }
+  ],
+  "motiv": "propus de model, trecut prin verificarea mecanica: citate verbatim, cifre literale",
+  "traseu": "cauta(impozitul pe dividende se stabileste prin aplicarea unei cote de impozit asupra dividendului brut) → cuprins(cod_fiscal_227_2015_consolidat, dividende) → cuprins(cod_fiscal_227_2015_consolidat, investiții) → cauta(venituri din dividende obligația calculării și reținerii impozitului la data plății dividendelor persoană fizică) → deschide(cod_fiscal_227_2015_consolidat#art97/alin7) → cauta(dividende distribuite situații financiare interimare 2025 cota de 10% regularizare) → deschide(cod_fiscal_227_2015_consolidat#art132) → cauta(formular 100 declaraţie privind obligaţiile de plată la bugetul de stat impozit pe dividende distribuite persoanelor fizice) → deschide(cod_fiscal_227_2015_consolidat#art132/alin2) → deschide(legea_141_2025_consolidat#artVII/alin2) → cuprins(opanaf_57_2026_d100_d710, dividende) → cauta(Impozit pe veniturile din dividende distribuite persoanelor fizice nomenclatorul obligaţiilor de plată) → deschide(legea_134_2010_codul_de_procedura_civila#art181/alin2) → deschide(legea_53_2003_codul_muncii#art139/alin1) → deschide(cod_fiscal_227_2015_consolidat#art132/alin1)",
+  "calcule": [
+   {
+    "nume": "impozit",
+    "formula": "dividend_brut * cota",
+    "cu_valori": "(10.000 × 16%)",
+    "zile": [],
+    "rezultat": "1.600",
+    "operanzi": [
+     {
+      "nume": "dividend_brut",
+      "valoare": "10.000",
+      "eticheta": "FAPT_CAZ",
+      "atom": "",
+      "fragment": "suma de 10.000 lei reprezentând dividendul brut repartizat",
+      "data_aplicarii": ""
+     },
+     {
+      "nume": "cota",
+      "valoare": "16%",
+      "eticheta": "VALOARE_LEGALA",
+      "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+      "fragment": "se impozitează cu o cotă de 16% din suma acestora, impozitul fiind final",
+      "data_aplicarii": "",
+      "valabil_din": "2025-08-01",
+      "valabil_pana": null
+     }
+    ]
+   },
+   {
+    "nume": "net",
+    "formula": "dividend_brut - impozit",
+    "cu_valori": "(10.000 − 1.600)",
+    "zile": [],
+    "rezultat": "8.400",
+    "operanzi": [
+     {
+      "nume": "dividend_brut",
+      "valoare": "10.000",
+      "eticheta": "FAPT_CAZ",
+      "atom": "",
+      "fragment": "suma de 10.000 lei reprezentând dividendul brut repartizat",
+      "data_aplicarii": ""
+     }
+    ]
+   },
+   {
+    "nume": "luna_termen",
+    "formula": "luna_plata + 1",
+    "cu_valori": "(3 + 1)",
+    "zile": [],
+    "rezultat": "4",
+    "operanzi": [
+     {
+      "nume": "luna_plata",
+      "valoare": "03",
+      "eticheta": "FAPT_CAZ",
+      "atom": "",
+      "fragment": "plata efectivă către asociat se face la data de 10.03.2026",
+      "data_aplicarii": ""
+     }
+    ]
+   },
+   {
+    "nume": "termen_plata",
+    "formula": "termen_efectiv(data(zi_termen, luna_termen, an_plata))",
+    "cu_valori": "termen_efectiv(data(25, 4, 2.026))",
+    "zile": [
+     "termen_efectiv(25.04.2026) = 27.04.2026: 25.04.2026 sâmbătă, 26.04.2026 duminică → prima zi lucrătoare, 27.04.2026 (luni). Regula: `legea_134_2010_codul_de_procedura_civila#art181/alin2`; sărbătorile: `legea_53_2003_codul_muncii#art139/alin1`; date mobile calculate pentru 2026 (Paștele ortodox: algoritmul Meeus pentru calendarul iulian + 13 zile): Vinerea Mare = 10.04.2026; Paștele ortodox = 12.04.2026; Rusaliile = Paștele + 49 de zile = 31.05.2026; sărbători numite în art. 139 fără dată, cu data de calendar liturgic fix (dată de calendar, nescrisă în lege): Adormirea Maicii Domnului = 15.08.2026; Crăciunul = 25-26.12.2026"
+    ],
+    "rezultat": "27.04.2026",
+    "operanzi": [
+     {
+      "nume": "zi_termen",
+      "valoare": "25",
+      "eticheta": "VALOARE_LEGALA",
+      "atom": "cod_fiscal_227_2015_consolidat#art97/alin7",
+      "fragment": "Termenul de virare a impozitului este până la data de 25 inclusiv a lunii următoare celei în care se face plata.",
+      "data_aplicarii": "",
+      "valabil_din": "2025-08-01",
+      "valabil_pana": null
+     },
+     {
+      "nume": "an_plata",
+      "valoare": "2026",
+      "eticheta": "FAPT_CAZ",
+      "atom": "",
+      "fragment": "plata efectivă către asociat se face la data de 10.03.2026",
+      "data_aplicarii": ""
+     }
+    ]
+   }
+  ],
+  "atomi_decisivi": {
+   "cod_fiscal_227_2015_consolidat#art97/alin7": "16%"
+  }
+ }
+}

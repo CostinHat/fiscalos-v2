@@ -1,0 +1,117 @@
+{
+ "id": "20261001-171437-34418e",
+ "creat": "2026-10-01 17:14:37",
+ "intrebare": "Până când trebuie depusă declarația unică pentru chiria încasată în 2025?",
+ "stare": "completare",
+ "dialog": [
+  {
+   "cand": "2026-10-01 17:14:37",
+   "cine": "Costin",
+   "ce": "Până când trebuie depusă declarația unică pentru chiria încasată în 2025?"
+  },
+  {
+   "cand": "2026-10-01 17:15:05",
+   "cine": "motor",
+   "ce": {
+    "date_lipsa": [
+     {
+      "intrebare": "Contractul de închiriere este încheiat ca persoană fizică (în afara activității independente) sau prin PFA/alt tip de entitate?",
+      "de_ce_conteaza": "Declarația unică se depune de persoane fizice; dacă veniturile sunt obținute prin PFA sau de o persoană juridică, regimul declarativ și termenele sunt complet diferite."
+     },
+     {
+      "intrebare": "Chiriașul este persoană juridică / entitate obligată să rețină impozitul la sursă sau persoană fizică?",
+      "de_ce_conteaza": "Dacă plătitorul de venit are obligația de a reține și declara impozitul (prin D100/D112 și fișa plătitorului), persoana fizică poate să nu mai aibă obligația depunerii declarației unice pentru acel venit."
+     },
+     {
+      "intrebare": "Este vorba de închiriere de bunuri imobile din patrimoniul personal, închiriere în scop turistic a camerelor din locuința proprie, sau arendă?",
+      "de_ce_conteaza": "Fiecare categorie are reguli proprii de stabilire a venitului și de declarare, inclusiv situații în care impozitul este final reținut la sursă."
+     },
+     {
+      "intrebare": "Câte contracte de închiriere/câte camere sunt în derulare și de când?",
+      "de_ce_conteaza": "Depășirea pragului de 5 camere închiriate în scop turistic schimbă încadrarea în venituri din activități independente, cu alt regim declarativ."
+     },
+     {
+      "intrebare": "Contractul a început, s-a modificat sau a încetat în cursul anului 2025?",
+      "de_ce_conteaza": "Apariția, modificarea sau încetarea contractului în cursul anului poate genera obligații declarative suplimentare sau termene distincte față de termenul anual."
+     },
+     {
+      "intrebare": "Care este nivelul total al veniturilor nete estimate/realizate în 2025 din toate sursele (chirii, dividende, dobânzi etc.)?",
+      "de_ce_conteaza": "Depășirea plafoanelor raportate la salariul minim determină obligația de a declara și contribuția de asigurări sociale de sănătate în aceeași declarație unică."
+     },
+     {
+      "intrebare": "Întrebarea vizează declararea venitului realizat în 2025 (depusă în 2026) sau declararea/estimarea venitului în cursul anului 2025?",
+      "de_ce_conteaza": "Termenul diferă: declarația pentru venitul realizat are termen anual, iar declararea venitului estimat la începerea unui contract are termen calculat de la data evenimentului."
+     },
+     {
+      "intrebare": "Chiria este stabilită în lei sau în valută, și este încasată din România sau din străinătate?",
+      "de_ce_conteaza": "Veniturile din chirii obținute din străinătate au reguli distincte de declarare și de evitare a dublei impuneri."
+     },
+     {
+      "intrebare": "Ești rezident fiscal român pe 2025?",
+      "de_ce_conteaza": "Statutul de rezidență determină sfera veniturilor impozabile în România și obligațiile declarative."
+     }
+    ],
+    "presupuneri": [
+     "Este vorba despre o persoană fizică rezidentă în România care închiriază un imobil din patrimoniul personal.",
+     "Chiriașul este o persoană fizică, deci nu există reținere la sursă, iar obligația declarativă revine proprietarului.",
+     "Întrebarea se referă la declararea veniturilor efectiv realizate în anul 2025, deci la declarația unică depusă în anul 2026.",
+     "Contractul este în derulare pe tot parcursul anului 2025, fără modificări sau încetare în cursul anului.",
+     "Nu este vorba de închiriere în scop turistic și nu se depășesc 5 camere închiriate.",
+     "Venitul se stabilește pe baza contractului (regim forfetar de cheltuieli), nu în sistem real, dacă utilizatorul nu precizează altfel.",
+     "Declarația se depune online, prin SPV, iar termenul relevant este cel general prevăzut pentru declarația unică."
+    ]
+   }
+  }
+ ],
+ "cost": {
+  "date_lipsa": 0.03812
+ },
+ "folosire": "NU se foloseste la reglaj; material pentru un set viitor, dupa verificare independenta",
+ "date_lipsa": [
+  {
+   "intrebare": "Contractul de închiriere este încheiat ca persoană fizică (în afara activității independente) sau prin PFA/alt tip de entitate?",
+   "de_ce_conteaza": "Declarația unică se depune de persoane fizice; dacă veniturile sunt obținute prin PFA sau de o persoană juridică, regimul declarativ și termenele sunt complet diferite."
+  },
+  {
+   "intrebare": "Chiriașul este persoană juridică / entitate obligată să rețină impozitul la sursă sau persoană fizică?",
+   "de_ce_conteaza": "Dacă plătitorul de venit are obligația de a reține și declara impozitul (prin D100/D112 și fișa plătitorului), persoana fizică poate să nu mai aibă obligația depunerii declarației unice pentru acel venit."
+  },
+  {
+   "intrebare": "Este vorba de închiriere de bunuri imobile din patrimoniul personal, închiriere în scop turistic a camerelor din locuința proprie, sau arendă?",
+   "de_ce_conteaza": "Fiecare categorie are reguli proprii de stabilire a venitului și de declarare, inclusiv situații în care impozitul este final reținut la sursă."
+  },
+  {
+   "intrebare": "Câte contracte de închiriere/câte camere sunt în derulare și de când?",
+   "de_ce_conteaza": "Depășirea pragului de 5 camere închiriate în scop turistic schimbă încadrarea în venituri din activități independente, cu alt regim declarativ."
+  },
+  {
+   "intrebare": "Contractul a început, s-a modificat sau a încetat în cursul anului 2025?",
+   "de_ce_conteaza": "Apariția, modificarea sau încetarea contractului în cursul anului poate genera obligații declarative suplimentare sau termene distincte față de termenul anual."
+  },
+  {
+   "intrebare": "Care este nivelul total al veniturilor nete estimate/realizate în 2025 din toate sursele (chirii, dividende, dobânzi etc.)?",
+   "de_ce_conteaza": "Depășirea plafoanelor raportate la salariul minim determină obligația de a declara și contribuția de asigurări sociale de sănătate în aceeași declarație unică."
+  },
+  {
+   "intrebare": "Întrebarea vizează declararea venitului realizat în 2025 (depusă în 2026) sau declararea/estimarea venitului în cursul anului 2025?",
+   "de_ce_conteaza": "Termenul diferă: declarația pentru venitul realizat are termen anual, iar declararea venitului estimat la începerea unui contract are termen calculat de la data evenimentului."
+  },
+  {
+   "intrebare": "Chiria este stabilită în lei sau în valută, și este încasată din România sau din străinătate?",
+   "de_ce_conteaza": "Veniturile din chirii obținute din străinătate au reguli distincte de declarare și de evitare a dublei impuneri."
+  },
+  {
+   "intrebare": "Ești rezident fiscal român pe 2025?",
+   "de_ce_conteaza": "Statutul de rezidență determină sfera veniturilor impozabile în România și obligațiile declarative."
+  }
+ ],
+ "presupuneri": [
+  "Este vorba despre o persoană fizică rezidentă în România care închiriază un imobil din patrimoniul personal.",
+  "Chiriașul este o persoană fizică, deci nu există reținere la sursă, iar obligația declarativă revine proprietarului.",
+  "Întrebarea se referă la declararea veniturilor efectiv realizate în anul 2025, deci la declarația unică depusă în anul 2026.",
+  "Contractul este în derulare pe tot parcursul anului 2025, fără modificări sau încetare în cursul anului.",
+  "Nu este vorba de închiriere în scop turistic și nu se depășesc 5 camere închiriate.",
+  "Venitul se stabilește pe baza contractului (regim forfetar de cheltuieli), nu în sistem real, dacă utilizatorul nu precizează altfel.",
+  "Declarația se depune online, prin SPV, iar termenul relevant este cel general prevăzut pentru declarația unică."
+ ]
+}

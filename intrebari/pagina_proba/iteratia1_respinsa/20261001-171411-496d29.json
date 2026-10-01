@@ -1,0 +1,99 @@
+{
+ "id": "20261001-171411-496d29",
+ "creat": "2026-10-01 17:14:11",
+ "intrebare": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi?",
+ "stare": "completare",
+ "dialog": [
+  {
+   "cand": "2026-10-01 17:14:11",
+   "cine": "Costin",
+   "ce": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi?"
+  },
+  {
+   "cand": "2026-10-01 17:14:37",
+   "cine": "motor",
+   "ce": {
+    "date_lipsa": [
+     {
+      "intrebare": "Care este data livrării / a faptului generator (sau data încasării avansului)?",
+      "de_ce_conteaza": "Cotele și condițiile pentru locuințe s-au schimbat succesiv (2022, 2023, 2024, 1 august 2025), deci perioada determină cota aplicabilă."
+     },
+     {
+      "intrebare": "Care este valoarea locuinței (fără TVA) și suprafața utilă a acesteia?",
+      "de_ce_conteaza": "Regimul de cotă redusă pentru locuințe a fost condiționat de plafoane valorice și de o limită de suprafață utilă; depășirea lor atrage cota standard."
+     },
+     {
+      "intrebare": "Cumpărătorul este persoană fizică sau juridică, și câte locuințe cu cotă redusă a mai achiziționat (singur sau împreună cu soțul/soția)?",
+      "de_ce_conteaza": "Cota redusă a fost limitată la persoane fizice și la un număr limitat de locuințe per cumpărător, cu evidență în registrul achizițiilor."
+     },
+     {
+      "intrebare": "Locuința este livrată „ca atare” – finalizată, locuibilă la momentul livrării (utilități, finisaje, grup sanitar, bucătărie)?",
+      "de_ce_conteaza": "Condiția de locuibilitate la momentul livrării este esențială pentru încadrarea în regimul de cotă redusă; un imobil nefinalizat se taxează diferit."
+     },
+     {
+      "intrebare": "Vânzătorul este persoană impozabilă înregistrată în scopuri de TVA (dezvoltator/firmă) sau persoană fizică ce vinde ocazional?",
+      "de_ce_conteaza": "Dacă vânzătorul nu este persoană impozabilă sau nu depășește plafonul de scutire, operațiunea poate fi în afara sferei TVA sau scutită, deci nu se pune problema cotei."
+     },
+     {
+      "intrebare": "Există un antecontract/promisiune de vânzare semnat și avans plătit înainte de modificarea legislativă?",
+      "de_ce_conteaza": "Normele tranzitorii pot permite păstrarea cotei vechi pentru contracte încheiate înainte de intrarea în vigoare a schimbării, dacă livrarea are loc într-un termen prevăzut."
+     },
+     {
+      "intrebare": "Terenul pe care este construită locuința este inclus în livrare și care este suprafața acestuia?",
+      "de_ce_conteaza": "Limita suprafeței de teren aferente locuinței influențează încadrarea în regimul de cotă redusă și tratamentul terenului în exces."
+     }
+    ],
+    "presupuneri": [
+     "Presupun că întrebarea vizează legislația în vigoare la data curentă, nu o livrare din anii anteriori.",
+     "Presupun că vânzătorul este o persoană impozabilă înregistrată în scopuri de TVA în România (dezvoltator imobiliar) și că operațiunea este taxabilă, nu scutită.",
+     "Presupun că „locuință nouă” înseamnă construcție nouă sau transformată semnificativ, livrată înainte sau până la 31 decembrie a anului următor primei ocupări/utilizări, deci livrare taxabilă obligatoriu.",
+     "Presupun că imobilul este situat în România și cumpărătorul este o persoană fizică.",
+     "Presupun că locuința este livrată finalizată și locuibilă, împreună cu terenul aferent.",
+     "Presupun că nu există antecontract anterior unei modificări legislative care să permită aplicarea unei cote tranzitorii."
+    ]
+   }
+  }
+ ],
+ "cost": {
+  "date_lipsa": 0.03397
+ },
+ "folosire": "NU se foloseste la reglaj; material pentru un set viitor, dupa verificare independenta",
+ "date_lipsa": [
+  {
+   "intrebare": "Care este data livrării / a faptului generator (sau data încasării avansului)?",
+   "de_ce_conteaza": "Cotele și condițiile pentru locuințe s-au schimbat succesiv (2022, 2023, 2024, 1 august 2025), deci perioada determină cota aplicabilă."
+  },
+  {
+   "intrebare": "Care este valoarea locuinței (fără TVA) și suprafața utilă a acesteia?",
+   "de_ce_conteaza": "Regimul de cotă redusă pentru locuințe a fost condiționat de plafoane valorice și de o limită de suprafață utilă; depășirea lor atrage cota standard."
+  },
+  {
+   "intrebare": "Cumpărătorul este persoană fizică sau juridică, și câte locuințe cu cotă redusă a mai achiziționat (singur sau împreună cu soțul/soția)?",
+   "de_ce_conteaza": "Cota redusă a fost limitată la persoane fizice și la un număr limitat de locuințe per cumpărător, cu evidență în registrul achizițiilor."
+  },
+  {
+   "intrebare": "Locuința este livrată „ca atare” – finalizată, locuibilă la momentul livrării (utilități, finisaje, grup sanitar, bucătărie)?",
+   "de_ce_conteaza": "Condiția de locuibilitate la momentul livrării este esențială pentru încadrarea în regimul de cotă redusă; un imobil nefinalizat se taxează diferit."
+  },
+  {
+   "intrebare": "Vânzătorul este persoană impozabilă înregistrată în scopuri de TVA (dezvoltator/firmă) sau persoană fizică ce vinde ocazional?",
+   "de_ce_conteaza": "Dacă vânzătorul nu este persoană impozabilă sau nu depășește plafonul de scutire, operațiunea poate fi în afara sferei TVA sau scutită, deci nu se pune problema cotei."
+  },
+  {
+   "intrebare": "Există un antecontract/promisiune de vânzare semnat și avans plătit înainte de modificarea legislativă?",
+   "de_ce_conteaza": "Normele tranzitorii pot permite păstrarea cotei vechi pentru contracte încheiate înainte de intrarea în vigoare a schimbării, dacă livrarea are loc într-un termen prevăzut."
+  },
+  {
+   "intrebare": "Terenul pe care este construită locuința este inclus în livrare și care este suprafața acestuia?",
+   "de_ce_conteaza": "Limita suprafeței de teren aferente locuinței influențează încadrarea în regimul de cotă redusă și tratamentul terenului în exces."
+  }
+ ],
+ "presupuneri": [
+  "Presupun că întrebarea vizează legislația în vigoare la data curentă, nu o livrare din anii anteriori.",
+  "Presupun că vânzătorul este o persoană impozabilă înregistrată în scopuri de TVA în România (dezvoltator imobiliar) și că operațiunea este taxabilă, nu scutită.",
+  "Presupun că „locuință nouă” înseamnă construcție nouă sau transformată semnificativ, livrată înainte sau până la 31 decembrie a anului următor primei ocupări/utilizări, deci livrare taxabilă obligatoriu.",
+  "Presupun că imobilul este situat în România și cumpărătorul este o persoană fizică.",
+  "Presupun că locuința este livrată finalizată și locuibilă, împreună cu terenul aferent.",
+  "Presupun că nu există antecontract anterior unei modificări legislative care să permită aplicarea unei cote tranzitorii."
+ ]
+}

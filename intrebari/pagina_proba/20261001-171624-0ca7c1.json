@@ -1,0 +1,510 @@
+{
+ "id": "20261001-171624-0ca7c1",
+ "creat": "2026-10-01 17:16:24",
+ "intrebare": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi?",
+ "stare": "raspuns",
+ "dialog": [
+  {
+   "cand": "2026-10-01 17:16:24",
+   "cine": "Costin",
+   "ce": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi?"
+  },
+  {
+   "cand": "2026-10-01 17:16:36",
+   "cine": "motor",
+   "ce": {
+    "date_lipsa": [
+     {
+      "intrebare": "La ce dată are loc livrarea (sau data facturii/avansului)?",
+      "de_ce_conteaza": "Regulile și cota aplicabilă locuințelor s-au modificat în timp, iar cota se stabilește în funcție de momentul faptului generator/exigibilității."
+     },
+     {
+      "intrebare": "Care este prețul de vânzare al locuinței și suprafața utilă a acesteia (plus terenul aferent)?",
+      "de_ce_conteaza": "Aplicarea unei cote reduse pentru locuințe este condiționată de limite de preț și de suprafață, deci răspunsul depinde de aceste valori."
+     },
+     {
+      "intrebare": "Cine este cumpărătorul (persoană fizică sau juridică) și a mai achiziționat locuințe cu cotă redusă în aceeași perioadă?",
+      "de_ce_conteaza": "Cota redusă este rezervată anumitor categorii de cumpărători și poate fi limitată ca număr de achiziții per persoană."
+     },
+     {
+      "intrebare": "Vânzătorul este persoană impozabilă înregistrată în scopuri de TVA, iar locuința este considerată construcție nouă/neutilizată?",
+      "de_ce_conteaza": "Dacă operațiunea nu este realizată de o persoană impozabilă sau imobilul nu este „nou”, regimul poate fi de scutire, nu de aplicare a unei cote."
+     }
+    ],
+    "presupuneri": [
+     "Presupun că întrebarea vizează legislația în vigoare la data curentă și o livrare efectuată acum, nu una contractată în trecut.",
+     "Presupun că vânzătorul este un dezvoltator persoană juridică română, înregistrat în scopuri de TVA, care acționează ca persoană impozabilă.",
+     "Presupun că este vorba de o locuință nouă, livrată pentru prima dată după finalizare, deci operațiune taxabilă, nu scutită.",
+     "Presupun că imobilul este situat în România și poate fi locuit ca atare (utilități, finisaje, acces), iar terenul aferent se livrează împreună cu construcția.",
+     "Presupun că cumpărătorul este o persoană fizică ce achiziționează pentru uz propriu, fără alte achiziții similare anterioare în aceeași perioadă."
+    ],
+    "cifre_nesursate": []
+   }
+  },
+  {
+   "cand": "2026-10-01 17:17:10",
+   "cine": "Costin",
+   "ce": [
+    [
+     "La ce dată are loc livrarea (sau data facturii/avansului)?",
+     "15.09.2026"
+    ],
+    [
+     "Care este prețul de vânzare al locuinței și suprafața utilă a acesteia (plus terenul aferent)?",
+     "450.000 lei fără TVA; suprafață utilă 95 mp; terenul de 200 mp se vinde împreună cu locuința"
+    ],
+    [
+     "Cine este cumpărătorul (persoană fizică sau juridică) și a mai achiziționat locuințe cu cotă redusă în aceeași perioadă?",
+     "persoană fizică; este prima locuință pe care o cumpără"
+    ],
+    [
+     "Vânzătorul este persoană impozabilă înregistrată în scopuri de TVA, iar locuința este considerată construcție nouă/neutilizată?",
+     "da, dezvoltator înregistrat în scopuri de TVA; locuința e nouă, nelocuită"
+    ]
+   ]
+  },
+  {
+   "cand": "2026-10-01 17:17:18",
+   "cine": "motor",
+   "ce": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi, în următoarea situație: livrarea (respectiv data facturii/avansului) are loc la 15.09.2026; prețul de vânzare este de 450.000 lei fără TVA, locuința are o suprafață utilă de 95 mp, iar terenul aferent de 200 mp se vinde împreună cu locuința; cumpărătorul este o persoană fizică, aceasta fiind prima locuință pe care o achiziționează (nu a mai achiziționat locuințe cu cotă redusă în aceeași perioadă); vânzătorul este un dezvoltator, persoană impozabilă înregistrată în scopuri de TVA, iar locuința este o construcție nouă, nelocuită? Vă rog să precizați ce cotă de TVA se aplică acestei livrări și ce condiții trebuie îndeplinite."
+  },
+  {
+   "cand": "2026-10-01 17:17:37",
+   "cine": "Costin",
+   "ce": "confirmat: Ce cotă de TVA se aplică la vânzarea unei locuințe noi, în următoarea situație: livrarea (respectiv data facturii/avansului) are loc la 15.09.2026; prețul de vânzare este de 450.000 lei fără TVA, locuința are o suprafață utilă de 95 mp, iar terenul aferent de 200 mp se vinde împreună cu locuința; cumpărătorul este o persoană fizică, aceasta fiind prima locuință pe care o achiziționează (nu a mai achiziționat locuințe cu cotă redusă în aceeași perioadă); vânzătorul este un dezvoltator, persoană impozabilă înregistrată în scopuri de TVA, iar locuința este o construcție nouă, nelocuită? Vă rog să precizați ce cotă de TVA se aplică acestei livrări și ce condiții trebuie îndeplinite."
+  },
+  {
+   "cand": "2026-10-01 17:19:32",
+   "cine": "motor",
+   "ce": "raspuns"
+  }
+ ],
+ "cost": {
+  "date_lipsa": 0.02373,
+  "reformulare": 0.01183,
+  "raspuns": 0.51899
+ },
+ "folosire": "NU se foloseste la reglaj; material pentru un set viitor, dupa verificare independenta",
+ "date_lipsa": [
+  {
+   "intrebare": "La ce dată are loc livrarea (sau data facturii/avansului)?",
+   "de_ce_conteaza": "Regulile și cota aplicabilă locuințelor s-au modificat în timp, iar cota se stabilește în funcție de momentul faptului generator/exigibilității."
+  },
+  {
+   "intrebare": "Care este prețul de vânzare al locuinței și suprafața utilă a acesteia (plus terenul aferent)?",
+   "de_ce_conteaza": "Aplicarea unei cote reduse pentru locuințe este condiționată de limite de preț și de suprafață, deci răspunsul depinde de aceste valori."
+  },
+  {
+   "intrebare": "Cine este cumpărătorul (persoană fizică sau juridică) și a mai achiziționat locuințe cu cotă redusă în aceeași perioadă?",
+   "de_ce_conteaza": "Cota redusă este rezervată anumitor categorii de cumpărători și poate fi limitată ca număr de achiziții per persoană."
+  },
+  {
+   "intrebare": "Vânzătorul este persoană impozabilă înregistrată în scopuri de TVA, iar locuința este considerată construcție nouă/neutilizată?",
+   "de_ce_conteaza": "Dacă operațiunea nu este realizată de o persoană impozabilă sau imobilul nu este „nou”, regimul poate fi de scutire, nu de aplicare a unei cote."
+  }
+ ],
+ "presupuneri": [
+  "Presupun că întrebarea vizează legislația în vigoare la data curentă și o livrare efectuată acum, nu una contractată în trecut.",
+  "Presupun că vânzătorul este un dezvoltator persoană juridică română, înregistrat în scopuri de TVA, care acționează ca persoană impozabilă.",
+  "Presupun că este vorba de o locuință nouă, livrată pentru prima dată după finalizare, deci operațiune taxabilă, nu scutită.",
+  "Presupun că imobilul este situat în România și poate fi locuit ca atare (utilități, finisaje, acces), iar terenul aferent se livrează împreună cu construcția.",
+  "Presupun că cumpărătorul este o persoană fizică ce achiziționează pentru uz propriu, fără alte achiziții similare anterioare în aceeași perioadă."
+ ],
+ "cifre_nesursate_la_pregatire": [],
+ "completari": [
+  [
+   "La ce dată are loc livrarea (sau data facturii/avansului)?",
+   "15.09.2026"
+  ],
+  [
+   "Care este prețul de vânzare al locuinței și suprafața utilă a acesteia (plus terenul aferent)?",
+   "450.000 lei fără TVA; suprafață utilă 95 mp; terenul de 200 mp se vinde împreună cu locuința"
+  ],
+  [
+   "Cine este cumpărătorul (persoană fizică sau juridică) și a mai achiziționat locuințe cu cotă redusă în aceeași perioadă?",
+   "persoană fizică; este prima locuință pe care o cumpără"
+  ],
+  [
+   "Vânzătorul este persoană impozabilă înregistrată în scopuri de TVA, iar locuința este considerată construcție nouă/neutilizată?",
+   "da, dezvoltator înregistrat în scopuri de TVA; locuința e nouă, nelocuită"
+  ]
+ ],
+ "intrebare_reformulata": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi, în următoarea situație: livrarea (respectiv data facturii/avansului) are loc la 15.09.2026; prețul de vânzare este de 450.000 lei fără TVA, locuința are o suprafață utilă de 95 mp, iar terenul aferent de 200 mp se vinde împreună cu locuința; cumpărătorul este o persoană fizică, aceasta fiind prima locuință pe care o achiziționează (nu a mai achiziționat locuințe cu cotă redusă în aceeași perioadă); vânzătorul este un dezvoltator, persoană impozabilă înregistrată în scopuri de TVA, iar locuința este o construcție nouă, nelocuită? Vă rog să precizați ce cotă de TVA se aplică acestei livrări și ce condiții trebuie îndeplinite.",
+ "intrebare_confirmata": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi, în următoarea situație: livrarea (respectiv data facturii/avansului) are loc la 15.09.2026; prețul de vânzare este de 450.000 lei fără TVA, locuința are o suprafață utilă de 95 mp, iar terenul aferent de 200 mp se vinde împreună cu locuința; cumpărătorul este o persoană fizică, aceasta fiind prima locuință pe care o achiziționează (nu a mai achiziționat locuințe cu cotă redusă în aceeași perioadă); vânzătorul este un dezvoltator, persoană impozabilă înregistrată în scopuri de TVA, iar locuința este o construcție nouă, nelocuită? Vă rog să precizați ce cotă de TVA se aplică acestei livrări și ce condiții trebuie îndeplinite.",
+ "raspuns": {
+  "id": "20261001-171624-0ca7c1",
+  "tip": "PAGINA",
+  "intrebare": "Ce cotă de TVA se aplică la vânzarea unei locuințe noi, în următoarea situație: livrarea (respectiv data facturii/avansului) are loc la 15.09.2026; prețul de vânzare este de 450.000 lei fără TVA, locuința are o suprafață utilă de 95 mp, iar terenul aferent de 200 mp se vinde împreună cu locuința; cumpărătorul este o persoană fizică, aceasta fiind prima locuință pe care o achiziționează (nu a mai achiziționat locuințe cu cotă redusă în aceeași perioadă); vânzătorul este un dezvoltator, persoană impozabilă înregistrată în scopuri de TVA, iar locuința este o construcție nouă, nelocuită? Vă rog să precizați ce cotă de TVA se aplică acestei livrări și ce condiții trebuie îndeplinite.",
+  "date_din_intrebare": [
+   [
+    "2026-09-15",
+    "zi",
+    "15.09.2026"
+   ]
+  ],
+  "strat": "navigare v5",
+  "data_referinta": "2026-09-15",
+  "data_referinta_motiv": "Faptul întrebat este cota de TVA pentru livrarea (data facturii/avansului) din 15.09.2026, iar cota aplicabilă este cea în vigoare la data faptului generator/exigibilității.",
+  "declaratie": "La data de referință 15.09.2026, presupun o livrare internă de locuință nouă (construcție nelocuită, împreună cu terenul aferent) efectuată de un dezvoltator persoană impozabilă înregistrată în scopuri de TVA către o persoană fizică, fără contract/avans încheiat înainte de 1 august 2025 și fără ca locuința să fie destinată căminelor de bătrâni/pensionari ori caselor de copii, faptul generator/exigibilitatea intervenind la 15.09.2026.",
+  "propunerea_modelului": {
+   "stare": "RASPUNS",
+   "declaratie": "La data de referință 15.09.2026, presupun o livrare internă de locuință nouă (construcție nelocuită, împreună cu terenul aferent) efectuată de un dezvoltator persoană impozabilă înregistrată în scopuri de TVA către o persoană fizică, fără contract/avans încheiat înainte de 1 august 2025 și fără ca locuința să fie destinată căminelor de bătrâni/pensionari ori caselor de copii, faptul generator/exigibilitatea intervenind la 15.09.2026.",
+   "raspuns": "Se aplică cota standard de TVA de 21%. În forma în vigoare la data livrării, cota redusă de 11% pentru „locuințe ca parte a politicii sociale” mai vizează doar clădirile destinate căminelor de bătrâni și de pensionari, respectiv caselor de copii și centrelor de recuperare și reabilitare pentru minori cu handicap — nu și locuințele obișnuite vândute persoanelor fizice, oricare ar fi suprafața utilă (95 mp) sau prețul (450.000 lei). Regimul tranzitoriu cu cotă redusă de 9% se putea aplica doar pentru o singură locuință achiziționată de persoana fizică în perioada 1 august 2025-31 iulie 2026 inclusiv, cu condițiile cumulative: locuința să aibă o suprafață utilă de maximum 120 mp, exclusiv anexele gospodărești, și o valoare, inclusiv a terenului, care să nu depășească 600.000 lei exclusiv TVA; locuința să poată fi locuită ca atare la momentul livrării, care nu poate depăși data de 31 iulie 2026; cumpărătorul să nu fi achiziționat o altă locuință cu cotă redusă de TVA în perioada de referință prevăzută de lege; și să fi încheiat până la data de 1 august 2025 un act juridic între vii având ca obiect plata în avans. În speță, livrarea din 15.09.2026 este ulterioară acestui termen, deci condițiile regimului tranzitoriu nu sunt îndeplinite, iar cota aplicabilă este cea în vigoare la data faptului generator: cota standard de 21%.",
+   "citate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+     "fragment": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin2/litl",
+     "fragment": "livrarea locuințelor ca parte a politicii sociale, inclusiv a terenului pe care sunt construite. Terenul pe care este construită locuința include și amprenta la sol a locuinței. În sensul prezentului titlu, prin locuință livrată ca parte a politicii sociale se înțelege:"
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct1",
+     "fragment": "livrarea de clădiri, inclusiv a terenului pe care sunt construite, destinate a fi utilizate drept cămine de bătrâni și de pensionari;"
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct2",
+     "fragment": "livrarea de clădiri, inclusiv a terenului pe care sunt construite, destinate a fi utilizate drept case de copii și centre de recuperare și reabilitare pentru minori cu handicap;"
+    },
+    {
+     "atom": "legea_141_2025_consolidat#artIII/alin1",
+     "fragment": "Persoana fizică, în mod individual sau în comun cu altă persoană fizică/alte persoane fizice, poate achiziționa în perioada 1 august 2025-31 iulie 2026 inclusiv o singură locuință cu cota redusă de TVA de 9%, dacă se îndeplinesc în mod cumulativ următoarele condiții:"
+    },
+    {
+     "atom": "legea_141_2025_consolidat#artIII/alin1/lita",
+     "fragment": "locuința are o suprafață utilă de maximum 120 mp, exclusiv anexele gospodărești, și o valoare, inclusiv a terenului pe care este construită, care nu depășește suma de 600.000 lei, exclusiv taxa pe valoarea adăugată;"
+    },
+    {
+     "atom": "legea_141_2025_consolidat#artIII/alin1/litb",
+     "fragment": "locuința în momentul livrării, care nu poate depăși data de 31 iulie 2026, să poată fi locuită ca atare, conform condițiilor legale în vigoare la data încheierii actelor juridice între vii care au ca obiect plata în avans pentru achiziționarea unei astfel de locuințe."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin4",
+     "fragment": "Cota aplicabilă este cea în vigoare la data la care intervine faptul generator, cu excepția cazurilor prevăzute la art. 282 alin. (2) , pentru care se aplică cota în vigoare la data exigibilității taxei."
+    },
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin2",
+     "fragment": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:"
+    }
+   ],
+   "lipsa": [],
+   "derogari_tratate": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art315^3/alin4",
+     "cum": "Excepția privește importurile de bunuri realizate în cadrul mecanismului special pentru declararea și plata TVA la import; speța este o livrare internă de imobil, deci excepția nu se aplică (iar efectul ei ar fi tot cota standard)."
+    },
+    {
+     "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artV/alin1",
+     "cum": "Derogă de la art. 291 alin. (2) lit. m) pct. 3, nu de la lit. l) privind locuințele; nu are legătură cu livrarea de locuințe către persoane fizice."
+    },
+    {
+     "atom": "og_16_2022_consolidat#artIII/alin1",
+     "cum": "Derogă de la art. 291 alin. (3) lit. c) pct. 3 din forma anterioară a Codului fiscal, pentru un regim tranzitoriu anterior; la data livrării din speță nu mai este aplicabilă, regimul tranzitoriu relevant fiind cel din Legea 141/2025, limitat la livrări care nu depășesc data de 31 iulie 2026."
+    }
+   ],
+   "motiv": "",
+   "calcule": [],
+   "alegeri_temei": [
+    {
+     "atom": "cod_fiscal_227_2015_consolidat#art291/alin4",
+     "alternativa": "cod_fiscal_227_2015_consolidat#art280/alin4",
+     "conditie": "Cota aplicabilă este cea în vigoare la data la care intervine faptul generator"
+    }
+   ],
+   "data_referinta": "2026-09-15",
+   "data_referinta_motiv": "Faptul întrebat este cota de TVA pentru livrarea (data facturii/avansului) din 15.09.2026, iar cota aplicabilă este cea în vigoare la data faptului generator/exigibilității."
+  },
+  "apel": {
+   "model": "claude-opus-5",
+   "tururi": 11,
+   "pasi_navigare": 13,
+   "pasi": [
+    {
+     "unealta": "cuprins",
+     "intrare": {
+      "act": "cod_fiscal_227_2015_consolidat",
+      "filtru": "Cotele"
+     }
+    },
+    {
+     "unealta": "cauta",
+     "intrare": {
+      "interogare": "cota redusă TVA livrarea de locuințe suprafață utilă"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_141_2025_consolidat#artIII/alin1/lita"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_141_2025_consolidat#artIII/alin1"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291/alin1"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291/alin2"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291/alin2/litl"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct1"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct2"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "legea_141_2025_consolidat#artIII/alin1/litb"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art291/alin4"
+     }
+    },
+    {
+     "unealta": "deschide",
+     "intrare": {
+      "id": "cod_fiscal_227_2015_consolidat#art315^3/alin4"
+     }
+    }
+   ],
+   "reincercari_C23": 0,
+   "probleme_C23": [],
+   "tokeni": {
+    "intrare": 22,
+    "iesire": 7399,
+    "cache_scriere": 42866,
+    "cache_citire": 131991
+   },
+   "cost_usd": 0.51899,
+   "fallback": false,
+   "secunde": 114.98
+  },
+  "verificare": {
+   "trece": false,
+   "incalcari": [
+    "C40: termenul '1 august 2025' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)",
+    "C40: termenul '31 iulie 2026' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)",
+    "C40: termenul '1 august 2025' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)"
+   ]
+  },
+  "relatii_in_context": {
+   "cod_fiscal_227_2015_consolidat#art315^3/alin4": [
+    [
+     "exceptie",
+     "cod_fiscal_227_2015_consolidat#art291"
+    ],
+    [
+     "exceptie",
+     "cod_fiscal_227_2015_consolidat#art291"
+    ],
+    [
+     "exceptie",
+     "cod_fiscal_227_2015_consolidat#art291/alin2"
+    ],
+    [
+     "exceptie",
+     "cod_fiscal_227_2015_consolidat#art291/alin2/litl"
+    ],
+    [
+     "exceptie",
+     "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct1"
+    ],
+    [
+     "exceptie",
+     "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct2"
+    ]
+   ],
+   "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artV/alin1": [
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art291"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art291/alin2"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art291/alin2/litl"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct1"
+    ],
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct2"
+    ]
+   ],
+   "og_16_2022_consolidat#artIII/alin1": [
+    [
+     "derogare",
+     "cod_fiscal_227_2015_consolidat#art291"
+    ]
+   ]
+  },
+  "derogari_tratate": [
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art315^3/alin4",
+    "cum": "Excepția privește importurile de bunuri realizate în cadrul mecanismului special pentru declararea și plata TVA la import; speța este o livrare internă de imobil, deci excepția nu se aplică (iar efectul ei ar fi tot cota standard)."
+   },
+   {
+    "atom": "legea_296_2023_masuri_fiscal_bugetare_asigurarea_sustenabilitatii#artV/alin1",
+    "cum": "Derogă de la art. 291 alin. (2) lit. m) pct. 3, nu de la lit. l) privind locuințele; nu are legătură cu livrarea de locuințe către persoane fizice."
+   },
+   {
+    "atom": "og_16_2022_consolidat#artIII/alin1",
+    "cum": "Derogă de la art. 291 alin. (3) lit. c) pct. 3 din forma anterioară a Codului fiscal, pentru un regim tranzitoriu anterior; la data livrării din speță nu mai este aplicabilă, regimul tranzitoriu relevant fiind cel din Legea 141/2025, limitat la livrări care nu depășesc data de 31 iulie 2026."
+   }
+  ],
+  "stare": "NU_POT_RASPUNDE",
+  "raspuns": null,
+  "argument": [
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art291/alin1",
+    "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (1)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Cota standard se aplică asupra bazei de impozitare pentru operațiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%.",
+    "valabilitate": {
+     "valabil_din": "2025-08-01",
+     "la_data_intrebarii": true
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art291/alin2/litl",
+    "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (2) lit. l)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "livrarea locuințelor ca parte a politicii sociale, inclusiv a terenului pe care sunt construite. Terenul pe care este construită locuința include și amprenta la sol a locuinței. În sensul prezentului titlu, prin locuință livrată ca parte a politicii sociale se înțelege:",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct1",
+    "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (2) lit. l) pct. 1",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "livrarea de clădiri, inclusiv a terenului pe care sunt construite, destinate a fi utilizate drept cămine de bătrâni și de pensionari;",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct2",
+    "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (2) lit. l) pct. 2",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "livrarea de clădiri, inclusiv a terenului pe care sunt construite, destinate a fi utilizate drept case de copii și centre de recuperare și reabilitare pentru minori cu handicap;",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "legea_141_2025_consolidat#artIII/alin1",
+    "temei": "Legea 141/2025 art. III alin. (1)",
+    "act": "legea_141_2025_consolidat",
+    "verbatim": "Persoana fizică, în mod individual sau în comun cu altă persoană fizică/alte persoane fizice, poate achiziționa în perioada 1 august 2025-31 iulie 2026 inclusiv o singură locuință cu cota redusă de TVA de 9%, dacă se îndeplinesc în mod cumulativ următoarele condiții:",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "legea_141_2025_consolidat#artIII/alin1/lita",
+    "temei": "Legea 141/2025 art. III alin. (1) lit. a)",
+    "act": "legea_141_2025_consolidat",
+    "verbatim": "locuința are o suprafață utilă de maximum 120 mp, exclusiv anexele gospodărești, și o valoare, inclusiv a terenului pe care este construită, care nu depășește suma de 600.000 lei, exclusiv taxa pe valoarea adăugată;",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "legea_141_2025_consolidat#artIII/alin1/litb",
+    "temei": "Legea 141/2025 art. III alin. (1) lit. b)",
+    "act": "legea_141_2025_consolidat",
+    "verbatim": "locuința în momentul livrării, care nu poate depăși data de 31 iulie 2026, să poată fi locuită ca atare, conform condițiilor legale în vigoare la data încheierii actelor juridice între vii care au ca obiect plata în avans pentru achiziționarea unei astfel de locuințe.",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art291/alin4",
+    "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (4)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Cota aplicabilă este cea în vigoare la data la care intervine faptul generator, cu excepția cazurilor prevăzute la art. 282 alin. (2) , pentru care se aplică cota în vigoare la data exigibilității taxei.",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   },
+   {
+    "atom": "cod_fiscal_227_2015_consolidat#art291/alin2",
+    "temei": "Codul fiscal (Legea 227/2015) art. 291 alin. (2)",
+    "act": "cod_fiscal_227_2015_consolidat",
+    "verbatim": "Cota redusă de 11% se aplică asupra bazei de impozitare pentru următoarele prestări de servicii și/sau livrări de bunuri:",
+    "valabilitate": {
+     "valabil_din": null,
+     "la_data_intrebarii": null,
+     "nota": "valabilitate nedovedita: atomul nu poarta data de intrare in vigoare"
+    }
+   }
+  ],
+  "motiv": "VERIFICAREA (C40) a respins propunerea: C40: termenul '1 august 2025' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie); C40: termenul '31 iulie 2026' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie); C40: termenul '1 august 2025' nu vine din termen_efectiv (un termen calendaristic se calculeaza, nu se scrie)",
+  "traseu": "cuprins(cod_fiscal_227_2015_consolidat, Cotele) → cauta(cota redusă TVA livrarea de locuințe suprafață utilă) → deschide(cod_fiscal_227_2015_consolidat#art291) → deschide(legea_141_2025_consolidat#artIII/alin1/lita) → deschide(legea_141_2025_consolidat#artIII/alin1) → deschide(cod_fiscal_227_2015_consolidat#art291/alin1) → deschide(cod_fiscal_227_2015_consolidat#art291/alin2) → deschide(cod_fiscal_227_2015_consolidat#art291/alin2/litl) → deschide(cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct1) → deschide(cod_fiscal_227_2015_consolidat#art291/alin2/litl/pct2) → deschide(legea_141_2025_consolidat#artIII/alin1/litb) → deschide(cod_fiscal_227_2015_consolidat#art291/alin4) → deschide(cod_fiscal_227_2015_consolidat#art315^3/alin4)",
+  "atomi_decisivi": {
+   "cod_fiscal_227_2015_consolidat#art291/alin1": "21%"
+  },
+  "reparatie_C52": {
+   "cifre": [
+    "2023"
+   ],
+   "termene": [],
+   "motiv_initial": "VERIFICAREA MECANICA a respins propunerea modelului: valoarea legala '2023' nu apare in niciun citat (C13: o valoare legala se dovedeste din atom, chiar daca e si in intrebare)",
+   "structura_invalida": null,
+   "rezultat": "NU_POT_RASPUNDE"
+  }
+ }
+}

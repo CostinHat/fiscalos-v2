@@ -1,0 +1,109 @@
+{
+ "id": "20261001-171505-40a7cc",
+ "creat": "2026-10-01 17:15:05",
+ "intrebare": "Cât impozit pe dividende reține o firmă la o distribuire de 10.000 lei?",
+ "stare": "completare",
+ "dialog": [
+  {
+   "cand": "2026-10-01 17:15:05",
+   "cine": "Costin",
+   "ce": "Cât impozit pe dividende reține o firmă la o distribuire de 10.000 lei?"
+  },
+  {
+   "cand": "2026-10-01 17:15:34",
+   "cine": "motor",
+   "ce": {
+    "date_lipsa": [
+     {
+      "intrebare": "La ce dată se face distribuirea/plata efectivă a dividendelor (sau pentru ce exercițiu financiar sunt dividendele)?",
+      "de_ce_conteaza": "Cota de impozit pe dividende s-a modificat în timp (5% / 8% / 10%), iar obligația de reținere se naște la data plății; anul plății determină cota aplicabilă."
+     },
+     {
+      "intrebare": "Cine este beneficiarul: persoană fizică sau persoană juridică?",
+      "de_ce_conteaza": "Regimul diferă: pentru persoane fizice se reține impozit pe venit din dividende, iar pentru persoane juridice pot exista reguli de scutire sau impozit pe profit/nerezidenți."
+     },
+     {
+      "intrebare": "Beneficiarul este rezident fiscal în România sau nerezident (și în ce stat)?",
+      "de_ce_conteaza": "Pentru nerezidenți se aplică impozitul pe veniturile nerezidenților, eventual cota redusă din convenția de evitare a dublei impuneri, dacă există certificat de rezidență fiscală."
+     },
+     {
+      "intrebare": "Dacă beneficiarul este persoană juridică: deține cel puțin 10% din capitalul plătitorului și pe o perioadă neîntreruptă de minimum 1 an la data plății?",
+      "de_ce_conteaza": "Îndeplinirea condițiilor de participare minimă și de durată poate conduce la scutirea de impozit pe dividende."
+     },
+     {
+      "intrebare": "Suma de 10.000 lei este dividendul brut repartizat sau suma netă pe care doriți să o încaseze acționarul/asociatul?",
+      "de_ce_conteaza": "Baza de calcul a impozitului reținut la sursă este dividendul brut; dacă 10.000 lei este net, baza trebuie recalculată."
+     },
+     {
+      "intrebare": "Este vorba de dividende anuale (din situații financiare aprobate) sau de dividende interimare (distribuire trimestrială)?",
+      "de_ce_conteaza": "Dividendele interimare au reguli proprii de distribuire, regularizare și de moment al reținerii/plății impozitului."
+     },
+     {
+      "intrebare": "Dacă beneficiarul este persoană fizică rezidentă: care este totalul veniturilor sale din dividende și din alte categorii non-salariale din anul respectiv?",
+      "de_ce_conteaza": "Peste plafoanele raportate la salariul minim poate apărea și obligația de CASS, distinctă de impozitul reținut la sursă."
+     },
+     {
+      "intrebare": "Se distribuie dividende către mai mulți asociați/acționari și cum se împarte suma de 10.000 lei?",
+      "de_ce_conteaza": "Impozitul se calculează și se reține individual, pe fiecare beneficiar, iar plafoanele de contribuții se evaluează tot per persoană."
+     }
+    ],
+    "presupuneri": [
+     "Presupun că distribuirea și plata au loc în prezent, deci se aplică cota de impozit pe dividende în vigoare la data plății.",
+     "Presupun că beneficiarul este o persoană fizică rezidentă în România, asociat al firmei plătitoare.",
+     "Presupun că suma de 10.000 lei reprezintă dividendul brut repartizat, nu suma netă de încasat.",
+     "Presupun că este vorba de dividende din profitul exercițiului încheiat, aprobate prin hotărârea adunării generale, nu de dividende interimare.",
+     "Presupun că nu se aplică nicio scutire (nu sunt îndeplinite condițiile de participare de minimum 10% timp de un an) și că nu intervine o convenție de evitare a dublei impuneri.",
+     "Presupun că întrebarea vizează doar impozitul reținut la sursă, fără analiza separată a obligației de CASS pentru persoana fizică.",
+     "Presupun că impozitul se reține la data plății dividendului și se declară/plătește până la termenul legal aferent (ziua de 25 a lunii următoare plății)."
+    ]
+   }
+  }
+ ],
+ "cost": {
+  "date_lipsa": 0.04679
+ },
+ "folosire": "NU se foloseste la reglaj; material pentru un set viitor, dupa verificare independenta",
+ "date_lipsa": [
+  {
+   "intrebare": "La ce dată se face distribuirea/plata efectivă a dividendelor (sau pentru ce exercițiu financiar sunt dividendele)?",
+   "de_ce_conteaza": "Cota de impozit pe dividende s-a modificat în timp (5% / 8% / 10%), iar obligația de reținere se naște la data plății; anul plății determină cota aplicabilă."
+  },
+  {
+   "intrebare": "Cine este beneficiarul: persoană fizică sau persoană juridică?",
+   "de_ce_conteaza": "Regimul diferă: pentru persoane fizice se reține impozit pe venit din dividende, iar pentru persoane juridice pot exista reguli de scutire sau impozit pe profit/nerezidenți."
+  },
+  {
+   "intrebare": "Beneficiarul este rezident fiscal în România sau nerezident (și în ce stat)?",
+   "de_ce_conteaza": "Pentru nerezidenți se aplică impozitul pe veniturile nerezidenților, eventual cota redusă din convenția de evitare a dublei impuneri, dacă există certificat de rezidență fiscală."
+  },
+  {
+   "intrebare": "Dacă beneficiarul este persoană juridică: deține cel puțin 10% din capitalul plătitorului și pe o perioadă neîntreruptă de minimum 1 an la data plății?",
+   "de_ce_conteaza": "Îndeplinirea condițiilor de participare minimă și de durată poate conduce la scutirea de impozit pe dividende."
+  },
+  {
+   "intrebare": "Suma de 10.000 lei este dividendul brut repartizat sau suma netă pe care doriți să o încaseze acționarul/asociatul?",
+   "de_ce_conteaza": "Baza de calcul a impozitului reținut la sursă este dividendul brut; dacă 10.000 lei este net, baza trebuie recalculată."
+  },
+  {
+   "intrebare": "Este vorba de dividende anuale (din situații financiare aprobate) sau de dividende interimare (distribuire trimestrială)?",
+   "de_ce_conteaza": "Dividendele interimare au reguli proprii de distribuire, regularizare și de moment al reținerii/plății impozitului."
+  },
+  {
+   "intrebare": "Dacă beneficiarul este persoană fizică rezidentă: care este totalul veniturilor sale din dividende și din alte categorii non-salariale din anul respectiv?",
+   "de_ce_conteaza": "Peste plafoanele raportate la salariul minim poate apărea și obligația de CASS, distinctă de impozitul reținut la sursă."
+  },
+  {
+   "intrebare": "Se distribuie dividende către mai mulți asociați/acționari și cum se împarte suma de 10.000 lei?",
+   "de_ce_conteaza": "Impozitul se calculează și se reține individual, pe fiecare beneficiar, iar plafoanele de contribuții se evaluează tot per persoană."
+  }
+ ],
+ "presupuneri": [
+  "Presupun că distribuirea și plata au loc în prezent, deci se aplică cota de impozit pe dividende în vigoare la data plății.",
+  "Presupun că beneficiarul este o persoană fizică rezidentă în România, asociat al firmei plătitoare.",
+  "Presupun că suma de 10.000 lei reprezintă dividendul brut repartizat, nu suma netă de încasat.",
+  "Presupun că este vorba de dividende din profitul exercițiului încheiat, aprobate prin hotărârea adunării generale, nu de dividende interimare.",
+  "Presupun că nu se aplică nicio scutire (nu sunt îndeplinite condițiile de participare de minimum 10% timp de un an) și că nu intervine o convenție de evitare a dublei impuneri.",
+  "Presupun că întrebarea vizează doar impozitul reținut la sursă, fără analiza separată a obligației de CASS pentru persoana fizică.",
+  "Presupun că impozitul se reține la data plății dividendului și se declară/plătește până la termenul legal aferent (ziua de 25 a lunii următoare plății)."
+ ]
+}

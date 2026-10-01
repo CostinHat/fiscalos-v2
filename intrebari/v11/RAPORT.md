@@ -29,4 +29,4 @@ Pe setul 4: Q4-TVA-02 („3 la mie”), Q4-TVA-08 („nu se ajustează”), Q4-C
 | Operație | Durată | Cost |
 |---|---|---|
 | Re-notarea C59 pe seturile 2–4 (fiecare pe corpusul ei) | 5.9 s | $0 |
-| Probe: 196 | ~7 min | $0 |
+| Probe: 197 | ~7 min | $0 |
