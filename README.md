@@ -239,6 +239,18 @@ calculul pas cu pas, avertismentele, abținerea cu motiv). Întrebările lui Cos
 Expunerea publică: `pagina_nginx.conf`, pentru administrator. Proba și pașii de intrare:
 `intrebari/pagina_proba/RAPORT.md`.
 
+## Urmărirea legilor pentru iConta (punctul 8)
+
+`fiscalos/urmarire.py` — săptămânal (cron, luni 06:00):
+
+- întreabă legislatie.just.ro dacă actele stratului oficial au o consolidare nouă;
+- pe cele schimbate le aduce, le atomizează și le trece prin detectorul de structură;
+- reface inventarul iConta (numai din git HEAD) și potrivirea;
+- la orice DIFERĂ nou sau temei schimbat generează propunerea următoare, NEAPROBATĂ.
+
+Rezultatele (`urmarire/rezultate/`) apar pe pagina de întrebări, cu data verificării. Proba, într-o copie de
+test: `python -m fiscalos.urmarire_proba <dir>`. Raportul: `urmarire/RAPORT.md`.
+
 ## Ce nu face
 
 Nu scrie nimic în iConta și nu are cale spre el. Aplicarea oricărui rând din propunere e un pas

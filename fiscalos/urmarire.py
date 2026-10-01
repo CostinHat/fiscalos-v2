@@ -30,10 +30,23 @@ def _data(d):
     return "%s-%s-%s" % (m.group(3), m.group(2), m.group(1)) if m else None
 
 
-def forme_noi(p, man):
-    """{act: {...}} actele cu alta consolidare decat cea din manifest; plus erorile si numarul verificat."""
+def forme_noi(p, man, pauza_reluare=30):
+    """{act: {...}} actele cu alta consolidare decat cea din manifest; plus erorile si numarul verificat.
+    Un act cazut (timeout) se reia O DATA, la sfarsit; ce cade si atunci ramane NEVERIFICAT."""
     schimbate, erori, verificate = {}, {}, 0
-    for act, v in sorted(man["acte"].items()):
+    acte = sorted(man["acte"].items())
+    verificate = _verifica_acte(p, acte, schimbate, erori)
+    if erori:
+        time.sleep(pauza_reluare)
+        reluate = [(a, man["acte"][a]) for a in sorted(erori)]
+        erori.clear()
+        verificate += _verifica_acte(p, reluate, schimbate, erori)
+    return schimbate, erori, verificate
+
+
+def _verifica_acte(p, acte, schimbate, erori):
+    verificate = 0
+    for act, v in acte:
         prim = v["fisiere"][0]
         try:
             _corp, info = p.act(v["id_portal"])
@@ -49,7 +62,7 @@ def forme_noi(p, man):
                                                                        and _data(nou) < _data(vechi)),
                               "fisiere_vechi": [{k: x[k] for k in ("fisier", "sha256", "consolidare")}
                                                 for x in v["fisiere"]]}
-    return schimbate, erori, verificate
+    return verificate
 
 
 def _cheie(p):
@@ -176,10 +189,12 @@ def verifica(p=None, scrie=True):
 
 
 def _rezumat(rez, declansatoare):
-    nev = " %d acte NEVERIFICATE (eroare de portal)." % len(rez["neverificate"]) if rez["neverificate"] else ""
+    nev = (" %d acte NEVERIFICATE (eroare de portal, și la reluare): %s — se reiau la verificarea următoare."
+           % (len(rez["neverificate"]), ", ".join(sorted(rez["neverificate"])))) if rez["neverificate"] else ""
     if not rez["forme_noi"] and not rez["schimbari_pentru_iconta"]:
-        return "nimic schimbat — %d din %d acte verificate pe portal, nicio formă consolidată nouă%s.%s" % (
-            rez["acte_verificate"], rez["acte_urmarite"],
+        return "nimic schimbat %s, nicio formă consolidată nouă%s.%s" % (
+            "— toate cele %d acte verificate pe portal" % rez["acte_urmarite"] if not rez["neverificate"] else
+            "în cele %d acte verificate (din %d)" % (rez["acte_verificate"], rez["acte_urmarite"]),
             "" if not rez["iconta_schimbat_de_la_ultima_comparatie"] else "; iConta s-a schimbat, fără efect", nev)
     s = "%d acte cu formă consolidată nouă (%s); %d schimbări pentru iConta" % (
         len(rez["forme_noi"]), ", ".join(rez["forme_noi"]) or "—", len(rez["schimbari_pentru_iconta"]))
@@ -196,6 +211,11 @@ def _detalii(rez, declansatoare):
         D.append("%s: consolidarea %s → %s" % (a, v["consolidare_veche"], v["consolidare_noua"]))
     for a, v in (rez.get("detector_structura") or {}).items():
         D.append("detector: %s semnalat (%s)" % (a, v["categorie"]))
+    for s in rez["schimbari_pentru_iconta"]:
+        if s in declansatoare:
+            continue
+        D.append("%s — %s (%s; nu declanșează propunere)" % (s["parametru"], "/".join(s["motive"]),
+                                                             s.get("clasificare") or s.get("clasificare_anterioara")))
     for s in declansatoare:
         D.append("%s — %s: iConta are %s (%s), legea spune %s în %s: „%s”" % (
             s["parametru"], "/".join(s["motive"]), s.get("valoare_cod"), s.get("unde_in_cod"),

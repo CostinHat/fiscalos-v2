@@ -37,11 +37,12 @@ def test_cheile_de_dict_nu_intra_ca_valori():
 
 
 def test_registrul_cote_e_inventariat_intreg():
-    """Cele 20 de chei ale registrului COTE, cu toate versiunile lor in timp."""
+    """Cele 22 de chei ale registrului COTE, cu toate versiunile lor in timp. (20/35 pana la iConta HEAD
+    85a811f; HEAD 663fb90 a adaugat chirie_pf_forfait si chirie_pf_impozit - gasite de urmarire, 01.10.2026.)"""
     par = [p for p in _inv()["parametri"] if p["sursa_inventar"] == "registru COTE"]
     nume = {p["nume"] for p in par}
-    assert len(nume) == 20, sorted(nume)
-    assert len(par) == 35, len(par)
+    assert len(nume) == 22, sorted(nume)
+    assert len(par) == 37, len(par)
     assert all(p["temei_declarat"] for p in par), "orice intrare din registru are Temei"
 
 

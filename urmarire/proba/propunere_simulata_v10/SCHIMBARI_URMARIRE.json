@@ -1,0 +1,79 @@
+{
+ "_ce": "De ce exista aceasta propunere: verificarea saptamanala a legilor. NEAPROBATA; nu se aplica niciodata automat in iConta.",
+ "data_verificarii": "2026-10-01 18:02:50",
+ "forme_noi": {
+  "cod_fiscal_227_2015_consolidat": {
+   "id_portal": "171280",
+   "de_ce": "C12",
+   "consolidare_veche": "08.08.2026",
+   "consolidare_noua": "01.10.2026",
+   "data_formei_vechi": "08.08.2026",
+   "mai_veche_decat_cea_din_manifest": false,
+   "fisiere_vechi": [
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__171280.html",
+     "sha256": "68f754b7cbfedf91387cd9c2c5a49b7f236de70cd5cde2577fca11ccc5212983",
+     "consolidare": "08.08.2026"
+    },
+    {
+     "fisier": "cod_fiscal_227_2015_consolidat__312601.html",
+     "sha256": "2393786755c97dc5af3274e832e27082bed0b6119dae0d47a6201756a1b765e0",
+     "consolidare": "08.08.2026"
+    }
+   ],
+   "data_formei_noi": "01.10.2026"
+  }
+ },
+ "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+ "schimbari": [
+  {
+   "parametru": "cote/impozit_profit@2018-01-01",
+   "valoare_cod": "0.16",
+   "unde_in_cod": "core/common.py:663 (registrul COTE)",
+   "valoare_lege": "18",
+   "atom": "cod_fiscal_227_2015_consolidat#art17",
+   "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 18%. +",
+   "clasificare": "DIFERA",
+   "clasificare_anterioara": "CONCORDA",
+   "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+   "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valoare_lege_anterioara": "16%",
+   "motive": [
+    "DIFERA nou",
+    "temei schimbat"
+   ]
+  },
+  {
+   "parametru": "nesursat/d101.COTA_STANDARD=16",
+   "valoare_cod": "16",
+   "unde_in_cod": "core/d101.py:46",
+   "valoare_lege": "16%",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct6~2/pct2",
+   "verbatim": "Impozit pe profit (16% x rd. 1) 4.800",
+   "clasificare": "NEVERIFICAT",
+   "clasificare_anterioara": "NEVERIFICAT",
+   "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+   "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valoare_lege_anterioara": "16%",
+   "motive": [
+    "temei schimbat"
+   ]
+  },
+  {
+   "parametru": "nesursat/d101g.COTA_STANDARD=16",
+   "valoare_cod": "16",
+   "unde_in_cod": "core/d101g.py:68",
+   "valoare_lege": "16%",
+   "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct6~2/pct2",
+   "verbatim": "Impozit pe profit (16% x rd. 1) 4.800",
+   "clasificare": "NEVERIFICAT",
+   "clasificare_anterioara": "NEVERIFICAT",
+   "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+   "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valoare_lege_anterioara": "16%",
+   "motive": [
+    "temei schimbat"
+   ]
+  }
+ ]
+}

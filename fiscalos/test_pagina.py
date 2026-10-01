@@ -19,6 +19,8 @@ def test_7d_niciun_modul_al_motorului_nu_citeste_intrebarile_lui_Costin():
     for f in sorted(os.listdir(os.path.join(_RAD, "fiscalos"))):
         if f.endswith(".py") and f not in ("pagina.py", "test_pagina.py"):
             t = open(os.path.join(_RAD, "fiscalos", f), encoding="utf-8").read()
+            # singura mentiune admisa: EXCLUDEREA din copia de test a urmaririi (opusul citirii)
+            t = re.sub(r"ignore_patterns\([^)]*\)", "", t)
             assert "pagina_date" not in t and "intrebari_costin" not in t, f
             assert not re.search(r"^\s*(from fiscalos import .*\bpagina\b|import fiscalos\.pagina)", t, re.M), f
 

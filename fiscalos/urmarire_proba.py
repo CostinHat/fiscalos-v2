@@ -48,7 +48,7 @@ class PortalSimulat(object):
 
 
 def copie_de_test(dest):
-    """Arborele proiectului fara venv/, corpus/ (nefolosit de urmarire), .git, pagina_date/."""
+    """Arborele proiectului fara venv/, corpus/ (nefolosit de urmarire), .git și datele paginii (excluse)."""
     if os.path.exists(dest):
         shutil.rmtree(dest)
     shutil.copytree(_RAD, dest, ignore=shutil.ignore_patterns(

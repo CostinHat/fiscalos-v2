@@ -51,3 +51,31 @@ def test_proba_8d_in_copia_de_test():
     r = json.load(open(os.path.join(_RAD, "urmarire", "proba", "rezultat_proba.json"), encoding="utf-8"))
     assert r["verdict"] == {"A_nimic_schimbat": True, "B_DIFERA_in_propunere": True, "depozitul_real_neatins": True}
     assert r["A"]["rezumat"].startswith("nimic schimbat")
+
+
+class _PortalCuCaderi(object):
+    def __init__(self, cad_pana_la):
+        self.n, self.cad = 0, cad_pana_la
+
+    def act(self, i):
+        self.n += 1
+        if i == "2" and self.n < self.cad:
+            raise OSError("timed out")
+        return b"", {"consolidare_curenta": "01.01.2026"}
+
+
+_MAN = {"acte": {a: {"id_portal": i, "de_ce": "x", "data_formei_consolidate": "01.01.2026",
+                     "fisiere": [{"consolidare": "01.01.2026"}]} for a, i in (("a", "1"), ("b", "2"))}}
+
+
+def test_actul_cazut_se_reia_o_data_si_altfel_ramane_NEVERIFICAT():
+    assert urmarire.forme_noi(_PortalCuCaderi(3), _MAN, 0) == ({}, {}, 2)          # reluarea reuseste
+    s, e, v = urmarire.forme_noi(_PortalCuCaderi(4), _MAN, 0)                       # cade si la reluare
+    assert s == {} and list(e) == ["b"] and v == 1
+
+
+def test_rezumatul_nu_spune_nimic_schimbat_pentru_toate_cand_unele_n_au_fost_verificate():
+    r = {"forme_noi": {}, "schimbari_pentru_iconta": [], "acte_verificate": 59, "acte_urmarite": 61,
+         "neverificate": {"x": "timeout", "y": "timeout"}, "iconta_schimbat_de_la_ultima_comparatie": False}
+    t = urmarire._rezumat(r, [])
+    assert "în cele 59 acte verificate (din 61)" in t and "NEVERIFICATE" in t and "toate" not in t

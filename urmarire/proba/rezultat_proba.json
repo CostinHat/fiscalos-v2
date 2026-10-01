@@ -1,56 +1,8 @@
 {
  "copie_de_test": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
- "secunde_copie": 0.3,
+ "secunde_copie": 0.4,
  "A0": {
-  "data_verificarii": "2026-10-01 17:39:11",
-  "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
-  "portal": "simulat",
-  "acte_urmarite": 61,
-  "acte_verificate": 61,
-  "neverificate": {},
-  "forme_noi": {},
-  "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
-  "iconta_schimbat_de_la_ultima_comparatie": true,
-  "schimbari_pentru_iconta": [
-   {
-    "parametru": "cote/chirie_pf_forfait@2026-01-01",
-    "valoare_cod": "0.20",
-    "unde_in_cod": "core/common.py:585 (registrul COTE)",
-    "valoare_lege": "20%",
-    "atom": "cod_fiscal_227_2015_consolidat#art84^1/alin3",
-    "verbatim": "Venitul net din cedarea folosinței bunurilor, altul decât venitul din arendarea bunurilor agricole și din închirierea pe termen scurt de către proprietari, uzufructuari sau alți deținători legali a camerelor situate în locuințe proprietate personală, se stabilește la fiecare plată, de către plătitorii de venit, persoane juridice sau alte entități care au obligația de a conduce evidență contabilă, prin deducerea din venitul brut a cheltuielilor determinate prin aplicarea cotei de 20% asupra acestuia.",
-    "clasificare": "CONCORDA",
-    "clasificare_anterioara": null,
-    "motive": [
-     "parametru nou in iConta"
-    ]
-   },
-   {
-    "parametru": "cote/chirie_pf_impozit@2026-01-01",
-    "valoare_cod": "0.10",
-    "unde_in_cod": "core/common.py:588 (registrul COTE)",
-    "valoare_lege": "10%",
-    "atom": "cod_fiscal_227_2015_consolidat#art84^1/alin5",
-    "verbatim": "Impozitul se calculează prin aplicarea cotei de 10% asupra venitului net și se reține la sursă, de către plătitorii de venituri prevăzuți la alin. (4) , la momentul plății veniturilor.",
-    "clasificare": "CONCORDA",
-    "clasificare_anterioara": null,
-    "motive": [
-     "parametru nou in iConta"
-    ]
-   }
-  ],
-  "rezumat": "0 acte cu formă consolidată nouă (—); 2 schimbări pentru iConta; niciun DIFERĂ sau temei schimbat, nicio propunere nouă.",
-  "detalii": [],
-  "durate_secunde": {
-   "verificare_portal": 0.1,
-   "iconta_si_potrivire": 15.0,
-   "total": 15.0
-  },
-  "cereri_portal_simulat": 61,
-  "secunde_scenariu": 15.2
- },
- "A": {
-  "data_verificarii": "2026-10-01 17:39:26",
+  "data_verificarii": "2026-10-01 18:02:49",
   "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
   "portal": "simulat",
   "acte_urmarite": 61,
@@ -60,7 +12,27 @@
   "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
   "iconta_schimbat_de_la_ultima_comparatie": false,
   "schimbari_pentru_iconta": [],
-  "rezumat": "nimic schimbat — 61 din 61 acte verificate pe portal, nicio formă consolidată nouă.",
+  "rezumat": "nimic schimbat — toate cele 61 acte verificate pe portal, nicio formă consolidată nouă.",
+  "detalii": [],
+  "durate_secunde": {
+   "verificare_portal": 0.1,
+   "total": 0.1
+  },
+  "cereri_portal_simulat": 61,
+  "secunde_scenariu": 0.2
+ },
+ "A": {
+  "data_verificarii": "2026-10-01 18:02:50",
+  "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
+  "portal": "simulat",
+  "acte_urmarite": 61,
+  "acte_verificate": 61,
+  "neverificate": {},
+  "forme_noi": {},
+  "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+  "iconta_schimbat_de_la_ultima_comparatie": false,
+  "schimbari_pentru_iconta": [],
+  "rezumat": "nimic schimbat — toate cele 61 acte verificate pe portal, nicio formă consolidată nouă.",
   "detalii": [],
   "durate_secunde": {
    "verificare_portal": 0.1,
@@ -70,7 +42,7 @@
   "secunde_scenariu": 0.1
  },
  "B": {
-  "data_verificarii": "2026-10-01 17:39:26",
+  "data_verificarii": "2026-10-01 18:02:50",
   "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
   "portal": "simulat",
   "acte_urmarite": 61,
@@ -167,13 +139,13 @@
   "durate_secunde": {
    "verificare_portal": 0.1,
    "aducere_si_atomizare": 4.9,
-   "detector": 4.2,
-   "iconta_si_potrivire": 15.1,
+   "detector": 4.3,
+   "iconta_si_potrivire": 14.9,
    "propunere": 4.2,
-   "total": 28.5
+   "total": 28.3
   },
   "cereri_portal_simulat": 63,
-  "secunde_scenariu": 28.6
+  "secunde_scenariu": 28.4
  },
  "B_parametrul_impozit_profit": [
   {
@@ -199,5 +171,5 @@
   "B_DIFERA_in_propunere": true,
   "depozitul_real_neatins": true
  },
- "secunde_total": 44.2
+ "secunde_total": 29.1
 }
