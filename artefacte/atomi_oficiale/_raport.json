@@ -41,13 +41,6 @@
   "ultima_nota": "2025-11-19",
   "data_formei_consolidate": "19.11.2025"
  },
- "hg_1045_2018_norme_consolidat": {
-  "n": 193,
-  "structura": "articole",
-  "cu_valabilitate": 34,
-  "ultima_nota": "2023-02-01",
-  "data_formei_consolidate": "15.09.2026"
- },
  "hg_1074_2021": {
   "n": 289,
   "structura": "articole",
@@ -425,5 +418,12 @@
   "cu_valabilitate": 80,
   "ultima_nota": "2022-05-02",
   "data_formei_consolidate": "02.05.2022"
+ },
+ "hg_1045_2018_norme_consolidat": {
+  "n": 193,
+  "structura": "articole",
+  "cu_valabilitate": 34,
+  "ultima_nota": "2023-02-01",
+  "data_formei_consolidate": "30.09.2026"
  }
 }

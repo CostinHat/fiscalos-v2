@@ -31,13 +31,59 @@
   "n_module": 66,
   "n_simboluri": 364
  },
- "cu_temei_declarat": 42,
- "facut_la": "2026-09-29T22:49:38",
+ "cu_temei_declarat": 44,
+ "facut_la": "2026-10-01T17:44:26",
  "fara_temei_declarat": 105,
  "iconta": "/home/costin/iconta_nou",
- "iconta_commit_git": "85a811f6fe23430224079d472d0db1f1b386523b",
- "n_parametri": 147,
+ "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+ "n_parametri": 149,
  "parametri": [
+  {
+   "clasa": "cota",
+   "id": "cote/chirie_pf_forfait@2026-01-01",
+   "nume": "chirie_pf_forfait",
+   "procent_cod": "20",
+   "sursa_inventar": "registru COTE",
+   "temei_declarat": {
+    "_obiect": "Temei",
+    "alin": "3",
+    "art": "84^1",
+    "data_in": "2026-01-01",
+    "de_cine": "Code/Costin",
+    "lant_acte": "CF art.84^1 alin.(3) cedarea folosintei catre platitor PJ; forma data de Legea 239/2025 de la 01.01.2026",
+    "nivel_sursa": "MO",
+    "text_citat": "prin deducerea din venitul brut a cheltuielilor determinate prin aplicarea cotei de 20% asupra acestuia",
+    "tip": "CF",
+    "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
+    "verificat_la": "2026-09-29"
+   },
+   "unde": "core/common.py:585 (registrul COTE)",
+   "valabil_din_cod": "2026-01-01",
+   "valoare_cod": "0.20"
+  },
+  {
+   "clasa": "cota",
+   "id": "cote/chirie_pf_impozit@2026-01-01",
+   "nume": "chirie_pf_impozit",
+   "procent_cod": "10",
+   "sursa_inventar": "registru COTE",
+   "temei_declarat": {
+    "_obiect": "Temei",
+    "alin": "5",
+    "art": "84^1",
+    "data_in": "2026-01-01",
+    "de_cine": "Code/Costin",
+    "lant_acte": "CF art.84^1 alin.(5) impozit final retinut la sursa; forma data de Legea 239/2025 de la 01.01.2026",
+    "nivel_sursa": "MO",
+    "text_citat": "Impozitul se calculează prin aplicarea cotei de 10% asupra venitului net și se reține la sursă",
+    "tip": "CF",
+    "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
+    "verificat_la": "2026-09-29"
+   },
+   "unde": "core/common.py:588 (registrul COTE)",
+   "valabil_din_cod": "2026-01-01",
+   "valoare_cod": "0.10"
+  },
   {
    "clasa": "cota",
    "id": "cote/tva_standard@2025-08-01",
@@ -59,7 +105,7 @@
     "url": "anaf_surse/legea_141_2025_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:586 (registrul COTE)",
+   "unde": "core/common.py:594 (registrul COTE)",
    "valabil_din_cod": "2025-08-01",
    "valoare_cod": "0.21"
   },
@@ -83,7 +129,7 @@
     "url": "anaf_surse/cf_2015_forma_initiala.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:587 (registrul COTE)",
+   "unde": "core/common.py:595 (registrul COTE)",
    "valabil_din_cod": "2017-01-01",
    "valoare_cod": "0.19"
   },
@@ -107,7 +153,7 @@
     "url": "anaf_surse/legea_141_2025_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:590 (registrul COTE)",
+   "unde": "core/common.py:598 (registrul COTE)",
    "valabil_din_cod": "2025-08-01",
    "valoare_cod": "0.11"
   },
@@ -132,7 +178,7 @@
     "url": "anaf_surse/legea_141_2025_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:600 (registrul COTE)",
+   "unde": "core/common.py:608 (registrul COTE)",
    "valabil_din_cod": "2025-08-01",
    "valoare_cod": "0.11"
   },
@@ -157,7 +203,7 @@
     "url": "anaf_surse/cf_art291_2016_forma_initiala.txt",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:601 (registrul COTE)",
+   "unde": "core/common.py:609 (registrul COTE)",
    "valabil_din_cod": "2016-01-01",
    "valoare_cod": "0.09"
   },
@@ -182,7 +228,7 @@
     "url": "anaf_surse/legea_141_2025_consolidat.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:604 (registrul COTE)",
+   "unde": "core/common.py:612 (registrul COTE)",
    "valabil_din_cod": "2025-08-01",
    "valoare_cod": "0.11"
   },
@@ -207,7 +253,7 @@
     "url": "anaf_surse/cf_art291_2016_forma_initiala.txt",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:605 (registrul COTE)",
+   "unde": "core/common.py:613 (registrul COTE)",
    "valabil_din_cod": "2016-01-01",
    "valoare_cod": "0.05"
   },
@@ -232,7 +278,7 @@
     "url": "anaf_surse/legea_141_2025_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:615 (registrul COTE)",
+   "unde": "core/common.py:623 (registrul COTE)",
    "valabil_din_cod": "2026-01-01",
    "valoare_cod": "0.16"
   },
@@ -257,7 +303,7 @@
     "url": "anaf_surse/oug_156_2024.txt",
     "verificat_la": "2026-08-16"
    },
-   "unde": "core/common.py:616 (registrul COTE)",
+   "unde": "core/common.py:624 (registrul COTE)",
    "valabil_din_cod": "2025-01-01",
    "valoare_cod": "0.10"
   },
@@ -282,7 +328,7 @@
     "url": "anaf_surse/og_16_2022_consolidat.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:617 (registrul COTE)",
+   "unde": "core/common.py:625 (registrul COTE)",
    "valabil_din_cod": "2023-01-01",
    "valoare_cod": "0.08"
   },
@@ -307,7 +353,7 @@
     "url": "anaf_surse/oug_50_2015_consolidat.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:618 (registrul COTE)",
+   "unde": "core/common.py:626 (registrul COTE)",
    "valabil_din_cod": "2016-01-01",
    "valoare_cod": "0.05"
   },
@@ -332,7 +378,7 @@
     "url": "anaf_surse/oug_8_2026.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:623 (registrul COTE)",
+   "unde": "core/common.py:631 (registrul COTE)",
    "valabil_din_cod": "2027-01-01",
    "valoare_cod": "5500000"
   },
@@ -357,7 +403,7 @@
     "url": "anaf_surse/oug_8_2026.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:624 (registrul COTE)",
+   "unde": "core/common.py:632 (registrul COTE)",
    "valabil_din_cod": "2026-03-01",
    "valoare_cod": "5000000"
   },
@@ -380,7 +426,7 @@
     "url": "anaf_surse/legea_296_2020_consolidat.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:625 (registrul COTE)",
+   "unde": "core/common.py:633 (registrul COTE)",
    "valabil_din_cod": "2021-01-01",
    "valoare_cod": "4500000"
   },
@@ -406,7 +452,7 @@
     "url": "anaf_surse/oug_8_2026.html",
     "verificat_la": "2026-09-25"
    },
-   "unde": "core/common.py:628 (registrul COTE)",
+   "unde": "core/common.py:636 (registrul COTE)",
    "valabil_din_cod": "2026-01-01",
    "valoare_cod": "5000"
   },
@@ -428,7 +474,7 @@
     "url": "anaf_surse/hg_276_2013.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:629 (registrul COTE)",
+   "unde": "core/common.py:637 (registrul COTE)",
    "valabil_din_cod": "2015-01-01",
    "valoare_cod": "2500"
   },
@@ -452,7 +498,7 @@
     "url": "anaf_surse/ordin_1604_2025_intrastat_mo.txt",
     "verificat_la": "2026-09-01"
    },
-   "unde": "core/common.py:641 (registrul COTE)",
+   "unde": "core/common.py:649 (registrul COTE)",
    "valabil_din_cod": "2026-01-01",
    "valoare_cod": "1000000"
   },
@@ -474,7 +520,7 @@
     "url": "anaf_surse/legea_70_2015_consolidat.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:644 (registrul COTE)",
+   "unde": "core/common.py:652 (registrul COTE)",
    "valabil_din_cod": "2015-05-09",
    "valoare_cod": "50000"
   },
@@ -496,7 +542,7 @@
     "url": "anaf_surse/oug_115_2023_consolidat.html",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:647 (registrul COTE)",
+   "unde": "core/common.py:655 (registrul COTE)",
    "valabil_din_cod": "2023-12-15",
    "valoare_cod": "5000"
   },
@@ -519,7 +565,7 @@
     "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:652 (registrul COTE)",
+   "unde": "core/common.py:660 (registrul COTE)",
    "valabil_din_cod": "2023-01-01",
    "valoare_cod": "0.01"
   },
@@ -540,7 +586,7 @@
     "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:655 (registrul COTE)",
+   "unde": "core/common.py:663 (registrul COTE)",
    "valabil_din_cod": "2018-01-01",
    "valoare_cod": "0.16"
   },
@@ -561,7 +607,7 @@
     "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:658 (registrul COTE)",
+   "unde": "core/common.py:666 (registrul COTE)",
    "valabil_din_cod": "2018-01-01",
    "valoare_cod": "0.25"
   },
@@ -582,7 +628,7 @@
     "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:661 (registrul COTE)",
+   "unde": "core/common.py:669 (registrul COTE)",
    "valabil_din_cod": "2018-01-01",
    "valoare_cod": "0.10"
   },
@@ -603,7 +649,7 @@
     "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:664 (registrul COTE)",
+   "unde": "core/common.py:672 (registrul COTE)",
    "valabil_din_cod": "2018-01-01",
    "valoare_cod": "0.10"
   },
@@ -625,7 +671,7 @@
     "url": "anaf_surse/cod_fiscal_227_2015_consolidat.html",
     "verificat_la": "2026-08-16"
    },
-   "unde": "core/common.py:667 (registrul COTE)",
+   "unde": "core/common.py:675 (registrul COTE)",
    "valabil_din_cod": "2018-01-01",
    "valoare_cod": "0.0225"
   },
@@ -648,7 +694,7 @@
     "url": "anaf_surse/hg_146_2026_salariu_minim.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:670 (registrul COTE)",
+   "unde": "core/common.py:678 (registrul COTE)",
    "valabil_din_cod": "2026-07-01",
    "valoare_cod": "4325"
   },
@@ -671,7 +717,7 @@
     "url": "anaf_surse/hg_1506_2024_salariu_minim.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:671 (registrul COTE)",
+   "unde": "core/common.py:679 (registrul COTE)",
    "valabil_din_cod": "2025-01-01",
    "valoare_cod": "4050"
   },
@@ -694,7 +740,7 @@
     "url": "anaf_surse/oug_89_2025.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:674 (registrul COTE)",
+   "unde": "core/common.py:682 (registrul COTE)",
    "valabil_din_cod": "2026-07-01",
    "valoare_cod": "200"
   },
@@ -717,7 +763,7 @@
     "url": "anaf_surse/oug_156_2024.pdf",
     "verificat_la": "2026-08-09"
    },
-   "unde": "core/common.py:675 (registrul COTE)",
+   "unde": "core/common.py:683 (registrul COTE)",
    "valabil_din_cod": "2025-01-01",
    "valoare_cod": "300"
   },
@@ -742,7 +788,7 @@
     "url": "anaf_surse/oug_89_2025.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:678 (registrul COTE)",
+   "unde": "core/common.py:686 (registrul COTE)",
    "valabil_din_cod": "2026-07-01",
    "valoare_cod": "4600"
   },
@@ -767,7 +813,7 @@
     "url": "anaf_surse/oug_89_2025.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:679 (registrul COTE)",
+   "unde": "core/common.py:687 (registrul COTE)",
    "valabil_din_cod": "2026-01-01",
    "valoare_cod": "4300"
   },
@@ -790,7 +836,7 @@
     "url": "anaf_surse/oug_156_2024.pdf",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:680 (registrul COTE)",
+   "unde": "core/common.py:688 (registrul COTE)",
    "valabil_din_cod": "2025-01-01",
    "valoare_cod": "4300"
   },
@@ -813,7 +859,7 @@
     "url": "anaf_surse/legea_201_2025.html",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:683 (registrul COTE)",
+   "unde": "core/common.py:691 (registrul COTE)",
    "valabil_din_cod": "2025-11-01",
    "valoare_cod": "45"
   },
@@ -836,7 +882,7 @@
     "url": "anaf_surse/anaf_limite_2025.pdf",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:684 (registrul COTE)",
+   "unde": "core/common.py:692 (registrul COTE)",
    "valabil_din_cod": "2025-04-01",
    "valoare_cod": "40.18"
   },
@@ -858,7 +904,7 @@
     "url": "anaf_surse/anaf_limite_2025.pdf",
     "verificat_la": "2026-08-07"
    },
-   "unde": "core/common.py:685 (registrul COTE)",
+   "unde": "core/common.py:693 (registrul COTE)",
    "valabil_din_cod": "2025-01-01",
    "valoare_cod": "40.04"
   },
@@ -1284,7 +1330,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 2 locuri: casa.py:212 cont, inventariere.py:88 cont_crt",
+   "unde": "core/ in 2 locuri: casa.py:212 cont, inventariere.py:87 cont_crt",
    "valabil_din_cod": null,
    "valoare_cod": "4282"
   },
@@ -1449,7 +1495,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 2 locuri: casa.py:212 cont, inventariere.py:88 cont_crt",
+   "unde": "core/ in 2 locuri: casa.py:212 cont, inventariere.py:87 cont_crt",
    "valabil_din_cod": null,
    "valoare_cod": "461"
   },
@@ -1471,7 +1517,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 9 locuri: bacsis.py:25 cont, bacsis.py:38 cont, contracte_speciale.py:117 cont_bani",
+   "unde": "core/ in 9 locuri: bacsis.py:25 cont, bacsis.py:38 cont, contracte_speciale.py:109 cont_bani",
    "valabil_din_cod": null,
    "valoare_cod": "5121"
   },
@@ -1559,7 +1605,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 1 locuri: contracte_speciale.py:114 cont_ch",
+   "unde": "core/ in 1 locuri: contracte_speciale.py:106 cont_ch",
    "valabil_din_cod": null,
    "valoare_cod": "621"
   },
@@ -1570,7 +1616,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 1 locuri: contracte_speciale.py:111 cont_ch",
+   "unde": "core/ in 1 locuri: contracte_speciale.py:103 cont_ch",
    "valabil_din_cod": null,
    "valoare_cod": "641"
   },
@@ -1625,7 +1671,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 1 locuri: uc_tenants.py:5448 cont_venit",
+   "unde": "core/ in 1 locuri: uc_tenants.py:5453 cont_venit",
    "valabil_din_cod": null,
    "valoare_cod": "704"
   },
@@ -1636,7 +1682,7 @@
    "procent_cod": null,
    "sursa_inventar": "simbol de cont in container numit de iConta ca CONT",
    "temei_declarat": null,
-   "unde": "core/ in 4 locuri: d406.py:1491 cont_l, firma_profil_api.py:34 CONT_VENIT_IMPLICIT_DEFAULT, uc_tenants.py:3288 cont_venit",
+   "unde": "core/ in 4 locuri: d406.py:1491 cont_l, firma_profil_api.py:34 CONT_VENIT_IMPLICIT_DEFAULT, uc_tenants.py:3291 cont_venit",
    "valabil_din_cod": null,
    "valoare_cod": "707"
   },
@@ -2223,11 +2269,11 @@
  ],
  "pe_clasa": {
   "cont": 62,
-  "cota": 38,
+  "cota": 40,
   "nomenclator": 4,
   "plafon": 38,
   "termen": 5
  },
  "probleme": [],
- "secunde": 8.84
+ "secunde": 6.43
 }

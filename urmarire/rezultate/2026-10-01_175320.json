@@ -1,0 +1,24 @@
+{
+ "data_verificarii": "2026-10-01 17:44:45",
+ "radacina": "/home/costin/fiscalos",
+ "portal": "https://legislatie.just.ro",
+ "acte_urmarite": 61,
+ "acte_verificate": 59,
+ "neverificate": {
+  "legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25": "URLError: <urlopen error timed out>",
+  "legea_319_2006_consolidat": "URLError: <urlopen error timed out>"
+ },
+ "forme_noi": {},
+ "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+ "iconta_schimbat_de_la_ultima_comparatie": false,
+ "schimbari_pentru_iconta": [],
+ "rezumat": "nimic schimbat — 59 din 61 acte verificate pe portal, nicio formă consolidată nouă. 2 acte NEVERIFICATE (eroare de portal).",
+ "detalii": [
+  "NEVERIFICAT legea_30_2019_aprobarea_ordonantei_urgenta_guvernului_25: URLError: <urlopen error timed out>",
+  "NEVERIFICAT legea_319_2006_consolidat: URLError: <urlopen error timed out>"
+ ],
+ "durate_secunde": {
+  "verificare_portal": 514.4,
+  "total": 514.4
+ }
+}

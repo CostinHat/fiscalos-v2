@@ -1,0 +1,76 @@
+{
+ "data_verificarii": "2026-10-01 17:40:26",
+ "radacina": "/home/costin/fiscalos",
+ "portal": "https://legislatie.just.ro",
+ "acte_urmarite": 61,
+ "acte_verificate": 61,
+ "neverificate": {},
+ "forme_noi": {
+  "hg_1045_2018_norme_consolidat": {
+   "id_portal": "209698",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "consolidare_veche": "15.09.2026",
+   "consolidare_noua": "30.09.2026",
+   "data_formei_vechi": "15.09.2026",
+   "mai_veche_decat_cea_din_manifest": false,
+   "fisiere_vechi": [
+    {
+     "fisier": "hg_1045_2018_norme_consolidat__209698.html",
+     "sha256": "bd8e8212d39d25ef49c11409ed63faa0047d33fb64f21fee4037972dd54dc019",
+     "consolidare": "15.09.2026"
+    },
+    {
+     "fisier": "hg_1045_2018_norme_consolidat__314143.html",
+     "sha256": "764463fd8d91f80439b94d09f887c627d9b3330a5a595ec6d6af941265016c55",
+     "consolidare": "15.09.2026"
+    }
+   ],
+   "data_formei_noi": "30.09.2026"
+  }
+ },
+ "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+ "detector_structura": {},
+ "detector_structura_curat": [
+  "hg_1045_2018_norme_consolidat"
+ ],
+ "iconta_schimbat_de_la_ultima_comparatie": true,
+ "schimbari_pentru_iconta": [
+  {
+   "parametru": "cote/chirie_pf_forfait@2026-01-01",
+   "valoare_cod": "0.20",
+   "unde_in_cod": "core/common.py:585 (registrul COTE)",
+   "valoare_lege": "20%",
+   "atom": "cod_fiscal_227_2015_consolidat#art84^1/alin3",
+   "verbatim": "Venitul net din cedarea folosinței bunurilor, altul decât venitul din arendarea bunurilor agricole și din închirierea pe termen scurt de către proprietari, uzufructuari sau alți deținători legali a camerelor situate în locuințe proprietate personală, se stabilește la fiecare plată, de către plătitorii de venit, persoane juridice sau alte entități care au obligația de a conduce evidență contabilă, prin deducerea din venitul brut a cheltuielilor determinate prin aplicarea cotei de 20% asupra acestuia.",
+   "clasificare": "CONCORDA",
+   "clasificare_anterioara": null,
+   "motive": [
+    "parametru nou in iConta"
+   ]
+  },
+  {
+   "parametru": "cote/chirie_pf_impozit@2026-01-01",
+   "valoare_cod": "0.10",
+   "unde_in_cod": "core/common.py:588 (registrul COTE)",
+   "valoare_lege": "10%",
+   "atom": "cod_fiscal_227_2015_consolidat#art84^1/alin5",
+   "verbatim": "Impozitul se calculează prin aplicarea cotei de 10% asupra venitului net și se reține la sursă, de către plătitorii de venituri prevăzuți la alin. (4) , la momentul plății veniturilor.",
+   "clasificare": "CONCORDA",
+   "clasificare_anterioara": null,
+   "motive": [
+    "parametru nou in iConta"
+   ]
+  }
+ ],
+ "rezumat": "1 acte cu formă consolidată nouă (hg_1045_2018_norme_consolidat); 2 schimbări pentru iConta; niciun DIFERĂ sau temei schimbat, nicio propunere nouă.",
+ "detalii": [
+  "hg_1045_2018_norme_consolidat: consolidarea 15.09.2026 → 30.09.2026"
+ ],
+ "durate_secunde": {
+  "verificare_portal": 215.7,
+  "aducere_si_atomizare": 12.6,
+  "detector": 4.3,
+  "iconta_si_potrivire": 14.8,
+  "total": 247.4
+ }
+}

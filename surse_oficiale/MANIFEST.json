@@ -178,39 +178,6 @@
    "articole_total": 78,
    "secunde": 9.3
   },
-  "hg_1045_2018_norme_consolidat": {
-   "id_portal": "209698",
-   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
-   "fisiere": [
-    {
-     "fisier": "hg_1045_2018_norme_consolidat__209698.html",
-     "id_portal": "209698",
-     "id_forma": "314142",
-     "url": "https://legislatie.just.ro/Public/DetaliiDocument/209698",
-     "titlu": "HOTARARE 1045 28/12/2018 - Portal Legislativ",
-     "consolidare": "15.09.2026",
-     "e_forma_curenta": true,
-     "articole": 11,
-     "octeti": 70304,
-     "sha256": "bd8e8212d39d25ef49c11409ed63faa0047d33fb64f21fee4037972dd54dc019"
-    },
-    {
-     "fisier": "hg_1045_2018_norme_consolidat__314143.html",
-     "id_portal": "314143",
-     "id_forma": "314143",
-     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/314143",
-     "titlu": "NORMA (A) 28/12/2018 - Portal Legislativ",
-     "consolidare": "15.09.2026",
-     "e_forma_curenta": true,
-     "articole": 120,
-     "octeti": 309967,
-     "sha256": "764463fd8d91f80439b94d09f887c627d9b3330a5a595ec6d6af941265016c55"
-    }
-   ],
-   "data_formei_consolidate": "15.09.2026",
-   "articole_total": 131,
-   "secunde": 5.2
-  },
   "hg_1074_2021": {
    "id_portal": "247209",
    "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
@@ -1570,6 +1537,40 @@
    "forma_de_baza": false,
    "articole_total": 109,
    "secunde": 2.9
+  },
+  "hg_1045_2018_norme_consolidat": {
+   "id_portal": "209698",
+   "de_ce": "C31: structura stricata in instantaneu (detector_structura)",
+   "fisiere": [
+    {
+     "fisier": "hg_1045_2018_norme_consolidat__209698.html",
+     "id_portal": "209698",
+     "id_forma": "314228",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/209698",
+     "titlu": "HOTARARE 1045 28/12/2018 - Portal Legislativ",
+     "consolidare": "30.09.2026",
+     "e_forma_curenta": true,
+     "articole": 11,
+     "octeti": 70468,
+     "sha256": "2f3a61092ac00e00fc2bc805abb777f84afc1ce9e02687b70a4db211e2c009a4"
+    },
+    {
+     "fisier": "hg_1045_2018_norme_consolidat__314229.html",
+     "id_portal": "314229",
+     "id_forma": "314229",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/314229",
+     "titlu": "NORMA (A) 28/12/2018 - Portal Legislativ",
+     "consolidare": "30.09.2026",
+     "e_forma_curenta": true,
+     "articole": 124,
+     "octeti": 313988,
+     "sha256": "789a36108aea5cd104e79a01ebfba5d7ff5c804875fcf3f9b22085778fcb9d5e"
+    }
+   ],
+   "data_formei_consolidate": "30.09.2026",
+   "forma_de_baza": false,
+   "articole_total": 135,
+   "secunde": 7.7
   }
  },
  "adaugiri": [
@@ -1577,6 +1578,7 @@
   "2026-09-29T09:23:15",
   "2026-09-29T10:55:24",
   "2026-09-29T23:03:01",
-  "2026-09-29T23:03:48"
+  "2026-09-29T23:03:48",
+  "2026-10-01T17:44:02"
  ]
 }
