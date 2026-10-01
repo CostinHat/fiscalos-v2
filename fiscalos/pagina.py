@@ -88,13 +88,24 @@ def verifica_parola(parola):
 
 
 # ── motorul ──────────────────────────────────────────────────────────────────────────────────────
+F_STRAT_OFICIAL = os.path.join(_RAD, "artefacte", "atomi_oficiale", "_raport.json")
+
+
+def _versiune_corpus():
+    return os.path.getmtime(F_STRAT_OFICIAL) if os.path.exists(F_STRAT_OFICIAL) else None
+
+
 def motor():
+    """Indexul se incarca o data; se REINCARCA daca urmarirea (punctul 8) a adus o forma noua a unei legi
+    si nicio intrebare nu e in lucru - altfel pagina ar raspunde din textul vechi."""
     with _blocaj:
+        if _motor and _motor.get("corpus") != _versiune_corpus() and not _lucru:
+            _motor.clear()
         if not _motor:
             import anthropic
             from fiscalos import intrebari, navigare, semantic
             idx = intrebari.Index()
-            _motor.update(idx=idx, sistem=navigare.sistem(idx),
+            _motor.update(idx=idx, sistem=navigare.sistem(idx), corpus=_versiune_corpus(),
                           client=anthropic.Anthropic(api_key=semantic.cheie()))
         return _motor
 

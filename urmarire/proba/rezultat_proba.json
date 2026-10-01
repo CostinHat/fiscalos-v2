@@ -1,0 +1,203 @@
+{
+ "copie_de_test": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
+ "secunde_copie": 0.3,
+ "A0": {
+  "data_verificarii": "2026-10-01 17:39:11",
+  "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
+  "portal": "simulat",
+  "acte_urmarite": 61,
+  "acte_verificate": 61,
+  "neverificate": {},
+  "forme_noi": {},
+  "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+  "iconta_schimbat_de_la_ultima_comparatie": true,
+  "schimbari_pentru_iconta": [
+   {
+    "parametru": "cote/chirie_pf_forfait@2026-01-01",
+    "valoare_cod": "0.20",
+    "unde_in_cod": "core/common.py:585 (registrul COTE)",
+    "valoare_lege": "20%",
+    "atom": "cod_fiscal_227_2015_consolidat#art84^1/alin3",
+    "verbatim": "Venitul net din cedarea folosinței bunurilor, altul decât venitul din arendarea bunurilor agricole și din închirierea pe termen scurt de către proprietari, uzufructuari sau alți deținători legali a camerelor situate în locuințe proprietate personală, se stabilește la fiecare plată, de către plătitorii de venit, persoane juridice sau alte entități care au obligația de a conduce evidență contabilă, prin deducerea din venitul brut a cheltuielilor determinate prin aplicarea cotei de 20% asupra acestuia.",
+    "clasificare": "CONCORDA",
+    "clasificare_anterioara": null,
+    "motive": [
+     "parametru nou in iConta"
+    ]
+   },
+   {
+    "parametru": "cote/chirie_pf_impozit@2026-01-01",
+    "valoare_cod": "0.10",
+    "unde_in_cod": "core/common.py:588 (registrul COTE)",
+    "valoare_lege": "10%",
+    "atom": "cod_fiscal_227_2015_consolidat#art84^1/alin5",
+    "verbatim": "Impozitul se calculează prin aplicarea cotei de 10% asupra venitului net și se reține la sursă, de către plătitorii de venituri prevăzuți la alin. (4) , la momentul plății veniturilor.",
+    "clasificare": "CONCORDA",
+    "clasificare_anterioara": null,
+    "motive": [
+     "parametru nou in iConta"
+    ]
+   }
+  ],
+  "rezumat": "0 acte cu formă consolidată nouă (—); 2 schimbări pentru iConta; niciun DIFERĂ sau temei schimbat, nicio propunere nouă.",
+  "detalii": [],
+  "durate_secunde": {
+   "verificare_portal": 0.1,
+   "iconta_si_potrivire": 15.0,
+   "total": 15.0
+  },
+  "cereri_portal_simulat": 61,
+  "secunde_scenariu": 15.2
+ },
+ "A": {
+  "data_verificarii": "2026-10-01 17:39:26",
+  "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
+  "portal": "simulat",
+  "acte_urmarite": 61,
+  "acte_verificate": 61,
+  "neverificate": {},
+  "forme_noi": {},
+  "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+  "iconta_schimbat_de_la_ultima_comparatie": false,
+  "schimbari_pentru_iconta": [],
+  "rezumat": "nimic schimbat — 61 din 61 acte verificate pe portal, nicio formă consolidată nouă.",
+  "detalii": [],
+  "durate_secunde": {
+   "verificare_portal": 0.1,
+   "total": 0.1
+  },
+  "cereri_portal_simulat": 61,
+  "secunde_scenariu": 0.1
+ },
+ "B": {
+  "data_verificarii": "2026-10-01 17:39:26",
+  "radacina": "/tmp/claude-1000/-home-costin-fiscalos/f9886a4e-9acd-4bcc-a1dc-dc6bcdf88c07/scratchpad/urmarire/copie_test",
+  "portal": "simulat",
+  "acte_urmarite": 61,
+  "acte_verificate": 61,
+  "neverificate": {},
+  "forme_noi": {
+   "cod_fiscal_227_2015_consolidat": {
+    "id_portal": "171280",
+    "de_ce": "C12",
+    "consolidare_veche": "08.08.2026",
+    "consolidare_noua": "01.10.2026",
+    "data_formei_vechi": "08.08.2026",
+    "mai_veche_decat_cea_din_manifest": false,
+    "fisiere_vechi": [
+     {
+      "fisier": "cod_fiscal_227_2015_consolidat__171280.html",
+      "sha256": "68f754b7cbfedf91387cd9c2c5a49b7f236de70cd5cde2577fca11ccc5212983",
+      "consolidare": "08.08.2026"
+     },
+     {
+      "fisier": "cod_fiscal_227_2015_consolidat__312601.html",
+      "sha256": "2393786755c97dc5af3274e832e27082bed0b6119dae0d47a6201756a1b765e0",
+      "consolidare": "08.08.2026"
+     }
+    ],
+    "data_formei_noi": "01.10.2026"
+   }
+  },
+  "iconta_commit_git": "663fb906b327eb678822547888cdc76065935d86",
+  "detector_structura": {},
+  "detector_structura_curat": [
+   "cod_fiscal_227_2015_consolidat"
+  ],
+  "iconta_schimbat_de_la_ultima_comparatie": false,
+  "schimbari_pentru_iconta": [
+   {
+    "parametru": "cote/impozit_profit@2018-01-01",
+    "valoare_cod": "0.16",
+    "unde_in_cod": "core/common.py:663 (registrul COTE)",
+    "valoare_lege": "18",
+    "atom": "cod_fiscal_227_2015_consolidat#art17",
+    "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 18%. +",
+    "clasificare": "DIFERA",
+    "clasificare_anterioara": "CONCORDA",
+    "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+    "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+    "valoare_lege_anterioara": "16%",
+    "motive": [
+     "DIFERA nou",
+     "temei schimbat"
+    ]
+   },
+   {
+    "parametru": "nesursat/d101.COTA_STANDARD=16",
+    "valoare_cod": "16",
+    "unde_in_cod": "core/d101.py:46",
+    "valoare_lege": "16%",
+    "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct6~2/pct2",
+    "verbatim": "Impozit pe profit (16% x rd. 1) 4.800",
+    "clasificare": "NEVERIFICAT",
+    "clasificare_anterioara": "NEVERIFICAT",
+    "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+    "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+    "valoare_lege_anterioara": "16%",
+    "motive": [
+     "temei schimbat"
+    ]
+   },
+   {
+    "parametru": "nesursat/d101g.COTA_STANDARD=16",
+    "valoare_cod": "16",
+    "unde_in_cod": "core/d101g.py:68",
+    "valoare_lege": "16%",
+    "atom": "hg_1_2016_norme_cod_fiscal#anexa/pct6~2/pct2",
+    "verbatim": "Impozit pe profit (16% x rd. 1) 4.800",
+    "clasificare": "NEVERIFICAT",
+    "clasificare_anterioara": "NEVERIFICAT",
+    "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+    "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+    "valoare_lege_anterioara": "16%",
+    "motive": [
+     "temei schimbat"
+    ]
+   }
+  ],
+  "propunere": "propuneri/v10 (NEAPROBATĂ)",
+  "rezumat": "1 acte cu formă consolidată nouă (cod_fiscal_227_2015_consolidat); 3 schimbări pentru iConta; 3 DIFERĂ/temei schimbat → propuneri/v10 (NEAPROBATĂ).",
+  "detalii": [
+   "cod_fiscal_227_2015_consolidat: consolidarea 08.08.2026 → 01.10.2026",
+   "cote/impozit_profit@2018-01-01 — DIFERA nou/temei schimbat: iConta are 0.16 (core/common.py:663 (registrul COTE)), legea spune 18 în cod_fiscal_227_2015_consolidat#art17: „Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 18%. +”",
+   "nesursat/d101.COTA_STANDARD=16 — temei schimbat: iConta are 16 (core/d101.py:46), legea spune 16% în hg_1_2016_norme_cod_fiscal#anexa/pct6~2/pct2: „Impozit pe profit (16% x rd. 1) 4.800”",
+   "nesursat/d101g.COTA_STANDARD=16 — temei schimbat: iConta are 16 (core/d101g.py:68), legea spune 16% în hg_1_2016_norme_cod_fiscal#anexa/pct6~2/pct2: „Impozit pe profit (16% x rd. 1) 4.800”"
+  ],
+  "durate_secunde": {
+   "verificare_portal": 0.1,
+   "aducere_si_atomizare": 4.9,
+   "detector": 4.2,
+   "iconta_si_potrivire": 15.1,
+   "propunere": 4.2,
+   "total": 28.5
+  },
+  "cereri_portal_simulat": 63,
+  "secunde_scenariu": 28.6
+ },
+ "B_parametrul_impozit_profit": [
+  {
+   "parametru": "cote/impozit_profit@2018-01-01",
+   "valoare_cod": "0.16",
+   "unde_in_cod": "core/common.py:663 (registrul COTE)",
+   "valoare_lege": "18",
+   "atom": "cod_fiscal_227_2015_consolidat#art17",
+   "verbatim": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 18%. +",
+   "clasificare": "DIFERA",
+   "clasificare_anterioara": "CONCORDA",
+   "atom_anterior": "cod_fiscal_227_2015_consolidat#art17",
+   "verbatim_anterior": "Cota de impozitare Cota de impozit pe profit care se aplică asupra profitului impozabil este de 16%. +",
+   "valoare_lege_anterioara": "16%",
+   "motive": [
+    "DIFERA nou",
+    "temei schimbat"
+   ]
+  }
+ ],
+ "verdict": {
+  "A_nimic_schimbat": true,
+  "B_DIFERA_in_propunere": true,
+  "depozitul_real_neatins": true
+ },
+ "secunde_total": 44.2
+}

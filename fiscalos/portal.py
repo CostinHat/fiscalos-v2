@@ -67,22 +67,28 @@ class Portal(object):
     def act(self, id_act):
         """(html, info) - forma consolidata CURENTA a actului, cu data consolidarii."""
         _s, corp = self._get(BAZA + "/Public/DetaliiDocument/%s" % id_act)
-        t = corp.decode("utf-8", "replace")
-        info = {"id_cerut": str(id_act)}
-        m = re.search(r'id="id_act"[^>]*value="(\d+)"', t)
-        info["id_forma"] = m.group(1) if m else None
-        m = re.search(r"<title>(.*?)</title>", t, re.S)
-        info["titlu"] = " ".join(m.group(1).split()) if m else None
-        # istoricul consolidarilor: prima intrare e cea mai noua; fara href = cea afisata
-        ist = re.findall(r"<a title='Consolidarea din ([\d.]+)'([^>]*)>", t)
-        info["consolidari"] = [d for d, _ in ist]
-        if ist:
-            d0, atr0 = ist[0]
-            href = re.search(r"DetaliiDocument/(\d+)", atr0)
-            info["consolidare_curenta"] = d0
-            info["afisata_e_cea_curenta"] = href is None
-            info["id_forma_curenta"] = href.group(1) if href else info["id_forma"]
-        info["forma_de_baza"] = not ist
-        info["articole_in_pagina"] = len(re.findall(r"Articolul\s+\d", t))
-        info["octeti"] = len(corp)
-        return corp, info
+        return corp, info_din_html(id_act, corp)
+
+
+def info_din_html(id_act, corp):
+    """Ce spune pagina unui act despre forma ei (separat de cerere, ca urmarirea sa-l poata aplica si
+    paginilor deja aduse)."""
+    t = corp.decode("utf-8", "replace")
+    info = {"id_cerut": str(id_act)}
+    m = re.search(r'id="id_act"[^>]*value="(\d+)"', t)
+    info["id_forma"] = m.group(1) if m else None
+    m = re.search(r"<title>(.*?)</title>", t, re.S)
+    info["titlu"] = " ".join(m.group(1).split()) if m else None
+    # istoricul consolidarilor: prima intrare e cea mai noua; fara href = cea afisata
+    ist = re.findall(r"<a title='Consolidarea din ([\d.]+)'([^>]*)>", t)
+    info["consolidari"] = [d for d, _ in ist]
+    if ist:
+        d0, atr0 = ist[0]
+        href = re.search(r"DetaliiDocument/(\d+)", atr0)
+        info["consolidare_curenta"] = d0
+        info["afisata_e_cea_curenta"] = href is None
+        info["id_forma_curenta"] = href.group(1) if href else info["id_forma"]
+    info["forma_de_baza"] = not ist
+    info["articole_in_pagina"] = len(re.findall(r"Articolul\s+\d", t))
+    info["octeti"] = len(corp)
+    return info

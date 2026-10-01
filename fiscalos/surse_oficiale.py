@@ -50,11 +50,12 @@ def _sha(b):
     return hashlib.sha256(b).hexdigest()
 
 
-def aduce(acte=ACTE, incremental=False):
+def aduce(acte=ACTE, incremental=False, p=None):
     """Aduce actele din portal. `incremental=True` (C31): actele deja in manifest NU se aduc din nou -
-    fisierele lor raman exact cele cu SHA-ul inregistrat; cele noi se adauga la manifest."""
+    fisierele lor raman exact cele cu SHA-ul inregistrat; cele noi se adauga la manifest. `p`: alt
+    client de portal (urmarirea il simuleaza in copia de test)."""
     os.makedirs(DIR, exist_ok=True)
-    p = portal.Portal()
+    p = p or portal.Portal()
     manifest = {"_ce": "Consolidatele la zi aduse de FiscalOS din sursa oficiala (C12). Separate de "
                        "instantaneul iConta, care rămâne neatins.",
                 "sursa": portal.BAZA, "user_agent": portal.UA, "adus_la": time.strftime(
