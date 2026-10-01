@@ -196,6 +196,12 @@ FiscalOS citește iConta numai din git HEAD (`iconta_head.py`); instantaneul și
 geamenii ca id + temei; operanzii legali poartă valabilitatea, iar una care nu acoperă data aplicării e
 respinsă. Re-notarea setului 3 pe propunerile salvate: 28/3/19 (oficial 18/1/31). De decis: C56.
 
+## Testul de acceptare — setul 4 (`intrebari/set4/`): **ACCEPTAT**
+
+Versiunea 1858001 (C40–C56), neschimbată; răspunsurile comise (757af8a) înainte de citirea cheii. Scor pe fond:
+**36/6/8**; **2 greșeli de fond** (criteriul: cel mult 2 și cel puțin 25 CORECT). Cost $14,22 ($0,284/întrebare).
+C57 analizată, neadoptată. De decis: C58–C60.
+
 ## Cum se rulează
 
 ```sh

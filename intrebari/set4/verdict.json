@@ -1,0 +1,13 @@
+{
+ "scor_pe_fond": {
+  "CORECT": 36,
+  "GRESIT": 6,
+  "NU_POT": 8
+ },
+ "greseli_de_fond": [
+  "Q4-PRF-07",
+  "Q4-CPF-10"
+ ],
+ "verdict": "ACCEPTAT",
+ "criteriu": "cel mult 2 greseli de fond si cel putin 25 CORECT pe fond"
+}
