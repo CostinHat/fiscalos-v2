@@ -1,0 +1,71 @@
+{
+ "C59": [
+  {
+   "set": "setul 2",
+   "corpus": "8b3269f",
+   "inainte": {
+    "CORECT": 30,
+    "GRESIT": 5,
+    "NU_POT": 15
+   },
+   "dupa": {
+    "CORECT": 30,
+    "GRESIT": 5,
+    "NU_POT": 15
+   },
+   "schimbari": []
+  },
+  {
+   "set": "setul 3",
+   "corpus": "024fab8",
+   "inainte": {
+    "CORECT": 18,
+    "GRESIT": 1,
+    "NU_POT": 31
+   },
+   "dupa": {
+    "CORECT": 18,
+    "GRESIT": 1,
+    "NU_POT": 31
+   },
+   "schimbari": []
+  },
+  {
+   "set": "setul 4",
+   "corpus": "757af8a",
+   "inainte": {
+    "CORECT": 36,
+    "GRESIT": 6,
+    "NU_POT": 8
+   },
+   "dupa": {
+    "CORECT": 38,
+    "GRESIT": 4,
+    "NU_POT": 8
+   },
+   "schimbari": [
+    [
+     "Q4-TVA-02",
+     "GRESIT",
+     "CORECT"
+    ],
+    [
+     "Q4-TVA-08",
+     "GRESIT",
+     "CORECT"
+    ],
+    [
+     "Q4-CTB-02",
+     "GRESIT",
+     "CORECT"
+    ],
+    [
+     "Q4-CTB-09",
+     "CORECT",
+     "GRESIT"
+    ]
+   ]
+  }
+ ],
+ "secunde": 5.9
+}

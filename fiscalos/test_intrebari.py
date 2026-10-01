@@ -249,3 +249,13 @@ def test_setul_4_se_incarca_orb():
     qs = intrebari.incarca_intrebari(f)
     assert len(qs) == 50 and all(set(q) == {"id", "tip", "intrebare"} for q in qs)
     assert all(q["id"].startswith("Q4-") for q in qs)
+
+
+# ── C59: "la mie", "nu se ajusteaza", numerale in litere ────────────────────────────────────────
+def test_C59_formulari_echivalente():
+    from fiscalos import comparatie
+    assert "0,3%" in comparatie._fapte("în limita a 3 la mie din cifra de afaceri")
+    assert "0 lei" in comparatie._fapte_raspuns("Nu se ajustează deducerea inițială; TVA rămâne dedusă.")
+    assert "2 luni" in comparatie._fapte("după trecerea a două luni din ziua publicării")
+    assert "0,3%" not in comparatie._fapte("3% din cifra de afaceri")                    # cealalta directie
+    assert "0 lei" not in comparatie._fapte_raspuns("Se ajustează TVA de 4.200 lei.")

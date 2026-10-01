@@ -87,6 +87,11 @@ al tău: `atom` (cel citat), `alternativa` (celălalt), `conditie` = fragmentul 
 îi descrie subiectul/condiția și care NU e în alternativă. `deschide` îți arată geamenii ca id + temei; \\
 deschide-i dacă ai nevoie de text. Un geamăn nejustificat al atomului decisiv apare ca avertisment.
 
+RĂSPUNSUL CARE DEPINDE DE FAPTE LIPSĂ. Dacă răspunsul depinde de fapte pe care întrebarea nu le dă, \\
+`stare` = INCOMPLET, `lipsa` = faptele, iar `raspuns` începe cu „De clarificat:” și lista lor, apoi \\
+explică ce se aplică în fiecare caz; o cifră poate apărea numai după un marcaj explicit „Exemplu”, după \\
+condiții. Nu da o cifră unică acolo unde legea face distincții.
+
 CONSECINȚA CUANTIFICATĂ (C43). Când legea cuantifică consecința faptului întrebat (cauțiune, amendă, \\
 prag, penalitate), răspunsul o dă — calculată, cu temeiul ei citat — chiar dacă întrebarea e de tip \\
 „are dreptate?” / „este legal?”.
@@ -1119,13 +1124,22 @@ def raspunde(q, idx, rel, client, sis=None):
     rez = verifica_propunerea(final, dict(baza), q, nav, admise, vizibil, apel, traseu)
     # C52: CEL MULT o tura automata de reparatie, numai pentru cifrele respinse (C13/C46): modelul vede
     # exact cifrele si le pune prin calcul sau citat. Ce iese trece prin ACEEASI verificare, fara exceptii.
-    cifre = cifre_respinse(rez)
-    if rez["stare"] != "RASPUNS" and cifre and oprit is None:
+    # C58: un termen dat fara termen_efectiv (C40) nu mai respinge direct - intra in ACEEASI tura de
+    # reparatie; respingerea ramane numai daca nici reparatia nu-l calculeaza
+    cifre, termene = cifre_respinse(rez), termene_respinse(rez)
+    if rez["stare"] != "RASPUNS" and (cifre or termene) and oprit is None:
+        parti = []
+        if cifre:
+            parti.append("aceste cifre nu sunt nici citate literal dintr-un atom, nici rezultatul unui calcul: "
+                         "%s — fiecare fie vine dintr-un citat literal, fie e rezultatul unui calcul pus ca "
+                         "{nume}, fie lipsește" % ", ".join("„%s”" % c for c in cifre))
+        if termene:
+            parti.append("aceste termene sunt scrise direct, fără termen_efectiv: %s — fiecare termen "
+                         "calendaristic se calculează cu termen_efectiv (citând regula prelungirii și lista "
+                         "sărbătorilor) și intră în răspuns ca {nume}, sau lipsește" % ", ".join("„%s”" % t for t in termene))
         messages.append({"role": "user", "content": (
-            "Verificarea a respins răspunsul pentru aceste cifre, care nu sunt nici citate literal dintr-un "
-            "atom, nici rezultatul unui calcul: %s. Dă din nou răspunsul final: fiecare dintre ele fie vine "
-            "dintr-un citat literal, fie e rezultatul unui calcul pus ca {nume}, fie lipsește. Restul "
-            "regulilor rămân aceleași." % ", ".join("„%s”" % c for c in cifre))})
+            "Verificarea a respins răspunsul: %s. Dă din nou răspunsul final; restul regulilor rămân "
+            "aceleași." % "; ".join(parti))})
         r = _apel(client, sis or sistem(idx), messages, final=True)
         inregistreaza(r)
         text = next((b.text for b in r.content if b.type == "text"), "")
@@ -1140,7 +1154,7 @@ def raspunde(q, idx, rel, client, sis=None):
                             ("intrare", "iesire", "cache_scriere", "cache_citire")},
                     cost_usd=round(sum(x["cost_usd"] for x in apeluri), 5),
                     secunde=round(time.time() - t0, 2))
-        prima = {"cifre": cifre, "motiv_initial": rez["motiv"]}
+        prima = {"cifre": cifre, "termene": termene, "motiv_initial": rez["motiv"]}
         if not probleme:
             rez = verifica_propunerea(final2, dict(baza), q, nav, admise, vizibil, apel, traseu)
         else:
@@ -1150,6 +1164,35 @@ def raspunde(q, idx, rel, client, sis=None):
 
 
 _CIFRA_RESPINSA = re.compile(r"(?:cifra|valoarea legala) '([^']+)'")
+
+
+def verifica_raspuns_conditionat(text):
+    """(ok, motiv). Un raspuns INCOMPLET poate insoti abtinerea numai daca INCEPE cu ce trebuie clarificat
+    ("De clarificat: ...") si orice cifra apare abia dupa un marcaj explicit "Exemplu", dupa conditii."""
+    t = " ".join(text.split())
+    if not potrivire.norm(t).startswith("de clarificat"):
+        return False, "nu incepe cu „De clarificat:”"
+    m = re.search(r"\bexemplu\b", potrivire.norm(t))
+    inainte = t[:m.start()] if m else t
+    inainte = semantic._ID_ACT.sub(" ", semantic._TRIMITERE.sub(" ", inainte))
+    cifre = [c for c in semantic._CIFRA.findall(inainte)]
+    if cifre:
+        return False, "cifre inaintea marcajului „Exemplu”: %s" % ", ".join(cifre[:5])
+    return True, ""
+
+
+_TERMEN_RESPINS = re.compile(r"C40: termenul '([^']+)'")
+
+
+def termene_respinse(rez):
+    """Termenele respinse de C40 - tratate in tura de reparatie (C58)."""
+    inc = (rez.get("verificare") or {}).get("incalcari") or []
+    ies = []
+    for g in inc:
+        m = _TERMEN_RESPINS.search(g)
+        if m and m.group(1) not in ies:
+            ies.append(m.group(1))
+    return ies
 
 
 def cifre_respinse(rez):
@@ -1166,6 +1209,10 @@ def cifre_respinse(rez):
 def verifica_propunerea(final, baza, q, nav, admise, vizibil, apel, traseu):
     """Toata verificarea unei propuneri finale: C27, verificarea mecanica, calculul (C25, C45, C50, C51),
     C40, C41 (C49). Fara model - aceeasi pentru prima propunere si pentru reparatia C52."""
+    # Decizia dupa setul 4 (Q4-CPF-10): un raspuns care declara fapte lipsa (`lipsa`) DEPINDE de ele - e
+    # INCOMPLET, oricum l-ar fi marcat modelul; o cifra unica nu poate sta in locul distinctiilor
+    if final["stare"] == "RASPUNS" and [x for x in final.get("lipsa") or [] if str(x).strip()]:
+        final = dict(final, stare="INCOMPLET")
     # C27: data aleasa trebuie sa fie una dintre datele intrebarii
     data_ref = (final.get("data_referinta") or "").strip()
     baza["data_referinta"] = data_ref
@@ -1179,6 +1226,11 @@ def verifica_propunerea(final, baza, q, nav, admise, vizibil, apel, traseu):
                                nav.relatie, apel)
     rez["propunerea_modelului"] = final
     rez["traseu"] = traseu
+    if final["stare"] == "INCOMPLET" and (final.get("raspuns") or "").strip():
+        ok, motiv_c = verifica_raspuns_conditionat(final["raspuns"])
+        rez["raspuns_conditionat"] = final["raspuns"] if ok else None
+        if not ok:
+            rez["raspuns_conditionat_respins"] = motiv_c
     if greseli_data:
         return dict(rez, stare="NU_POT_RASPUNDE", raspuns=None,
                     verificare={"trece": False, "incalcari": rez["verificare"]["incalcari"] + greseli_data},

@@ -668,3 +668,48 @@ def test_C56_intrarea_in_vigoare_a_unei_prevederi_nu_e_data_valorii():
          "valabil_din": None}
     r = {"id": "cf#x", "text": "Prevederile privind salariul minim brut pe țară intră în vigoare la data de 1 ianuarie 2025."}
     assert navigare.data_fixata_de_lege([r], a, 2026) is None
+
+
+# ── C58: termenul scris direct trece prin tura de reparatie ─────────────────────────────────────
+class _ClientC58(_ClientSimulat):
+    def __init__(self, gresit, bun):
+        _ClientSimulat.__init__(self, gresit)
+        self.bun = bun
+
+    def create(self, **k):
+        if len(self.cereri) >= 3:
+            self.cereri.append(k)
+            return _Bloc(content=[_Bloc(type="text", text=json.dumps(self.bun, ensure_ascii=False))],
+                         stop_reason="end_turn", usage=_Uz(), model=navigare.MODEL)
+        return _ClientSimulat.create(self, **k)
+
+
+def test_C58_termenul_scris_direct_declanseaza_reparatia_nu_respingerea_directa():
+    from fiscalos import intrebari
+    idx = intrebari.Index()
+    hit = idx.cauta("cota standard TVA", "2026-09-28", k=8)
+    a = next(x for _s, x in hit if "21%" in x["text"])
+    i = a["text"].index("21%")
+    baza = {"stare": "RASPUNS", "declaratie": "La data de referință 28.09.2026.", "citate": [
+        {"atom": a["id"], "fragment": a["text"][i - 40:i + 3]}], "lipsa": [], "motiv": "", "derogari_tratate": [],
+        "alegeri_temei": [], "calcule": [], "data_referinta": "2026-09-28", "data_referinta_motiv": "ziua întrebării"}
+    # cifrele "25" si "2026" sunt in intrebare (trec de C46); data compusa nu e - C40 o vede ca termen
+    gresit = dict(baza, raspuns="Decontul se depune până la 25 octombrie 2026.")
+    bun = dict(baza, raspuns="Decontul se depune lunar.")
+    cl = _ClientC58(gresit, bun)
+    r = navigare.raspunde({"id": "Q", "tip": "REGULA", "intrebare": "Până când se depune decontul, în 2026, la 25 a lunii?"},
+                          idx, idx.rel, cl, sis="S")
+    assert r["reparatie_C52"]["termene"] == ["25 octombrie 2026"], r.get("reparatie_C52")
+    assert r["stare"] == "RASPUNS" and len(cl.cereri) == 4
+    assert any(m["role"] == "user" and isinstance(m["content"], str) and "termen_efectiv" in m["content"]
+               for m in cl.cereri[3]["messages"])
+
+
+# ── raspunsul care depinde de fapte lipsa (Q4-CPF-10) ───────────────────────────────────────────
+def test_raspunsul_conditionat_incepe_cu_ce_trebuie_clarificat():
+    ok, _m = navigare.verifica_raspuns_conditionat(
+        "De clarificat: a câta licitație este și dacă bunul e imobil. La prima licitație prețul de pornire e "
+        "prețul de evaluare; la următoarele, diminuat. Exemplu: la o evaluare de 200.000 lei, pragul final e 50.000 lei.")
+    assert ok
+    assert not navigare.verifica_raspuns_conditionat("Prețul minim este 50.000 lei. De clarificat: a câta licitație.")[0]
+    assert not navigare.verifica_raspuns_conditionat("De clarificat: licitația. Prețul minim este 50.000 lei.")[0]

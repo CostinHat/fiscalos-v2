@@ -71,26 +71,8 @@ def _suma(x):
 _NEGAT = re.compile(r"\bnu\b[^;()]*?(?=,\s*ci\b|\))")
 
 
-# C59 (dupa setul 4): formulari echivalente ale unui fapt, normalizate INAINTE de citire:
-#   "3 la mie" -> "0,3%"; un numeral in litere urmat de unitate ("doua luni") -> cifra ("2 luni").
-_NUMERALE = {"un": 1, "una": 1, "o": 1, "doi": 2, "doua": 2, "trei": 3, "patru": 4, "cinci": 5, "sase": 6,
-             "sapte": 7, "opt": 8, "noua": 9, "zece": 10, "unsprezece": 11, "doisprezece": 12,
-             "douasprezece": 12, "cincisprezece": 15, "douazeci": 20, "treizeci": 30, "saizeci": 60,
-             "nouazeci": 90}
-_NUMERAL_UNITATE = re.compile(r"\b(%s)\s+(?=(?:de\s+)?(?:zile|zi|luni|luna|ani|an|lei)\b)" % "|".join(
-    sorted(_NUMERALE, key=len, reverse=True)))
-_LA_MIE = re.compile(r"(\d+(?:,\d+)?)\s+la\s+mie\b")
-
-
-def _la_mie(m):
-    v = float(m.group(1).replace(",", ".")) / 10
-    return ("%g" % v).replace(".", ",") + "%"
-
-
 def _fapte(text, fara_negate=False):
     t = potrivire.norm(text or "")
-    t = _LA_MIE.sub(_la_mie, t)
-    t = _NUMERAL_UNITATE.sub(lambda m: "%d " % _NUMERALE[m.group(1)], t)
     if fara_negate:
         t = _NEGAT.sub(" ", t)
     ies = []
@@ -120,7 +102,6 @@ def _fapte(text, fara_negate=False):
 # raspuns care spune explicit ca nu se datoreaza nimic.
 # C42 (setul 2): si "nu restituie", "nu implica (efectuarea de) ajustari", "nicio ajustare" spun zero.
 _ZERO = re.compile(r"\bnimic\b|\bzero\b|\bnu (se )?datoreaz[aă]\b|\bnu are de plat|\bnu (se )?restitui"
-                   r"|\bnu se ajusteaz"
                    r"|\bnu (se )?(implica|efectueaza|face)\b[^.]{0,40}\bajust|\bnicio (ajustare|suma)\b")
 # C42: data zi + luna cu AN RELATIV ("25 iunie inclusiv a anului urmator") - anul se ia fata de anul datei
 # de referinta a raspunsului (declarata, C27); "anului urmator" = +1, "anului curent" = 0.
